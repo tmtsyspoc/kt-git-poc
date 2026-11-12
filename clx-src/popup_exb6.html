@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+	eXBuilder6 윈도우 팝업 호출용 html (index_exb6.jsp 와 같은 방식)
+	- 호출 : window.open("popup_exb6.html?appId=app/com/comPGridPivot&키=값...")  (메인 화면 base href 가 /ui/ 이므로 상대 경로)
+	- appId 앱을 이 창의 루트 앱으로 실행한다. 그 밖의 파라미터는 앱에서 location.search 로 읽는다.
+	- 부모 창(window.opener) 의 테마 모드(data-cl-mode)를 그대로 따른다.
+-->
+<html lang="ko" style="width:100%;height:100%;">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="user-scalable=1, initial-scale=1.0, width=device-width"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<title></title>
+		<link rel="stylesheet" media="all" href="../resource/css/cleopatra.css"/>
+		<link rel="stylesheet" media="all" href="theme/cleopatra.css"/>
+		<script src="../resource/cleopatra.js" defer></script>
+		<script src="../resource/conf/defaults.js" defer></script>
+		<script src="cpr-lib/language.js" defer></script>
+		<script src="cpr-lib/user-modules.js" defer></script>
+		<script src="cpr-lib/udc.js" defer></script>
+		<style>
+			html, body {
+				margin: 0px;
+				padding: 0px;
+				height: 100%;
+			}
+			body {
+				box-sizing: content-box;
+				min-height: 100%;
+			}
+		</style>
+		<script>
+			/** 실행할 앱 ID (app/ 아래 앱만 허용) */
+			function getPopupAppId() {
+				var vaMatch = /[?&]appId=([^&]+)/.exec(location.search);
+				var vsAppId = vaMatch ? decodeURIComponent(vaMatch[1]) : "";
+				return /^app\/[\w\/-]+$/.test(vsAppId) ? vsAppId : null;
+			}
+
+			/** 부모 창의 테마 모드(data-cl-mode 등 body 의 data- 속성)를 따른다 */
+			function copyOpenerTheme() {
+				try {
+					var voOpenerBody = window.opener && window.opener.document.body;
+					if (!voOpenerBody) return;
+					for (var i = 0; i < voOpenerBody.attributes.length; i++) {
+						var voAttr = voOpenerBody.attributes[i];
+						if (voAttr.name.indexOf("data-") == 0) {
+							document.body.setAttribute(voAttr.name, voAttr.value);
+						}
+					}
+				} catch (ex) {}
+			}
+
+			function doload() {
+				var pli = document.getElementById("pageLoadingImage");
+				if (pli) {
+					pli.parentNode.removeChild(pli);
+				}
+				copyOpenerTheme();
+
+				var vsAppId = getPopupAppId();
+				if (!vsAppId) {
+					document.body.appendChild(document.createTextNode("잘못된 화면 주소입니다."));
+					return;
+				}
+				cpr.core.App.load(vsAppId, function(loadedApp) {
+					if (!loadedApp) {
+						document.body.appendChild(document.createTextNode("화면을 찾을 수 없습니다. (" + vsAppId + ")"));
+						return;
+					}
+					if (!document.title) {
+						document.title = loadedApp.title || "";
+					}
+					loadedApp.createNewInstance().run();
+				});
+			}
+		</script>
+	</head>
+	<body onload="doload();" style="width:100%;height:100%;">
+		<div id="pageLoadingImage" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:sans-serif;color:#888;">Loading...</div>
+	</body>
+</html>
