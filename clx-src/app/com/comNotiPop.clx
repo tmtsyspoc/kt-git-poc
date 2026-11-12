@@ -1,0 +1,62 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-f4fa8b51" version="1.0.4351">
+  <head std:sid="head-ef91fed2">
+    <screen std:sid="screen-694cc4aa" id="EXB-POP[1024]" name="EXB-POP[1024]" width="1024px" height="576px" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-d43746e4" id="EXB-POP[800]" name="EXB-POP[800]" width="800px" height="480px" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-18197342" id="EXB-POP[480]" name="EXB-POP[480]" width="480px" height="320px" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-df4cb67c"/>
+    <cl:appspec title="알림 팝업"/>
+  </head>
+  <body std:sid="body-6e4f3961">
+    <cl:listener std:sid="listener-d329536e" name="load" handler="onBodyLoad"/>
+    <cl:listener std:sid="listener-1daafc9b" name="dblclick" handler="onBodyDblclick"/>
+    <cl:group std:sid="group-a47f66c3" id="grp1">
+      <cl:formdata std:sid="f-data-0c609b3f" row="0" col="0"/>
+      <cl:udc std:sid="ud-control-832e3ad2" id="udcComFormTitle1" type="udc.com.udcComFormTitle">
+        <cl:formdata std:sid="f-data-df333347" row="0" col="0"/>
+        <cl:property name="title" value="메시지 정보" type="string"/>
+      </cl:udc>
+      <cl:group std:sid="group-2f18d3f2" id="grp2" class="form">
+        <cl:formdata std:sid="f-data-2465fc98" row="1" col="0"/>
+        <cl:output std:sid="output-95a37bc7" id="opt1" class="label" value="시간">
+          <cl:formdata std:sid="f-data-20e9ddd3" row="0" col="0"/>
+        </cl:output>
+        <cl:output std:sid="output-baba19a2" id="opt2" value="" datatype="date" dateValueFormat="YYYY-MM-DD HH:mm:ss">
+          <cl:formdata std:sid="f-data-05f0ee23" topSpacing="2.0" bottomSpacing="2.0" leftSpacing="2.0" rightSpacing="2.0" row="0" col="1"/>
+        </cl:output>
+        <cl:output std:sid="output-b764a03e" id="opt4" class="label" value="메시지">
+          <cl:formdata std:sid="f-data-3f6667c3" row="1" col="0"/>
+        </cl:output>
+        <cl:output std:sid="output-0b3f3915" id="optAdminMsg">
+          <cl:formdata std:sid="f-data-dc449da9" row="1" col="1"/>
+        </cl:output>
+        <cl:output std:sid="output-94db5243" id="opt3" class="label" value="메시지내용">
+          <cl:formdata std:sid="f-data-751bc1d2" row="2" col="0"/>
+        </cl:output>
+        <cl:htmlsnippet std:sid="htmlsnippet-a0e3f32b" id="hspt1" class="sn-auto" value="&lt;p>HTML Snippet&lt;/p>">
+          <cl:formdata std:sid="f-data-1169694d" topSpacing="5.0" bottomSpacing="5.0" leftSpacing="5.0" rightSpacing="5.0" row="2" col="1"/>
+        </cl:htmlsnippet>
+        <cl:formlayout std:sid="f-layout-be5075be" scrollable="false" hspace="17px" vspace="9px" top-margin="4px" right-margin="8px" bottom-margin="4px" left-margin="8px" hseparatorwidth="1" hseparatortype="BY_CLASS" vseparatorwidth="1" vseparatortype="BY_CLASS">
+          <cl:rows length="28" unit="PIXEL"/>
+          <cl:rows length="28" unit="PIXEL" hidden="true"/>
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="100" unit="PIXEL" autoSizing="true" shadetype="BY_CLASS" syncminlength="false"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-1b1a3c26" scrollable="false" hspace="4px" vspace="4px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="28" unit="PIXEL"/>
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-cb23bb64" scrollable="false" hspace="0px" vspace="12px" top-margin="16px" right-margin="16px" bottom-margin="16px" left-margin="16px">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

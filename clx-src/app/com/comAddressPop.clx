@@ -1,0 +1,209 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-10bdb29d" version="1.0.6087">
+  <head std:sid="head-1fe59bf4">
+    <screen std:sid="screen-b62efcea" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="true" customHeight="747" customWidth="800"/>
+    <screen std:sid="screen-55ce1d00" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-4ece04d5" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-77d8fbab">
+      <cl:dataset std:sid="d-set-948793d0" id="dsList">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="우편번호" std:sid="d-column-2f0329c9" name="ZIP_NO"/>
+          <cl:datacolumn comment="도로명주소" std:sid="d-column-0ab50c3c" name="ROAD_ADDR"/>
+          <cl:datacolumn comment="지번주소" std:sid="d-column-13b69e93" name="JIBUN_ADDR"/>
+          <cl:datacolumn comment="건물명" std:sid="d-column-3499b3fa" name="BLD_NM"/>
+          <cl:datacolumn comment="주소상태" std:sid="d-column-171b6090" name="ADDR_STAT"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="ZIP_NO"><![CDATA[06236]]></cl:datavalue>
+            <cl:datavalue columnname="ROAD_ADDR"><![CDATA[서울시 강남구 선릉로 91길 10]]></cl:datavalue>
+            <cl:datavalue columnname="JIBUN_ADDR"><![CDATA[서울 강남구 역삼동 705-32]]></cl:datavalue>
+            <cl:datavalue columnname="BLD_NM"><![CDATA[토마토타워]]></cl:datavalue>
+            <cl:datavalue columnname="ADDR_STAT"><![CDATA[정상]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="ZIP_NO"><![CDATA[04524]]></cl:datavalue>
+            <cl:datavalue columnname="ROAD_ADDR"><![CDATA[서울특별시 중구 세종대로 110]]></cl:datavalue>
+            <cl:datavalue columnname="JIBUN_ADDR"><![CDATA[서울특별시 중구 태평로1가 31]]></cl:datavalue>
+            <cl:datavalue columnname="BLD_NM"><![CDATA[서울시청]]></cl:datavalue>
+            <cl:datavalue columnname="ADDR_STAT"><![CDATA[정상]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="ZIP_NO"><![CDATA[07328]]></cl:datavalue>
+            <cl:datavalue columnname="ROAD_ADDR"><![CDATA[서울특별시 영등포구 국제금융로 10]]></cl:datavalue>
+            <cl:datavalue columnname="JIBUN_ADDR"><![CDATA[서울특별시 영등포구 여의도동 23]]></cl:datavalue>
+            <cl:datavalue columnname="BLD_NM"><![CDATA[IFC서울]]></cl:datavalue>
+            <cl:datavalue columnname="ADDR_STAT"><![CDATA[정상]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="ZIP_NO"><![CDATA[06164]]></cl:datavalue>
+            <cl:datavalue columnname="ROAD_ADDR"><![CDATA[서울특별시 강남구 영동대로 512]]></cl:datavalue>
+            <cl:datavalue columnname="JIBUN_ADDR"><![CDATA[서울특별시 강남구 삼성동 159]]></cl:datavalue>
+            <cl:datavalue columnname="BLD_NM"><![CDATA[코엑스]]></cl:datavalue>
+            <cl:datavalue columnname="ADDR_STAT"><![CDATA[정상]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="ZIP_NO"><![CDATA[48058]]></cl:datavalue>
+            <cl:datavalue columnname="ROAD_ADDR"><![CDATA[부산광역시 해운대구 센텀중앙로 97]]></cl:datavalue>
+            <cl:datavalue columnname="JIBUN_ADDR"><![CDATA[부산광역시 해운대구 재송동 1200]]></cl:datavalue>
+            <cl:datavalue columnname="BLD_NM"><![CDATA[센텀스카이비즈]]></cl:datavalue>
+            <cl:datavalue columnname="ADDR_STAT"><![CDATA[정상]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="ZIP_NO"><![CDATA[21554]]></cl:datavalue>
+            <cl:datavalue columnname="ROAD_ADDR"><![CDATA[인천광역시 남동구 정각로 29]]></cl:datavalue>
+            <cl:datavalue columnname="JIBUN_ADDR"><![CDATA[인천광역시 남동구 구월동 1138]]></cl:datavalue>
+            <cl:datavalue columnname="BLD_NM"><![CDATA[인천광역시청]]></cl:datavalue>
+            <cl:datavalue columnname="ADDR_STAT"><![CDATA[정상]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="ZIP_NO"><![CDATA[41911]]></cl:datavalue>
+            <cl:datavalue columnname="ROAD_ADDR"><![CDATA[대구광역시 중구 동덕로 167]]></cl:datavalue>
+            <cl:datavalue columnname="JIBUN_ADDR"><![CDATA[대구광역시 중구 동인동2가 177-4]]></cl:datavalue>
+            <cl:datavalue columnname="BLD_NM"><![CDATA[대구시청 동인청사]]></cl:datavalue>
+            <cl:datavalue columnname="ADDR_STAT"><![CDATA[정상]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="ZIP_NO"><![CDATA[35208]]></cl:datavalue>
+            <cl:datavalue columnname="ROAD_ADDR"><![CDATA[대전광역시 서구 둔산로 100]]></cl:datavalue>
+            <cl:datavalue columnname="JIBUN_ADDR"><![CDATA[대전광역시 서구 둔산동 1420]]></cl:datavalue>
+            <cl:datavalue columnname="BLD_NM"><![CDATA[대전광역시청]]></cl:datavalue>
+            <cl:datavalue columnname="ADDR_STAT"><![CDATA[정상]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="ZIP_NO"><![CDATA[61945]]></cl:datavalue>
+            <cl:datavalue columnname="ROAD_ADDR"><![CDATA[광주광역시 서구 내방로 111]]></cl:datavalue>
+            <cl:datavalue columnname="JIBUN_ADDR"><![CDATA[광주광역시 서구 치평동 1200]]></cl:datavalue>
+            <cl:datavalue columnname="BLD_NM"><![CDATA[광주시청]]></cl:datavalue>
+            <cl:datavalue columnname="ADDR_STAT"><![CDATA[정상]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="ZIP_NO"><![CDATA[54968]]></cl:datavalue>
+            <cl:datavalue columnname="ROAD_ADDR"><![CDATA[전북특별자치도 전주시 완산구 노송광장로 10]]></cl:datavalue>
+            <cl:datavalue columnname="JIBUN_ADDR"><![CDATA[전북특별자치도 전주시 서노송동 568-1]]></cl:datavalue>
+            <cl:datavalue columnname="BLD_NM"><![CDATA[전북도청 별관]]></cl:datavalue>
+            <cl:datavalue columnname="ADDR_STAT"><![CDATA[정상]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="ZIP_NO"><![CDATA[24266]]></cl:datavalue>
+            <cl:datavalue columnname="ROAD_ADDR"><![CDATA[강원특별자치도 춘천시 중앙로 1]]></cl:datavalue>
+            <cl:datavalue columnname="JIBUN_ADDR"><![CDATA[강원특별자치도 춘천시 봉의동 15]]></cl:datavalue>
+            <cl:datavalue columnname="BLD_NM"><![CDATA[강원도청]]></cl:datavalue>
+            <cl:datavalue columnname="ADDR_STAT"><![CDATA[정상]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="ZIP_NO"><![CDATA[30151]]></cl:datavalue>
+            <cl:datavalue columnname="ROAD_ADDR"><![CDATA[세종특별자치시 한누리대로 2130]]></cl:datavalue>
+            <cl:datavalue columnname="JIBUN_ADDR"><![CDATA[세종특별자치시 보람동 626-5]]></cl:datavalue>
+            <cl:datavalue columnname="BLD_NM"><![CDATA[세종시청]]></cl:datavalue>
+            <cl:datavalue columnname="ADDR_STAT"><![CDATA[정상]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="ZIP_NO"><![CDATA[28515]]></cl:datavalue>
+            <cl:datavalue columnname="ROAD_ADDR"><![CDATA[충청북도 청주시 상당구 상당로 82]]></cl:datavalue>
+            <cl:datavalue columnname="JIBUN_ADDR"><![CDATA[충청북도 청주시 북문로3가 89-1]]></cl:datavalue>
+            <cl:datavalue columnname="BLD_NM"><![CDATA[청주시청]]></cl:datavalue>
+            <cl:datavalue columnname="ADDR_STAT"><![CDATA[정상]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="ZIP_NO"><![CDATA[36759]]></cl:datavalue>
+            <cl:datavalue columnname="ROAD_ADDR"><![CDATA[경상북도 안동시 풍천면 도청대로 455]]></cl:datavalue>
+            <cl:datavalue columnname="JIBUN_ADDR"><![CDATA[경상북도 안동시 풍천면 갈전리 1155]]></cl:datavalue>
+            <cl:datavalue columnname="BLD_NM"><![CDATA[경북도청]]></cl:datavalue>
+            <cl:datavalue columnname="ADDR_STAT"><![CDATA[정상]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="ZIP_NO"><![CDATA[51430]]></cl:datavalue>
+            <cl:datavalue columnname="ROAD_ADDR"><![CDATA[경상남도 창원시 성산구 중앙대로 300]]></cl:datavalue>
+            <cl:datavalue columnname="JIBUN_ADDR"><![CDATA[경상남도 창원시 용호동 1]]></cl:datavalue>
+            <cl:datavalue columnname="BLD_NM"><![CDATA[경남도청]]></cl:datavalue>
+            <cl:datavalue columnname="ADDR_STAT"><![CDATA[정상]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="주소 검색"/>
+  </head>
+  <body std:sid="body-b607d011">
+    <cl:listener std:sid="listener-2d7d4316" name="load" handler="onBodyLoad"/>
+    <cl:group std:sid="group-8f45810d" class="sch-filter-box">
+      <cl:attribute name="mobile-column-count" value="2"/>
+      <cl:attribute name="tablet-column-count" value="4"/>
+      <cl:attribute name="needs-auto-height" value="true"/>
+      <cl:verticaldata std:sid="v-data-a0420719" width="1490px" height="66px" autosize="none"/>
+      <cl:output std:sid="output-bde911b6" class="label" value="주소">
+        <cl:attribute name="needs-auto-height" value="true"/>
+        <cl:formdata std:sid="f-data-b8266d8f" row="0" col="0"/>
+      </cl:output>
+      <cl:inputbox std:sid="i-box-8162ed4f" id="ipb">
+        <cl:listener std:sid="listener-463e818f" name="keydown" handler="onIpbKeydown"/>
+        <cl:formdata std:sid="f-data-278e42d4" row="0" col="1"/>
+      </cl:inputbox>
+      <cl:button std:sid="button-afe3d69a" id="btnSearch" class="btn-search" value="조회" icon="0">
+        <cl:listener std:sid="listener-65042726" name="click" handler="onBtnSearchClick"/>
+        <cl:attribute name="needs-auto-height" value="true"/>
+        <cl:formdata std:sid="f-data-e0aea445" row="0" col="2"/>
+      </cl:button>
+      <cl:formlayout std:sid="f-layout-436460c2" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="28" unit="PIXEL" autoSizing="false" shadetype="NONE" shadecolor="transparent"/>
+        <cl:columns length="100" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+        <cl:columns length="2" unit="FRACTION"/>
+        <cl:columns length="60" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-af90013c">
+      <cl:verticaldata std:sid="v-data-baf0a32c" width="1608px" height="563px" autosize="height"/>
+      <cl:udc std:sid="ud-control-30276e35" type="udc.com.udcComGridTitle">
+        <cl:verticaldata std:sid="v-data-a8bbcb1c" width="1608px" height="28px"/>
+        <cl:property name="ctrl" value="grdList" type="control"/>
+        <cl:property name="title" value="주소목록" type="string"/>
+      </cl:udc>
+      <cl:grid std:sid="grid-306f778d" id="grdList" fieldLabel="사원 목록" readonly="true" datasetid="dsList" autofit="2, 3" resizablecolumns="all" columnMovable="true">
+        <cl:listener std:sid="listener-46eb0591" name="row-dblclick" handler="onGrdListRowDblclick"/>
+        <cl:verticaldata std:sid="v-data-9f9e0a6f" width="1608px" height="494px"/>
+        <cl:gridcolumn std:sid="g-column-894f9bfc" width="50px"/>
+        <cl:gridcolumn std:sid="g-column-4ce1f990"/>
+        <cl:gridcolumn std:sid="g-column-26e2e498"/>
+        <cl:gridcolumn std:sid="g-column-76398436"/>
+        <cl:gridcolumn std:sid="g-column-726d6edc" width="130px"/>
+        <cl:gridcolumn std:sid="g-column-74679a8d"/>
+        <cl:gridheader std:sid="gh-band-25992882">
+          <cl:gridrow std:sid="g-row-434e7e41" height="44px"/>
+          <cl:gridcell std:sid="gh-cell-16062f82" rowindex="0" colindex="0" sortable="false" filterable="false"/>
+          <cl:gridcell std:sid="gh-cell-8af8ce9d" rowindex="0" colindex="5" targetcolumnname="ADDR_STAT" text="주소상태"/>
+          <cl:gridcell std:sid="gh-cell-01dd172c" rowindex="0" colindex="4" targetcolumnname="BLD_NM" text="건물명"/>
+          <cl:gridcell std:sid="gh-cell-3798e54c" rowindex="0" colindex="3" targetcolumnname="JIBUN_ADDR" text="지번주소"/>
+          <cl:gridcell std:sid="gh-cell-c1c503c3" rowindex="0" colindex="2" targetcolumnname="ROAD_ADDR" text="도로명주소"/>
+          <cl:gridcell std:sid="gh-cell-117a7014" rowindex="0" colindex="1" targetcolumnname="ZIP_NO" text="우편번호"/>
+        </cl:gridheader>
+        <cl:griddetail std:sid="gd-band-39d4a9dc">
+          <cl:gridrow std:sid="g-row-5792f075" height="45px"/>
+          <cl:gridcell std:sid="gd-cell-a813932a" rowindex="0" colindex="0" columntype="rowindex"/>
+          <cl:gridcell std:sid="gd-cell-6bab5fd2" rowindex="0" colindex="5" columnname="ADDR_STAT"/>
+          <cl:gridcell std:sid="gd-cell-e9a9ccd0" rowindex="0" colindex="4" columnname="BLD_NM"/>
+          <cl:gridcell std:sid="gd-cell-c431d874" rowindex="0" colindex="3" columnname="JIBUN_ADDR"/>
+          <cl:gridcell std:sid="gd-cell-860662d8" rowindex="0" colindex="2" columnname="ROAD_ADDR"/>
+          <cl:gridcell std:sid="gd-cell-1c66367c" rowindex="0" colindex="1" columnname="ZIP_NO"/>
+        </cl:griddetail>
+      </cl:grid>
+      <cl:verticallayout std:sid="v-layout-f726269e" spacing="4"/>
+    </cl:group>
+    <cl:group std:sid="group-06f65b32" id="grp11" class="footer-button-group">
+      <cl:verticaldata std:sid="v-data-1e714055" width="1608px" height="28px" autosize="height"/>
+      <cl:button std:sid="button-1aaf025a" id="btnSelect" class="secondary" value="선택">
+        <cl:listener std:sid="listener-c82ef1a8" name="click" handler="onBtnClose2Click"/>
+        <cl:flowlayoutdata std:sid="f-data-9f587570" width="60px" height="28px" autosize="width"/>
+      </cl:button>
+      <cl:button std:sid="button-781abda8" id="btnClose" value="닫기">
+        <cl:listener std:sid="listener-0142ecf7" name="click" handler="onBtnCloseClick"/>
+        <cl:flowlayoutdata std:sid="f-data-94f34af0" width="60px" height="28px" autosize="width"/>
+      </cl:button>
+      <cl:flowlayout std:sid="f-layout-d932c129" scrollable="false" hspacing="4" vspacing="4" halign="right"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-43731309" scrollable="false" spacing="12" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

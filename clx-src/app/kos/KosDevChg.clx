@@ -1,0 +1,284 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" version="1.0.5186">
+  <head>
+    <screen id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen id="tablet" name="tablet" width="1024px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model>
+      <cl:datamap comment="현재 가입 정보" id="dmCur">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="서비스번호" name="SVC_NO"/>
+          <cl:datacolumn comment="고객명" name="CUST_NM"/>
+          <cl:datacolumn comment="요금제" name="PLAN"/>
+          <cl:datacolumn comment="현재 단말" name="DEVICE"/>
+          <cl:datacolumn comment="잔여 할부금" name="INST_REMAIN"/>
+          <cl:datacolumn comment="약정 만료일" name="CONTRACT_END"/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+    </cl:model>
+    <cl:appspec title="기기변경"/>
+  </head>
+  <body class="wrap" clipcontent="true" childcombinatorclass="v_base">
+    <cl:listener name="load" handler="onBodyLoad"/>
+    <cl:group id="grpAppHeader">
+      <cl:attribute name="mobile-column-count" value="1"/>
+      <cl:verticaldata width="1592px" height="28px" autosize="height"/>
+      <cl:udc type="udc.com.udcComAppHeader">
+        <cl:formdata row="0" col="0"/>
+        <cl:property name="visibleState" value="true" type="boolean"/>
+        <cl:property name="title" value="기기변경" type="string"/>
+      </cl:udc>
+      <cl:group class="page-btn-wrap">
+        <cl:formdata row="0" col="1"/>
+        <cl:flowlayout hspacing="4" halign="right"/>
+      </cl:group>
+      <cl:formlayout scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="700" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+        <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group id="grpSearch" class="sch-filter-box">
+      <cl:attribute name="mobile-column-count" value="2"/>
+      <cl:attribute name="tablet-column-count" value="4"/>
+      <cl:verticaldata width="1592px" height="60px" autosize="height"/>
+      <cl:output class="label" value="서비스번호">
+        <cl:formdata row="0" col="0"/>
+      </cl:output>
+      <cl:inputbox id="ipbSvcNo" fieldLabel="서비스번호" placeholder="숫자만 입력" maxlength="11" inputfilter="[0-9]">
+        <cl:listener name="keydown" handler="onIpbSvcNoKeydown"/>
+        <cl:formdata row="0" col="1"/>
+      </cl:inputbox>
+      <cl:output class="label" value="고객명">
+        <cl:formdata row="0" col="2"/>
+      </cl:output>
+      <cl:inputbox id="ipbCustNm" fieldLabel="고객명" placeholder="고객명" maxlength="30">
+        <cl:formdata row="0" col="3"/>
+      </cl:inputbox>
+      <cl:button id="btnSearch" class="primary btn-search" value="조회" icon="0">
+        <cl:listener name="click" handler="onBtnSearchClick"/>
+        <cl:formdata row="0" col="7"/>
+      </cl:button>
+      <cl:formlayout scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="28" unit="PIXEL" autoSizing="false"/>
+        <cl:columns length="160" autoSizing="true"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="160" autoSizing="true"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="160" autoSizing="true"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="70" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group id="grpData" class="conts-area">
+      <cl:verticaldata width="1592px" height="574px" autosize="height"/>
+      <cl:group class="conts-wrap">
+        <cl:verticaldata width="1592px" height="166" autosize="height"/>
+        <cl:udc type="udc.com.udcComFormTitle">
+          <cl:verticaldata width="800px" height="28px" autosize="height"/>
+          <cl:property name="title" value="현재 가입 정보" type="string"/>
+        </cl:udc>
+        <cl:group id="grpCurForm" class="form">
+          <cl:attribute name="mobile-fit" value=""/>
+          <cl:attribute name="mobile-column-count" value="2"/>
+          <cl:attribute name="tablet-column-count" value="4"/>
+          <cl:verticaldata width="1558px" height="106px" autosize="height"/>
+          <cl:output class="label" value="서비스번호">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata row="0" col="0"/>
+          </cl:output>
+          <cl:output>
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:datamapbind property="value" datacontrolid="dmCur" columnname="SVC_NO"/>
+            <cl:formdata row="0" col="1"/>
+          </cl:output>
+          <cl:output class="label" value="고객명">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata row="0" col="2"/>
+          </cl:output>
+          <cl:output>
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:datamapbind property="value" datacontrolid="dmCur" columnname="CUST_NM"/>
+            <cl:formdata row="0" col="3"/>
+          </cl:output>
+          <cl:output class="label" value="요금제">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata row="0" col="4"/>
+          </cl:output>
+          <cl:output>
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:datamapbind property="value" datacontrolid="dmCur" columnname="PLAN"/>
+            <cl:formdata row="0" col="5"/>
+          </cl:output>
+          <cl:output class="label" value="현재 단말">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata row="1" col="0"/>
+          </cl:output>
+          <cl:output>
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:datamapbind property="value" datacontrolid="dmCur" columnname="DEVICE"/>
+            <cl:formdata row="1" col="1"/>
+          </cl:output>
+          <cl:output class="label" value="잔여 할부금">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata row="1" col="2"/>
+          </cl:output>
+          <cl:output class="text-right">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:datamapbind property="value" datacontrolid="dmCur" columnname="INST_REMAIN"/>
+            <cl:formdata row="1" col="3"/>
+          </cl:output>
+          <cl:output class="label" value="약정 만료일">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata row="1" col="4"/>
+          </cl:output>
+          <cl:output>
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:datamapbind property="value" datacontrolid="dmCur" columnname="CONTRACT_END"/>
+            <cl:formdata row="1" col="5"/>
+          </cl:output>
+          <cl:formlayout scrollable="false" hspace="16px" vspace="17px" top-margin="8px" right-margin="8px" bottom-margin="8px" left-margin="8px" hseparatorwidth="1" hseparatortype="BY_CLASS">
+            <cl:rows length="28" unit="PIXEL"/>
+            <cl:rows length="28" unit="PIXEL"/>
+            <cl:columns length="160" autoSizing="true" shadetype="BY_CLASS"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="160" autoSizing="true" shadetype="BY_CLASS"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="160" autoSizing="true" shadetype="BY_CLASS"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:group class="conts-wrap">
+        <cl:verticaldata width="1592px" height="166" autosize="height"/>
+        <cl:udc type="udc.com.udcComFormTitle">
+          <cl:verticaldata width="800px" height="28px" autosize="height"/>
+          <cl:property name="title" value="기기변경 정보" type="string"/>
+        </cl:udc>
+        <cl:group id="grpChgForm" class="form">
+          <cl:attribute name="mobile-fit" value=""/>
+          <cl:attribute name="mobile-column-count" value="2"/>
+          <cl:attribute name="tablet-column-count" value="4"/>
+          <cl:verticaldata width="1558px" height="106px" autosize="height"/>
+          <cl:output class="label required" value="기변 종류">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata row="0" col="0"/>
+          </cl:output>
+          <cl:combobox id="cmbChgType" fieldLabel="기변 종류" value="NORMAL">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata row="0" col="1"/>
+            <cl:item label="일반 기변" value="NORMAL"/>
+            <cl:item label="우수고객 기변" value="LOYAL"/>
+            <cl:item label="분실 기변" value="LOST"/>
+          </cl:combobox>
+          <cl:output class="label required" value="판매유형">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata row="0" col="2"/>
+          </cl:output>
+          <cl:radiobutton id="rdbSaleType" fieldLabel="판매유형" value="INST">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata row="0" col="3"/>
+            <cl:item label="할부" value="INST"/>
+            <cl:item label="즉납" value="CASH"/>
+            <cl:item label="구독" value="SUBS"/>
+          </cl:radiobutton>
+          <cl:output class="label required" value="새 단말 모델">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata row="0" col="4"/>
+          </cl:output>
+          <cl:combobox id="cmbModel" fieldLabel="새 단말 모델">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata row="0" col="5"/>
+            <cl:item label="iPhone 17 Pro 256GB" value="AIP17P-256"/>
+            <cl:item label="iPhone 17 128GB" value="AIP17-128"/>
+            <cl:item label="Galaxy S26 256GB" value="SM-S26-256"/>
+            <cl:item label="Galaxy Z Flip8" value="SM-F8"/>
+          </cl:combobox>
+          <cl:output class="label" value="단말 일련번호">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata row="1" col="0"/>
+          </cl:output>
+          <cl:inputbox id="ipbSerial" fieldLabel="단말 일련번호" placeholder="일련번호" maxlength="20">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata row="1" col="1"/>
+          </cl:inputbox>
+          <cl:output class="label" value="할부개월">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata row="1" col="2"/>
+          </cl:output>
+          <cl:combobox id="cmbInstMonth" fieldLabel="할부개월" value="24">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata row="1" col="3"/>
+            <cl:item label="24개월" value="24"/>
+            <cl:item label="30개월" value="30"/>
+            <cl:item label="36개월" value="36"/>
+          </cl:combobox>
+          <cl:output class="label" value="요금제 변경">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata row="1" col="4"/>
+          </cl:output>
+          <cl:combobox id="cmbPlan" fieldLabel="요금제 변경">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata row="1" col="5"/>
+            <cl:item label="변경 안 함" value=""/>
+            <cl:item label="5G 디즈니+ 초이스 베이직" value="5G_BASIC"/>
+            <cl:item label="5G 슬림" value="5G_SLIM"/>
+            <cl:item label="5G 스페셜" value="5G_SPECIAL"/>
+            <cl:item label="LTE 베이직" value="LTE_BASIC"/>
+          </cl:combobox>
+          <cl:formlayout scrollable="false" hspace="16px" vspace="17px" top-margin="8px" right-margin="8px" bottom-margin="8px" left-margin="8px" hseparatorwidth="1" hseparatortype="BY_CLASS">
+            <cl:rows length="28" unit="PIXEL"/>
+            <cl:rows length="28" unit="PIXEL"/>
+            <cl:columns length="160" autoSizing="true" shadetype="BY_CLASS"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="160" autoSizing="true" shadetype="BY_CLASS"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="160" autoSizing="true" shadetype="BY_CLASS"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:verticallayout spacing="16"/>
+    </cl:group>
+    <cl:group id="grpFooter" class="conts-footer">
+      <cl:verticaldata width="1592px" height="52px" autosize="height"/>
+      <cl:group>
+        <cl:verticaldata width="400px" height="28px" autosize="height"/>
+        <cl:group>
+          <cl:formdata row="0" col="0"/>
+          <cl:button id="btnReset" class="tertiary" value="초기화">
+            <cl:listener name="click" handler="onBtnResetClick"/>
+            <cl:flowlayoutdata width="60px" height="28px" autosize="width"/>
+          </cl:button>
+          <cl:flowlayout valign="middle"/>
+        </cl:group>
+        <cl:group>
+          <cl:formdata row="0" col="1"/>
+          <cl:button id="btnPreCheck" class="secondary" value="사전체크">
+            <cl:listener name="click" handler="onBtnPreCheckClick"/>
+            <cl:flowlayoutdata width="60px" height="28px" autosize="width"/>
+          </cl:button>
+          <cl:button id="btnSave" class="primary" value="저장">
+            <cl:listener name="click" handler="onBtnSaveClick"/>
+            <cl:flowlayoutdata width="60px" height="28px" autosize="width"/>
+          </cl:button>
+          <cl:flowlayout halign="right" valign="middle"/>
+        </cl:group>
+        <cl:formlayout scrollable="false" hspace="1fr" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="700" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          <cl:columns length="700" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:verticallayout/>
+    </cl:group>
+    <cl:verticallayout scrollable="true" spacing="16" leftmargin="24" rightmargin="24" topmargin="16" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

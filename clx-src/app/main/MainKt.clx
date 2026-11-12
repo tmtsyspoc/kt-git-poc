@@ -1,0 +1,870 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" version="1.0.5996">
+  <head>
+    <screen id="default" name="default" width="1640px" height="984px" useCustomWidth="true" useCustomHeight="true" customHeight="1080" customWidth="1920" active="true"/>
+    <screen id="tablet" name="tablet" width="1023px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model>
+      <cl:dataset id="dsAllMenu" filtercondition="USE_YN != &quot;N&quot;">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="메뉴명" name="MENU_NM"/>
+          <cl:datacolumn comment="메뉴ID" name="MENU_ID"/>
+          <cl:datacolumn comment="상위메뉴ID" name="UP_MENU_ID"/>
+          <cl:datacolumn comment="즐겨찾기 여부" name="MENU_FAV"/>
+          <cl:datacolumn comment="내업무 여부" name="MENU_WORK" datatype="string" displayonly="false"/>
+          <cl:datacolumn comment="호출 화면 경로" name="CALL_PAGE"/>
+          <cl:datacolumn comment="사용여부" name="USE_YN"/>
+          <cl:datacolumn comment="검증방식" name="MENU_TYPE"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist/>
+      </cl:dataset>
+      <cl:dataset comment="알림 메세지" id="dsNotiMsg">
+        <cl:datacolumnlist>
+          <cl:datacolumn name="KEY" datatype="number"/>
+          <cl:datacolumn comment="메세지 유형" name="TYPE"/>
+          <cl:datacolumn comment="메세지 내용" name="MSG"/>
+          <cl:datacolumn comment="알림방 추가 여부" name="REPLAY"/>
+          <cl:datacolumn comment="읽음 여부" name="READ_YN"/>
+          <cl:datacolumn comment="발신자명" name="SENDER_NM"/>
+          <cl:datacolumn comment="발신자아이디" name="SENDER_ID"/>
+          <cl:datacolumn comment="요청상태값" name="APPR_RESULT"/>
+          <cl:datacolumn comment="메시지 제목" name="MSG_TITLE"/>
+          <cl:datacolumn comment="메시지 상세내용" name="CONTENTS"/>
+          <cl:datacolumn comment="[관리자승인] 문서 종류" name="APPR_KIND"/>
+          <cl:datacolumn name="ADMIN_MSG"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+      <cl:dataset id="dsOpenMenus">
+        <cl:datacolumnlist>
+          <cl:datacolumn name="label"/>
+          <cl:datacolumn name="value"/>
+          <cl:datacolumn name="menuId"/>
+          <cl:datacolumn name="id"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+      <cl:dataset comment="빠른 업무(대리점 주요 업무 바로가기). CALL_PAGE 에 화면 경로를 넣으면 연결된다." id="dsQuickTask">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="업무명" name="LABEL"/>
+          <cl:datacolumn comment="아이콘 클래스" name="ICON"/>
+          <cl:datacolumn comment="호출 화면 경로" name="CALL_PAGE"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="LABEL">신규가입</cl:datavalue>
+            <cl:datavalue columnname="ICON">t-new</cl:datavalue>
+            <cl:datavalue columnname="CALL_PAGE">app/kos/KosJoin.clx</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="LABEL">번호이동</cl:datavalue>
+            <cl:datavalue columnname="ICON">t-mnp</cl:datavalue>
+            <cl:datavalue columnname="CALL_PAGE">app/kos/KosMnp.clx</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="LABEL">기기변경</cl:datavalue>
+            <cl:datavalue columnname="ICON">t-chg</cl:datavalue>
+            <cl:datavalue columnname="CALL_PAGE">app/kos/KosDevChg.clx</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="LABEL">요금수납</cl:datavalue>
+            <cl:datavalue columnname="ICON">t-pay</cl:datavalue>
+            <cl:datavalue columnname="CALL_PAGE">app/kos/KosPay.clx</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="LABEL">요금제변경</cl:datavalue>
+            <cl:datavalue columnname="ICON">t-plan</cl:datavalue>
+            <cl:datavalue columnname="CALL_PAGE"></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="LABEL">정지/해지</cl:datavalue>
+            <cl:datavalue columnname="ICON">t-stop</cl:datavalue>
+            <cl:datavalue columnname="CALL_PAGE"></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="LABEL">명의변경</cl:datavalue>
+            <cl:datavalue columnname="ICON">t-name</cl:datavalue>
+            <cl:datavalue columnname="CALL_PAGE"></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="LABEL">단말재고</cl:datavalue>
+            <cl:datavalue columnname="ICON">t-stock</cl:datavalue>
+            <cl:datavalue columnname="CALL_PAGE"></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+      <cl:dataset comment="최근 조회 고객(화면 메모리에만 보관)" id="dsRecentCust">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="표시(마스킹)" name="LABEL"/>
+          <cl:datacolumn comment="검색조건(JSON)" name="VAL"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+      <cl:dataset comment="To-Do 목록" id="dsTodo">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="To-Do ID" name="TODO_ID"/>
+          <cl:datacolumn comment="할 일" name="TITLE"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+      <cl:datamap comment="오늘의 처리 현황" id="dmTodayStat">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="신규가입" name="NEW_CNT" datatype="number" defaultvalue="0"/>
+          <cl:datacolumn comment="번호이동" name="MNP_CNT" datatype="number" defaultvalue="0"/>
+          <cl:datacolumn comment="기기변경" name="CHG_CNT" datatype="number" defaultvalue="0"/>
+          <cl:datacolumn comment="요금수납" name="PAY_CNT" datatype="number" defaultvalue="0"/>
+          <cl:datacolumn comment="해지" name="TERM_CNT" datatype="number" defaultvalue="0"/>
+          <cl:datacolumn comment="미처리" name="PEND_CNT" datatype="number" defaultvalue="0"/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+      <cl:datamap comment="사용자 정보" id="dmUserInfo">
+        <cl:datacolumnlist>
+          <cl:datacolumn info="사용자ID" name="USER_ID" defaultvalue="admin"/>
+          <cl:datacolumn info="사용자명" name="USER_NM" defaultvalue="김케이"/>
+          <cl:datacolumn info="부서명" name="DEPT_NM" defaultvalue=""/>
+          <cl:datacolumn info="부서코드" name="DEPT_CD" defaultvalue=""/>
+          <cl:datacolumn name="USER_TYPE" defaultvalue="admin"/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+      <cl:datamap comment="프로젝트 설정 컨피그" id="dmGlobalConfig">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="mdi 최대 오픈 갯수" name="mdiWindowMaxCount" defaultvalue="-1"/>
+          <cl:datacolumn comment="디폴트 언어키" name="defaultLocale"/>
+          <cl:datacolumn comment="디비전 사용 여부" name="divideMdiUseYn"/>
+          <cl:datacolumn comment="알림(alert, confirm)시 레이어드팝업 사용 여부" name="useLayerdPop" defaultvalue="N"/>
+          <cl:datacolumn comment="mdi 탭 개수 초과시 옵션" name="mdiFirstClose"/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+      <cl:submission id="subLogOut" action="/Login/logout.do"/>
+      <cl:submission id="subOnLoad" action="app/exam/data/main.json">
+        <cl:responsedata dataid="dsAllMenu" isadd="false"/>
+        <cl:responsedata dataid="dmGlobalConfig"/>
+        <cl:responsedata dataid="dmUserInfo"/>
+      </cl:submission>
+      <cl:submission comment="대리점 현황·대리점 업무 메뉴(목업 데이터)" id="subDealer" action="app/exam/data/mainKt.json">
+        <cl:responsedata dataid="dmTodayStat"/>
+        <cl:responsedata dataid="dsAllMenu" isadd="true"/>
+      </cl:submission>
+    </cl:model>
+    <cl:appspec title="KT 메인"/>
+  </head>
+  <body class="main main-kt" clipcontent="false">
+    <cl:listener name="screen-change" handler="onBodyScreenChange"/>
+    <cl:listener name="init" handler="onBodyInit"/>
+    <cl:group id="grpHeader" class="kt-top" clipcontent="false">
+      <cl:xylayoutdata top="0px" right="0px" left="0px" height="52px" horizontalAnchor="BOTH" verticalAnchor="TOP"/>
+      <cl:group>
+        <cl:formdata row="0" col="0"/>
+        <cl:button id="btnLogo" class="logo" fieldLabel="KT 로고(새로고침)" tooltip="새로고침" value="">
+          <cl:listener name="click" handler="onBtnLogoClick"/>
+          <cl:formdata row="0" col="0"/>
+        </cl:button>
+        <cl:output class="sys-name" value="KOS">
+          <cl:formdata row="0" col="1"/>
+        </cl:output>
+        <cl:output class="sys-sub" value="대리점 영업지원">
+          <cl:formdata row="0" col="2"/>
+        </cl:output>
+        <cl:button id="btnSitemap" class="sitemap" tooltip="전체메뉴(사이트맵)" value="전체메뉴">
+          <cl:listener name="click" handler="onBtnSitemapClick"/>
+          <cl:formdata valign="CENTER" height="28" row="0" col="3"/>
+        </cl:button>
+        <cl:button id="btnHeaderMenu" class="btn-nav" visible="false" fieldLabel="메뉴 열기" value="" icon="0">
+          <cl:listener name="click" handler="onBtnHeaderMenuClick"/>
+          <cl:formdata halign="CENTER" valign="CENTER" width="24" height="24" row="0" col="5"/>
+        </cl:button>
+        <cl:formlayout scrollable="false" hspace="8px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="40" unit="PIXEL"/>
+          <cl:columns length="48" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          <cl:columns length="90" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          <cl:columns length="84" unit="PIXEL"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="24" unit="PIXEL"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:group id="grpCustSch" class="kt-cust" clipcontent="false">
+        <cl:formdata valign="CENTER" height="36" row="0" col="1"/>
+        <cl:group class="pill">
+          <cl:flowlayoutdata width="540px" height="36px" autosize="none"/>
+          <cl:combobox id="cmbCustSchType" fieldLabel="고객 검색구분" value="TEL">
+            <cl:formdata row="0" col="0"/>
+            <cl:item label="전화번호" value="TEL"/>
+            <cl:item label="서비스번호" value="SVC"/>
+            <cl:item label="고객명" value="NM"/>
+            <cl:item label="청구번호" value="BILL"/>
+          </cl:combobox>
+          <cl:inputbox id="ipbCustSchVal" fieldLabel="고객 검색어" placeholder="고객 검색 (F2) · 입력 후 Enter" maxlength="30">
+            <cl:listener name="keydown" handler="onIpbCustSchValKeydown"/>
+            <cl:formdata row="0" col="1"/>
+          </cl:inputbox>
+          <cl:inputbox id="ipbCustBirth" fieldLabel="생년월일" placeholder="생년월일(YYMMDD)" maxlength="6" inputfilter="[0-9]">
+            <cl:listener name="keydown" handler="onIpbCustBirthKeydown"/>
+            <cl:formdata row="0" col="2"/>
+          </cl:inputbox>
+          <cl:button id="btnCustSch" class="sch" fieldLabel="고객조회" tooltip="고객조회" value="" icon="0">
+            <cl:listener name="click" handler="onBtnCustSchClick"/>
+            <cl:formdata halign="CENTER" valign="CENTER" width="28" height="28" row="0" col="3"/>
+          </cl:button>
+          <cl:formlayout scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="4px" bottom-margin="0px" left-margin="8px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="112" unit="PIXEL"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="140" unit="PIXEL"/>
+            <cl:columns length="32" unit="PIXEL"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:checkbox id="cbxCustTerm" text="해지포함" truevalue="Y" falsevalue="N" value="N">
+          <cl:flowlayoutdata width="80px" height="36px" autosize="width"/>
+        </cl:checkbox>
+        <cl:flowlayout hspacing="12" vspacing="0" halign="left"/>
+      </cl:group>
+      <cl:group class="kt-utils" clipcontent="false">
+        <cl:formdata valign="CENTER" height="32" row="0" col="2"/>
+        <cl:group class="session" clipcontent="false">
+          <cl:flowlayoutdata width="124px" height="32px" autosize="none"/>
+          <cl:output id="optSession" class="session-time" fieldLabel="세션 남은 시간" tooltip="세션 남은 시간" value="60:00">
+            <cl:formdata row="0" col="0"/>
+          </cl:output>
+          <cl:button id="btnSessionExt" class="ghost" tooltip="세션 연장" value="연장">
+            <cl:listener name="click" handler="onBtnSessionExtClick"/>
+            <cl:formdata valign="CENTER" height="24" row="0" col="1"/>
+          </cl:button>
+          <cl:formlayout scrollable="false" hspace="6px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="44" unit="PIXEL"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:button id="btnAlarm" class="kt-ico bell" fieldLabel="알림" tooltip="알림" value="" icon="0">
+          <cl:listener name="click" handler="onBtnAlarmClick"/>
+          <cl:expbind property="class" category="CLASS" expression="&quot;kt-ico bell&quot; + (#dsNotiMsg.findAllRow(&quot;READ_YN != 'Y'&quot;).length > 0 ? &quot; active&quot; : &quot;&quot;)"/>
+          <cl:flowlayoutdata width="32px" height="32px" autosize="none"/>
+        </cl:button>
+        <cl:group id="grpUser" class="user">
+          <cl:flowlayoutdata width="100px" height="32px" autosize="width"/>
+          <cl:output class="name" displayexp="text + &quot; 님&quot;">
+            <cl:datamapbind property="value" datacontrolid="dmUserInfo" columnname="USER_NM"/>
+            <cl:verticaldata width="100px" height="16px"/>
+          </cl:output>
+          <cl:output class="department">
+            <cl:datamapbind property="value" datacontrolid="dmUserInfo" columnname="DEPT_NM"/>
+            <cl:verticaldata width="100px" height="16px"/>
+          </cl:output>
+          <cl:verticallayout scrollable="false" spacing="0" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+        </cl:group>
+        <cl:radiobutton id="rdbTheme" class="theme-toggle" fieldLabel="화면 모드" value="light" hspacing="0" vspacing="0">
+          <cl:listener name="selection-change" handler="onRdbThemeSelectionChange"/>
+          <cl:flowlayoutdata width="57px" height="32px" autosize="width"/>
+          <cl:item label="" value="light"/>
+          <cl:item label="" value="high-contrast"/>
+          <cl:itemstyle>
+            <cl:expbind property="class" category="CLASS" expression="value"/>
+          </cl:itemstyle>
+        </cl:radiobutton>
+        <cl:button id="btnCustom" class="kt-ico setting" fieldLabel="환경설정" tooltip="환경설정" value="" icon="0">
+          <cl:listener name="click" handler="onButtonClick5"/>
+          <cl:flowlayoutdata width="32px" height="32px" autosize="none"/>
+        </cl:button>
+        <cl:button id="btnLogout" class="kt-ico logout" fieldLabel="로그아웃" tooltip="로그아웃" value="" icon="0">
+          <cl:listener name="click" handler="onBtnLogoutClick"/>
+          <cl:flowlayoutdata width="32px" height="32px" autosize="none"/>
+        </cl:button>
+        <cl:flowlayout hspacing="10" vspacing="0" halign="right" valign="middle"/>
+      </cl:group>
+      <cl:formlayout scrollable="false" hspace="24px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="330" unit="PIXEL" autoSizing="false" syncminlength="true"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="470" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group id="grpGnb" class="header gnb-bar" visible="false" clipcontent="false">
+      <cl:xylayoutdata top="52px" right="0px" left="0px" height="40px" horizontalAnchor="BOTH" verticalAnchor="TOP"/>
+      <cl:navigationbar id="ngb" filterexp="UP_MENU_ID == null || UP_MENU_ID == &quot;&quot;" baritemspacing="32" barscrollbuttonposition="none">
+        <cl:listener name="item-click" handler="onNgbItemClick"/>
+        <cl:formdata row="0" col="0"/>
+        <cl:menuitemset datasetid="dsAllMenu" label="MENU_NM" value="MENU_ID" parent="UP_MENU_ID"/>
+      </cl:navigationbar>
+      <cl:formlayout scrollable="false" hspace="12px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group id="grpBody" clipcontent="false">
+      <cl:xylayoutdata top="52px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+      <cl:notifier id="notifier" scope="app" delay="7000" animation="fadein" close="true" successdelay="7000" successclose="true" infodelay="7000" infoclose="true" warningdelay="7000" warningclose="true" dangerdelay="7000" dangerclose="true">
+        <cl:xylayoutdata right="10px" bottom="5px" left="10px" height="36px" horizontalAnchor="BOTH" verticalAnchor="BOTTOM"/>
+      </cl:notifier>
+      <cl:mdifolder id="mdiCn" class="mdi-content" clipcontent="false" childcombinatorclass="content" headerarrowposition="right" headercheckable="true" item-spacing="8" item-dragging-mode="internal">
+        <cl:listener name="close" handler="onMdiCnClose"/>
+        <cl:listener name="tabheader-click" handler="onMdiCnTabheaderClick"/>
+        <cl:listener name="tabheader-check" handler="onMdiCnTabheaderCheck"/>
+        <cl:listener name="tabheader-uncheck" handler="onMdiCnTabheaderUncheck"/>
+        <cl:listener name="selection-change" handler="onMdiCnSelectionChange"/>
+        <cl:xylayoutdata top="0px" right="300px" bottom="0px" left="272px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+        <cl:tabitem name="dashboard" selected="true" text="대시보드" closable="true" visible="false">
+          <std:metadata>
+            <std:property key="is-active-item" value="true"/>
+          </std:metadata>
+          <cl:embeddedapp id="eaHome" src="DashboardKt.clx">
+            <std:metadata>
+              <std:property key="locked" value="true"/>
+            </std:metadata>
+          </cl:embeddedapp>
+        </cl:tabitem>
+        <cl:group id="mdiBtnUtils" class="mdi-btn-wrap" clipcontent="false">
+          <cl:headercontroldata width="266" position="right"/>
+          <cl:button id="btnMdiList" class="list" value="목록" displayexp="sstr(text, [&quot;cl-sound-only&quot;])" icon="0">
+            <cl:listener name="click" handler="onBtnListClick"/>
+            <cl:expbind property="tooltip" category="PROPERTY" expression="value"/>
+            <cl:flowlayoutdata width="24px" height="24px" autosize="none"/>
+          </cl:button>
+          <cl:udc id="btnDiv" type="udc.com.udcComMdiDiv">
+            <cl:flowlayoutdata width="24px" height="24px"/>
+          </cl:udc>
+          <cl:button comment="&lt;ROW>&#xA;&lt;r>E-NAME:&#xA;&lt;r>E-DOC:&#xA;&lt;r>E-PARAM:&#xA;&lt;r>E-RR-UI-NAME:&#xA;&lt;r>E-CALL-SRV-NAME:&#xA;&lt;r>E-REP:&#xA;&lt;r>E-REMARK:" id="btnMdiZoom" class="zoom" value="확대" displayexp="sstr(text, [&quot;cl-sound-only&quot;])" icon="0">
+            <cl:listener name="click" handler="onBtnZoomClick"/>
+            <cl:expbind property="tooltip" category="PROPERTY" expression="value"/>
+            <cl:flowlayoutdata width="24px" height="24px" autosize="none"/>
+          </cl:button>
+          <cl:button id="btnMdiRefresh" class="reset" value="새로고침" displayexp="sstr(text, [&quot;cl-sound-only&quot;])" icon="0">
+            <cl:listener name="click" handler="onBtnResetClick"/>
+            <cl:expbind property="tooltip" category="PROPERTY" expression="value"/>
+            <cl:flowlayoutdata width="24px" height="24px" autosize="none"/>
+          </cl:button>
+          <cl:button id="btnMdiClose" class="close" value="모두 닫기" displayexp="sstr(text, [&quot;cl-sound-only&quot;])" icon="0">
+            <cl:listener name="click" handler="onBtnCloseClick"/>
+            <cl:expbind property="tooltip" category="PROPERTY" expression="value"/>
+            <cl:flowlayoutdata width="24px" height="24px" autosize="none"/>
+          </cl:button>
+          <cl:button id="btnMdiWinOpen" class="pop" value="새창보기" displayexp="sstr(text, [&quot;cl-sound-only&quot;])" icon="0">
+            <cl:listener name="click" handler="onBtnNewWindowClick"/>
+            <cl:expbind property="tooltip" category="PROPERTY" expression="value"/>
+            <cl:flowlayoutdata width="24px" height="24px" autosize="none"/>
+          </cl:button>
+          <cl:button id="btnFullWindow" class="full" value="화면전체크기" displayexp="sstr(text, [&quot;cl-sound-only&quot;])" icon="0">
+            <cl:listener name="click" handler="onBtnFullWindowClick"/>
+            <cl:expbind property="tooltip" category="PROPERTY" expression="value"/>
+            <cl:flowlayoutdata width="24px" height="24px" autosize="none"/>
+          </cl:button>
+          <cl:button id="btnFitWindow" class="fit" visible="false" value="화면기본크기" displayexp="sstr(text, [&quot;cl-sound-only&quot;])" icon="0">
+            <cl:listener name="click" handler="onBtnFitWindowClick"/>
+            <cl:expbind property="tooltip" category="PROPERTY" expression="value"/>
+            <cl:flowlayoutdata width="24px" height="24px" autosize="none"/>
+          </cl:button>
+          <cl:flowlayout vspacing="0" halign="right"/>
+        </cl:group>
+        <cl:group>
+          <cl:headercontroldata width="28" position="left"/>
+          <cl:button id="btnHome" class="mdi-btn-home" value="" icon="0">
+            <cl:listener name="click" handler="onBtnHomeClick"/>
+            <cl:flowlayoutdata width="24px" height="24px"/>
+          </cl:button>
+          <cl:flowlayout/>
+        </cl:group>
+      </cl:mdifolder>
+      <cl:group id="grpRail" class="left-rail">
+        <cl:xylayoutdata top="0px" bottom="0px" left="0px" width="52px" horizontalAnchor="LEFT" verticalAnchor="BOTH"/>
+        <cl:group>
+          <cl:formdata row="0" col="0"/>
+          <cl:button id="btnRailFav" class="rail-btn fav" tooltip="즐겨찾는 메뉴" value="즐겨찾기">
+            <cl:listener name="click" handler="onBtnRailFavClick"/>
+            <cl:verticaldata width="44px" height="46px"/>
+          </cl:button>
+          <cl:button id="btnRailMenu" class="rail-btn menu" tooltip="전체 메뉴" value="메뉴">
+            <cl:listener name="click" handler="onBtnRailMenuClick"/>
+            <cl:verticaldata width="44px" height="46px"/>
+          </cl:button>
+          <cl:button id="btnRailWork" class="rail-btn work" tooltip="내업무 메뉴" value="내업무">
+            <cl:listener name="click" handler="onBtnRailWorkClick"/>
+            <cl:verticaldata width="44px" height="46px"/>
+          </cl:button>
+          <cl:output class="rail-sep" value="">
+            <cl:verticaldata width="44px" height="1px"/>
+          </cl:output>
+          <cl:button id="btnRailReq" class="rail-btn req" tooltip="요청·상담" value="요청">
+            <cl:listener name="click" handler="onBtnRailReqClick"/>
+            <cl:verticaldata width="44px" height="46px"/>
+          </cl:button>
+          <cl:button id="btnRailCalc" class="rail-btn calc" tooltip="요금 계산기" value="계산기">
+            <cl:listener name="click" handler="onBtnRailCalcClick"/>
+            <cl:verticaldata width="44px" height="46px"/>
+          </cl:button>
+          <cl:button id="btnRailTodo" class="rail-btn todo" tooltip="To-Do 메모" value="To-Do">
+            <cl:listener name="click" handler="onBtnRailTodoClick"/>
+            <cl:verticaldata width="44px" height="46px"/>
+          </cl:button>
+          <cl:output class="rail-sep" value="">
+            <cl:verticaldata width="44px" height="1px"/>
+          </cl:output>
+          <cl:button id="btnRailCurtain" class="rail-btn curtain" tooltip="화면 가리기" value="가리기">
+            <cl:listener name="click" handler="onBtnRailCurtainClick"/>
+            <cl:verticaldata width="44px" height="46px"/>
+          </cl:button>
+          <cl:button id="btnRailPrint" class="rail-btn print" tooltip="인쇄" value="인쇄">
+            <cl:listener name="click" handler="onBtnRailPrintClick"/>
+            <cl:verticaldata width="44px" height="46px"/>
+          </cl:button>
+          <cl:verticallayout scrollable="false" spacing="2" leftmargin="4" rightmargin="4" topmargin="8" bottommargin="0"/>
+        </cl:group>
+        <cl:group>
+          <cl:formdata row="1" col="0"/>
+          <cl:button id="btnRailHelp" class="rail-btn help" tooltip="매뉴얼·FAQ·단축키" value="지원">
+            <cl:listener name="click" handler="onBtnRailHelpClick"/>
+            <cl:verticaldata width="44px" height="46px"/>
+          </cl:button>
+          <cl:verticallayout scrollable="false" spacing="2" leftmargin="4" rightmargin="4" topmargin="0" bottommargin="8"/>
+        </cl:group>
+        <cl:formlayout scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:rows length="54" unit="PIXEL"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:group id="grpAsd" class="side-menu" clipcontent="false">
+        <cl:xylayoutdata top="0px" bottom="0px" left="52px" width="220px" horizontalAnchor="LEFT" verticalAnchor="BOTH"/>
+        <cl:group class="side-search" clipcontent="false">
+          <cl:formdata row="0" col="0"/>
+          <cl:output id="sideTit" class="tit" value="전체 메뉴">
+            <cl:verticaldata width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:searchinput id="si1" placeholder="메뉴 검색 (F4)">
+            <cl:listener name="search" handler="onSi1Search"/>
+            <cl:verticaldata width="100px" height="32px"/>
+          </cl:searchinput>
+          <cl:verticallayout spacing="8"/>
+        </cl:group>
+        <cl:group>
+          <cl:formdata row="1" col="0"/>
+          <cl:sidenavigation id="snavMn" selectionHighlightType="cascade">
+            <cl:listener name="item-click" handler="onSnavMnItemClick"/>
+            <cl:formdata row="0" col="0"/>
+            <cl:treeitemset datasetid="dsAllMenu" label="MENU_NM" value="MENU_ID" parent="UP_MENU_ID"/>
+          </cl:sidenavigation>
+          <cl:formlayout scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:formlayout scrollable="false" hspace="8px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="93" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:group id="grpWork" class="work-panel">
+        <cl:xylayoutdata top="0px" right="0px" bottom="0px" width="300px" horizontalAnchor="RIGHT" verticalAnchor="BOTH"/>
+        <cl:group class="kt-sec">
+          <cl:verticaldata width="268px" height="156px" autosize="height"/>
+          <cl:output class="sec-tit" value="오늘의 처리 현황">
+            <cl:verticaldata width="100px" height="20px"/>
+          </cl:output>
+          <cl:group>
+            <cl:verticaldata width="268px" height="124px"/>
+            <cl:group class="tile">
+              <cl:formdata row="0" col="0"/>
+              <cl:output class="num" fieldLabel="신규가입">
+                <cl:datamapbind property="value" datacontrolid="dmTodayStat" columnname="NEW_CNT"/>
+                <cl:verticaldata width="60px" height="26px"/>
+              </cl:output>
+              <cl:output class="lbl" value="신규가입">
+                <cl:verticaldata width="60px" height="16px"/>
+              </cl:output>
+              <cl:verticallayout scrollable="false" spacing="0" leftmargin="0" rightmargin="0" topmargin="6" bottommargin="6"/>
+            </cl:group>
+            <cl:group class="tile">
+              <cl:formdata row="0" col="1"/>
+              <cl:output class="num" fieldLabel="번호이동">
+                <cl:datamapbind property="value" datacontrolid="dmTodayStat" columnname="MNP_CNT"/>
+                <cl:verticaldata width="60px" height="26px"/>
+              </cl:output>
+              <cl:output class="lbl" value="번호이동">
+                <cl:verticaldata width="60px" height="16px"/>
+              </cl:output>
+              <cl:verticallayout scrollable="false" spacing="0" leftmargin="0" rightmargin="0" topmargin="6" bottommargin="6"/>
+            </cl:group>
+            <cl:group class="tile">
+              <cl:formdata row="0" col="2"/>
+              <cl:output class="num" fieldLabel="기기변경">
+                <cl:datamapbind property="value" datacontrolid="dmTodayStat" columnname="CHG_CNT"/>
+                <cl:verticaldata width="60px" height="26px"/>
+              </cl:output>
+              <cl:output class="lbl" value="기기변경">
+                <cl:verticaldata width="60px" height="16px"/>
+              </cl:output>
+              <cl:verticallayout scrollable="false" spacing="0" leftmargin="0" rightmargin="0" topmargin="6" bottommargin="6"/>
+            </cl:group>
+            <cl:group class="tile">
+              <cl:formdata row="1" col="0"/>
+              <cl:output class="num" fieldLabel="요금수납">
+                <cl:datamapbind property="value" datacontrolid="dmTodayStat" columnname="PAY_CNT"/>
+                <cl:verticaldata width="60px" height="26px"/>
+              </cl:output>
+              <cl:output class="lbl" value="요금수납">
+                <cl:verticaldata width="60px" height="16px"/>
+              </cl:output>
+              <cl:verticallayout scrollable="false" spacing="0" leftmargin="0" rightmargin="0" topmargin="6" bottommargin="6"/>
+            </cl:group>
+            <cl:group class="tile">
+              <cl:formdata row="1" col="1"/>
+              <cl:output class="num" fieldLabel="해지">
+                <cl:datamapbind property="value" datacontrolid="dmTodayStat" columnname="TERM_CNT"/>
+                <cl:verticaldata width="60px" height="26px"/>
+              </cl:output>
+              <cl:output class="lbl" value="해지">
+                <cl:verticaldata width="60px" height="16px"/>
+              </cl:output>
+              <cl:verticallayout scrollable="false" spacing="0" leftmargin="0" rightmargin="0" topmargin="6" bottommargin="6"/>
+            </cl:group>
+            <cl:group class="tile warn">
+              <cl:formdata row="1" col="2"/>
+              <cl:output class="num" fieldLabel="미처리">
+                <cl:datamapbind property="value" datacontrolid="dmTodayStat" columnname="PEND_CNT"/>
+                <cl:verticaldata width="60px" height="26px"/>
+              </cl:output>
+              <cl:output class="lbl" value="미처리">
+                <cl:verticaldata width="60px" height="16px"/>
+              </cl:output>
+              <cl:verticallayout scrollable="false" spacing="0" leftmargin="0" rightmargin="0" topmargin="6" bottommargin="6"/>
+            </cl:group>
+            <cl:formlayout scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:verticallayout scrollable="false" spacing="8" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+        </cl:group>
+        <cl:group class="kt-sec">
+          <cl:verticaldata width="268px" height="160px" autosize="height"/>
+          <cl:output class="sec-tit" value="빠른 업무">
+            <cl:verticaldata width="100px" height="20px"/>
+          </cl:output>
+          <cl:group id="grpQuickTask" class="tasks">
+            <cl:verticaldata width="268px" height="128px" autosize="height"/>
+            <cl:flowlayout hspacing="8" vspacing="8" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+          </cl:group>
+          <cl:verticallayout scrollable="false" spacing="8" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+        </cl:group>
+        <cl:group class="kt-sec">
+          <cl:verticaldata width="268px" height="132px"/>
+          <cl:output class="sec-tit" value="최근 조회 고객">
+            <cl:verticaldata width="100px" height="20px"/>
+          </cl:output>
+          <cl:listbox id="lbxRecentCust" class="recent" fieldLabel="최근 조회 고객">
+            <cl:listener name="item-click" handler="onLbxRecentCustItemClick"/>
+            <cl:verticaldata width="268px" height="104px"/>
+            <cl:itemset datasetid="dsRecentCust" label="LABEL" value="VAL"/>
+          </cl:listbox>
+          <cl:verticallayout scrollable="false" spacing="8" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+        </cl:group>
+        <cl:group class="kt-sec">
+          <cl:verticaldata width="268px" height="140px" autosize="height"/>
+          <cl:group>
+            <cl:verticaldata width="268px" height="24px"/>
+            <cl:output class="sec-tit" value="To-Do">
+              <cl:formdata row="0" col="0"/>
+            </cl:output>
+            <cl:output id="optTodoCnt" class="cnt" fieldLabel="남은 할 일" value="0">
+              <cl:formdata row="0" col="1"/>
+            </cl:output>
+            <cl:button id="btnTodoClear" class="ghost" value="완료 삭제">
+              <cl:listener name="click" handler="onBtnTodoClearClick"/>
+              <cl:formdata row="0" col="2"/>
+            </cl:button>
+            <cl:formlayout scrollable="false" hspace="6px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:columns length="44" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="68" unit="PIXEL"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:inputbox id="ipbTodo" fieldLabel="할 일" placeholder="할 일 입력 후 Enter" maxlength="50">
+            <cl:listener name="keydown" handler="onIpbTodoKeydown"/>
+            <cl:verticaldata width="268px" height="32px"/>
+          </cl:inputbox>
+          <cl:checkboxgroup id="cbgTodo" fieldLabel="할 일 목록" colcount="1" vspacing="4">
+            <cl:listener name="selection-change" handler="onCbgTodoSelectionChange"/>
+            <cl:verticaldata width="268px" height="28px" autosize="height"/>
+            <cl:itemset datasetid="dsTodo" label="TITLE" value="TODO_ID"/>
+          </cl:checkboxgroup>
+          <cl:verticallayout scrollable="false" spacing="8" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+        </cl:group>
+        <cl:verticallayout scrollable="true" spacing="20" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:xylayout/>
+    </cl:group>
+    <cl:button id="btnAsdExpder" class="btn-side-expander" value="">
+      <cl:listener name="click" handler="onBtnAsdExpderClick"/>
+      <cl:xylayoutdata top="130px" left="270px" width="16px" height="48px" horizontalAnchor="LEFT" verticalAnchor="TOP"/>
+    </cl:button>
+    <cl:button id="btnWorkExpder" class="btn-side-expander right" fieldLabel="업무 패널 열기/닫기" tooltip="업무 패널 열기/닫기" value="">
+      <cl:listener name="click" handler="onBtnWorkExpderClick"/>
+      <cl:xylayoutdata top="130px" right="298px" width="16px" height="48px" horizontalAnchor="RIGHT" verticalAnchor="TOP"/>
+    </cl:button>
+    <cl:group id="grpZoom" class="floating-box zoom" visible="false">
+      <cl:xylayoutdata top="20px" right="-157px" width="105px" height="36px" horizontalAnchor="RIGHT" verticalAnchor="TOP"/>
+      <cl:button id="btnZoomMinus" class="zoom-minus" icon="0">
+        <cl:listener name="click" handler="onBtnZoomMinusClick"/>
+        <cl:formdata row="0" col="0"/>
+      </cl:button>
+      <cl:numbereditor id="nbeZmRatio" class="zoom-ratio" value="100" min="80" max="120" step="10.0" spinbutton="false" format="#,##0" preventinput="true" showclearbutton="false">
+        <cl:formdata row="0" col="1"/>
+      </cl:numbereditor>
+      <cl:button id="btnZoomPlus" class="zoom-plus" icon="0">
+        <cl:listener name="click" handler="onBtnZoomPlusClick"/>
+        <cl:formdata row="0" col="2"/>
+      </cl:button>
+      <cl:formlayout scrollable="false" hspace="8px" vspace="6px" top-margin="8px" right-margin="12px" bottom-margin="8px" left-margin="12px">
+        <cl:rows length="20" unit="PIXEL"/>
+        <cl:columns length="20" shadetype="NONE" shadecolor="transparent"/>
+        <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+        <cl:columns length="20"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group id="grpMnListPop" class="dropdown-menulist" visible="false" clipcontent="false">
+      <cl:xylayoutdata top="66px" right="-272px" width="220px" height="300px" horizontalAnchor="RIGHT" verticalAnchor="TOP"/>
+      <cl:listbox id="lbxTabList" class="floating-box list">
+        <cl:listener name="item-click" handler="onLbxTabListItemClick"/>
+        <cl:verticaldata width="220px" height="300px" minwidth="150" syncminwidth="false" autosize="height"/>
+        <cl:itemset datasetid="dsOpenMenus" label="label" value="value"/>
+      </cl:listbox>
+      <cl:verticallayout scrollable="true" spacing="4" leftmargin="3" rightmargin="3" topmargin="3" bottommargin="3"/>
+    </cl:group>
+    <cl:group id="grpMMenu" class="side-menu mobile" visible="false" clipcontent="false">
+      <cl:xylayoutdata top="376px" right="-342px" bottom="48px" width="290px" horizontalAnchor="RIGHT" verticalAnchor="BOTH"/>
+      <cl:group class="m-header">
+        <cl:formdata row="0" col="0"/>
+        <cl:button id="btnMMenulogo" class="logo" fieldLabel="메뉴닫기" tooltip="메뉴닫기" value="">
+          <cl:formdata row="0" col="0"/>
+        </cl:button>
+        <cl:button id="btnMMenuClose" class="btn-close" fieldLabel="사용자 설정" tooltip="사용자 설정" value="">
+          <cl:listener name="click" handler="onBtnMMenuCloseClick"/>
+          <cl:formdata valign="CENTER" height="24" row="0" col="1"/>
+        </cl:button>
+        <cl:formlayout scrollable="false" hspace="1fr" vspace="0px" top-margin="1fr" right-margin="20px" bottom-margin="1fr" left-margin="20px">
+          <cl:rows length="32" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+          <cl:columns length="190" unit="PIXEL" autoSizing="false" shadetype="NONE" shadecolor="transparent" syncminlength="true"/>
+          <cl:columns length="24" unit="PIXEL"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:group class="side-search" clipcontent="false">
+        <cl:formdata row="1" col="0"/>
+        <cl:output id="sideTit3" class="tit" value="메뉴 검색">
+          <cl:verticaldata width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:searchinput id="si3" placeholder="메뉴 검색 (F4)">
+          <cl:listener name="search" handler="onSi3Search"/>
+          <cl:verticaldata width="100px" height="32px"/>
+        </cl:searchinput>
+        <cl:verticallayout spacing="8"/>
+      </cl:group>
+      <cl:group>
+        <cl:formdata row="2" col="0"/>
+        <cl:group class="side-menu-btn" clipcontent="false">
+          <cl:formdata row="0" col="0"/>
+          <cl:button class="menu" value="Menu">
+            <cl:listener name="click" handler="onButtonClick11"/>
+            <cl:formdata row="0" col="0"/>
+          </cl:button>
+          <cl:button class="fav" value="즐겨찾는메뉴">
+            <cl:listener name="click" handler="onButtonClick9"/>
+            <cl:formdata row="0" col="1"/>
+          </cl:button>
+          <cl:button class="work" value="내업무">
+            <cl:listener name="click" handler="onButtonClick10"/>
+            <cl:formdata row="0" col="2"/>
+          </cl:button>
+          <cl:formlayout scrollable="false" hspace="4px" vspace="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:sidenavigation id="snavMMenu" selectionHighlightType="cascade">
+          <cl:listener name="item-click" handler="onSnavMnItemClick"/>
+          <cl:formdata row="1" col="0"/>
+          <cl:treeitemset datasetid="dsAllMenu" label="MENU_NM" value="MENU_ID" parent="UP_MENU_ID"/>
+        </cl:sidenavigation>
+        <cl:formlayout scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="72" unit="PIXEL"/>
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:group>
+        <cl:formdata row="3" col="0"/>
+        <cl:button class="btn-logout" value="로그아웃" icon="0">
+          <cl:listener name="click" handler="onButtonClick7"/>
+          <cl:flowlayoutdata width="80px" height="32px" autosize="width"/>
+        </cl:button>
+        <cl:output style="background-color:#DDDDDD;" value="">
+          <cl:flowlayoutdata width="1px" height="16px"/>
+        </cl:output>
+        <cl:button class="btn-settings" value="관리메뉴" icon="0">
+          <cl:listener name="click" handler="onButtonClick8"/>
+          <cl:flowlayoutdata width="80px" height="32px" autosize="width"/>
+        </cl:button>
+        <cl:flowlayout hspacing="30" vspacing="0" halign="center" valign="middle" leftmargin="16" rightmargin="16" topmargin="12" bottommargin="12"/>
+      </cl:group>
+      <cl:formlayout hspace="8px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="48" unit="PIXEL" autoSizing="false" syncminlength="true"/>
+        <cl:rows length="93" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:rows length="60" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+        <cl:columns length="290" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group id="grpAlarm" class="floating-box alarm" visible="false">
+      <cl:xylayoutdata top="66px" right="-605px" width="280px" height="271px" horizontalAnchor="RIGHT" verticalAnchor="TOP"/>
+      <cl:group>
+        <cl:formdata row="0" col="0"/>
+        <cl:output class="tit" value="알림">
+          <cl:formdata row="0" col="0"/>
+        </cl:output>
+        <cl:button id="btnAlarmClose" class="icon" value="닫기" displayexp="sstr(text, [&quot;cl-sound-only&quot;])" icon="0">
+          <cl:listener name="click" handler="onBtnAlarmCloseClick"/>
+          <cl:formdata halign="RIGHT" valign="CENTER" width="20" height="20" row="0" col="1"/>
+          <cl:iconstyle class="icon ico-x"/>
+        </cl:button>
+        <cl:formlayout scrollable="false" hspace="0px" vspace="0px" top-margin="12px" right-margin="12px" bottom-margin="12px" left-margin="12px">
+          <cl:rows length="1" unit="FRACTION" autoSizing="false" syncminlength="true"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="20" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:group>
+        <cl:formdata row="1" col="0"/>
+        <cl:group>
+          <cl:formdata row="0" col="0"/>
+          <cl:button class="text" value="모두읽기" icon="0">
+            <cl:listener name="click" handler="onButtonClick3"/>
+            <cl:flowlayoutdata width="100px" height="24px" autosize="both"/>
+            <cl:iconstyle class="icon ico-check"/>
+          </cl:button>
+          <cl:button class="text" value="전체삭제" icon="0">
+            <cl:listener name="click" handler="onButtonClick6"/>
+            <cl:flowlayoutdata width="100px" height="24px" autosize="both"/>
+            <cl:iconstyle class="icon ico-trash"/>
+          </cl:button>
+          <cl:flowlayout vspacing="0" halign="right"/>
+        </cl:group>
+        <cl:group id="grpAlarmWrap" class="list" clipcontent="true">
+          <cl:formdata row="1" col="0"/>
+          <cl:group class="item new" removeOnBuild="true">
+            <cl:verticaldata width="400px" height="56px" autosize="height"/>
+            <cl:output class="txt" value="새로운 결재 대기 문서가 있습니다.">
+              <cl:verticaldata width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:output class="date" value="10분 전">
+              <cl:verticaldata width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:verticallayout/>
+          </cl:group>
+          <cl:verticallayout scrollable="true" spacing="8"/>
+        </cl:group>
+        <cl:formlayout scrollable="false" hspace="0px" vspace="8px" top-margin="12px" right-margin="12px" bottom-margin="12px" left-margin="12px">
+          <cl:rows length="24" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:formlayout scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px" hseparatorwidth="1" hseparatortype="BY_CLASS">
+        <cl:rows length="40" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group id="grpHelp" class="floating-box kt-help" visible="false">
+      <cl:xylayoutdata top="386px" right="-560px" width="260px" height="212px" horizontalAnchor="RIGHT" verticalAnchor="TOP"/>
+      <cl:output class="tit" value="지원">
+        <cl:verticaldata width="100px" height="20px"/>
+      </cl:output>
+      <cl:group>
+        <cl:verticaldata width="228px" height="28px"/>
+        <cl:button id="btnHelpManual" class="secondary" value="매뉴얼">
+          <cl:listener name="click" handler="onBtnHelpItemClick"/>
+          <cl:flowlayoutdata width="60px" height="28px" autosize="width"/>
+        </cl:button>
+        <cl:button id="btnHelpFaq" class="secondary" value="FAQ">
+          <cl:listener name="click" handler="onBtnHelpItemClick"/>
+          <cl:flowlayoutdata width="60px" height="28px" autosize="width"/>
+        </cl:button>
+        <cl:button id="btnHelpKnow" class="secondary" value="지식">
+          <cl:listener name="click" handler="onBtnHelpItemClick"/>
+          <cl:flowlayoutdata width="60px" height="28px" autosize="width"/>
+        </cl:button>
+        <cl:flowlayout hspacing="6" vspacing="0" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+      </cl:group>
+      <cl:output class="tit sub" value="단축키">
+        <cl:verticaldata width="100px" height="20px"/>
+      </cl:output>
+      <cl:output value="F2  고객 통합검색">
+        <cl:verticaldata width="100px" height="18px"/>
+      </cl:output>
+      <cl:output value="F4  메뉴 검색">
+        <cl:verticaldata width="100px" height="18px"/>
+      </cl:output>
+      <cl:output value="Enter  검색 실행 / To-Do 추가">
+        <cl:verticaldata width="100px" height="18px"/>
+      </cl:output>
+      <cl:output value="탭 우클릭  탭 닫기·새창 메뉴">
+        <cl:verticaldata width="100px" height="18px"/>
+      </cl:output>
+      <cl:verticallayout scrollable="false" spacing="6" leftmargin="16" rightmargin="16" topmargin="14" bottommargin="14"/>
+    </cl:group>
+    <cl:group id="grpCalc" class="floating-box kt-help" visible="false">
+      <cl:xylayoutdata top="610px" right="-560px" width="260px" height="100px" horizontalAnchor="RIGHT" verticalAnchor="TOP"/>
+      <cl:output class="tit" value="요금 계산기">
+        <cl:verticaldata width="100px" height="20px"/>
+      </cl:output>
+      <cl:group>
+        <cl:verticaldata width="228px" height="28px"/>
+        <cl:button id="btnCalcHome" class="secondary" value="홈">
+          <cl:listener name="click" handler="onBtnCalcItemClick"/>
+          <cl:flowlayoutdata width="60px" height="28px" autosize="width"/>
+        </cl:button>
+        <cl:button id="btnCalcWire" class="secondary" value="유선">
+          <cl:listener name="click" handler="onBtnCalcItemClick"/>
+          <cl:flowlayoutdata width="60px" height="28px" autosize="width"/>
+        </cl:button>
+        <cl:button id="btnCalcBundle" class="secondary" value="결합">
+          <cl:listener name="click" handler="onBtnCalcItemClick"/>
+          <cl:flowlayoutdata width="60px" height="28px" autosize="width"/>
+        </cl:button>
+        <cl:button id="btnCalcMobile" class="secondary" value="무선">
+          <cl:listener name="click" handler="onBtnCalcItemClick"/>
+          <cl:flowlayoutdata width="60px" height="28px" autosize="width"/>
+        </cl:button>
+        <cl:flowlayout hspacing="6" vspacing="0" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+      </cl:group>
+      <cl:verticallayout scrollable="false" spacing="10" leftmargin="16" rightmargin="16" topmargin="14" bottommargin="14"/>
+    </cl:group>
+    <cl:group id="grpCurtain" class="kt-curtain" visible="false">
+      <cl:xylayoutdata top="550px" right="-680px" width="360px" height="200px" horizontalAnchor="RIGHT" verticalAnchor="TOP"/>
+      <cl:output class="tit" value="화면 가리기 중">
+        <cl:formdata row="1" col="0"/>
+      </cl:output>
+      <cl:output class="sub" value="고객 정보 보호를 위해 화면을 가렸습니다.">
+        <cl:formdata row="2" col="0"/>
+      </cl:output>
+      <cl:button id="btnCurtainOff" class="primary" value="화면 다시 보기">
+        <cl:listener name="click" handler="onBtnCurtainOffClick"/>
+        <cl:formdata halign="CENTER" width="160" row="3" col="0"/>
+      </cl:button>
+      <cl:formlayout scrollable="false" hspace="0px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:rows length="36" unit="PIXEL"/>
+        <cl:rows length="24" unit="PIXEL"/>
+        <cl:rows length="40" unit="PIXEL"/>
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:xylayout scrollable="true"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

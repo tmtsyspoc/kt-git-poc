@@ -1,0 +1,397 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-5ae0b5ef" version="1.0.5542">
+  <head std:sid="head-261aca13">
+    <screen std:sid="screen-f3163f0f" id="EXP-POP[320]" name="EXP-POP[320]" width="320px" height="768px" useCustomWidth="true" useCustomHeight="true" customHeight="900" customWidth="480" active="true"/>
+    <cl:model std:sid="model-bb098b54">
+      <cl:dataset std:sid="d-set-df211128" id="dsHotKey">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="id" std:sid="d-column-7657f9ce" name="KEY"/>
+          <cl:datacolumn comment="단축키명" std:sid="d-column-018fefe7" name="FUNCTION"/>
+          <cl:datacolumn comment="단축키" std:sid="d-column-475f44da" name="HOTKEY"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="FUNCTION"><![CDATA[개인화 설정 열기]]></cl:datavalue>
+            <cl:datavalue columnname="HOTKEY"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="KEY"><![CDATA[custom]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="FUNCTION"><![CDATA[새창 열기]]></cl:datavalue>
+            <cl:datavalue columnname="HOTKEY"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="KEY"><![CDATA[windowpop]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="FUNCTION"><![CDATA[로그아웃]]></cl:datavalue>
+            <cl:datavalue columnname="HOTKEY"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="KEY"><![CDATA[logout]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="KEY"><![CDATA[gridInsert]]></cl:datavalue>
+            <cl:datavalue columnname="FUNCTION"><![CDATA[[그리드] 행추가]]></cl:datavalue>
+            <cl:datavalue columnname="HOTKEY"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="KEY"><![CDATA[grdDelete]]></cl:datavalue>
+            <cl:datavalue columnname="FUNCTION"><![CDATA[[그리드] 행삭제]]></cl:datavalue>
+            <cl:datavalue columnname="HOTKEY"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="KEY"><![CDATA[search]]></cl:datavalue>
+            <cl:datavalue columnname="FUNCTION"><![CDATA[화면 조회]]></cl:datavalue>
+            <cl:datavalue columnname="HOTKEY"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+      <cl:dataset std:sid="d-set-60ebab58" id="dsHotKeyGrid" filtercondition="HOTKEY != &quot;&quot; &amp;&amp; HOTKEY != null">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="id" std:sid="d-column-6e287f72" name="KEY"/>
+          <cl:datacolumn comment="단축키명" std:sid="d-column-3104b985" name="FUNCTION"/>
+          <cl:datacolumn comment="단축키" std:sid="d-column-e30d2383" name="HOTKEY"/>
+        </cl:datacolumnlist>
+        <cl:dataview std:sid="d-view-676126f2" id="dv2" filtercondition="HOTKEY != &quot;&quot; &amp;&amp; HOTKEY != null &amp;&amp; (getStateString() != &quot;D&quot;)"/>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="FUNCTION"><![CDATA[개인화 설정 열기]]></cl:datavalue>
+            <cl:datavalue columnname="HOTKEY"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="KEY"><![CDATA[custom]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="FUNCTION"><![CDATA[새창 열기]]></cl:datavalue>
+            <cl:datavalue columnname="HOTKEY"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="KEY"><![CDATA[windowpop]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="FUNCTION"><![CDATA[로그아웃]]></cl:datavalue>
+            <cl:datavalue columnname="HOTKEY"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="KEY"><![CDATA[logout]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="설정"/>
+  </head>
+  <body std:sid="body-f51d0064" class="_setting" clipcontent="false">
+    <cl:listener std:sid="listener-9324f6a6" name="load" handler="onBodyLoad"/>
+    <cl:listener std:sid="listener-6ecc5aff" name="before-unload" handler="onBodyBeforeUnload"/>
+    <cl:group std:sid="group-a225da1d" class="setting-list" clipcontent="false">
+      <cl:verticaldata std:sid="v-data-03dc598c" width="480px" height="1630px" autosize="height"/>
+      <cl:group std:sid="group-b3320a58" class="li" clipcontent="false">
+        <cl:verticaldata std:sid="v-data-465e084a" width="400px" height="118px" autosize="height"/>
+        <cl:output std:sid="output-90bfb71c" id="opt4" class="label" value="테마 모드">
+          <cl:verticaldata std:sid="v-data-2267cbcb" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:radiobutton std:sid="r-button-05caeedb" id="rdbTheme" class="theme-set" value="high-contrast" colcount="0" fixedwidth="true" hspacing="8" vspacing="8" iconalign="top" clickRegion="item">
+          <cl:listener std:sid="listener-d7e5d258" name="selection-change" handler="onRdbThemeSelectionChange"/>
+          <cl:verticaldata std:sid="v-data-8cdd8928" width="200px" height="90px"/>
+          <cl:item std:sid="item-d434916e" label="시스템" value="system"/>
+          <cl:item std:sid="item-71e4c4f9" label="라이트" value="light"/>
+          <cl:item std:sid="item-5587a621" label="다크" value="high-contrast"/>
+          <cl:itemstyle>
+            <cl:expbind property="class" category="CLASS" expression="value"/>
+          </cl:itemstyle>
+        </cl:radiobutton>
+        <cl:verticallayout std:sid="v-layout-2266d31a" scrollable="false" spacing="8"/>
+      </cl:group>
+      <cl:group std:sid="group-4a825e7b" id="grpRdbPrimary" class="li" clipcontent="false">
+        <cl:verticaldata std:sid="v-data-b0b95129" width="320px" height="152px" autosize="height"/>
+        <cl:output std:sid="output-ba5c2834" class="label" value="메인 색상">
+          <cl:verticaldata std:sid="v-data-1e7d0fb2" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:radiobutton std:sid="r-button-480ad6a2" id="rdbPrimary" class="color-set" value="white-theme" colcount="4" fixedwidth="true" hspacing="8" vspacing="8" clickRegion="item">
+          <cl:listener std:sid="listener-0c015be4" name="selection-change" handler="onRdbPrimarySelectionChange"/>
+          <cl:verticaldata std:sid="v-data-12aaf01d" width="200px" height="124px"/>
+          <cl:item label="KT 레드" value="white-theme">
+            <cl:expbind property="tooltip" category="PROPERTY" expression="label"/>
+          </cl:item>
+          <cl:item label="모노" value="default">
+            <cl:expbind property="tooltip" category="PROPERTY" expression="label"/>
+          </cl:item>
+          <cl:item label="블루" value="blue-theme">
+            <cl:expbind property="tooltip" category="PROPERTY" expression="label"/>
+          </cl:item>
+          <cl:item label="그린" value="green-theme">
+            <cl:expbind property="tooltip" category="PROPERTY" expression="label"/>
+          </cl:item>
+          <cl:item label="퍼플" value="purple-theme">
+            <cl:expbind property="tooltip" category="PROPERTY" expression="label"/>
+          </cl:item>
+          <cl:item label="오렌지" value="orange-theme">
+            <cl:expbind property="tooltip" category="PROPERTY" expression="label"/>
+          </cl:item>
+          <cl:itemstyle>
+            <cl:expbind property="class" category="CLASS" expression="value"/>
+          </cl:itemstyle>
+        </cl:radiobutton>
+        <cl:verticallayout std:sid="v-layout-2ddec28a" scrollable="false" spacing="8" leftmargin="5" rightmargin="5" topmargin="0" bottommargin="0"/>
+      </cl:group>
+      <cl:group std:sid="group-6613f1f3" class="li">
+        <cl:verticaldata std:sid="v-data-70d55c22" width="320px" height="148px" autosize="height"/>
+        <cl:output std:sid="output-72639c3a" class="label" value="메인 레이아웃">
+          <cl:verticaldata std:sid="v-data-04636feb" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:radiobutton std:sid="r-button-68930901" id="rdbLayout" class="layout-set" value="multi" colcount="0" fixedwidth="true" hspacing="8" vspacing="8" iconalign="top" clickRegion="item">
+          <cl:listener std:sid="listener-7e0734b8" name="selection-change" handler="onRdbLayoutSelectionChange"/>
+          <cl:verticaldata std:sid="v-data-9385d020" width="320px" height="120px" autosize="none"/>
+          <cl:item std:sid="item-41272bdd" label="멀티" value="multi"/>
+          <cl:item std:sid="item-17ec243a" label="싱글" value="single"/>
+          <cl:itemstyle>
+            <cl:expbind property="class" category="CLASS" expression="value"/>
+          </cl:itemstyle>
+        </cl:radiobutton>
+        <cl:verticallayout std:sid="v-layout-2707b3ad" scrollable="false" spacing="8"/>
+      </cl:group>
+      <cl:group std:sid="group-261cbc6b" class="li">
+        <cl:verticaldata std:sid="v-data-072dcbdb" width="320px" height="66px" autosize="height"/>
+        <cl:output std:sid="output-a68a23a9" class="label" value="MDI 탭 오픈 개수">
+          <cl:verticaldata std:sid="v-data-be18ca31" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:combobox std:sid="c-box-f4e284fe" id="cmbMdiCnt" value="-1" preventinput="true">
+          <cl:listener std:sid="listener-c26f5f7d" name="selection-change" handler="onCmbMdiCntSelectionChange"/>
+          <cl:verticaldata std:sid="v-data-629e3a11" width="100px" height="38px"/>
+          <cl:item std:sid="t-item-73844528" label="10" value="10"/>
+          <cl:item std:sid="t-item-ebec9f93" label="15" value="15"/>
+          <cl:item std:sid="t-item-cd6afd4c" label="20" value="20"/>
+          <cl:item std:sid="t-item-2b75ddda" label="25" value="25"/>
+          <cl:item std:sid="t-item-c7cbb012" label="30" value="30"/>
+          <cl:item std:sid="t-item-04839689" label="무한" value="-1"/>
+        </cl:combobox>
+        <cl:verticallayout std:sid="v-layout-6e6c8957" scrollable="false" spacing="8"/>
+      </cl:group>
+      <cl:group std:sid="group-a10e2c56" class="li">
+        <cl:verticaldata std:sid="v-data-41f41fd2" width="320px" height="66px" autosize="height"/>
+        <cl:output std:sid="output-6402ce36" class="label" value="MDI 탭 개수 초과 시">
+          <cl:verticaldata std:sid="v-data-1e06e088" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:combobox std:sid="c-box-3a5ea86c" id="cmbMdiFirstClose" value="false" preventinput="true">
+          <cl:listener std:sid="listener-f5ec2c03" name="selection-change" handler="onCmbMdiFirstCloseSelectionChange"/>
+          <cl:verticaldata std:sid="v-data-e220cc20" width="100px" height="38px"/>
+          <cl:item std:sid="t-item-7b31218c" label="최초 화면 닫기" value="true"/>
+          <cl:item std:sid="t-item-2030dfbc" label="현재 탭 유지" value="false"/>
+        </cl:combobox>
+        <cl:verticallayout std:sid="v-layout-81c34183" scrollable="false" spacing="8"/>
+      </cl:group>
+      <cl:group std:sid="group-8e2057df" class="li">
+        <cl:verticaldata std:sid="v-data-1575f3b2" width="320px" height="66px" autosize="height"/>
+        <cl:output std:sid="output-7c4a3662" class="label" value="화면 선택 시 사이드 메뉴 접기 여부">
+          <cl:verticaldata std:sid="v-data-539201b3" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:combobox std:sid="c-box-12e14af5" id="cmbSnavSetting" value="true" preventinput="true">
+          <cl:listener std:sid="listener-2197dea7" name="selection-change" handler="onCmbSnavSettingSelectionChange"/>
+          <cl:verticaldata std:sid="v-data-352fd325" width="100px" height="38px"/>
+          <cl:item std:sid="t-item-eaea9de0" label="펼치기" value="true"/>
+          <cl:item std:sid="t-item-9ab74a16" label="접기" value="false"/>
+        </cl:combobox>
+        <cl:verticallayout std:sid="v-layout-96d6bb21" scrollable="false" spacing="8"/>
+      </cl:group>
+      <cl:group std:sid="group-e64b593a" id="grp1" class="li">
+        <cl:verticaldata std:sid="v-data-fa53b1ac" width="280px" height="148px" autosize="height"/>
+        <cl:output std:sid="output-cf614461" id="opt1" class="label" value="메인 구조">
+          <cl:verticaldata std:sid="v-data-344e2c2c" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:radiobutton std:sid="r-button-69b72fa4" id="rdbStruct" class="structure-set" value="vertical" colcount="0" fixedwidth="true" hspacing="8" vspacing="8" iconalign="top" clickRegion="item">
+          <cl:listener std:sid="listener-4f75f4a5" name="selection-change" handler="onRdbStructSelectionChange"/>
+          <cl:verticaldata std:sid="v-data-fda6595c" width="200px" height="120px"/>
+          <cl:item std:sid="item-3d2b0a38" label="세로" value="vertical"/>
+          <cl:item std:sid="item-9e0f1fc1" label="가로" value="horizontal"/>
+          <cl:itemstyle>
+            <cl:expbind property="class" category="CLASS" expression="value"/>
+          </cl:itemstyle>
+        </cl:radiobutton>
+        <cl:verticallayout std:sid="v-layout-254bcc46" scrollable="false" spacing="8"/>
+      </cl:group>
+      <cl:group std:sid="group-0a2bb887" id="grpGnbDepth" class="li">
+        <cl:verticaldata std:sid="v-data-22d7f4e7" width="440px" height="66px" autosize="height"/>
+        <cl:output std:sid="output-b0b2c486" class="label" value="GNB 메뉴 Depth">
+          <cl:verticaldata std:sid="v-data-eb90e8f5" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:combobox std:sid="c-box-fb74ec8e" id="cmbDepth" value="1" itemdisplayexp="label + &quot; Depth&quot;">
+          <cl:listener std:sid="listener-841c9fde" name="selection-change" handler="onNbeDepthSelectionChange"/>
+          <cl:verticaldata std:sid="v-data-353bacf5" width="100px" height="38px"/>
+          <cl:item std:sid="t-item-af99f712" label="1" value="1"/>
+          <cl:item std:sid="t-item-5c16ffad" label="2" value="2"/>
+          <cl:item std:sid="t-item-1d76fb34" label="3" value="3"/>
+          <cl:item std:sid="t-item-29f7ff05" label="4" value="4"/>
+          <cl:item std:sid="t-item-8d8a629f" label="5" value="5"/>
+        </cl:combobox>
+        <cl:verticallayout std:sid="v-layout-c8402219" scrollable="false" spacing="8"/>
+      </cl:group>
+      <cl:group std:sid="group-eebdb593" id="grp6" class="li">
+        <cl:verticaldata std:sid="v-data-e6ed51fc" width="440px" height="66px" autosize="height"/>
+        <cl:output std:sid="output-90163557" id="opt5" class="label" value="화면 크기(배율)">
+          <cl:verticaldata std:sid="v-data-d5c54646" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:combobox std:sid="c-box-93c679e2" id="cmbScale" value="100" preventinput="true">
+          <cl:listener std:sid="listener-fe74305f" name="selection-change" handler="onCmbScaleSelectionChange"/>
+          <cl:verticaldata std:sid="v-data-38a8ecef" width="100px" height="38px"/>
+          <cl:item std:sid="t-item-32e4c961" label="80%" value="80"/>
+          <cl:item std:sid="t-item-35a10355" label="90%" value="90"/>
+          <cl:item std:sid="t-item-23a7f5b4" label="100%" value="100"/>
+          <cl:item std:sid="t-item-90895ed0" label="110%" value="110"/>
+          <cl:item std:sid="t-item-f6bb611d" label="120%" value="120"/>
+        </cl:combobox>
+        <cl:verticallayout std:sid="v-layout-0d476307" scrollable="false" spacing="8"/>
+      </cl:group>
+      <cl:group comment="확인필요" std:sid="group-f028f7bc" id="grp4">
+        <cl:verticaldata std:sid="v-data-ce96dc59" width="280px" height="66px" autosize="height"/>
+        <cl:group std:sid="group-4572255a" id="grp2" class="li">
+          <cl:formdata std:sid="f-data-bbe084d8" row="0" col="0"/>
+          <cl:output std:sid="output-52c221e7" id="opt2" class="label" value="메뉴 플로팅 옵션">
+            <cl:verticaldata std:sid="v-data-c47de727" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:combobox std:sid="c-box-9409c248" id="cmbFloat" value="in" preventinput="true">
+            <cl:listener std:sid="listener-13647d7a" name="selection-change" handler="onCmbFloatSelectionChange"/>
+            <cl:verticaldata std:sid="v-data-0f69af16" width="100px" height="38px"/>
+            <cl:item std:sid="t-item-f5d39204" label="화면 내부 배치" value="in"/>
+            <cl:item std:sid="t-item-2cb9f04f" label="화면 상단 플로팅" value="float"/>
+          </cl:combobox>
+          <cl:verticallayout std:sid="v-layout-ac2c8993" spacing="8"/>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-32154d6c" scrollable="false" hspace="5px" vspace="5px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:group std:sid="group-16cc9bbb" id="grp7">
+        <cl:verticaldata std:sid="v-data-587ee179" width="440px" height="66px" autosize="height"/>
+        <cl:group std:sid="group-5e154e58" id="grp8" class="li">
+          <cl:formdata std:sid="f-data-45dc0adc" row="0" col="0"/>
+          <cl:output std:sid="output-3fc6d3f9" id="opt6" class="label" value="글꼴">
+            <cl:verticaldata std:sid="v-data-02986e51" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:combobox std:sid="c-box-59adeb23" id="cmbFontFamliy" value="Default" preventinput="true">
+            <cl:listener std:sid="listener-90658ea9" name="selection-change" handler="onCmbFontFamliySelectionChange"/>
+            <cl:verticaldata std:sid="v-data-c9df8585" width="100px" height="38px"/>
+            <cl:item std:sid="t-item-d1a8d549" label="Default Font" value="Default"/>
+            <cl:item std:sid="t-item-b0d71112" label="Verdana" value="Verdana"/>
+            <cl:item std:sid="t-item-fb939e9b" label="Trebuchet MS" value="TrebuchetMS"/>
+            <cl:item std:sid="t-item-63dd30b0" label="Comic Sans MS" value="ComicSansMS"/>
+          </cl:combobox>
+          <cl:verticallayout std:sid="v-layout-3ff353a5" spacing="8"/>
+        </cl:group>
+        <cl:group std:sid="group-9f84c6ea" id="grp9" class="li">
+          <cl:formdata std:sid="f-data-964ddcbc" row="0" col="1"/>
+          <cl:output std:sid="output-b1bef6b7" id="opt7" class="label" value="글씨 크기">
+            <cl:verticaldata std:sid="v-data-60a5a92e" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:combobox std:sid="c-box-3217a1b7" id="cmbFontSize" value="14" preventinput="true">
+            <cl:listener std:sid="listener-259c47d9" name="selection-change" handler="onCmbFontSizeSelectionChange"/>
+            <cl:verticaldata std:sid="v-data-765e3acb" width="100px" height="38px"/>
+            <cl:item std:sid="t-item-0e9269cc" label="아주 작음(XS)" value="11"/>
+            <cl:item std:sid="t-item-02f02a3c" label="작음(S)" value="12"/>
+            <cl:item std:sid="t-item-2c5db442" label="보통(M)" value="14"/>
+            <cl:item std:sid="t-item-c6011122" label="큼(L)" value="16"/>
+            <cl:item std:sid="t-item-f04c0a39" label="아주 큼(XL)" value="18"/>
+          </cl:combobox>
+          <cl:verticallayout std:sid="v-layout-643c0523" spacing="8"/>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-e8b0b5e2" scrollable="false" hspace="5px" vspace="5px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:group std:sid="group-cf48a946" id="grp10" class="li">
+        <cl:verticaldata std:sid="v-data-a32f25b8" width="440px" height="148px" autosize="height"/>
+        <cl:output std:sid="output-54e0abac" id="opt8" class="label" value="바탕화면 이미지 설정">
+          <cl:verticaldata std:sid="v-data-fbd23b7f" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:radiobutton std:sid="r-button-120a1ffc" id="rdbLogoImg" class="logo-img" value="ori" colcount="0" fixedwidth="true" hspacing="8" vspacing="8" iconalign="top" clickRegion="item">
+          <cl:listener std:sid="listener-e338899c" name="selection-change" handler="onRdbDashboardSelectionChange"/>
+          <cl:verticaldata std:sid="v-data-24cafc05" width="200px" height="120px"/>
+          <cl:item std:sid="item-72fae9bf" label="기본" value="ori"/>
+          <cl:item std:sid="item-b7e22926" label="type1" value="type1"/>
+          <cl:item std:sid="item-802e2854" label="type2" value="type2"/>
+          <cl:itemstyle>
+            <cl:expbind property="class" category="CLASS" expression="value"/>
+          </cl:itemstyle>
+        </cl:radiobutton>
+        <cl:verticallayout std:sid="v-layout-1e5ab70d" scrollable="false" spacing="8"/>
+      </cl:group>
+      <cl:group std:sid="group-8491e6a3" id="grp11" class="li">
+        <cl:verticaldata std:sid="v-data-979b70d8" width="440px" height="178px" autosize="height"/>
+        <cl:output std:sid="output-ab619f6b" id="opt9" class="label" value="단축키 설정">
+          <cl:verticaldata std:sid="v-data-d15d6ad5" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:group std:sid="group-95d164ea" id="grp12">
+          <cl:verticaldata std:sid="v-data-51f57b67" width="440px" height="150px" autosize="height"/>
+          <cl:group std:sid="group-6b6ef794" id="grp13">
+            <cl:verticaldata std:sid="v-data-cd402c52" width="440px" height="186px"/>
+            <cl:combobox std:sid="c-box-4fde1766" id="cmbFunction" placeholder="기능" preventinput="true">
+              <cl:listener std:sid="listener-3767caf9" name="selection-change" handler="onCmbFunctionSelectionChange"/>
+              <cl:formdata std:sid="f-data-4c41d368" row="0" col="0"/>
+              <cl:item std:sid="t-item-e56e7a5e" label="선택" value=""/>
+              <cl:itemset datasetid="dsHotKey" label="FUNCTION" value="KEY"/>
+            </cl:combobox>
+            <cl:inputbox std:sid="i-box-f7545fcb" id="ipbHotKey" placeholder="단축키">
+              <cl:listener std:sid="listener-9dc0b93d" name="keyup" handler="onIpbHotKeyKeyup"/>
+              <cl:listener std:sid="listener-c6a86718" name="keydown" handler="onIpbHotKeyKeydown"/>
+              <cl:formdata std:sid="f-data-c5f56eb8" row="0" col="1"/>
+            </cl:inputbox>
+            <cl:button std:sid="button-025fd26e" id="btn2" class="btn-save" value="등록">
+              <cl:listener std:sid="listener-f220beb8" name="click" handler="onBtn2Click"/>
+              <cl:formdata std:sid="f-data-897b16b7" row="0" col="2"/>
+            </cl:button>
+            <cl:grid std:sid="grid-ee7a1783" id="grd1" datasetid="dsHotKeyGrid" autofit="1">
+              <cl:listener std:sid="listener-bf1c3cb4" name="cell-click" handler="onGrd1CellClick"/>
+              <cl:formdata std:sid="f-data-e1482c4f" row="1" col="0" rowspan="1" colspan="3"/>
+              <cl:gridcolumn std:sid="g-column-3a39cecf" width="150px"/>
+              <cl:gridcolumn std:sid="g-column-45ed1818"/>
+              <cl:gridcolumn std:sid="g-column-39112aeb" width="67px"/>
+              <cl:gridheader std:sid="gh-band-98625763">
+                <cl:gridrow std:sid="g-row-d24590a9" height="37px"/>
+                <cl:gridcell std:sid="gh-cell-862b43f6" rowindex="0" colindex="0" targetcolumnname="FUNCTION" sortable="false" filterable="false" text="단축키명"/>
+                <cl:gridcell std:sid="gh-cell-ce05f0cd" rowindex="0" colindex="1" targetcolumnname="HOTKEY" sortable="false" filterable="false" text="단축키"/>
+                <cl:gridcell std:sid="gh-cell-47c4cbb9" rowindex="0" colindex="2"/>
+              </cl:gridheader>
+              <cl:griddetail std:sid="gd-band-ee91404b">
+                <cl:gridrow std:sid="g-row-ba3687a7" height="37px"/>
+                <cl:gridcell std:sid="gd-cell-38da447a" rowindex="0" colindex="0" columnname="FUNCTION">
+                  <cl:output std:sid="output-f0055275" id="opt10">
+                    <cl:celldata std:sid="c-data-32583a36"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="gd-cell-b98e4c56" rowindex="0" colindex="1" columnname="HOTKEY">
+                  <cl:output std:sid="output-14f3fe8b" id="opt11">
+                    <cl:celldata std:sid="c-data-f0490be8"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="gd-cell-3fbcd70b" rowindex="0" colindex="2">
+                  <cl:button std:sid="button-31b8da20" id="btn3" class="secondary" value="삭제">
+                    <cl:celldata std:sid="c-data-29cb798d"/>
+                  </cl:button>
+                </cl:gridcell>
+              </cl:griddetail>
+            </cl:grid>
+            <cl:formlayout std:sid="f-layout-68f8e7b8" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="28" unit="PIXEL"/>
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="60" unit="PIXEL"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-8d010020" spacing="8"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-25764885" scrollable="false" spacing="8"/>
+      </cl:group>
+      <cl:group std:sid="group-f1e03a8c" id="grp5">
+        <cl:verticaldata std:sid="v-data-cfef82e4" width="480px" height="28px" autosize="height"/>
+        <cl:button std:sid="button-10720e23" id="btn1" class="secondary ico-reset-blue" value="초기화" icon="0">
+          <cl:listener std:sid="listener-3cf4f0d6" name="click" handler="onBtn1Click"/>
+          <cl:flowlayoutdata std:sid="f-data-61103603" width="100px" height="28px" autosize="width"/>
+        </cl:button>
+        <cl:button std:sid="button-e20bdef4" id="btn4" class="primary" value="닫기">
+          <cl:listener std:sid="listener-7d9deace" name="click" handler="onBtn4Click"/>
+          <cl:flowlayoutdata std:sid="f-data-c2561a4b" width="100px" height="28px" autosize="width"/>
+        </cl:button>
+        <cl:flowlayout std:sid="f-layout-3d7bec1e" halign="right"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-cff40d8e" scrollable="false" spacing="16"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-90a04fa6" scrollable="true" spacing="0"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-65c723c7" version="1.0.4034">
+  <head std:sid="head-7cef8be0">
+    <std:metadata>
+      <std:property key="template-file" value="templates/팝업/1.그리드/1-1.단일 그리드.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-e63fdd28" id="EXB-POP[1024]" name="EXB-POP[1024]" width="1024px" height="576px" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-52515b74" id="EXB-POP[800]" name="EXB-POP[800]" width="800px" height="480px" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-6a0aa9bd" id="EXB-POP[480]" name="EXB-POP[480]" width="480px" height="320px" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-92e9263e"/>
+    <cl:appspec title="로그 보기"/>
+  </head>
+  <body std:sid="body-38cefc13">
+    <cl:listener std:sid="listener-58428f99" name="load" handler="onBodyLoad"/>
+    <cl:group std:sid="group-c943ba2c" id="grpLog">
+      <cl:formdata std:sid="f-data-85ad1592" row="0" col="0"/>
+      <cl:verticallayout std:sid="v-layout-adfc4466"/>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-26d21298" scrollable="true" hspace="0px" vspace="12px" top-margin="16px" right-margin="16px" bottom-margin="16px" left-margin="16px">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

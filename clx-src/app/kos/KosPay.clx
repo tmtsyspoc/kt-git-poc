@@ -1,0 +1,282 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" version="1.0.5186">
+  <head>
+    <screen id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen id="tablet" name="tablet" width="1024px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model>
+      <cl:dataset comment="청구 내역" id="dsBill">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="청구월" name="BILL_YM"/>
+          <cl:datacolumn comment="수납상태" name="STATUS"/>
+          <cl:datacolumn comment="총청구금액" name="TOTAL_AMT" datatype="number"/>
+          <cl:datacolumn comment="당월청구금액" name="MONTH_AMT" datatype="number"/>
+          <cl:datacolumn comment="미납금액" name="UNPAID_AMT" datatype="number"/>
+          <cl:datacolumn comment="납부방법" name="PAY_METHOD"/>
+          <cl:datacolumn comment="청구유형" name="BILL_TYPE"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+      <cl:dataset comment="청구 내역(목업 원본)" id="dsBillMock">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="청구월" name="BILL_YM"/>
+          <cl:datacolumn comment="수납상태" name="STATUS"/>
+          <cl:datacolumn comment="총청구금액" name="TOTAL_AMT" datatype="number"/>
+          <cl:datacolumn comment="당월청구금액" name="MONTH_AMT" datatype="number"/>
+          <cl:datacolumn comment="미납금액" name="UNPAID_AMT" datatype="number"/>
+          <cl:datacolumn comment="납부방법" name="PAY_METHOD"/>
+          <cl:datacolumn comment="청구유형" name="BILL_TYPE"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="BILL_YM">2026-10</cl:datavalue>
+            <cl:datavalue columnname="STATUS">미납</cl:datavalue>
+            <cl:datavalue columnname="TOTAL_AMT">234520</cl:datavalue>
+            <cl:datavalue columnname="MONTH_AMT">234520</cl:datavalue>
+            <cl:datavalue columnname="UNPAID_AMT">234520</cl:datavalue>
+            <cl:datavalue columnname="PAY_METHOD">신용/체크카드</cl:datavalue>
+            <cl:datavalue columnname="BILL_TYPE">이메일</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="BILL_YM">2026-09</cl:datavalue>
+            <cl:datavalue columnname="STATUS">미납</cl:datavalue>
+            <cl:datavalue columnname="TOTAL_AMT">260420</cl:datavalue>
+            <cl:datavalue columnname="MONTH_AMT">260420</cl:datavalue>
+            <cl:datavalue columnname="UNPAID_AMT">60420</cl:datavalue>
+            <cl:datavalue columnname="PAY_METHOD">신용/체크카드</cl:datavalue>
+            <cl:datavalue columnname="BILL_TYPE">이메일</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="BILL_YM">2026-08</cl:datavalue>
+            <cl:datavalue columnname="STATUS">완납</cl:datavalue>
+            <cl:datavalue columnname="TOTAL_AMT">234520</cl:datavalue>
+            <cl:datavalue columnname="MONTH_AMT">234520</cl:datavalue>
+            <cl:datavalue columnname="UNPAID_AMT">0</cl:datavalue>
+            <cl:datavalue columnname="PAY_METHOD">신용/체크카드</cl:datavalue>
+            <cl:datavalue columnname="BILL_TYPE">이메일</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="BILL_YM">2026-07</cl:datavalue>
+            <cl:datavalue columnname="STATUS">완납</cl:datavalue>
+            <cl:datavalue columnname="TOTAL_AMT">234520</cl:datavalue>
+            <cl:datavalue columnname="MONTH_AMT">234520</cl:datavalue>
+            <cl:datavalue columnname="UNPAID_AMT">0</cl:datavalue>
+            <cl:datavalue columnname="PAY_METHOD">신용/체크카드</cl:datavalue>
+            <cl:datavalue columnname="BILL_TYPE">이메일</cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="요금수납"/>
+  </head>
+  <body class="wrap" clipcontent="true" childcombinatorclass="v_base">
+    <cl:listener name="load" handler="onBodyLoad"/>
+    <cl:group id="grpAppHeader">
+      <cl:attribute name="mobile-column-count" value="1"/>
+      <cl:verticaldata width="1592px" height="28px" autosize="height"/>
+      <cl:udc type="udc.com.udcComAppHeader">
+        <cl:formdata row="0" col="0"/>
+        <cl:property name="visibleState" value="true" type="boolean"/>
+        <cl:property name="title" value="요금수납" type="string"/>
+      </cl:udc>
+      <cl:group class="page-btn-wrap">
+        <cl:formdata row="0" col="1"/>
+        <cl:flowlayout hspacing="4" halign="right"/>
+      </cl:group>
+      <cl:formlayout scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="700" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+        <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group id="grpSearch" class="sch-filter-box">
+      <cl:attribute name="mobile-column-count" value="2"/>
+      <cl:attribute name="tablet-column-count" value="4"/>
+      <cl:verticaldata width="1592px" height="60px" autosize="height"/>
+      <cl:output class="label" value="서비스번호">
+        <cl:formdata row="0" col="0"/>
+      </cl:output>
+      <cl:inputbox id="ipbSvcNo" fieldLabel="서비스번호" placeholder="숫자만 입력" maxlength="11" inputfilter="[0-9]">
+        <cl:listener name="keydown" handler="onIpbSvcNoKeydown"/>
+        <cl:formdata row="0" col="1"/>
+      </cl:inputbox>
+      <cl:output class="label" value="고객명">
+        <cl:formdata row="0" col="2"/>
+      </cl:output>
+      <cl:inputbox id="ipbCustNm" fieldLabel="고객명" placeholder="고객명" maxlength="30">
+        <cl:formdata row="0" col="3"/>
+      </cl:inputbox>
+      <cl:button id="btnSearch" class="primary btn-search" value="조회" icon="0">
+        <cl:listener name="click" handler="onBtnSearchClick"/>
+        <cl:formdata row="0" col="7"/>
+      </cl:button>
+      <cl:formlayout scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="28" unit="PIXEL" autoSizing="false"/>
+        <cl:columns length="160" autoSizing="true"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="160" autoSizing="true"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="160" autoSizing="true"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="70" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group id="grpData" class="conts-area">
+      <cl:verticaldata width="1592px" height="574px" autosize="height"/>
+      <cl:group class="conts-wrap">
+        <cl:verticaldata width="1592px" height="296px" autosize="height"/>
+        <cl:udc type="udc.com.udcComGridTitle">
+          <cl:verticaldata width="800px" height="28px" autosize="height"/>
+          <cl:property name="title" value="청구 내역" type="string"/>
+          <cl:property name="ctrl" value="grdBill" type="control"/>
+          <cl:property name="showExportExcel" value="false" type="boolean"/>
+          <cl:property name="showOption" value="false" type="boolean"/>
+        </cl:udc>
+        <cl:grid id="grdBill" fieldLabel="청구 내역" datasetid="dsBill" clickmode="select">
+          <cl:listener name="selection-change" handler="onGrdBillSelectionChange"/>
+          <cl:verticaldata width="400px" height="220px"/>
+          <cl:gridcolumn width="100px"/>
+          <cl:gridcolumn width="90px"/>
+          <cl:gridcolumn width="130px"/>
+          <cl:gridcolumn width="130px"/>
+          <cl:gridcolumn width="130px"/>
+          <cl:gridcolumn width="140px"/>
+          <cl:gridcolumn width="110px"/>
+          <cl:gridheader>
+            <cl:gridrow height="36px"/>
+            <cl:gridcell rowindex="0" colindex="0" text="청구월"/>
+            <cl:gridcell rowindex="0" colindex="1" text="수납상태"/>
+            <cl:gridcell rowindex="0" colindex="2" text="총청구금액(원)"/>
+            <cl:gridcell rowindex="0" colindex="3" text="당월청구금액(원)"/>
+            <cl:gridcell rowindex="0" colindex="4" text="미납금액(원)"/>
+            <cl:gridcell rowindex="0" colindex="5" text="납부방법"/>
+            <cl:gridcell rowindex="0" colindex="6" text="청구유형"/>
+          </cl:gridheader>
+          <cl:griddetail>
+            <cl:gridrow height="36px"/>
+            <cl:gridcell rowindex="0" colindex="0" columnname="BILL_YM">
+              <cl:output style="text-align:center;">
+                <cl:celldata/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell rowindex="0" colindex="1" columnname="STATUS">
+              <cl:output style="text-align:center;">
+                <cl:celldata/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell rowindex="0" colindex="2" columnname="TOTAL_AMT">
+              <cl:output style="text-align:right;" datatype="number" format="s#,##0">
+                <cl:celldata/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell rowindex="0" colindex="3" columnname="MONTH_AMT">
+              <cl:output style="text-align:right;" datatype="number" format="s#,##0">
+                <cl:celldata/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell rowindex="0" colindex="4" columnname="UNPAID_AMT">
+              <cl:output style="text-align:right;" datatype="number" format="s#,##0">
+                <cl:celldata/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell rowindex="0" colindex="5" columnname="PAY_METHOD">
+              <cl:output style="text-align:center;">
+                <cl:celldata/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell rowindex="0" colindex="6" columnname="BILL_TYPE">
+              <cl:output style="text-align:center;">
+                <cl:celldata/>
+              </cl:output>
+            </cl:gridcell>
+          </cl:griddetail>
+        </cl:grid>
+        <cl:verticallayout spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:group class="conts-wrap">
+        <cl:verticaldata width="1592px" height="121" autosize="height"/>
+        <cl:udc type="udc.com.udcComFormTitle">
+          <cl:verticaldata width="800px" height="28px" autosize="height"/>
+          <cl:property name="title" value="수납 처리" type="string"/>
+        </cl:udc>
+        <cl:group id="grpPayForm" class="form">
+          <cl:attribute name="mobile-fit" value=""/>
+          <cl:attribute name="mobile-column-count" value="2"/>
+          <cl:attribute name="tablet-column-count" value="4"/>
+          <cl:verticaldata width="1558px" height="61px" autosize="height"/>
+          <cl:output class="label" value="수납 대상월">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata row="0" col="0"/>
+          </cl:output>
+          <cl:inputbox id="ipbPayYm" fieldLabel="수납 대상월" placeholder="청구 내역에서 선택" maxlength="7" readonly="true">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata row="0" col="1"/>
+          </cl:inputbox>
+          <cl:output class="label required" value="수납 금액">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata row="0" col="2"/>
+          </cl:output>
+          <cl:numbereditor id="nbePayAmt" fieldLabel="수납 금액" value="0" format="#,##0" min="0">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata row="0" col="3"/>
+          </cl:numbereditor>
+          <cl:output class="label required" value="수납 방법">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata row="0" col="4"/>
+          </cl:output>
+          <cl:combobox id="cmbPayMethod" fieldLabel="수납 방법" value="CARD">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata row="0" col="5"/>
+            <cl:item label="신용/체크카드" value="CARD"/>
+            <cl:item label="현금" value="CASH"/>
+            <cl:item label="계좌이체" value="BANK"/>
+          </cl:combobox>
+          <cl:formlayout scrollable="false" hspace="16px" vspace="17px" top-margin="8px" right-margin="8px" bottom-margin="8px" left-margin="8px" hseparatorwidth="1" hseparatortype="BY_CLASS">
+            <cl:rows length="28" unit="PIXEL"/>
+            <cl:columns length="160" autoSizing="true" shadetype="BY_CLASS"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="160" autoSizing="true" shadetype="BY_CLASS"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="160" autoSizing="true" shadetype="BY_CLASS"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:verticallayout spacing="16"/>
+    </cl:group>
+    <cl:group id="grpFooter" class="conts-footer">
+      <cl:verticaldata width="1592px" height="52px" autosize="height"/>
+      <cl:group>
+        <cl:verticaldata width="400px" height="28px" autosize="height"/>
+        <cl:group>
+          <cl:formdata row="0" col="0"/>
+          <cl:button id="btnReset" class="tertiary" value="초기화">
+            <cl:listener name="click" handler="onBtnResetClick"/>
+            <cl:flowlayoutdata width="60px" height="28px" autosize="width"/>
+          </cl:button>
+          <cl:flowlayout valign="middle"/>
+        </cl:group>
+        <cl:group>
+          <cl:formdata row="0" col="1"/>
+          <cl:button id="btnPaySave" class="primary" value="수납">
+            <cl:listener name="click" handler="onBtnPaySaveClick"/>
+            <cl:flowlayoutdata width="60px" height="28px" autosize="width"/>
+          </cl:button>
+          <cl:flowlayout halign="right" valign="middle"/>
+        </cl:group>
+        <cl:formlayout scrollable="false" hspace="1fr" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="700" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          <cl:columns length="700" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:verticallayout/>
+    </cl:group>
+    <cl:verticallayout scrollable="true" spacing="16" leftmargin="24" rightmargin="24" topmargin="16" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

@@ -1,0 +1,275 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-6e6f875c" version="1.0.5542">
+  <head std:sid="head-f75cfc6f">
+    <screen std:sid="screen-a9f9f5c6" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-b0fb949f" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-fa999caa" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-f06cae3e">
+      <cl:dataset std:sid="d-set-2472ca49" id="dsList">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="구분" std:sid="d-column-f7ecbdfe" name="GUBUN"/>
+          <cl:datacolumn comment="분류" std:sid="d-column-cbcede41" name="CLASSIFICATION"/>
+          <cl:datacolumn comment="체크리스트" std:sid="d-column-5e9b5ae1" name="CHK_LIST"/>
+          <cl:datacolumn comment="확인 완료" std:sid="d-column-377eb068" name="CHK_YN"/>
+        </cl:datacolumnlist>
+        <cl:dataview std:sid="d-view-0de0c415" id="dvList1" filtercondition="GUBUN == &quot;체크리스트&quot;"/>
+        <cl:dataview std:sid="d-view-bf77ce1c" id="dvList2" filtercondition="GUBUN == &quot;개발편의성 시연 목록&quot;"/>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="GUBUN">체크리스트</cl:datavalue>
+            <cl:datavalue columnname="CHK_LIST">불필요한 파일 제거</cl:datavalue>
+            <cl:datavalue columnname="CLASSIFICATION">사전 준비</cl:datavalue>
+            <cl:datavalue columnname="CHK_YN"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="GUBUN">체크리스트</cl:datavalue>
+            <cl:datavalue columnname="CHK_LIST">본사 서버 포팅</cl:datavalue>
+            <cl:datavalue columnname="CLASSIFICATION">사전 준비</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="GUBUN">체크리스트</cl:datavalue>
+            <cl:datavalue columnname="CHK_LIST">모바일 테스트\n- Android, iOS (각 OS별 HDMI 젠더 확인)</cl:datavalue>
+            <cl:datavalue columnname="CLASSIFICATION">사전 준비</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="GUBUN">체크리스트</cl:datavalue>
+            <cl:datavalue columnname="CHK_LIST">PDF 장표 확인</cl:datavalue>
+            <cl:datavalue columnname="CLASSIFICATION">사전 준비</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="GUBUN">체크리스트</cl:datavalue>
+            <cl:datavalue columnname="CHK_LIST">PoC 환경 설치\n- Eclipse 설치 (전문 플러그인, 화면 자동 설계서 jar 설치 확인)</cl:datavalue>
+            <cl:datavalue columnname="CLASSIFICATION">환경 구성</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="GUBUN">체크리스트</cl:datavalue>
+            <cl:datavalue columnname="CHK_LIST">시연 환경 Port 정보\n- PoC 메인 : 8080\n- 서브 : 8081</cl:datavalue>
+            <cl:datavalue columnname="CLASSIFICATION">환경 구성</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="GUBUN">체크리스트</cl:datavalue>
+            <cl:datavalue columnname="CHK_LIST">eXBuilder6 Trial License 적용 (1달)</cl:datavalue>
+            <cl:datavalue columnname="CLASSIFICATION">환경 구성</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="GUBUN">체크리스트</cl:datavalue>
+            <cl:datavalue columnname="CHK_LIST">[소스 압축 및 난독화 사용] 해제</cl:datavalue>
+            <cl:datavalue columnname="CLASSIFICATION">프로젝트 설정</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="GUBUN">체크리스트</cl:datavalue>
+            <cl:datavalue columnname="CHK_LIST">[appcache=true] 적용</cl:datavalue>
+            <cl:datavalue columnname="CLASSIFICATION">프로젝트 설정</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="GUBUN">체크리스트</cl:datavalue>
+            <cl:datavalue columnname="CHK_LIST">Eclipse 실행 메모리 조정</cl:datavalue>
+            <cl:datavalue columnname="CLASSIFICATION">현장 확인</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="GUBUN">체크리스트</cl:datavalue>
+            <cl:datavalue columnname="CHK_LIST">빔 프로젝터 해상도 점검</cl:datavalue>
+            <cl:datavalue columnname="CLASSIFICATION">현장 확인</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="GUBUN">체크리스트</cl:datavalue>
+            <cl:datavalue columnname="CHK_LIST">시연PC 프로그램 설치 확인\n- 엑셀 설치 여부 확인\n- IE 설치 여부 확인\n- eXDevice 관련 : A14 폴더 내 VBS 파일 확인\n\t\t\t   eXDevice 설치\n- SystemInformer 설치</cl:datavalue>
+            <cl:datavalue columnname="CLASSIFICATION">현장 확인</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="GUBUN">체크리스트</cl:datavalue>
+            <cl:datavalue columnname="CHK_LIST">대용량 성능 확인 시나리오 사전 테스트\n(최초 로딩시에만 시간이 오래 걸림)</cl:datavalue>
+            <cl:datavalue columnname="CLASSIFICATION">현장 확인</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="GUBUN">체크리스트</cl:datavalue>
+            <cl:datavalue columnname="CHK_LIST">파일 업로드 시연 관련\n- 테스트 업로드 파일 모두 삭제 (C:\\uploadfiles\\cmn)</cl:datavalue>
+            <cl:datavalue columnname="CLASSIFICATION">현장 확인</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="GUBUN">체크리스트</cl:datavalue>
+            <cl:datavalue columnname="CHK_LIST">eXCFrame-thirdparty - Report 샘플 동작 확인\n- Crownix, Ubi 서비스 실행 필요</cl:datavalue>
+            <cl:datavalue columnname="CLASSIFICATION">현장 확인</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="GUBUN">개발편의성 시연 목록</cl:datavalue>
+            <cl:datavalue columnname="CHK_LIST">자동 완성 기능 (Ctrl+Alt+L)</cl:datavalue>
+            <cl:datavalue columnname="CLASSIFICATION">스크립트</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="GUBUN">개발편의성 시연 목록</cl:datavalue>
+            <cl:datavalue columnname="CHK_LIST">자동 들여쓰기 (Ctrl+Shift+F)</cl:datavalue>
+            <cl:datavalue columnname="CLASSIFICATION">스크립트</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="GUBUN">개발편의성 시연 목록</cl:datavalue>
+            <cl:datavalue columnname="CHK_LIST">자동 포맷팅 (Ctrl+Alt+R)</cl:datavalue>
+            <cl:datavalue columnname="CLASSIFICATION">스크립트</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="GUBUN">개발편의성 시연 목록</cl:datavalue>
+            <cl:datavalue columnname="CHK_LIST">API 도움말 편의성 (Ctrl+Space)\n- 사용 통계에 대한 정렬 확인</cl:datavalue>
+            <cl:datavalue columnname="CLASSIFICATION">스크립트</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="GUBUN">개발편의성 시연 목록</cl:datavalue>
+            <cl:datavalue columnname="CHK_LIST">컨텐트 어시스트 (Ctrl+space)\n- 데이터 셋 ID, 컬럼명 찾기\n- 기본 API, 공통 기능, 다국어, AppID 찾기 (Ctrl + click 기능도 함께 확인)\n- 빠른 팔레트 뷰 (UI 템플릿, UDC 미리보기)</cl:datavalue>
+            <cl:datavalue columnname="CLASSIFICATION">스크립트</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="GUBUN">개발편의성 시연 목록</cl:datavalue>
+            <cl:datavalue columnname="CHK_LIST">파일명 리팩토링\n- 파일명 변경 시, 스크립트 일괄 변경 확인\n  (UDC 타입, 다이얼로그 open 시 작성한 AppID)</cl:datavalue>
+            <cl:datavalue columnname="CLASSIFICATION">스크립트</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="GUBUN">개발편의성 시연 목록</cl:datavalue>
+            <cl:datavalue columnname="CHK_LIST">이벤트 바로가기\n- 디자인 탭 / 스크립트 탭 양방향 확인</cl:datavalue>
+            <cl:datavalue columnname="CLASSIFICATION">디자인 편집기</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="GUBUN">개발편의성 시연 목록</cl:datavalue>
+            <cl:datavalue columnname="CHK_LIST">[바인딩 피드백 표시] 기능 확인</cl:datavalue>
+            <cl:datavalue columnname="CLASSIFICATION">디자인 편집기</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="GUBUN">개발편의성 시연 목록</cl:datavalue>
+            <cl:datavalue columnname="CHK_LIST">그리드 데이터 셋 바인딩\n-  그리드 생성 옵션창 확인</cl:datavalue>
+            <cl:datavalue columnname="CLASSIFICATION">디자인 편집기</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="GUBUN">개발편의성 시연 목록</cl:datavalue>
+            <cl:datavalue columnname="CHK_LIST">Template 기능\n- 화면 템플릿 / UI 템플릿</cl:datavalue>
+            <cl:datavalue columnname="CLASSIFICATION">디자인 편집기</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="GUBUN">개발편의성 시연 목록</cl:datavalue>
+            <cl:datavalue columnname="CHK_LIST">UDC 출판 기능 (속성, 이벤트)\n- 차트 UDC 의 속성 바인딩으로 확인</cl:datavalue>
+            <cl:datavalue columnname="CLASSIFICATION">디자인 편집기</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="GUBUN">개발편의성 시연 목록</cl:datavalue>
+            <cl:datavalue columnname="CHK_LIST">[표시순으로 자식 정렬] 기능 확인</cl:datavalue>
+            <cl:datavalue columnname="CLASSIFICATION">디자인 편집기</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="GUBUN">개발편의성 시연 목록</cl:datavalue>
+            <cl:datavalue columnname="CHK_LIST">브라우저 미리보기 기능\n- 브라우저 설정 옵션\n- 로컬 미리보기 / 실행 중인 서버 미리보기</cl:datavalue>
+            <cl:datavalue columnname="CLASSIFICATION">디자인 편집기</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="GUBUN">개발편의성 시연 목록</cl:datavalue>
+            <cl:datavalue columnname="CHK_LIST">이미지로 내보내기 (Ctrl+Alt+E)</cl:datavalue>
+            <cl:datavalue columnname="CLASSIFICATION">디자인 편집기</cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="PoC 체크리스트"/>
+  </head>
+  <body std:sid="body-142ccfb8">
+    <cl:listener std:sid="listener-92a8cac3" name="load" handler="onBodyLoad"/>
+    <cl:udc std:sid="ud-control-81e5cf18" id="udcComAppHeader1" type="udc.com.udcComAppHeader">
+      <cl:verticaldata std:sid="v-data-35fe4e09" width="900px" height="40px"/>
+    </cl:udc>
+    <cl:group std:sid="group-b0900537" id="grp3">
+      <cl:attribute name="tablet-column-count" value="1"/>
+      <cl:attribute name="mobile-column-count" value="1"/>
+      <cl:verticaldata std:sid="v-data-1c2d572a" width="1550px" height="554px" autosize="height"/>
+      <cl:group std:sid="group-e5709413" id="grp1">
+        <std:metadata>
+          <std:property key="template-uuid" value="b11f0d6f-b781-4426-b3e5-761783bd5926"/>
+          <std:property key="template-rev" value="5"/>
+        </std:metadata>
+        <cl:formdata std:sid="f-data-3604a9b9" row="0" col="0"/>
+        <cl:udc std:sid="ud-control-0816c0fe" id="udcComFormTitle1" type="udc.com.udcComFormTitle">
+          <cl:verticaldata std:sid="v-data-517e737d" width="770px" height="24px" autosize="height"/>
+          <cl:property name="title" value="체크리스트" type="string"/>
+        </cl:udc>
+        <cl:grid std:sid="grid-7cc7b748" id="grd1" fieldLabel="그리드" datasetid="dvList1" autofit="2" autorowheight="all" suppressedcelltype="merged" resizablecolumns="all" columnMovable="true">
+          <cl:verticaldata std:sid="v-data-73e31214" width="770px" height="520px" autosize="height"/>
+          <cl:gridcolumn std:sid="g-column-a192cfcf" width="50px"/>
+          <cl:gridcolumn std:sid="g-column-0606b579" width="120px"/>
+          <cl:gridcolumn std:sid="g-column-a5b81437" width="120px"/>
+          <cl:gridcolumn std:sid="g-column-b104775a" width="100px"/>
+          <cl:gridheader std:sid="gh-band-e950d427">
+            <cl:gridrow std:sid="g-row-e9d00c49" height="37px"/>
+            <cl:gridcell std:sid="gh-cell-a9905a6e" rowindex="0" colindex="0" sortable="false" filterable="false"/>
+            <cl:gridcell std:sid="gh-cell-231b701d" rowindex="0" colindex="1" targetcolumnname="CLASSIFICATION" text="분류"/>
+            <cl:gridcell std:sid="gh-cell-de7cde36" rowindex="0" colindex="2" targetcolumnname="CHK_LIST" sortable="false" filterable="false" text="체크리스트"/>
+            <cl:gridcell std:sid="gh-cell-f045c198" rowindex="0" colindex="3" targetcolumnname="CHK_YN" text="확인 완료"/>
+          </cl:gridheader>
+          <cl:griddetail std:sid="gd-band-cd9c6c7f">
+            <cl:gridrow std:sid="g-row-6dc2d7b1" height="37px"/>
+            <cl:gridcell std:sid="gd-cell-829a11bc" rowindex="0" colindex="0" columntype="rowindex"/>
+            <cl:gridcell std:sid="gd-cell-6d97788b" rowindex="0" colindex="1" columnname="CLASSIFICATION" suppressible="true" keepmerged="true"/>
+            <cl:gridcell std:sid="gd-cell-aadc1f23" rowindex="0" colindex="2">
+              <cl:output std:sid="output-71ecf545" id="opt4" class="text-left">
+                <cl:expbind property="displayExp" category="PROPERTY" expression="&quot;'&quot; + CHK_LIST + &quot;'&quot;"/>
+                <cl:celldata std:sid="c-data-6ef62cce"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-d8a76712" rowindex="0" colindex="3" columnname="CHK_YN">
+              <cl:checkbox std:sid="c-box-1a3bcfdd" id="cbx1" truevalue="Y">
+                <cl:celldata std:sid="c-data-427416ad"/>
+              </cl:checkbox>
+            </cl:gridcell>
+          </cl:griddetail>
+        </cl:grid>
+        <cl:verticallayout std:sid="v-layout-221ce474" spacing="4"/>
+      </cl:group>
+      <cl:group std:sid="group-d1c22962" id="grp2">
+        <std:metadata>
+          <std:property key="template-uuid" value="b11f0d6f-b781-4426-b3e5-761783bd5926"/>
+          <std:property key="template-rev" value="5"/>
+        </std:metadata>
+        <cl:attribute name="needs-auto-height" value="true"/>
+        <cl:formdata std:sid="f-data-7f1ff9f9" row="0" col="1"/>
+        <cl:udc std:sid="ud-control-ebd5f868" id="udcComFormTitle2" type="udc.com.udcComFormTitle">
+          <cl:verticaldata std:sid="v-data-50746af8" width="770px" height="24px" autosize="height"/>
+          <cl:property name="title" value="개발편의성 시연 목록" type="string"/>
+        </cl:udc>
+        <cl:grid std:sid="grid-2cc8790e" id="grd2" fieldLabel="그리드" datasetid="dvList2" autofit="2" autorowheight="all" suppressedcelltype="merged" resizablecolumns="all" columnMovable="true">
+          <cl:verticaldata std:sid="v-data-31196453" width="770px" height="520px" autosize="height"/>
+          <cl:gridcolumn std:sid="g-column-9881bf56" width="50px"/>
+          <cl:gridcolumn std:sid="g-column-90ddf490" width="120px"/>
+          <cl:gridcolumn std:sid="g-column-570cc8ca" width="120px"/>
+          <cl:gridcolumn std:sid="g-column-82300f03" width="100px"/>
+          <cl:gridheader std:sid="gh-band-61e1dd9f">
+            <cl:gridrow std:sid="g-row-95edb351" height="37px"/>
+            <cl:gridcell std:sid="gh-cell-2e9e8638" rowindex="0" colindex="0" sortable="false" filterable="false"/>
+            <cl:gridcell std:sid="gh-cell-e6eef6d2" rowindex="0" colindex="1" targetcolumnname="CLASSIFICATION" text="분류"/>
+            <cl:gridcell std:sid="gh-cell-90ac93ca" rowindex="0" colindex="2" targetcolumnname="CHK_LIST" sortable="false" filterable="false" text="체크리스트"/>
+            <cl:gridcell std:sid="gh-cell-d7943449" rowindex="0" colindex="3" targetcolumnname="CHK_YN" text="확인 완료"/>
+          </cl:gridheader>
+          <cl:griddetail std:sid="gd-band-b863416b">
+            <cl:gridrow std:sid="g-row-a574d06f" height="37px"/>
+            <cl:gridcell std:sid="gd-cell-d76eb6eb" rowindex="0" colindex="0" columntype="rowindex"/>
+            <cl:gridcell std:sid="gd-cell-ec6d3622" rowindex="0" colindex="1" columnname="CLASSIFICATION" suppressible="true" keepmerged="true"/>
+            <cl:gridcell std:sid="gd-cell-a9ba839e" rowindex="0" colindex="2">
+              <cl:output std:sid="output-882d0972" id="opt6" class="text-left">
+                <cl:expbind property="displayExp" category="PROPERTY" expression="&quot;'&quot; + CHK_LIST + &quot;'&quot;"/>
+                <cl:celldata std:sid="c-data-a193969c"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-27c5a910" rowindex="0" colindex="3" columnname="CHK_YN">
+              <cl:checkbox std:sid="c-box-e5138786" id="cbx2" truevalue="Y">
+                <cl:celldata std:sid="c-data-25ef8f34"/>
+              </cl:checkbox>
+            </cl:gridcell>
+          </cl:griddetail>
+        </cl:grid>
+        <cl:verticallayout std:sid="v-layout-da1956fe" spacing="4"/>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-7b61e756" scrollable="false" hspace="17px" vspace="9px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-c670d413" spacing="12" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

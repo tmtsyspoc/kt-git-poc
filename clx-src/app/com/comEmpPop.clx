@@ -1,0 +1,169 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-10bdb29d" version="1.0.6087">
+  <head std:sid="head-1fe59bf4">
+    <screen std:sid="screen-b62efcea" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="true" customHeight="747" customWidth="800"/>
+    <screen std:sid="screen-55ce1d00" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-4ece04d5" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-77d8fbab">
+      <cl:dataset std:sid="d-set-948793d0" id="dsList">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="사원번호" std:sid="d-column-048928e6" name="EMP_NO"/>
+          <cl:datacolumn comment="사원명" std:sid="d-column-889f79ff" name="EMP_NM"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="EMP_NO"><![CDATA[EMP20260001]]></cl:datavalue>
+            <cl:datavalue columnname="EMP_NM"><![CDATA[김민준]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="EMP_NO"><![CDATA[EMP20260002]]></cl:datavalue>
+            <cl:datavalue columnname="EMP_NM"><![CDATA[이서연]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="EMP_NO"><![CDATA[EMP20260003]]></cl:datavalue>
+            <cl:datavalue columnname="EMP_NM"><![CDATA[박지훈]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="EMP_NO"><![CDATA[EMP20260004]]></cl:datavalue>
+            <cl:datavalue columnname="EMP_NM"><![CDATA[최유진]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="EMP_NO"><![CDATA[EMP20260005]]></cl:datavalue>
+            <cl:datavalue columnname="EMP_NM"><![CDATA[정다은]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="EMP_NO"><![CDATA[EMP20260006]]></cl:datavalue>
+            <cl:datavalue columnname="EMP_NM"><![CDATA[한지훈]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="EMP_NO"><![CDATA[EMP20260007]]></cl:datavalue>
+            <cl:datavalue columnname="EMP_NM"><![CDATA[서윤아]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="EMP_NO"><![CDATA[EMP20260008]]></cl:datavalue>
+            <cl:datavalue columnname="EMP_NM"><![CDATA[김도현]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="EMP_NO"><![CDATA[EMP20260009]]></cl:datavalue>
+            <cl:datavalue columnname="EMP_NM"><![CDATA[이수빈]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="EMP_NO"><![CDATA[EMP20260010]]></cl:datavalue>
+            <cl:datavalue columnname="EMP_NM"><![CDATA[강태윤]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="EMP_NO"><![CDATA[EMP20260011]]></cl:datavalue>
+            <cl:datavalue columnname="EMP_NM"><![CDATA[박서준]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="EMP_NO"><![CDATA[EMP20260012]]></cl:datavalue>
+            <cl:datavalue columnname="EMP_NM"><![CDATA[최민서]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="EMP_NO"><![CDATA[EMP20260013]]></cl:datavalue>
+            <cl:datavalue columnname="EMP_NM"><![CDATA[이지훈]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="EMP_NO"><![CDATA[EMP20260014]]></cl:datavalue>
+            <cl:datavalue columnname="EMP_NM"><![CDATA[정유리]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="EMP_NO"><![CDATA[EMP20260015]]></cl:datavalue>
+            <cl:datavalue columnname="EMP_NM"><![CDATA[김하늘]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="EMP_NO"><![CDATA[EMP20260016]]></cl:datavalue>
+            <cl:datavalue columnname="EMP_NM"><![CDATA[오승민]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="EMP_NO"><![CDATA[EMP20260017]]></cl:datavalue>
+            <cl:datavalue columnname="EMP_NM"><![CDATA[이선우]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="EMP_NO"><![CDATA[EMP20260018]]></cl:datavalue>
+            <cl:datavalue columnname="EMP_NM"><![CDATA[최승호]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="EMP_NO"><![CDATA[EMP20260019]]></cl:datavalue>
+            <cl:datavalue columnname="EMP_NM"><![CDATA[김지호]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="EMP_NO"><![CDATA[EMP20260020]]></cl:datavalue>
+            <cl:datavalue columnname="EMP_NM"><![CDATA[박은정]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="사원 검색"/>
+  </head>
+  <body std:sid="body-b607d011" childcombinatorclass="v_base">
+    <cl:listener std:sid="listener-2d7d4316" name="load" handler="onBodyLoad"/>
+    <cl:group std:sid="group-6caf06a7" id="grpSearch" class="sch-filter-box">
+      <cl:attribute name="mobile-column-count" value=""/>
+      <cl:verticaldata std:sid="v-data-969c6707" width="1608px" height="62px" autosize="height"/>
+      <cl:output std:sid="output-bde911b6" class="label" value="사원번호/사원명">
+        <cl:attribute name="needs-auto-height" value="true"/>
+        <cl:formdata std:sid="f-data-b1b33d85" row="0" col="0"/>
+      </cl:output>
+      <cl:inputbox std:sid="i-box-8162ed4f" id="ipb">
+        <cl:listener std:sid="listener-463e818f" name="keydown" handler="onIpbKeydown"/>
+        <cl:formdata std:sid="f-data-db846ce8" row="0" col="1"/>
+      </cl:inputbox>
+      <cl:button std:sid="button-afe3d69a" id="btnSearch" class="primary btn-search" value="조회" icon="0">
+        <cl:listener std:sid="listener-65042726" name="click" handler="onBtnSearchClick"/>
+        <cl:attribute name="needs-auto-height" value="true"/>
+        <cl:formdata std:sid="f-data-ee9a4033" valign="BOTTOM" height="28" row="0" col="2"/>
+      </cl:button>
+      <cl:formlayout std:sid="f-layout-f32cf914" scrollable="false" hspace="16px" vspace="16px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="28" unit="PIXEL"/>
+        <cl:columns length="80" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="70" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-af90013c">
+      <cl:verticaldata std:sid="v-data-baf0a32c" width="1608px" height="563px" autosize="height"/>
+      <cl:udc std:sid="ud-control-30276e35" type="udc.com.udcComGridTitle">
+        <cl:verticaldata std:sid="v-data-a8bbcb1c" width="1608px" height="28px"/>
+        <cl:property name="ctrl" value="grdList" type="control"/>
+      </cl:udc>
+      <cl:grid std:sid="grid-306f778d" id="grdList" fieldLabel="사원 목록" readonly="true" datasetid="dsList" autofit="1, 2" resizablecolumns="all" columnMovable="true">
+        <cl:listener std:sid="listener-46eb0591" name="row-dblclick" handler="onGrdListRowDblclick"/>
+        <cl:verticaldata std:sid="v-data-9f9e0a6f" width="1608px" height="359px"/>
+        <cl:gridcolumn std:sid="g-column-894f9bfc" width="50px"/>
+        <cl:gridcolumn std:sid="g-column-a696e465"/>
+        <cl:gridcolumn std:sid="g-column-7fa664b2"/>
+        <cl:gridheader std:sid="gh-band-25992882">
+          <cl:gridrow std:sid="g-row-434e7e41" height="44px"/>
+          <cl:gridcell std:sid="gh-cell-16062f82" rowindex="0" colindex="0" sortable="false" filterable="false"/>
+          <cl:gridcell std:sid="gh-cell-900ad866" rowindex="0" colindex="1" targetcolumnname="EMP_NO" sortable="false" filterable="false" text="사원번호"/>
+          <cl:gridcell std:sid="gh-cell-99019f8c" rowindex="0" colindex="2" targetcolumnname="EMP_NM" sortable="false" filterable="false" text="사원명"/>
+        </cl:gridheader>
+        <cl:griddetail std:sid="gd-band-39d4a9dc">
+          <cl:gridrow std:sid="g-row-5792f075" height="45px"/>
+          <cl:gridcell std:sid="gd-cell-a813932a" rowindex="0" colindex="0" columntype="rowindex"/>
+          <cl:gridcell std:sid="gd-cell-079ac807" rowindex="0" colindex="1" columnname="EMP_NO"/>
+          <cl:gridcell std:sid="gd-cell-213c3620" rowindex="0" colindex="2" columnname="EMP_NM"/>
+        </cl:griddetail>
+      </cl:grid>
+      <cl:verticallayout std:sid="v-layout-f726269e" spacing="4"/>
+    </cl:group>
+    <cl:group std:sid="group-06f65b32" id="grp11" class="footer-button-group">
+      <cl:verticaldata std:sid="v-data-1e714055" width="1608px" height="28px" autosize="height"/>
+      <cl:button std:sid="button-1aaf025a" id="btnSelect" class="secondary" value="선택">
+        <cl:listener std:sid="listener-c82ef1a8" name="click" handler="onBtnClose2Click"/>
+        <cl:flowlayoutdata std:sid="f-data-9f587570" width="60px" height="28px" autosize="width"/>
+      </cl:button>
+      <cl:button std:sid="button-781abda8" id="btnClose" value="닫기">
+        <cl:listener std:sid="listener-0142ecf7" name="click" handler="onBtnCloseClick"/>
+        <cl:flowlayoutdata std:sid="f-data-94f34af0" width="60px" height="28px" autosize="width"/>
+      </cl:button>
+      <cl:flowlayout std:sid="f-layout-d932c129" scrollable="false" hspacing="4" vspacing="4" halign="right"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-43731309" spacing="16" leftmargin="24" rightmargin="24" topmargin="16" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

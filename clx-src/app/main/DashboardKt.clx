@@ -1,0 +1,187 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" version="1.0.5996">
+  <head>
+    <script src="../../thirdparty/Swiper/swiper.min.js" type="text/javascript"/>
+    <screen id="default" name="default" width="1640px" height="984px" useCustomWidth="true" useCustomHeight="true" customHeight="807" customWidth="1616" active="true"/>
+    <screen id="tablet" name="tablet" width="1023px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model>
+      <cl:dataset comment="커스텀 메뉴 목록" id="dsCustomItem" filtercondition="">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="아이템 ID" info="" name="itemId"/>
+          <cl:datacolumn comment="아이템명" name="itemNm"/>
+          <cl:datacolumn comment="아이템 Type(UDC)" name="itemType"/>
+          <cl:datacolumn comment="최소 너비" name="minWidth" datatype="number"/>
+          <cl:datacolumn comment="최소 높이" name="minHeight" datatype="number"/>
+          <cl:datacolumn comment="정렬순서" name="sortNo"/>
+          <cl:datacolumn comment="constraint" name="constraint"/>
+          <cl:datacolumn comment="기본 배치 로우수" name="rowSpan" datatype="number"/>
+          <cl:datacolumn comment="기본 배치 컬럼수" name="colSpan" datatype="number"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist/>
+      </cl:dataset>
+      <cl:dataset comment="전체 아이템" id="dsAllItem" filtercondition="">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="아이템 ID" info="" name="itemId"/>
+          <cl:datacolumn comment="아이템명" name="itemNm"/>
+          <cl:datacolumn comment="아이템 Type(UDC)" name="itemType"/>
+          <cl:datacolumn comment="최소 높이(모바일)" name="minHeight" datatype="number"/>
+          <cl:datacolumn comment="정렬순서" name="sortNo"/>
+          <cl:datacolumn comment="기본 Constraint" name="constraint"/>
+          <cl:datacolumn comment="기본 배치 로우수" name="rowSpan" datatype="number"/>
+          <cl:datacolumn comment="기본 배치 컬럼수" name="colSpan" datatype="number"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist/>
+      </cl:dataset>
+      <cl:datamap id="dmUserInfo">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="사용자 ID" name="userId"/>
+          <cl:datacolumn comment="사용자명" name="userNm"/>
+          <cl:datacolumn comment="사용자메뉴그룹명" name="userMenuGrpDate" defaultvalue=""/>
+          <cl:datacolumn comment="사용자메뉴그룹자료" name="userMenuGrpData"/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+    </cl:model>
+    <cl:appspec title="KT 대시보드"/>
+  </head>
+  <body class="dash dash-kt">
+    <cl:listener name="screen-change" handler="onBodyScreenChange"/>
+    <cl:listener name="init" handler="onBodyInit"/>
+    <cl:group id="grpHd" class="box" visible="false" clipcontent="false">
+      <cl:attribute name="needs-auto-height" value="true"/>
+      <cl:formdata width="100" height="-24" row="0" col="0"/>
+      <cl:group id="grp2" class="user-box">
+        <cl:verticaldata width="1024px" height="92px" autosize="height"/>
+        <cl:group id="grp3">
+          <cl:verticaldata width="976px" height="36px" autosize="height"/>
+          <cl:group id="grpDashSetBtns" class="filter-button-group" visible="false">
+            <cl:formdata valign="CENTER" height="28" row="0" col="1"/>
+            <cl:button id="btnCustomReset" class="tertiary" value="초기화">
+              <cl:listener name="click" handler="onBtnCustomResetClick"/>
+              <cl:flowlayoutdata width="63px" height="28px" autosize="width"/>
+            </cl:button>
+            <cl:button id="btnAllDel" class="tertiary" value="전체삭제">
+              <cl:listener name="click" handler="onBtnAllDelClick"/>
+              <cl:flowlayoutdata width="75px" height="28px" autosize="width"/>
+            </cl:button>
+            <cl:button id="btnCancle" class="tertiary" value="취소">
+              <cl:listener name="click" handler="onBtnCancleClick"/>
+              <cl:flowlayoutdata width="50px" height="28px" autosize="width"/>
+            </cl:button>
+            <cl:button id="btnCustomSave" class="primary" value="저장">
+              <cl:listener name="click" handler="onBtnCustomSaveClick"/>
+              <cl:flowlayoutdata width="50px" height="28px" autosize="width"/>
+            </cl:button>
+            <cl:flowlayout halign="right" valign="middle"/>
+          </cl:group>
+          <cl:formlayout scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="12px" bottom-margin="0px" left-margin="12px">
+            <cl:rows length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="296" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:group id="grpItemListWrap" visible="false">
+          <cl:verticaldata width="976px" height="44px"/>
+          <cl:output id="opt1" style="color:#B7B7B7; font-size:12px;" class="text-center" value="아이템 목록 - 해당 아이템 버튼을 드래그 &amp; 드랍하여 배치할 수 있습니다">
+            <cl:xylayoutdata top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+          </cl:output>
+          <cl:group id="grpDashSetZone" class="dropbox">
+            <cl:xylayoutdata top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+            <cl:button id="btn4" removeOnBuild="true" value="영역1">
+              <cl:flowlayoutdata width="100px" height="28px" autosize="width"/>
+            </cl:button>
+            <cl:button id="btn9" removeOnBuild="true" value="영역2">
+              <cl:flowlayoutdata width="100px" height="28px" autosize="width"/>
+            </cl:button>
+            <cl:button id="btn22" removeOnBuild="true" value="영역3">
+              <cl:flowlayoutdata width="100px" height="28px" autosize="width"/>
+            </cl:button>
+            <cl:flowlayout leftmargin="20"/>
+          </cl:group>
+          <cl:xylayout/>
+        </cl:group>
+        <cl:verticallayout spacing="12"/>
+      </cl:group>
+      <cl:verticallayout scrollable="true" spacing="24" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+    </cl:group>
+    <cl:group id="grpPortlet" class="custom-body">
+      <cl:attribute name="mobile-column-count" value="1"/>
+      <cl:attribute name="tablet-column-count" value="8"/>
+      <cl:attribute name="portlet" value="Y"/>
+      <cl:attribute name="dataType" value="a"/>
+      <cl:attribute name="mobile-v-spacing" value="8"/>
+      <cl:attribute name="tablet-v-spacing" value="8"/>
+      <cl:formdata row="1" col="0"/>
+      <cl:udc id="udcKtLine" type="udc.cmn.dashboard.udcDashKtLine">
+        <cl:formdata row="0" col="0" rowspan="9" colspan="4"/>
+      </cl:udc>
+      <cl:udc id="udcKtPie" type="udc.cmn.dashboard.udcDashKtPie">
+        <cl:formdata row="0" col="4" rowspan="9" colspan="4"/>
+      </cl:udc>
+      <cl:udc id="udcKtUser" type="udc.cmn.dashboard.udcDashItem8">
+        <cl:datamapbind property="name" datacontrolid="dmUserInfo" columnname="userNm"/>
+        <cl:formdata row="0" col="8" rowspan="5" colspan="4"/>
+      </cl:udc>
+      <cl:udc id="udcKtTarget" type="udc.cmn.dashboard.udcDashKtTarget">
+        <cl:formdata row="0" col="12" rowspan="9" colspan="4"/>
+      </cl:udc>
+      <cl:udc id="udcKtStock" type="udc.cmn.dashboard.udcDashKtStock">
+        <cl:formdata row="5" col="8" rowspan="8" colspan="4"/>
+      </cl:udc>
+      <cl:udc id="udcKtFlow" type="udc.cmn.dashboard.udcDashKtFlow">
+        <cl:formdata row="9" col="0" rowspan="4" colspan="8"/>
+      </cl:udc>
+      <cl:udc id="udcKtLogin" type="udc.cmn.dashboard.udcDashItem9">
+        <cl:formdata row="9" col="12" rowspan="9" colspan="4"/>
+      </cl:udc>
+      <cl:udc id="udcKtNews" type="udc.cmn.dashboard.udcDashItem7">
+        <cl:formdata row="13" col="0" rowspan="5" colspan="12"/>
+      </cl:udc>
+      <cl:formlayout scrollable="true" user-resizing-mode="none" hspace="16px" vspace="16px" top-margin="0px" right-margin="24px" bottom-margin="24px" left-margin="24px" hseparatorwidth="1" hseparatortype="BY_CLASS" vseparatorwidth="1" vseparatortype="BY_CLASS">
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:formlayout scrollable="true" hspace="24px" vspace="0px" top-margin="12px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="92" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

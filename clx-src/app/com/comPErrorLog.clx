@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-65c723c7" version="1.0.4034">
+  <head std:sid="head-7cef8be0">
+    <std:metadata>
+      <std:property key="template-file" value="templates/팝업/1.그리드/1-1.단일 그리드.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-58eee5af" id="EXB-POP[1024]" name="EXB-POP[1024]" width="1024px" height="576px" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-ab7d85a5" id="EXB-POP[800]" name="EXB-POP[800]" width="800px" height="480px" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-2b7cde26" id="EXB-POP[480]" name="EXB-POP[480]" width="480px" height="320px" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-92e9263e">
+      <cl:dataset std:sid="d-set-fa71f03a" id="ds1">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-16ba09fa" name="context"/>
+          <cl:datacolumn std:sid="d-column-fc94d8c6" name="timestamp"/>
+          <cl:datacolumn std:sid="d-column-3bab1e51" name="message"/>
+          <cl:datacolumn std:sid="d-column-69362fc7" name="stack"/>
+          <cl:datacolumn std:sid="d-column-83ba0b21" name="on"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec/>
+  </head>
+  <body std:sid="body-38cefc13">
+    <cl:listener std:sid="listener-10d9fef1" name="load" handler="onBodyLoad"/>
+    <cl:grid std:sid="grid-8b7788c4" id="grd1" datasetid="ds1">
+      <cl:formdata std:sid="f-data-7305e69a" row="0" col="0"/>
+      <cl:gridcolumn std:sid="g-column-f4e40d7c" width="120px"/>
+      <cl:gridcolumn std:sid="g-column-b312b876" width="120px"/>
+      <cl:gridcolumn std:sid="g-column-9c45014d" width="120px"/>
+      <cl:gridcolumn std:sid="g-column-e4f84c6b" width="120px"/>
+      <cl:gridcolumn std:sid="g-column-b0839159" width="120px"/>
+      <cl:gridheader std:sid="gh-band-7db05eb2">
+        <cl:gridrow std:sid="g-row-034d3841" height="37px"/>
+        <cl:gridcell std:sid="gh-cell-607a86af" rowindex="0" colindex="0" rowspan="1" colspan="5" targetcolumnname="context" sortable="false" filterable="false" text="스크립트 오류 내역"/>
+      </cl:gridheader>
+      <cl:griddetail std:sid="gd-band-75edcd56">
+        <cl:gridrow std:sid="g-row-8686521b" height="37px"/>
+        <cl:gridrow std:sid="g-row-a5d5b152" height="37px"/>
+        <cl:gridrow std:sid="g-row-4bd5b59c" height="37px"/>
+        <cl:gridcell std:sid="gd-cell-74eb3144" rowindex="0" colindex="0" rowspan="1" colspan="1" columnname="context"/>
+        <cl:gridcell std:sid="gd-cell-745758ad" rowindex="1" colindex="4" rowspan="1" colspan="1" columnname="timestamp"/>
+        <cl:gridcell std:sid="gd-cell-b4e54735" rowindex="1" colindex="0" rowspan="1" colspan="4" columnname="message"/>
+        <cl:gridcell std:sid="gd-cell-c047e6cc" rowindex="2" colindex="0" rowspan="1" colspan="5" columnname="stack"/>
+        <cl:gridcell std:sid="gd-cell-e294d012" rowindex="0" colindex="4" rowspan="1" colspan="1" columnname="on"/>
+        <cl:gridcell std:sid="gd-cell-f8f4b786" rowindex="0" colindex="1"/>
+        <cl:gridcell std:sid="gd-cell-1f72a65b" rowindex="0" colindex="2"/>
+        <cl:gridcell std:sid="gd-cell-1c9c475a" rowindex="0" colindex="3"/>
+      </cl:griddetail>
+    </cl:grid>
+    <cl:formlayout std:sid="f-layout-26d21298" scrollable="true" hspace="0px" vspace="12px" top-margin="16px" right-margin="16px" bottom-margin="16px" left-margin="16px">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

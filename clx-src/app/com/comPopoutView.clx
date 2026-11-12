@@ -1,0 +1,84 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-980b213e" version="1.0.5186">
+  <head std:sid="head-dda7e2ab">
+    <std:metadata>
+      <std:property key="template-file" value="templates/팝업화면/0.프레임/F_프레임_빈페이지.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-33004801" id="default" name="default" width="1640px" height="984px" useCustomWidth="true" useCustomHeight="true" customHeight="433" customWidth="800" active="true"/>
+    <screen std:sid="screen-a43bef96" id="tablet" name="tablet" width="1024px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-62de99aa" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-f864ed18"/>
+    <cl:appspec title="확대 보기"/>
+  </head>
+  <body std:sid="body-1ddbc5c9" class="wrap pop" childcombinatorclass="f_base">
+    <cl:listener std:sid="listener-27e9ab0c" name="init" handler="onBodyInit"/>
+    <cl:listener std:sid="listener-55ec82fa" name="before-unload" handler="onBodyBeforeUnload"/>
+    <cl:group std:sid="group-fd44076b" id="grpHeader" class="search-top-box">
+      <cl:formdata std:sid="f-data-6ba5e28c" width="100" height="-142" row="0" col="0"/>
+      <cl:group std:sid="group-8157fd09" class="app-header" visible="false">
+        <cl:verticaldata std:sid="v-data-b8bb7a0a" width="400px" height="28px" autosize="height"/>
+        <cl:group std:sid="group-51e55e1b">
+          <cl:attribute name="mobile-column-count" value="1"/>
+          <cl:verticaldata std:sid="v-data-c4881194" width="400px" height="28px" autosize="height"/>
+          <cl:udc std:sid="ud-control-5bf3a3d4" type="udc.com.udcComAppHeader">
+            <cl:formdata std:sid="f-data-7aebfa7e" row="0" col="0"/>
+            <cl:property name="visibleState" value="true" type="boolean"/>
+          </cl:udc>
+          <cl:group std:sid="group-2d027a6c" class="page-btn-wrap">
+            <cl:formdata std:sid="f-data-e906ada3" row="0" col="1"/>
+            <cl:flowlayout std:sid="f-layout-84cfe464" hspacing="4" halign="right"/>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-f58a6f2d" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-c306323c"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-480028f9" spacing="8"/>
+    </cl:group>
+    <cl:htmlsnippet std:sid="htmlsnippet-84c9f894" class="html-snp" value="&lt;span>출처 : &lt;/span>&lt;a href=&quot;https://www.korea.kr/archive/expDocView.do?docId=21790&quot; target=&quot;_blank&quot; style=&quot;background-color:#F8FF82;&quot;>새올행정시스템 민방위업무처리 가이드&lt;/a>">
+      <cl:formdata std:sid="f-data-7d7e5d8a" row="1" col="0"/>
+    </cl:htmlsnippet>
+    <cl:group std:sid="group-e073c06e" id="grpData" class="conts-area">
+      <cl:formdata std:sid="f-data-6cde4af7" row="2" col="0"/>
+      <cl:verticallayout std:sid="v-layout-491b9d84" scrollable="true"/>
+    </cl:group>
+    <cl:group std:sid="group-5ed091f0" id="grpFooter">
+      <cl:formdata std:sid="f-data-e3156cdf" width="100" height="25" row="3" col="0"/>
+      <cl:group std:sid="group-39560fba">
+        <cl:verticaldata std:sid="v-data-64bb3add" width="400px" height="28px" autosize="height"/>
+        <cl:group std:sid="group-91abf8e5">
+          <cl:formdata std:sid="f-data-764bace6" row="0" col="0"/>
+          <cl:flowlayout std:sid="f-layout-619ee623" valign="middle"/>
+        </cl:group>
+        <cl:group std:sid="group-ac7e11bd">
+          <cl:formdata std:sid="f-data-19b0f423" row="0" col="1"/>
+          <cl:button std:sid="button-a100fb4a" class="primary" value="닫기">
+            <cl:listener std:sid="listener-f2026886" name="click" handler="onButtonClick"/>
+            <cl:flowlayoutdata std:sid="f-data-a61b6964" width="60px" height="28px" autosize="width"/>
+          </cl:button>
+          <cl:flowlayout std:sid="f-layout-4e6732de" halign="right" valign="middle"/>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-5f3208ea" scrollable="false" hspace="1fr" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="300" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          <cl:columns length="300" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-a05059e9"/>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-0416b7db" scrollable="true" hspace="0px" vspace="16px" top-margin="24px" right-margin="24px" bottom-margin="24px" left-margin="24px">
+      <cl:rows length="28" unit="PIXEL" autoSizing="true" hidden="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+      <cl:rows length="24" unit="PIXEL" autoSizing="true" hidden="true" syncminlength="false"/>
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:rows length="28" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-3d4dfa59" version="1.0.4221">
+  <head std:sid="head-583a2e75">
+    <screen std:sid="screen-08df33e3" id="EXB-POP[480]" name="EXB-POP[480]" width="480px" height="320px" useCustomWidth="true" useCustomHeight="true" customHeight="500" customWidth="400" active="true"/>
+    <cl:model std:sid="model-21f734ce">
+      <cl:datamap std:sid="d-map-5362493f" id="dmParam"/>
+    </cl:model>
+    <cl:appspec title="반응형 그리드 View 팝업"/>
+  </head>
+  <body std:sid="body-4e5fc6d7">
+    <cl:listener std:sid="listener-ee02cc0b" name="load" handler="onBodyLoad"/>
+    <cl:listener std:sid="listener-b86a2ea6" name="init" handler="onBodyInit"/>
+    <cl:listener std:sid="listener-c3a527b8" name="before-unload" handler="onBodyBeforeUnload"/>
+    <cl:group std:sid="group-76b6c119" id="grpData">
+      <cl:formdata std:sid="f-data-a6fd17a3" row="0" col="0" rowspan="1" colspan="1"/>
+      <cl:verticallayout std:sid="v-layout-dfd67e00"/>
+    </cl:group>
+    <cl:button std:sid="button-3b2e7e66" id="btn1" value="닫기">
+      <cl:listener std:sid="listener-85ce64b3" name="click" handler="onBtn1Click"/>
+      <cl:listener std:sid="listener-29858003" name="click" handler="onBtn1Click3"/>
+      <cl:formdata std:sid="f-data-50d921ed" row="1" col="0"/>
+    </cl:button>
+    <cl:formlayout std:sid="f-layout-acdfd8b9" scrollable="false" hspace="0px" vspace="12px" top-margin="16px" right-margin="16px" bottom-margin="16px" left-margin="16px">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:rows length="30" unit="PIXEL"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

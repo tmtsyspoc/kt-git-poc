@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-c132e30c" version="1.0.5542">
+  <head std:sid="head-887b8465">
+    <screen std:sid="screen-86e6c216" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-f4823f68" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="false"/>
+    <screen std:sid="screen-0f5b1a5d" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="375" active="false"/>
+    <cl:model std:sid="model-7072a591"/>
+    <cl:appspec/>
+  </head>
+  <body std:sid="body-b2566577">
+    <cl:group std:sid="group-527b7586" class="errorpage" clipcontent="false">
+      <cl:responsivexylayoutdata std:sid="rxyl-data-ff1761a1">
+        <cl:xylayoutdata std:sid="sxyl-data-619f2bd6" width="400px" height="282px" horizontalAnchor="CENTER" verticalAnchor="CENTER" screenid="EXB-FULL"/>
+        <cl:xylayoutdata std:sid="sxyl-data-94a3aabd" width="400px" height="282px" horizontalAnchor="CENTER" verticalAnchor="CENTER" screenid="EXB-DIV"/>
+        <cl:xylayoutdata std:sid="sxyl-data-44e53bb4" right="24px" left="24px" height="282px" horizontalAnchor="BOTH" verticalAnchor="CENTER" screenid="EXB-PART"/>
+      </cl:responsivexylayoutdata>
+      <cl:output std:sid="output-19d783e3" class="tit" value="500 ERROR">
+        <cl:verticaldata std:sid="v-data-7fe6a6d6" width="100%" height="90px" autosize="both"/>
+      </cl:output>
+      <cl:output std:sid="output-aa3beb05" class="txt" value="시스템 에러가 발생하여 페이지를 표시할 수 없습니다.&#xD;&#xA;잠시 후 다시 시도하세요. 오류가 계속 발생할 경우 관리자에게 문의 바랍니다.">
+        <cl:verticaldata std:sid="v-data-0982583a" width="100%" height="72px" autosize="height"/>
+      </cl:output>
+      <cl:button std:sid="button-005c25e5" class="secondary" value="메인 페이지로 이동">
+        <cl:verticaldata std:sid="v-data-476c3d71" width="100%" height="48px"/>
+      </cl:button>
+      <cl:verticallayout std:sid="v-layout-50e64092" scrollable="false" distribution="leading" spacing="36"/>
+    </cl:group>
+    <cl:responsivexylayout std:sid="r-xylayout-bedd68ad"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

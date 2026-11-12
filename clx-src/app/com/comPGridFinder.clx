@@ -1,0 +1,97 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-f16b0101" version="1.0.5186">
+  <head std:sid="head-f16b0102">
+    <screen std:sid="screen-f16b0103" id="EXB-POP[1024]" name="EXB-POP[1024]" width="1024px" height="576px" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-f16b0104" id="EXB-POP[800]" name="EXB-POP[800]" width="800px" height="480px" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-f16b0105" id="EXB-POP[480]" name="EXB-POP[480]" width="480px" height="320px" customHeight="600" customWidth="800" active="true"/>
+    <cl:model std:sid="model-f16b0106">
+      <cl:dataset comment="대상컬럼 콤보 목록 — 전체 + 대상 그리드의 보이는 데이터 열 (AS-IS sc-grid-finder 콤보)" std:sid="d-set-f16b0107" id="dsTargetColumn">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-f16b0108" name="label"/>
+          <cl:datacolumn std:sid="d-column-f16b0109" name="value"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="데이터 찾기"/>
+  </head>
+  <body std:sid="body-f16b010a" class="pop-content-wrapper" clipcontent="true" childcombinatorclass="v_base">
+    <cl:listener std:sid="listener-f16b010b" name="load" handler="onBodyLoad"/>
+    <cl:listener std:sid="listener-f8aa7c79" name="unload" handler="onBodyUnload"/>
+    <cl:udc std:sid="ud-control-f16b010c" id="udccomappheader1" visible="false" type="udc.com.udcComAppHeader">
+      <cl:verticaldata std:sid="v-data-f16b010d" width="1580px" height="25px" autosize="height"/>
+    </cl:udc>
+    <cl:group std:sid="group-f16b010e" id="grpData" class="pop-content-body">
+      <cl:verticaldata std:sid="v-data-f16b010f" width="480px" height="161px" autosize="height"/>
+      <cl:group std:sid="group-f16b0110" id="grpForm" class="form">
+        <cl:verticaldata std:sid="v-data-f16b0111" width="432px" height="162px" autosize="height"/>
+        <cl:output std:sid="output-f16b0112" class="label" value="찾을말">
+          <cl:formdata std:sid="f-data-f16b0113" row="0" col="0" ignore-layout-spacing="true"/>
+        </cl:output>
+        <cl:searchinput std:sid="s-input-f16b0114" id="sipFindWord" fieldLabel="찾을말">
+          <cl:listener std:sid="listener-f16b0115" name="search" handler="onSipFindWordSearch"/>
+          <cl:formdata std:sid="f-data-f16b0116" row="0" col="1"/>
+        </cl:searchinput>
+        <cl:output std:sid="output-f16b0117" class="label" value="대상컬럼">
+          <cl:formdata std:sid="f-data-f16b0118" row="1" col="0" ignore-layout-spacing="true"/>
+        </cl:output>
+        <cl:combobox std:sid="c-box-f16b0119" id="cmbTargetColumn" fieldLabel="대상컬럼" value="">
+          <cl:formdata std:sid="f-data-f16b011a" row="1" col="1"/>
+          <cl:itemset datasetid="dsTargetColumn" label="label" value="value"/>
+        </cl:combobox>
+        <cl:output std:sid="output-f16b011b" class="label" value="">
+          <cl:formdata std:sid="f-data-f16b011c" row="2" col="0" ignore-layout-spacing="true"/>
+        </cl:output>
+        <cl:checkbox std:sid="c-box-f16b011d" id="cbxRepeatSearch" fieldLabel="데이터 끝에서 되돌리기" value="N" truevalue="Y" falsevalue="N" text="데이터 끝에서 되돌리기">
+          <cl:formdata std:sid="f-data-f16b011e" row="2" col="1"/>
+        </cl:checkbox>
+        <cl:output std:sid="output-f16b011f" class="label" value="찾은 결과:">
+          <cl:formdata std:sid="f-data-f16b0120" row="3" col="0" ignore-layout-spacing="true"/>
+        </cl:output>
+        <cl:output std:sid="output-f16b0121" id="optFindResult">
+          <cl:formdata std:sid="f-data-f16b0122" row="3" col="1"/>
+        </cl:output>
+        <cl:formlayout std:sid="f-layout-f16b0123" scrollable="false" hspace="17px" vspace="13px" top-margin="6px" right-margin="8px" bottom-margin="6px" left-margin="8px" hseparatorwidth="1" hseparatortype="BY_CLASS">
+          <cl:rows length="26" unit="PIXEL"/>
+          <cl:rows length="26" unit="PIXEL"/>
+          <cl:rows length="26" unit="PIXEL"/>
+          <cl:rows length="26" unit="PIXEL"/>
+          <cl:columns length="80" unit="PIXEL" autoSizing="true" shadetype="BY_CLASS" shadecolor="transparent"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-f16b0124" scrollable="false" spacing="16"/>
+    </cl:group>
+    <cl:group std:sid="group-f16b0125" id="grpFooter" class="pop-content-footer">
+      <cl:verticaldata std:sid="v-data-f16b0126" width="480px" height="56px" autosize="height"/>
+      <cl:group std:sid="group-f16b0127" class="footer-button-group">
+        <cl:verticaldata std:sid="v-data-f16b0128" width="432px" height="32px" autosize="height"/>
+        <cl:group std:sid="group-f16b0129">
+          <cl:formdata std:sid="f-data-f16b012a" row="0" col="0"/>
+          <cl:button std:sid="button-f16b012b" id="btnFind" class="btn-submit" value="찾기">
+            <cl:listener std:sid="listener-f16b012c" name="click" handler="onBtnFindClick"/>
+            <cl:flowlayoutdata std:sid="f-data-f16b012d" width="57px" height="32px" autosize="width"/>
+          </cl:button>
+          <cl:button std:sid="button-f16b012e" id="btnCancelFind" class="btn-base" value="찾기 취소">
+            <cl:listener std:sid="listener-f16b012f" name="click" handler="onBtnCancelFindClick"/>
+            <cl:flowlayoutdata std:sid="f-data-f16b0130" width="80px" height="32px" autosize="width"/>
+          </cl:button>
+          <cl:button std:sid="button-f16b0131" id="btnClose" class="btn-base" value="닫기">
+            <cl:listener std:sid="listener-f16b0132" name="click" handler="onBtnCloseClick"/>
+            <cl:flowlayoutdata std:sid="f-data-f16b0133" width="56px" height="32px" autosize="width"/>
+          </cl:button>
+          <cl:flowlayout std:sid="f-layout-f16b0134" halign="center"/>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-f16b0135" scrollable="false" hspace="1fr" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION" autoSizing="false" shadetype="NONE" shadecolor="transparent" syncminlength="true"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-f16b0136" spacing="16"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-f16b0137" scrollable="true" spacing="16" leftmargin="24" rightmargin="24" topmargin="16" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

@@ -1,0 +1,50 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-b65e0fc4" version="1.0.4350">
+  <head std:sid="head-44e9682b">
+    <screen std:sid="screen-72ef6ddd" id="EXB-POP[480]" name="EXB-POP[480]" width="480px" height="320px" useCustomHeight="true" customHeight="280" customWidth="800" active="true"/>
+    <cl:model std:sid="model-456d8f05"/>
+    <cl:appspec title="메세지 팝업"/>
+  </head>
+  <body std:sid="body-b2dbab83" class="pop-content-wrapper">
+    <cl:listener std:sid="listener-9d5755d9" name="load" handler="onBodyLoad"/>
+    <cl:group std:sid="group-91bda377" id="grpMsgContent">
+      <cl:verticaldata std:sid="v-data-0e21629e" width="400px" height="280px" autosize="height"/>
+      <cl:group std:sid="group-beec5421" class="pop-content-body">
+        <cl:verticaldata std:sid="v-data-4fc8bd07" width="400px" height="224px" autosize="height"/>
+        <cl:group std:sid="group-647262ac">
+          <cl:verticaldata std:sid="v-data-56684f3b" width="448px" height="64px" autosize="height"/>
+          <cl:output std:sid="output-c5171a5d" id="optMsg" class="font-bold text-center font-size-16" value="메세지 내용을 입력하세요" arialive="assertive">
+            <cl:verticaldata std:sid="v-data-e30f3166" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:output std:sid="output-1edfd70f" id="optSubMsg" class="caption text-center" value="서브 메세지 내용을 표시하세요" arialive="assertive">
+            <cl:verticaldata std:sid="v-data-43098827" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-8215b6cd" spacing="4"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-b605cad9" spacing="12" leftmargin="0" rightmargin="0" topmargin="15" bottommargin="10"/>
+      </cl:group>
+      <cl:group std:sid="group-4abef3c8" class="pop-content-footer">
+        <cl:verticaldata std:sid="v-data-d4b7c973" width="400px" height="57px" autosize="height"/>
+        <cl:group std:sid="group-af6e578c" class="footer-button-group">
+          <cl:verticaldata std:sid="v-data-ff285baf" width="400px" height="32px" autosize="height"/>
+          <cl:button std:sid="button-3ede71ff" id="btnNegative" class="secondary" visible="false" value="취소">
+            <cl:listener std:sid="listener-d632ba78" name="click" handler="onBtnNegativeClick"/>
+            <cl:flowlayoutdata std:sid="f-data-46d082f5" width="60px" height="32px" autosize="width"/>
+          </cl:button>
+          <cl:button std:sid="button-7247262b" id="btnPositive" class="primary" value="확인">
+            <cl:listener std:sid="listener-d4e3e95f" name="click" handler="onBtnPositiveClick"/>
+            <cl:flowlayoutdata std:sid="f-data-98408faa" width="60px" height="32px" autosize="width"/>
+          </cl:button>
+          <cl:flowlayout std:sid="f-layout-a2e834d5" scrollable="false" vspacing="0" halign="right" linewrap="false"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-87cf2703"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-c855de89" spacing="0" leftmargin="10" rightmargin="10" topmargin="10" bottommargin="10"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-8cf906e7" scrollable="false" spacing="0"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

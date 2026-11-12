@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-65c723c7" version="1.0.4034">
+  <head std:sid="head-7cef8be0">
+    <std:metadata>
+      <std:property key="template-file" value="templates/팝업/1.그리드/1-1.단일 그리드.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-5f8ddd9c" id="EXB-POP[1024]" name="EXB-POP[1024]" width="1024px" height="576px" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-8f1afae9" id="EXB-POP[800]" name="EXB-POP[800]" width="800px" height="480px" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-5b5272b2" id="EXB-POP[480]" name="EXB-POP[480]" width="480px" height="320px" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-92e9263e">
+      <cl:dataset std:sid="d-set-a02945b6" id="ds1"/>
+      <cl:submission std:sid="submission-e8b382e1" id="sub1" method="get"/>
+    </cl:model>
+    <cl:appspec title="소스보기"/>
+  </head>
+  <body std:sid="body-38cefc13">
+    <cl:listener std:sid="listener-bcc97b9a" name="load" handler="onBodyLoad"/>
+    <cl:udc std:sid="ud-control-7f1b4ceb" id="udcexamace1" type="udc.exam.udcExamAce">
+      <cl:formdata std:sid="f-data-0764d8a4" row="0" col="0"/>
+    </cl:udc>
+    <cl:formlayout std:sid="f-layout-26d21298" scrollable="true" hspace="0px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

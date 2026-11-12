@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-714cc2bf" version="1.0.0.0">
+  <head std:sid="head-2bacf21a">
+    <title>cmnCTSample1</title>
+    <screen std:sid="screen-885ce986" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-3410e448" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-eb03a755" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-b3531f0e">
+      <cl:dataset std:sid="d-set-a2ccf9e1" id="dsFile" info="ATTC_FILE_NO,SEQ">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-d0b79610" name="ATTC_FILE_NO"/>
+          <cl:datacolumn std:sid="d-column-6b95449d" name="SEQ"/>
+          <cl:datacolumn std:sid="d-column-52dc2eb8" name="PGM_ID"/>
+          <cl:datacolumn std:sid="d-column-45dc61fc" name="USER_ID"/>
+          <cl:datacolumn std:sid="d-column-1d355767" name="FILE_NM"/>
+          <cl:datacolumn std:sid="d-column-936cfb96" name="SAVE_FILE_NM"/>
+          <cl:datacolumn std:sid="d-column-197ccc8a" name="FILE_STAT_NM"/>
+          <cl:datacolumn std:sid="d-column-c14e9617" name="FILE_PATH"/>
+          <cl:datacolumn std:sid="d-column-d96d0dd2" name="FILE_EXT"/>
+          <cl:datacolumn std:sid="d-column-2fce85b2" name="FILE_SIZE"/>
+          <cl:datacolumn std:sid="d-column-898accf9" name="CRT_DTTM"/>
+          <cl:datacolumn std:sid="d-column-e892f2db" name="FILE_ICON_IMG"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+      <cl:datamap std:sid="d-map-3c1f3975" id="dmParam">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-4b7329e4" name="strAttcFileNo" datatype="string" defaultvalue=""/>
+          <cl:datacolumn std:sid="d-column-34c343f2" name="strUserDefinePgmId"/>
+          <cl:datacolumn std:sid="d-column-cb07a247" name="strFileStatRcd" defaultvalue=""/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+      <cl:datamap std:sid="d-map-b0ecf2f8" id="dmUpload">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-cbc7dad0" name="attcFileNo"/>
+          <cl:datacolumn std:sid="d-column-a5ebab2a" name="fileNm"/>
+          <cl:datacolumn std:sid="d-column-9e42808d" name="fileSize"/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+      <cl:datamap std:sid="d-map-63242287" id="dmParamDown">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-d284150b" name="filePath"/>
+          <cl:datacolumn std:sid="d-column-82f45705" name="fileNm"/>
+          <cl:datacolumn std:sid="d-column-dc18b634" name="resType"/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+      <cl:datamap std:sid="d-map-01cf2676" id="dmMsg">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-cf7c2f6c" name="strMsg"/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+      <cl:submission std:sid="submission-cb243db3" id="subUpload" action="/CmnFile/upload.do" mediatype="multipart/form-data" responsetype="text">
+        <cl:requestdata dataid="dmParam"/>
+        <cl:responsedata dataid="dmUpload"/>
+      </cl:submission>
+      <cl:submission std:sid="submission-1fd2ba7a" id="subList" action="/CmnFile/list.do">
+        <cl:requestdata dataid="dmParam"/>
+        <cl:responsedata dataid="dsFile"/>
+      </cl:submission>
+      <cl:submission std:sid="submission-2984124d" id="subDelete" action="/CmnFile/delete.do">
+        <cl:requestdata dataid="dmParam"/>
+        <cl:requestdata dataid="dsFile"/>
+      </cl:submission>
+      <cl:submission std:sid="submission-1d15f83f" id="subCheckExist" action="/CmnFile/checkFileExist.do">
+        <cl:requestdata dataid="dmParamDown"/>
+      </cl:submission>
+      <cl:submission std:sid="submission-ea9ffb34" id="subDownload" action="/CmnFile/download.do" mediatype="application/x-www-form-urlencoded" responsetype="blob">
+        <cl:requestdata dataid="dmParamDown"/>
+      </cl:submission>
+      <cl:submission std:sid="submission-ffabc20a" id="subDownloadAll" action="/CmnFile/downloadAll.do" mediatype="application/x-www-form-urlencoded" responsetype="filedownload">
+        <cl:requestdata dataid="dmParamDown"/>
+      </cl:submission>
+    </cl:model>
+    <cl:appspec title="첨부파일팝업"/>
+  </head>
+  <body std:sid="body-d424f3c6" style="top:0px; left:0px; width:800px; height:600px;">
+    <cl:listener std:sid="listener-eeeb85f6" name="load" handler="onBodyLoad"/>
+    <cl:listener std:sid="listener-6ec9b851" name="before-unload" handler="onBodyBeforeUnload"/>
+    <cl:udc std:sid="ud-control-548ce40f" id="udccomappheader1" type="udc.com.udcComAppHeader">
+      <cl:formdata std:sid="f-data-3d3f63f6" row="0" col="0"/>
+      <cl:property name="groupBoxIds" value="grpData" type="string"/>
+      <cl:property name="titile" value="첨부파일팝업" type="string"/>
+      <cl:property name="title" value="파일 업로드 / 다운로드" type="string"/>
+    </cl:udc>
+    <cl:group std:sid="group-2d012f0f" id="grpData">
+      <cl:formdata std:sid="f-data-fa14a05f" row="1" col="0"/>
+      <cl:group std:sid="group-d9881dfd" id="grp4">
+        <cl:attribute name="mobile-column-count" value="1"/>
+        <cl:attribute name="tablet-column-count" value="2"/>
+        <cl:formdata std:sid="f-data-25e94cc7" row="0" col="0"/>
+        <cl:udc std:sid="ud-control-3059d815" id="udccomformtitle1" type="udc.com.udcComFormTitle">
+          <cl:formdata std:sid="f-data-170dfd6d" row="0" col="0"/>
+          <cl:property name="ctrl" value="grdFile" type="control"/>
+          <cl:property name="title" value="첨부파일목록" type="string"/>
+        </cl:udc>
+        <cl:group std:sid="group-0860311c">
+          <cl:formdata std:sid="f-data-f09208ce" row="0" col="1"/>
+          <cl:button std:sid="button-2ac282a1" id="btnUpload" class="btn-outline-primary-03" visible="false" value="파일 업로드">
+            <cl:listener std:sid="listener-7feaf83e" name="click" handler="onBtnUploadClick"/>
+            <cl:flowlayoutdata std:sid="f-data-51ff186a" width="106px" height="28px" autosize="width"/>
+          </cl:button>
+          <cl:output std:sid="output-d4e674c6">
+            <cl:flowlayoutdata std:sid="f-data-8c2e1387" width="0px" height="28px" autosize="width"/>
+          </cl:output>
+          <cl:button std:sid="button-8313d070" id="btnDownAll" class="btn-outline-primary-03" value="전체다운">
+            <cl:listener std:sid="listener-57c27328" name="click" handler="onBtnDownAllClick"/>
+            <cl:flowlayoutdata std:sid="f-data-bce74452" width="92px" height="28px" autosize="width"/>
+          </cl:button>
+          <cl:button std:sid="button-e7d1f08d" id="btnDelete" class="btn-outline-primary-03" visible="false" value="삭제">
+            <cl:listener std:sid="listener-c6098fe8" name="click" handler="onBtnDeleteClick"/>
+            <cl:flowlayoutdata std:sid="f-data-fbe47ca4" width="66px" height="28px" autosize="width"/>
+          </cl:button>
+          <cl:flowlayout std:sid="f-layout-6012af9b" scrollable="false" hspacing="4" vspacing="4" halign="right"/>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-bea972ab" scrollable="false" hspace="6px" vspace="6px">
+          <cl:rows length="1" unit="FRACTION" autoSizing="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+          <cl:columns length="200" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="#000000" minlength="0" syncminlength="false"/>
+          <cl:columns length="1" unit="FRACTION" autoSizing="false" minlength="0"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:grid std:sid="grid-f8718b75" id="grdFile" fieldLabel="첨부파일목록" readonly="true" datasetid="dsFile" autofit="3" resizablecolumns="1, 2, 3, 4, 5, 6, 7, 8">
+        <cl:listener std:sid="listener-f7c58c8d" name="cell-click" handler="onGrdCodeCellClick"/>
+        <cl:formdata std:sid="f-data-170bb39b" row="1" col="0"/>
+        <cl:gridcolumn std:sid="g-column-ac7690a5" width="50px"/>
+        <cl:gridcolumn std:sid="g-column-8dcc11c2" width="50px"/>
+        <cl:gridcolumn std:sid="g-column-65480312" width="20px" visible="false"/>
+        <cl:gridcolumn std:sid="g-column-593ff82f" width="359px"/>
+        <cl:gridcolumn std:sid="g-column-abd5c7d0" width="120px"/>
+        <cl:gridcolumn std:sid="g-column-7bf4e6d2" width="95px"/>
+        <cl:gridcolumn std:sid="g-column-50fa99a1" width="60px" visible="false"/>
+        <cl:gridcolumn std:sid="g-column-f7e24581" visible="false"/>
+        <cl:gridcolumn std:sid="g-column-d2dcc885" width="120px" visible="false"/>
+        <cl:gridheader std:sid="gh-band-4b72fcec">
+          <cl:gridrow std:sid="g-row-52503c77" height="37px"/>
+          <cl:gridcell std:sid="gh-cell-df7b4234" rowindex="0" colindex="0" columntype="checkbox"/>
+          <cl:gridcell std:sid="gh-cell-8d5bcd80" rowindex="0" colindex="1" sortable="false" filterable="false" text="No"/>
+          <cl:gridcell std:sid="gh-cell-6233537f" rowindex="0" colindex="2" rowspan="1" colspan="2" text="파일명"/>
+          <cl:gridcell std:sid="gh-cell-1919529a" rowindex="0" colindex="4" text="사이즈(byte)"/>
+          <cl:gridcell std:sid="gh-cell-0356e15e" rowindex="0" colindex="5"/>
+          <cl:gridcell std:sid="gh-cell-775a1ba6" rowindex="0" colindex="6" text="상태"/>
+          <cl:gridcell std:sid="gh-cell-dbb717cc" rowindex="0" colindex="7" text="업로드일시"/>
+          <cl:gridcell std:sid="gh-cell-8dce07b9" rowindex="0" colindex="8" text="업로드사용자ID"/>
+        </cl:gridheader>
+        <cl:griddetail std:sid="gd-band-d94d989a">
+          <cl:gridrow std:sid="g-row-1644a94b" height="37px"/>
+          <cl:gridcell std:sid="gd-cell-51b2fd6a" rowindex="0" colindex="0" columntype="checkbox"/>
+          <cl:gridcell std:sid="gd-cell-a1d0dec4" rowindex="0" colindex="1" style="text-align:center;" columntype="rowindex"/>
+          <cl:gridcell std:sid="gd-cell-78901890" rowindex="0" colindex="2" style="border-right-style:none; border-top-width:0px; border-left-style:none; border-right-width:0px; border-left-width:0px; border-top-style:none;">
+            <cl:img std:sid="image-638f9089" id="img1">
+              <cl:relativebind property="src" columnname="FILE_ICON_IMG"/>
+              <cl:celldata std:sid="c-data-2d07c56c"/>
+            </cl:img>
+          </cl:gridcell>
+          <cl:gridcell std:sid="gd-cell-ddee2c75" rowindex="0" colindex="3" style="padding:0px 2px 0px 2px;" columnname="FILE_NM"/>
+          <cl:gridcell std:sid="gd-cell-4a7c1e26" rowindex="0" colindex="4" style="text-align:right;" columnname="FILE_SIZE"/>
+          <cl:gridcell std:sid="gd-cell-51484608" rowindex="0" colindex="5">
+            <cl:button std:sid="button-3bfdbdfb" id="btn1" value="다운로드">
+              <cl:celldata std:sid="c-data-eeb9883e" topSpacing="4" bottomSpacing="4" leftSpacing="4" rightSpacing="4"/>
+            </cl:button>
+          </cl:gridcell>
+          <cl:gridcell std:sid="gd-cell-d680eef0" rowindex="0" colindex="6" style="text-align:center;" columnname="FILE_STAT_NM"/>
+          <cl:gridcell std:sid="gd-cell-aea33d44" rowindex="0" colindex="7" columnname="CRT_DTTM"/>
+          <cl:gridcell std:sid="gd-cell-f1bd89ab" rowindex="0" colindex="8" columnname="USER_ID"/>
+        </cl:griddetail>
+      </cl:grid>
+      <cl:formlayout std:sid="f-layout-27b199b7" scrollable="false" hspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="30" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="#000000" minlength="30" syncminlength="true"/>
+        <cl:rows length="1" unit="FRACTION" autoSizing="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-f3d7a659">
+      <cl:formdata std:sid="f-data-816bd6b9" row="2" col="0"/>
+      <cl:fileinput std:sid="f-input-4df89950" id="fileinput1" visible="false" multiple="true" limitfileunit="mb" limitfilesize="50">
+        <cl:listener std:sid="listener-0d49a76e" name="value-change" handler="onFileinput1ValueChange"/>
+        <cl:listener std:sid="listener-5e7f6490" name="maxsize-exceed" handler="onFileinput1MaxsizeExceed"/>
+        <cl:flowlayoutdata std:sid="f-data-4d6c49ba" width="340px" height="28px" autosize="none"/>
+      </cl:fileinput>
+      <cl:button std:sid="button-e610e9e9" value="닫기">
+        <cl:listener std:sid="listener-32c15dfc" name="click" handler="onBtnCloseClick"/>
+        <cl:flowlayoutdata std:sid="f-data-b4ec3581" width="74px" height="28px" autosize="width"/>
+      </cl:button>
+      <cl:flowlayout std:sid="f-layout-1364edba" scrollable="false" hspacing="6" vspacing="6" halign="right"/>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-c6904fac" hspace="0px" vspace="12px" top-margin="16px" right-margin="16px" bottom-margin="16px" left-margin="16px">
+      <cl:rows length="30" unit="PIXEL" autoSizing="true" hidden="true" syncminlength="false"/>
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:rows length="28" unit="PIXEL" autoSizing="false"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

@@ -1,0 +1,21 @@
+{
+	"dmTodayStat": {
+		"NEW_CNT": 12,
+		"MNP_CNT": 5,
+		"CHG_CNT": 9,
+		"PAY_CNT": 21,
+		"TERM_CNT": 2,
+		"PEND_CNT": 3
+	},
+	"dsAllMenu": [
+		{"MENU_ID": "KOS", "MENU_NM": "대리점 업무", "CALL_PAGE": "", "UP_MENU_ID": null, "USE_YN": ""},
+		{"MENU_ID": "KOS_01", "MENU_NM": "고객", "CALL_PAGE": "", "UP_MENU_ID": "KOS", "USE_YN": ""},
+		{"MENU_ID": "KOS-CUST", "MENU_NM": "고객 정보", "CALL_PAGE": "app/kos/KosCust.clx", "UP_MENU_ID": "KOS_01", "USE_YN": ""},
+		{"MENU_ID": "KOS_02", "MENU_NM": "가입·변경", "CALL_PAGE": "", "UP_MENU_ID": "KOS", "USE_YN": ""},
+		{"MENU_ID": "KOS-JOIN", "MENU_NM": "신규가입", "CALL_PAGE": "app/kos/KosJoin.clx", "UP_MENU_ID": "KOS_02", "USE_YN": ""},
+		{"MENU_ID": "KOS-MNP", "MENU_NM": "번호이동", "CALL_PAGE": "app/kos/KosMnp.clx", "UP_MENU_ID": "KOS_02", "USE_YN": ""},
+		{"MENU_ID": "KOS-DEVCHG", "MENU_NM": "기기변경", "CALL_PAGE": "app/kos/KosDevChg.clx", "UP_MENU_ID": "KOS_02", "USE_YN": ""},
+		{"MENU_ID": "KOS_03", "MENU_NM": "청구·수납", "CALL_PAGE": "", "UP_MENU_ID": "KOS", "USE_YN": ""},
+		{"MENU_ID": "KOS-PAY", "MENU_NM": "요금수납", "CALL_PAGE": "app/kos/KosPay.clx", "UP_MENU_ID": "KOS_03", "USE_YN": ""}
+	]
+}

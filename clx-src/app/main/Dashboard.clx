@@ -1,0 +1,184 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-4ba50659" version="1.0.5996">
+  <head std:sid="head-406256fb">
+    <script std:sid="script-8169aa3c" src="../../thirdparty/Swiper/swiper.min.js" type="text/javascript"/>
+    <screen std:sid="screen-9311ba3a" id="default" name="default" width="1640px" height="984px" useCustomWidth="true" useCustomHeight="true" customHeight="807" customWidth="1616" active="true"/>
+    <screen std:sid="screen-83b267b1" id="tablet" name="tablet" width="1023px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-b2f8ead2" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-a8a6d7b5">
+      <cl:dataset comment="커스텀 메뉴 목록" std:sid="d-set-a1e801ff" id="dsCustomItem" filtercondition="">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="아이템 ID" std:sid="d-column-5cadda04" info="" name="itemId"/>
+          <cl:datacolumn comment="아이템명" std:sid="d-column-c6af0253" name="itemNm"/>
+          <cl:datacolumn comment="아이템 Type(UDC)" std:sid="d-column-b5eecaad" name="itemType"/>
+          <cl:datacolumn comment="최소 너비" std:sid="d-column-ec9a9d18" name="minWidth" datatype="number"/>
+          <cl:datacolumn comment="최소 높이" std:sid="d-column-f90ee1e2" name="minHeight" datatype="number"/>
+          <cl:datacolumn comment="정렬순서" std:sid="d-column-61259d83" name="sortNo"/>
+          <cl:datacolumn comment="constraint" std:sid="d-column-05652297" name="constraint"/>
+          <cl:datacolumn comment="기본 배치 로우수" std:sid="d-column-3875fa1f" name="rowSpan" datatype="number"/>
+          <cl:datacolumn comment="기본 배치 컬럼수" std:sid="d-column-a291777a" name="colSpan" datatype="number"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist/>
+      </cl:dataset>
+      <cl:dataset comment="전체 아이템" std:sid="d-set-3cf4e339" id="dsAllItem" filtercondition="">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="아이템 ID" std:sid="d-column-b3c06e64" info="" name="itemId"/>
+          <cl:datacolumn comment="아이템명" std:sid="d-column-e2a7ed5a" name="itemNm"/>
+          <cl:datacolumn comment="아이템 Type(UDC)" std:sid="d-column-83dc7699" name="itemType"/>
+          <cl:datacolumn comment="최소 높이(모바일)" std:sid="d-column-700f1657" name="minHeight" datatype="number"/>
+          <cl:datacolumn comment="정렬순서" std:sid="d-column-31a33345" name="sortNo"/>
+          <cl:datacolumn comment="기본 Constraint" std:sid="d-column-ee922407" name="constraint"/>
+          <cl:datacolumn comment="기본 배치 로우수" std:sid="d-column-9e0c7653" name="rowSpan" datatype="number"/>
+          <cl:datacolumn comment="기본 배치 컬럼수" std:sid="d-column-6404731c" name="colSpan" datatype="number"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist/>
+      </cl:dataset>
+      <cl:datamap std:sid="d-map-f0a5c452" id="dmUserInfo">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="사용자 ID" std:sid="d-column-fdb5af46" name="userId"/>
+          <cl:datacolumn comment="사용자명" std:sid="d-column-0105571f" name="userNm"/>
+          <cl:datacolumn comment="사용자메뉴그룹명" std:sid="d-column-f08ae96d" name="userMenuGrpDate" defaultvalue=""/>
+          <cl:datacolumn comment="사용자메뉴그룹자료" std:sid="d-column-4ac12ab7" name="userMenuGrpData"/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+    </cl:model>
+    <cl:appspec title="대시보드"/>
+  </head>
+  <body std:sid="body-12ea290b" class="dash">
+    <cl:listener std:sid="listener-f93db813" name="screen-change" handler="onBodyScreenChange"/>
+    <cl:listener std:sid="listener-2c4e136f" name="init" handler="onBodyInit"/>
+    <cl:group std:sid="group-30125a0a" id="grpHd" class="box" visible="false" clipcontent="false">
+      <cl:attribute name="needs-auto-height" value="true"/>
+      <cl:formdata std:sid="f-data-6c94ec98" width="100" height="-24" row="0" col="0"/>
+      <cl:group std:sid="group-68cb5948" id="grp2" class="user-box">
+        <cl:verticaldata std:sid="v-data-389292ae" width="1024px" height="92px" autosize="height"/>
+        <cl:group std:sid="group-e7163bce" id="grp3">
+          <cl:verticaldata std:sid="v-data-9e3818b2" width="976px" height="36px" autosize="height"/>
+          <cl:group std:sid="group-678988e3" id="grpDashSetBtns" class="filter-button-group" visible="false">
+            <cl:formdata std:sid="f-data-c297a6c9" valign="CENTER" height="28" row="0" col="1"/>
+            <cl:button std:sid="button-ba052e1e" id="btnCustomReset" class="tertiary" value="초기화">
+              <cl:listener std:sid="listener-4617557b" name="click" handler="onBtnCustomResetClick"/>
+              <cl:flowlayoutdata std:sid="f-data-fab2a034" width="63px" height="28px" autosize="width"/>
+            </cl:button>
+            <cl:button std:sid="button-4da3605c" id="btnAllDel" class="tertiary" value="전체삭제">
+              <cl:listener std:sid="listener-45d2e1c2" name="click" handler="onBtnAllDelClick"/>
+              <cl:flowlayoutdata std:sid="f-data-f39cbd3e" width="75px" height="28px" autosize="width"/>
+            </cl:button>
+            <cl:button std:sid="button-b1af85ef" id="btnCancle" class="tertiary" value="취소">
+              <cl:listener std:sid="listener-9bd55021" name="click" handler="onBtnCancleClick"/>
+              <cl:flowlayoutdata std:sid="f-data-87607cf3" width="50px" height="28px" autosize="width"/>
+            </cl:button>
+            <cl:button std:sid="button-aad95a0c" id="btnCustomSave" class="primary" value="저장">
+              <cl:listener std:sid="listener-13ec5072" name="click" handler="onBtnCustomSaveClick"/>
+              <cl:flowlayoutdata std:sid="f-data-64a01c51" width="50px" height="28px" autosize="width"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-f8dcde6c" halign="right" valign="middle"/>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-ccc11711" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="12px" bottom-margin="0px" left-margin="12px">
+            <cl:rows length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="296" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:group std:sid="group-5206ce73" id="grpItemListWrap" visible="false">
+          <cl:verticaldata std:sid="v-data-e7670365" width="976px" height="44px"/>
+          <cl:output std:sid="output-4576deab" id="opt1" style="color:#B7B7B7; font-size:12px;" class="text-center" value="아이템 목록 - 해당 아이템 버튼을 드래그 &amp; 드랍하여 배치할 수 있습니다">
+            <cl:xylayoutdata std:sid="xyl-data-aa003856" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+          </cl:output>
+          <cl:group std:sid="group-b3b2e8a8" id="grpDashSetZone" class="dropbox">
+            <cl:xylayoutdata std:sid="xyl-data-bdb2aef5" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+            <cl:button std:sid="button-25c81f39" id="btn4" removeOnBuild="true" value="영역1">
+              <cl:flowlayoutdata std:sid="f-data-7f45040e" width="100px" height="28px" autosize="width"/>
+            </cl:button>
+            <cl:button std:sid="button-dbd310aa" id="btn9" removeOnBuild="true" value="영역2">
+              <cl:flowlayoutdata std:sid="f-data-2046b01c" width="100px" height="28px" autosize="width"/>
+            </cl:button>
+            <cl:button std:sid="button-5a8aa3f5" id="btn22" removeOnBuild="true" value="영역3">
+              <cl:flowlayoutdata std:sid="f-data-af80a8bb" width="100px" height="28px" autosize="width"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-bcd95f48" leftmargin="20"/>
+          </cl:group>
+          <cl:xylayout std:sid="xylayout-a34622f7"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-3d3148ca" spacing="12"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-bf9d1ede" scrollable="true" spacing="24" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+    </cl:group>
+    <cl:group std:sid="group-0f13b361" id="grpPortlet" class="custom-body">
+      <cl:attribute name="mobile-column-count" value="1"/>
+      <cl:attribute name="tablet-column-count" value="8"/>
+      <cl:attribute name="portlet" value="Y"/>
+      <cl:attribute name="dataType" value="a"/>
+      <cl:attribute name="mobile-v-spacing" value="8"/>
+      <cl:attribute name="tablet-v-spacing" value="8"/>
+      <cl:formdata std:sid="f-data-842fada1" row="1" col="0"/>
+      <cl:udc std:sid="ud-control-da329819" id="udcdashitem111" type="udc.cmn.dashboard.udcDashItem11">
+        <cl:formdata std:sid="f-data-1d695feb" row="0" col="0" rowspan="9" colspan="4"/>
+      </cl:udc>
+      <cl:udc std:sid="ud-control-5270bc83" id="udcdashitem121" type="udc.cmn.dashboard.udcDashItem12">
+        <cl:formdata std:sid="f-data-25194036" row="0" col="4" rowspan="9" colspan="4"/>
+      </cl:udc>
+      <cl:udc std:sid="ud-control-e8170684" id="udcdashitem81" type="udc.cmn.dashboard.udcDashItem8">
+        <cl:datamapbind property="name" datacontrolid="dmUserInfo" columnname="userNm"/>
+        <cl:formdata std:sid="f-data-ad2eb3f1" row="0" col="8" rowspan="5" colspan="4"/>
+      </cl:udc>
+      <cl:udc std:sid="ud-control-42f4a19a" id="udcdashitem101" type="udc.cmn.dashboard.udcDashItem10">
+        <cl:formdata std:sid="f-data-b9b7e07b" row="0" col="12" rowspan="18" colspan="4"/>
+      </cl:udc>
+      <cl:udc std:sid="ud-control-95ab925c" id="udcdashitem91" type="udc.cmn.dashboard.udcDashItem9">
+        <cl:formdata std:sid="f-data-09f3aaea" row="5" col="8" rowspan="8" colspan="4"/>
+      </cl:udc>
+      <cl:udc std:sid="ud-control-633ce71c" id="udcdashitem61" type="udc.cmn.dashboard.udcDashItem6">
+        <cl:formdata std:sid="f-data-ab2b04aa" row="9" col="0" rowspan="4" colspan="8"/>
+      </cl:udc>
+      <cl:udc std:sid="ud-control-e3dab0ca" id="udcdashitem71" type="udc.cmn.dashboard.udcDashItem7">
+        <cl:formdata std:sid="f-data-cb453ddc" row="13" col="0" rowspan="5" colspan="12"/>
+      </cl:udc>
+      <cl:formlayout std:sid="f-layout-7a44fccf" scrollable="true" user-resizing-mode="none" hspace="16px" vspace="16px" top-margin="0px" right-margin="24px" bottom-margin="24px" left-margin="24px" hseparatorwidth="1" hseparatortype="BY_CLASS" vseparatorwidth="1" vseparatortype="BY_CLASS">
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:rows length="1" unit="FRACTION" minlength="30"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-269c91fd" scrollable="true" hspace="24px" vspace="0px" top-margin="12px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="92" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

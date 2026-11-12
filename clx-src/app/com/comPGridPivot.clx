@@ -1,0 +1,28 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-7c3e5a01" version="1.0.5186">
+  <head std:sid="head-7c3e5a02">
+    <screen std:sid="screen-7c3e5a03" id="EXB-POP[1024]" name="EXB-POP[1024]" width="1024px" height="576px" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-7c3e5a04" id="EXB-POP[800]" name="EXB-POP[800]" width="800px" height="480px" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-7c3e5a05" id="EXB-POP[480]" name="EXB-POP[480]" width="480px" height="320px" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-7c3e5a06">
+      <cl:dataset comment="피벗 원본 — 대상 그리드에 매핑된 컬럼·행을 복사해 채운다 (원본 데이터셋 정렬·상태를 건드리지 않기 위해 복사본 사용)" std:sid="d-set-7c3e5a07" id="dsPivotSrc"/>
+    </cl:model>
+    <cl:appspec title="피벗"/>
+  </head>
+  <body std:sid="body-7c3e5a08" class="pop-content-wrapper" clipcontent="true">
+    <cl:listener std:sid="listener-7c3e5a09" name="load" handler="onBodyLoad"/>
+    <cl:udc std:sid="ud-control-7c3e5a0a" id="udcPivot" type="udc.exam.udcExamPivotGrid">
+      <cl:formdata std:sid="f-data-7c3e5a0b" row="0" col="0"/>
+      <cl:property name="dataset" value="dsPivotSrc" type="control"/>
+      <cl:property name="isfooter" value="true" type="boolean"/>
+    </cl:udc>
+    <cl:formlayout std:sid="f-layout-7c3e5a0c" scrollable="false" hspace="0px" vspace="0px" top-margin="16px" right-margin="24px" bottom-margin="24px" left-margin="24px">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>
