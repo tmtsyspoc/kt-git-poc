@@ -1,0 +1,6 @@
+{
+	"dmResponse" : {
+		"column1" : "<script>alert('XSS')</script>"
+	}
+
+}

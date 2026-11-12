@@ -1,0 +1,206 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-9702cc60" version="1.0.4034">
+  <head std:sid="head-9e0e2459">
+    <std:metadata>
+      <std:property key="template-file" value="templates/일반/0.프레임/0-1.프레임_버티컬레이아웃.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-a3bb4b1b" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-bc8bb8e5" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-0ee82c33" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-90321062">
+      <cl:dataset comment="프로세스 목록" std:sid="d-set-406d885d" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="" std:sid="d-column-9f37779a" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-e322462b" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn comment="" std:sid="d-column-7fe5300f" name="SUB_TITLE"/>
+          <cl:datacolumn comment="" std:sid="d-column-c68cb733" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-fa740970" name="CONT" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-c9d6a3d7" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-b4004ac2" name="SUB_CODE"/>
+          <cl:datacolumn comment="" std:sid="d-column-8d6dc077" name="TARGET_CTRL"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[웹 보안 통제]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[XSS, CSRF, 인증·권한, 토큰, CSP, 보안헤더를 충족한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">○</cl:datavalue>
+            <cl:datavalue columnname="CONT">목적</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[로그인 상태 확인, 시간 제한, 시간 연장,/n중복 로그인 허용/비허용 관리 기능 지원 여부 확인]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">○</cl:datavalue>
+            <cl:datavalue columnname="CONT">검증 조건</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[로그인 세션 관련 보안성 기능 검증]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">○</cl:datavalue>
+            <cl:datavalue columnname="CONT">측정</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[요구된 각 기능 단계별 검증]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">진행</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[새로운 브라우저에서 동일 계정으로/n로그인 하여 로그인 여부를 확인한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[동일 계정]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[로그인 여부]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[rdbDuplLogin]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[중복 로그인 미허용 선택 후 동일 계정 로그인을 확인한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[동일 계정 로그인]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[중복 로그인 미허용]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[rdbDuplLogin]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[로그인 후 기존 브라우저에서 알림 메시지 확인 후/n로그아웃됨을 확인한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[로그아웃]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[rdbDuplLogin]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[로그인 세션 시간 변경 버튼을 클릭하여 세션 시간을 3초로 변경한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[3초]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[로그인 세션 시간 변경]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[btn1]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">진행</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[세션 시간 만료시 호출되는 알림 팝업 확인 후/n로그아웃(세션종료) 동작을 확인한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[로그아웃]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[세션 시간 만료]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[btn1]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[로그인 세션 시간 연장 버튼을 클릭하여/n세션 시간이 2시간 30분으로 연장되는 사항을 확인한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[2시간 30분]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[로그인 세션 시간 연장]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[btn2]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="보안성"/>
+  </head>
+  <body std:sid="body-a0c207fd" class="wrap">
+    <cl:listener std:sid="listener-048a4779" name="load" handler="onBodyLoad"/>
+    <cl:udc std:sid="ud-control-8c71e0ab" id="udcComAppHeader" type="udc.com.udcComAppHeader">
+      <cl:verticaldata std:sid="v-data-5175326f" width="1250px" height="40px" autosize="height"/>
+      <cl:property name="title" value="10.10 보안성" type="string"/>
+      <cl:property name="isExpandAllPocProcess" value="true" type="boolean"/>
+    </cl:udc>
+    <cl:group std:sid="group-1ccc36fb" id="grpData" class="conts-area">
+      <cl:verticaldata std:sid="v-data-f8850c33" width="976px" height="230px" autosize="height"/>
+      <cl:group std:sid="group-a47f66c3" id="grpGoverning" class="governing">
+        <cl:verticaldata std:sid="v-data-f14172f0" width="992px" height="153px" autosize="height"/>
+        <cl:output std:sid="output-6fb83195" id="opt1" class="tit" value="웹 보안 기능 지원">
+          <cl:verticaldata std:sid="v-data-d68a450b" width="100px" height="36px" autosize="height"/>
+        </cl:output>
+        <cl:output std:sid="output-1c257dfa" id="opt2" class="txt" displayexp="&quot;eXBuilder6는 &quot; + sstr(&quot;로그인 세션 관리기능&quot;, [&quot;fw-bold&quot;])+ &quot;을 응용 제공하며, 최적의 웹 보안 구축을 지원합니다.\n&quot;&#xD;&#xA;+ &quot;이를 통해 안전한 인증 환경을 구축하여 &quot; + sstr(&quot;사용자 정보 보호&quot;, [&quot;fw-bold&quot;]) + &quot;와 &quot; +  sstr(&quot;편리한 접근 제어&quot;, [&quot;fw-bold&quot;])+&quot;를 동시에 지원합니다.\n&quot;&#xD;&#xA;">
+          <cl:verticaldata std:sid="v-data-6574ec63" width="1218px" height="67px" autosize="height"/>
+        </cl:output>
+        <cl:verticallayout std:sid="v-layout-63c3bf60" scrollable="false" spacing="8"/>
+      </cl:group>
+      <cl:group std:sid="group-f64b214d" class="conts-wrap">
+        <cl:verticaldata std:sid="v-data-5aaf6449" width="976px" height="50px" autosize="height"/>
+        <cl:group std:sid="group-539eda60" id="grp5" class="border-base">
+          <cl:verticaldata std:sid="v-data-ca8bb892" width="950px" height="28px" autosize="height"/>
+          <cl:radiobutton std:sid="r-button-e57ce84a" id="rdbDuplLogin" value="Y" hspacing="4">
+            <cl:listener std:sid="listener-5099e189" name="selection-change" handler="onRdb1SelectionChange"/>
+            <cl:flowlayoutdata std:sid="f-data-c9b47a27" width="391px" height="28px" autosize="width"/>
+            <cl:item std:sid="item-a9f5fd50" label="중복 로그인 허용" value="Y"/>
+            <cl:item std:sid="item-d88eb07a" label="중복 로그인 미허용" value="N"/>
+          </cl:radiobutton>
+          <cl:button std:sid="button-2c8e243d" id="btn1" value="로그인 세션 시간 변경">
+            <cl:listener std:sid="listener-ccdbf47f" name="click" handler="onBtn1Click"/>
+            <cl:flowlayoutdata std:sid="f-data-b8f23bc2" width="224px" height="28px" autosize="width"/>
+          </cl:button>
+          <cl:button std:sid="button-5b2f1457" id="btn2" value="로그인 세션 시간 연장">
+            <cl:listener std:sid="listener-6ff60110" name="click" handler="onBtn2Click"/>
+            <cl:flowlayoutdata std:sid="f-data-4cb88a38" width="198px" height="28px" autosize="width"/>
+          </cl:button>
+          <cl:flowlayout std:sid="f-layout-09fd5208" hspacing="4" vspacing="4"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-0aa23698" spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-39b9f8f8" spacing="16"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-2c8811a3" spacing="16" leftmargin="24" rightmargin="24" topmargin="16" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

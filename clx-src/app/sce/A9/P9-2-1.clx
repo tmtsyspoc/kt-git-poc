@@ -1,0 +1,38 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-46addd2a" version="1.0.5448">
+  <head std:sid="head-c1e25dd6">
+    <screen std:sid="screen-dbf9b9af" id="EXB-POP[1024]" name="EXB-POP[1024]" width="1024px" height="576px" customHeight="600" customWidth="800" active="true"/>
+    <cl:model std:sid="model-95bbeb79"/>
+    <cl:appspec title="Layer Popup"/>
+  </head>
+  <body std:sid="body-898119be" class="wrap pop">
+    <cl:group std:sid="group-52c80776" class="conts-area">
+      <cl:verticaldata std:sid="v-data-758720c8" width="976px" height="87px" autosize="height"/>
+      <cl:group std:sid="group-f0a63da2" class="conts-wrap">
+        <cl:verticaldata std:sid="v-data-d83e4558" width="976px" height="87px" autosize="height"/>
+        <cl:output std:sid="output-c6e57f90" id="opt1" class="tit h1" value="Layer Popup 화면입니다.">
+          <cl:verticaldata std:sid="v-data-41678d96" width="100px" height="87px" autosize="height"/>
+        </cl:output>
+        <cl:verticallayout std:sid="v-layout-46106599" spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-f00c145e" spacing="16"/>
+    </cl:group>
+    <cl:group std:sid="group-c0e4a864" class="conts-footer">
+      <cl:verticaldata std:sid="v-data-4588b956" width="976px" height="50px" autosize="height"/>
+      <cl:group std:sid="group-dbb912df" id="grp1">
+        <cl:verticaldata std:sid="v-data-e77f2920" width="400px" height="28px" autosize="height"/>
+        <cl:button std:sid="button-e67a452a" id="btn1" value="닫기">
+          <cl:listener std:sid="listener-28fff185" name="click" handler="onBtn1Click"/>
+          <cl:flowlayoutdata std:sid="f-data-839f724b" width="52px" height="28px" autosize="none"/>
+        </cl:button>
+        <cl:flowlayout std:sid="f-layout-caf46631" hspacing="4" vspacing="4" halign="right"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-cc1cf125" spacing="0"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-31a267dd" spacing="16" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

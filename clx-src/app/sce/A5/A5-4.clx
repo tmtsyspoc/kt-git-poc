@@ -1,0 +1,336 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-9702cc60" version="1.0.4034">
+  <head std:sid="head-9e0e2459">
+    <std:metadata>
+      <std:property key="template-file" value="templates/일반/0.프레임/0-1.프레임_버티컬레이아웃.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-be98e07c" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-0a7f3b38" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-e6785abc" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-90321062">
+      <cl:dataset comment="프로세스 목록" std:sid="d-set-406d885d" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="" std:sid="d-column-9f37779a" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-a425487b" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn comment="" std:sid="d-column-7fe5300f" name="SUB_TITLE"/>
+          <cl:datacolumn comment="" std:sid="d-column-c68cb733" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-fa740970" name="CONT" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-c9d6a3d7" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-b4004ac2" name="SUB_CODE"/>
+          <cl:datacolumn comment="" std:sid="d-column-8d6dc077" name="TARGET_CTRL"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[디버깅·데이터 모니터링]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[IDE/브라우저에서 소스, 이벤트, 송수신 데이터를 추적할 수 있어야 한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[목적]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[화면 개발 생산성 지원]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[　]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[검증 조건]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[　]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[데이터 셋 viewer 기능 송수신 처리 타임 로깅 기능,/n구간별 처리 타임 로깅 기능]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[　]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[스크립트 소스 코드 문법 검사 기능]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[　]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[Line Debugging, Variable Watching, Call Stack Tracing,/nLog Viewer 등 개발을 위한 다양한 디버깅 도구 제공]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[　]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[측정]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[　]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[디버깅 기능 시연을 한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[　]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[웹 표준을 준수한 솔루션으로 브라우저의 디버깅 기능을 사용한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[웹 표준을 준수]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[브라우저의 디버깅 기능]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[　]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[브라우저 개발자 도구(F12)를 실행한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[개발자 도구]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[　]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[디버거 확인 버튼을 클릭한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[디버거 확인]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[btnDebug]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[버튼 클릭 이벤트에 작성 한 debugger를 통해 브라우저 개발자 도구/n소스 탭의 Break Point 를 확인한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[소스 탭]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[Break Point]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[　]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[Break Point 라인에서 콘솔창에 btnDebug.value 를 입력하여/n버튼의 value 속성 값을 확인한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[btnDebug.value]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[　]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[콘솔 확인 버튼을 클릭한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[콘솔 확인]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[btnConsole]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[브라우저 개발자 도구 콘솔 탭에서 로그 메시지를 확인한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[콘솔 탭]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[로그 메시지]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[　]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[DATA VIEWER 버튼을 클릭하여 모든 화면의 데이터 구조와 값을 확인한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[DATA VIEWER]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[btnSubmit2]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[페이지에서 Ctrl + 마우스 우클릭 동작으로 호출되는 디버깅 컨텍스트 메뉴를 확인한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[디버깅 컨텍스트 메뉴]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[Ctrl + 마우스 우클릭]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+      <cl:dataset std:sid="d-set-d0d901eb" id="dsLog">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="이벤트 타입" std:sid="d-column-1516f9b2" name="type"/>
+          <cl:datacolumn comment="로그 메시지" std:sid="d-column-ef3cf680" name="msg"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+      <cl:dataset std:sid="d-set-0f359911" id="dsLog2">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="이벤트 타입" std:sid="d-column-22f8445c" name="type"/>
+          <cl:datacolumn comment="로그 메시지" std:sid="d-column-77a4d168" name="msg"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+      <cl:dataset std:sid="d-set-75271c6a" id="ds1">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-12fad39c" name="column1"/>
+          <cl:datacolumn std:sid="d-column-70fd1ac9" name="column2"/>
+          <cl:datacolumn std:sid="d-column-ba4c6edc" name="column3"/>
+          <cl:datacolumn std:sid="d-column-7e2ba5b0" name="column4"/>
+          <cl:datacolumn std:sid="d-column-3ad7a367" name="column5"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+      <cl:datamap std:sid="d-map-c8e8f44a" id="dmParam">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-a3c51143" name="column1" defaultvalue="param1"/>
+          <cl:datacolumn std:sid="d-column-c7a90fc8" name="column2" defaultvalue="param2"/>
+          <cl:datacolumn std:sid="d-column-a01bd858" name="column3" defaultvalue="param3"/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+      <cl:submission std:sid="submission-fa08baa3" id="sub1" action="./app/sce/A5/data/data.json" mediatype="application/json">
+        <cl:requestdata dataid="dmParam"/>
+        <cl:responsedata dataid="ds1"/>
+      </cl:submission>
+    </cl:model>
+    <cl:appspec title="디버깅 기능"/>
+  </head>
+  <body std:sid="body-a0c207fd" class="wrap">
+    <cl:udc std:sid="ud-control-8c71e0ab" id="udcComAppHeader" type="udc.com.udcComAppHeader">
+      <cl:verticaldata std:sid="v-data-62d17c66" width="1250px" height="21px" autosize="height"/>
+      <cl:property name="title" value="5.4 디버깅 기능" type="string"/>
+      <cl:property name="isExpandAllPocProcess" value="true" type="boolean"/>
+    </cl:udc>
+    <cl:group std:sid="group-be39b9f1" id="grpData" class="conts-area">
+      <cl:verticaldata std:sid="v-data-b5ba8d47" width="992px" height="1125px" autosize="height"/>
+      <cl:group std:sid="group-ab8ec362" class="conts-wrap">
+        <cl:verticaldata std:sid="v-data-3d2e5dc2" width="976px" height="620px" autosize="height"/>
+        <cl:udc std:sid="ud-control-080e60a6" id="udcPocDocViewer1" type="udc.poc.udcPocDocViewer">
+          <cl:verticaldata std:sid="v-data-4ea0d8a8" width="1250px" height="620px" autosize="none"/>
+          <cl:property name="fileUrl" value="data/docs/A5-4.png" type="resource"/>
+        </cl:udc>
+        <cl:verticallayout std:sid="v-layout-a29b2255" spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:group std:sid="group-1792291b" class="conts-wrap">
+        <cl:verticaldata std:sid="v-data-7c553a43" width="992px" height="100px" autosize="height"/>
+        <cl:udc std:sid="ud-control-b6950779" id="udcComFormTitle3" type="udc.com.udcComFormTitle">
+          <cl:verticaldata std:sid="v-data-be3eabb1" width="1218px" height="28px"/>
+          <cl:property name="title" value="디버깅 기능 지원" type="string"/>
+        </cl:udc>
+        <cl:group std:sid="group-539eda60" id="grp5">
+          <cl:verticaldata std:sid="v-data-19c5477e" width="1218px" height="28px"/>
+          <cl:button std:sid="button-7937caf0" id="btnDebug" value="디버거 확인">
+            <cl:listener std:sid="listener-aee698bf" name="click" handler="onBtnDebugClick"/>
+            <cl:flowlayoutdata std:sid="f-data-8aa0b415" width="105px" height="28px"/>
+          </cl:button>
+          <cl:button std:sid="button-cbca427f" id="btnConsole" value="콘솔 확인">
+            <cl:listener std:sid="listener-9e34b8ac" name="click" handler="onBtnConsoleClick"/>
+            <cl:flowlayoutdata std:sid="f-data-820af4ab" width="100px" height="28px"/>
+          </cl:button>
+          <cl:button std:sid="button-f72d810f" id="btnSubmit" value="송수신 진행">
+            <cl:listener std:sid="listener-f0801b03" name="click" handler="onBtnSubmitClick"/>
+            <cl:flowlayoutdata std:sid="f-data-2583cad8" width="105px" height="28px"/>
+          </cl:button>
+          <cl:button std:sid="button-8a8b584a" id="btnSubmit2" value="DATA VIEWER">
+            <cl:listener std:sid="listener-f0cd3107" name="click" handler="onBtnSubmit2Click"/>
+            <cl:flowlayoutdata std:sid="f-data-21d5a2e0" width="105px" height="28px" autosize="width"/>
+          </cl:button>
+          <cl:flowlayout std:sid="f-layout-09fd5208" hspacing="4" vspacing="4"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-19b23fe5" spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:group std:sid="group-5166f589" class="conts-wrap" removeOnBuild="true" visible="false">
+        <cl:verticaldata std:sid="v-data-d458366d" width="1250px" height="313px" autosize="height"/>
+        <cl:group std:sid="group-0b856017" id="grp4">
+          <cl:verticaldata std:sid="v-data-9c8111de" width="400px" height="28px"/>
+          <cl:button std:sid="button-e6545093" id="btnLog" value="로그 확인">
+            <cl:listener std:sid="listener-88ba9dc5" name="click" handler="onBtnLogClick"/>
+            <cl:formdata std:sid="f-data-6f8fbbea" row="0" col="1"/>
+          </cl:button>
+          <cl:udc std:sid="ud-control-eb2bf6f4" id="udcComGridTitle1" type="udc.com.udcComGridTitle">
+            <cl:formdata std:sid="f-data-33eabe79" row="0" col="0"/>
+            <cl:property name="title" value="이벤트 로그" type="string"/>
+            <cl:property name="ctrl" value="grd1" type="control"/>
+            <cl:property name="showOption" value="false" type="boolean"/>
+            <cl:property name="showExportExcel" value="false" type="boolean"/>
+          </cl:udc>
+          <cl:formlayout std:sid="f-layout-c9bdf381" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="90" unit="PIXEL"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:grid std:sid="grid-60a2e7d6" id="grd1" fieldLabel="이벤트 로그" readonly="true" datasetid="dsLog" autofit="1, 2" resizablecolumns="1, 2" columnMovable="true">
+          <cl:verticaldata std:sid="v-data-e69a6a16" width="1176px" height="246px" autosize="none"/>
+          <cl:gridcolumn std:sid="g-column-cb6fdbe1" width="40px"/>
+          <cl:gridcolumn std:sid="g-column-33d267d6"/>
+          <cl:gridcolumn std:sid="g-column-1928b58f" width="300px"/>
+          <cl:gridheader std:sid="gh-band-d3ddee87">
+            <cl:gridrow std:sid="g-row-5248795a" height="44px"/>
+            <cl:gridcell std:sid="gh-cell-733b91aa" rowindex="0" colindex="0" sortable="false" filterable="false" text="No"/>
+            <cl:gridcell std:sid="gh-cell-99d29738" rowindex="0" colindex="1" targetcolumnname="type" sortable="false" filterable="false" text="이벤트 타입"/>
+            <cl:gridcell std:sid="gh-cell-ac94c513" rowindex="0" colindex="2" targetcolumnname="msg" sortable="false" filterable="false" text="로그 메시지"/>
+          </cl:gridheader>
+          <cl:griddetail std:sid="gd-band-ad2cd1d0">
+            <cl:gridrow std:sid="g-row-affda9eb" height="45px"/>
+            <cl:gridcell std:sid="gd-cell-07073ab1" rowindex="0" colindex="0" columntype="rowindex"/>
+            <cl:gridcell std:sid="gd-cell-7ce678f0" rowindex="0" colindex="1" columnname="type">
+              <cl:output std:sid="output-ba0249ea" id="opt3" class="text-left" value="Output">
+                <cl:celldata std:sid="c-data-85a91de8"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-9788cc2f" rowindex="0" colindex="2" columnname="msg">
+              <cl:output std:sid="output-98d5a4d0" id="opt4" class="text-left" value="Output">
+                <cl:celldata std:sid="c-data-1bf4cc48"/>
+              </cl:output>
+            </cl:gridcell>
+          </cl:griddetail>
+        </cl:grid>
+        <cl:verticallayout std:sid="v-layout-f90d73db" scrollable="false" spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-ea6df882" spacing="16"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-de5046c4" spacing="16" leftmargin="24" rightmargin="24" topmargin="16" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

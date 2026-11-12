@@ -1,0 +1,100 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-9702cc60" version="1.0.4034">
+  <head std:sid="head-9e0e2459">
+    <std:metadata>
+      <std:property key="template-file" value="templates/일반/0.프레임/0-1.프레임_버티컬레이아웃.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-0c0a728b" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="true" customHeight="765" customWidth="800" active="true"/>
+    <screen std:sid="screen-a63a955b" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-999ee8c9" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-90321062">
+      <cl:dataset comment="프로세스 목록" std:sid="d-set-406d885d" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="" std:sid="d-column-9f37779a" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-2fc08d68" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn comment="" std:sid="d-column-7fe5300f" name="SUB_TITLE"/>
+          <cl:datacolumn comment="" std:sid="d-column-c68cb733" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-fa740970" name="CONT" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-c9d6a3d7" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-b4004ac2" name="SUB_CODE"/>
+          <cl:datacolumn comment="" std:sid="d-column-8d6dc077" name="TARGET_CTRL"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[목적]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[개발 Tool이 Stand-Alone 방식을 지원하는가]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="Stand-Alone 방식 지원"/>
+  </head>
+  <body std:sid="body-a0c207fd">
+    <cl:udc std:sid="ud-control-8c71e0ab" id="udcComAppHeader" type="udc.com.udcComAppHeader">
+      <cl:formdata std:sid="f-data-5e51d127" row="0" col="0"/>
+      <cl:property name="title" value="5.8 Stand-Alone 방식 지원" type="string"/>
+      <cl:property name="isExpandAllPocProcess" value="true" type="boolean"/>
+    </cl:udc>
+    <cl:group std:sid="group-be39b9f1" id="grpData" class="conts-area">
+      <cl:formdata std:sid="f-data-aa52609e" width="100" height="39" row="1" col="0"/>
+      <cl:group std:sid="group-a47f66c3" id="grp1" class="governing">
+        <cl:formdata std:sid="f-data-1f80fee1" width="100" height="39" row="0" col="0"/>
+        <cl:udc std:sid="ud-control-832e3ad2" id="udcComFormTitle1" type="udc.com.udcComFormTitle">
+          <cl:verticaldata std:sid="v-data-57799b3d" width="800px" height="28px" autosize="height"/>
+          <cl:property name="title" value="개발 Tool Stand-Alone 방식 지원" type="string"/>
+        </cl:udc>
+        <cl:group std:sid="group-bb84371e" id="grp2">
+          <cl:verticaldata std:sid="v-data-ea93627d" width="940px" height="77px" autosize="height"/>
+          <cl:output std:sid="output-1c257dfa" id="opt18">
+            <cl:verticaldata std:sid="v-data-e032687f" width="1218px" height="77px" autosize="height"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-f89b6ca4" scrollable="false"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-63c3bf60" scrollable="false" spacing="8"/>
+      </cl:group>
+      <cl:group std:sid="group-506d2ba5" class="conts-wrap">
+        <cl:formdata std:sid="f-data-b024db06" row="1" col="0" rowspan="1" colspan="1"/>
+        <cl:udc std:sid="ud-control-080e60a6" id="udcPocDocViewer1" type="udc.poc.udcPocDocViewer">
+          <cl:formdata std:sid="f-data-b1f66332" row="0" col="0"/>
+          <cl:property name="fileUrl" value="data/docs/A5-8.png" type="resource"/>
+        </cl:udc>
+        <cl:formlayout std:sid="f-layout-ae85b9bf" scrollable="false" hspace="0px" vspace="8px" top-margin="16px" right-margin="16px" bottom-margin="16px" left-margin="16px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-cf18482c" scrollable="false" hspace="16px" vspace="16px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="139" unit="PIXEL" autoSizing="true" hidden="true" syncminlength="false"/>
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-d0880515" scrollable="false" hspace="0px" vspace="12px" top-margin="16px" right-margin="16px" bottom-margin="16px" left-margin="16px">
+      <cl:rows length="40" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler>
+      <std:guide position="740"/>
+    </std:vruler>
+  </std:studiosetting>
+</html>

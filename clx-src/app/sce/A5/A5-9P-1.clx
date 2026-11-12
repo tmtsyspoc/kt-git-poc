@@ -1,0 +1,90 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-a8cec547" version="1.0.5186">
+  <head std:sid="head-f17c210b">
+    <std:metadata>
+      <std:property key="template-file" value="templates/팝업/2.폼/V_폼.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-27eb0e37" id="EXB-POP[1024]" name="EXB-POP[1024]" width="1024px" height="576px" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-f9795e9f" id="EXB-POP[800]" name="EXB-POP[800]" width="800px" height="480px" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-2b552898" id="EXB-POP[480]" name="EXB-POP[480]" width="480px" height="320px" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-c1c81b9e"/>
+    <cl:appspec title="고객카드관리"/>
+  </head>
+  <body std:sid="body-cbe48c0d" class="wrap pop" clipcontent="true" childcombinatorclass="v_base">
+    <cl:udc std:sid="ud-control-81187a41" visible="false" type="udc.com.udcComAppHeader">
+      <cl:verticaldata std:sid="v-data-0eff39ef" width="1580px" height="20px" autosize="height"/>
+    </cl:udc>
+    <cl:group std:sid="group-a91da2cb" class="conts-area">
+      <cl:verticaldata std:sid="v-data-d0d59be1" width="992px" height="215px" autosize="height"/>
+      <cl:group std:sid="group-7fafe6d8" class="conts-wrap">
+        <cl:verticaldata std:sid="v-data-bae60092" width="992px" height="215px" autosize="height"/>
+        <cl:group std:sid="group-1b48d124" class="form">
+          <cl:attribute name="mobile-column-count" value="2"/>
+          <cl:verticaldata std:sid="v-data-471766e4" width="992px" height="181px" autosize="height"/>
+          <cl:output std:sid="output-3ef34b41" class="label" value="고객명">
+            <cl:formdata std:sid="f-data-0b494467" row="0" col="0"/>
+          </cl:output>
+          <cl:inputbox std:sid="i-box-c8147d57">
+            <cl:formdata std:sid="f-data-d147be75" row="0" col="1"/>
+          </cl:inputbox>
+          <cl:output std:sid="output-70bdb303" class="label" value="고객번호">
+            <cl:formdata std:sid="f-data-cc3bafdc" row="1" col="0"/>
+          </cl:output>
+          <cl:inputbox std:sid="i-box-340e3b4f">
+            <cl:formdata std:sid="f-data-284b7fdb" row="1" col="1"/>
+          </cl:inputbox>
+          <cl:output std:sid="output-553aee2d" class="label" value="전화번호">
+            <cl:formdata std:sid="f-data-08fda405" row="2" col="0"/>
+          </cl:output>
+          <cl:inputbox std:sid="i-box-a83d75a5">
+            <cl:formdata std:sid="f-data-7dbf2df4" row="2" col="1"/>
+          </cl:inputbox>
+          <cl:output std:sid="output-56c2703f" class="label" value="이메일">
+            <cl:formdata std:sid="f-data-c9c018ef" row="3" col="0"/>
+          </cl:output>
+          <cl:inputbox std:sid="i-box-51eb9c20">
+            <cl:formdata std:sid="f-data-652beb7d" row="3" col="1"/>
+          </cl:inputbox>
+          <cl:formlayout std:sid="f-layout-dbabe69d" scrollable="false" hspace="16px" vspace="17px" top-margin="8px" right-margin="8px" bottom-margin="8px" left-margin="8px" hseparatorwidth="1" hseparatortype="BY_CLASS">
+            <cl:rows length="28" unit="PIXEL"/>
+            <cl:rows length="28" unit="PIXEL"/>
+            <cl:rows length="28" unit="PIXEL"/>
+            <cl:rows length="28" unit="PIXEL"/>
+            <cl:columns length="120" unit="PIXEL" autoSizing="true" shadetype="BY_CLASS"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-b13cd344" spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-a573c6a2" scrollable="false" spacing="8"/>
+    </cl:group>
+    <cl:group std:sid="group-ec756d32" class="pop-content-footer">
+      <cl:verticaldata std:sid="v-data-cc7ccd1d" width="1024px" height="77px" autosize="height"/>
+      <cl:group std:sid="group-89d9707e" class="conts-footer">
+        <cl:verticaldata std:sid="v-data-27fb65cf" width="1532px" height="54px" autosize="height"/>
+        <cl:group std:sid="group-98ea6c41">
+          <cl:formdata std:sid="f-data-06ffa68a" row="0" col="0"/>
+          <cl:button std:sid="button-3830a058" value="취소">
+            <cl:listener std:sid="listener-43e9f44a" name="click" handler="onButtonClick"/>
+            <cl:flowlayoutdata std:sid="f-data-7093ec89" width="48px" height="28px" autosize="width"/>
+          </cl:button>
+          <cl:button std:sid="button-7f318a32" class="primary ico-check" value="저장" icon="0">
+            <cl:listener std:sid="listener-12b3c080" name="click" handler="onBtnSaveClick"/>
+            <cl:flowlayoutdata std:sid="f-data-59308a4c" width="74px" height="28px" autosize="width"/>
+          </cl:button>
+          <cl:flowlayout std:sid="f-layout-6d32a134" hspacing="4" vspacing="4" halign="right"/>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-877f6ca0" scrollable="false" hspace="1fr" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION" autoSizing="false" shadetype="NONE" shadecolor="transparent" syncminlength="true"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-3f36ca99" spacing="16"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-54dbf863" scrollable="true" spacing="16" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

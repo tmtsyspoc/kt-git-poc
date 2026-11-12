@@ -1,0 +1,167 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-a0f10f89" version="1.0.5448">
+  <head std:sid="head-a7a393d0">
+    <script std:sid="script-e0fca879" src="../../../thirdparty/tailwind/tailwind.js" type="text/javascript"/>
+    <screen std:sid="screen-1ff6f52a" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-62208b6f" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-2f459c98" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-4fc6bca5">
+      <cl:dataset comment="프로세스 목록" std:sid="d-set-406d885d" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="" std:sid="d-column-9f37779a" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-3e5eca5d" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn comment="" std:sid="d-column-7fe5300f" name="SUB_TITLE"/>
+          <cl:datacolumn comment="" std:sid="d-column-c68cb733" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-fa740970" name="CONT" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-c9d6a3d7" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-b4004ac2" name="SUB_CODE"/>
+          <cl:datacolumn comment="" std:sid="d-column-8d6dc077" name="TARGET_CTRL"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[테마·브랜딩 변경]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[코드 중복 없이 조직/업무 테마를 변경할 수 있어야 한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[목적]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[Tailwind, Sass 등 CSS 프레임워크와의 호환성이 있는가?]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[확인]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[Tailwind CSS 프레임워크에서 제공하는 클래스가 적용된 UI 컴포넌트를 확인한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[표시된 UI 컴포넌트를 확인한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[CLX 화면을 열어 아웃풋 컨트롤을 배치한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[아웃풋]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[컨트롤을 배치]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[버튼에 "bg-slate-500 hover:bg-slate-600 active:bg-slate-700 text-white font-bold py-2 px-4 rounded" 클래스를 입력한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA["bg-slate-500 hover:bg-slate-600 active:bg-slate-700 text-white font-bold py-2 px-4 rounded"]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[클래스를 입력]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec dev-comment="bg-slate-500 hover:bg-slate-600 active:bg-slate-700 text-white font-bold py-2 px-4 rounded" title="CSS 프레임워크"/>
+  </head>
+  <body std:sid="body-35be0ed7" class="wrap">
+    <cl:udc std:sid="ud-control-8c71e0ab" id="udcComAppHeader" type="udc.com.udcComAppHeader">
+      <cl:verticaldata std:sid="v-data-d23e67ba" width="1250px" height="24px" autosize="height"/>
+      <cl:property name="title" value="9.3 CSS 프레임워크" type="string"/>
+      <cl:property name="isExpandAllPocProcess" value="true" type="boolean"/>
+    </cl:udc>
+    <cl:group std:sid="group-a47f66c3" id="grpData" class="conts-area">
+      <cl:verticaldata std:sid="v-data-53211d7f" width="992px" height="1111px" autosize="height"/>
+      <cl:group std:sid="group-6103bb99" class="conts-wrap">
+        <cl:verticaldata std:sid="v-data-f779d064" width="976px" height="620px" autosize="height"/>
+        <cl:udc std:sid="ud-control-78ab2133" id="udcPocDocViewer1" type="udc.poc.udcPocDocViewer">
+          <cl:verticaldata std:sid="v-data-56f038ee" width="500px" height="620px"/>
+          <cl:property name="fileUrl" value="data/docs/A9-3.png" type="resource"/>
+        </cl:udc>
+        <cl:verticallayout std:sid="v-layout-8e6bc33d" spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:group std:sid="group-4880db42" class="conts-wrap">
+        <cl:verticaldata std:sid="v-data-5392902a" width="942px" height="569px" autosize="height"/>
+        <cl:udc std:sid="ud-control-832e3ad2" type="udc.com.udcComFormTitle">
+          <cl:verticaldata std:sid="v-data-57799b3d" width="800px" height="28px" autosize="height"/>
+          <cl:property name="title" value="CSS 프레임워크 (Tailwind)" type="string"/>
+        </cl:udc>
+        <cl:group std:sid="group-31e6c879" class="css-framework" clipcontent="false">
+          <cl:verticaldata std:sid="v-data-8ab9bfe8" width="400px" height="525px" autosize="height"/>
+          <cl:htmlsnippet std:sid="htmlsnippet-352d90e4" value="&lt;div class=&quot;bg-white rounded-lg shadow-md w-80 p-4&quot;>&#xD;&#xA;    &lt;img src=&quot;./theme/img/pages/main/logo.png&quot; alt=&quot;Card Image&quot; class=&quot;rounded-t-lg w-full h-40 object-contain&quot;>&#xD;&#xA;    &lt;div class=&quot;p-4&quot;>&#xD;&#xA;      &lt;h2 class=&quot;text-xl font-bold text-gray-800&quot;>Card Title&lt;/h2>&#xD;&#xA;      &lt;p class=&quot;text-gray-600 mt-2&quot;>&#xD;&#xA;        This is a simple card description. You can use this card for any purpose like displaying content.&#xD;&#xA;      &lt;/p>&#xD;&#xA;      &lt;button class=&quot;mt-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded&quot;>&#xD;&#xA;        Learn More&#xD;&#xA;      &lt;/button>&#xD;&#xA;    &lt;/div>&#xD;&#xA;  &lt;/div>">
+            <cl:flowlayoutdata std:sid="f-data-da6d4099" width="320px" height="370px" autosize="both"/>
+          </cl:htmlsnippet>
+          <cl:htmlsnippet std:sid="htmlsnippet-c811dc6b" value="&lt;div class=&quot;bg-white rounded-lg shadow-md p-8 w-96&quot;>&#xA;  &lt;h2 class=&quot;text-2xl font-bold text-gray-800 text-center mb-6&quot;>Login&lt;/h2>&#xA;  &lt;form action=&quot;#&quot; method=&quot;POST&quot;>&#xA;    &lt;div class=&quot;mb-4&quot;>&#xA;      &lt;label for=&quot;email&quot; class=&quot;block text-gray-600 mb-2&quot;>Email Address&lt;/label>&#xA;      &lt;input type=&quot;email&quot; id=&quot;email&quot; class=&quot;w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500&quot; placeholder=&quot;you@example.com&quot;>&#xA;    &lt;/div>&#xA;    &lt;div class=&quot;mb-6&quot;>&#xA;      &lt;label for=&quot;password&quot; class=&quot;block text-gray-600 mb-2&quot;>Password&lt;/label>&#xA;      &lt;input type=&quot;password&quot; id=&quot;password&quot; class=&quot;w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500&quot; placeholder=&quot;********&quot;>&#xA;    &lt;/div>&#xA;    &lt;button type=&quot;submit&quot; class=&quot;w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600&quot;>Login&lt;/button>&#xA;  &lt;/form>&#xA;  &lt;p class=&quot;mt-4 text-sm text-gray-600 text-center&quot;>&#xA;    Don't have an account? &lt;a href=&quot;#&quot; class=&quot;text-blue-500 hover:underline&quot;>Sign up&lt;/a>&#xA;  &lt;/p>&#xA;&lt;/div>">
+            <cl:flowlayoutdata std:sid="f-data-3c0917be" width="320px" height="370px" autosize="both"/>
+          </cl:htmlsnippet>
+          <cl:htmlsnippet std:sid="htmlsnippet-e88fbf49" value="&lt;div class=&quot;bg-white border border-gray-200 rounded-lg shadow-md w-80 p-6 text-center&quot;>&#xA;  &lt;h3 class=&quot;text-2xl font-bold text-gray-800&quot;>Basic Plan&lt;/h3>&#xA;  &lt;p class=&quot;text-gray-600 mt-2&quot;>Perfect for individuals&lt;/p>&#xA;  &lt;div class=&quot;text-4xl font-extrabold text-blue-600 mt-4&quot;>$19&lt;span class=&quot;text-lg text-gray-600&quot;>/month&lt;/span>&lt;/div>&#xA;  &lt;ul class=&quot;text-gray-600 text-sm mt-6 space-y-2&quot;>&#xA;    &lt;li>✔ 10 Projects&lt;/li>&#xA;    &lt;li>✔ 5 Team Members&lt;/li>&#xA;    &lt;li>✔ 24/7 Support&lt;/li>&#xA;  &lt;/ul>&#xA;  &lt;button class=&quot;mt-6 w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600&quot;>&#xA;    Get Started&#xA;  &lt;/button>&#xA;&lt;/div>">
+            <cl:flowlayoutdata std:sid="f-data-19c40089" width="320px" height="370px" autosize="both"/>
+          </cl:htmlsnippet>
+          <cl:htmlsnippet std:sid="htmlsnippet-7a30f7cc" value="&lt;div class=&quot;flex items-center bg-blue-100 text-blue-800 p-4 rounded-lg shadow-md w-full max-w-lg&quot;>&#xA;  &lt;svg class=&quot;w-6 h-6 mr-3&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;>&#xA;    &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M13 16h-1v-4h-1m1-4h.01M21 12c0 4.418-3.582 8-8 8s-8-3.582-8-8 3.582-8 8-8 8 3.582 8 8z&quot;>&lt;/path>&#xA;  &lt;/svg>&#xA;  &lt;p class=&quot;text-sm&quot;>&#xA;    This is an important notification. Please take action.&#xA;  &lt;/p>&#xA;&lt;/div>">
+            <cl:flowlayoutdata std:sid="f-data-eee2c3af" width="320px" height="370px" autosize="both"/>
+          </cl:htmlsnippet>
+          <cl:flowlayout std:sid="f-layout-aeb58a53" scrollable="false" hspacing="8" vspacing="8"/>
+        </cl:group>
+        <cl:htmlsnippet std:sid="htmlsnippet-7740c67c" visible="false" value="&lt;style>&#xA;.css-framework .cl-htmlsnippet, .css-framework .cl-htmlsnippet > * > * { overflow: visible !important; }&#xA;&lt;/style>">
+          <cl:verticaldata std:sid="v-data-afa4923d" width="100px" height="0px" autosize="height"/>
+        </cl:htmlsnippet>
+        <cl:verticallayout std:sid="v-layout-159c3190" spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-63c3bf60" scrollable="false" spacing="16" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-f8141d91" scrollable="true" spacing="16" leftmargin="24" rightmargin="24" topmargin="16" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

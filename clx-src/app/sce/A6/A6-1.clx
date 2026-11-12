@@ -1,0 +1,158 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-42d34ecd" version="1.0.5448">
+  <head std:sid="head-53b7d302">
+    <screen std:sid="screen-cb281a20" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-83ddf902" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-af8021f0" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-4ce17664">
+      <cl:dataset comment="프로세스 목록" std:sid="d-set-406d885d" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="" std:sid="d-column-9f37779a" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-3e5eca5d" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn comment="" std:sid="d-column-7fe5300f" name="SUB_TITLE"/>
+          <cl:datacolumn comment="" std:sid="d-column-c68cb733" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-fa740970" name="CONT" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-c9d6a3d7" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-b4004ac2" name="SUB_CODE"/>
+          <cl:datacolumn comment="" std:sid="d-column-8d6dc077" name="TARGET_CTRL"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[디자인 시스템 적용]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[디자인 토큰·패턴·공통 컴포넌트를 중앙관리하고 적용을 강제한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"/>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">○</cl:datavalue>
+            <cl:datavalue columnname="CONT">목적</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"/>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">Material Design, Bootstrap, Fluent UI 등 모던 디자인 시스템을 지원하는지 확인</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"/>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">○</cl:datavalue>
+            <cl:datavalue columnname="CONT">확인</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"/>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">부트스트랩으로 작성한 화면이 표시되는지 확인</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">진행</cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"/>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">화면을 리사이징하여 반응형이 적용되었는지 확인한다.</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">반응형이 적용되었는지 확인</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">진행</cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"/>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">반응형 화면에서 메뉴 버튼을 눌러 스크립트가 적용되었는지 확인한다.</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">스크립트가 적용되었는지 확인</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="모던 디자인 시스템 지원"/>
+  </head>
+  <body std:sid="body-c227e2d8" class="wrap">
+    <cl:udc std:sid="ud-control-8c71e0ab" id="udcComAppHeader" type="udc.com.udcComAppHeader">
+      <cl:verticaldata std:sid="v-data-d23e67ba" width="1250px" height="21px" autosize="height"/>
+      <cl:property name="title" value="6.1 모던 디자인 시스템 지원" type="string"/>
+      <cl:property name="isExpandAllPocProcess" value="true" type="boolean"/>
+    </cl:udc>
+    <cl:group std:sid="group-feed45df" id="grpData" class="conts-area">
+      <cl:verticaldata std:sid="v-data-c9eac103" width="976px" height="1010px" autosize="height"/>
+      <cl:group std:sid="group-7e5559d4" id="grpGoverning" class="governing">
+        <cl:verticaldata std:sid="v-data-fd78c9a4" width="1250px" height="136px" autosize="height"/>
+        <cl:output std:sid="output-6fb83195" id="opt2" class="tit" value="모던 디자인 시스템 지원">
+          <cl:verticaldata std:sid="v-data-d68a450b" width="100px" height="33px" autosize="height"/>
+        </cl:output>
+        <cl:output std:sid="output-5953dfd4" id="opt3" class="txt" displayexp="&quot;eXBuilder6는 &quot; + sstr(&quot;모던 디자인 시스템을 적용할 수 있도록 지원&quot;, [&quot;fw-bold&quot;]) + &quot;합니다.&quot;+ &quot;\r\n&quot; + &quot;이를 통해, &quot; + sstr(&quot;다양한 애니메이션을 실행하여 사용자 경험(UX)을 향상&quot;, [&quot;fw-bold&quot;]) + &quot;시키고, &quot; + sstr(&quot;최신 트렌드가 반영된 디자인을 반영&quot;, [&quot;fw-bold&quot;]) + &quot;할 수 있습니다.&quot; ">
+          <cl:verticaldata std:sid="v-data-6574ec63" width="1218px" height="69px" autosize="height"/>
+        </cl:output>
+        <cl:verticallayout std:sid="v-layout-62f1ecf3" scrollable="false" spacing="8"/>
+      </cl:group>
+      <cl:group std:sid="group-a47f66c3" class="conts-wrap">
+        <cl:verticaldata std:sid="v-data-53211d7f" width="992px" height="564px" autosize="height"/>
+        <cl:udc std:sid="ud-control-832e3ad2" type="udc.com.udcComFormTitle">
+          <cl:verticaldata std:sid="v-data-a569e8c8" width="300px" height="28px" autosize="height"/>
+          <cl:property name="title" value="부트스트랩" type="string"/>
+        </cl:udc>
+        <cl:embeddedpage std:sid="e-page-4ef80f8d" id="epBs" class="bs-target" src="A6-1-1.clx">
+          <cl:listener std:sid="listener-98abe166" name="load" handler="onEmbeddedPageLoad"/>
+          <cl:verticaldata std:sid="v-data-f145ae95" width="1280px" height="525px" autosize="height"/>
+        </cl:embeddedpage>
+        <cl:verticallayout std:sid="v-layout-63c3bf60" scrollable="false" spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:group std:sid="group-e80d1c81" class="conts-wrap">
+        <cl:verticaldata std:sid="v-data-4bcbfe9a" width="976px" height="227px" autosize="height"/>
+        <cl:udc std:sid="ud-control-beb22e85" type="udc.com.udcComFormTitle">
+          <cl:verticaldata std:sid="v-data-9dc326ae" width="300px" height="28px" autosize="height"/>
+          <cl:property name="title" value="증적" type="string"/>
+        </cl:udc>
+        <cl:group std:sid="group-7dd3753f">
+          <cl:verticaldata std:sid="v-data-3b9f55bd" width="1218px" height="165px" autosize="height"/>
+          <cl:img std:sid="image-350336f9" src="data/A61_resource.png">
+            <cl:flowlayoutdata std:sid="f-data-7661ef4f" width="340px" height="165px"/>
+          </cl:img>
+          <cl:flowlayout std:sid="f-layout-e5f040cc" scrollable="false" hspacing="0" vspacing="0"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-93058e7f" scrollable="false" spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-7549a439" spacing="16"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-dcdfb4c1" scrollable="true" spacing="16" leftmargin="24" rightmargin="24" topmargin="16" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

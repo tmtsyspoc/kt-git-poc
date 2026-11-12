@@ -1,0 +1,188 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-9702cc60" version="1.0.4034">
+  <head std:sid="head-9e0e2459">
+    <std:metadata>
+      <std:property key="template-file" value="templates/일반/0.프레임/0-1.프레임_버티컬레이아웃.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-e90a22cc" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="true" customHeight="797" customWidth="800" active="true"/>
+    <screen std:sid="screen-f8b066af" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-2bd56e9b" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-90321062">
+      <cl:dataset comment="프로세스 목록" std:sid="d-set-406d885d" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="" std:sid="d-column-9f37779a" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-3971e028" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn comment="" std:sid="d-column-7fe5300f" name="SUB_TITLE"/>
+          <cl:datacolumn comment="" std:sid="d-column-c68cb733" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-fa740970" name="CONT" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-c9d6a3d7" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-b4004ac2" name="SUB_CODE"/>
+          <cl:datacolumn comment="" std:sid="d-column-8d6dc077" name="TARGET_CTRL"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[업무화면 개발 생산성]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[조회·등록·변경 대표화면 구현의 순 작업시간을 단축한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[목적]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[업무유형별 템플릿 제공 및 설정을 지원한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[　]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[검증 조건]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[　]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[디자인 표준 적용 및 기능 구현 템플릿을 제공한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[　]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[자체 제작 템플릿 설정을 지원한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[　]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[측정]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[　]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[UI 템플릿, 화면 템플릿 기능을 확인한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[　]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[　]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[개발 스튜디오에서 POC 시연화면을 실행한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[스튜디오]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[1.1 시나리오(S1)에서 등록한 UI 템플릿 사용하여 배치한다./n→ 생성된 UI를 확인한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[UI 템플릿]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[UI를]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[신규 화면을 생성하여 화면 템플릿으로 화면을 구성한다/n→ 생성된 UI, 데이터 객체, 스크립트를 확인한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[화면 템플릿]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[UI, 데이터 객체, 스크립트]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="템플릿 제공"/>
+  </head>
+  <body std:sid="body-a0c207fd" class="wrap">
+    <cl:udc std:sid="ud-control-8c71e0ab" id="udcComAppHeader" type="udc.com.udcComAppHeader">
+      <cl:formdata std:sid="f-data-79d11e0c" row="0" col="0"/>
+      <cl:property name="title" value="5.1 템플릿 제공" type="string"/>
+      <cl:property name="isExpandAllPocProcess" value="true" type="boolean"/>
+    </cl:udc>
+    <cl:group std:sid="group-be39b9f1" id="grpData">
+      <cl:formdata std:sid="f-data-93c7c26b" width="100" height="54" row="1" col="0"/>
+      <cl:group std:sid="group-eece9ad9" id="grp2" class="governing">
+        <cl:formdata std:sid="f-data-a2a0c210" width="100" height="54" row="0" col="0"/>
+        <cl:udc std:sid="ud-control-27ec2e8d" id="udcComFormTitle2" type="udc.com.udcComFormTitle">
+          <cl:verticaldata std:sid="v-data-30dd0d40" width="800px" height="28px" autosize="height"/>
+          <cl:property name="title" value="개발 템플릿 제공" type="string"/>
+        </cl:udc>
+        <cl:output std:sid="output-1c257dfa" id="opt2" class="txt" displayexp="&quot;eXBuilder6는 &quot; + sstr(&quot;재사용이 가능한 UI 템플릿 기능&quot;, [&quot;fw-bold&quot;]) + &quot;을 제공합니다.&quot;+ &quot;\n\r&quot; + &quot;이를 통해, 개발 템플릿을 제작하여 쉽고 빠르게 화면을 작성할 수 있습니다. &quot; + sstr(&quot;유형별 개발 템플릿&quot;, [&quot;fw-bold&quot;]) + &quot;과 &quot; + sstr(&quot;다양한 샘플 소스를 제공&quot;, [&quot;fw-bold&quot;]) + &quot;하여 개발 생산성을 향상시킬 수 있습니다.&quot; ">
+          <cl:verticaldata std:sid="v-data-a6e01c7f" width="1218px" height="48px" autosize="height"/>
+        </cl:output>
+        <cl:verticallayout std:sid="v-layout-94eb003e" scrollable="false" spacing="8" leftmargin="5" rightmargin="5" topmargin="5" bottommargin="5"/>
+      </cl:group>
+      <cl:group std:sid="group-b2eafed4" class="conts-wrap">
+        <cl:formdata std:sid="f-data-d9787e6f" row="1" col="0" rowspan="1" colspan="1"/>
+        <cl:udc std:sid="ud-control-080e60a6" id="udcPocDocViewer1" type="udc.poc.udcPocDocViewer">
+          <cl:formdata std:sid="f-data-553e236c" row="0" col="0"/>
+          <cl:property name="fileUrl" value="data/docs/A5-1.png" type="resource"/>
+        </cl:udc>
+        <cl:formlayout std:sid="f-layout-39593ca0" scrollable="false" hspace="0px" vspace="8px" top-margin="16px" right-margin="16px" bottom-margin="16px" left-margin="16px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-dd677874" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="124" unit="PIXEL" autoSizing="true" hidden="true" syncminlength="false"/>
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-b99b2fb6" scrollable="false" hspace="0px" vspace="16px" top-margin="16px" right-margin="24px" bottom-margin="24px" left-margin="24px">
+      <cl:rows length="40" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler>
+      <std:guide position="740"/>
+    </std:vruler>
+  </std:studiosetting>
+</html>

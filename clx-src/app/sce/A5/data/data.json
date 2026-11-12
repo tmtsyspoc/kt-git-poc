@@ -1,0 +1,118 @@
+{
+	"ds1": [
+		{
+			"column1": "valau1",
+			"column2": "valau2",
+			"column3": "valau3",
+			"column4": "valau4",
+			"column5": "valau5"
+		},
+		{
+			"column1": "valau1",
+			"column2": "valau2",
+			"column3": "valau3",
+			"column4": "valau4",
+			"column5": "valau5"
+		},
+		{
+			"column1": "valau1",
+			"column2": "valau2",
+			"column3": "valau3",
+			"column4": "valau4",
+			"column5": "valau5"
+		},
+		{
+			"column1": "valau1",
+			"column2": "valau2",
+			"column3": "valau3",
+			"column4": "valau4",
+			"column5": "valau5"
+		},
+		{
+			"column1": "valau1",
+			"column2": "valau2",
+			"column3": "valau3",
+			"column4": "valau4",
+			"column5": "valau5"
+		}
+	],
+	
+	"dmInfo":{
+		"column1": "일반",
+		"column2": "-",
+		"column3": "일반",
+		"column4": "일반",
+		"column5": "기준변경",
+		"column6": "-",
+		"column7": "기준변경",
+		"column8": "사유없음"
+	},
+	"dmInfo2":{
+		"column1": "32000",
+		"column2": "12000",
+		"column3": "0",
+		"column4": "0",
+		"column5": "0",
+		"column6": "0",
+		"column7": "0",
+		"column8": "0",
+		"column9": "12000",
+		"column10": "12000",
+		"column11": "12000",
+		"column12": "12000"
+	},
+	"dmInfo3":{
+		"column1": "20250101",
+		"column2": "20250806",
+		"column3": "20250529",
+		"column4": "20240101"
+	},
+	"dsList": [
+		{
+			"column1": "구분",
+			"column2": "5",
+			"column3": "8"
+		},
+		{
+			"column1": "구분",
+			"column2": "2",
+			"column3": "10"
+		}
+	],
+	"dsList2": [
+		{
+			"column1": "20250101",
+			"column2": "-",
+			"column3": "-",
+			"column4": "-",
+			"column5": "-"
+		},
+		{
+			"column1": "20250312",
+			"column2": "섭외목적",
+			"column3": "긍정",
+			"column4": "-",
+			"column5": "홍길동"
+		}
+	],
+	"dsPie": [
+		{
+			"VALUE": 162,
+			"VALUE_2": 0.51,
+			"AVG": 1.67,
+			"NAME": "조합원"
+		},
+		{
+			"VALUE": 6009,
+			"VALUE_2": 18.99,
+			"AVG": 21.62,
+			"NAME": "준조합원"
+		},
+		{
+			"VALUE": 25459,
+			"VALUE_2": 80.49,
+			"AVG":76.7,
+			"NAME": "일반"
+		}
+	]
+}

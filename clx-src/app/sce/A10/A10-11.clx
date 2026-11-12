@@ -1,0 +1,204 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-9702cc60" version="1.0.4034">
+  <head std:sid="head-9e0e2459">
+    <std:metadata>
+      <std:property key="template-file" value="templates/일반/0.프레임/0-1.프레임_버티컬레이아웃.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-cb098768" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="true" customHeight="731" customWidth="800" active="true"/>
+    <screen std:sid="screen-03e0de5d" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-e292b95c" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-90321062">
+      <cl:dataset comment="프로세스 목록" std:sid="d-set-406d885d" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="" std:sid="d-column-9f37779a" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-4f7ffff1" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn comment="" std:sid="d-column-7fe5300f" name="SUB_TITLE"/>
+          <cl:datacolumn comment="" std:sid="d-column-c68cb733" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-fa740970" name="CONT" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-c9d6a3d7" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-b4004ac2" name="SUB_CODE"/>
+          <cl:datacolumn comment="" std:sid="d-column-8d6dc077" name="TARGET_CTRL"/>
+          <cl:datacolumn std:sid="d-column-49173c65" name="TARGET_EMB"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[민감정보 보호]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[고객·카드·인증정보가 화면, 로그, 저장소에 불필요하게 노출되지 않는다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">○</cl:datavalue>
+            <cl:datavalue columnname="CONT">목적</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL">　</cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">단말UI를 통해 저장되는 각종 파일의 암호화를 통한 보안 강화</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL">　</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">○</cl:datavalue>
+            <cl:datavalue columnname="CONT">검증 요소</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL">　</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"/>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">스크립트를 제외한 화면 모든 리소스 암호화 검증</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL">　</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">○</cl:datavalue>
+            <cl:datavalue columnname="CONT">측정</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL">　</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">리소스 암호화 검증 확인</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">암호화</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE">리소스</cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL">　</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">진행</cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"/>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[(오픈소스 기능) [리소스 암호화] devtools-detector.js 라이브러리를 활용하여 리소스 파일 확인을 사전에 차단할 수 있는지 확인한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">[리소스 암호화] </cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL">btnStart</cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB">embapp1</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">진행</cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"/>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="CONT">웹은 본질적으로 오픈 환경이므로 브라우저에서 렌더링되는 리소스는 결국 사용자가 추출할 수 있습니다.또한 모든 정적 파일의 암호화와 복호화 과정을 브라우저에서 수행하면 성능 문제를 초래할 수 있습니다.따라서 SSL 및 TLS를 적용하고, 리소스 접근을 제어하기 위해 개발자 도구 사용을 제한하는 것이 바람직합니다.</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE">오픈 환경, 성능 문제를 초래, 개발자 도구 사용을 제한</cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+            <cl:datavalue columnname="TARGET_EMB"/>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="리소스 암호화"/>
+  </head>
+  <body std:sid="body-a0c207fd" class="wrap">
+    <cl:listener std:sid="listener-90a8720f" name="load" handler="onBodyLoad"/>
+    <cl:group std:sid="group-e7933279" id="grpAppHeader">
+      <cl:verticaldata std:sid="v-data-982e024d" width="976px" height="28px" autosize="height"/>
+      <cl:udc std:sid="ud-control-d73ab6f7" type="udc.com.udcComAppHeader">
+        <cl:verticaldata std:sid="v-data-50463b45" width="992px" height="40px" autosize="height"/>
+        <cl:property name="title" value="10.2 리소스 암호화" type="string"/>
+        <cl:property name="isExpandAllPocProcess" value="true" type="boolean"/>
+      </cl:udc>
+      <cl:verticallayout std:sid="v-layout-bb416ddd" spacing="8"/>
+    </cl:group>
+    <cl:group std:sid="group-be39b9f1" id="grpData" class="conts-area">
+      <cl:verticaldata std:sid="v-data-6edc15a8" width="992px" height="715px" autosize="height"/>
+      <cl:group std:sid="group-a47f66c3" class="governing">
+        <cl:formdata std:sid="f-data-4264599b" row="0" col="0"/>
+        <cl:output std:sid="output-c688e879" class="tit" value="리스소 암호화 검증">
+          <cl:verticaldata std:sid="v-data-1c5a7046" width="100px" height="28px" autosize="height"/>
+        </cl:output>
+        <cl:output std:sid="output-1c257dfa" class="txt" value="devtools-detector.js 라이브러리는 브라우저 개발자 도구(DevTools)의 열림 여부를 감지하는 데 사용됩니다. &#xD;&#xA;이 기능을 통해 웹 리소스(예: JavaScript 코드, 민감한 데이터 등)에 대한 보안 또는 무결성 검사를 강화하거나, 디버깅 시도를 차단하는 방어 로직을 구성할 수 있습니다.">
+          <cl:verticaldata std:sid="v-data-8090fffc" width="1218px" height="43px" autosize="height"/>
+        </cl:output>
+        <cl:verticallayout std:sid="v-layout-63c3bf60" scrollable="false" spacing="8" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+      </cl:group>
+      <cl:group std:sid="group-fbcac4bd" class="conts-wrap">
+        <cl:formdata std:sid="f-data-a7b9750f" width="100" height="4" row="1" col="0"/>
+        <cl:group std:sid="group-b906e537" class="form">
+          <cl:attribute name="table-min-height" value=""/>
+          <cl:attribute name="mobile-column-count" value="1"/>
+          <cl:attribute name="tablet-column-count" value="2"/>
+          <cl:verticaldata std:sid="v-data-0eb71d99" width="992px" height="91px" autosize="height"/>
+          <cl:output std:sid="output-030bb1ec" class="label" value="개발자 도구 탐지">
+            <cl:formdata std:sid="f-data-3c414c95" row="0" col="0"/>
+          </cl:output>
+          <cl:group std:sid="group-eb30de9f">
+            <cl:formdata std:sid="f-data-fa0c0be7" row="0" col="1" rowspan="1" colspan="1"/>
+            <cl:button std:sid="button-0111bcf7" value="시작">
+              <cl:listener std:sid="listener-cc79ef1d" name="click" handler="onBtn1Click"/>
+              <cl:flowlayoutdata std:sid="f-data-42453f89" width="70px" height="28px"/>
+            </cl:button>
+            <cl:button std:sid="button-fd121a6a" value="종료">
+              <cl:listener std:sid="listener-0986e99c" name="click" handler="onBtnStart2Click"/>
+              <cl:flowlayoutdata std:sid="f-data-523ac502" width="70px" height="28px" autosize="none"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-9ac2de64"/>
+          </cl:group>
+          <cl:output std:sid="output-fa4ac0a7" class="label" value="개발자 도구 탐지 중단">
+            <cl:formdata std:sid="f-data-f7fd362a" row="1" col="0"/>
+          </cl:output>
+          <cl:radiobutton std:sid="r-button-f9f5a050" id="rdbCrash" enabled="false">
+            <cl:listener std:sid="listener-27d21675" name="selection-change" handler="onRdbCrashSelectionChange"/>
+            <cl:formdata std:sid="f-data-67ec32c4" row="1" col="1"/>
+            <cl:item std:sid="item-d8e19e41" label="화면 새로고침" value="reload"/>
+            <cl:item std:sid="item-068c07d1" label="화면 작동 중단" value="crash"/>
+          </cl:radiobutton>
+          <cl:formlayout std:sid="f-layout-d1049485" scrollable="false" hspace="16px" vspace="17px" top-margin="8px" right-margin="8px" bottom-margin="8px" left-margin="8px" hseparatorwidth="1" hseparatortype="BY_CLASS">
+            <cl:rows length="28" unit="PIXEL"/>
+            <cl:rows length="28" unit="PIXEL"/>
+            <cl:columns length="270" unit="PIXEL" autoSizing="true" hidden="false" shadetype="BY_CLASS" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-d35d99ba" spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-48c1a7e3" scrollable="false" hspace="16px" vspace="16px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="120" unit="PIXEL" autoSizing="true" hidden="false" syncminlength="false"/>
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-587f80d6" spacing="16" leftmargin="24" rightmargin="24" topmargin="16" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler>
+      <std:guide position="740"/>
+    </std:vruler>
+  </std:studiosetting>
+</html>
