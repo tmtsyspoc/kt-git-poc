@@ -1,0 +1,21 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-bf950a3f" version="1.0.5186">
+  <head std:sid="head-dcd56d0e">
+    <screen std:sid="screen-e23ddf3a" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-dbb82533" id="tablet" name="tablet" width="1024px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-34262742" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-529f8f9e"/>
+    <cl:appspec/>
+  </head>
+  <body std:sid="body-01d3fa16" class="inner">
+    <cl:group std:sid="group-a4417ad7" id="grpData" class="inner-conts-area">
+      <cl:verticaldata std:sid="v-data-30e21577" width="400px" height="768px" autosize="height"/>
+      <cl:verticallayout std:sid="v-layout-387cae86" scrollable="false" spacing="16"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-39a1f706" scrollable="true" spacing="0"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>
