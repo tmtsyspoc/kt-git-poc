@@ -1,0 +1,2356 @@
+@import "../core/include.part.less";
+
+/************************************************
+ * 설정
+ * → app/main/Setting
+ ************************************************/
+ 
+.cl-container._setting {
+	.cl-container.setting-list {
+		padding: 20px;
+		
+		.cl-radiobutton {
+			.cl-radiobutton-item {
+				border : none;
+				
+				.cl-radiobutton-field {
+					display : inline-table !important;
+					.cl-radiobutton-icon {
+						border : none;
+						background-size : contain;
+					}
+				}
+				&.cl-selected {
+					.cl-radiobutton-icon {
+						&:after {
+							background : none;
+						}
+					}
+				}
+			}
+		}
+		
+		.cl-container.li {
+			.cl-output.label {
+				color: @cl-color-base-gray-70;
+				font-size: @cl-pc-font-size-body-medium;
+			}
+			
+			.cl-radiobutton.theme-set {
+				font-weight: @cl-font-weight-medium;
+				text-align: center;
+				
+				.cl-radiobutton-item {
+					.cl-radiobutton-icon {
+						border-radius: @cl-radius-xsmall3;
+						width: 86px;
+						height: 60px;
+					}
+					
+					&.cl-selected {
+						.cl-radiobutton-icon {
+							.focus();
+						}
+					}
+					
+					// 테마 모드별 스타일
+					&.system {
+						.cl-radiobutton-icon {
+							background-image: url("../../img/pages/setting/bg_set_system.svg") !important;
+						}
+					}
+					
+					&.light {
+						.cl-radiobutton-icon {
+							background-image: url("../../img/pages/setting/bg_set_light.svg") !important;
+						}
+					}
+					
+					&.high-contrast {
+						.cl-radiobutton-icon {
+							background-image: url("../../img/pages/setting/bg_set_dark.svg") !important;
+						}
+					}
+				}
+			}
+			
+			.cl-radiobutton.color-set {
+				font-size: 0;
+				text-align: center;
+				
+				.cl-radiobutton-item {
+					border: 1px solid @cl-color-base-gray-30;
+					border-radius: @cl-radius-xsmall3;
+					position: relative;
+					
+					.cl-radiobutton-icon {
+						background-image: none;
+						border-radius: @cl-radius-xsmall3;
+						width: 24px;
+						height: 24px;
+					}
+					
+					.cl-text {
+						padding: 0;
+					}
+					
+					&.cl-selected {
+						.focus();
+						
+						.cl-radiobutton-icon {
+							outline: none;
+							box-shadow : none;
+						}
+					}
+					
+					// 주요 색상 스타일 (KT 메인의 포인트색과 같은 값)
+					&.white-theme {
+						.cl-radiobutton-icon {
+							background-color: #E4002B;
+						}
+					}
+
+					&.default {
+						.cl-radiobutton-icon {
+							background-color: #1A1A1A;
+						}
+					}
+
+					&.blue-theme {
+						.cl-radiobutton-icon {
+							background-color: #2563EB;
+						}
+					}
+
+					&.green-theme {
+						.cl-radiobutton-icon {
+							background-color: #0E9F6E;
+						}
+					}
+
+					&.purple-theme {
+						.cl-radiobutton-icon {
+							background-color: #6D3FE0;
+						}
+					}
+
+					&.orange-theme {
+						.cl-radiobutton-icon {
+							background-color: #F26A1B;
+						}
+					}
+				}
+
+				&.v2 {
+					.cl-radiobutton-item {
+						border : none;
+						margin : 0px;
+						
+						.cl-icon-wrapper {
+							padding-top : 0px;
+						}
+					}
+				}
+			}
+			
+			.cl-radiobutton.layout-set {
+				font-weight: @cl-pc-font-size-body-medium;
+				text-align: center;
+				
+				.cl-radiobutton-item {
+					.cl-radiobutton-icon {
+						border-radius: @cl-radius-xsmall3;
+						width: 136px;
+						height: 96px;
+					}
+					
+					&.cl-selected {
+						.cl-radiobutton-icon {
+							.focus();
+						}
+					}
+					
+					// 테마 모드별 스타일
+					&.multi {
+						.cl-radiobutton-icon {
+							background-image: url("../../img/pages/setting/bg_set_multi.svg") !important;
+						}
+					}
+					
+					&.single {
+						.cl-radiobutton-icon {
+							background-image: url("../../img/pages/setting/bg_set_single.svg") !important;
+						}
+					}
+				}
+			}
+			
+			.cl-radiobutton.structure-set {
+				font-weight: @cl-pc-font-size-body-medium;
+				text-align: center;
+				
+				.cl-radiobutton-item {
+					.cl-radiobutton-icon {
+						border-radius: @cl-radius-xsmall3;
+						width: 136px;
+						height: 96px;
+					}
+					
+					&.cl-selected {
+						.cl-radiobutton-icon {
+							.focus();
+						}
+					}
+					
+					// 구조별 스타일
+					&.default {
+						.cl-radiobutton-icon {
+							background-image: url("../../img/pages/setting/bg_set_vertical_gnb.svg") !important;
+						}
+					}
+					
+					&.vertical {
+						.cl-radiobutton-icon {
+							background-image: url("../../img/pages/setting/bg_set_vertical.svg") !important;
+						}
+					}
+					
+					&.horizontal {
+						.cl-radiobutton-icon {
+							background-image: url("../../img/pages/setting/bg_set_horizontal.svg") !important;
+						}
+					}
+				}
+			}
+			
+			.cl-radiobutton.logo-img {
+				font-weight: @cl-pc-font-size-body-medium;
+				text-align: center;
+				
+				.cl-radiobutton-item {
+					.cl-radiobutton-icon {
+						border-radius : 4px;
+						width: 86px;
+						height: 60px;
+					}
+					
+					&.cl-selected {
+						.cl-radiobutton-icon {
+							.focus();
+						}
+					}
+					
+					// 구조별 스타일
+					&.ori {
+						.cl-radiobutton-icon {
+							background-image: url("../../img/pages/main/logo.png") !important;
+							background-size : auto;
+						}
+					}
+					&.type1 {
+						.cl-radiobutton-icon {
+							background-image: url("../../img/pages/main/logo_ver1.png") !important;
+						}
+					}
+					
+					&.type2 {
+						.cl-radiobutton-icon {
+							background-image: url("../../img/pages/main/logo_ver2.png") !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.font-size-16 {
+	font-size : @cl-number-10;
+}
+
+
+/************************************************
+ * 폰트 지정 스타일
+ ************************************************/
+ 
+[data-fontFamily="Default"] {
+	.cl-control, 
+	.cl-accordion, .cl-button, .cl-calendar, .cl-checkbox, 
+	.cl-checkboxgroup, .cl-combobox, .cl-combobox-list,
+	.cl-dateinput, .cl-dialog, .cl-fileinput, .cl-fileupload,
+	.cl-grid, .cl-search-input, .cl-inputbox, .cl-linkedcombobox, .cl-linkedcombobox-list,
+	.cl-linkedlistbox, .cl-listbox, .cl-maskeditor, .cl-menu, .cl-navigationbar, .cl-navigationbar-list,
+	.cl-notifier-item, .cl-numbereditor, .cl-output, .cl-pageindexer,
+	.cl-progress, .cl-radiobutton, .cl-searchinput, .cl-sidenavigation,
+	.cl-slider-label, .cl-tabfolder, .cl-textarea, .cl-tree, .cl-treecell
+	.cl-calendar-footer-text, .cl-fileupload-button {
+		font-family: @cl-font-family-base;
+	}
+}
+
+[data-fontFamily="Verdana"] {
+	.cl-control, 
+	.cl-accordion, .cl-button, .cl-calendar, .cl-checkbox, 
+	.cl-checkboxgroup, .cl-combobox, .cl-combobox-list,
+	.cl-dateinput, .cl-dialog, .cl-fileinput, .cl-fileupload,
+	.cl-grid, .cl-search-input, .cl-inputbox, .cl-linkedcombobox, .cl-linkedcombobox-list,
+	.cl-linkedlistbox, .cl-listbox, .cl-maskeditor, .cl-menu, .cl-navigationbar, .cl-navigationbar-list,
+	.cl-notifier-item, .cl-numbereditor, .cl-output, .cl-pageindexer,
+	.cl-progress, .cl-radiobutton, .cl-searchinput, .cl-sidenavigation,
+	.cl-slider-label, .cl-tabfolder, .cl-textarea, .cl-tree, .cl-treecell
+	.cl-calendar-footer-text, .cl-fileupload-button {
+		font-family: Verdana;
+	}
+}
+
+[data-fontFamily="TrebuchetMS"] {
+	.cl-control, 
+	.cl-accordion, .cl-button, .cl-calendar, .cl-checkbox, 
+	.cl-checkboxgroup, .cl-combobox, .cl-combobox-list,
+	.cl-dateinput, .cl-dialog, .cl-fileinput, .cl-fileupload,
+	.cl-grid, .cl-search-input, .cl-inputbox, .cl-linkedcombobox, .cl-linkedcombobox-list,
+	.cl-linkedlistbox, .cl-listbox, .cl-maskeditor, .cl-menu, .cl-navigationbar, .cl-navigationbar-list,
+	.cl-notifier-item, .cl-numbereditor, .cl-output, .cl-pageindexer,
+	.cl-progress, .cl-radiobutton, .cl-searchinput, .cl-sidenavigation,
+	.cl-slider-label, .cl-tabfolder, .cl-textarea, .cl-tree, .cl-treecell
+	.cl-calendar-footer-text, .cl-fileupload-button {
+		font-family: Trebuchet MS;
+	}
+}
+
+[data-fontFamily="ComicSansMS"] {
+	.cl-control, 
+	.cl-accordion, .cl-button, .cl-calendar, .cl-checkbox, 
+	.cl-checkboxgroup, .cl-combobox, .cl-combobox-list,
+	.cl-dateinput, .cl-dialog, .cl-fileinput, .cl-fileupload,
+	.cl-grid, .cl-search-input, .cl-inputbox, .cl-linkedcombobox, .cl-linkedcombobox-list,
+	.cl-linkedlistbox, .cl-listbox, .cl-maskeditor, .cl-menu, .cl-navigationbar, .cl-navigationbar-list,
+	.cl-notifier-item, .cl-numbereditor, .cl-output, .cl-pageindexer,
+	.cl-progress, .cl-radiobutton, .cl-searchinput, .cl-sidenavigation,
+	.cl-slider-label, .cl-tabfolder, .cl-textarea, .cl-tree, .cl-treecell
+	.cl-calendar-footer-text, .cl-fileupload-button {
+		font-family: Comic Sans MS;
+	}
+}
+
+/************************************************
+ * 폰트 크기 지정
+ ************************************************/
+@font-size-title-xsm: 14px;
+@font-size-title-sm: 16px;
+@font-size-title-md: 18px;
+@font-size-title-lg: 20px;
+@font-size-title-xlg: 24px;
+@font-size-title-xxlg: 28px;
+
+@font-size-body-xsm: 12px;
+@font-size-body-sm: 13px;
+@font-size-body-md: 14px;
+@font-size-body-lg: 16px;
+@font-size-body-xlg: 18px;
+
+[data-fontSize="12"] {
+	.cl-control, 
+	.cl-accordion, .cl-button, .cl-calendar, .cl-checkbox, 
+	.cl-checkboxgroup, .cl-combobox, .cl-combobox-list,
+	.cl-dateinput, .cl-dialog, .cl-fileinput, .cl-fileupload,
+	.cl-grid, .cl-search-input, .cl-inputbox, .cl-linkedcombobox, .cl-linkedcombobox-list,
+	.cl-linkedlistbox, .cl-listbox, .cl-maskeditor, .cl-menu, .cl-navigationbar, .cl-navigationbar-list,
+	.cl-notifier-item, .cl-numbereditor, .cl-output, .cl-pageindexer,
+	.cl-progress, .cl-radiobutton, .cl-searchinput, .cl-sidenavigation,
+	.cl-slider-label, .cl-tabfolder, .cl-textarea, .cl-tree, .cl-treecell
+	.cl-calendar-footer-text, .cl-fileupload-button {
+		font-size: @font-size-body-md - 2;
+	}
+	.cl-calendar-header-text {
+		font-size: @font-size-title-sm - 2;
+	}
+	.cl-dialog {
+		.cl-dialog-header {
+			.cl-text {
+				font-size: @font-size-title-sm - 2;
+			}
+		}
+	}
+	
+	.cl-grid {
+		.cl-grid-header {
+			.cl-sortable-cell {
+				.cl-sort {
+					.cl-sort-seq {
+						font-size: @font-size-body-xsm - 2;
+					}	
+				}	
+			}
+		}
+	}
+	.cl-gridfilter {
+		.cl-filterdlg {
+			.cl-filterdlg-header {
+				.cl-text {
+					font-size: @font-size-title-sm - 2;
+				}
+			}
+			.cl-filterdlg-buttons {
+				.cl-checkbox {
+					font-size: @font-size-body-sm - 2;
+				}
+			}
+		}
+	}
+	.cl-tooltip {
+		font-size: @font-size-body-sm - 2;
+	}
+	
+	.h1 {
+		font-size: @font-size-title-xxlg - 2;
+	}
+	
+	.h2 {
+		font-size: @font-size-title-xlg - 2;
+	}
+	
+	.h3 {
+		font-size: @font-size-title-lg - 2;
+	}
+	
+	.h4 {
+		font-size: @font-size-title-md - 2;
+	}
+	
+	.h5 {
+		font-size: @font-size-title-sm - 2;
+	}
+	
+	.h6 {
+		font-size: @font-size-title-xsm - 2;
+	}
+	
+	.b-xxxlg {
+		font-size: @font-size-title-xxlg - 2;
+	}
+	
+	.b-xxlg {
+		font-size: @font-size-title-xlg - 2;
+	}
+	
+	.b-xlg {
+		font-size: @font-size-title-md - 2;
+	}
+	
+	.b-lg {
+		font-size: @font-size-title-sm - 2;
+	}
+	
+	.b-md {
+		font-size: @font-size-body-xlg - 2;
+	}
+	
+	.b-sm {
+		font-size: @font-size-body-lg - 2;
+	}
+	
+	.b-xs {
+		font-size: @font-size-body-md - 2;
+	}
+	
+	.b-xxsm {
+		font-size: @font-size-body-sm - 2;
+	}
+	
+	.b-xxxsm {
+		font-size: @font-size-body-xsm - 2;
+	}
+
+	.cl-container.search-box {
+		.cl-container.search-button-group {
+			.cl-button {
+				font-size: @font-size-body-lg - 2;
+			}
+		}
+	}
+	.cl-container.governing {
+		.cl-output.tit {
+			font-size: @font-size-title-md - 2;
+		}
+		.cl-output.txt {
+			font-size: @font-size-body-md - 2;
+		}
+	}
+	.cl-output.title {
+		font-size: @font-size-body-md - 2;
+	}
+	.cl-output.caption {
+		font-size: @font-size-body-sm - 2;
+	}
+	.test-log-root {
+		.cl-output{
+			&.title{
+				font-size: @font-size-body-lg - 2;
+			}
+		}
+	}
+	.cl-container._login {
+		.cl-container.login-wrap {
+			.cl-container.login-box {
+				.cl-container.tabfolder-header {
+					.cl-button.item {
+						font-size: @font-size-title-sm - 2;
+					}
+				}
+			}
+			.cl-button.primary {
+				font-size: @font-size-title-md - 2;
+			}
+		}
+	}
+	.cl-container._main {
+		.cl-container.header {
+			.cl-container.util-button-group {
+				.cl-output.alarm {
+					font-size: 8px;
+				}
+			}
+		}
+		.cl-container.navbar {
+			.cl-navigationbar {
+				.cl-navigationbar-accessiblemegamenu {
+					.cl-navigationbar-list {
+						.cl-level-1 {
+							> .cl-navigationbar-listitem-wrapper {
+								> .cl-navigationbar-listitem {
+									font-size: @font-size-title-sm - 2;
+								}
+							}
+						}
+						.cl-navigationbar-listitem {
+							font-size: @font-size-title-xsm - 2;
+						}
+					}
+				}
+			}
+		}
+		.cl-container.aside {
+			.cl-container.menu-wrap {
+				.cl-sidenavigation.sidemenu {
+					.cl-sidenavigation-item {
+						&.cl-level-1 {
+							font-size: 13px;
+						}
+						&.cl-level-2 {
+							font-size: @font-size-body-sm - 2;
+						}
+					}
+				}
+			}
+			.cl-container.copyright {
+				.cl-output {
+					font-size: @font-size-body-xsm - 2;
+				}
+			}
+		}
+		
+		.cl-mdifolder.cl-tabfolder.tab-main {
+			> .content {
+				> .cl-tabfolder-header.cl-top.content {
+					.cl-tabfolder-item {
+						font-size: @font-size-body-sm - 2;
+					}
+				}
+			}
+		}
+		.cl-container.dropdown-menu {
+			.cl-container.dropdown-header {
+				.cl-output.tit {
+					font-size: @font-size-title-sm - 2;
+				}
+			}
+		}
+		.cl-container.dropdown-body {
+			.cl-container.notification-item {
+				.cl-output.txt {
+					font-size: @font-size-body-sm - 2;
+				}
+				.cl-output.date {
+					font-size: @font-size-body-xsm - 2;
+				}
+				&.active {
+					.cl-output.txt {
+						.cl-text::after {
+							font-size: 8px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.cl-container.mobile-menu {
+		.cl-output.name {
+			font-size: @font-size-title-sm - 2;
+		}
+		.cl-container.mobile-body {
+			.cl-sidenavigation {
+				.cl-sidenavigation-item {
+					&.cl-level-1 {
+						font-size: @font-size-title-xsm - 2;
+					}
+				}
+			}
+		}
+	}
+	.cl-container._setting {
+		.cl-container.setting-list {
+			.cl-container.li {
+				.cl-output.label {
+					font-size: @font-size-body-sm - 2;
+				}
+			}
+		}
+	}
+	.cl-container._dash {
+		.cl-container.user-box {
+			.cl-container.text {
+				.cl-output.name {
+					font-size: @font-size-title-xlg - 2;
+				}
+			}
+		}
+		.cl-container.conts-wrap {
+			.cl-container.box {
+				.cl-output.tit {
+					font-size: @font-size-title-md -2;
+				}
+			}
+		}
+		.cl-tabfolder.tab {
+			> .tab {
+				> .cl-tabfolder-header.cl-top.tab {
+					.cl-tabfolder-item {
+						font-size: @font-size-title-sm - 2;
+						.cl-text {
+							.num {
+								font-size: @font-size-body-sm - 2;
+							}
+						}
+					}
+				}
+			}
+		}
+		.cl-container.swiper-wrapper {
+			.cl-button.slide {
+				font-size: @font-size-title-sm - 2;
+				.cl-text {
+					.subtxt {
+						font-size: @font-size-body-sm - 2;
+					}
+				}
+			}
+		}
+		.cl-container.about {
+			.cl-button {
+				.icon {
+					font-size: @font-size-title-xsm - 2;
+				}
+				.title {
+					font-size: @font-size-title-sm - 2;
+				}
+			}
+		}
+		.cl-container.quickmenu {
+			.cl-button {
+				&.nodata {
+					font-size: @font-size-body-xsm - 2;
+				}
+			}
+		}
+		.cl-container.schedule {
+			.cl-container.weekly {
+				.cl-container.schedule-content-header {
+					.cl-output {
+						font-size: @font-size-body-xsm - 2;
+					}
+				}
+				.cl-container.schedule-content-body {
+					.cl-button {
+						font-size: 13px;
+					}
+				}
+			}
+		}
+	}
+	.cl-container.main-vban {
+		.cl-container.user {
+			.cl-container.info-wrap {
+				.cl-output.name {
+					font-size: @font-size-title-md - 2;				
+					.key {
+						font-size: @font-size-title-xlg - 2;
+					}
+				}
+				
+				.cl-output.time {
+					font-size: 9px;
+				}
+			}
+			.cl-container.mytodo {
+				.cl-container.todo {
+					.cl-output {
+						&.label {
+							font-size: 16px;
+						}
+						
+						&.value {
+							font-size: 46px;
+						}
+					}
+				}
+			}
+		}
+		.cl-container.today {
+			.cl-output.tit {
+				font-size: @font-size-title-md - 2;
+			}
+			.cl-container.ul {
+				.cl-container.li {
+					.cl-output.badge {
+						font-size: @font-size-body-md - 2;
+					}
+					.cl-output.name {
+						font-size: @font-size-body-lg - 2;
+					}
+				}
+			}
+		}
+	}
+	.cl-container.calendar {
+		.cl-container.calendar-header {
+			.cl-output.tit {
+				font-size: 16px;
+			}
+			.cl-output.header-txt {
+				font-size: 20px;
+			}
+			.cl-radiobutton.type {
+				font-size: 10px;
+			}
+		}
+		.cl-calendar.cl-anniversaries {
+			.cl-calendar-content-day,
+			.cl-other-month {
+				font-size: 11px;
+			}
+		}
+		.cl-calendar-detail {
+			font-size: 28px;
+		}
+		.cl-calendar-item-wrap,
+		.cl-anniversary-wrap,
+		.cl-calendar-more-wrap {
+			font-size: 16px;
+		}
+	}
+	
+	.cl-container.dash-chart {
+		.cl-radiobutton.tab {
+			font-size: 14px;
+			.cl-radiobutton-item {
+				&.cl-selected {
+					font-size: 16px;
+				}
+			}	
+		}
+	}
+	.cl-container.user-guide {
+		.cl-output.tit {
+			font-size: 16px;
+		}
+		.cl-container.guide-btn {
+			.cl-button {
+				font-size: 13px;
+			}
+		}
+		.cl-container.notice-wrap {
+			.cl-container.li {
+				.cl-output.txt {
+					font-size: 14px;
+				}
+				.cl-output.date {
+					font-size: 13px;
+				}
+			}
+		}
+	}
+	.cl-container.errorpage {
+		.cl-output.tit {
+			font-size: 58px;
+		}
+		.cl-output.txt {
+			font-size: @font-size-body-lg - 2;
+		}
+	}
+	@media (max-width: 599px) {
+		.cl-container.errorpage {
+			.cl-output.tit {
+				font-size: 34px;
+			}
+			
+			.cl-output.txt {
+				font-size: 13px;
+			}
+		}
+	}
+	
+	.cl-container.table {
+		.cl-container.table-accordion-row {
+			.cl-output.title {
+				font-size: 14px;
+			}
+		}
+	}
+	.cl-container.app-header {
+		.cl-container.breadcrumbs {
+			.cl-output.breadcrumb-item {
+				font-size: 11px;
+			}
+		}
+	}
+	.cl-container.title-area {
+		.cl-output.tit {
+			font-size: @font-size-title-sm - 2;
+		}
+		.cl-output.table-row-count {
+			font-size: @font-size-body-sm - 2;
+		}
+	}
+	.loader-overlay {
+		.cl-container.loader-box {
+			.cl-container.in {
+				.cl-output.txt {
+					font-size: @font-size-title-md - 2;
+				}
+			}
+		}
+	}
+	
+	.cl-container.scenario-panel {
+		.cl-container.flt-right-process {
+			.cl-output.title {
+				font-size: @font-size-title-sm - 2;
+			}
+			.cl-grid {
+				.cl-rowgroup-header {
+					.title {
+						font-size: @font-size-title-sm - 2;
+					}
+					.sub-title {
+						font-size: @font-size-title-xsm - 2;
+					}
+				}
+			}
+		}
+	}
+}
+
+[data-fontSize="11"] {
+	.cl-control, 
+	.cl-accordion, .cl-button, .cl-calendar, .cl-checkbox, 
+	.cl-checkboxgroup, .cl-combobox, .cl-combobox-list,
+	.cl-dateinput, .cl-dialog, .cl-fileinput, .cl-fileupload,
+	.cl-grid, .cl-search-input, .cl-inputbox, .cl-linkedcombobox, .cl-linkedcombobox-list,
+	.cl-linkedlistbox, .cl-listbox, .cl-maskeditor, .cl-menu, .cl-navigationbar, .cl-navigationbar-list,
+	.cl-notifier-item, .cl-numbereditor, .cl-output, .cl-pageindexer,
+	.cl-progress, .cl-radiobutton, .cl-searchinput, .cl-sidenavigation,
+	.cl-slider-label, .cl-tabfolder, .cl-textarea, .cl-tree, .cl-treecell
+	.cl-calendar-footer-text, .cl-fileupload-button {
+		font-size: @font-size-body-md - 3;
+	}
+	.cl-calendar-header-text {
+		font-size: @font-size-title-sm - 3;
+	}
+	.cl-dialog {
+		.cl-dialog-header {
+			.cl-text {
+				font-size: @font-size-title-sm - 3;
+			}
+		}
+	}
+	
+	.cl-grid {
+		.cl-grid-header {
+			.cl-sortable-cell {
+				.cl-sort {
+					.cl-sort-seq {
+						font-size: @font-size-body-xsm - 3;
+					}	
+				}	
+			}
+		}
+	}
+	.cl-gridfilter {
+		.cl-filterdlg {
+			.cl-filterdlg-header {
+				.cl-text {
+					font-size: @font-size-title-sm - 3;
+				}
+			}
+			.cl-filterdlg-buttons {
+				.cl-checkbox {
+					font-size: @font-size-body-sm - 3;
+				}
+			}
+		}
+	}
+	.cl-tooltip {
+		font-size: @font-size-body-sm - 3;
+	}
+	
+	.h1 {
+		font-size: @font-size-title-xxlg - 3;
+	}
+	
+	.h2 {
+		font-size: @font-size-title-xlg - 3;
+	}
+	
+	.h3 {
+		font-size: @font-size-title-lg - 3;
+	}
+	
+	.h4 {
+		font-size: @font-size-title-md - 3;
+	}
+	
+	.h5 {
+		font-size: @font-size-title-sm - 3;
+	}
+	
+	.h6 {
+		font-size: @font-size-title-xsm - 3;
+	}
+	
+	.b-xxxlg {
+		font-size: @font-size-title-xxlg - 3;
+	}
+	
+	.b-xxlg {
+		font-size: @font-size-title-xlg - 3;
+	}
+	
+	.b-xlg {
+		font-size: @font-size-title-md - 3;
+	}
+	
+	.b-lg {
+		font-size: @font-size-title-sm - 3;
+	}
+	
+	.b-md {
+		font-size: @font-size-body-xlg - 3;
+	}
+	
+	.b-sm {
+		font-size: @font-size-body-lg - 3;
+	}
+	
+	.b-xs {
+		font-size: @font-size-body-md - 3;
+	}
+	
+	.b-xxsm {
+		font-size: @font-size-body-sm - 3;
+	}
+	
+	.b-xxxsm {
+		font-size: @font-size-body-xsm - 3;
+	}
+
+	.cl-container.search-box {
+		.cl-container.search-button-group {
+			.cl-button {
+				font-size: @font-size-body-lg - 3;
+			}
+		}
+	}
+	.cl-container.governing {
+		.cl-output.tit {
+			font-size: @font-size-title-md - 3;
+		}
+		.cl-output.txt {
+			font-size: @font-size-body-md - 3;
+		}
+	}
+	.cl-output.title {
+		font-size: @font-size-body-md - 3;
+	}
+	.cl-output.caption {
+		font-size: @font-size-body-sm - 3;
+	}
+	.test-log-root {
+		.cl-output{
+			&.title{
+				font-size: @font-size-body-lg - 3;
+			}
+		}
+	}
+	.cl-container._login {
+		.cl-container.login-wrap {
+			.cl-container.login-box {
+				.cl-container.tabfolder-header {
+					.cl-button.item {
+						font-size: @font-size-title-sm - 3;
+					}
+				}
+			}
+			.cl-button.primary {
+				font-size: @font-size-title-md - 3;
+			}
+		}
+	}
+	.cl-container._main {
+		.cl-container.header {
+			.cl-container.util-button-group {
+				.cl-output.alarm {
+					font-size: 9px;
+				}
+			}
+		}
+		.cl-container.navbar {
+			.cl-navigationbar {
+				.cl-navigationbar-accessiblemegamenu {
+					.cl-navigationbar-list {
+						.cl-level-1 {
+							> .cl-navigationbar-listitem-wrapper {
+								> .cl-navigationbar-listitem {
+									font-size: @font-size-title-sm - 3;
+								}
+							}
+						}
+						.cl-navigationbar-listitem {
+							font-size: @font-size-title-xsm - 3;
+						}
+					}
+				}
+			}
+		}
+		.cl-container.aside {
+			.cl-container.menu-wrap {
+				.cl-sidenavigation.sidemenu {
+					.cl-sidenavigation-item {
+						&.cl-level-1 {
+							font-size: 14px;
+						}
+						&.cl-level-2 {
+							font-size: @font-size-body-sm - 3;
+						}
+					}
+				}
+			}
+			.cl-container.copyright {
+				.cl-output {
+					font-size: @font-size-body-xsm - 3;
+				}
+			}
+		}
+		
+		.cl-mdifolder.cl-tabfolder.tab-main {
+			> .content {
+				> .cl-tabfolder-header.cl-top.content {
+					.cl-tabfolder-item {
+						font-size: @font-size-body-sm - 3;
+					}
+				}
+			}
+		}
+		.cl-container.dropdown-menu {
+			.cl-container.dropdown-header {
+				.cl-output.tit {
+					font-size: @font-size-title-sm - 3;
+				}
+			}
+		}
+		.cl-container.dropdown-body {
+			.cl-container.notification-item {
+				.cl-output.txt {
+					font-size: @font-size-body-sm - 3;
+				}
+				.cl-output.date {
+					font-size: @font-size-body-xsm - 3;
+				}
+				&.active {
+					.cl-output.txt {
+						.cl-text::after {
+							font-size: 9px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.cl-container.mobile-menu {
+		.cl-output.name {
+			font-size: @font-size-title-sm - 3;
+		}
+		.cl-container.mobile-body {
+			.cl-sidenavigation {
+				.cl-sidenavigation-item {
+					&.cl-level-1 {
+						font-size: @font-size-title-xsm - 3;
+					}
+				}
+			}
+		}
+	}
+	.cl-container._setting {
+		.cl-container.setting-list {
+			.cl-container.li {
+				.cl-output.label {
+					font-size: @font-size-body-sm - 3;
+				}
+			}
+		}
+	}
+	.cl-container._dash {
+		.cl-container.user-box {
+			.cl-container.text {
+				.cl-output.name {
+					font-size: @font-size-title-xlg - 3;
+				}
+			}
+		}
+		.cl-container.conts-wrap {
+			.cl-container.box {
+				.cl-output.tit {
+					font-size: @font-size-title-md - 3;
+				}
+			}
+		}
+		.cl-tabfolder.tab {
+			> .tab {
+				> .cl-tabfolder-header.cl-top.tab {
+					.cl-tabfolder-item {
+						font-size: @font-size-title-sm - 3;
+						.cl-text {
+							.num {
+								font-size: @font-size-body-sm - 3;
+							}
+						}
+					}
+				}
+			}
+		}
+		.cl-container.swiper-wrapper {
+			.cl-button.slide {
+				font-size: @font-size-title-sm - 3;
+				.cl-text {
+					.subtxt {
+						font-size: @font-size-body-sm - 3;
+					}
+				}
+			}
+		}
+		.cl-container.about {
+			.cl-button {
+				.icon {
+					font-size: @font-size-title-xsm - 3;
+				}
+				.title {
+					font-size: @font-size-title-sm - 3;
+				}
+			}
+		}
+		.cl-container.quickmenu {
+			.cl-button {
+				&.nodata {
+					font-size: @font-size-body-xsm - 3;
+				}
+			}
+		}
+		.cl-container.schedule {
+			.cl-container.weekly {
+				.cl-container.schedule-content-header {
+					.cl-output {
+						font-size: @font-size-body-xsm - 3;
+					}
+				}
+				.cl-container.schedule-content-body {
+					.cl-button {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+	.cl-container.main-vban {
+		.cl-container.user {
+			.cl-container.info-wrap {
+				.cl-output.name {
+					font-size: @font-size-title-md - 3;				
+					.key {
+						font-size: @font-size-title-xlg - 3;
+					}
+				}
+				
+				.cl-output.time {
+					font-size: 10px;
+				}
+			}
+			.cl-container.mytodo {
+				.cl-container.todo {
+					.cl-output {
+						&.label {
+							font-size: 17px;
+						}
+						
+						&.value {
+							font-size: 47px;
+						}
+					}
+				}
+			}
+		}
+		.cl-container.today {
+			.cl-output.tit {
+				font-size: @font-size-title-md - 3;
+			}
+			.cl-container.ul {
+				.cl-container.li {
+					.cl-output.badge {
+						font-size: @font-size-body-md - 3;
+					}
+					.cl-output.name {
+						font-size: @font-size-body-lg - 3;
+					}
+				}
+			}
+		}
+	}
+	.cl-container.calendar {
+		.cl-container.calendar-header {
+			.cl-output.tit {
+				font-size: 17px;
+			}
+			.cl-output.header-txt {
+				font-size: 21px;
+			}
+			.cl-radiobutton.type {
+				font-size: 11px;
+			}
+		}
+		.cl-calendar.cl-anniversaries {
+			.cl-calendar-content-day,
+			.cl-other-month {
+				font-size: 12px;
+			}
+		}
+		.cl-calendar-detail {
+			font-size: 29px;
+		}
+		.cl-calendar-item-wrap,
+		.cl-anniversary-wrap,
+		.cl-calendar-more-wrap {
+			font-size: 17px;
+		}
+	}
+	.cl-container.dash-chart {
+		.cl-radiobutton.tab {
+			font-size: 15px;
+			.cl-radiobutton-item {
+				&.cl-selected {
+					font-size: 17px;
+				}
+			}	
+		}
+	}
+	.cl-container.user-guide {
+		.cl-output.tit {
+			font-size: 17px;
+		}
+		.cl-container.guide-btn {
+			.cl-button {
+				font-size: 14px;
+			}
+		}
+		.cl-container.notice-wrap {
+			.cl-container.li {
+				.cl-output.txt {
+					font-size: 15px;
+				}
+				.cl-output.date {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+	.cl-container.errorpage {
+		.cl-output.tit {
+			font-size: 59px;
+		}
+		.cl-output.txt {
+			font-size: @font-size-body-lg - 3;
+		}
+	}
+	@media (max-width: 599px) {
+		.cl-container.errorpage {
+			.cl-output.tit {
+				font-size: 35px;
+			}
+			
+			.cl-output.txt {
+				font-size: 14px;
+			}
+		}
+	}
+	
+	.cl-container.table {
+		.cl-container.table-accordion-row {
+			.cl-output.title {
+				font-size: 15px;
+			}
+		}
+	}
+	.cl-container.app-header {
+		.cl-container.breadcrumbs {
+			.cl-output.breadcrumb-item {
+				font-size: 12px;
+			}
+		}
+	}
+	.cl-container.title-area {
+		.cl-output.tit {
+			font-size: @font-size-title-sm - 3;
+		}
+		.cl-output.table-row-count {
+			font-size: @font-size-body-sm - 3;
+		}
+	}
+	.loader-overlay {
+		.cl-container.loader-box {
+			.cl-container.in {
+				.cl-output.txt {
+					font-size: @font-size-title-md - 3;
+				}
+			}
+		}
+	}
+	
+	.cl-container.scenario-panel {
+		.cl-container.flt-right-process {
+			.cl-output.title {
+				font-size: @font-size-title-sm - 3;
+			}
+			.cl-grid {
+				.cl-rowgroup-header {
+					.title {
+						font-size: @font-size-title-sm - 3;
+					}
+					.sub-title {
+						font-size: @font-size-title-xsm - 3;
+					}
+				}
+			}
+		}
+	}
+}
+
+[data-fontSize="16"] {
+	.cl-control, 
+	.cl-accordion, .cl-button, .cl-calendar, .cl-checkbox, 
+	.cl-checkboxgroup, .cl-combobox, .cl-combobox-list,
+	.cl-dateinput, .cl-dialog, .cl-fileinput, .cl-fileupload,
+	.cl-grid, .cl-search-input, .cl-inputbox, .cl-linkedcombobox, .cl-linkedcombobox-list,
+	.cl-linkedlistbox, .cl-listbox, .cl-maskeditor, .cl-menu, .cl-navigationbar, .cl-navigationbar-list,
+	.cl-notifier-item, .cl-numbereditor, .cl-output, .cl-pageindexer,
+	.cl-progress, .cl-radiobutton, .cl-searchinput, .cl-sidenavigation,
+	.cl-slider-label, .cl-tabfolder, .cl-textarea, .cl-tree, .cl-treecell
+	.cl-calendar-footer-text, .cl-fileupload-button {
+		font-size: @font-size-body-md + 2;
+	}
+	.cl-calendar-header-text {
+		font-size: @font-size-title-sm + 2;
+	}
+	.cl-dialog {
+		.cl-dialog-header {
+			.cl-text {
+				font-size: @font-size-title-sm + 2;
+			}
+		}
+	}
+	
+	.cl-grid {
+		.cl-grid-header {
+			.cl-sortable-cell {
+				.cl-sort {
+					.cl-sort-seq {
+						font-size: @font-size-body-xsm + 2;
+					}	
+				}	
+			}
+		}
+	}
+	.cl-gridfilter {
+		.cl-filterdlg {
+			.cl-filterdlg-header {
+				.cl-text {
+					font-size: @font-size-title-sm + 2;
+				}
+			}
+			.cl-filterdlg-buttons {
+				.cl-checkbox {
+					font-size: @font-size-body-sm + 2;
+				}
+			}
+		}
+	}
+	.cl-tooltip {
+		font-size: @font-size-body-sm + 2;
+	}
+	
+	.h1 {
+		font-size: @font-size-title-xxlg + 2;
+	}
+	
+	.h2 {
+		font-size: @font-size-title-xlg + 2;
+	}
+	
+	.h3 {
+		font-size: @font-size-title-lg + 2;
+	}
+	
+	.h4 {
+		font-size: @font-size-title-md + 2;
+	}
+	
+	.h5 {
+		font-size: @font-size-title-sm + 2;
+	}
+	
+	.h6 {
+		font-size: @font-size-title-xsm + 2;
+	}
+	
+	.b-xxxlg {
+		font-size: @font-size-title-xxlg + 2;
+	}
+	
+	.b-xxlg {
+		font-size: @font-size-title-xlg + 2;
+	}
+	
+	.b-xlg {
+		font-size: @font-size-title-md + 2;
+	}
+	
+	.b-lg {
+		font-size: @font-size-title-sm + 2;
+	}
+	
+	.b-md {
+		font-size: @font-size-body-xlg + 2;
+	}
+	
+	.b-sm {
+		font-size: @font-size-body-lg + 2;
+	}
+	
+	.b-xs {
+		font-size: @font-size-body-md + 2;
+	}
+	
+	.b-xxsm {
+		font-size: @font-size-body-sm + 2;
+	}
+	
+	.b-xxxsm {
+		font-size: @font-size-body-xsm + 2;
+	}
+
+	.cl-container.search-box {
+		.cl-container.search-button-group {
+			.cl-button {
+				font-size: @font-size-body-lg + 2;
+			}
+		}
+	}
+	.cl-container.governing {
+		.cl-output.tit {
+			font-size: @font-size-title-md + 2;
+		}
+		.cl-output.txt {
+			font-size: @font-size-body-md + 2;
+		}
+	}
+	.cl-output.title {
+		font-size: @font-size-body-md + 2;
+	}
+	.cl-output.caption {
+		font-size: @font-size-body-sm + 2;
+	}
+	.test-log-root {
+		.cl-output{
+			&.title{
+				font-size: @font-size-body-lg + 2;
+			}
+		}
+	}
+	.cl-container._login {
+		.cl-container.login-wrap {
+			.cl-container.login-box {
+				.cl-container.tabfolder-header {
+					.cl-button.item {
+						font-size: @font-size-title-sm + 2;
+					}
+				}
+			}
+			.cl-button.primary {
+				font-size: @font-size-title-md + 2;
+			}
+		}
+	}
+	.cl-container._main {
+		.cl-container.header {
+			.cl-container.util-button-group {
+				.cl-output.alarm {
+					font-size: 12px;
+				}
+			}
+		}
+		.cl-container.navbar {
+			.cl-navigationbar {
+				.cl-navigationbar-accessiblemegamenu {
+					.cl-navigationbar-list {
+						.cl-level-1 {
+							> .cl-navigationbar-listitem-wrapper {
+								> .cl-navigationbar-listitem {
+									font-size: @font-size-title-sm + 2;
+								}
+							}
+						}
+						.cl-navigationbar-listitem {
+							font-size: @font-size-title-xsm + 2;
+						}
+					}
+				}
+			}
+		}
+		.cl-container.aside {
+			.cl-container.menu-wrap {
+				.cl-sidenavigation.sidemenu {
+					.cl-sidenavigation-item {
+						&.cl-level-1 {
+							font-size: 17px;
+						}
+						&.cl-level-2 {
+							font-size: @font-size-body-sm + 2;
+						}
+					}
+				}
+			}
+			.cl-container.copyright {
+				.cl-output {
+					font-size: @font-size-body-xsm + 2;
+				}
+			}
+		}
+		
+		.cl-mdifolder.cl-tabfolder.tab-main {
+			> .content {
+				> .cl-tabfolder-header.cl-top.content {
+					.cl-tabfolder-item {
+						font-size: @font-size-body-sm + 2;
+					}
+				}
+			}
+		}
+		.cl-container.dropdown-menu {
+			.cl-container.dropdown-header {
+				.cl-output.tit {
+					font-size: @font-size-title-sm + 2;
+				}
+			}
+		}
+		.cl-container.dropdown-body {
+			.cl-container.notification-item {
+				.cl-output.txt {
+					font-size: @font-size-body-sm + 2;
+				}
+				.cl-output.date {
+					font-size: @font-size-body-xsm + 2;
+				}
+				&.active {
+					.cl-output.txt {
+						.cl-text::after {
+							font-size: 12px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.cl-container.mobile-menu {
+		.cl-output.name {
+			font-size: @font-size-title-sm + 2;
+		}
+		.cl-container.mobile-body {
+			.cl-sidenavigation {
+				.cl-sidenavigation-item {
+					&.cl-level-1 {
+						font-size: @font-size-title-xsm + 2;
+					}
+				}
+			}
+		}
+	}
+	.cl-container._setting {
+		.cl-container.setting-list {
+			.cl-container.li {
+				.cl-output.label {
+					font-size: @font-size-body-sm + 2;
+				}
+			}
+		}
+	}
+	.cl-container._dash {
+		.cl-container.user-box {
+			.cl-container.text {
+				.cl-output.name {
+					font-size: @font-size-title-xlg + 2;
+				}
+			}
+		}
+		.cl-container.conts-wrap {
+			.cl-container.box {
+				.cl-output.tit {
+					font-size: @font-size-title-md + 2;
+				}
+			}
+		}
+		.cl-tabfolder.tab {
+			> .tab {
+				> .cl-tabfolder-header.cl-top.tab {
+					.cl-tabfolder-item {
+						font-size: @font-size-title-sm + 2;
+						.cl-text {
+							.num {
+								font-size: @font-size-body-sm + 2;
+							}
+						}
+					}
+				}
+			}
+		}
+		.cl-container.swiper-wrapper {
+			.cl-button.slide {
+				font-size: @font-size-title-sm + 2;
+				.cl-text {
+					.subtxt {
+						font-size: @font-size-body-sm + 2;
+					}
+				}
+			}
+		}
+		.cl-container.about {
+			.cl-button {
+				.icon {
+					font-size: @font-size-title-xsm + 2;
+				}
+				.title {
+					font-size: @font-size-title-sm + 2;
+				}
+			}
+		}
+		.cl-container.quickmenu {
+			.cl-button {
+				&.nodata {
+					font-size: @font-size-body-xsm + 2;
+				}
+			}
+		}
+		.cl-container.schedule {
+			.cl-container.weekly {
+				.cl-container.schedule-content-header {
+					.cl-output {
+						font-size: @font-size-body-xsm + 2;
+					}
+				}
+				.cl-container.schedule-content-body {
+					.cl-button {
+						font-size: 17px;
+					}
+				}
+			}
+		}
+	}
+	.cl-container.main-vban {
+		.cl-container.user {
+			.cl-container.info-wrap {
+				.cl-output.name {
+					font-size: @font-size-title-md + 2;				
+					.key {
+						font-size: @font-size-title-xlg + 2;
+					}
+				}
+				
+				.cl-output.time {
+					font-size: 13px;
+				}
+			}
+			.cl-container.mytodo {
+				.cl-container.todo {
+					.cl-output {
+						&.label {
+							font-size: 20px;
+						}
+						
+						&.value {
+							font-size: 50px;
+						}
+					}
+				}
+			}
+		}
+		.cl-container.today {
+			.cl-output.tit {
+				font-size: @font-size-title-md + 2;
+			}
+			.cl-container.ul {
+				.cl-container.li {
+					.cl-output.badge {
+						font-size: @font-size-body-md + 2;
+					}
+					.cl-output.name {
+						font-size: @font-size-body-lg + 2;
+					}
+				}
+			}
+		}
+	}
+	.cl-container.calendar {
+		.cl-container.calendar-header {
+			.cl-output.tit {
+				font-size: 20px;
+			}
+			.cl-output.header-txt {
+				font-size: 24px;
+			}
+			.cl-radiobutton.type {
+				font-size: 14px;
+			}
+		}
+		.cl-calendar.cl-anniversaries {
+			.cl-calendar-content-day,
+			.cl-other-month {
+				font-size: 15px;
+			}
+		}
+		.cl-calendar-detail {
+			font-size: 32px;
+		}
+		.cl-calendar-item-wrap,
+		.cl-anniversary-wrap,
+		.cl-calendar-more-wrap {
+			font-size: 20px;
+		}
+	}
+	.cl-container.dash-chart {
+		.cl-radiobutton.tab {
+			font-size: 18px;
+			.cl-radiobutton-item {
+				&.cl-selected {
+					font-size: 20px;
+				}
+			}	
+		}
+	}
+	.cl-container.user-guide {
+		.cl-output.tit {
+			font-size: 20px;
+		}
+		.cl-container.guide-btn {
+			.cl-button {
+				font-size: 17px;
+			}
+		}
+		.cl-container.notice-wrap {
+			.cl-container.li {
+				.cl-output.txt {
+					font-size: 18px;
+				}
+				.cl-output.date {
+					font-size: 17px;
+				}
+			}
+		}
+	}
+	.cl-container.errorpage {
+		.cl-output.tit {
+			font-size: 62px;
+		}
+		.cl-output.txt {
+			font-size: @font-size-body-lg + 2;
+		}
+	}
+	@media (max-width: 599px) {
+		.cl-container.errorpage {
+			.cl-output.tit {
+				font-size: 38px;
+			}
+			
+			.cl-output.txt {
+				font-size: 17px;
+			}
+		}
+	}
+	
+	.cl-container.table {
+		.cl-container.table-accordion-row {
+			.cl-output.title {
+				font-size: 18px;
+			}
+		}
+	}
+	.cl-container.app-header {
+		.cl-container.breadcrumbs {
+			.cl-output.breadcrumb-item {
+				font-size: 15px;
+			}
+		}
+	}
+	.cl-container.title-area {
+		.cl-output.tit {
+			font-size: @font-size-title-sm + 2;
+		}
+		.cl-output.table-row-count {
+			font-size: @font-size-body-sm + 2;
+		}
+	}
+	.loader-overlay {
+		.cl-container.loader-box {
+			.cl-container.in {
+				.cl-output.txt {
+					font-size: @font-size-title-md + 2;
+				}
+			}
+		}
+	}
+	
+	.cl-container.scenario-panel {
+		.cl-container.flt-right-process {
+			.cl-output.title {
+				font-size: @font-size-title-sm + 2;
+			}
+			.cl-grid {
+				.cl-rowgroup-header {
+					.title {
+						font-size: @font-size-title-sm + 2;
+					}
+					.sub-title {
+						font-size: @font-size-title-xsm + 2;
+					}
+				}
+			}
+		}
+	}
+}
+
+[data-fontSize="18"] {
+	.cl-control, 
+	.cl-accordion, .cl-button, .cl-calendar, .cl-checkbox, 
+	.cl-checkboxgroup, .cl-combobox, .cl-combobox-list,
+	.cl-dateinput, .cl-dialog, .cl-fileinput, .cl-fileupload,
+	.cl-grid, .cl-search-input, .cl-inputbox, .cl-linkedcombobox, .cl-linkedcombobox-list,
+	.cl-linkedlistbox, .cl-listbox, .cl-maskeditor, .cl-menu, .cl-navigationbar, .cl-navigationbar-list,
+	.cl-notifier-item, .cl-numbereditor, .cl-output, .cl-pageindexer,
+	.cl-progress, .cl-radiobutton, .cl-searchinput, .cl-sidenavigation,
+	.cl-slider-label, .cl-tabfolder, .cl-textarea, .cl-tree, .cl-treecell
+	.cl-calendar-footer-text, .cl-fileupload-button {
+		font-size: @font-size-body-md + 4;
+	}
+	
+	.cl-calendar-header-text {
+		font-size: @font-size-title-sm + 4;
+	}
+	.cl-dialog {
+		.cl-dialog-header {
+			.cl-text {
+				font-size: @font-size-title-sm + 4;
+			}
+		}
+	}
+	
+	.cl-grid {
+		.cl-grid-header {
+			.cl-sortable-cell {
+				.cl-sort {
+					.cl-sort-seq {
+						font-size: @font-size-body-xsm + 4;
+					}	
+				}	
+			}
+		}
+	}
+	.cl-gridfilter {
+		.cl-filterdlg {
+			.cl-filterdlg-header {
+				.cl-text {
+					font-size: @font-size-title-sm + 4;
+				}
+			}
+			.cl-filterdlg-buttons {
+				.cl-checkbox {
+					font-size: @font-size-body-sm + 4;
+				}
+			}
+		}
+	}
+	.cl-tooltip {
+		font-size: @font-size-body-sm + 4;
+	}
+	
+	.h1 {
+		font-size: @font-size-title-xxlg + 4;
+	}
+	
+	.h2 {
+		font-size: @font-size-title-xlg + 4;
+	}
+	
+	.h3 {
+		font-size: @font-size-title-lg + 4;
+	}
+	
+	.h4 {
+		font-size: @font-size-title-md + 4;
+	}
+	
+	.h5 {
+		font-size: @font-size-title-sm + 4;
+	}
+	
+	.h6 {
+		font-size: @font-size-title-xsm + 4;
+	}
+	
+	.b-xxxlg {
+		font-size: @font-size-title-xxlg + 4;
+	}
+	
+	.b-xxlg {
+		font-size: @font-size-title-xlg + 4;
+	}
+	
+	.b-xlg {
+		font-size: @font-size-title-md + 4;
+	}
+	
+	.b-lg {
+		font-size: @font-size-title-sm + 4;
+	}
+	
+	.b-md {
+		font-size: @font-size-body-xlg + 4;
+	}
+	
+	.b-sm {
+		font-size: @font-size-body-lg + 4;
+	}
+	
+	.b-xs {
+		font-size: @font-size-body-md + 4;
+	}
+	
+	.b-xxsm {
+		font-size: @font-size-body-sm + 4;
+	}
+	
+	.b-xxxsm {
+		font-size: @font-size-body-xsm + 4;
+	}
+
+	.cl-container.search-box {
+		.cl-container.search-button-group {
+			.cl-button {
+				font-size: @font-size-body-lg + 4;
+			}
+		}
+	}
+	.cl-container.governing {
+		.cl-output.tit {
+			font-size: @font-size-title-md + 4;
+		}
+		.cl-output.txt {
+			font-size: @font-size-body-md + 4;
+		}
+	}
+	.cl-output.title {
+		font-size: @font-size-body-md + 4;
+	}
+	.cl-output.caption {
+		font-size: @font-size-body-sm + 4;
+	}
+	.test-log-root {
+		.cl-output{
+			&.title{
+				font-size: @font-size-body-lg + 4;
+			}
+		}
+	}
+	.cl-container._login {
+		.cl-container.login-wrap {
+			.cl-container.login-box {
+				.cl-container.tabfolder-header {
+					.cl-button.item {
+						font-size: @font-size-title-sm + 4;
+					}
+				}
+			}
+			.cl-button.primary {
+				font-size: @font-size-title-md + 4;
+			}
+		}
+	}
+	.cl-container._main {
+		.cl-container.header {
+			.cl-container.util-button-group {
+				.cl-output.alarm {
+					font-size: 14px;
+				}
+			}
+		}
+		.cl-container.navbar {
+			.cl-navigationbar {
+				.cl-navigationbar-accessiblemegamenu {
+					.cl-navigationbar-list {
+						.cl-level-1 {
+							> .cl-navigationbar-listitem-wrapper {
+								> .cl-navigationbar-listitem {
+									font-size: @font-size-title-sm + 4;
+								}
+							}
+						}
+						.cl-navigationbar-listitem {
+							font-size: @font-size-title-xsm + 4;
+						}
+					}
+				}
+			}
+		}
+		.cl-container.aside {
+			.cl-container.menu-wrap {
+				.cl-sidenavigation.sidemenu {
+					.cl-sidenavigation-item {
+						&.cl-level-1 {
+							font-size: 19px;
+						}
+						&.cl-level-2 {
+							font-size: @font-size-body-sm + 4;
+						}
+					}
+				}
+			}
+			.cl-container.copyright {
+				.cl-output {
+					font-size: @font-size-body-xsm + 4;
+				}
+			}
+		}
+		
+		.cl-mdifolder.cl-tabfolder.tab-main {
+			> .content {
+				> .cl-tabfolder-header.cl-top.content {
+					.cl-tabfolder-item {
+						font-size: @font-size-body-sm + 4;
+					}
+				}
+			}
+		}
+		.cl-container.dropdown-menu {
+			.cl-container.dropdown-header {
+				.cl-output.tit {
+					font-size: @font-size-title-sm + 4;
+				}
+			}
+		}
+		.cl-container.dropdown-body {
+			.cl-container.notification-item {
+				.cl-output.txt {
+					font-size: @font-size-body-sm + 4;
+				}
+				.cl-output.date {
+					font-size: @font-size-body-xsm + 4;
+				}
+				&.active {
+					.cl-output.txt {
+						.cl-text::after {
+							font-size: 14px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.cl-container.mobile-menu {
+		.cl-output.name {
+			font-size: @font-size-title-sm + 4;
+		}
+		.cl-container.mobile-body {
+			.cl-sidenavigation {
+				.cl-sidenavigation-item {
+					&.cl-level-1 {
+						font-size: @font-size-title-xsm + 4;
+					}
+				}
+			}
+		}
+	}
+	.cl-container._setting {
+		.cl-container.setting-list {
+			.cl-container.li {
+				.cl-output.label {
+					font-size: @font-size-body-sm + 4;
+				}
+			}
+		}
+	}
+	.cl-container._dash {
+		.cl-container.user-box {
+			.cl-container.text {
+				.cl-output.name {
+					font-size: @font-size-title-xlg + 4;
+				}
+			}
+		}
+		.cl-container.conts-wrap {
+			.cl-container.box {
+				.cl-output.tit {
+					font-size: @font-size-title-md + 4;
+				}
+			}
+		}
+		.cl-tabfolder.tab {
+			> .tab {
+				> .cl-tabfolder-header.cl-top.tab {
+					.cl-tabfolder-item {
+						font-size: @font-size-title-sm + 4;
+						.cl-text {
+							.num {
+								font-size: @font-size-body-sm + 4;
+							}
+						}
+					}
+				}
+			}
+		}
+		.cl-container.swiper-wrapper {
+			.cl-button.slide {
+				font-size: @font-size-title-sm + 4;
+				.cl-text {
+					.subtxt {
+						font-size: @font-size-body-sm + 4;
+					}
+				}
+			}
+		}
+		.cl-container.about {
+			.cl-button {
+				.icon {
+					font-size: @font-size-title-xsm + 4;
+				}
+				.title {
+					font-size: @font-size-title-sm + 4;
+				}
+			}
+		}
+		.cl-container.quickmenu {
+			.cl-button {
+				&.nodata {
+					font-size: @font-size-body-xsm + 4;
+				}
+			}
+		}
+		.cl-container.schedule {
+			.cl-container.weekly {
+				.cl-container.schedule-content-header {
+					.cl-output {
+						font-size: @font-size-body-xsm + 4;
+					}
+				}
+				.cl-container.schedule-content-body {
+					.cl-button {
+						font-size: 19px;
+					}
+				}
+			}
+		}
+	}
+	.cl-container.main-vban {
+		.cl-container.user {
+			.cl-container.info-wrap {
+				.cl-output.name {
+					font-size: @font-size-title-md + 4;				
+					.key {
+						font-size: @font-size-title-xlg + 4;
+					}
+				}
+				
+				.cl-output.time {
+					font-size: 15px;
+				}
+			}
+			.cl-container.mytodo {
+				.cl-container.todo {
+					.cl-output {
+						&.label {
+							font-size: 22px;
+						}
+						
+						&.value {
+							font-size: 52px;
+						}
+					}
+				}
+			}
+		}
+		.cl-container.today {
+			.cl-output.tit {
+				font-size: @font-size-title-md + 4;
+			}
+			.cl-container.ul {
+				.cl-container.li {
+					.cl-output.badge {
+						font-size: @font-size-body-md + 4;
+					}
+					.cl-output.name {
+						font-size: @font-size-body-lg + 4;
+					}
+				}
+			}
+		}
+	}
+	.cl-container.calendar {
+		.cl-container.calendar-header {
+			.cl-output.tit {
+				font-size: 22px;
+			}
+			.cl-output.header-txt {
+				font-size: 26px;
+			}
+			.cl-radiobutton.type {
+				font-size: 16px;
+			}
+		}
+		.cl-calendar.cl-anniversaries {
+			.cl-calendar-content-day,
+			.cl-other-month {
+				font-size: 17px;
+			}
+		}
+		.cl-calendar-detail {
+			font-size: 34px;
+		}
+		.cl-calendar-item-wrap,
+		.cl-anniversary-wrap,
+		.cl-calendar-more-wrap {
+			font-size: 22px;
+		}
+	}
+	.cl-container.dash-chart {
+		.cl-radiobutton.tab {
+			font-size: 20px;
+			.cl-radiobutton-item {
+				&.cl-selected {
+					font-size: 22px;
+				}
+			}	
+		}
+	}
+	.cl-container.user-guide {
+		.cl-output.tit {
+			font-size: 22px;
+		}
+		.cl-container.guide-btn {
+			.cl-button {
+				font-size: 19px;
+			}
+		}
+		.cl-container.notice-wrap {
+			.cl-container.li {
+				.cl-output.txt {
+					font-size: 20px;
+				}
+				.cl-output.date {
+					font-size: 19px;
+				}
+			}
+		}
+	}
+	.cl-container.errorpage {
+		.cl-output.tit {
+			font-size: 64px;
+		}
+		.cl-output.txt {
+			font-size: @font-size-body-lg + 4;
+		}
+	}
+	@media (max-width: 599px) {
+		.cl-container.errorpage {
+			.cl-output.tit {
+				font-size: 40px;
+			}
+			
+			.cl-output.txt {
+				font-size: 19px;
+			}
+		}
+	}
+	
+	.cl-container.table {
+		.cl-container.table-accordion-row {
+			.cl-output.title {
+				font-size: 20px;
+			}
+		}
+	}
+	.cl-container.app-header {
+		.cl-container.breadcrumbs {
+			.cl-output.breadcrumb-item {
+				font-size: 17px;
+			}
+		}
+	}
+	.cl-container.title-area {
+		.cl-output.tit {
+			font-size: @font-size-title-sm + 4;
+		}
+		.cl-output.table-row-count {
+			font-size: @font-size-body-sm + 4;
+		}
+	}
+	.loader-overlay {
+		.cl-container.loader-box {
+			.cl-container.in {
+				.cl-output.txt {
+					font-size: @font-size-title-md + 4;
+				}
+			}
+		}
+	}
+	
+	.cl-container.scenario-panel {
+		.cl-container.flt-right-process {
+			.cl-output.title {
+				font-size: @font-size-title-sm + 4;
+			}
+			.cl-grid {
+				.cl-rowgroup-header {
+					.title {
+						font-size: @font-size-title-sm + 4;
+					}
+					.sub-title {
+						font-size: @font-size-title-xsm + 4;
+					}
+				}
+			}
+		}
+	}
+}

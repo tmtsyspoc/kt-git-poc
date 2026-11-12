@@ -1,0 +1,729 @@
+@import "../core/include.part.less";
+
+@conts__border: 1px solid @cl-base-color-border-gray-soft;
+
+/**
+ * ============================================================================
+ * @file      content.part.less
+ * @desc      CORE-UI 콘텐츠 스타일 정의
+ * @rule      
+ * 1. 독립성 유지
+ *  - 이 파일 내부에 선언된 변수는 외부에서 참조할 수 없음
+ * @contents
+ * 1. 메인
+ * 2. 콘텐츠
+ * 3. 기본 패턴 및 서비스 패턴
+ * 4. 팝업 콘텐츠
+ * ============================================================================
+ */
+
+/* ==========================================================================
+   1. 메인
+ ========================================================================== */
+
+
+/* ==========================================================================
+   2. 콘텐츠
+ ========================================================================== */
+
+.cl-container.conts-wrap {
+	border: @conts__border;
+	border-radius: @cl-gap-4;
+	
+	.sec-tit {
+		font-size: @cl-pc-font-size-heading-xsmall;
+		font-weight: @cl-font-weight-semibold;
+		padding-left: 6px + @cl-gap-5;
+		
+		&::before {
+			.pseudo();
+			.position(@l: 0);
+			.position-center(y);
+			.square(6px);
+			border-radius: @cl-radius-max;
+			background-color: @cl-base-color-element-primary;
+		}
+		
+		@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+			font-size: @cl-mobile-font-size-heading-xsmall;
+		}
+	}
+	
+	// 1뎁스
+	.cl-container.conts-wrap {
+		border: none;
+		border-radius: @cl-gap-0;
+		
+		// 2뎁스
+		.cl-container.conts-wrap {
+			// 3뎁스
+			.cl-container.conts-wrap {
+				// 4뎁스
+			}
+		}
+	}
+}
+
+.cl-container.conts-area {
+	// TYPE 으로 분류하여 특정 페이지 케이스 작성 (예: &.xxx-type)
+	&.mb {
+		margin-bottom: 24px;
+	}
+}
+
+/* --- 검색 필터 --- */
+
+/* 검색 필터 영역 */
+//.cl-container.search-top-box {
+//	padding-top: @cl-gap-4;
+//	border: @conts__border;
+//	border-radius: @cl-radius-small2;
+	
+	.cl-container.app-header {
+		padding: 0 @cl-gap-6;
+	}
+	
+	.cl-container.sch-form-wrap {
+		padding: @cl-gap-7;
+		outline: @conts__border;
+		border-radius: @cl-radius-small2;
+	}
+	
+	.cl-container.sch-filter-box {
+		padding: @cl-gap-7;
+		outline: @conts__border;
+		border-radius: @cl-radius-small2;
+		@search__color-surface: @cl-base-color-surface-white;
+		
+		background-color: @search__color-surface;
+		border: 0;
+		
+		.cl-container.sch-in {
+			&.optional {
+				&::before {
+					.pseudo();
+					position: relative;
+					display: block;
+					width: 100%;
+					height: @cl-gap-6;
+					border-top: 1.5px dashed @cl-base-color-alpha-inverse10;
+					box-sizing: content-box;
+				}
+			}
+		}
+		
+		.cl-button {
+			border-radius: @cl-radius-xsmall3;
+		}
+	}
+	
+	.cl-container.sch-btn-wrap {
+		padding-top: @cl-gap-6;
+		border-top: @conts__border;
+		
+		.cl-button.sch-btn {
+			background-color: @cl-base-color-element-secondary;
+			border-color: @cl-base-color-element-secondary;
+			color: @cl-base-color-text-inverse-static;
+			
+			&:not(.cl-disabled):hover {
+			}
+			
+			&.cl-focus {
+			}
+			
+			&:not(.cl-disabled).cl-activated,
+			&:not(.cl-disabled):active {
+			}
+			
+			&.cl-disabled {
+			}
+		}
+	}
+	
+	.cl-button.sch-toggle-btn {
+		margin-left: auto;
+	}
+//}
+
+/*  */
+.cl-container.app-header {
+}
+
+/*  */
+.cl-container.sch-form-wrap {
+}
+
+/* 검색 필터 */
+.cl-container.sch-filter-box {
+	@search__color-surface: @cl-base-color-surface-white;
+	@search__color-border: @cl-base-color-border-secondary-soft;
+	
+	background-color: @cl-color-base-danger-5;
+//	background-color: @search__color-surface;
+//	border: 2px solid @search__color-border;
+	
+	.label {
+		// form-layout.part.less 에 정의된 .label 상속됨
+		
+		text-align: right;
+		
+		@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+			text-align: left;
+		}
+		
+		&:not(.cl-first-column) {
+			margin-left: @cl-gap-4;
+		}
+		
+		&.cl-button {
+			background: 0;
+			border: 0;
+			border-radius: 0;
+			padding: 0;
+			
+			&:not(.cl-disabled):hover,
+			&:not(.cl-disabled).cl-activated,
+			&:not(.cl-disabled):active {
+				color:
+			}
+		}
+	}
+}
+
+/* 검색 필터 토글 버튼 */
+.cl-button.sch-toggle-btn {
+	@search__button-radius: @cl-radius-small2;
+	
+	@search__button-color-fill: @cl-base-color-surface-secondary-softer;
+	@search__button-color-fill--hover: @cl-base-color-surface-secondary-soft;
+	@search__button-color-fill--pressed: @cl-base-color-surface-secondary-soft;
+	@search__button-color-text: @cl-base-color-text-secondary;
+	
+	background-color: @search__button-color-fill;
+	border: 0;
+	border-radius: @search__button-radius;
+	border-top-right-radius: 0;
+	color: @search__button-color-text;
+	min-height: @cl-size-height-6;
+	transform: translateY(@search__button-radius * -1);
+	
+	.cl-text-wrapper {
+		gap: 0;
+	}
+	
+	&:not(.cl-disabled):hover {
+		background-color: @search__button-color-fill--hover;
+		color: @search__button-color-text;
+	}
+	
+	&.cl-focus {
+	}
+	
+	&:not(.cl-disabled).cl-activated,
+	&:not(.cl-disabled):active {
+		background-color: @search__button-color-fill--pressed;
+		color: @search__button-color-text;
+	}
+	
+	&.cl-disabled {
+	}
+	
+	// 펼쳐졌을 때
+	&.active {
+		background-color: @search__button-color-fill--pressed;
+		
+		.cl-icon {
+			transform: rotate(-180deg);
+		}
+	}
+}
+
+/* 검색 필터 하단 접기/펼치기 탭 버튼 (아이콘 전용, 조회조건 박스 아래 가장자리 가운데) */
+.cl-button.sch-fold-btn {
+	@sch-fold__radius: @cl-radius-xsmall3;
+	@sch-fold__color-fill: @cl-color-base-secondary-90;
+	@sch-fold__color-fill--hover: @cl-color-base-secondary-80;
+	@sch-fold__color-icon: @cl-base-color-text-inverse-static;
+
+	padding: 0;
+	border: 0;
+	border-radius: 0 0 @sch-fold__radius @sch-fold__radius;
+	background-color: @sch-fold__color-fill;
+	transform: translateY(100%); // 레이아웃 셀 하단(박스 아래 가장자리)에서 버튼 높이만큼 아래로 매단다
+
+	.cl-icon {
+		.icon-set(ico_arrow_down);
+		background-color: @sch-fold__color-icon;
+		transition: transform 0.2s;
+	}
+
+	&:not(.cl-disabled):hover,
+	&:not(.cl-disabled).cl-activated,
+	&:not(.cl-disabled):active {
+		background-color: @sch-fold__color-fill--hover;
+	}
+
+	// 펼쳐졌을 때
+	&.active {
+		.cl-icon {
+			transform: rotate(180deg);
+		}
+	}
+}
+
+/* ==========================================================================
+   3. 기본 패턴 및 서비스 패턴
+ ========================================================================== */
+
+/* ==========================================================================
+   3-1. 로그인
+ ========================================================================== */
+
+/* ==========================================================================
+   3-2. 통합 검색
+ ========================================================================== */
+
+/* ==========================================================================
+   3-3. 약관 동의
+ ========================================================================== */
+
+/* ==========================================================================
+   3-4. 서비스 신청
+ ========================================================================== */
+
+/* ==========================================================================
+   3-5. 완료 페이지
+ ========================================================================== */
+
+/* ==========================================================================
+   3-6. 평가
+ ========================================================================== */
+
+
+/* ==========================================================================
+   3-8. STEP UI
+ ========================================================================== */
+ 
+.step-wrap {
+	
+	.step-item {
+		position: relative;
+		
+		&::before {
+			content: '';
+			width: calc(50% - 20px);
+			height: 2px;
+			background: @cl-color-base-gray-20;
+			position: absolute;
+			top: 20px;
+			left: 0;
+		}
+		
+		&::after {
+			content: '';
+			width: calc(50% - 20px);
+			height: 2px;
+			background: @cl-color-base-gray-20;
+			position: absolute;
+			top: 20px;
+			right: 0;
+		}
+		
+		&.cl-first-column::before,
+		&.cl-last-column::after {
+			display: none;
+		}
+		
+		.step-icon {
+			.ph-icon(20px, fill);
+			
+			width: 40px;
+			height: 40px;
+			position: relative;
+			background-color: #ffffff;
+			border: 2px solid @cl-color-base-gray-20;
+			border-radius: 50%;
+			color: @cl-color-base-gray-20;
+			margin-bottom: 4px;
+			z-index: 2;
+			
+			// 민원접수
+			&.step01 { 
+				.ph-icon-set("\eca8");
+			}
+			
+			// 수령처리
+			&.step02 { 
+				.ph-icon-set("\e256");
+			}
+			
+			// 접수확인
+			&.step03 { 
+				.ph-icon-set("\e184");
+			}
+			
+			// 심사및내역등록
+			&.step04 { 
+				.ph-icon-set("\ebc6");
+			}
+			
+			// 민원결과결재
+			&.step05 { 
+				.ph-icon-set("\e23a");
+			}
+			
+			// 민원결과등록
+			&.step06 { 
+				.ph-icon-set("\e2f8");
+			}
+		}
+		
+		.step-num {
+			color: @cl-color-base-gray-50;
+			font-size: @cl-pc-font-size-body-small;
+			font-weight: @cl-font-weight-medium;
+			text-align: center;
+		}
+		
+		.step-tit {
+			font-size: @cl-pc-font-size-body-large;
+			font-weight: @cl-font-weight-semibold;
+			line-height: @cl-line-height-tight;
+			text-align: center;
+		}
+		
+		.step-txt {
+			color: @cl-color-base-gray-40;
+			font-size: @cl-pc-font-size-body-small;
+			font-weight: @cl-font-weight-medium;
+			text-align: center;
+		}
+		
+		&.current {
+			.step-icon {
+				color: @cl-color-base-gray-40;
+			}
+		}
+		&.done {
+			.step-icon {
+				background-color: @cl-base-color-element-primary-soft;
+				border: 4px solid @cl-color-base-primary-10;
+				color: #ffffff;
+			}
+			
+			.step-num, .step-tit, .step-txt {
+				color: @cl-color-base-gray-30;
+			}
+		}
+		
+		&.active {
+			
+			.step-icon {
+				background-color: @cl-base-color-element-secondary;
+				border: 4px solid @cl-color-base-primary-10;
+				color: #ffffff;
+			}
+			
+			.step-num {
+				color: @cl-color-base-gray-50;
+			}
+			
+			.step-tit {
+				color: @cl-base-color-element-primary;
+			}
+			
+			.step-txt {
+				color: @cl-base-color-element-information;
+			}
+		}
+	}
+}
+
+// .size-medium();
+@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+	
+	.step-wrap {
+		margin-bottom: 8px;
+		
+		.step-item {
+			.step-num {
+				font-size: @cl-mobile-font-size-body-small;
+			}
+				
+			.step-tit {
+				 font-size: @cl-mobile-font-size-body-medium;
+			}
+				
+			.step-txt {
+				display: none !important;
+			}
+			
+			&:not(.active) {
+			
+				.step-num {
+					display: none !important;
+				}
+				
+				.step-tit {
+					display: none !important;
+				}
+			}
+		}
+	}
+}
+
+.color-mode(@mode: high-contrast) {
+	
+	.step-wrap {
+			
+		.step-num {
+			color: @cl-color-high-contrast-gray-20;
+		}
+		.step-tit {
+			color: @cl-high-contrast-color-text-bold;
+		}
+				
+		.step-item {
+			
+			&::before {
+				background: @cl-high-contrast-color-border-gray-bolder;
+			}
+			
+			&::after {
+				background: @cl-high-contrast-color-border-gray-bolder;
+			}
+			
+			.step-icon {
+				background-color: transparent;
+				border-color: @cl-high-contrast-color-border-gray-bolder;
+			}
+			
+			&.active {
+				
+				.step-icon {
+					background-color: fade(@cl-high-contrast-color-text-primary, 20%);
+					border-color: @cl-high-contrast-color-border-primary;
+				}
+				
+				.step-tit {
+					color: @cl-high-contrast-color-text-primary;
+				}
+				
+				.step-txt {
+					color: @cl-high-contrast-color-text-secondary;
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   4. 팝업 콘텐츠
+ ========================================================================== */
+ 
+/* ==========================================================================
+ 5. Mode
+ ========================================================================== */
+
+.color-mode(@mode: high-contrast) {
+	
+	/* --- 색상 변수 ---*/
+	@conts__border: 1px solid fade(#ffffff, 8%);
+	@cl-base-color-surface-white: rgba(0, 0, 0, 0);
+	
+	/* 검색 필터 영역 */
+//	.cl-container.search-top-box {
+//		background-color: #20252b;
+//		border: @conts__border;
+		
+		.cl-container.app-header {
+		}
+		
+		.cl-container.sch-form-wrap {
+			outline: @conts__border;
+		}
+		
+		.cl-container.sch-filter-box {
+			@search__color-surface: @cl-base-color-surface-white;
+			
+			background-color: @search__color-surface;
+			border: 0;
+			
+			.cl-container.sch-in {
+				&.optional {
+					&::before {
+						.pseudo();
+						position: relative;
+						display: block;
+						width: 100%;
+						height: @cl-gap-6;
+						border-top: 1.5px dashed @cl-base-color-alpha-inverse10;
+						box-sizing: content-box;
+					}
+				}
+			}
+			
+			.cl-button {
+				border-radius: @cl-radius-xsmall3;
+			}
+		}
+		
+		.cl-container.sch-btn-wrap {
+			padding-top: @cl-gap-6;
+			border-top: @conts__border;
+			
+			.cl-button.sch-btn {
+				background-color: @cl-base-color-element-secondary;
+				border-color: @cl-base-color-element-secondary;
+				color: @cl-base-color-text-inverse-static;
+				
+				&:not(.cl-disabled):hover {
+				}
+				
+				&.cl-focus {
+				}
+				
+				&:not(.cl-disabled).cl-activated,
+				&:not(.cl-disabled):active {
+				}
+				
+				&.cl-disabled {
+				}
+			}
+		}
+//	}
+	
+	/* --- 콘텐츠 ---*/
+	.cl-container.conts-wrap {
+		border: @conts__border;
+		background-color: #272c32;
+		
+		.sec-tit {
+			font-size: @cl-pc-font-size-heading-xsmall;
+			font-weight: @cl-font-weight-semibold;
+			padding-left: 6px + @cl-gap-5;
+			
+			&::before {
+				.pseudo();
+				.position(@l: 0);
+				.position-center(y);
+				.square(6px);
+				border-radius: @cl-radius-max;
+				background-color: @cl-base-color-element-primary;
+			}
+			
+			@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+				font-size: @cl-mobile-font-size-heading-xsmall;
+			}
+		}
+		
+		// 1뎁스
+		.cl-container.conts-wrap {
+			border: none;
+			border-radius: @cl-gap-0;
+			
+			// 2뎁스
+			.cl-container.conts-wrap {
+				// 3뎁스
+				.cl-container.conts-wrap {
+					// 4뎁스
+				}
+			}
+		}
+	}
+	.cl-container.conts-footer {
+		background-color : transparent;
+		outline: 1px solid #dddddd;
+	}
+}
+
+/************************************************
+ * 푸터 영역
+ ************************************************/
+.cl-container.conts-footer {
+	background-color: @cl-color-base-secondary-5;
+	padding : 12px;
+}
+
+
+/************************************************
+ * 거버닝
+ * → 시나리오 요약 설명
+ ************************************************/
+
+.cl-container.governing {
+	background-color: @cl-color-base-primary-5;
+	border: 1px solid @cl-color-base-primary-10;
+	border-radius: 12px;
+	padding: 16px 20px;
+	
+	.cl-output.tit {
+		border-bottom: 1px dashed @cl-color-base-primary-20;
+		font-size: 16px;
+		font-weight: @cl-font-weight-semibold;
+		padding-bottom: 8px;
+		
+		.cl-text {
+			padding: 0 0 0 28px;
+		}
+		
+		&::before {
+			content: "";
+			position: absolute;
+			top: 2px;
+			left: 0;
+			width: 24px;
+			height: 24px;
+			background-color: @cl-color-base-primary-50;
+			mask: url("../../img/pages/main/ico_help_24.svg");
+			-webkit-mask: url("../../img/pages/main/ico_help_24.svg");
+		}
+	}
+	
+	.cl-output.txt {
+		font-size: 14px;
+	}
+}
+
+.cl-htmlsnippet.html-snp {
+	// 제목 앞 점 3개 — 브랜드 컬러(블랙·포인트색·그레이). 포인트색은 KT 메인의 메인 색상(--kt-point)을 따르고, 없으면 KT 레드
+	background-image:
+		radial-gradient(circle at 10.3px 50%, var(--kt-point, #E4002B) 0, var(--kt-point, #E4002B) 2.8px, transparent 3.1px),
+		radial-gradient(circle at 5.6px 50%, #1A1A1A 0, #1A1A1A 2.8px, transparent 3.1px),
+		radial-gradient(circle at 18.4px 50%, #BDBDBD 0, #BDBDBD 2.8px, transparent 3.1px);
+	background-repeat: no-repeat;
+	background-position: 0 center;
+	background-size: 24px 24px;
+	font-weight: 700;
+	font-size: 16px;
+	padding-left : 30px;
+}
+
+.cl-htmlsnippet.sn-auto {
+	overflow : auto !important;
+}
+
+.cl-progress.pg {
+	.cl-text {
+		padding-left: 10px;
+	}
+}
+
+.cl-output.hdr-badge {
+	border-radius : @cl-radius-max;
+	padding : 0px @cl-padding-4;
+	font-weight : @cl-font-weight-bold;
+	
+	&.exb {
+		background-color : @cl-color-base-success-10;
+		color : @cl-color-base-success-50;
+	}
+	&.doc {
+		background-color : @cl-color-base-warning-10;
+		color : @cl-color-base-warning-50;
+	}
+	&.poc {
+		background-color : @cl-color-base-primary-10;
+		color : @cl-color-base-primary-50;
+	}
+}

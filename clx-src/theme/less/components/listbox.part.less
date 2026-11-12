@@ -1,0 +1,277 @@
+@import "../core/include.part.less";
+
+/**
+ * ============================================================================
+ * @file      listbox.part.less
+ * @desc      CORE-UI 컨트롤 스타일 정의
+ * @rule
+ * 1. 독립성 유지
+ *  - 이 파일 내부에 선언된 변수는 외부에서 참조할 수 없음
+ * @contents  
+ * 1. Base (공통 스타일)
+ * 2. Variants (유형별 스타일)
+ * 3. Mode (테마 스타일)
+ * ============================================================================
+ */
+
+/* ==========================================================================
+   Component Tokens
+ ========================================================================== */
+
+/* 사이즈 변수 */
+@listbox__radius: @cl-radius-xsmall3;
+@listbox__padding-x: @cl-padding-0;
+@listbox__padding-y: @cl-padding-2;
+@listbox__pc-font-size: @cl-pc-font-size-label-small;
+@listbox__mobile-font-size: @cl-mobile-font-size-label-small;
+@listbox__head-gap: @cl-gap-4;
+@listbox__head-pc-font-size: @cl-pc-font-size-heading-xsmall;
+@listbox__head-mobile-font-size: @cl-mobile-font-size-heading-xsmall;
+@listbox__item-size-height: @cl-size-height-6;
+@listbox__item-gap: @cl-gap-2;
+@listbox__item-icon-size: @cl-icon--size-small;
+@listbox__item-padding-x: @cl-padding-3;
+@listbox__item-padding-y: @cl-padding-0;
+
+/* 색상 변수 */
+@listbox__color-surface: @cl-base-color-input-surface;
+@listbox__color-surface--disabled: @cl-base-color-input-surface;
+@listbox__color-border: @cl-base-color-input-border;
+@listbox__color-border--active: @cl-base-color-input-border-active;
+@listbox__color-border--disabled: @cl-base-color-input-border-disabled;
+@listbox__color-text: @cl-base-color-text-basic;
+@listbox__color-text--disabled: @cl-base-color-text-disabled;
+@listbox__head-color-text: @cl-base-color-text-bolder;
+@listbox__item-color-icon-background: @cl-base-color-icon-gray;
+@listbox__item-color-icon-background--selected: @cl-base-color-icon-secondary;
+@listbox__item-color-icon-background--disabled: @cl-base-color-icon-disabled-on;
+@listbox__item-color-action--hover: @cl-base-color-action-primary-hover;
+@listbox__item-color-action--pressed: @cl-base-color-action-primary-pressed;
+@listbox__item-color-action--selected: @cl-base-color-action-primary-selected;
+@listbox__item-color-action--disabled: @cl-base-color-action-disabled;
+@listbox__item-color-text--hover: @cl-base-color-text-basic;
+@listbox__item-color-text--selected: #ffffff;
+@listbox__item-color-text--disabled: @cl-base-color-text-disabled-on;
+
+/* ==========================================================================
+    Local Mixins
+ ========================================================================== */
+
+
+
+/* ==========================================================================
+ 1. Base
+ ========================================================================== */
+
+/* --- 공통 --- */
+.cl-listbox, .cl-linkedlistbox {
+	color: @listbox__color-text;
+	font-size: @listbox__pc-font-size;
+	transition: @transition-base;
+	
+	@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+		// 767까지
+		font-size: @listbox__mobile-font-size;
+	}
+}
+
+.cl-listbox .cl-listbox-item,
+.cl-linkedlistbox .cl-linkedlistbox-item {
+	position: relative;
+	align-items: center;
+	color: inherit;
+	height: auto;
+	min-height: @listbox__item-size-height;
+	.focus-reset();
+	
+	.cl-icon {
+		.square(@cl-icon--size-small);
+		
+		+ .cl-text {
+			padding-left: @listbox__item-gap;
+		}
+	}
+	
+	.cl-text {
+		.flex-layout(@ai: center, @ai: center);
+		padding: @cl-padding-0;
+	}
+}
+
+/* --- 리스트박스 --- */
+.cl-listbox {
+	background-color: @listbox__color-surface;
+	border: 1px solid @listbox__color-border;
+	border-radius: @listbox__radius;
+	padding: @listbox__padding-y @listbox__padding-x;
+	
+	.cl-listbox-list {
+		.cl-listbox-item {
+			padding: @listbox__item-padding-y @listbox__item-padding-x;
+			
+			&.cl-dropbottom {
+				box-shadow: inset 0 -2px 0 @listbox__color-border--active;
+			}
+			
+			&.cl-droptop {
+				box-shadow: inset 0 2px 0 @listbox__color-border--active;
+			}
+			
+			.cl-icon {
+			}
+			
+			.cl-badge {
+			}
+			
+			&.cl-selected {
+				background-color: @listbox__item-color-action--selected;
+				color: @listbox__item-color-text--selected;
+			}
+		}
+	}
+	
+	&:not(.cl-disabled) {
+		.cl-listbox-item:not(.cl-disabled):not(.cl-selected) {
+			&:focus,
+			&.cl-hover,
+			&:hover {
+				background-color: @listbox__item-color-action--hover;
+				color: @listbox__item-color-text--hover;
+			}
+		}
+	}
+	
+	&:focus, &.cl-focus {
+		border-color: @listbox__color-border--active;
+		border-width: 2px;
+		.focus-reset();
+	}
+	
+	&.cl-disabled {
+		background-color: @listbox__color-surface--disabled;
+		border-color: @listbox__color-border--disabled;
+		color: @listbox__color-text--disabled;
+		
+		.cl-listbox-list {
+			.cl-listbox-item {
+				&.cl-selected {
+					background-color: @listbox__item-color-action--disabled;
+					color: @listbox__item-color-text--disabled;
+				}
+			}
+		}
+	}
+}
+
+/* --- 링크드 리스트박스 --- */
+.cl-linkedlistbox {
+	.cl-linkedlistbox-listbox {
+		.cl-linkedlistbox-list-wrapper {
+			gap: @listbox__head-gap;
+			
+			.cl-linkedlistbox-header {
+				background: 0;
+				border: 0;
+				border-radius: 0;
+				color: @listbox__head-color-text;
+				font-size: @listbox__head-pc-font-size;
+				font-weight: @cl-font-weight-semibold;
+				padding: @cl-padding-0;
+				text-align: left;
+				
+				@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+					// 767까지
+					font-size: @listbox__head-mobile-font-size;
+				}
+			}
+		}
+		
+		.cl-linkedlistbox-list {
+			background-color: @listbox__color-surface;
+			border: 1px solid @listbox__color-border;
+			border-radius: @listbox__radius;
+			padding: @listbox__padding-y @listbox__padding-x;
+			width: 100%;
+		
+			.cl-linkedlistbox-item {
+				padding: @listbox__item-padding-y @listbox__item-padding-x;
+				background-color: transparent;
+				
+				.cl-linkedlistbox-arrow.cl-folder {
+					background-image : url("../../img/icons/ico_down.svg");
+					transform: rotate(-90deg);
+				}
+			}
+			
+			&:focus {
+				.focus-reset();
+			}
+			
+			&:only-child {
+				width: 200px;
+			}
+			
+			+ &:not([class]) {
+				flex-shrink: 0; // 간격 보장
+			}
+		}
+		
+		&:focus, &.cl-focus {
+			.cl-linkedlistbox-list {
+				border-color: @listbox__color-border--active;
+				border-width: 2px;
+				.focus-reset();
+			}
+		}
+	}
+	
+	&:not(.cl-disabled) {
+		.cl-linkedlistbox-item:not(.cl-disabled) {
+			&:focus,
+			&.cl-hover,
+			&:hover {
+				background-color: @listbox__item-color-action--hover;
+				color: @listbox__item-color-text--hover;
+				
+				.cl-linkedlistbox-arrow.cl-folder {
+					background-image : url("../../img/icons/ico_down.svg");
+				}
+			}
+			
+			&.cl-selected {
+				background-color: @listbox__item-color-action--selected;
+				color: @listbox__item-color-text--selected;
+				
+				.cl-linkedlistbox-arrow.cl-folder {
+					background-image : url("../../img/icons/ico_down.svg");
+				}
+			}
+		}
+	}
+	
+	&.cl-disabled {
+		color: @listbox__color-text--disabled;
+		
+		.cl-linkedlistbox-item {
+			&.cl-selected {
+				background-color: @listbox__item-color-action--disabled;
+				color: @listbox__item-color-text--disabled;
+				
+				.cl-linkedlistbox-arrow.cl-folder {
+					background-image : url("../../img/icons/ico_down.svg");
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+ 2. Variants
+ ========================================================================== */
+
+
+
+/* ==========================================================================
+ 3. Mode
+ ========================================================================== */
+

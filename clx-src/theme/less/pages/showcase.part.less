@@ -1,0 +1,130 @@
+@import "../core/include.part.less";
+
+/**
+ * ============================================================================
+ * @file      showcase.part.less
+ * @desc      CORE-UI 스타일 중앙관리 시연 화면(app/sce/K2/K2-2.clx) 전용 클래스
+ * @rule
+ * 1. 독립성 유지
+ *  - 이 파일 내부에 선언된 변수는 외부에서 참조할 수 없음
+ * 2. 색상·간격·폰트는 tokens/variables 의 변수만 사용하고, 화면(.clx)에는 class 만 지정한다.
+ * @contents
+ * 1. 요약 타일 (showcase-tile)
+ * 2. 토큰 스와치 (token-swatch)
+ * 3. 클래스 칩 (class-chip)
+ * ============================================================================
+ */
+
+/* ==========================================================================
+   Component Tokens
+ ========================================================================== */
+
+/* 사이즈 변수 */
+@showcase__tile-radius: @cl-radius-small3;
+@showcase__swatch-radius: @cl-radius-small2;
+@showcase__chip-radius: @cl-radius-xsmall3;
+
+/* 색상 변수 */
+@showcase__swatch-color-border: @cl-base-color-border-gray-soft;
+@showcase__swatch-color-text: @cl-base-color-text-inverse-static;
+@showcase__swatch-color-text-dark: @cl-color-base-gray-90;
+@showcase__chip-color-surface: @cl-color-base-primary-5;
+@showcase__chip-color-border: @cl-color-base-primary-10;
+@showcase__chip-color-text: @cl-color-base-primary-60;
+@showcase__chip-color-surface--file: @cl-color-base-gray-10;
+@showcase__chip-color-border--file: @cl-color-base-gray-30;
+@showcase__chip-color-text--file: @cl-color-base-gray-70;
+
+/* ==========================================================================
+   Local Mixins
+ ========================================================================== */
+
+// 토큰 스와치 색상 유형 (배경색, 글자색)
+.showcase__swatch-variant(@bg, @text: @showcase__swatch-color-text) {
+	background-color: @bg;
+	border-color: @bg;
+
+	.cl-output.swatch-name,
+	.cl-output.swatch-code {
+		color: @text;
+	}
+}
+
+/* ==========================================================================
+ 1. 요약 타일
+    - summary-card(form-layout.part.less) 안의 bg-blue/bg-green/bg-purple 타일에 둥근 모서리를 준다.
+ ========================================================================== */
+
+.cl-container.showcase-tile {
+	border-radius: @showcase__tile-radius;
+}
+
+/* ==========================================================================
+ 2. 토큰 스와치
+    - 디자인 토큰 색상 샘플. 유형: primary / secondary / success / warning / danger / gray
+ ========================================================================== */
+
+.cl-container.token-swatch {
+	border: 1px solid @showcase__swatch-color-border;
+	border-radius: @showcase__swatch-radius;
+
+	.cl-output.swatch-name {
+		font-size: @cl-pc-font-size-label-large;
+		font-weight: @cl-font-weight-semibold;
+	}
+
+	.cl-output.swatch-code {
+		font-size: @cl-pc-font-size-label-xsmall;
+		font-weight: @cl-font-weight-regular;
+		opacity: 0.85;
+	}
+
+	&.primary {
+		.showcase__swatch-variant(@cl-color-base-primary-50);
+	}
+
+	&.secondary {
+		.showcase__swatch-variant(@cl-color-base-secondary-70);
+	}
+
+	&.success {
+		.showcase__swatch-variant(@cl-color-base-success-50);
+	}
+
+	&.warning {
+		.showcase__swatch-variant(@cl-color-base-warning-50, @showcase__swatch-color-text-dark);
+	}
+
+	&.danger {
+		.showcase__swatch-variant(@cl-color-base-danger-50);
+	}
+
+	&.gray {
+		.showcase__swatch-variant(@cl-color-base-gray-70);
+	}
+}
+
+/* ==========================================================================
+ 3. 클래스 칩
+    - 화면에 적용된 class 이름·정의 파일을 코드 형태로 표기. 유형: (기본)=클래스명, file=파일 경로
+ ========================================================================== */
+
+.cl-output.class-chip {
+	background-color: @showcase__chip-color-surface;
+	border: 1px solid @showcase__chip-color-border;
+	border-radius: @showcase__chip-radius;
+	color: @showcase__chip-color-text;
+	font-family: Consolas, "Courier New", monospace;
+	font-size: @cl-pc-font-size-label-small;
+	font-weight: @cl-font-weight-medium;
+
+	.cl-text {
+		padding: 0 @cl-padding-3;
+	}
+
+	&.file {
+		background-color: @showcase__chip-color-surface--file;
+		border-color: @showcase__chip-color-border--file;
+		color: @showcase__chip-color-text--file;
+	}
+}

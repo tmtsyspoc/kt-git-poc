@@ -1,0 +1,254 @@
+@import "include.part.less";
+@import "../../img/@phosphor-icons/web/src/ph-variables.part.less";
+
+.ph, .ph-duotone, .ph-fill {
+	background-image: none !important;
+	font-size: @cl-icon--size-small;
+}
+
+.color-mode(@mode: high-contrast) {
+	.icon {
+		background-color: transparent;
+	}
+}
+
+.icon {
+	&.ico-pdf {
+		.ph-icon-set(@ph-file-pdf);
+	}
+	
+	&.ico-arr {
+		.ph-icon-set(@ph-arrow-right);
+		
+		&.left {
+			transform: rotate(180deg);
+		}
+	}
+	
+	&.ico-angle {
+		.ph-icon-set(@ph-caret-down);
+		
+		&.up {
+			transform: rotate(180deg);
+		}
+		
+		&.left {
+			transform: rotate(90deg);
+		}
+		
+		&.right {
+			transform: rotate(-90deg);
+		}
+	}
+	
+	&.ico-angles {
+		.ph-icon-set(@ph-caret-double-down);
+		
+		&.up {
+			transform: rotate(180deg);
+		}
+		
+		&.left {
+			transform: rotate(90deg);
+		}
+		
+		&.right {
+			transform: rotate(-90deg);
+		}
+	}
+	
+	&.ico-redo {
+		.ph-icon-set(@ph-arrow-clockwise);
+	}
+	
+	&.ico-undo {
+		.ph-icon-set(@ph-arrow-counter-clockwise);
+	}
+	
+	&.ico-refresh {
+		.ph-icon-set(@ph-arrows-clockwise);
+	}
+	
+	&.ico-question {
+		.ph-icon-set(@ph-question);
+	}
+	
+	&.ico-copy {
+		.ph-icon-set(@ph-copy);
+	}
+	
+	&.ico-clipboard {
+		.ph-icon-set(@ph-clipboard-text);
+	}
+	
+	&.ico-pen {
+		.ph-icon-set(@ph-note-pencil);
+	}
+	
+	&.ico-download {
+		.ph-icon-set(@ph-download);
+	}
+	
+	&.ico-upload {
+		.ph-icon-set(@ph-upload);
+	}
+	
+	&.ico-search {
+		.ph-icon-set(@ph-magnifying-glass);
+	}
+	
+	&.ico-list {
+		.ph-icon-set(@ph-list);
+	}
+	
+	&.ico-plus {
+		.ph-icon-set(@ph-plus);
+	}
+	
+	&.ico-plus-circle {
+		.ph-icon-set(@ph-plus-circle);
+	}
+	
+	&.ico-minus {
+		.ph-icon-set(@ph-minus);
+	}
+	
+	&.ico-minus-circle {
+		.ph-icon-set(@ph-minus-circle);
+	}
+	
+	&.ico-x {
+		.ph-icon-set(@ph-x);
+	}
+	
+	&.ico-x-circle {
+		.ph-icon-set(@ph-x-circle);
+	}
+	
+	&.ico-delete {
+		.ph-icon-set(@ph-backspace);
+	}
+	
+	&.ico-trash {
+		.ph-icon-set(@ph-trash);
+	}
+	
+	&.ico-check {
+		.ph-icon-set(@ph-check);
+	}
+	
+	&.ico-save {
+		.ph-icon-set(@ph-floppy-disk);
+	}
+	
+	&.ico-print {
+		.ph-icon-set(@ph-printer);
+	}
+	
+	&.ico-goto {
+		.ph-icon-set(@ph-arrow-square-out);
+	}
+	
+	&.ico-setting {
+		.ph-icon-set(@ph-gear-six);
+	}
+	
+	&.ico-excel {
+		.ph-icon-set(@ph-microsoft-excel-logo);
+	}
+}
+
+&:not(.icon) {
+	&.ico-check {
+		.cl-icon {
+			background-image: url("../../img/icons/ico_check.svg") !important;
+		}
+//		.ph-icon-set(@ph-check);
+	}
+	
+	&.ico-pop {
+		.cl-icon {
+			background-image: url("../../img/icons/ico_pop_back.svg") !important;
+		}
+	}
+	
+	&.ico-left {
+		.icon-set(ico_arrow_left);
+	}
+	
+	&.ico-question {
+		.icon-set(ico_question);
+	}
+	
+	&.ico-double-down {
+		.icon-set(ico_arrow_double_down);
+	}
+	
+	&.ico-filter {
+		.icon-set(ico_filter);
+	}
+	
+	&.ico-search {
+		.icon-set(ico_search);
+	}
+	
+	&.ico-add {
+		.icon-set(ico_add);
+	}
+	
+	&.ico-edit {
+		.icon-set(ico_edit);
+	}
+	
+	&.ico-remove {
+		.icon-set(ico_remove);
+	}
+	
+	&.ico-print {
+		background-image: url("../../img/icons/ico_print.svg") !important;
+	}
+		
+	&.ico-window {
+		background-image: url("../../img/icons/ico_window_20.svg") !important;
+	}
+	
+	&.ico-save {
+		.icon-set(ico_save);
+	}
+	
+	&.ico-reset {
+		.cl-icon {
+			background-image: url("../../img/icons/ico_refresh.svg") !important;
+		}
+	}
+	
+	&.ico-reset-blue {
+		.cl-icon {
+			background-image: url("../../img/icons/ico_refresh_blue.svg") !important;
+		}
+	}
+	
+	&.ico-sort {
+		.icon-set(ico_sort_asc);
+	}
+	
+	&.ico-filter {
+		.icon-set(ico_filter_simple);
+	}
+	
+	&.ico-file-search {
+		.icon-set(ico_file_text);
+	}
+	
+	&.ico-plus {
+		.cl-icon {
+			background-image: url("../../img/icons/ico_plus_w.svg") !important;
+		}
+	}
+	
+	&.ico-sch {
+		.cl-icon {
+			background-image: url("../../img/icons/ico_search_w.svg") !important;
+		}      
+	}
+}

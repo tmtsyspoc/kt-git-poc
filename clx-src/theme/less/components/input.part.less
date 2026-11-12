@@ -1,0 +1,599 @@
+@import "../core/include.part.less";
+
+/**
+ * ============================================================================
+ * @file      input.part.less
+ * @desc      CORE-UI 컨트롤 스타일 정의
+ * @rule
+ * 1. 독립성 유지
+ *  - 이 파일 내부에 선언된 변수는 외부에서 참조할 수 없음
+ * @contents  
+ * 1. Base (공통 스타일)
+ * 2. Variants (유형별 스타일)
+ * 3. Mode (테마 스타일)
+ * ============================================================================
+ */
+
+/* ==========================================================================
+    Component Tokens
+ ========================================================================== */
+
+/* 사이즈 변수 */
+@input__padding-x: @cl-padding-2; //4px
+@input__padding-y: @cl-padding-0; //0px
+@input__size-height: @cl-size-height-6;
+@input__radius: @cl-radius-xsmall3;
+@input__pc-font-size: @cl-pc-font-size-label-small;
+@input__mobile-font-size: @cl-mobile-font-size-label-small;
+@input__icon-size: @cl-size-height-4;
+
+/* 색상 변수 */
+@input__color-surface: @cl-base-color-input-surface;
+@input__color-surface--readonly: @cl-base-color-input-surface-disabled;
+@input__color-surface--disabled: @cl-base-color-input-surface-disabled;
+@input__color-surface--error: @cl-base-color-input-surface;
+@input__color-surface--required: #e5edf6;
+@input__color-icon-background: @cl-base-color-icon-gray;
+@input__color-icon-background--readonly: @cl-base-color-icon-disabled-on;
+@input__color-icon-background--disabled: @cl-base-color-icon-disabled-on;
+@input__color-border: @cl-base-color-input-border;
+@input__color-border--active: @cl-base-color-input-border-active;
+@input__color-border--readonly: @cl-base-color-input-border-disabled;
+@input__color-border--disabled: @cl-base-color-input-border-disabled;
+@input__color-border--error: @cl-base-color-input-border-error;
+@input__color-border--required: #bfbfbf;
+@input__color-text: @cl-base-color-text-basic;
+@input__color-text-placeholder: @cl-base-color-text-disabled;
+@input__color-text--active: @cl-base-color-text-basic;
+@input__color-text--readonly: @cl-base-color-text-soft;
+@input__color-text--disabled: @cl-base-color-text-disabled-on;
+@input__color-text--error: @cl-base-color-text-basic;
+@input__color-text--required: @cl-base-color-text-basic;
+
+/* ==========================================================================
+    Local Mixins
+ ========================================================================== */
+
+.input__button-style(@name) {
+	width: @input__icon-size;
+	min-height: @input__icon-size;
+	.icon-set(@name, pure);
+	//transform: translateX((@input__padding-x / 2));
+}
+
+/* ==========================================================================
+ 1. Base
+ ========================================================================== */
+
+.cl-placeholder {
+	color: @input__color-text-placeholder !important;
+}
+
+/* --- 인풋계열 공통 --- */
+.cl-inputbox,
+.cl-searchinput,
+.cl-maskeditor,
+.cl-numbereditor,
+.cl-dateinput,
+.cl-fileinput,
+.cl-textarea {
+	background-color: @input__color-surface;
+	background-image: none;
+	border: 1px solid @input__color-border;
+	border-radius: @input__radius;
+	color: @input__color-text;
+	font-size: @input__pc-font-size;
+	padding: @input__padding-y @input__padding-x;
+	text-align: left;
+//	transition: @cl-transition-base;
+	
+	.cl-text {
+		.focus-reset();
+		padding: @cl-padding-0;
+	}
+	
+	& &-clear {
+		.input__button-style(ico_clear_fill);
+	}
+	
+	&:focus, &.cl-focus {
+		border-color: @input__color-border--active;
+		transition: @cl-transition-base;
+		.focus-reset();
+	}
+	
+	&.cl-readonly {
+		background-color: @input__color-surface--readonly;
+		border-color: @input__color-border--readonly;
+		color: @input__color-text--readonly;
+	}
+	
+	&.cl-disabled {
+		background-color: @input__color-surface--disabled;
+		border-color: @input__color-border--disabled;
+		color: @input__color-text--disabled;
+	}
+}
+
+/* --- 인풋박스 --- */
+.cl-inputbox {
+	&:not(.cl-disabled) {
+		/* 클리어 버튼 hover, active 상태 */
+		.cl-inputbox-clear:hover,
+		.cl-inputbox-clear:active {
+			.input__button-style(ico_clear_fill);
+		}
+	}
+}
+
+/* --- 서치인풋 --- */
+.cl-searchinput {
+	.cl-searchinput-search,
+	&:not(.cl-disabled) .cl-searchinput-search:hover,
+	&:not(.cl-disabled) .cl-searchinput-search:active {
+		.input__button-style(ico_sch);
+		opacity: 1;
+	}
+	
+	&.cl-disabled .cl-searchinput-search {
+		.input__button-style(ico_sch_disabled);
+	}
+	
+	&:not(.cl-disabled) {
+		/* 클리어 버튼 hover, active 상태 */
+		.cl-searchinput-clear:hover,
+		.cl-searchinput-clear:active {
+			.input__button-style(ico_clear_fill);
+		}
+	}
+}
+
+/* --- 마스크에디터 --- */
+.cl-maskeditor {
+}
+
+/* --- 넘버에디터 --- */
+.cl-numbereditor {
+	text-align: right;
+	padding: 0;
+	.cl-text {
+		padding: @input__padding-y @input__padding-x
+	}
+	.cl-numbereditor-buttons {
+		border-left : solid 1px @cl-base-color-border-gray;
+		
+		.cl-numbereditor-increase,
+		.cl-numbereditor-decrease {
+			height: auto;
+			background-size: 13px;
+		}
+		
+		.cl-numbereditor-increase {
+			.icon-set(ico_up, pure);
+		}
+		
+		.cl-numbereditor-decrease {
+			.icon-set(ico_down, pure);
+		}
+	}
+	
+	&:not(.cl-disabled) {
+		.cl-numbereditor-increase,
+		.cl-numbereditor-decrease {
+			&:hover, &:active {
+			}
+		}
+		
+		.cl-numbereditor-increase:hover  { .icon-set(ico_up); }
+        .cl-numbereditor-decrease:hover  { .icon-set(ico_down); }
+        .cl-numbereditor-increase:active { .icon-set(ico_up); }
+        .cl-numbereditor-decrease:active { .icon-set(ico_down); }
+	}
+}
+
+/* --- 데이트인풋 --- */
+.cl-dateinput {
+	.cl-dateinput-button {
+		.input__button-style(ico_calendar);
+	}
+	
+	.cl-dateinput-spinbuttons {
+		border-left : solid 1px @cl-base-color-border-gray;
+		margin-right: -4px;
+		
+		.cl-dateinput-increase,
+		.cl-dateinput-decrease {
+			height: auto;
+			background-size: 13px;
+		}
+		
+		.cl-dateinput-increase {
+			.icon-set(ico_up, pure);
+		}
+		
+		.cl-dateinput-decrease {
+			.icon-set(ico_down, pure);
+		}
+	}
+	
+	&:not(.cl-disabled) {
+		.cl-dateinput-increase,
+		.cl-dateinput-decrease {
+			&:hover, &:active {
+			}
+		}
+		
+		.cl-dateinput-increase:hover  { .icon-set(ico_up); }
+        .cl-dateinput-decrease:hover  { .icon-set(ico_down); }
+        .cl-dateinput-increase:active { .icon-set(ico_up); }
+        .cl-dateinput-decrease:active { .icon-set(ico_down); }
+	}
+	
+	&.cl-disabled .cl-dateinput-button {
+		.input__button-style(ico_calendar_disabled);
+	}
+}
+
+/* --- 파일인풋 --- */
+.cl-fileinput {
+}
+
+/* --- 텍스트에리어 --- */
+.cl-textarea {
+	@input__padding-y: @input__padding-x;
+	
+	padding: @input__padding-y @input__padding-x;
+}
+
+@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+	// 767까지
+	.cl-inputbox,
+	.cl-searchinput,
+	.cl-maskeditor,
+	.cl-numbereditor,
+	.cl-dateinput,
+	.cl-fileinput,
+	.cl-textarea {
+		font-size: @input__mobile-font-size;
+	}
+}
+
+/* ==========================================================================
+ 2. Variants
+ ========================================================================== */
+
+/* --- 유효성 실패  --- */
+.is-error,
+.cl-grid .cl-grid-ctrl-inherit:not(.cl-button):not(.cl-disabled).is-error {
+	&.cl-inputbox,
+	&.cl-searchinput,
+	&.cl-maskeditor,
+	&.cl-numbereditor,
+	&.cl-dateinput,
+	&.cl-fileinput,
+	&.cl-textarea,
+	&.cl-combobox,
+	&.cl-linkedcombobox .cl-linkedcombobox-combo {
+		background-color: @input__color-surface--error;
+		border-color: @input__color-border--error;
+		color: @input__color-text--error;
+	}
+}
+
+/* --- 필수입력  --- */
+.required,
+.cl-grid .cl-grid-ctrl-inherit:not(.cl-button):not(.cl-disabled).required {
+	&.cl-inputbox,
+	&.cl-searchinput,
+	&.cl-maskeditor,
+	&.cl-numbereditor,
+	&.cl-dateinput,
+	&.cl-fileinput,
+	&.cl-textarea,
+	&.cl-combobox,
+	&.cl-linkedcombobox .cl-linkedcombobox-combo {
+		background-color: @input__color-surface--required;
+		border-color: @input__color-border--required;
+		color: @input__color-text--required;
+	}
+}
+
+/* --- 텍스트에리어 숫자제한  --- */
+.cl-container.textarea-wrap {
+	@input-count-number__color-text: @cl-base-color-text-soft;
+	@input-count-number__color-text--active: @cl-base-color-text-primary;
+	@input-count-number__color-text--error: @cl-base-color-text-danger;
+	
+	.textarea-count {
+		color: @input-count-number__color-text;
+		margin-top: @cl-gap-2;
+		text-align: right;
+		
+		.count-now {
+			color: @input-count-number__color-text--active;
+		}
+		
+		.count-total {
+		}
+	}
+	
+	&.is-error {
+		.textarea-count {
+			.count-now {
+				color: @input-count-number__color-text--error;
+			}
+		}
+	}
+}
+
+/* --- 그리드 필터 다이얼로그 검색인풋  --- */
+.cl-search-input {
+	background-color: @input__color-surface;
+	background-image: none;
+	border: 1px solid @input__color-border;
+	border-radius: @input__radius;
+	color: @input__color-text;
+	padding: @input__padding-y @input__padding-x;
+	text-align: left;
+//	transition: @cl-transition-base;
+	
+	&:focus {
+		border-color: @input__color-border--active;
+		border-width: 2px;
+		transition: @cl-transition-base;
+		.focus-reset();
+	}
+	
+	@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+		// 767까지
+		font-size: @input__mobile-font-size;
+	}
+}
+
+/* ==========================================================================
+ 3. Mode
+ ========================================================================== */
+
+.color-mode(@mode: high-contrast) {
+	@input__color-surface: @cl-high-contrast-color-input-surface;
+	@input__color-surface--readonly: @cl-high-contrast-color-input-surface-disabled;
+	@input__color-surface--disabled: @cl-high-contrast-color-input-surface-disabled;
+	@input__color-surface--error: @cl-high-contrast-color-input-surface;
+	@input__color-surface--required: fade(#99b7dd, 20%);
+	@input__color-icon-background: @cl-high-contrast-color-icon-gray;
+	@input__color-icon-background--readonly: @cl-high-contrast-color-icon-disabled-on;
+	@input__color-icon-background--disabled: @cl-high-contrast-color-icon-disabled-on;
+	@input__color-border: @cl-high-contrast-color-input-border;
+	@input__color-border--active: @cl-high-contrast-color-input-border-active;
+	@input__color-border--readonly: @cl-high-contrast-color-input-border-disabled;
+	@input__color-border--disabled: @cl-high-contrast-color-input-border-disabled;
+	@input__color-border--error: @cl-high-contrast-color-input-border-error;
+	@input__color-border--required: @cl-high-contrast-color-input-border;
+	@input__color-text: #e1e1e1;
+	@input__color-text-placeholder: @cl-high-contrast-color-text-disabled;
+	@input__color-text--active: @input__color-text;
+	@input__color-text--readonly: @input__color-text;
+	@input__color-text--disabled: @cl-high-contrast-color-text-disabled-on;
+	@input__color-text--error: @input__color-text;
+	@input__color-text--required: @input__color-text;
+	
+	.cl-placeholder {
+		color: @input__color-text-placeholder !important;
+	}
+	
+	.cl-inputbox,
+	.cl-searchinput,
+	.cl-maskeditor,
+	.cl-numbereditor,
+	.cl-dateinput,
+	.cl-fileinput,
+	.cl-textarea {
+		.border-size-mode(@mode: high-contrast);
+		background-color: @input__color-surface;
+		border-color: @input__color-border;
+		color: @input__color-text;
+		
+		.cl-text {
+		}
+		
+		& &-clear {
+			.icon-set(ico_delete_fill);
+			background-color: @input__color-icon-background;
+		}
+		
+		&:focus, &.cl-focus {
+			border-color: @input__color-border--active;
+		}
+		
+		&.cl-readonly {
+			background-color: @input__color-surface--readonly;
+			border-color: @input__color-border--readonly;
+			color: @input__color-text--readonly;
+		}
+		
+		&.cl-disabled {
+			background-color: @input__color-surface--disabled;
+			border-color: @input__color-border--disabled;
+			color: @input__color-text--disabled;
+		}
+	}
+	
+	/* --- 인풋박스 --- */
+	.cl-inputbox {
+	}
+	
+	/* --- 서치인풋 --- */
+	.cl-searchinput {
+		.cl-searchinput-search,
+		&:not(.cl-disabled) .cl-searchinput-search:hover,
+		&:not(.cl-disabled) .cl-searchinput-search:active,
+		&.cl-disabled .cl-searchinput-search {
+			.icon-set(ico_sch);
+			background-color: @input__color-icon-background;
+		}
+	}
+	
+	/* --- 마스크에디터 --- */
+	.cl-maskeditor {
+	}
+	
+	/* --- 넘버에디터 --- */
+	.cl-numbereditor {
+		.cl-numbereditor-buttons {
+			.cl-numbereditor-increase,
+			.cl-numbereditor-decrease {
+				background-color: @input__color-icon-background;
+			}
+		}
+		
+		&:not(.cl-disabled) {
+			.cl-numbereditor-increase,
+			.cl-numbereditor-decrease {
+				&:hover, &:active {
+					background-color: @input__color-icon-background;
+				}
+			}
+		}
+	}
+	
+	/* --- 데이트인풋 --- */
+	.cl-dateinput {
+		.cl-dateinput-button,
+		&.cl-disabled .cl-dateinput-button {
+			.icon-set(ico_calendar);
+			background-color: @input__color-icon-background;
+		}
+		
+		.cl-dateinput-spinbuttons {
+			.cl-dateinput-increase,
+			.cl-dateinput-decrease {
+				background-color: @input__color-icon-background;
+			}
+		}
+		
+		&:not(.cl-disabled) {
+			.cl-dateinput-increase,
+			.cl-dateinput-decrease {
+				&:hover, &:active {
+					background-color: @input__color-icon-background;
+				}
+			}
+		}
+	}
+	
+	/* --- 파일인풋 --- */
+	.cl-fileinput {
+	}
+	
+	/* --- 텍스트에리어 --- */
+	.cl-textarea {
+	}
+	
+	.cl-grid .cl-grid-ctrl-inherit:not(.cl-button):not(.cl-disabled) {
+		&.cl-inputbox,
+		&.cl-searchinput,
+		&.cl-maskeditor,
+		&.cl-numbereditor,
+		&.cl-dateinput,
+		&.cl-fileinput,
+		&.cl-textarea,
+		&.cl-combobox,
+		&.cl-linkedcombobox .cl-linkedcombobox-combo {
+			.border-size-mode(@mode: high-contrast);
+			background-color: @input__color-surface;
+			border-color: @input__color-border;
+			color: @input__color-text;
+
+			& &-clear {
+				.icon-set(ico_delete_fill);
+				background-color: @input__color-icon-background;
+			}
+			
+			&:focus, &.cl-focus {
+				border-color: @input__color-border--active;
+			}
+			
+			&.cl-readonly {
+				background-color: @input__color-surface--readonly;
+				border-color: @input__color-border--readonly;
+				color: @input__color-text--readonly;
+			}
+			
+			&.cl-disabled {
+				background-color: @input__color-surface--disabled;
+				border-color: @input__color-border--disabled;
+				color: @input__color-text--disabled;
+			}
+
+		}
+	}
+	
+	/* --- 유효성 실패  --- */
+	.is-error,
+	.cl-grid .cl-grid-ctrl-inherit:not(.cl-button):not(.cl-disabled).is-error {
+		&.cl-inputbox,
+		&.cl-searchinput,
+		&.cl-maskeditor,
+		&.cl-numbereditor,
+		&.cl-dateinput,
+		&.cl-fileinput,
+		&.cl-textarea,
+		&.cl-combobox,
+		&.cl-linkedcombobox .cl-linkedcombobox-combo {
+			background-color: @input__color-surface--error;
+			border-color: @input__color-border--error;
+			color: @input__color-text--error;
+		}
+	}
+	
+	/* --- 필수입력  --- */
+	.required,
+	.cl-grid .cl-grid-ctrl-inherit:not(.cl-button):not(.cl-disabled).required {
+		&.cl-inputbox,
+		&.cl-searchinput,
+		&.cl-maskeditor,
+		&.cl-numbereditor,
+		&.cl-dateinput,
+		&.cl-fileinput,
+		&.cl-textarea,
+		&.cl-combobox,
+		&.cl-linkedcombobox .cl-linkedcombobox-combo {
+			background-color: @input__color-surface--required;
+			border-color: @input__color-border--required;
+			color: @input__color-text--required;
+		}
+	}
+	
+	/* --- 텍스트에리어 숫자제한  --- */
+	.cl-container.textarea-wrap {
+		@input-count-number__color-text: @cl-high-contrast-color-text-soft;
+		@input-count-number__color-text--active: @cl-high-contrast-color-text-primary;
+		@input-count-number__color-text--error: @cl-high-contrast-color-text-danger;
+		
+		.textarea-count {
+			color: @input-count-number__color-text;
+			
+			.count-now {
+				color: @input-count-number__color-text--active;
+			}
+			
+			.count-total {
+			}
+		}
+		
+		&.is-error {
+			.textarea-count {
+				.count-now {
+					color: @input-count-number__color-text--error;
+				}
+			}
+		}
+	}
+	
+	/* --- 그리드 필터 다이얼로그 검색인풋  --- */
+	.cl-search-input {
+		background-color: @input__color-surface;
+		border-color: @input__color-border;
+		color: @input__color-text;
+	}
+}

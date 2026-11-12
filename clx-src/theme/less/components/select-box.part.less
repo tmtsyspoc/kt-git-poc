@@ -1,0 +1,427 @@
+@import "../core/include.part.less";
+
+/**
+ * ============================================================================
+ * @file      select.part.less
+ * @desc      CORE-UI 컨트롤 스타일 정의
+ * @rule
+ * 1. 독립성 유지
+ *  - 이 파일 내부에 선언된 변수는 외부에서 참조할 수 없음
+ * @contents  
+ * 1. Base (공통 스타일)
+ * 2. Variants (유형별 스타일)
+ * 3. Mode (테마 스타일)
+ * ============================================================================
+ */
+
+/* ==========================================================================
+   Component Tokens
+ ========================================================================== */
+
+/* 사이즈 변수 */
+@select-box__padding-x: @cl-number-9; //@cl-padding-3;
+@select-box__size-height: @cl-size-height-6;
+@select-box__radius: @cl-radius-xsmall3;
+@select-box__pc-font-size: @cl-pc-font-size-label-small;
+@select-box__mobile-font-size: @cl-mobile-font-size-label-small;
+@select-box__icon-size: @cl-size-height-4;
+
+/* 색상 변수 */
+@select-box__color-surface: @cl-base-color-input-surface;
+@select-box__color-surface--readonly: @cl-base-color-input-surface-disabled;
+@select-box__color-surface--disabled: @cl-base-color-input-surface-disabled;
+@select-box__color-icon-background: @cl-base-color-icon-gray;
+@select-box__color-icon-background--readonly: @cl-base-color-icon-disabled-on;
+@select-box__color-icon-background--disabled: @cl-base-color-icon-disabled-on;
+@select-box__color-border: @cl-base-color-input-border;
+@select-box__color-border--active: @cl-base-color-input-border-active;
+@select-box__color-border--readonly: @cl-base-color-input-border-disabled;
+@select-box__color-border--disabled: @cl-base-color-input-border-disabled;
+@select-box__color-text: @cl-base-color-text-basic;
+@select-box__color-text-placeholder: @cl-base-color-text-disabled;
+@select-box__color-text--active: @cl-base-color-text-basic;
+@select-box__color-text--readonly: @cl-base-color-text-soft;
+@select-box__color-text--disabled: @cl-base-color-text-disabled-on;
+
+
+/* 리스트 -- 사이즈 변수 */
+@select-box__list-radius: @cl-radius-xsmall3;
+@select-box__list-padding-x: @cl-padding-0;
+@select-box__list-padding-y: @cl-padding-2;
+@select-box__list-margin-y: @cl-gap-1;
+@select-box__list-item-size-height: @cl-size-height-7;
+@select-box__list-item-radius: 0; //@cl-radius-xsmall3;
+@select-box__list-item-padding-x: @cl-padding-3;
+@select-box__list-item-padding-y: @cl-padding-0;
+@select-box__list-item-gap: @cl-gap-2;
+@select-box__list-item-pc-font-size: @cl-pc-font-size-label-small;
+@select-box__list-item-mobile-font-size: @cl-mobile-font-size-label-small;
+
+/* 리스트 -- 색상 변수 */
+@select-box__list-color-surface: @cl-base-color-surface-white;
+@select-box__list-color-border: @cl-base-color-input-border;
+@select-box__list-color-shadow: 0 0 2px 0 @cl-base-color-alpha-shadow1, 0 4px 8px 0 @cl-base-color-alpha-shadow2;
+@select-box__list-item-color-icon-background: @cl-base-color-icon-gray;
+@select-box__list-item-color-icon-background--selected: @cl-base-color-icon-secondary;
+@select-box__list-item-color-icon-background--disabled: @cl-base-color-icon-disabled-on;
+@select-box__list-item-color-action--hover: @cl-base-color-action-primary-hover;
+@select-box__list-item-color-action--pressed: @cl-base-color-action-primary-pressed;
+@select-box__list-item-color-action--selected: @cl-base-color-action-primary-selected;
+@select-box__list-item-color-action--disabled: @cl-base-color-action-disabled;
+@select-box__list-item-color-text: @cl-base-color-text-basic;
+@select-box__list-item-color-text--hover: @cl-base-color-text-basic;
+@select-box__list-item-color-text--selected: #ffffff;
+@select-box__list-item-color-text--disabled: @cl-base-color-text-disabled;
+
+/* ==========================================================================
+    Local Mixins
+ ========================================================================== */
+
+.select__button-style(@name) {
+	width: @select-box__icon-size;
+	min-height: @select-box__icon-size;
+	.icon-set(@name, pure);
+}
+
+/* ==========================================================================
+ 1. Base
+ ========================================================================== */
+
+.cl-combobox {
+	background-color: @select-box__color-surface;
+	border: 1px solid @select-box__color-border;
+	border-radius: @select-box__radius;
+	color: @select-box__color-text;
+	font-size: @select-box__pc-font-size;
+	padding: 0 @select-box__padding-x;
+	transition: @cl-transition-base;
+	
+	.cl-text {
+		.focus-reset();
+		padding: @cl-padding-0;
+	}
+	
+	.cl-combobox-button {
+		.select__button-style(ico_arrow_down);
+	}
+	
+	&:focus, &.cl-focus {
+		border-color: @select-box__color-border--active;
+		.focus-reset();
+	}
+	
+	&.cl-readonly {
+		background-color: @select-box__color-surface--readonly;
+		border-color: @select-box__color-border--readonly;
+		color: @select-box__color-text--readonly;
+	}
+	
+	&.cl-disabled {
+		background-color: @select-box__color-surface--disabled;
+		border-color: @select-box__color-border--disabled;
+		color: @select-box__color-text--disabled;
+	
+		.cl-combobox-button {
+			.select__button-style(ico_arrow_down_disabled);
+		}
+	}
+}
+
+.cl-linkedcombobox {
+	color: @select-box__color-text;
+	
+	.cl-linkedcombobox-combo {
+		background-color: @select-box__color-surface;
+		border: 1px solid @select-box__color-border;
+		border-radius: @select-box__radius;
+		font-size: @select-box__pc-font-size;
+		padding: 0 @select-box__padding-x;
+		width: 100%;
+		transition: @cl-transition-base;
+		
+		.cl-text {
+			.focus-reset();
+			padding: @cl-padding-0;
+		}
+		
+		.cl-linkedcombobox-button {
+			.select__button-style(ico_down);
+		}
+		
+		&:only-child {
+			width: 200px;
+		}
+		
+		+ *:not([class]) {
+			flex-shrink: 0; // 간격 보장
+		}
+	}
+	
+	&:focus, &.cl-focus {
+		.cl-linkedcombobox-combo {
+			&.cl-focus {
+				border-color: @select-box__color-border--active;
+				border-width: 2px;
+				.focus-reset();
+			}
+		}
+	}
+	
+	&.cl-readonly {
+		color: @select-box__color-text--readonly;
+		
+		.cl-linkedcombobox-combo {
+			background-color: @select-box__color-surface--readonly;
+			border-color: @select-box__color-border--readonly;
+		}
+	}
+	
+	&.cl-disabled {
+		color: @select-box__color-text--disabled;
+		
+		.cl-linkedcombobox-combo {
+			background-color: @select-box__color-surface--disabled;
+			border-color: @select-box__color-border--disabled;
+		}
+	}
+}
+
+@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+	// 767까지
+	.cl-combobox,
+	.cl-linkedcombobox {
+		font-size: @select-box__mobile-font-size;
+	}
+}
+
+.cl-combobox-list,
+.cl-linkedcombobox-list {
+	background-color: @select-box__list-color-surface;
+	border: 1px solid @select-box__list-color-border;
+	border-radius: @select-box__list-radius;
+	color: @select-box__list-item-color-text;
+	font-size: @select-box__pc-font-size;
+	padding: @select-box__list-padding-y @select-box__list-padding-x;
+	
+	@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+		// 767까지
+		font-size: @select-box__mobile-font-size;
+	}
+	
+	&.cl-popup {
+		box-shadow: @select-box__list-color-shadow;
+	}
+	
+	&.cl-top {
+		margin-top: @select-box__list-margin-y * -1;
+	}
+	
+	&.cl-bottom {
+		margin-top: @select-box__list-margin-y;
+	}
+	
+	.cl-viewport {
+		// 아이템 높이 * 보여질 아이템 개수
+		max-height: @select-box__list-item-size-height * 10;
+	}
+	
+	.cl-combobox-item,
+	.cl-linkedcombobox-item {
+		position: relative;
+		align-items: center;
+		color: inherit;
+		height: auto;
+		min-height: @select-box__list-item-size-height;
+		padding: @select-box__list-item-padding-y @select-box__list-item-padding-x;
+
+		.cl-text {
+			.flex-layout(@ai: center, @ai: center);
+			padding: @cl-padding-0;
+		}
+		
+		&:not(.cl-disabled):not(.cl-selected):hover,
+		&:not(.cl-disabled):not(.cl-selected).cl-hover {
+			background-color: @select-box__list-item-color-action--hover;
+			color: @select-box__list-item-color-text--hover;
+		}
+		
+		&:not(.cl-disabled):active {
+			background-color: @select-box__list-item-color-action--pressed !important;
+			color: @select-box__list-item-color-text--hover;
+		}
+		
+		&.cl-selected {
+			background-color: @select-box__list-item-color-action--selected;
+			color: @select-box__list-item-color-text--selected;
+		}
+		
+		&.cl-disabled {
+			color: @select-box__list-item-color-text--disabled;
+			
+			&.cl-selected {
+				background-color: @select-box__list-item-color-action--disabled;
+				color: @select-box__list-item-color-text--hover;
+			}
+		}
+	}
+}
+
+.cl-combobox-list {
+	.cl-combobox-item {
+		.cl-checkbox {
+			.square(@select-box__icon-size);
+			padding: 0;
+			
+			// 체크박스 미표시 시 아래의 주석 해제
+			display: none;
+			
+			&.cl-checked {
+			}
+			
+			+ .cl-text {
+				padding-left: @select-box__list-item-gap;
+			}
+		}
+		
+		&.cl-selected {
+			.cl-text {
+				padding-right: @cl-icon--size-xsmall;
+				
+//				&::before {
+//					.pseudo();
+//					.position(@r: @select-box__list-item-padding-x);
+//					.position-center(y);
+//					.svg-icon(@cl-icon--size-xsmall);
+//					.icon-set(ico_check);
+//					background-color: @select-box__list-item-color-icon-background--selected;
+//				}
+			}
+		}
+	}
+	
+	&.cl-multi-select {
+		.cl-combobox-item {
+			&.cl-selected {
+				/*선택항목 우측 체크아이콘*/
+				.cl-text { 
+					&::before {
+						.pseudo();
+						.position(@r: @select-box__list-item-padding-x);
+						.position-center(y);
+						.svg-icon(@cl-icon--size-xsmall);
+						.icon-set(ico_check);
+						background-color: @select-box__list-item-color-icon-background--selected;
+					}
+				}
+				
+			}
+			
+			&:not(.cl-disabled).cl-selected:hover,
+			&:not(.cl-disabled).cl-selected.cl-hover {
+				background-color: @select-box__list-item-color-action--hover;
+			}
+		}
+	}
+}
+
+.cl-linkedcombobox-list {
+	.cl-linkedcombobox-item {
+		.cl-linkedcombobox-arrow.cl-folder {
+			.svg-icon(@select-box__icon-size);
+			.icon-set(ico_down);
+			transform: rotate(-90deg);
+			background-color: @select-box__list-item-color-icon-background;
+		}
+		
+		&.cl-selected {
+			.cl-linkedcombobox-arrow.cl-folder {
+				background-color: @select-box__list-item-color-icon-background--selected;
+			}
+		}
+		
+		&.cl-disabled {
+			.cl-linkedcombobox-arrow.cl-folder {
+				background-color: @select-box__list-item-color-icon-background--disabled;
+			}
+		}
+	}
+}
+
+@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+	// 767까지
+	.cl-combobox-list,
+	.cl-linkedcombobox-list {
+		font-size: @select-box__mobile-font-size;
+	}
+}
+
+/* ==========================================================================
+ 2. Variants
+ ========================================================================== */
+
+/* --- 유효성 실패 스타일 --- */
+// input.part.less 에 정의됨
+
+/* --- 필수입력 --- */
+// input.part.less 에 정의됨
+
+/* ==========================================================================
+ 3. Mode
+ ========================================================================== */
+
+.color-mode(@mode: high-contrast) {
+	
+	/* --- 색상 변수 ---*/
+	@select-box__color-surface: @cl-high-contrast-color-input-surface;
+	@select-box__color-surface--readonly: @cl-high-contrast-color-input-surface-disabled;
+	@select-box__color-surface--disabled: @cl-high-contrast-color-input-surface-disabled;
+	@select-box__color-surface--required: fade(#99b7dd, 20%);
+	@select-box__color-border: @cl-high-contrast-color-input-border;
+	@select-box__color-border--active: @cl-high-contrast-color-input-border-active;
+	@select-box__color-border--readonly: @cl-high-contrast-color-input-border-disabled;
+	@select-box__color-border--disabled: @cl-high-contrast-color-input-border-disabled;
+	@select-box__color-border--required: @cl-high-contrast-color-input-border;
+	@select-box__color-text: #e1e1e1;
+	@select-box__color-text-placeholder: @cl-high-contrast-color-text-disabled;
+	@select-box__color-text--active: @select-box__color-text;
+	@select-box__color-text--readonly: @select-box__color-text;
+	@select-box__color-text--disabled: @cl-high-contrast-color-text-disabled-on;
+	@select-box__color-text--required: @select-box__color-text;
+	
+	.cl-combobox {
+		.border-size-mode(@mode: high-contrast);
+		background-color: @select-box__color-surface;
+		border-color: @select-box__color-border;
+		color: @select-box__color-text;
+		
+		.cl-text {
+			.focus-reset();
+			padding: @cl-padding-0;
+		}
+		
+		.cl-combobox-button {
+			.select__button-style(ico_arrow_down);
+		}
+		
+		&:focus, &.cl-focus {
+			border-color: @select-box__color-border--active;
+			.focus-reset();
+		}
+		
+		&.cl-readonly {
+			background-color: @select-box__color-surface--readonly;
+			border-color: @select-box__color-border--readonly;
+			color: @select-box__color-text--readonly;
+		}
+		
+		&.cl-disabled {
+			background-color: @select-box__color-surface--disabled;
+			border-color: @select-box__color-border--disabled;
+			color: @select-box__color-text--disabled;
+		
+			.cl-combobox-button {
+				.select__button-style(ico_arrow_down_disabled);
+			}
+		}
+	}
+}

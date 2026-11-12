@@ -1,0 +1,1553 @@
+@import "../core/include.part.less";
+
+/* ==========================================================================
+ KT 대리점 메인 (app/main/MainKt)
+ — body 클래스가 "main main-kt" 인 화면에만 적용된다. 기본 구조·MDI·사이드 메뉴는
+   main.part.less 의 .main 스타일을 그대로 받고, 여기서는 KT 시그니처 컬러
+   (레드 포인트 + 블랙 GNB + 화이트 헤더)와 새로 추가한 영역만 정의한다.
+ — 메인 색상 테마(화이트/네이비/주황…)보다 항상 우선하도록 클래스를 겹쳐 쓴다.
+ ========================================================================== */
+@kt: ~".main.main-kt.main-kt";
+
+// 포인트색은 아래 .kt-point-vars 가 내보내는 CSS 변수를 쓴다(설정의 메인 색상으로 바뀜)
+@kt-red: ~"var(--kt-point)";
+@kt-red-hover: ~"var(--kt-point-hover)";
+@kt-red-pressed: ~"var(--kt-point-pressed)";
+@kt-red-5: ~"var(--kt-point-soft)";
+@kt-ink: #1A1A1A;
+@kt-ink-soft: #3D3D3D;
+@kt-text: #333333;
+@kt-muted: #767676;
+@kt-gray: #F4F4F5;
+@kt-line: #E5E5E5;
+@kt-icons: "../../img/icons";
+@kt-main-img: "../../img/pages/main";
+
+/* --- 포인트색 ---
+ 설정의 "메인 색상"(body 의 data-cl-mode)에 따라 바뀌도록 CSS 변수로 둔다.
+ less 의 색 함수는 컴파일 때 계산되므로, 파생색(hover·연한 바탕·반투명)도 변수로 함께 내보낸다. */
+.kt-point-vars(@c) {
+	@h: darken(@c, 6%);
+	@p: darken(@c, 12%);
+	@s: mix(@c, #ffffff, 7%);
+	@a20: fade(@c, 20%);
+	@a30: fade(@c, 30%);
+	@a60: fade(@c, 60%);
+	--kt-point: ~"@{c}";
+	--kt-point-hover: ~"@{h}";
+	--kt-point-pressed: ~"@{p}";
+	--kt-point-soft: ~"@{s}";
+	--kt-point-a20: ~"@{a20}";
+	--kt-point-a30: ~"@{a30}";
+	--kt-point-a60: ~"@{a60}";
+}
+
+// 기본: KT 레드
+.main.main-kt,
+.dash.dash-kt {
+	.kt-point-vars(#E4002B);
+}
+
+// 모노
+[data-cl-mode="default"] {
+	.main.main-kt,
+	.dash.dash-kt {
+		.kt-point-vars(#1A1A1A);
+	}
+}
+
+// 블루
+[data-cl-mode="blue-theme"] {
+	.main.main-kt,
+	.dash.dash-kt {
+		.kt-point-vars(#2563EB);
+	}
+}
+
+// 그린
+[data-cl-mode="green-theme"] {
+	.main.main-kt,
+	.dash.dash-kt {
+		.kt-point-vars(#0E9F6E);
+	}
+}
+
+// 퍼플
+[data-cl-mode="purple-theme"] {
+	.main.main-kt,
+	.dash.dash-kt {
+		.kt-point-vars(#6D3FE0);
+	}
+}
+
+// 오렌지
+[data-cl-mode="orange-theme"] {
+	.main.main-kt,
+	.dash.dash-kt {
+		.kt-point-vars(#F26A1B);
+	}
+}
+
+// 아이콘만 있는 투명 버튼
+.kt-ico-btn(@size: 20px) {
+	.btn-i-only();
+	border: none;
+	border-radius: @cl-radius-xsmall3;
+	background-color: transparent;
+
+	.cl-icon {
+		background-size: @size !important;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	&:not(.cl-disabled):hover,
+	&.cl-focus {
+		background-color: @kt-gray;
+	}
+}
+
+// 텍스트만 있는 작은 외곽선 버튼
+.kt-ghost-btn() {
+	padding: 0 8px;
+	min-width: 0;
+	border: 1px solid #D0D0D0;
+	border-radius: 4px;
+	background-color: #ffffff;
+	color: @kt-text;
+	font-size: @cl-pc-font-size-label-xsmall;
+	font-weight: @cl-font-weight-medium;
+
+	&:not(.cl-disabled):hover,
+	&.cl-focus {
+		border-color: @kt-ink;
+		background-color: #ffffff;
+		color: @kt-ink;
+	}
+}
+
+@{kt} {
+	/* --- 헤더(한 줄): KT 블랙. 로고 + 전체메뉴 + 고객 통합검색 + 사용자 영역 --- */
+	.kt-top {
+		z-index: 1;
+		padding: 0 20px;
+		background-color: @kt-ink;
+
+		// 로고의 검정 글자를 밝게 뒤집고, 색상환을 되돌려 레드는 유지한다
+		.cl-button.logo {
+			border: none;
+			border-radius: 0;
+			background-color: transparent;
+			background-image: url("@{kt-main-img}/logo.png");
+			background-repeat: no-repeat;
+			background-position: center;
+			filter: invert(1) hue-rotate(180deg);
+
+			&.type1 {
+				background-image: url("@{kt-main-img}/logo_ver1.png");
+				background-size: contain;
+			}
+
+			&.type2 {
+				background-image: url("@{kt-main-img}/logo_ver2.png");
+				background-size: contain;
+			}
+		}
+
+		.cl-output.sys-name {
+			color: #ffffff;
+			font-size: 19px;
+			font-weight: 800;
+			letter-spacing: 0.5px;
+		}
+
+		.cl-output.sys-sub {
+			color: fade(#ffffff, 60%);
+			font-size: @cl-pc-font-size-label-xsmall;
+			font-weight: @cl-font-weight-medium;
+		}
+
+		.cl-button.sitemap {
+			padding: 0 10px;
+			min-width: 0;
+			border: 1px solid fade(#ffffff, 36%);
+			border-radius: 4px;
+			background-color: transparent;
+			color: #ffffff;
+			font-size: @cl-pc-font-size-body-small;
+			font-weight: @cl-font-weight-medium;
+
+			&:not(.cl-disabled):hover,
+			&.cl-focus {
+				border-color: #ffffff;
+				background-color: fade(#ffffff, 14%);
+			}
+		}
+
+		.cl-button.btn-nav {
+			.btn-i-only();
+			border: none;
+			border-radius: @cl-radius-xsmall3;
+			background-color: fade(#ffffff, 14%);
+
+			.cl-icon {
+				background-image: url("@{kt-main-img}/ic_navicon.svg") !important;
+			}
+		}
+
+		/* 고객 통합검색 */
+		.kt-cust {
+			.pill {
+				overflow: hidden;
+				border: 1px solid fade(#ffffff, 22%);
+				border-radius: 4px;
+				background-color: fade(#ffffff, 10%);
+
+				&:focus-within {
+					border-color: #ffffff;
+					background-color: fade(#ffffff, 16%);
+				}
+
+				.cl-combobox,
+				.cl-inputbox {
+					border: none;
+					border-radius: 0;
+					background-color: transparent;
+					background-image: none;
+					box-shadow: none;
+
+					.cl-text {
+						font-size: @cl-pc-font-size-body-small;
+						font-weight: @cl-font-weight-medium;
+						color: #ffffff;
+
+						&.cl-placeholder {
+							color: fade(#ffffff, 60%);
+						}
+					}
+				}
+
+				.cl-combobox {
+					.cl-text {
+						font-weight: @cl-font-weight-semibold;
+					}
+
+					.cl-combobox-button {
+						background: url("@{kt-main-img}/ic_header_combo_arrow.svg") no-repeat center;
+					}
+				}
+
+				// 입력 칸 사이 구분선
+				.cl-inputbox {
+					position: relative;
+					padding: 0 8px 0 12px;
+
+					&::after {
+						content: "";
+						position: absolute;
+						left: 0;
+						top: 50%;
+						width: 1px;
+						height: 16px;
+						background-color: fade(#ffffff, 24%);
+						transform: translateY(-50%);
+					}
+				}
+
+				.cl-button.sch {
+					.btn-i-only();
+					border: none;
+					border-radius: 4px;
+					background-color: @kt-red;
+
+					.cl-icon {
+						background-image: url("@{kt-main-img}/ic_header_search.svg") !important;
+						background-size: 16px !important;
+					}
+
+					&:not(.cl-disabled):hover {
+						background-color: @kt-red-hover;
+					}
+
+					&.cl-focus,
+					&:not(.cl-disabled):active {
+						background-color: @kt-red-pressed;
+					}
+				}
+			}
+
+			.cl-checkbox {
+				color: fade(#ffffff, 86%);
+				font-size: @cl-pc-font-size-body-small;
+				font-weight: @cl-font-weight-medium;
+			}
+		}
+
+		/* 사용자 영역 */
+		.kt-utils {
+			.session {
+				padding: 0 4px 0 10px;
+				border-radius: 4px;
+				background-color: fade(#ffffff, 10%);
+			}
+
+			.cl-output.session-time {
+				padding-left: 20px;
+				background-image: url("@{kt-main-img}/ic_clock.svg");
+				background-repeat: no-repeat;
+				background-position: left center;
+				background-size: 16px;
+				color: #ffffff;
+				font-size: @cl-pc-font-size-body-small;
+				font-weight: @cl-font-weight-semibold;
+				font-variant-numeric: tabular-nums;
+			}
+
+			.cl-button.ghost {
+				padding: 0 8px;
+				min-width: 0;
+				border: 1px solid fade(#ffffff, 36%);
+				border-radius: 4px;
+				background-color: transparent;
+				color: #ffffff;
+				font-size: @cl-pc-font-size-label-xsmall;
+				font-weight: @cl-font-weight-medium;
+
+				&:not(.cl-disabled):hover,
+				&.cl-focus {
+					border-color: #ffffff;
+					background-color: fade(#ffffff, 14%);
+					color: #ffffff;
+				}
+			}
+
+			.cl-button.kt-ico {
+				.btn-i-only();
+				border: none;
+				border-radius: @cl-radius-xsmall3;
+				background-color: transparent;
+
+				.cl-icon {
+					background-size: 20px !important;
+					background-repeat: no-repeat;
+					background-position: center;
+				}
+
+				&:not(.cl-disabled):hover,
+				&.cl-focus {
+					background-color: fade(#ffffff, 14%);
+				}
+
+				&.bell .cl-icon {
+					background-image: url("@{kt-main-img}/ic_header_bell.svg") !important;
+				}
+
+				&.setting .cl-icon {
+					background-image: url("@{kt-main-img}/ic_header_settings.svg") !important;
+				}
+
+				&.logout .cl-icon {
+					background-image: url("@{kt-main-img}/ic_header_logout.svg") !important;
+				}
+
+				// 읽지 않은 알림 표시
+				&.bell.active {
+					overflow: visible;
+
+					&::before {
+						.pseudo();
+						.position(@t: 5px, @r: 5px);
+						.square(7px);
+						background-color: #E4002B;
+						border: 1px solid @kt-ink;
+						border-radius: @cl-radius-max;
+					}
+				}
+			}
+
+			.cl-output.name {
+				color: #ffffff;
+				font-size: @cl-pc-font-size-body-small;
+				font-weight: @cl-font-weight-semibold;
+				text-align: right;
+			}
+
+			.cl-output.department {
+				color: fade(#ffffff, 60%);
+				font-size: @cl-pc-font-size-label-xsmall;
+				font-weight: @cl-font-weight-medium;
+				text-align: right;
+			}
+
+			/* 라이트/다크 전환 */
+			.cl-radiobutton.theme-toggle {
+				padding: 4px;
+				border-radius: @cl-radius-max;
+				background-color: fade(#ffffff, 12%);
+
+				.cl-radiobutton-item {
+					width: 24px;
+					height: 24px;
+					margin: 0;
+					padding: 4px;
+					border-radius: @cl-radius-max;
+
+					.cl-icon-wrapper {
+						padding: 0;
+					}
+
+					.cl-radiobutton-icon {
+						width: 16px;
+						min-height: 16px;
+						margin: 0;
+						border: none;
+						border-radius: 0;
+						box-shadow: none;
+						background-image: none;
+						background-color: fade(#ffffff, 50%);
+					}
+
+					&.light .cl-radiobutton-icon {
+						-webkit-mask-image: url("@{kt-main-img}/ic_light_thema.svg");
+						mask-image: url("@{kt-main-img}/ic_light_thema.svg");
+					}
+
+					&.high-contrast .cl-radiobutton-icon {
+						-webkit-mask-image: url("@{kt-main-img}/ic_dark_thema.svg");
+						mask-image: url("@{kt-main-img}/ic_dark_thema.svg");
+					}
+
+					&.cl-selected {
+						background-color: #ffffff;
+
+						.cl-radiobutton-icon {
+							background-color: @kt-ink;
+
+							&::after {
+								background-color: @kt-ink;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	/* --- 헤더 2단: GNB 바 (KT 블랙 + 레드 인디케이터) --- */
+	.cl-container.header.gnb-bar {
+		background-color: @kt-ink;
+		border: 0;
+
+		.cl-navigationbar {
+			color: #ffffff;
+
+			.cl-navigationbar-bar {
+				.cl-navigationbar-item {
+					color: #ffffff;
+
+					&:before {
+						height: 3px;
+						background-color: @kt-red;
+					}
+				}
+			}
+		}
+
+		.cl-searchinput {
+			padding: 0 0 0 12px;
+			border: 1px solid fade(#ffffff, 24%);
+			border-radius: 4px;
+			background-color: fade(#ffffff, 10%);
+			background-image: none;
+
+			.cl-text {
+				color: #ffffff;
+				font-size: @cl-pc-font-size-body-small;
+
+				&.cl-placeholder {
+					color: fade(#ffffff, 70%) !important;
+				}
+			}
+
+			.cl-searchinput-search {
+				width: 28px;
+				-webkit-mask-image: none;
+				mask-image: none;
+				background-image: url("@{kt-main-img}/ic_header_search.svg") !important;
+				background-color: transparent !important;
+				background-size: 16px;
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+
+			&.cl-focus {
+				border-color: #ffffff;
+			}
+		}
+
+		.cl-button.sitemap {
+			padding: 0 10px;
+			min-width: 0;
+			border: 1px solid fade(#ffffff, 40%);
+			border-radius: 4px;
+			background-color: transparent;
+			color: #ffffff;
+			font-size: @cl-pc-font-size-body-small;
+			font-weight: @cl-font-weight-medium;
+
+			&:not(.cl-disabled):hover,
+			&.cl-focus {
+				border-color: @kt-red;
+				background-color: @kt-red;
+			}
+		}
+	}
+
+	/* --- MDI --- */
+	.cl-tabfolder.cl-mdifolder.mdi-content {
+		> .content {
+			.cl-tabfolder-header.content.cl-top {
+				.cl-tabfolder-item {
+					background-color: @kt-gray;
+					color: #666666;
+
+					&.cl-selected {
+						background-color: @kt-ink;
+						color: #ffffff;
+					}
+				}
+			}
+		}
+
+		.cl-button.mdi-btn-home {
+			background-color: @kt-red;
+
+			&:not(.cl-disabled):hover {
+				background-color: @kt-red-hover;
+			}
+		}
+	}
+
+	/* --- 사이드 메뉴 --- */
+	.side-menu {
+		border-right: 2px solid @kt-line;
+		background-color: #ffffff;
+
+		.side-search {
+			.cl-searchinput {
+				.cl-searchinput-search {
+					background-color: @kt-ink;
+				}
+			}
+		}
+
+		.cl-container.side-menu-btn {
+			.cl-button {
+				&:not(.cl-disabled).cl-activated,
+				&:not(.cl-disabled):active,
+				&:focus,
+				&.cl-focus {
+					background-color: @kt-red-5;
+					color: @kt-red;
+
+					&.menu {
+						background-image: url("@{kt-main-img}/ic_side_menu_active_red.svg");
+					}
+
+					&.fav {
+						background-image: url("@{kt-main-img}/ic_side_fav_active_red.svg");
+					}
+
+					&.work {
+						background-image: url("@{kt-main-img}/ic_side_work_active_red.svg");
+					}
+				}
+			}
+		}
+
+		.cl-sidenavigation {
+			.cl-sidenavigation-item {
+				&.cl-level-2 {
+					&.cl-selected,
+					&:not(.cl-selected):not(.cl-disabled):hover {
+						background-color: @kt-gray;
+						color: @kt-red;
+					}
+				}
+
+				&.cl-level-3 {
+					&.cl-selected,
+					&:not(.cl-selected):not(.cl-disabled):hover {
+						background-color: @kt-red;
+						color: #ffffff;
+					}
+				}
+
+				&.cl-level-4 {
+					&.cl-selected,
+					&:not(.cl-selected):not(.cl-disabled):hover {
+						color: @kt-red;
+					}
+				}
+			}
+		}
+	}
+
+	.btn-side-expander {
+		-webkit-mask-image: url("@{kt-main-img}/img_side_btn.svg");
+		mask-image: url("@{kt-main-img}/img_side_btn.svg");
+		-webkit-mask-repeat: no-repeat;
+		mask-repeat: no-repeat;
+		-webkit-mask-position: center;
+		mask-position: center;
+		background-color: #BDBDBD !important;
+		background-image: none;
+
+		&:not(.cl-disabled):hover,
+		&.cl-focus,
+		&:focus,
+		&:not(.cl-disabled).cl-activated,
+		&:not(.cl-disabled):active {
+			background-color: @kt-red !important;
+			background-image: none;
+		}
+	}
+
+	.floating-box {
+		&.zoom {
+			.cl-button {
+				background-color: @kt-ink;
+			}
+		}
+
+		&.kt-help {
+			.cl-output {
+				font-size: @cl-pc-font-size-body-small;
+				color: @kt-text;
+			}
+
+			.cl-output.tit {
+				font-size: @cl-pc-font-size-body-large;
+				font-weight: @cl-font-weight-bold;
+				color: @kt-ink;
+			}
+		}
+	}
+
+	/* --- 우측 퀵 레일 --- */
+	.quick-rail {
+		background-color: #ffffff;
+		border-left: 1px solid @kt-line;
+
+		.cl-button.kt-ico {
+			.kt-ico-btn();
+
+			&.panel .cl-icon {
+				background-image: url("@{kt-icons}/ico_layout.svg") !important;
+			}
+
+			&.memo .cl-icon {
+				background-image: url("@{kt-icons}/ico_list_checks.svg") !important;
+			}
+
+			&.curtain .cl-icon {
+				background-image: url("@{kt-icons}/ico_lock.svg") !important;
+			}
+
+			&.print .cl-icon {
+				background-image: url("@{kt-icons}/ico_print.svg") !important;
+			}
+
+			&.help .cl-icon {
+				background-image: url("@{kt-icons}/ico_question.svg") !important;
+			}
+
+			// 업무 패널이 열려 있을 때
+			&.on {
+				background-color: @kt-red-5;
+			}
+
+			// 남은 To-Do 가 있을 때
+			&.active {
+				overflow: visible;
+
+				&::before {
+					.pseudo();
+					.position(@t: 4px, @r: 4px);
+					.square(6px);
+					background-color: @kt-red;
+					border-radius: @cl-radius-max;
+				}
+			}
+		}
+	}
+
+	/* --- 우측 업무 패널 --- */
+	.work-panel {
+		background-color: #FAFAFA;
+		border-left: 1px solid @kt-line;
+
+		.cl-output.sec-tit {
+			color: @kt-ink;
+			font-size: @cl-pc-font-size-body-medium;
+			font-weight: @cl-font-weight-bold;
+		}
+
+		.cl-output.cnt {
+			color: @kt-red;
+			font-size: @cl-pc-font-size-body-medium;
+			font-weight: @cl-font-weight-bold;
+		}
+
+		.cl-button.ghost {
+			.kt-ghost-btn();
+		}
+
+		/* 오늘의 처리 현황 */
+		.tile {
+			border: 1px solid @kt-line;
+			border-radius: @cl-radius-small2;
+			background-color: #ffffff;
+
+			.cl-output {
+				text-align: center;
+			}
+
+			.cl-output.num {
+				color: @kt-ink;
+				font-size: 20px;
+				font-weight: @cl-font-weight-bold;
+				font-variant-numeric: tabular-nums;
+			}
+
+			.cl-output.lbl {
+				color: @kt-muted;
+				font-size: @cl-pc-font-size-label-xsmall;
+				font-weight: @cl-font-weight-medium;
+			}
+
+			// 미처리 건은 레드로 강조
+			&.warn {
+				border-color: ~"var(--kt-point-a30)";
+				background-color: @kt-red-5;
+
+				.cl-output.num {
+					color: @kt-red;
+				}
+			}
+		}
+
+		/* 빠른 업무 */
+		.tasks {
+			.cl-button.task {
+				padding: 32px 0 0 0;
+				min-width: 0;
+				border: 1px solid @kt-line;
+				border-radius: @cl-radius-small2;
+				background-color: #ffffff;
+				background-repeat: no-repeat;
+				background-position: center top 9px;
+				background-size: 22px;
+				color: @kt-text;
+				font-size: @cl-pc-font-size-label-xsmall;
+				font-weight: @cl-font-weight-medium;
+
+				&:not(.cl-disabled):hover,
+				&.cl-focus {
+					border-color: @kt-red;
+					color: @kt-red;
+				}
+
+				&.t-new {
+					background-image: url("@{kt-icons}/ico_user_plus.svg");
+				}
+
+				&.t-mnp {
+					background-image: url("@{kt-icons}/ico_phone_transfer.svg");
+				}
+
+				&.t-chg {
+					background-image: url("@{kt-icons}/ico_devices.svg");
+				}
+
+				&.t-pay {
+					background-image: url("@{kt-icons}/ico_credit_card.svg");
+				}
+
+				&.t-plan {
+					background-image: url("@{kt-icons}/ico_sliders_horizontal.svg");
+				}
+
+				&.t-stop {
+					background-image: url("@{kt-icons}/ico_phone_pause.svg");
+				}
+
+				&.t-name {
+					background-image: url("@{kt-icons}/ico_identification_card.svg");
+				}
+
+				&.t-stock {
+					background-image: url("@{kt-icons}/ico_shopping_cart.svg");
+				}
+			}
+		}
+
+		/* 최근 조회 고객 */
+		.cl-listbox.recent {
+			border: 1px solid @kt-line;
+			border-radius: @cl-radius-small2;
+			background-color: #ffffff;
+			font-size: @cl-pc-font-size-body-small;
+
+			.cl-listbox-item {
+				&.cl-hover,
+				&:hover {
+					background-color: @kt-red-5;
+					color: @kt-red;
+				}
+			}
+		}
+
+		/* To-Do */
+		.cl-checkboxgroup {
+			font-size: @cl-pc-font-size-body-small;
+
+			// 완료한 항목은 흐리게 + 취소선
+			.cl-checkbox.cl-checked .cl-text,
+			.cl-checkboxgroup-item.cl-selected .cl-text {
+				color: #999999;
+				text-decoration: line-through;
+			}
+		}
+	}
+
+	/* --- 화면 가리기 --- */
+	.kt-curtain {
+		z-index: 10;
+		background-color: fade(@kt-ink, 92%);
+		-webkit-backdrop-filter: blur(12px);
+		backdrop-filter: blur(12px);
+
+		.cl-output {
+			text-align: center;
+			color: #ffffff;
+		}
+
+		.cl-output.tit {
+			font-size: 24px;
+			font-weight: @cl-font-weight-bold;
+		}
+
+		.cl-output.sub {
+			color: fade(#ffffff, 70%);
+			font-size: @cl-pc-font-size-body-medium;
+		}
+
+		.cl-button.primary {
+			border-color: @kt-red;
+			border-radius: 4px;
+			background-color: @kt-red;
+			color: #ffffff;
+
+			&:not(.cl-disabled):hover,
+			&.cl-focus {
+				border-color: @kt-red-hover;
+				background-color: @kt-red-hover;
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+ 다크(고대비) 모드 — 새로 추가한 영역만 어둡게 맞춘다. 나머지는 main.part.less 의 고대비 규칙을 따른다.
+ ========================================================================== */
+[data-cl-mode="high-contrast"] @{kt} {
+	@kt-dark-bg: #20252B;
+	@kt-dark-panel: #272C32;
+	@kt-dark-line: fade(#ffffff, 12%);
+	@kt-dark-text: #E1E1E1;
+
+	.cl-container.header.gnb-bar {
+		background-color: #121212;
+	}
+
+	.cl-tabfolder.cl-mdifolder.mdi-content {
+		> .content {
+			.cl-tabfolder-header.content.cl-top {
+				.cl-tabfolder-item {
+					background-color: @kt-dark-panel;
+					color: #BDBDBD;
+
+					&.cl-selected {
+						background-color: #4A525A;
+						color: #ffffff;
+					}
+				}
+			}
+		}
+	}
+
+	.side-menu {
+		border-right-color: @kt-dark-line;
+		background-color: @kt-dark-bg;
+
+		.cl-sidenavigation .cl-sidenavigation-item.cl-level-2 {
+			&.cl-selected,
+			&:not(.cl-selected):not(.cl-disabled):hover {
+				background-color: #363D44;
+				color: #FF6B81;
+			}
+		}
+
+		.cl-container.side-menu-btn .cl-button {
+			&:not(.cl-disabled).cl-activated,
+			&:not(.cl-disabled):active,
+			&:focus,
+			&.cl-focus {
+				background-color: #363D44;
+				color: #FF6B81;
+			}
+		}
+	}
+
+	.quick-rail {
+		background-color: @kt-dark-bg;
+		border-left-color: @kt-dark-line;
+
+		.cl-button.kt-ico {
+			.cl-icon {
+				filter: invert(1);
+			}
+
+			&:not(.cl-disabled):hover,
+			&.cl-focus,
+			&.on {
+				background-color: #363D44;
+			}
+		}
+	}
+
+	.work-panel {
+		background-color: @kt-dark-bg;
+		border-left-color: @kt-dark-line;
+
+		.cl-output.sec-tit {
+			color: #ffffff;
+		}
+
+		.cl-button.ghost {
+			border-color: fade(#ffffff, 30%);
+			background-color: transparent;
+			color: @kt-dark-text;
+		}
+
+		.tile,
+		.cl-listbox.recent {
+			border-color: @kt-dark-line;
+			background-color: @kt-dark-panel;
+			color: @kt-dark-text;
+		}
+
+		// 빠른 업무 아이콘(어두운 svg)이 보이도록 버튼 면은 밝게 둔다
+		.tasks .cl-button.task {
+			border-color: transparent;
+			background-color: #D9DCE0;
+			color: @kt-ink;
+		}
+
+		.tile {
+			.cl-output.num {
+				color: #ffffff;
+			}
+
+			.cl-output.lbl {
+				color: #BDBDBD;
+			}
+
+			&.warn {
+				border-color: ~"var(--kt-point-a60)";
+				background-color: ~"var(--kt-point-a20)";
+
+				.cl-output.num {
+					color: #FF6B81;
+				}
+			}
+		}
+
+		.cl-checkboxgroup {
+			color: @kt-dark-text;
+		}
+	}
+
+	.floating-box.kt-help {
+		.cl-output,
+		.cl-output.tit {
+			color: #ffffff;
+		}
+	}
+}
+
+/* ==========================================================================
+ KT 메인 안에서 열리는 업무 화면의 주요 버튼·탭 색
+ — 주 버튼은 KT 블랙, 선택 표시는 KT 레드. (다크 모드에서는 주 버튼을 레드로)
+ ========================================================================== */
+@{kt} {
+	.cl-button.primary {
+		background-color: @kt-ink;
+		border-color: @kt-ink;
+		color: #ffffff;
+
+		&:not(.cl-disabled):hover {
+			background-color: @kt-ink-soft;
+			border-color: @kt-ink-soft;
+		}
+
+		&.cl-focus,
+		&:not(.cl-disabled).cl-activated,
+		&:not(.cl-disabled):active {
+			background-color: #000000;
+			border-color: #000000;
+		}
+	}
+
+	.cl-button.secondary {
+		background-color: #ffffff;
+		border-color: #C4C9D0;
+		color: @kt-ink;
+
+		&:not(.cl-disabled):hover {
+			background-color: #ffffff;
+			border-color: @kt-ink;
+			color: @kt-ink;
+		}
+	}
+
+	.cl-pageindexer .cl-pageindexer-index-area .cl-pageindexer-index.cl-selected {
+		background-color: @kt-ink;
+	}
+
+	.cl-tabfolder.line:not(.cl-mdifolder) {
+		> .tablist > .cl-tabfolder-header {
+			&.cl-top,
+			&.cl-bottom {
+				.cl-tabfolder-item {
+					&::before {
+						background-color: @kt-red;
+					}
+
+					&.cl-selected {
+						color: @kt-red;
+					}
+				}
+			}
+		}
+	}
+
+	// 화면 가리기의 버튼은 어두운 배경 위라 레드로 둔다
+	.kt-curtain .cl-button.primary {
+		border-color: @kt-red;
+		background-color: @kt-red;
+
+		&:not(.cl-disabled):hover,
+		&.cl-focus {
+			border-color: @kt-red-hover;
+			background-color: @kt-red-hover;
+		}
+	}
+}
+
+[data-cl-mode="high-contrast"] @{kt} {
+	.cl-button.primary {
+		background-color: @kt-red;
+		border-color: @kt-red;
+
+		&:not(.cl-disabled):hover,
+		&.cl-focus {
+			background-color: @kt-red-hover;
+			border-color: @kt-red-hover;
+		}
+	}
+
+	.cl-button.secondary {
+		background-color: transparent;
+		border-color: fade(#ffffff, 40%);
+		color: #e1e1e1;
+
+		&:not(.cl-disabled):hover {
+			background-color: fade(#ffffff, 10%);
+			border-color: #ffffff;
+			color: #ffffff;
+		}
+	}
+}
+
+/* ==========================================================================
+ 좌측 아이콘 레일 + 메뉴 패널 (as-is 와 같은 위치)
+ ========================================================================== */
+@{kt} {
+	.left-rail {
+		background-color: #ffffff;
+		border-right: 1px solid @kt-line;
+
+		.cl-button.rail-btn {
+			padding: 27px 0 0 0;
+			min-width: 0;
+			border: none;
+			border-radius: 8px;
+			background-color: transparent;
+			background-repeat: no-repeat;
+			background-position: center top 7px;
+			background-size: 20px;
+			color: #555555;
+			font-size: 10px;
+			font-weight: @cl-font-weight-medium;
+			letter-spacing: -0.3px;
+
+			&:not(.cl-disabled):hover,
+			&.cl-focus {
+				background-color: @kt-gray;
+				color: @kt-ink;
+			}
+
+			// 현재 메뉴 보기
+			&.on {
+				background-color: @kt-red-5;
+				color: @kt-red;
+				font-weight: @cl-font-weight-bold;
+			}
+
+			// 남은 To-Do 가 있을 때
+			&.active {
+				overflow: visible;
+
+				&::before {
+					.pseudo();
+					.position(@t: 5px, @r: 8px);
+					.square(6px);
+					background-color: @kt-red;
+					border-radius: @cl-radius-max;
+				}
+			}
+
+			&.fav {
+				background-image: url("@{kt-icons}/ico_star.svg");
+			}
+
+			&.menu {
+				background-image: url("@{kt-icons}/ico_list.svg");
+			}
+
+			&.work {
+				background-image: url("@{kt-icons}/ico_user_check.svg");
+			}
+
+			&.req {
+				background-image: url("@{kt-icons}/ico_chat_dots.svg");
+			}
+
+			&.calc {
+				background-image: url("@{kt-icons}/ico_math.svg");
+			}
+
+			&.todo {
+				background-image: url("@{kt-icons}/ico_list_checks.svg");
+			}
+
+			&.curtain {
+				background-image: url("@{kt-icons}/ico_lock.svg");
+			}
+
+			&.print {
+				background-image: url("@{kt-icons}/ico_print.svg");
+			}
+
+			&.help {
+				background-image: url("@{kt-icons}/ico_question.svg");
+			}
+		}
+
+		.cl-output.rail-sep {
+			background-color: @kt-line;
+		}
+	}
+
+	// 업무 패널 손잡이는 좌측 손잡이를 좌우로 뒤집어 쓴다
+	.btn-side-expander.right {
+		transform: scaleX(-1);
+	}
+
+	.floating-box.kt-help {
+		.cl-output.tit.sub {
+			font-size: @cl-pc-font-size-body-small;
+		}
+	}
+
+	/* --- 메뉴 패널: 여백을 넓히고, 선택 항목은 연한 레드 바탕 + 왼쪽 레드 막대로 표시 --- */
+	.side-menu {
+		.side-search {
+			padding: 12px 10px 8px 12px;
+
+			.cl-output.tit {
+				color: @kt-ink;
+				font-size: 14px;
+				font-weight: @cl-font-weight-bold;
+			}
+
+			.cl-searchinput {
+				border: 1px solid transparent;
+				background-color: @kt-gray;
+
+				&.cl-focus {
+					border-color: @kt-ink;
+					background-color: #ffffff;
+				}
+
+				.cl-searchinput-search {
+					border-radius: 4px;
+				}
+			}
+		}
+
+		.cl-sidenavigation {
+			// 글자를 한 단계 줄여 한 화면에 더 많은 메뉴가 보이게 한다
+			.cl-text {
+				font-size: 13px;
+			}
+
+			.cl-list.cl-level-1 {
+				padding: 2px 6px;
+
+				> .cl-subtree {
+					border-bottom: 1px solid #F0F0F0;
+
+					&:not(:first-child) {
+						margin-top: 2px;
+					}
+
+					&:not(:last-child) {
+						padding-bottom: 2px;
+					}
+				}
+			}
+
+			.cl-sidenavigation-item {
+				min-height: 28px;
+				border-radius: 6px;
+				transition: background-color 0.12s ease;
+
+				&.cl-level-1 {
+					padding: 0 6px;
+					color: @kt-ink;
+
+					&.cl-selected,
+					&:not(.cl-selected):not(.cl-disabled):hover {
+						background-color: @kt-gray;
+					}
+				}
+
+				&.cl-level-2 {
+					padding: 0 6px 0 12px;
+					color: #555555;
+
+					&.cl-selected,
+					&:not(.cl-selected):not(.cl-disabled):hover {
+						padding: 0 6px 0 12px;
+						border-radius: 6px;
+						background-color: @kt-gray;
+						color: @kt-ink;
+					}
+				}
+
+				&.cl-level-3 {
+					padding-left: 28px;
+					background-position: center left 14px;
+					color: #666666;
+
+					.cl-text {
+						font-size: 12.5px;
+					}
+
+					&:not(.cl-selected):not(.cl-disabled):hover {
+						border-radius: 6px;
+						background-color: @kt-gray;
+						background-image: url("@{kt-main-img}/ic_dot.svg");
+						color: @kt-ink;
+						font-weight: @cl-font-weight-medium;
+					}
+
+					&.cl-selected {
+						border-radius: 6px;
+						background-color: @kt-red-5;
+						background-image: none;
+						box-shadow: inset 3px 0 0 @kt-red;
+						color: @kt-red;
+						font-weight: @cl-font-weight-bold;
+					}
+				}
+
+				&.cl-level-4 {
+					padding-left: 40px;
+					background-position: center left 26px;
+
+					.cl-text {
+						font-size: 12.5px;
+					}
+
+					&.cl-selected,
+					&:not(.cl-selected):not(.cl-disabled):hover {
+						border-radius: 6px;
+						background-color: @kt-gray;
+						color: @kt-red;
+					}
+				}
+			}
+		}
+	}
+}
+
+[data-cl-mode="high-contrast"] @{kt} {
+	.left-rail {
+		background-color: #20252B;
+		border-right-color: fade(#ffffff, 12%);
+
+		// 어두운 아이콘·글자를 밝게 뒤집고, 색상환을 되돌려 레드는 유지한다
+		.cl-button.rail-btn {
+			filter: invert(1) hue-rotate(180deg);
+		}
+
+		.cl-output.rail-sep {
+			background-color: fade(#ffffff, 12%);
+		}
+	}
+
+	.side-menu {
+		.side-search {
+			.cl-output.tit {
+				color: #ffffff;
+			}
+
+			.cl-searchinput {
+				background-color: #2F363D;
+
+				&.cl-focus {
+					border-color: #ffffff;
+					background-color: #2F363D;
+				}
+			}
+		}
+
+		.cl-sidenavigation {
+			.cl-list.cl-level-1 > .cl-subtree {
+				border-bottom-color: fade(#ffffff, 8%);
+			}
+
+			.cl-sidenavigation-item {
+				&.cl-level-1 {
+					color: #E1E1E1;
+
+					&.cl-selected,
+					&:not(.cl-selected):not(.cl-disabled):hover {
+						background-color: #2F363D;
+					}
+				}
+
+				&.cl-level-2 {
+					color: #BDBDBD;
+
+					&.cl-selected,
+					&:not(.cl-selected):not(.cl-disabled):hover {
+						background-color: #363D44;
+						color: #ffffff;
+					}
+				}
+
+				&.cl-level-3 {
+					color: #999999;
+
+					&:not(.cl-selected):not(.cl-disabled):hover {
+						background-color: #363D44;
+						color: #ffffff;
+					}
+
+					&.cl-selected {
+						background-color: ~"var(--kt-point-a20)";
+						color: #FF6B81;
+					}
+				}
+
+				&.cl-level-4 {
+					&.cl-selected,
+					&:not(.cl-selected):not(.cl-disabled):hover {
+						background-color: #363D44;
+						color: #FF6B81;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+ 경고·미처리 표시는 메인 색상과 무관하게 레드로 둔다(의미가 바뀌지 않도록)
+ ========================================================================== */
+@kt-warn: #E4002B;
+@kt-warn-5: #FFF1F3;
+
+@{kt} {
+	.kt-top .kt-utils .cl-output.session-time.warn {
+		color: #FF6B81;
+	}
+
+	.work-panel .tile.warn {
+		border-color: fade(@kt-warn, 30%);
+		background-color: @kt-warn-5;
+
+		.cl-output.num {
+			color: @kt-warn;
+		}
+	}
+}
+
+/* ==========================================================================
+ 레드 사용 줄이기 — 포인트색은 "지금 여기" 표시(가는 막대·밑줄)와 주요 실행 버튼에만 쓰고,
+ 넓은 면(선택 배경)과 글자는 무채색으로 둔다.
+ ========================================================================== */
+@{kt} {
+	.cl-tabfolder.cl-mdifolder.mdi-content .cl-button.mdi-btn-home {
+		background-color: @kt-ink;
+
+		&:not(.cl-disabled):hover {
+			background-color: @kt-ink-soft;
+		}
+	}
+
+	.left-rail .cl-button.rail-btn.on {
+		background-color: @kt-gray;
+		box-shadow: inset 2px 0 0 @kt-red;
+		color: @kt-ink;
+	}
+
+	.side-menu .cl-sidenavigation .cl-sidenavigation-item {
+		&.cl-level-3.cl-selected {
+			background-color: @kt-gray;
+			color: @kt-ink;
+		}
+
+		&.cl-level-4 {
+			&.cl-selected,
+			&:not(.cl-selected):not(.cl-disabled):hover {
+				color: @kt-ink;
+			}
+		}
+	}
+
+	.btn-side-expander {
+		&:not(.cl-disabled):hover,
+		&.cl-focus,
+		&:focus,
+		&:not(.cl-disabled).cl-activated,
+		&:not(.cl-disabled):active {
+			background-color: @kt-ink-soft !important;
+		}
+	}
+
+	.work-panel {
+		.cl-output.cnt {
+			color: @kt-ink;
+		}
+
+		.tasks .cl-button.task {
+			&:not(.cl-disabled):hover,
+			&.cl-focus {
+				border-color: @kt-ink;
+				color: @kt-ink;
+			}
+		}
+
+		.cl-listbox.recent .cl-listbox-item {
+			&.cl-hover,
+			&:hover {
+				background-color: @kt-gray;
+				color: @kt-ink;
+			}
+		}
+	}
+}
+
+[data-cl-mode="high-contrast"] @{kt} {
+	.side-menu .cl-sidenavigation .cl-sidenavigation-item {
+		&.cl-level-3.cl-selected {
+			background-color: #363D44;
+			color: #ffffff;
+		}
+
+		&.cl-level-4 {
+			&.cl-selected,
+			&:not(.cl-selected):not(.cl-disabled):hover {
+				color: #ffffff;
+			}
+		}
+	}
+
+	.work-panel {
+		.cl-output.cnt {
+			color: #ffffff;
+		}
+
+		.cl-listbox.recent .cl-listbox-item {
+			&.cl-hover,
+			&:hover {
+				background-color: #363D44;
+				color: #ffffff;
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+ 엔터프라이즈 톤 다듬기 — 면은 옅은 회색, 구분은 가는 선으로
+ ========================================================================== */
+@{kt} {
+	.work-panel {
+		background-color: #F6F7F9;
+		border-left: 1px solid #DFE2E6;
+
+		.cl-output.sec-tit {
+			font-size: @cl-pc-font-size-body-medium;
+			letter-spacing: -0.2px;
+		}
+
+		.tile,
+		.tasks .cl-button.task,
+		.cl-listbox.recent {
+			border-color: #DFE2E6;
+			border-radius: 4px;
+		}
+
+		.tile .cl-output.num {
+			font-size: 18px;
+		}
+	}
+
+	.left-rail {
+		border-right: 1px solid #DFE2E6;
+
+		.cl-button.rail-btn {
+			border-radius: 4px;
+		}
+	}
+
+	.side-menu {
+		border-right: 1px solid #DFE2E6;
+	}
+
+	// MDI 탭: 칩 대신 위가 각진 탭으로, 선택 탭은 블랙
+	.cl-tabfolder.cl-mdifolder.mdi-content > .content .cl-tabfolder-header.content.cl-top {
+		padding: 10px 20px 0px 20px;
+		border-bottom: 1px solid #DFE2E6;
+
+		.cl-tabfolder-item {
+			border-radius: 4px 4px 0 0;
+			padding: 5px 8px 5px 10px;
+		}
+	}
+}

@@ -1,0 +1,210 @@
+@import "../core/include.part.less";
+
+/**
+ * ============================================================================
+ * @file      output.part.less
+ * @desc      CORE-UI 컨트롤 스타일 정의
+ * @rule
+ * 1. 독립성 유지
+ *  - 이 파일 내부에 선언된 변수는 외부에서 참조할 수 없음
+ * @contents  
+ * 1. Base (공통 스타일)
+ * 2. Variants (유형별 스타일)
+ * 3. Mode (테마 스타일)
+ * ============================================================================
+ */
+
+/* ==========================================================================
+   Component Tokens
+ ========================================================================== */
+
+/* 사이즈 변수 */
+@font-size-lg: 16px;
+@font-size-xl: 18px;
+@font-size-2xl: 20px;
+@font-size-3xl: 24px;
+@font-size-4xl: 28px;
+@font-size-5xl: 32px;
+
+/* 색상 변수 */
+@output__color-text: @cl-base-color-text-basic;
+@output__color-text--disabled: @cl-base-color-text-disabled-on;
+
+/* ==========================================================================
+    Local Mixins
+ ========================================================================== */
+
+
+
+/* ==========================================================================
+ 1. Base
+ ========================================================================== */
+
+.cl-output {
+	background-repeat: no-repeat;
+	background-position: left center;
+	color: @output__color-text;
+	
+	&.cl-disabled {
+		color: @output__color-text--disabled;
+	}
+}
+
+/* ==========================================================================
+ 2. Variants
+ ========================================================================== */
+
+/* --- 텍스트 정렬 --- */
+
+.text-left {
+	text-align: left;
+	
+	.cl-text {
+		text-align: left;
+	}
+}
+
+.text-right {
+	text-align: right;
+	
+	.cl-text {
+		text-align: right;
+	}
+}
+
+/* --- 텍스트 색상 --- */
+
+.text-primary {
+	color: @cl-color-base-primary-50 !important;
+	
+	.cl-text {
+		color: @cl-color-base-primary-50;
+	}
+}
+
+.text-secondary {
+	color: @cl-color-base-secondary-50;
+	
+	.cl-text {
+		color: @cl-color-base-secondary-50;
+	}
+}
+
+.text-gray {
+	color: @cl-color-base-gray-50;
+	
+	.cl-text {
+		color: @cl-color-base-gray-50;
+	}
+}
+
+.text-point {
+	color: @cl-color-base-point-50;
+	
+	.cl-text {
+		color: @cl-color-base-point-50;
+	}
+}
+
+.text-information {
+	color: @cl-color-base-information-50;
+	
+	.cl-text {
+		color: @cl-color-base-information-50;
+	}
+}
+
+.text-success {
+	color: @cl-color-base-success-50;
+	
+	.cl-text {
+		color: @cl-color-base-success-50;
+	}
+}
+
+.text-warning {
+	color: @cl-color-base-warning-50;
+	
+	.cl-text {
+		color: @cl-color-base-warning-50;
+	}
+}
+
+.text-danger {
+	color: @cl-color-base-danger-50;
+	
+	.cl-text {
+		color: @cl-color-base-danger-50;
+	}
+}
+
+.text-graphic {
+	color: @cl-color-base-graphic-50;
+	
+	.cl-text {
+		color: @cl-color-base-graphic-50;
+	}
+}
+
+.fw-bold {
+	font-weight : @cl-font-weight-bold;
+}
+
+.cl-output.tit {
+	line-height: 1.25;
+	font-weight: @cl-font-weight-semibold;	
+	
+	&.h1,
+	&.h2,
+	&.h3 {
+		font-weight: @cl-font-weight-bold;
+	}
+	
+	&.h1 {
+		font-size: @font-size-5xl;
+		letter-spacing: -0.68px;
+	}
+	
+	&.h2 {
+		font-size: @font-size-4xl;
+		letter-spacing: -0.56px;
+	}
+	
+	&.h3 {
+		font-size: @font-size-3xl;
+		letter-spacing: -0.48px;
+	}
+	
+	&.h4 {
+		font-size: @font-size-2xl;
+		letter-spacing: -0.36px;
+	}
+	
+	&.h5 {
+		font-size: @font-size-xl;
+		letter-spacing: -0.32px;
+	}
+	
+	&.h6 {
+		font-size: @font-size-lg;
+		letter-spacing: -0.28px;
+	}
+}
+
+
+/* ==========================================================================
+ 3. Mode
+ ========================================================================== */
+
+.color-mode(@mode: high-contrast) {
+	@output__color-text: @cl-high-contrast-color-text-basic;
+	@output__color-text--disabled: @cl-high-contrast-color-text-disabled-on;
+	
+	.cl-output {
+		color: @output__color-text;
+		
+		&.cl-disabled {
+			color: @output__color-text--disabled;
+		}
+	}
+}

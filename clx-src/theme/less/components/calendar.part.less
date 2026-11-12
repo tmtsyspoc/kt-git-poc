@@ -1,0 +1,563 @@
+@import "../core/include.part.less";
+
+/**
+ * ============================================================================
+ * @file      calendar.part.less
+ * @desc      CORE-UI 컨트롤 스타일 정의
+ * @rule
+ * 1. 독립성 유지
+ *  - 이 파일 내부에 선언된 변수는 외부에서 참조할 수 없음
+ * @contents  
+ * 1. Base (공통 스타일)
+ * 2. Variants (유형별 스타일)
+ * 3. Mode (테마 스타일)
+ * ============================================================================
+ */
+
+/* ==========================================================================
+   Component Tokens
+ ========================================================================== */
+
+/* 사이즈 변수 */
+@calendar__radius: @cl-radius-xsmall3;
+@calendar__padding: @cl-padding-5;
+@calendar__gap: @cl-gap-2;
+@calendar__outline-offset: -2px;
+
+@calendar__head-gap: @cl-gap-2;
+@calendar__head-padding-y: @cl-padding-3;
+@calendar__head-pc-font-size: @cl-pc-font-size-heading-xsmall;
+@calendar__head-mobile-font-size: @cl-mobile-font-size-heading-xsmall;
+@calendar__head-button-size-height: @cl-size-height-5;
+
+@calendar__head-content-pc-font-size: @cl-pc-font-size-label-xsmall;
+@calendar__head-content-mobile-font-size: @cl-pc-font-size-label-xsmall;
+
+@calendar__date-size-height: @cl-size-height-6;
+@calendar__date-radius: @cl-radius-max;
+@calendar__date-gap: @cl-gap-1;
+@calendar__date-padding: @cl-padding-1;
+
+@calendar__foot-padding-y: @cl-padding-3;
+@calendar__foot-padding-x: @calendar__padding;
+@calendar__foot-pc-font-size: @cl-pc-font-size-label-small;
+@calendar__foot-mobile-font-size: @cl-mobile-font-size-label-small;
+
+
+@calendar__item-gap: @cl-gap-2;
+@calendar__item-padding: @cl-padding-2;
+@calendar__item-size-height: @cl-size-height-5;
+@calendar__item-pc-font-size: @cl-pc-font-size-label-xsmall;
+@calendar__item-mobile-font-size: @cl-mobile-font-size-label-xsmall;
+
+/* 색상 변수 */
+@calendar__color-surface: @cl-base-color-surface-white;
+@calendar__color-border: @cl-base-color-border-gray-soft;
+@calendar__color-text: @cl-base-color-text-basic;
+@calendar__shadow: 0 4px 10px 0 @cl-base-color-alpha-shadow3;
+
+@calendar__head-color-surface: @cl-base-color-alpha-basic0;
+@calendar__head-color-text: @cl-base-color-text-bold;
+@calendar__head-color-action: @cl-base-color-action-primary;
+@calendar__head-color-action--hover: @cl-base-color-action-secondary-hover;
+@calendar__head-color-action--active: @cl-base-color-action-secondary-active;
+
+@calendar__head-content-color-surface: @calendar__color-surface;
+@calendar__head-content-color-text: @cl-base-color-text-softer;
+
+@calendar__date-color-text-sat: @calendar__color-text; //@cl-base-color-text-information;
+@calendar__date-color-text-sun: @cl-base-color-text-danger;
+@calendar__date-color-text-today: @cl-base-color-text-primary;
+@calendar__date-color-text-off: @cl-base-color-text-point;
+
+@calendar__date-color-action: @cl-base-color-alpha-basic0;
+@calendar__date-color-action--hover: @cl-base-color-action-secondary-hover;
+@calendar__date-color-action--selected: @cl-base-color-action-secondary-active;
+@calendar__date-color-action--disabled: @cl-base-color-action-disabled;
+@calendar__date-color-text--hover: @cl-base-color-text-secondary;
+@calendar__date-color-text--selected: @cl-base-color-text-inverse;
+@calendar__date-color-text--disabled: @cl-base-color-text-disabled;
+
+@calendar__foot-color-border: @cl-base-color-border-gray-softer;
+
+
+@calendar__item-color-background: @cl-base-color-element-information-soft;
+@calendar__item-color-text: @cl-base-color-text-information;
+
+/* ==========================================================================
+    Local Mixins
+ ========================================================================== */
+
+
+
+/* ==========================================================================
+ 1. Base
+ ========================================================================== */
+
+/* --- 공통 --- */
+.cl-calendar {
+	background-color: @calendar__color-surface;
+	border: 1px solid @calendar__color-border;
+	
+	*:focus {
+		.focus-reset();
+	}
+	
+	.cl-calendar-header {
+		background-color: @calendar__head-color-surface;
+		color: @calendar__head-color-text;
+		font-size: @calendar__head-pc-font-size;
+		font-weight: @cl-font-weight-semibold;
+		gap: @calendar__head-gap;
+		padding: @calendar__head-padding-y @calendar__padding;
+		
+		@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+			font-size: @calendar__head-mobile-font-size;
+		}
+		
+		.cl-calendar-header-before,
+		.cl-calendar-header-prev,
+		.cl-calendar-header-next,
+		.cl-calendar-header-after {
+			.square(@calendar__head-button-size-height);
+			background-size: contain;
+			background-color: @calendar__head-color-text;
+			
+			&:focus-visible {
+				.focus-outside(@offset: @calendar__outline-offset);
+			}
+		}
+		
+		.cl-calendar-header-before {
+			.icon-set(ico_double_left, pure);
+		}
+		
+		.cl-calendar-header-prev {
+			.icon-set(ico_left, pure);
+		}
+		
+		.cl-calendar-header-next {
+			.icon-set(ico_right, pure);
+		}
+		
+		.cl-calendar-header-after {
+			.icon-set(ico_double_right, pure);
+		}
+		
+		.cl-calendar-header-text {
+			color: inherit;
+			
+			&:focus-visible {
+				.focus-outside(@offset: @calendar__outline-offset);
+			}
+			
+			&:hover, &.cl-hover {
+				color: inherit;
+			}
+		}
+	}
+	
+	.cl-calendar-content-wrapper {
+	}
+	
+	.cl-calendar-content {
+		.cl-calendar-content-week {
+		}
+		
+		.cl-calendar-content-header {
+			height: auto;
+			background-color: @calendar__head-content-color-surface;
+			border: 0;
+			color: @calendar__head-content-color-text;
+			font-size: @calendar__head-content-pc-font-size;
+			font-weight: @cl-font-weight-regular;
+			text-transform: uppercase;
+			
+			@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+				font-size: @calendar__head-content-mobile-font-size;
+			}
+		}
+		
+		.cl-calendar-content-day,
+		.cl-calendar-content-month,
+		.cl-calendar-content-year,
+		.cl-other-month {
+			color: @calendar__color-text;
+		}
+		
+		.cl-calendar-content-day {
+			&.cl-calendar-content-sun {
+				color: @calendar__date-color-text-sun;
+			}
+			
+			&.cl-calendar-content-sat {
+				color: @calendar__date-color-text-sat;
+			}
+		}
+		
+		.cl-calendar-content-month,
+		.cl-calendar-content-year {
+		}
+		
+		.cl-other-month {
+			color: @calendar__date-color-text--disabled;
+		}
+	}
+	
+	.cl-calendar-footer {
+		border-top: 1px solid @calendar__foot-color-border;
+		padding: @calendar__foot-padding-y @calendar__foot-padding-x;
+		
+		.cl-calendar-footer-text {
+			.flex-layout(@jc: center, @ai: center);
+			float: right; // 버튼 방향
+			
+			background-color: @cl-base-color-button-tertiary-fill;
+			border: 1px solid @cl-base-color-button-tertiary-border;
+			border-radius: @cl-radius-xsmall3;
+			color: @cl-base-color-text-basic;
+			font-size: @calendar__foot-pc-font-size;
+			font-weight: @cl-font-weight-medium;
+			height: @cl-size-height-6;
+			padding: 0 @cl-padding-2;
+			
+			@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+				font-size: @calendar__foot-mobile-font-size;
+			}
+			
+			&:focus-visible {
+				.focus-outside(@offset: @calendar__outline-offset);
+			}
+			
+			&:hover {
+				background-color: @cl-base-color-button-tertiary-fill-hover;
+			}
+			
+			&:active {
+				background-color: @cl-base-color-button-tertiary-fill-pressed;
+			}
+		}
+		
+		&.cl-hover:not(.cl-disabled) .cl-calendar-footer-text,
+		.cl-calendar-footer-text:hover {
+			text-decoration: none;
+		}
+	}
+	
+	&:not(.cl-disabled) {
+		.cl-calendar-header-before {
+			&:hover, &.cl-hover {
+				.icon-set(ico_double_left, pure);
+			}
+		}
+		
+		.cl-calendar-header-prev {
+			&:hover, &.cl-hover {
+				.icon-set(ico_left, pure);
+			}
+		}
+		
+		.cl-calendar-header-next {
+			&:hover, &.cl-hover {
+				.icon-set(ico_right, pure);
+			}
+		}
+		
+		.cl-calendar-header-after {
+			&:hover, &.cl-hover {
+				.icon-set(ico_double_right, pure);
+			}
+		}
+		
+		.cl-calendar-content-day,
+		.cl-calendar-content-month,
+		.cl-calendar-content-year,
+		.cl-other-month {
+			&.cl-hidden {
+				&:hover {
+				}
+			}
+			
+			&.cl-calendar-defaultdate {
+				color: inherit;
+				text-decoration: underline;
+				text-underline-offset: 3px;
+				text-decoration-color: @calendar__date-color-text-today;
+			}
+			
+			&.cl-calendar-current {
+				box-shadow: none;
+				color: inherit;
+				.focus-outside(@offset: @calendar__outline-offset);
+			}
+			
+			&:not(.cl-disabled):hover {
+				background-color: @calendar__date-color-action;
+				color: inherit;
+			}
+			
+			&.cl-range-selected,
+			&.cl-range-selected:not(.cl-disabled):hover {
+				background-color: @calendar__date-color-action;
+				color: inherit;
+			}
+			
+			&.cl-selected,
+			&.cl-selected:not(.cl-disabled):hover,
+			&.cl-selected.cl-calendar-current {
+				background-color: @calendar__date-color-action;
+
+				&.cl-range-start,
+				&.cl-range-end {
+				}
+			}
+			
+			&.cl-disabled {
+				background-color: @calendar__date-color-action--disabled;
+				color: @calendar__date-color-text--disabled;
+			}
+			
+			&.cl-calendar-anniversary {
+				box-shadow: none;
+				color: @calendar__date-color-text-off;
+			}
+		}
+	}
+	
+	&:focus, &.cl-focus {
+		.focus-reset();
+		border-color: @calendar__color-border;
+	}
+	
+	&:focus-visible {
+		.focus();
+	}
+	
+	&.cl-disabled {
+	}
+	
+	&.cl-popup {
+		box-shadow: @calendar__shadow;
+		
+		&.cl-top {
+		}
+		
+		&.cl-bottom {
+		}
+		
+		&.cl-calendar-year,
+		&.cl-calendar-month,
+		&.cl-calendar-day {
+			.square(auto);
+		}
+	}
+}
+
+.cl-calendar:not(.cl-anniversaries) {
+	border-radius: @calendar__radius;
+	padding: 0;
+	
+	.cl-calendar-content-wrapper {
+		padding: @calendar__padding;
+		
+		.cl-calendar-content {
+			gap: @calendar__date-gap;
+			
+			.cl-calendar-content-header {
+				width: @calendar__date-size-height;
+			}
+			
+			.cl-calendar-content-day,
+			.cl-calendar-content-month,
+			.cl-calendar-content-year,
+			.cl-other-month {
+				height: @calendar__date-size-height;
+				border: 0;
+				padding: @calendar__date-padding;
+			}
+			
+			.cl-calendar-content-day {
+				width: @calendar__date-size-height;
+				border-radius: @calendar__date-radius;
+				
+				&:not(.cl-first-column):not(.cl-last-column) {
+					margin-left: @calendar__date-gap;
+					margin-right: @calendar__date-gap;
+				}
+				
+				&:not(.cl-first-row):not(.cl-last-row) {
+					margin-top: (@calendar__date-gap / 2);
+					margin-bottom: (@calendar__date-gap / 2);
+				}
+			}
+			
+			.cl-calendar-content-month,
+			.cl-calendar-content-year {
+				width: @cl-size-height-11;
+				border-radius: @calendar__radius;
+			}
+		}
+	}
+	
+	&:not(.cl-disabled) {
+		.cl-calendar-content-day,
+		.cl-calendar-content-month,
+		.cl-calendar-content-year,
+		.cl-other-month {
+			
+			&:not(.cl-disabled):hover {
+				background-color: @calendar__date-color-action--hover;
+				color: @calendar__date-color-text--hover;
+			}
+			
+			&.cl-range-selected,
+			&.cl-range-selected:not(.cl-disabled):hover {
+				background-color: @calendar__date-color-action--hover;
+				color: @calendar__date-color-text--hover;
+			}
+			
+			&.cl-selected,
+			&.cl-selected:not(.cl-disabled):hover,
+			&.cl-selected.cl-calendar-current {
+				background-color: @calendar__date-color-action--selected;
+				color: @calendar__date-color-text--selected;
+
+				&.cl-range-start {
+					border-top-right-radius: 0;
+					border-bottom-right-radius: 0;
+				}
+				
+				&.cl-range-end {
+					border-top-left-radius: 0;
+					border-bottom-left-radius: 0;
+				}
+			}
+			
+			&.cl-selected.cl-calendar-defaultdate {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+/* --- 일정 캘린더 (showAnniversary = true) --- */
+.cl-calendar.cl-anniversaries {
+	.cl-calendar-detail {
+		font-size: 0;
+		margin-top: @calendar__item-gap + @calendar__item-size-height;
+	}
+	
+	.cl-calendar-item-wrap,
+	.cl-anniversary-wrap,
+	.cl-calendar-more-wrap {
+		font-size: @calendar__item-gap + @calendar__item-size-height;
+	}
+	
+	.cl-calendar-item,
+	.cl-anniversary,
+	.cl-calendar-more {
+		.flex-layout(@d: flex, @jc: flex-start, @ai: center);
+		height: @calendar__item-size-height;
+		border-radius: 0;
+		font-size: @calendar__item-pc-font-size;
+		font-weight: @cl-font-weight-medium;
+		margin: 0;
+		padding: 0 @calendar__item-padding;
+		
+		@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+			font-size: @calendar__item-mobile-font-size;
+		}
+		
+		.cl-text {
+			font: inherit;
+			width: 100%;
+		}
+	}
+	
+	.cl-calendar-item,
+	.cl-anniversary {
+		
+		&.cl-hidden {
+		}
+		
+		&.cl-selected {
+		}
+	}
+	
+	.cl-calendar-item {
+		background-color: @calendar__item-color-background;
+		color: @calendar__item-color-text;
+	}
+	
+	.cl-anniversary {
+		background: 0;
+		color: @calendar__date-color-text-off;
+	}
+	
+	.cl-calendar-more {
+		&:hover {
+			background: 0;
+			color: @calendar__head-color-action--active;
+			.text-underline();
+		}
+	}
+	
+	.cl-calendar-header {
+	}
+	
+	.cl-calendar-content {
+		.cl-calendar-content-header {
+			border-bottom: 1px solid @calendar__color-border;
+		}
+		
+		.cl-calendar-content-day,
+		.cl-other-month {
+			border: 1px solid @calendar__color-border;
+			border-width: 0 1px 1px 0;
+			font-weight: @cl-font-weight-regular;
+			padding: @calendar__gap;
+			
+			&.cl-calendar-content-sun {
+			}
+			
+			&.cl-calendar-content-sat {
+			}
+			
+			.cl-anniversary {
+			}
+			
+			&.cl-last-column {
+				border-right: 0;
+			}
+			
+			&.cl-last-row {
+				border-bottom: 0;
+			}
+		}
+		
+		.cl-calendar-content-day {
+			&.cl-calendar-defaultdate {
+			}
+			
+			&.cl-selected {
+				color: @calendar__color-text;
+			}
+			
+			&.cl-calendar-anniversary {
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+ 2. Variants
+ ========================================================================== */
+
+
+
+/* ==========================================================================
+ 3. Mode
+ ========================================================================== */
+
+.color-mode(@mode: high-contrast) {
+}

@@ -1,0 +1,390 @@
+@import "../core/include.part.less";
+
+/**
+ * ============================================================================
+ * @file      tab.part.less
+ * @desc      CORE-UI 컨트롤 스타일 정의
+ * @rule
+ * 1. 독립성 유지
+ *  - 이 파일 내부에 선언된 변수는 외부에서 참조할 수 없음
+ * @contents  
+ * 1. Base (공통 스타일)
+ * 2. Variants (유형별 스타일)
+ * 3. Mode (테마 스타일)
+ * ============================================================================
+ */
+
+/* ==========================================================================
+   Component Tokens
+ ========================================================================== */
+
+/* 사이즈 변수 */
+
+@tab__body-padding-top: @cl-padding-3;
+
+@tab__item-radius: @cl-radius-xsmall3;
+@tab__item-gap: @cl-gap-0;
+@tab__item-padding: @cl-padding-5;
+@tab__item-size-height: @cl-size-height-10 + 4px;
+@tab__item-size-min-width: 64px;
+@tab__item-pc-font-size: @cl-pc-font-size-label-medium;
+@tab__item-mobile-font-size: @cl-mobile-font-size-label-small;
+
+/* 색상 변수 */
+@tab__body-color-surface: @cl-base-color-alpha-basic0;
+@tab__body-color-border: @cl-base-color-border-transparency;
+
+@tab__item-color-action: @cl-base-color-action-primary;
+@tab__item-color-action--hover: @cl-base-color-alpha-basic0;
+@tab__item-color-action--selected: @tab__body-color-surface;
+@tab__item-color-action--disabled: @cl-base-color-action-disabled;
+@tab__item-color-border: @cl-base-color-alpha-basic0;
+@tab__item-color-border--selected: #003b88;
+@tab__item-color-text: #4d4d4d;
+@tab__item-color-text--hover: #000000;
+@tab__item-color-text--selected: #0f53ac;
+@tab__item-color-text--disabled: @cl-base-color-text-disabled;
+
+@tab__line-item-color-action: @cl-base-color-action-primary;
+@tab__line-item-color-text: @cl-base-color-text-basic;
+@tab__line-item-color-text--selected: @cl-base-color-text-secondary;
+@tab__line-item-color-line--active: @cl-base-color-border-secondary;
+
+/* ==========================================================================
+    Local Mixins
+ ========================================================================== */
+
+
+
+/* ==========================================================================
+ 1. Base
+ ========================================================================== */
+
+.cl-tabfolder {
+	.cl-tabfolder-header {
+		overflow: visible;
+		.cl-tabfolder-item {
+			position: relative;
+			justify-items: center;
+//			transition: @transition-base;
+			.cl-text {
+				&:focus {
+//					.focus-reset();
+					text-decoration: none;
+				}
+			}
+		}
+		&.line {
+			.cl-empty-area {
+				border-bottom : solid 1px @tab__item-color-border--selected;
+			}
+		}
+		
+		.cl-tabfolder-prev {
+			&.cl-disabled {
+				background-image: url("../../img/icons/prev.png") !important;
+			}
+		}
+		
+		.cl-tabfolder-next {
+			&.cl-disabled {
+				background-image: url("../../img/icons/next.png") !important;
+			}
+		}
+		
+		.cl-tabfolder-prev,
+		.cl-tabfolder-next {
+			margin-left: 4px;
+			border : none;
+			border-radius: 4px;
+			background-color: #f0f0f0;
+			
+			&.cl-disabled {
+//				background-color: #dddddd;
+			}
+		}
+		
+	}
+	
+	.cl-tabfolder-body {
+		background-color: @tab__body-color-surface;
+		border: 0; // 1px solid @tab__body-color-border;
+	}
+	
+	&:focus, &.cl-focus {
+//		.focus-reset();
+	}
+	
+	&.cl-disabled {
+	}
+}
+
+.cl-tabfolder {
+//	> .tablist {
+		 .cl-tabfolder-header {
+			.cl-tabfolder-header-viewport {
+//				gap: @tab__item-gap;
+			}
+			
+			.cl-tabfolder-prev,
+			.cl-tabfolder-next {
+				
+			}
+			
+			.cl-tabfolder-item {
+				height: 44px;
+				border-radius: 4px;
+				font-size: @tab__item-pc-font-size;
+				font-weight: @cl-font-weight-medium;
+				padding: 0 @tab__item-padding;
+				
+				.cl-text {
+					&:focus-visible {
+//						.focus();
+					}
+				}
+				
+				@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+					font-size: @tab__item-mobile-font-size;
+				}
+			}
+			
+			&.cl-top, &.cl-bottom {
+				background: linear-gradient(@tab__item-color-border, @tab__item-color-border) no-repeat;
+				background-size: 100% 1px;
+				
+				.cl-tabfolder-item {
+					background-color: @tab__item-color-action;
+					border: none;
+					border-bottom: 2px solid @tab__item-color-border;
+					&.line {
+						height: 36px;
+						border-radius: 0px;
+						border: solid 1px @tab__item-color-border--selected;
+						border-color :@tab__item-color-border--selected;
+					}
+					color: @tab__item-color-text;
+					
+					.cl-text {
+					}
+					
+					.cl-tabfolder-button {
+						margin-left: @cl-gap-2;
+					}
+					
+					&:not(.cl-selected):not(.cl-disabled):hover {
+						background-color: @tab__item-color-action--hover;
+						color: @tab__item-color-text--hover;
+					}
+					
+					&.cl-selected {
+						background-color: @tab__item-color-action--selected;
+						border-bottom-color: @tab__item-color-border--selected;
+						&.line {
+							border-bottom-color: white;
+						}
+						color: @tab__item-color-text--selected;
+						font-weight: @cl-font-weight-semibold;
+					}
+					
+					&.cl-disabled {
+						color: @tab__item-color-text--disabled;
+					}
+				}
+			}
+			
+			&.cl-top {
+				background-position: left bottom;
+				
+				.cl-tabfolder-item {
+					border-bottom-left-radius: 0;
+					border-bottom-right-radius: 0;
+				}
+			}
+			
+			&.cl-bottom {
+				background-position: left top;
+				 
+				.cl-tabfolder-item {
+					border-top-left-radius: 0;
+					border-top-right-radius: 0;
+				}
+			}
+		}
+		
+		> .cl-tabfolder-body {
+			padding-top: 12px;
+		}
+//	}
+}
+
+/* ==========================================================================
+ 2. Variants
+ ========================================================================== */
+
+/* 라인형 */
+.cl-tabfolder.line,
+.cl-mdifolder.line {
+	> .tablist {
+		> .cl-tabfolder-header {
+			&.cl-top, &.cl-bottom {
+				.cl-tabfolder-header-viewport {
+					gap: 0;
+				}
+				
+				.cl-tabfolder-item {
+					background-color: @tab__line-item-color-action;
+					border: 0;
+					color: @tab__line-item-color-text;
+					
+					&::before {
+						.pseudo();
+						.position(@l: 50%);
+						width: 0;
+						height: 2px;
+						background-color: @tab__line-item-color-line--active;
+//						transition: @transition-base;
+					}
+					
+					&:not(.cl-selected):not(.cl-disabled):hover {
+						background-color: @tab__line-item-color-action;
+						color: @tab__line-item-color-text;
+					}
+					
+					&.cl-selected {
+						background-color: @tab__line-item-color-action;
+						color: @tab__line-item-color-text--selected;
+						
+						&::before {
+							left: 0;
+							width: 100%;
+						}
+					}
+				}
+			}
+			
+			&.cl-top {
+				.cl-tabfolder-item {
+					&::before {
+						bottom: 0;
+					}
+				}
+			}
+			
+			&.cl-bottom {
+				.cl-tabfolder-item {
+					&::before {
+						top: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* 버튼형 */
+.cl-tabfolder.fill,
+.cl-mdifolder.fill {
+	> .tablist {
+		> .cl-tabfolder-header {
+			&.cl-top, &.cl-bottom {
+				background: 0;
+				
+				.cl-tabfolder-item {
+					border-radius: @tab__item-radius;
+				}
+			}
+		}
+	}
+}
+
+/* 균등분배 */
+.cl-tabfolder.full,
+.cl-mdifolder.full {
+	> .tablist {
+		> .cl-tabfolder-header {
+			&.cl-top, &.cl-bottom {
+				.cl-tabfolder-item {
+				}
+			}
+		}
+	}
+}
+
+/* 탭 콘텐츠 영역 */
+.cl-container.tab-area {
+	.cl-tabfolder-body.tab-conts-wrap {
+		> .cl-container.tab-conts {
+		}
+	}
+}
+
+.cl-container.tab-conts {
+}
+
+/* 탭 폴더 헤더 컨트롤 컨테이너 */
+.cl-tabfolder-header {
+	> .cl-container.btn-wrap {
+	}
+}
+
+/* ==========================================================================
+ 3. Mode
+ ========================================================================== */
+
+.color-mode(@mode: high-contrast) {
+	
+	/* --- 색상 변수 --- */
+	@tab__item-color-action: @tab__body-color-surface;
+	@tab__item-color-action--hover: @tab__body-color-surface;
+	@tab__item-color-action--selected: @tab__body-color-surface;
+	@tab__item-color-action--disabled: @cl-base-color-action-disabled;
+	@tab__item-color-border: @tab__body-color-surface;
+	@tab__item-color-border--selected: @cl-color-base-primary-40;
+	@tab__item-color-text: @cl-color-base-gray-60;
+	@tab__item-color-text--hover: #ffffff;
+	@tab__item-color-text--selected:  @cl-color-high-contrast-primary-30;
+	@tab__item-color-text--disabled: @cl-base-color-text-disabled;
+	
+//	@tab__line-item-color-action: @cl-base-color-action-primary;
+//	@tab__line-item-color-text: @cl-base-color-text-basic;
+//	@tab__line-item-color-text--selected: @cl-color-high-contrast-primary-30;
+//	@tab__line-item-color-line--active: @cl-base-color-border-secondary;
+	
+	.cl-tabfolder {
+		> .tablist {
+			> .cl-tabfolder-header.tablist {
+				.cl-tabfolder-header-viewport {
+				}
+				
+				&.cl-top, &.cl-bottom {
+//					background: linear-gradient(@tab__item-color-border, @tab__item-color-border) no-repeat;
+					
+					.cl-tabfolder-item {
+						background-color: @tab__item-color-action;
+						border-bottom: 2px solid @tab__item-color-border;
+						color: @tab__item-color-text;
+						
+						.cl-text {
+							&:focus-visible {
+								.focus();
+								outline: none;
+							}
+						}
+						
+						&:not(.cl-selected):not(.cl-disabled):hover {
+							background-color: @tab__item-color-action--hover;
+							color: @tab__item-color-text--hover;
+						}
+						
+						&.cl-selected {
+							background-color: @tab__item-color-action--selected;
+							border-bottom-color: @tab__item-color-border--selected;
+							color: @tab__item-color-text--selected;
+						}
+					}
+				}
+			}
+		}
+	}
+}

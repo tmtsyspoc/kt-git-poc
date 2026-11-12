@@ -1,0 +1,91 @@
+@import "../core/include.part.less";
+
+/* ==========================================================================
+ 엔터프라이즈 업무 화면 다듬기
+ — 그림자·그라데이션·큰 라운드 없이, 가는 선과 여백·위계로 구분한다.
+ — 여러 화면에 공통으로 쓰이는 영역(조회 영역, 섹션, 폼, 그리드, 버튼)만 다룬다.
+ ========================================================================== */
+@ent-ink: #1A1A1A;
+@ent-text: #24282E;
+@ent-sub: #5A6169;
+@ent-line: #DFE2E6;
+@ent-line-soft: #ECEEF1;
+@ent-surface: #F6F7F9;
+
+/* --- 조회 영역: 옅은 면 + 가는 테두리 --- */
+.cl-container.cl-container.sch-filter-box {
+	border: 1px solid @ent-line;
+	border-radius: 6px;
+	outline: none;
+	box-shadow: none;
+	background-color: @ent-surface;
+
+	.label {
+		color: @ent-sub;
+		font-weight: @cl-font-weight-medium;
+	}
+}
+
+/* --- 섹션(그리드·폼 묶음): 흰 면 + 가는 테두리 --- */
+.cl-container.cl-container.conts-wrap {
+	border: 1px solid @ent-line;
+	border-radius: 6px;
+	box-shadow: none;
+	background-color: #ffffff;
+}
+
+/* --- 화면 하단 버튼 영역 --- */
+.cl-container.conts-footer {
+	border-top: 1px solid @ent-line;
+	border-radius: 0;
+	background-color: transparent;
+}
+
+/* --- 폼: 위쪽에 진한 선을 두어 그리드와 같은 인상을 준다 --- */
+.cl-container.form,
+.cl-container.form.tbl {
+	border-top: 1px solid #3D3D3D;
+	border-bottom: 1px solid @ent-line;
+
+	.cl-formlayout-column-shade,
+	.cl-formlayout-row-shade {
+		background-color: @ent-surface;
+	}
+
+	.cl-formlayout-horizontal-separator {
+		background-color: @ent-line-soft;
+	}
+
+	.label {
+		color: @ent-text;
+		font-weight: @cl-font-weight-medium;
+	}
+}
+
+/* --- 그리드 --- */
+.cl-grid {
+	// 금액·건수가 세로로 정렬되어 읽히도록 숫자 폭을 고정한다
+	font-variant-numeric: tabular-nums;
+
+	.cl-grid-header {
+		.cl-grid-cell {
+			color: @ent-text;
+		}
+
+		// 필터 아이콘은 평소에는 흐리게, 올렸을 때와 필터가 걸렸을 때만 진하게
+		.cl-filter {
+			opacity: 0.28;
+
+			&:hover,
+			&.cl-filtered {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+/* --- 버튼: 평평하게 --- */
+.cl-button {
+	box-shadow: none;
+	background-image: none;
+}

@@ -1,0 +1,152 @@
+@import "../core/include.part.less";
+
+/**
+ * ============================================================================
+ * @file      switch.part.less
+ * @desc      CORE-UI 컨트롤 스타일 정의
+ * @rule
+ * 1. 독립성 유지
+ *  - 이 파일 내부에 선언된 변수는 외부에서 참조할 수 없음
+ * @contents  
+ * 1. Base (공통 스타일)
+ * 2. Variants (유형별 스타일)
+ * 3. Mode (테마 스타일)
+ * ============================================================================
+ */
+
+/* ==========================================================================
+   Component Tokens
+ ========================================================================== */
+
+/* 사이즈 변수 */
+@switch__button-size-width: @cl-size-height-8;
+@switch__button-size-height: @cl-size-height-5;
+@switch__check-size: @switch__button-size-height;
+@switch__pc-font-size: @cl-pc-font-size-label-small;
+@switch__mobile-font-size: @cl-mobile-font-size-label-small;
+
+@switch__button-radius: @cl-radius-max;
+
+/* 색상 변수 */
+@switch__color-text: @cl-base-color-text-basic;
+@switch__color-text-disabled: @cl-base-color-text-disabled-on;
+@switch__button-color-background: @cl-base-color-element-gray;
+@switch__button-color-background--checked: @cl-base-color-element-primary;
+@switch__button-color-background--disabled: @cl-base-color-element-gray;
+@switch__check-color-background: @cl-base-color-element-inverse-static;
+@switch__check-color-background--checked: @cl-base-color-element-inverse-static;
+@switch__check-color-background--disabled: @cl-base-color-element-gray-soft;
+
+/* ==========================================================================
+    Local Mixins
+ ========================================================================== */
+
+.switch__button() {
+	width: @switch__button-size-width;
+	height: @switch__button-size-height;
+	border-radius: @switch__button-radius;
+}
+
+.switch__check() {
+	.square(@switch__check-size);
+	border-radius: @switch__button-radius;
+}
+
+.switch__check-checked() {
+	left: calc(@switch__button-size-width - @switch__check-size);
+}
+
+/* ==========================================================================
+ 1. Base
+ ========================================================================== */
+
+.cl-checkbox.toggle-switch {
+	color: @switch__color-text;
+	font-size: @switch__pc-font-size;
+	
+	@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+		font-size: @switch__mobile-font-size;
+	}
+	
+	.cl-checkbox-field {
+		.cl-icon-wrapper {
+			padding: 0;
+		}
+	}
+	
+	.cl-icon-wrapper {
+		position: relative;
+		display: inline-flex !important;
+		.switch__button();
+		background-color: @switch__button-color-background;
+		transition: .4s cubic-bezier(.4, .0, .23, 1);
+		
+		.cl-checkbox-icon {
+			.position(@t: 0, @l: 0);
+			.flex-layout(@d: flex, @jc: center, @ai: center);
+			.switch__check();
+			background-color: @switch__check-color-background;
+			border: 2px solid @switch__button-color-background;
+			transition: inherit;
+			
+			&::before, &::after {
+				.pseudo(none);
+			}
+		}
+	}
+	
+	&.cl-checked {
+		.cl-icon-wrapper {
+			background-color: @switch__button-color-background--checked;
+			
+			.cl-checkbox-icon {
+				background-color: @switch__check-color-background--checked;
+				border-color: @switch__button-color-background--checked;
+				.switch__check-checked();
+			}
+		}
+	}
+	
+	&:focus, &.cl-focus {
+		.cl-checkbox-icon:focus-visible {
+		}
+		
+		&.cl-checked {
+			.cl-checkbox-icon:focus-visible {
+			}
+		}
+	}
+	
+	&.cl-disabled {
+		color: @switch__color-text-disabled;
+		
+		.cl-icon-wrapper {
+			background-color: @switch__button-color-background--disabled;
+			
+			.cl-checkbox-icon {
+				background-color: @switch__check-color-background--disabled;
+				border-color: @switch__button-color-background--disabled;
+			}
+		}
+		
+		&.cl-checked {
+			.cl-icon-wrapper {
+				.cl-checkbox-icon {
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+ 2. Variants
+ ========================================================================== */
+
+
+
+/* ==========================================================================
+ 3. Mode
+ ========================================================================== */
+
+.color-mode(@mode: high-contrast) {
+}

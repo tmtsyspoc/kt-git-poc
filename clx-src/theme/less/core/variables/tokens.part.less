@@ -1,0 +1,607 @@
+/**
+ * ============================================================================
+ * @file      tokens.part.less
+ * @desc      CORE-UI 글로벌 토큰 및 공통 변수 정의
+ * @rule      
+ * 1. 절대 수치(Primitive)만 선언하며, 직접적인 속성 매핑은 지양한다.
+ * 2. 모든 변수명은 `@cl-` 접두어를 포함한다.
+ * @contents
+ * 1. Colors
+ * 2. Typography
+ * 3. Spacing & Layout
+ * 4. Etc
+ * ============================================================================
+ */
+ 
+/*!
+ * ============================================================================
+ * @copyright
+ * - 본 저작물은 행정안전부에서 2024년 작성하여 공공누리 제1유형으로 개방한 ‘범정부 UI/UX 디자인시스템(KRDS)’을 이용하였으며,
+ *   해당 저작물은 ‘KRDS 디자인시스템 홈페이지(www.krds.go.kr)에서 무료로 다운받으실 수 있습니다.
+ * ============================================================================
+ */
+
+/* ==========================================================================
+ 1. Colors
+ ========================================================================== */
+ 
+/* KT 시그니처: primary 는 KT 레드, ink 는 KT 블랙.
+   primary 5~20(hover·선택 배경 같은 넓은 면)은 붉은 기를 빼고 무채색으로 둔다. */
+@cl-color-kt-ink: #1A1A1A;
+@cl-color-kt-ink-hover: #3D3D3D;
+@cl-color-kt-ink-pressed: #000000;
+
+@cl-color-base-primary-5: #F7F7F8;
+@cl-color-base-primary-10: #EFEFF1;
+@cl-color-base-primary-20: #DCDCE0;
+@cl-color-base-primary-30: #F47E8F;
+@cl-color-base-primary-40: #EC4A62;
+@cl-color-base-primary-50: #E4002B;
+@cl-color-base-primary-60: #C00024;
+@cl-color-base-primary-70: #96001C;
+@cl-color-base-primary-80: #6B0014;
+@cl-color-base-primary-90: #40000C;
+@cl-color-base-primary-95: #260007;
+
+@cl-color-base-secondary-5: #F6F7F9;
+@cl-color-base-secondary-10: #ECEEF1;
+@cl-color-base-secondary-20: #D9DCE1;
+@cl-color-base-secondary-30: #BCC1C8;
+@cl-color-base-secondary-40: #85acd5;
+@cl-color-base-secondary-50: #6891c9;
+@cl-color-base-secondary-60: #5579bb;
+@cl-color-base-secondary-70: #4a67ab;
+@cl-color-base-secondary-80: #41568c;
+@cl-color-base-secondary-90: #384970;
+@cl-color-base-secondary-95: #262e45;
+
+@cl-color-base-gray-0: #ffffff;
+@cl-color-base-gray-5: #fafafa;
+@cl-color-base-gray-10: #f5f5f5;
+@cl-color-base-gray-20: #f0f0f0;
+@cl-color-base-gray-30: #DFE2E6;
+@cl-color-base-gray-40: #a5a5a5;
+@cl-color-base-gray-50: #777777;
+@cl-color-base-gray-60: #666666;
+@cl-color-base-gray-70: #4d4d4d;
+@cl-color-base-gray-80: #333333;
+@cl-color-base-gray-90: #1a1a1a;
+@cl-color-base-gray-95: #0a0a0a;
+@cl-color-base-gray-100: #000000;
+
+@cl-color-base-alpha-black100: #000000;
+@cl-color-base-alpha-black95: fade(#000000, 95%);
+@cl-color-base-alpha-black90: fade(#000000, 90%);
+@cl-color-base-alpha-black85: fade(#000000, 85%);
+@cl-color-base-alpha-black80: fade(#000000, 80%);
+@cl-color-base-alpha-black75: fade(#000000, 75%);
+@cl-color-base-alpha-black70: fade(#000000, 70%);
+@cl-color-base-alpha-black65: fade(#000000, 65%);
+@cl-color-base-alpha-black60: fade(#000000, 60%);
+@cl-color-base-alpha-black55: fade(#000000, 55%);
+@cl-color-base-alpha-black50: fade(#000000, 50%);
+@cl-color-base-alpha-black45: fade(#000000, 45%);
+@cl-color-base-alpha-black40: fade(#000000, 40%);
+@cl-color-base-alpha-black30: fade(#000000, 30%);
+@cl-color-base-alpha-black25: fade(#000000, 25%);
+@cl-color-base-alpha-black20: fade(#000000, 20%);
+@cl-color-base-alpha-black15: fade(#000000, 15%);
+@cl-color-base-alpha-black10: fade(#000000, 10%);
+@cl-color-base-alpha-black5: fade(#000000, 5%);
+@cl-color-base-alpha-black0: fade(#000000, 0%);
+@cl-color-base-alpha-white100: #ffffff;
+@cl-color-base-alpha-white95: fade(#ffffff, 95%);
+@cl-color-base-alpha-white90: fade(#ffffff, 90%);
+@cl-color-base-alpha-white85: fade(#ffffff, 85%);
+@cl-color-base-alpha-white80: fade(#ffffff, 80%);
+@cl-color-base-alpha-white75: fade(#ffffff, 75%);
+@cl-color-base-alpha-white70: fade(#ffffff, 70%);
+@cl-color-base-alpha-white65: fade(#ffffff, 65%);
+@cl-color-base-alpha-white60: fade(#ffffff, 60%);
+@cl-color-base-alpha-white55: fade(#ffffff, 55%);
+@cl-color-base-alpha-white50: fade(#ffffff, 50%);
+@cl-color-base-alpha-white45: fade(#ffffff, 45%);
+@cl-color-base-alpha-white40: fade(#ffffff, 40%);
+@cl-color-base-alpha-white30: fade(#ffffff, 30%);
+@cl-color-base-alpha-white25: fade(#ffffff, 25%);
+@cl-color-base-alpha-white20: fade(#ffffff, 20%);
+@cl-color-base-alpha-white15: fade(#ffffff, 15%);
+@cl-color-base-alpha-white10: fade(#ffffff, 10%);
+@cl-color-base-alpha-white5: fade(#ffffff, 5%);
+@cl-color-base-alpha-white0: fade(#ffffff, 0%);
+
+@cl-color-base-point-5: #fbeff0;
+@cl-color-base-point-10: #f5d6d9;
+@cl-color-base-point-20: #ebadb2;
+@cl-color-base-point-30: #e0858c;
+@cl-color-base-point-40: #d65c66;
+@cl-color-base-point-50: #d63d4a;
+@cl-color-base-point-60: #ab2b36;
+@cl-color-base-point-70: #7a1f26;
+@cl-color-base-point-80: #521419;
+@cl-color-base-point-90: #310c0f;
+@cl-color-base-point-95: #21080a;
+
+@cl-color-base-information-5: #f3f6fc;
+@cl-color-base-information-10: #e5ecf9;
+@cl-color-base-information-20: #c6d9f1;
+@cl-color-base-information-30: #93b8e6;
+@cl-color-base-information-40: #5994d7;
+@cl-color-base-information-50: #3476c3;
+@cl-color-base-information-60: #2866b7;
+@cl-color-base-information-70: #1e4a86;
+@cl-color-base-information-80: #1d406f;
+@cl-color-base-information-90: #1d375d;
+@cl-color-base-information-95: #13233e;
+
+@cl-color-base-success-5: #eef6ef;
+@cl-color-base-success-10: #ddefdc;
+@cl-color-base-success-20: #bbdfbc;
+@cl-color-base-success-30: #8bc491;
+@cl-color-base-success-40: #69af71;
+@cl-color-base-success-50: #3d8c49;
+@cl-color-base-success-60: #2b7037;
+@cl-color-base-success-70: #23592e;
+@cl-color-base-success-80: #1d4826;
+@cl-color-base-success-90: #193b20;
+@cl-color-base-success-95: #0d2112;
+
+@cl-color-base-warning-5:  #fef6e8;
+@cl-color-base-warning-10: #fff3d1;
+@cl-color-base-warning-20: #ffe7a3;
+@cl-color-base-warning-30: #ffda70;
+@cl-color-base-warning-40: #ffcb3d;
+@cl-color-base-warning-50: #ffbe1f;
+@cl-color-base-warning-60: #e89e00;
+@cl-color-base-warning-70: #d18f0f;
+@cl-color-base-warning-80: #ad740f;
+@cl-color-base-warning-90: #8c5f10;
+@cl-color-base-warning-95: #4d3207;
+
+@cl-color-base-danger-5: #fdf3f3;
+@cl-color-base-danger-10: #fce4e4;
+@cl-color-base-danger-20: #fbcdcd;
+@cl-color-base-danger-30: #f7aaaa;
+@cl-color-base-danger-40: #f07979;
+@cl-color-base-danger-50: #e65555;
+@cl-color-base-danger-60: #d13131;
+@cl-color-base-danger-70: #b02525;
+@cl-color-base-danger-80: #922222;
+@cl-color-base-danger-90: #792323;
+@cl-color-base-danger-95: #420d0d;
+
+@cl-color-base-graphic-10: #e5ecf9;
+@cl-color-base-graphic-30: #98acc5;
+@cl-color-base-graphic-50: #61758f;
+@cl-color-base-graphic-70: #39506c;
+@cl-color-base-graphic-90: #223a58;
+
+@cl-color-high-contrast-gray-0: #ffffff;
+@cl-color-high-contrast-gray-5: #f4f5f6;
+@cl-color-high-contrast-gray-10: #e6e8ea;
+@cl-color-high-contrast-gray-20: #cdd1d5;
+@cl-color-high-contrast-gray-30: #b1b8be;
+@cl-color-high-contrast-gray-40: #8a949e;
+@cl-color-high-contrast-gray-50: #6d7882;
+@cl-color-high-contrast-gray-60: #58616a;
+@cl-color-high-contrast-gray-70: #464c53;
+@cl-color-high-contrast-gray-80: #33363d;
+@cl-color-high-contrast-gray-90: #1e2124;
+@cl-color-high-contrast-gray-95: #131416;
+@cl-color-high-contrast-gray-100: #000000;
+@cl-color-high-contrast-primary-5: #F2F2F3;
+@cl-color-high-contrast-primary-10: #E4E4E7;
+@cl-color-high-contrast-primary-20: #FFB3BF;
+@cl-color-high-contrast-primary-30: #FF8FA0;
+@cl-color-high-contrast-primary-40: #FF6B81;
+@cl-color-high-contrast-primary-50: #E4002B;
+@cl-color-high-contrast-primary-60: #C00024;
+@cl-color-high-contrast-primary-70: #8A001A;
+@cl-color-high-contrast-primary-80: #5C0012;
+@cl-color-high-contrast-primary-90: #3A0A12;
+@cl-color-high-contrast-primary-95: #26080D;
+@cl-color-high-contrast-secondary-5: #edf6f8;
+@cl-color-high-contrast-secondary-10: #d5ebf1;
+@cl-color-high-contrast-secondary-20: #abd8e3;
+@cl-color-high-contrast-secondary-30: #75c0d1;
+@cl-color-high-contrast-secondary-40: #3d9fb8;
+@cl-color-high-contrast-secondary-50: #268097;
+@cl-color-high-contrast-secondary-60: #1f687a;
+@cl-color-high-contrast-secondary-70: #17505e;
+@cl-color-high-contrast-secondary-80: #113b45;
+@cl-color-high-contrast-secondary-90: #0e3139;
+@cl-color-high-contrast-secondary-95: #091f25;
+
+@cl-color-high-contrast-information-5: #e7f4fe;
+@cl-color-high-contrast-information-10: #d3ebfd;
+@cl-color-high-contrast-information-20: #9ed2fa;
+@cl-color-high-contrast-information-30: #5fb5f7;
+@cl-color-high-contrast-information-40: #2098f3;
+@cl-color-high-contrast-information-50: #0b78cb;
+@cl-color-high-contrast-information-60: #096ab3;
+@cl-color-high-contrast-information-70: #085691;
+@cl-color-high-contrast-information-80: #053961;
+@cl-color-high-contrast-information-90: #03253f;
+@cl-color-high-contrast-information-95: #021a2c;
+
+@cl-color-high-contrast-success-5: #eaf6ec;
+@cl-color-high-contrast-success-10: #d8eedd;
+@cl-color-high-contrast-success-20: #a9dab4;
+@cl-color-high-contrast-success-30: #7ec88e;
+@cl-color-high-contrast-success-40: #3fa654;
+@cl-color-high-contrast-success-50: #228738;
+@cl-color-high-contrast-success-60: #267337;
+@cl-color-high-contrast-success-70: #285d33;
+@cl-color-high-contrast-success-80: #1f4727;
+@cl-color-high-contrast-success-90: #122b18;
+@cl-color-high-contrast-success-95: #0e2012;
+
+@cl-color-high-contrast-warning-5: #fff3db;
+@cl-color-high-contrast-warning-10: #ffe0a3;
+@cl-color-high-contrast-warning-20: #ffc95c;
+@cl-color-high-contrast-warning-30: #ffb114;
+@cl-color-high-contrast-warning-40: #c78500;
+@cl-color-high-contrast-warning-50: #9e6a00;
+@cl-color-high-contrast-warning-60: #8a5c00;
+@cl-color-high-contrast-warning-70: #614100;
+@cl-color-high-contrast-warning-80: #422c00;
+@cl-color-high-contrast-warning-90: #2e1f00;
+@cl-color-high-contrast-warning-95: #241800;
+
+@cl-color-high-contrast-danger-5: #fdefec;
+@cl-color-high-contrast-danger-10: #fcdfd9;
+@cl-color-high-contrast-danger-20: #f7afa1;
+@cl-color-high-contrast-danger-30: #f48771;
+@cl-color-high-contrast-danger-40: #f05f42;
+@cl-color-high-contrast-danger-50: #de3412;
+@cl-color-high-contrast-danger-60: #bd2c0f;
+@cl-color-high-contrast-danger-70: #8a240f;
+@cl-color-high-contrast-danger-80: #5c180a;
+@cl-color-high-contrast-danger-90: #390d05;
+@cl-color-high-contrast-danger-95: #260903;
+
+@cl-color-high-contrast-point-5: #fbeff0;
+@cl-color-high-contrast-point-10: #f5d6d9;
+@cl-color-high-contrast-point-20: #ebadb2;
+@cl-color-high-contrast-point-30: #e0858c;
+@cl-color-high-contrast-point-40: #d65c66;
+@cl-color-high-contrast-point-50: #d63d4a;
+@cl-color-high-contrast-point-60: #ab2b36;
+@cl-color-high-contrast-point-70: #7a1f26;
+@cl-color-high-contrast-point-80: #521419;
+@cl-color-high-contrast-point-90: #310c0f;
+@cl-color-high-contrast-point-95: #21080a;
+
+@cl-color-high-contrast-alpha-black100: #000000;
+@cl-color-high-contrast-alpha-black95: fade(#000000, 95%);
+@cl-color-high-contrast-alpha-black90: fade(#000000, 90%);
+@cl-color-high-contrast-alpha-black85: fade(#000000, 85%);
+@cl-color-high-contrast-alpha-black80: fade(#000000, 80%);
+@cl-color-high-contrast-alpha-black75: fade(#000000, 75%);
+@cl-color-high-contrast-alpha-black70: fade(#000000, 70%);
+@cl-color-high-contrast-alpha-black65: fade(#000000, 65%);
+@cl-color-high-contrast-alpha-black60: fade(#000000, 60%);
+@cl-color-high-contrast-alpha-black55: fade(#000000, 55%);
+@cl-color-high-contrast-alpha-black50: fade(#000000, 50%);
+@cl-color-high-contrast-alpha-black45: fade(#000000, 45%);
+@cl-color-high-contrast-alpha-black40: fade(#000000, 40%);
+@cl-color-high-contrast-alpha-black30: fade(#000000, 30%);
+@cl-color-high-contrast-alpha-black25: fade(#000000, 25%);
+@cl-color-high-contrast-alpha-black20: fade(#000000, 20%);
+@cl-color-high-contrast-alpha-black15: fade(#000000, 15%);
+@cl-color-high-contrast-alpha-black10: fade(#000000, 10%);
+@cl-color-high-contrast-alpha-black5: fade(#000000, 5%);
+@cl-color-high-contrast-alpha-black0: fade(#000000, 0%);
+@cl-color-high-contrast-alpha-white100: #ffffff;
+@cl-color-high-contrast-alpha-white95: fade(#ffffff, 95%);
+@cl-color-high-contrast-alpha-white90: fade(#ffffff, 90%);
+@cl-color-high-contrast-alpha-white85: fade(#ffffff, 85%);
+@cl-color-high-contrast-alpha-white80: fade(#ffffff, 80%);
+@cl-color-high-contrast-alpha-white75: fade(#ffffff, 75%);
+@cl-color-high-contrast-alpha-white70: fade(#ffffff, 70%);
+@cl-color-high-contrast-alpha-white65: fade(#ffffff, 65%);
+@cl-color-high-contrast-alpha-white60: fade(#ffffff, 60%);
+@cl-color-high-contrast-alpha-white55: fade(#ffffff, 55%);
+@cl-color-high-contrast-alpha-white50: fade(#ffffff, 50%);
+@cl-color-high-contrast-alpha-white45: fade(#ffffff, 45%);
+@cl-color-high-contrast-alpha-white40: fade(#ffffff, 40%);
+@cl-color-high-contrast-alpha-white30: fade(#ffffff, 30%);
+@cl-color-high-contrast-alpha-white25: fade(#ffffff, 25%);
+@cl-color-high-contrast-alpha-white20: fade(#ffffff, 20%);
+@cl-color-high-contrast-alpha-white15: fade(#ffffff, 15%);
+@cl-color-high-contrast-alpha-white10: fade(#ffffff, 10%);
+@cl-color-high-contrast-alpha-white5: fade(#ffffff, 5%);
+@cl-color-high-contrast-alpha-white0: fade(#ffffff, 0%);
+
+@cl-color-high-contrast-graphic-10: #e5ecf9;
+@cl-color-high-contrast-graphic-30: #98acc5;
+@cl-color-high-contrast-graphic-50: #61758f;
+@cl-color-high-contrast-graphic-70: #39506c;
+@cl-color-high-contrast-graphic-90: #223a58;
+
+/* ==========================================================================
+ 2. Typography
+ ========================================================================== */
+
+@cl-font-family-base:  "$default-font", sans-serif;
+@cl-font-family: Pretendard;
+
+/* -100% */
+@cl-font-letter-spacing-tighter: -.1em;
+/* -25% */
+@cl-font-letter-spacing-tight: -.025em;
+/* 0 */
+@cl-font-letter-spacing-normal: 0em;
+/* 25% */
+@cl-font-letter-spacing-wide: .025em;
+/* 100% */
+@cl-font-letter-spacing-wider: .1em;
+
+/* 100 */
+@cl-line-height-none: 1;
+/* 125 */
+@cl-line-height-tight: 1.25;
+/* 150 */
+@cl-line-height-base: 1.5;
+
+@cl-font-weight-regular: 400;
+@cl-font-weight-medium: 500;
+@cl-font-weight-semibold: 600;
+@cl-font-weight-bold: 700;
+
+@cl-font-underline-offset: 3px;
+
+@cl-font-size-base: 62.5%; // 1rem = 10px
+
+@cl-pc-font-size-display-large: 48px;
+@cl-pc-font-size-display-medium: 36px;
+@cl-pc-font-size-display-small: 28px;
+@cl-pc-font-size-heading-xlarge: 32px;
+@cl-pc-font-size-heading-large: 28px;
+@cl-pc-font-size-heading-medium: 24px;
+@cl-pc-font-size-heading-small: 20px;
+@cl-pc-font-size-heading-xsmall: 16px;
+@cl-pc-font-size-body-large: 14px;
+@cl-pc-font-size-body-medium: 13px;
+@cl-pc-font-size-body-small: 12px;
+@cl-pc-font-size-label-xxlarge: 18px;
+@cl-pc-font-size-label-xlarge: 16px;
+@cl-pc-font-size-label-large: 15px;
+@cl-pc-font-size-label-medium: 14px;
+@cl-pc-font-size-label-small: 13px;
+@cl-pc-font-size-label-xsmall: 12px;
+@cl-pc-font-size-label-xxsmall: 10px;
+@cl-pc-font-size-navigation-title-medium: 28px;
+@cl-pc-font-size-navigation-title-small: 24px;
+@cl-pc-font-size-navigation-depth-large: 16px;
+@cl-pc-font-size-navigation-depth-medium: 14px;
+@cl-pc-font-size-navigation-depth-small: 12px;
+
+@cl-mobile-font-size-display-large: 48px;
+@cl-mobile-font-size-display-medium: 36px;
+@cl-mobile-font-size-display-small: 28px;
+@cl-mobile-font-size-heading-xlarge: 32px;
+@cl-mobile-font-size-heading-large: 28px;
+@cl-mobile-font-size-heading-medium: 24px;
+@cl-mobile-font-size-heading-small: 20px;
+@cl-mobile-font-size-heading-xsmall: 16px;
+@cl-mobile-font-size-body-large: 14px;
+@cl-mobile-font-size-body-medium: 13px;
+@cl-mobile-font-size-body-small: 12px;
+@cl-mobile-font-size-label-xxlarge: 18px;
+@cl-mobile-font-size-label-xlarge: 16px;
+@cl-mobile-font-size-label-large: 15px;
+@cl-mobile-font-size-label-medium: 14px;
+@cl-mobile-font-size-label-small: 13px;
+@cl-mobile-font-size-label-xsmall: 12px;
+@cl-mobile-font-size-label-xxsmall: 10px;
+@cl-mobile-font-size-navigation-title-medium: 28px;
+@cl-mobile-font-size-navigation-title-small: 24px;
+@cl-mobile-font-size-navigation-depth-large: 16px;
+@cl-mobile-font-size-navigation-depth-medium: 14px;
+@cl-mobile-font-size-navigation-depth-small: 12px;
+
+/* ==========================================================================
+ 3. Spacing & Layout
+ ========================================================================== */
+ 
+@cl-number-0: 0;
+@cl-numner-1: 1px;
+@cl-number-2: 2px;
+@cl-number-3: 3px;
+@cl-number-4: 4px;
+@cl-number-5: 5px;
+@cl-number-6: 6px;
+@cl-number-7: 8px;
+@cl-number-8: 10px;
+@cl-number-9: 12px;
+@cl-number-10: 16px;
+@cl-number-11: 20px;
+@cl-number-12: 24px;
+@cl-number-13: 28px;
+@cl-number-14: 32px;
+@cl-number-15: 36px;
+@cl-number-16: 40px;
+@cl-number-17: 44px;
+@cl-number-18: 48px;
+@cl-number-19: 56px;
+@cl-number-20: 64px;
+@cl-number-21: 72px;
+@cl-number-22: 80px;
+@cl-number-23: 96px;
+@cl-number-max: 1000px;
+
+/* 0 */
+@cl-gap-0: @cl-number-0;
+/* 2 */
+@cl-gap-1: @cl-number-2;
+/* 4 */
+@cl-gap-2: @cl-number-4;
+/* 6 */
+@cl-gap-3: @cl-number-6;
+/* 8 */
+@cl-gap-4: @cl-number-7;
+/* 10 */
+@cl-gap-5: @cl-number-8;
+/* 12 */
+@cl-gap-6: @cl-number-9;
+/* 16 */
+@cl-gap-7: @cl-number-10;
+/* 20 */
+@cl-gap-8: @cl-number-11;
+/* 24 */
+@cl-gap-9: @cl-number-12;
+/* 32 */
+@cl-gap-10: @cl-number-14;
+/* 36 */
+@cl-gap-11: @cl-number-15;
+/* 40 */
+@cl-gap-12: @cl-number-16;
+/* 48 */
+@cl-gap-13: @cl-number-18;
+/* 64 */
+@cl-gap-14: @cl-number-20;
+/* 80 */
+@cl-gap-15: @cl-number-22;
+
+/* 0 */
+@cl-padding-0: @cl-number-0;
+/* 2 */
+@cl-padding-1: @cl-number-2;
+/* 4 */
+@cl-padding-2: @cl-number-4;
+/* 8 */
+@cl-padding-3: @cl-number-7;
+/* 10 */
+@cl-padding-4: @cl-number-8;
+/* 12 */
+@cl-padding-5: @cl-number-9;
+/* 16 */
+@cl-padding-6: @cl-number-10;
+/* 20 */
+@cl-padding-7: @cl-number-11;
+/* 24 */
+@cl-padding-8: @cl-number-12;
+/* 32 */
+@cl-padding-9: @cl-number-14;
+/* 36 */
+@cl-padding-10: @cl-number-15;
+/* 40 */
+@cl-padding-11: @cl-number-16;
+/* 48 */
+@cl-padding-12: @cl-number-18;
+
+/* 4 */
+@cl-size-height-1: @cl-number-4;
+/* 8 */
+@cl-size-height-2: @cl-number-7;
+/* 12 */
+@cl-size-height-3: @cl-number-9;
+/* 16 */
+@cl-size-height-4: @cl-number-10;
+/* 20 */
+@cl-size-height-5: @cl-number-11;
+/* 24 */
+@cl-size-height-6: @cl-number-12;
+/* 28 */
+@cl-size-height-7: @cl-number-13;
+/* 32 */
+@cl-size-height-8: @cl-number-14;
+/* 36 */
+@cl-size-height-9: @cl-number-15;
+/* 40 */
+@cl-size-height-10: @cl-number-16;
+/* 48 */
+@cl-size-height-11: @cl-number-18;
+/* 56 */
+@cl-size-height-12: @cl-number-19;
+
+/* 2 */
+@cl-radius-xsmall1: 2px;
+/* 3 */
+@cl-radius-xsmall2: 2px;
+/* 4 */
+@cl-radius-xsmall3: 4px;
+/* 5 */
+@cl-radius-small1: 4px;
+/* 8 */
+@cl-radius-small2: 4px;
+/* 10 */
+@cl-radius-small3: 6px;
+/* 12 */
+@cl-radius-medium1: 6px;
+/* 16 */
+@cl-radius-medium2: 6px;
+/* 20 */
+@cl-radius-medium3: 8px;
+/* 24 */
+@cl-radius-medium4: 8px;
+/* 32 */
+@cl-radius-large1: 8px;
+/* 36 */
+@cl-radius-large2: 10px;
+/* 40 */
+@cl-radius-xlarge1: 12px;
+/* 48 */
+@cl-radius-xlarge2: 12px;
+/* 1000 */
+@cl-radius-max: @cl-number-max;
+
+@cl-pc-gap-layout-header-breadcrumb: @cl-number-9;
+@cl-pc-gap-layout-breadcrumb-h1: @cl-number-8;
+@cl-pc-gap-layout-h1-h2: @cl-number-10;
+@cl-pc-gap-layout-h2-h3: @cl-number-7;
+@cl-pc-gap-layout-h3-h4: @cl-number-4;
+@cl-pc-gap-layout-title-body-small: @cl-number-10;
+@cl-pc-gap-layout-title-body-medium: @cl-number-11;
+@cl-pc-gap-layout-title-body-large: @cl-number-12;
+@cl-pc-gap-layout-text-text-small: @cl-number-2;
+@cl-pc-gap-layout-text-text-medium: @cl-number-4;
+@cl-pc-gap-layout-text-text-large: @cl-number-7;
+@cl-pc-gap-layout-text-text-xlarge: @cl-number-9;
+
+@cl-mobile-gap-layout-header-breadcrumb: @cl-number-9;
+@cl-mobile-gap-layout-breadcrumb-h1: @cl-number-8;
+@cl-mobile-gap-layout-h1-h2: @cl-number-10;
+@cl-mobile-gap-layout-h2-h3: @cl-number-7;
+@cl-mobile-gap-layout-h3-h4: @cl-number-4;
+@cl-mobile-gap-layout-title-body-small: @cl-number-10;
+@cl-mobile-gap-layout-title-body-medium: @cl-number-11;
+@cl-mobile-gap-layout-title-body-large: @cl-number-12;
+@cl-mobile-gap-layout-text-text-small: @cl-number-2;
+@cl-mobile-gap-layout-text-text-medium: @cl-number-4;
+@cl-mobile-gap-layout-text-text-large: @cl-number-7;
+@cl-mobile-gap-layout-text-text-xlarge: @cl-number-9;
+
+/* ==========================================================================
+ 4. Etc
+ ========================================================================== */
+
+/* 이미지 경로 */
+@img: "img";
+
+/* --- 콘텐츠 최대 너비 --- */
+@contents-size: 1200px;
+@contents-padding-x-pc: 24px;
+@contents-padding-x-mobile: 16px;
+@contents-wrap-size: @contents-size + (@contents-padding-x-pc * 2);
+
+/* --- 브레이크포인트 --- */
+@breakpoint-small: 360px;
+@breakpoint-medium: 768px;
+@breakpoint-large: 1024px;
+@breakpoint-xlarge: 1280px;
+@breakpoint-xxlarge: 1440px;
+
+/* --- 트랜지션 --- */
+@transition-base: .4s ease-in-out;
+@transition-fade: opacity .4s linear;
+@transition-collapse: max-height .4s ease;
+@transition-collapse-width: width .4s ease;
+
+/* --- 아이콘 사이즈 --- */
+@icon-size-xsmall: @cl-size-height-3;
+@icon-size-small: @cl-size-height-4;
+@icon-size-medium: @cl-size-height-5;
+@icon-size-large: @cl-size-height-6;
+@icon-size-xlarge: @cl-size-height-9;

@@ -1,0 +1,203 @@
+@import "../core/include.part.less";
+
+/**
+ * ============================================================================
+ * @file      menu.part.less
+ * @desc      CORE-UI 컨트롤 스타일 정의
+ * @rule
+ * 1. 독립성 유지
+ *  - 이 파일 내부에 선언된 변수는 외부에서 참조할 수 없음
+ * @contents  
+ * 1. Base (공통 스타일)
+ * 2. Variants (유형별 스타일)
+ * 3. Mode (테마 스타일)
+ * ============================================================================
+ */
+
+/* ==========================================================================
+   Component Tokens
+ ========================================================================== */
+
+/* 사이즈 변수 */
+@dropdown__radius: @cl-radius-xsmall3;
+@dropdown__padding-x: @cl-padding-2;
+@dropdown__padding-y: @cl-padding-2;
+@dropdown__pc-font-size: @cl-pc-font-size-label-small;
+@dropdown__mobile-font-size: @cl-mobile-font-size-label-small;
+@dropdown__item-radius: @cl-radius-xsmall3;
+@dropdown__item-size-height: @cl-size-height-7;
+@dropdown__item-padding-x: @cl-padding-6;
+@dropdown__item-padding-y: @cl-padding-0;
+
+/* 색상 변수 */
+@dropdown__color-surface: @cl-base-color-surface-white;
+@dropdown__color-border: @cl-base-color-border-gray-softer;
+@dropdown__color-text: @cl-base-color-text-basic;
+@dropdown__color-text--disabled: @cl-base-color-text-disabled-on;
+@dropdown__color-alpha-shadow: 0 2px 8px @cl-base-color-alpha-shadow3;
+@dropdown__item-color-action--hover: @cl-base-color-action-secondary-hover;
+@dropdown__item-color-action--pressed: @cl-base-color-action-secondary-pressed;
+@dropdown__item-color-action--selected: @cl-base-color-action-secondary-selected;
+@dropdown__item-color-action--disabled: @cl-base-color-action-disabled;
+@dropdown__item-color-text--hover: @cl-base-color-text-basic;
+@dropdown__item-color-text--selected: @cl-base-color-text-secondary;
+
+/* ==========================================================================
+    Local Mixins
+ ========================================================================== */
+
+.menu__color() {
+	background-color: @dropdown__color-surface;
+	border: 1px solid @dropdown__color-border;
+	border-radius: @dropdown__radius;
+}
+
+/* ==========================================================================
+ 1. Base
+ ========================================================================== */
+
+.cl-menu {
+	.menu__color();
+	font-size: @dropdown__pc-font-size;
+	
+	@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+		font-size: @dropdown__mobile-font-size;
+	}
+	
+	.cl-menu-list {
+		background: 0;
+		border: 0;
+		
+		.cl-arrow-up,
+		.cl-arrow-down {
+			.icon-set(ico_down);
+			
+			&:hover {
+				background-color: @dropdown__item-color-action--hover;
+			}
+			
+			&.cl-disabled {
+				background-color: @dropdown__item-color-action--disabled;
+			}
+		}
+		
+		.cl-menu-item {
+			height: auto;
+			min-height: @dropdown__item-size-height;
+			color: inherit;
+			padding: @dropdown__item-padding-y @dropdown__item-padding-x;
+			
+			.cl-menu-icon, .cl-menu-accesskey {
+				display: none !important;
+			}
+			
+			.cl-menu-arrow {
+			}
+			
+			.cl-text {
+				padding: 0;
+			}
+			
+			&.cl-folder {
+				> .cl-menu-arrow,
+				> .cl-menu-arrow-wrapper .cl-menu-arrow {
+					.icon-set(ico_down);
+					transform: rotate(-90deg);
+				}
+			}
+			
+			> .cl-menu-list-wrapper > .cl-sub {
+				.menu__color();
+			}
+		}
+	}
+	
+	&.cl-focus {
+		.focus-reset();
+		
+		.cl-menu-list {
+			border-color: @dropdown__color-border;
+		}
+	}
+	
+	&.cl-disabled {
+		color: @dropdown__color-text--disabled;
+	}
+}
+
+.cl-menu .cl-menu-list .cl-menu-item.cl-selected {
+	background-color: @dropdown__item-color-action--selected;
+	color: @dropdown__item-color-text--selected;
+	
+	&.cl-folder {
+		> .cl-menu-arrow,
+		> .cl-menu-arrow-wrapper .cl-menu-arrow {
+			.icon-set(ico_down);
+		}
+	}
+}
+
+.cl-menu:not(.cl-disabled) .cl-menu-list .cl-menu-item:not(.cl-disabled) {
+	&:not(.cl-selected):hover, &.cl-hover {
+		background-color: @dropdown__item-color-action--hover;
+		color: @dropdown__item-color-text--hover;
+	}
+	
+	&.cl-selected {
+		&:hover, &.cl-hover {
+			background-color: @dropdown__item-color-action--selected;
+			color: @dropdown__item-color-text--selected;
+		}
+	}
+}
+
+.cl-menu.cl-disabled .cl-menu-list .cl-menu-item {
+	&.cl-selected {
+	}
+}
+
+.cl-global-aside {
+	.cl-menu {
+		> .cl-menu-list.cl-sub {
+			border: 0;
+		}
+		
+		.cl-menu-item {
+			.cl-menu-list.cl-sub {
+				.menu__color();
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+ 2. Variants
+ ========================================================================== */
+
+/* --- 드롭다운 메뉴 --- */
+.cl-container.drop-wrap {
+	.cl-container.drop-menu {
+	}
+}
+
+.drop-menu {
+	.menu__color();
+	box-shadow: @dropdown__color-alpha-shadow;
+	padding: @dropdown__padding-y @dropdown__padding-x;
+	
+	.cl-menu-list, .drop-list {
+		.cl-menu-item, .item-link {
+			border-radius: @dropdown__item-radius;
+		}
+		
+		.item-link {
+		}
+	}
+}
+
+/* ==========================================================================
+ 3. Mode
+ ========================================================================== */
+
+.color-mode(@mode: high-contrast) {
+}

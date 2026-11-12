@@ -1,0 +1,985 @@
+@import "../core/include.part.less";
+
+@wts-red :#ff3254;
+@wts-blue: #3674d9;
+
+.cl-container.wts-main {
+	
+	.btn-text {
+		background-color : transparent;
+		border : none;
+	}
+	
+	.bg-red {
+		border-color : @wts-red;
+		background-color : @wts-red;
+	}
+	.bg-blue {
+		border-color : @wts-blue;
+		background-color : @wts-blue;
+	}
+	.cl-radiobutton .cl-radiobutton-item {
+		.cl-radiobutton-field {
+			display: inline !important;
+		}
+	}
+	
+	/* 탭 폴더 */
+.cl-tabfolder.tab-widget {
+	font: 400 14px;
+	border-radius: 4px;
+	border: 1px solid @cl-color-base-gray-30;
+	/* 헤더 */
+	.cl-tabfolder-header.tablist {
+		background-color: #F5F6F7 !important;
+//		height: 32px !important; 
+		
+		/* 탭 아이템 */
+		.cl-tabfolder-item {
+			background-color: transparent;
+			color: @cl-color-base-gray-60;
+			font-weight: @cl-font-weight-medium;
+			font-size: 14px;
+//			padding: 7px 8px;
+			border: none !important;
+			position : relative;
+			/* 탭 아이템 체크 박스 */
+			.cl-checkbox {}
+
+			.cl-text {
+				&:focus {
+					text-decoration: none;
+				}
+			}
+
+			/* 탭 아이템 닫기 버튼 */
+			.cl-tabfolder-button {
+				background: url("../images/controls/tabfolder/ic_btn_close.svg") no-repeat center / 16px;
+				margin: 0 0 0 0.375rem;
+			}
+
+			/* 탭 아이템 - 선택됨 */
+			&.cl-selected {
+				background-color: white !important;
+				border-radius: 0px;
+			}
+			/* 탭 아이템 - 호버 */
+			&:not(.cl-selected):hover {
+//				background-color: @cl-color-base-gray-20;
+//				color: @cl-color-base-secondary-30;
+			}
+
+			/* 비활성 탭 아이템 */
+			&.cl-disabled {
+//				background-color: @cl-color-base-gray-30;
+//				border-color: @cl-color-base-gray-40;
+//				color: @cl-color-base-gray-60;
+			}
+		}
+		
+		&.cl-top, &.cl-bottom {
+			.cl-tabfolder-prev,
+			.cl-tabfolder-next {
+			}
+			
+			.cl-tabfolder-item {
+				
+				&.cl-selected {
+				}
+				
+				&:not(.cl-selected):hover {
+					
+				}
+			}
+		}
+		
+	}
+	/* 탭폴더 바디 */
+	.cl-tabfolder-body {
+//		background-color: transparent;
+		border: none; //@tab-border-base;
+		.card {
+			border-top-left-radius : 0px;
+			border-top-right-radius : 0px;
+		}
+		/* 컨텐츠 내 여백 */
+//		> * > .cl-container {
+//			padding: 8px 0 0 0;
+//		}
+	}
+}
+
+/* 탭 폴더 */
+.cl-tabfolder.tab-toggles {
+//	font: @font-base;
+//	border-radius: @border-radius;
+	
+	/* 헤더 */
+	.cl-tabfolder-header {
+		border-radius: 8px;
+		background-color: #F5F6F7  !important;
+//		height: 40px;
+		/* 탭 아이템 */
+		.cl-tabfolder-item {
+			margin : 4px;
+			border-radius:8px;
+			background-color: transparent;
+//			color: @tab-item-text-color;
+			font-weight: @cl-font-weight-medium;
+			font-size: 14px;
+			padding: 7px 8px;
+			border: none !important;
+			position : relative;
+			/* 탭 아이템 체크 박스 */
+			.cl-checkbox {}
+
+			.cl-text {
+				text-align: center;
+				&:focus {
+					text-decoration: none;
+				}
+			}
+
+			/* 탭 아이템 닫기 버튼 */
+			.cl-tabfolder-button {
+				background: url("../images/controls/tabfolder/ic_btn_close.svg") no-repeat center / 16px;
+				margin: 0 0 0 0.375rem;
+			}
+
+			/* 탭 아이템 - 선택됨 */
+			&.cl-selected {
+				background-color: white !important;
+				border-radius:8px !important;
+			}
+			/* 탭 아이템 - 호버 */
+			&:not(.cl-selected):hover {
+				background-color: @cl-color-base-gray-20;
+				color: @cl-color-base-secondary-30;
+			}
+
+			/* 비활성 탭 아이템 */
+			&.cl-disabled {
+				background-color: @cl-color-base-gray-30;
+				border-color: @cl-color-base-gray-40;
+				color: @cl-color-base-gray-60;
+			}
+		}
+		
+		&.cl-top, &.cl-bottom {
+			.cl-tabfolder-prev,
+			.cl-tabfolder-next {
+			}
+			
+			.cl-tabfolder-item {
+				
+				&.cl-selected {
+				}
+				
+				&:not(.cl-selected):hover {
+					
+				}
+			}
+		}
+		
+	}
+	/* 탭폴더 바디 */
+	.cl-tabfolder-body {
+		background-color: transparent;
+		border: none; //@tab-border-base;
+		.card {
+			border-top-left-radius : 0px;
+			border-top-right-radius : 0px;
+		}
+		/* 컨텐츠 내 여백 */
+//		> * > .cl-container {
+//			padding: 8px 0 0 0;
+//		}
+	}
+}
+.cl-container.chart-group {
+	.cl-container.chart-bottom {
+		
+		margin-top : 8px;
+		padding-top : 8px;
+		border-top : 1px solid @cl-color-base-gray-30;
+	}
+}
+
+//.cl-container.card {
+//	border: none;
+//	background-color: white;
+//	border-radius: @border-radius-8;
+//	padding: 12px !important;
+//	&.card-border {
+//		border : 1px solid @cl-color-base-gray-30;
+//	}
+//}
+
+.cl-navigationbar.nav-time {
+	border: none;
+	background-color: transparent;
+	.cl-navigationbar-bar {
+		text-align: center;
+		.cl-navigationbar-item {
+			color : @cl-color-base-gray-60;
+			width: 50px;
+			border-radius: 0px;
+			&:not(.cl-selected):hover {
+				background-color : @cl-color-base-gray-5;
+			}
+			
+			&.cl-selected {
+				color :@cl-color-base-gray-90;
+				background-color : @cl-color-base-primary-5;
+				.cl-navigationbar-content {
+					.cl-navigationbar-arrow {
+						background-image : url("../images/controls/menu/ic_btn_down.svg")
+					}
+				}
+			}
+		}
+		
+	}
+	.cl-navigationbar-list {
+		wudth: 50px;
+	}
+}
+
+.cl-grid.table-white {
+ 	border-top : none;
+ 	border-bottom: none;
+ 	background-color: white;
+	.cl-grid-header {
+		background-color: white;
+		border-right-color: transparent;
+		border-bottom: transparent;
+		.cl-grid-cell {
+			border:none;
+		}
+		.cl-grid-cell.required {
+			.cl-text {
+				&:before {
+					content: "*";
+					position: relative;
+					color: @cl-color-base-danger-50;
+					margin: 0 4px 0 0;
+				}
+			}
+		}
+	}
+	
+	.cl-grid-detail {
+		.cl-grid-row {
+			&.cl-modified {
+				background-color : white;
+			}
+			&.cl-selected {
+				background-color : white;
+			}
+			&.cl-editing {
+				background-color : white;
+			}
+			&.cl-odd-row {
+			}
+			
+			.cl-grid-cell {
+//				border: none;
+//				border-top-color : transparent;
+				border-right-color :transparent;
+				border-bottom-color :transparent;
+				.cl-control {
+					&.cl-default-cell {
+					}
+					
+					&.cl-output {
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+	
+	.cl-grid-cell {
+		.cl-control {
+			
+			&.cl-output {
+				padding: (10px / 2)10px;
+			}
+			
+			&.cl-checkbox,
+			&.cl-checkboxgroup,
+			&.cl-radiobutton {
+				text-align: center;
+			}
+		}
+	}
+	&.row-top {
+		.cl-grid-detail {
+			.cl-grid-row {
+				//			border-top :
+				&:not(.cl-first-row) {
+					
+				.cl-grid-cell {
+					border-top: solid 1px @cl-color-base-gray-50;
+				}
+				}
+			}
+		}
+		
+	}
+	
+	&.row-bottom {
+		.cl-grid-detail {
+			.cl-grid-row {
+				border-bottom :1px solid @cl-color-base-gray-30;
+			}
+		}
+	}
+}
+
+.cl-grid.table-transparent {
+ 	border-top : none;
+ 	background-color: transparent;
+	.cl-grid-header {
+		border : none;
+		background-color: transparent;
+		.cl-grid-cell {
+			border:none;
+		}
+		.cl-grid-cell.required {
+			.cl-text {
+				&:before {
+					content: "*";
+					position: relative;
+					color: @cl-color-base-danger-50;
+					margin: 0 4px 0 0;
+				}
+			}
+		}
+	}
+	
+	.cl-grid-detail {
+		border : none;
+		.cl-grid-row {
+			&.cl-odd-row {
+				background-color: #F9FAFB;
+			}
+			&.cl-selected {
+				background-color : rgba(32, 125, 233, 0.1);
+			}
+			.cl-grid-cell {
+				border: none;
+				
+				.cl-control {
+					&.cl-default-cell {
+					}
+					
+					&.cl-output {
+						text-align: center;
+					}
+					
+					&.cl-inputbox,
+					&.cl-maskeditor,
+					&.cl-numbereditor,
+					&.cl-dateinput,
+					&.cl-textarea,
+					&.cl-combobox,
+					&.cl-fileinput,
+					&.cl-searchinput {
+					}
+					
+					&.cl-button {
+					}
+					
+					&.cl-treecell {
+					}
+					
+					&.cl-checkbox,
+					&.cl-checkboxgroup,
+					&.cl-radiobutton {
+					}
+				}
+			}
+		}
+	}
+	
+	.cl-grid-footer {
+		.cl-grid-row {
+			.cl-grid-cell {
+			}
+		}
+	}
+	
+	.cl-grid-cell {
+		.cl-control {
+			
+			&.cl-output {
+				padding: (10px / 2)10px;
+			}
+			
+			&.cl-checkbox,
+			&.cl-checkboxgroup,
+			&.cl-radiobutton {
+				text-align: center;
+			}
+		}
+	}
+	
+	/* ---------- 조회성 그리드 ---------- */
+	&.cl-readonly {
+		
+	}
+	
+	&.real {
+		.cl-grid-cell {
+				.cl-output.sand {
+					background-color: white !important;
+					cursor: pointer;
+					
+					.cl-text {
+						text-align: left;
+					}
+					
+					&.top {
+						border-top-left-radius: 16px;
+						border-top-right-radius: 16px;
+						font-weight: @cl-font-weight-bold;
+					}
+					
+					&.bottom {
+						border-bottom-left-radius: 16px;
+						border-bottom-right-radius: 16px;
+					}
+				}
+		}
+		.cl-grid-detail {
+			.cl-grid-row {
+				&.cl-modified {
+				background-color : transparent;
+			}
+			&.cl-selected {
+				background-color : transparent;
+				.cl-output.sand {
+					background-color : @cl-color-base-primary-50 !important;
+				}
+			}
+			&.cl-editing {
+				background-color : transparent;
+			}
+				&.cl-odd-row {
+					background-color: transparent;
+				}
+			}
+			
+		}
+	}
+}
+.cl-slider.slide-invest {
+	
+	.cl-slider-bar {
+		.cl-slider-range {
+			background-color: @wts-blue;
+		}
+		.cl-slider-handle {
+			display : none;
+		}
+	}
+	
+	&.up {
+		.cl-slider-bar {
+			.cl-slider-range {
+				background-color : @wts-red;
+			}
+		}
+	}
+}
+.text-wts-blue {
+	.cl-text {
+		color : @wts-blue;
+	}
+	
+}
+
+.text-wts-red {
+	.cl-text {
+		color : @wts-red;
+	}
+}
+
+
+.cl-output.vrss-up {
+	color: @wts-red !important;
+	
+	.cl-text {
+		margin-left: 4px;
+		
+		&:before {
+			content: "▲";
+			display: inline-block;
+			position: relative;
+			padding-right:2px;
+		}
+	}
+}
+.cl-output.vrss-down {
+	color: @wts-blue !important;
+	
+	.cl-text {
+//		padding-left: 16px;
+		
+		&:before {
+			content: "▼";
+			display: inline-block;
+			position: relative;
+			padding-right: 4px;
+		}
+	}
+}
+
+.cl-container.group-hoga {
+	.cl-container.values {
+		.cl-output.up {
+			color : #DC1414 !important;
+			text-align: center;
+			font-weight: @cl-font-weight-bold;
+		}
+		.cl-output.down {
+			color : #3f85FF !important;
+			text-align : center;
+			font-weight : @cl-font-weight-bold;
+		}
+		.cl-output.now {
+			text-align : center;
+			font-weight : @cl-font-weight-bold;
+			color : black !important;
+		}
+		
+		.cl-output.sm {
+			font-size: 12px;
+			text-align:center;
+			&.up {
+				color : #DC1414 !important;
+			}
+			&.down {
+				color : #3f85FF !important;
+			}
+		}
+	}
+	
+	.cl-progress {
+		padding: 5px;
+		background-color: transparent;
+		border: none;
+		
+		.cl-progress-bar {
+			border-radius: 5px;
+			transition : none !important;
+		}
+		
+		&.sell {
+			direction: rtl;
+			
+			.cl-progress-bar {
+				background-color: rgba(54,116,217,0.2);
+	//			background-color : rgba(63,117,255,0.2);
+//				background-color: #EBF1FF;
+			}
+			
+			.cl-text {
+				text-align: right;
+	//			color : rgb(63,117,255);
+				color: #3F75FE;
+			}
+		}
+		
+		&.buy {
+			.cl-progress-bar {
+//				background-color: #FBE7E7;
+				background-color : rgba(255,50,84,0.2);
+			}
+			
+			.cl-text {
+				text-align: left;
+				color: #DC1414;
+	//			color : rgb(255,50,84);
+			}
+		}
+	}
+}
+.cl-radiobutton.toggle {
+	border-radius: 8px;
+	border-collapse: collapse;
+	min-width: 130px;
+	
+	.cl-radiobutton-item {
+		background-color: @cl-color-base-gray-40;
+		padding: 4px;
+		border: solid 1px @cl-color-base-gray-40;
+		text-align: center;
+		
+		//			width:50%;
+		.cl-text {
+			font-weight: @cl-font-weight-bold;
+			color: @cl-color-base-gray-70;
+		}
+		
+		.cl-radiobutton-icon {
+			width: 0px ! important;
+		}
+		
+		&.cl-first-column {
+			border-left-style: solid;
+			border-radius: 8px 0px 0px 8px;
+		}
+		
+		&.cl-last-column {
+			border-radius: 0px 8px 8px 0px;
+			border-right-style: solid;
+		}
+		
+		&:not(.cl-disabled):hover {
+//			background-color : white;
+//			background-color : rgba(0,0,0,0.05);
+		}
+		
+		&:not(.cl-disabled).cl-activated,
+		&:not(.cl-disabled):active {
+//			background-color: rgba(0, 0, 0, 0.03);
+		}
+		
+		&.cl-selected {
+			background-color: white;
+			
+			.cl-text {
+				color: black;
+			}
+			
+			&.buy {
+				background-color: red;
+				
+				.cl-text {
+					color: white;
+				}
+			}
+			
+			&.sell {
+				background-color: blue;
+				
+				.cl-text {
+					color: white;
+				}
+			}
+		}
+	}
+	
+	&.cl-focus .cl-radiobutton-item.cl-selected {
+		.cl-radiobutton-icon {
+			outline: none;
+		}
+	}
+	
+	&.cl-disabled {
+		.cl-text {
+			color: #DDDDDD !important;
+		}
+		
+		.cl-radiobutton-item {
+			border-color: #DDDDDD;
+		}
+	}
+}
+
+.cl-grid.table-unchanged {
+	.cl-grid-detail {
+			.cl-grid-row {
+				&.cl-modified {
+				background-color : transparent;
+			}
+			&.cl-selected {
+				background-color : transparent;
+			}
+			&.cl-editing {
+				background-color : transparent;
+			}
+				&.cl-odd-row {
+					background-color: transparent;
+				}
+			&.cl-inserted {
+				background-color: transparent;
+			}
+			}
+			
+		}
+}
+
+.bg-wts-red {background-color:@wts-red !important;}
+.bg-wts-blue {background-color: @wts-blue !important;}
+
+}
+
+.cl-button.btn-close {
+	cursor: default;
+	border: none;
+	background-color : transparent;
+	background-image: url("../../img/icons/ico_close.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 22px 22px;
+	
+	&:focus {
+		background-color : transparent;
+	}
+	
+	&:hover {
+		background-color : transparent;
+	}
+	
+	&:active {
+		background-color : transparent;
+	}
+}
+
+.cl-button.btn-close-small {
+	cursor: default;
+	border: none;
+	background-color : transparent;
+	background-image: url("../../img/icons/ico_close.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 16px 16px;
+	
+	&:focus {
+		background-color : transparent;
+	}
+	
+	&:hover {
+		background-color : transparent;
+	}
+	
+	&:active {
+		background-color : transparent;
+	}
+}
+
+
+.cl-button.btn-text {
+	cursor: default;
+	border: none;
+	pointer-events : none;
+	background-color : transparent;
+}
+.table {
+	table {
+		width: 100%;
+		tbody {
+			tr {
+				height: 30px;
+				padding: .4em;
+				min-height: 30px;
+				td {
+					border : 1px solid #bfbfbf;
+					vertical-align:middle;
+				}
+				
+			}
+		}
+	}
+}
+.cl-container.card {
+	border: none;
+	background-color: white;
+	border-radius: 8px;
+	padding: 12px !important;
+	&.card-border {
+		border : 1px solid @cl-color-base-gray-30;
+	}
+}
+ .cust-context {
+ 	position : absolute;
+ 	display: none;
+ 	background:white;
+ 	border:1px solid #ccc;
+ 	padding : 4px 8px;
+ 	border-radius : 6px;
+ 	box-shadow : 0px 4px 8px rgba(0,0,0,0.1);
+ 	z-index:9999;
+ 	
+ 	button {
+ 		margin : 0 4px;
+ 	}
+ }
+ 
+ .cl-grid.table-white {
+ 	border-top : none;
+ 	border-bottom: none;
+ 	background-color: white;
+	.cl-grid-header {
+		background-color: white;
+		border-right-color: transparent;
+		border-bottom: transparent;
+		.cl-grid-cell {
+			border:none;
+		}
+		.cl-grid-cell.required {
+			.cl-text {
+				&:before {
+					content: "*";
+					position: relative;
+					color: @cl-color-base-danger-50;
+					margin: 0 4px 0 0;
+				}
+			}
+		}
+	}
+	
+	.cl-grid-detail {
+		.cl-grid-row {
+			&.cl-modified {
+				background-color : white;
+			}
+			&.cl-selected {
+				background-color : white;
+			}
+			&.cl-editing {
+				background-color : white;
+			}
+			&.cl-odd-row {
+			}
+			
+			.cl-grid-cell {
+//				border: none;
+//				border-top-color : transparent;
+				border-right-color :transparent;
+				border-bottom-color :transparent;
+				.cl-control {
+					&.cl-default-cell {
+					}
+					
+					&.cl-output {
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+	
+	.cl-grid-cell {
+		.cl-control {
+			
+			&.cl-output {
+				padding: (10px / 2)10px;
+			}
+			
+			&.cl-checkbox,
+			&.cl-checkboxgroup,
+			&.cl-radiobutton {
+				text-align: center;
+			}
+		}
+	}
+	
+	&.row-top {
+		.cl-grid-detail {
+			.cl-grid-row {
+				//			border-top :
+				&:not(.cl-first-row) {
+					
+				.cl-grid-cell {
+					border-top: solid 1px @cl-color-base-gray-50;
+				}
+				}
+			}
+		}
+		
+	}
+	
+	&.row-bottom {
+		.cl-grid-detail {
+			.cl-grid-row {
+				border-bottom :1px solid @cl-color-base-gray-30;
+			}
+		}
+	}
+}
+
+.cl-output.cms-title {
+	font-size: 18px;
+	letter-spacing: -0.36px;
+	font-weight : @cl-font-weight-bold;
+	padding-top : 8px;
+	&:before {
+			content : '';
+			position:absolute;
+			left : 0px;
+			top : 0px;
+			width :50px;
+			height: 2px;
+			background-color :black;
+		}
+	
+//	font-size : 
+	.cl-text {
+		
+	}
+}
+.cl-output.cms-subtitle {
+	font-size: 16px;
+	letter-spacing: -0.36px;
+	font-weight : @cl-font-weight-bold;
+	padding-top : 8px;
+}
+.cl-container.cms-content {
+	background-color : @cl-color-base-gray-5;
+}
+.cl-container.cms-grid-content {
+	background-color : @cl-color-base-gray-10;
+}
+.cl-accordion.acc-caution {
+//	font: @font-base;
+	background-color: transparent;
+	border: none;
+	color: @cl-color-base-gray-90;
+	padding: 0;
+	
+	/* 아코디언의 각 헤더 */
+	.cl-accordion-header {
+		background-color: @cl-color-base-gray-5;
+		/* 아코디언 헤더에 마우스가 호버되었을 떄의 스타일 */
+		&:hover:not(.cl-disabled) {
+			background-color: @cl-color-base-gray-5;
+		}
+		&.cl-activated {
+			border-bottom : none;
+			border-radius: 4px 4px 0px 0px ;
+		}
+	}
+	.cl-container {
+		background-color: @cl-color-base-gray-5;
+		padding : 16px !important;
+		border: solid 1px #EC4A62;
+		border-radius: 0px 0px 4px 4px;
+		border-top: none;
+		
+		.cl-output {
+			color : #6F6F6F;
+			.cl-text {
+				padding-left : 7px;
+			}
+			&:before {
+				
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 5px;
+				width: 3px;
+				height: 3px;
+				background: #6F6F6F;
+				border-radius: 50%;
+				overflow: hidden;
+			}
+		}
+	}
+}
+.drag-row-bottom {
+	border-bottom : solid 2px @cl-color-base-primary-50;
+}

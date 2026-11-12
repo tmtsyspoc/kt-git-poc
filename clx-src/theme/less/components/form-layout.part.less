@@ -1,0 +1,438 @@
+@import "../core/include.part.less";
+
+/**
+ * ============================================================================
+ * @file      form-layout.part.less
+ * @desc      CORE-UI 컨트롤 스타일 정의
+ * @rule
+ * 1. 독립성 유지
+ *  - 이 파일 내부에 선언된 변수는 외부에서 참조할 수 없음
+ * @contents  
+ * 1. Base (공통 스타일)
+ * 2. Variants (유형별 스타일)
+ * 3. Mode (테마 스타일)
+ * ============================================================================
+ */
+
+/* ==========================================================================
+   Component Tokens
+ ========================================================================== */
+
+/* 사이즈 변수 */
+@form__title-pc-font-size: @cl-pc-font-size-label-medium;
+@form__title-mobile-font-size: @cl-mobile-font-size-label-medium;
+
+@form__label-padding: @cl-padding-2;
+@form__label-pc-font-size: @cl-pc-font-size-label-medium;
+@form__label-mobile-font-size: @cl-mobile-font-size-label-small;
+
+@form__group-message-pc-font-size: @cl-pc-font-size-label-small;
+@form__group-message-mobile-font-size: @cl-mobile-font-size-label-small;
+
+@form__control-size-height: @cl-size-height-6;
+
+/* 색상 변수 */
+@form__label-color-surface: @cl-base-color-surface-gray-softer;
+@form__label-color-text: @cl-base-color-text-basic;
+
+@form__group-color-surface: @cl-base-color-alpha-basic0;
+@form__group-color-border: @cl-base-color-border-gray-soft;
+@form__group-color-border-point: @cl-base-color-border-gray-bolder;
+
+@form__group-message-color-text: @cl-base-color-text-softer;
+@form__group-message-color-text-success: @cl-base-color-text-success;
+@form__group-message-color-text-information: @cl-base-color-text-information;
+@form__group-message-color-text-danger: @cl-base-color-text-danger;
+
+/* ==========================================================================
+    Local Mixins
+ ========================================================================== */
+
+
+
+/* ==========================================================================
+ 1. Base
+ ========================================================================== */
+
+/* --- 폼 레이아웃 스타일 --- */
+
+.cl-formlayout-column-shade {
+	// 음영(열) 스타일
+	background-color: transparent;
+}
+
+.cl-formlayout-row-shade {
+	// 음영(행) 스타일
+	background-color: transparent;
+}
+
+.cl-formlayout-horizontal-separator,
+.cl-formlayout-vertical-separator {
+	// 가로 구분선 스타일
+	background-color: @form__group-color-border;
+}
+
+//.cl-formlayout-vertical-separator {
+//	// 세로 구분선 스타일
+//	background-color: transparent; //@form__group-color-border;
+//}
+
+.cl-formlayout-vertical-lightweight-resizer,
+.cl-formlayout-horizontal-lightweight-resizer {
+	// 경량 리사이저 스타일
+}
+
+/* ==========================================================================
+ 2. Variants
+ ========================================================================== */
+
+/* --- 폼 레이아웃 기본 스타일 (자동부여 클래스 - 미사용) --- */
+.cl-form-group {
+	border: 0;
+}
+
+/* --- 폼 타이틀 스타일 --- */
+.cl-output.form-tit {
+	font-size: @form__title-pc-font-size;
+	font-weight: @cl-font-weight-semibold;
+	
+	@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+		font-size: @form__title-mobile-font-size;
+	}
+}
+
+/* --- 라벨(항목) 스타일 --- */
+.label {
+	color: @form__label-color-text;
+	font-size: @form__label-pc-font-size;
+	font-weight: @cl-font-weight-semibold;
+	text-align: left;
+	
+	@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+		font-size: @form__label-mobile-font-size;
+//		margin-right: 8px;
+	}
+	
+	&.required {
+		.cl-text {
+			&::after {
+				.pseudo("*");
+				color: @cl-base-color-text-point;
+				margin-left: @cl-gap-1;
+				line-height: @cl-line-height-none;
+				vertical-align: top;
+			}
+		}
+	}
+}
+
+.ctrl-label {
+	font-weight: @cl-font-weight-medium;
+	margin: 0 8px;
+}
+
+/* --- 기본 폼 스타일 --- */
+.cl-container.form,
+.cl-container.form.tbl {
+	background-color: @form__group-color-surface;
+	border-top: 1px solid @form__group-color-border;
+	border-bottom: 1px solid @form__group-color-border;
+	
+	.cl-formlayout-column-shade, .cl-formlayout-row-shade {
+		background-color: fade(@cl-color-base-secondary-10, 50%);
+	}
+	
+	.label {
+		background-color : transparent;
+//		background-color: fade(@cl-color-base-secondary-10, 50%);
+		padding: 0 @form__label-padding;
+		
+		&:not(.cl-first-column) {
+		}
+	}
+	
+	// 컨트롤별 공통
+	.cl-control {
+		min-height: @form__control-size-height;
+	}
+	
+	.cl-output.cl-number-format {
+		text-align: right;
+	}
+	
+	.cl-button {
+		border-radius: @cl-radius-xsmall3;
+	}
+}
+
+/* --- 테이블형 폼 스타일 --- */
+.cl-container.form.tbl {
+	.cl-formlayout-vertical-separator {
+		background-color: @form__group-color-border;
+	}
+	
+	.label, .cl-output {
+		&:not(.cl-number-format) {
+			text-align: center;
+		}
+	}
+	
+	.label {
+		min-height: 31px;
+	}
+}
+
+/* 단단배치 (세로배치 폼) */
+.cl-container.form-field {
+	.cl-container.form-group {
+		&:not(.cl-first-row) {
+			margin-top: @cl-gap-7;
+		}
+		
+		.cl-control.form-conts {
+		}
+	}
+}
+
+/* --- 폼 힌트 스타일 --- */
+.form-hint {
+	color: @form__group-message-color-text;
+	font-size: @form__group-message-pc-font-size;
+	
+	@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+		font-size: @form__group-message-mobile-font-size;
+	}
+	
+	&.success {
+		color: @form__group-message-color-text-success;
+	}
+	
+	&.information {
+		color: @form__group-message-color-text-information;
+	}
+	
+	&.invalid {
+		color: @form__group-message-color-text-danger;
+	}
+}
+
+
+/* --- 폼 카드 스타일 --- */
+.cl-container.form-card {
+	background-color: #f8faff;
+	border: 1px solid #e9effe;
+	border-radius: 12px;
+	padding: 12px;
+	
+	.cl-output.label {
+		background-color: transparent;
+		color: #a5a5a5;
+		font-weight: @cl-font-weight-regular;
+		
+		&.bar {
+			padding-left: 20px;
+			position: relative;
+			
+			&::after {
+				content: '';
+				width: 1px;
+				height: 14px;
+				position: absolute;
+				background-color: #d1d9e6;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+	}
+	.cl-output.value{
+		color: #20252b;
+    	font-size: 15px;
+    	font-weight: 500;
+	}
+	
+	// 컨트롤별 공통
+	.cl-control {
+		min-height: @form__control-size-height;
+	}
+	
+	.cl-output.cl-number-format {
+		text-align: right;
+	}
+	
+	.cl-button {
+		border-radius: @cl-radius-xsmall3;
+	}
+}
+
+/* --- summary 카드 스타일 --- */
+.cl-container.summary-card {
+	border-radius: 16px;
+	
+	.bg-blue {
+		background-color: #e3efff;
+		
+		.cl-output.label {
+			color: #5a82cf;
+			
+			&::before {
+				background-color: #4376db;
+			}
+		}
+		
+		.cl-output.value {
+			color: #4376db;
+		}
+	}
+	
+	.bg-green {
+		background-color: #e6f9f0;
+		
+		.cl-output.label {
+			color: #4d8b76;
+			
+			&::before {
+				background-color: #3b8a6e;
+			}
+		}
+		
+		.cl-output.value {
+			color: #3b8a6e;
+		}
+	}
+	
+	.bg-purple {
+		background-color: #f3ebff;
+		
+		.cl-output.label {
+			color: #9166cc;
+			
+			&::before {
+				background-color: #8b50d6;
+			}
+		}
+		
+		.cl-output.value {
+			color: #8b50d6;
+		}
+	}
+	
+	.cl-output.label {
+		font-size: 14px;
+		padding-left: 15px;
+		
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 6px;
+			height: 6px;
+			border-radius: 50%;
+		}
+	}
+	
+	.cl-output.value {
+		font-size: 22px;
+		font-weight: 700;
+	}
+}
+
+
+/* ==========================================================================
+ 3. Mode
+ ========================================================================== */
+
+.color-mode(@mode: high-contrast) {
+	
+	/*--- 색상 변수 ---*/
+	@form__label-color-text: @cl-high-contrast-color-text-bold;
+	@form__group-color-border: fade(#ffffff, 12%);
+	
+	.cl-formlayout-horizontal-separator {
+		background-color: @form__group-color-border;
+	}
+	
+	.label {
+		color: @form__label-color-text;
+	}
+	
+	.cl-container.form {
+		border-top: 1px solid @form__group-color-border;
+		border-bottom: 1px solid @form__group-color-border;
+		
+		.label {
+			background-color: rgba(0, 0, 0, 0);
+		}
+	}
+	
+	
+	.cl-container.form-card {
+		background: #363d44;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		
+		.cl-output.label {
+			color: @form__label-color-text;
+		}
+		
+		.cl-output.value {
+			color: @form__label-color-text;
+		}
+		
+		.cl-output.line {
+			background-color: rgba(255, 255, 255, 0.2);
+		}
+	}
+	
+	.cl-container.summary-card {
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		.bg-blue {
+			background-color: #1a2638;
+			
+			.cl-output.label {
+				color: #a3c1ff;
+				
+				&::before {
+					background-color: #5a91ff;
+				}
+			}
+			
+			.cl-output.value {
+				color: #7dabff;
+			}
+		}
+		
+		.bg-green {
+			background-color: #162d24;
+			
+			.cl-output.label {
+				color: #a8e6cf;
+				
+				&::before {
+					background-color: #4ecdc4;
+				}
+			}
+			
+			.cl-output.value {
+				color: #81c784;
+			}
+		}
+		
+		.bg-purple {
+			background-color: #241d30;
+			
+			.cl-output.label {
+				color: #d1b3ff;
+				
+				&::before {
+					background-color: #b388ff;
+				}
+			}
+			
+			.cl-output.value {
+				color: #ce93d8;
+			}
+		}
+	}
+}

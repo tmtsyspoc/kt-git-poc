@@ -1,0 +1,701 @@
+@import "../core/include.part.less";
+
+/* ==========================================================================
+ KT 대리점 대시보드 (app/main/DashboardKt)
+ — body 클래스가 "dash dash-kt" 인 화면에만 적용된다. 포틀릿의 기본 모양은
+   dashboard.part.less 를 그대로 받고, 여기서는 포인트 색을 KT 시그니처 컬러로 바꾸고
+   KT 전용 포틀릿(판매 목표·개통 진행 현황·단말 재고)의 모양을 정의한다.
+ — 메인 색상 테마보다 항상 우선하도록 클래스를 겹쳐 쓴다.
+ ========================================================================== */
+@dkt: ~".dash.dash-kt.dash-kt";
+
+// 포인트색은 main-kt.part.less 의 .kt-point-vars 가 내보내는 CSS 변수를 쓴다
+@dkt-red: ~"var(--kt-point)";
+@dkt-red-hover: ~"var(--kt-point-hover)";
+@dkt-red-5: ~"var(--kt-point-soft)";
+@dkt-ink: #1A1A1A;
+@dkt-ink-soft: #3D3D3D;
+@dkt-muted: #767676;
+@dkt-line: #E5E5E5;
+@dkt-main-img: "../../img/pages/main";
+
+@{dkt} {
+	/* --- 포틀릿 제목 --- */
+	.cl-output.tit-blue {
+		background: url("@{dkt-main-img}/ic_tit_red.svg") no-repeat left 0;
+	}
+
+	.cl-output.tit-green {
+		color: @dkt-red;
+	}
+
+	.cl-button.btn-status {
+		.cl-text span.count,
+		.cl-text span.consult-no {
+			color: @dkt-red;
+		}
+	}
+
+	.cl-container.total-count {
+		.count {
+			color: @dkt-red;
+		}
+	}
+
+	/* --- 사용자 카드: KT 블랙 + 레드 버튼 --- */
+	.cl-container.user-card-group {
+		background-color: @dkt-ink;
+		background-image: none;
+
+		.cl-button {
+			background-color: fade(#ffffff, 16%);
+
+			&:not(.cl-disabled):hover {
+				background-color: @dkt-red;
+			}
+
+			&:focus,
+			&.cl-focus,
+			&:not(.cl-disabled).cl-activated,
+			&:not(.cl-disabled):active {
+				background-color: @dkt-red-hover;
+			}
+		}
+	}
+
+	.cl-container.user-card {
+		background-color: fade(#ffffff, 8%);
+		border: 1px solid fade(#ffffff, 18%);
+
+		.cl-formlayout-horizontal-separator {
+			background-color: fade(#ffffff, 20%);
+		}
+
+		.cl-text {
+			color: #ffffff;
+		}
+	}
+
+	/* --- 통합로그인 --- */
+	.cl-container.total-login-group {
+		.cl-button.btn-move {
+			background-color: @dkt-ink;
+
+			&:not(.cl-disabled):hover {
+				background-color: @dkt-ink-soft;
+			}
+		}
+
+		.cl-button.btn-hashtag {
+			&:focus,
+			&.cl-focus,
+			&:not(.cl-disabled).cl-activated,
+			&:not(.cl-disabled):active {
+				background-color: @dkt-red;
+
+				&:not(.cl-disabled):hover {
+					color: #ffffff;
+				}
+			}
+		}
+
+		.cl-button.btn-hashtag-more {
+			background-color: @dkt-red;
+		}
+	}
+
+	/* --- News & Notice --- */
+	.cl-container.news-group {
+		.cl-button.btn-info,
+		.cl-button.btn-community {
+			&.cl-focus,
+			&:focus,
+			&:not(.cl-disabled):active,
+			&:not(.cl-disabled).cl-activated {
+				background-color: @dkt-ink;
+				color: #ffffff;
+			}
+		}
+
+		.cl-tabfolder:not(.cl-mdifolder).line {
+			.cl-tabfolder-header {
+				.cl-tabfolder-item {
+					&::before {
+						background-color: @dkt-red;
+					}
+
+					&.cl-selected {
+						color: @dkt-red;
+					}
+				}
+			}
+		}
+
+		.cl-container.news-list {
+			.cl-container.list {
+				.cl-output.category {
+					border: 1px solid ~"var(--kt-point-a30)";
+					color: @dkt-red;
+				}
+
+				.cl-output.new {
+					background-color: @dkt-red;
+				}
+			}
+		}
+
+		.cl-button.btn-scroll-left,
+		.cl-button.btn-scroll-right {
+			background-color: @dkt-red;
+
+			&:not(.cl-disabled):hover {
+				background-color: @dkt-red-hover;
+			}
+
+			&:focus,
+			&.cl-focus,
+			&:not(.cl-disabled).cl-activated,
+			&:not(.cl-disabled):active {
+				background-color: @dkt-red-hover;
+			}
+		}
+	}
+
+	/* --- KT 전용 포틀릿 공통 --- */
+	.kt-portlet {
+		// 제목 옆 기준·요약 문구
+		.cl-output.kt-base {
+			color: @dkt-muted;
+			font-size: @cl-pc-font-size-label-xsmall;
+			text-align: right;
+
+			&.warn {
+				color: @dkt-red;
+				font-weight: @cl-font-weight-bold;
+			}
+		}
+	}
+
+	/* --- 이번 달 판매 목표 (leader-status-board 모양을 받아 색만 조정) --- */
+	.cl-container.leader-status-board.kt-target {
+		.cl-container.item {
+			.cl-progress {
+				&.success {
+					.cl-progress-bar {
+						background: @dkt-ink;
+					}
+				}
+
+				&.progressing {
+					.cl-progress-bar {
+						background: #14B8A6;
+					}
+				}
+
+				&.plan {
+					.cl-progress-bar {
+						background: @dkt-red;
+					}
+				}
+			}
+
+			.cl-output.badge {
+				&.meeting {
+					background-color: #EFEFEF;
+					color: @dkt-ink;
+				}
+
+				&.away {
+					background-color: @dkt-red-5;
+					color: @dkt-red;
+				}
+			}
+		}
+	}
+
+	/* --- 개통 진행 현황 --- */
+	.kt-flow {
+		.step {
+			position: relative;
+			overflow: visible;
+			border: 1px solid @dkt-line;
+			border-radius: @cl-radius-small2;
+			background-color: #ffffff;
+
+			.cl-output {
+				text-align: center;
+			}
+
+			.cl-output.num {
+				color: @dkt-ink;
+				font-size: 24px;
+				font-weight: @cl-font-weight-bold;
+				font-variant-numeric: tabular-nums;
+			}
+
+			.cl-output.lbl {
+				color: @dkt-muted;
+				font-size: @cl-pc-font-size-body-small;
+				font-weight: @cl-font-weight-medium;
+			}
+
+			// 다음 단계로 이어지는 화살표
+			&::after {
+				content: "";
+				position: absolute;
+				top: 50%;
+				right: -14px;
+				width: 7px;
+				height: 7px;
+				border-top: 2px solid #BDBDBD;
+				border-right: 2px solid #BDBDBD;
+				transform: translateY(-50%) rotate(45deg);
+			}
+
+			// 완료·지연은 흐름의 끝이므로 화살표가 없다
+			&.done,
+			&.warn {
+				&::after {
+					content: none;
+				}
+			}
+
+			&.done {
+				border-color: @dkt-ink;
+				background-color: @dkt-ink;
+
+				.cl-output.num {
+					color: #ffffff;
+				}
+
+				.cl-output.lbl {
+					color: fade(#ffffff, 75%);
+				}
+			}
+
+			&.warn {
+				border-color: ~"var(--kt-point-a30)";
+				background-color: @dkt-red-5;
+
+				.cl-output.num,
+				.cl-output.lbl {
+					color: @dkt-red;
+				}
+			}
+		}
+	}
+
+	/* --- 단말 재고 현황 --- */
+	.kt-stock {
+		padding: 4px 16px;
+		border-radius: @cl-radius-medium1;
+		outline: 1px solid #dddddd;
+		background-color: #ffffff;
+
+		.row {
+			&:not(.cl-last-row) {
+				border-bottom: 1px solid @dkt-line;
+			}
+
+			.cl-output.nm {
+				font-size: @cl-pc-font-size-body-small;
+				font-weight: @cl-font-weight-medium;
+			}
+
+			.cl-output.qty {
+				text-align: right;
+				font-size: @cl-pc-font-size-body-small;
+				font-weight: @cl-font-weight-bold;
+				font-variant-numeric: tabular-nums;
+			}
+
+			.cl-progress {
+				background: #f5f5f5;
+
+				.cl-progress-bar {
+					background: @dkt-ink;
+				}
+			}
+
+			// 재고 부족
+			&.low {
+				.cl-output.qty {
+					color: @dkt-red;
+				}
+
+				.cl-progress .cl-progress-bar {
+					background: @dkt-red;
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+ 다크(고대비) 모드 — KT 전용 포틀릿과, 라이트 전제로 바꾼 색만 어둡게 맞춘다.
+ ========================================================================== */
+[data-cl-mode="high-contrast"] @{dkt} {
+	@dkt-dark-panel: #363d44;
+	@dkt-dark-line: fade(#ffffff, 10%);
+	@dkt-dark-text: #e1e1e1;
+	@dkt-dark-red: #FF6B81;
+
+	.cl-output.tit-green {
+		color: @dkt-dark-red;
+	}
+
+	.cl-container.user-card-group {
+		background-color: #121212;
+		border: 1px solid @dkt-dark-line;
+	}
+
+	.cl-container.total-login-group {
+		.cl-button.btn-move {
+			background-color: @dkt-red;
+		}
+	}
+
+	.cl-container.news-group {
+		.cl-button.btn-info,
+		.cl-button.btn-community {
+			&.cl-focus,
+			&:focus,
+			&:not(.cl-disabled):active,
+			&:not(.cl-disabled).cl-activated {
+				background-color: @dkt-red;
+			}
+		}
+
+		.cl-tabfolder:not(.cl-mdifolder).line .cl-tabfolder-header .cl-tabfolder-item.cl-selected,
+		.cl-container.news-list .cl-container.list .cl-output.category {
+			color: @dkt-dark-red;
+		}
+	}
+
+	.kt-portlet .cl-output.kt-base {
+		color: #BDBDBD;
+
+		&.warn {
+			color: @dkt-dark-red;
+		}
+	}
+
+	.cl-container.leader-status-board.kt-target {
+		.cl-container.item {
+			// 다크에서는 막대 바탕이 밝으므로 막대를 중간 톤으로 둔다
+			.cl-progress.success .cl-progress-bar {
+				background: #6F7A89;
+			}
+
+			.cl-output.badge {
+				&.meeting {
+					background-color: fade(#ffffff, 12%);
+					color: @dkt-dark-text;
+				}
+
+				&.away {
+					background-color: ~"var(--kt-point-a20)";
+					color: @dkt-dark-red;
+				}
+			}
+		}
+	}
+
+	.kt-flow {
+		.step {
+			border-color: @dkt-dark-line;
+			background-color: @dkt-dark-panel;
+
+			.cl-output.num {
+				color: #ffffff;
+			}
+
+			.cl-output.lbl {
+				color: #BDBDBD;
+			}
+
+			&::after {
+				border-color: #767676;
+			}
+
+			&.done {
+				border-color: @dkt-dark-text;
+				background-color: @dkt-dark-text;
+
+				.cl-output.num {
+					color: @dkt-ink;
+				}
+
+				.cl-output.lbl {
+					color: @dkt-ink-soft;
+				}
+			}
+
+			&.warn {
+				border-color: ~"var(--kt-point-a60)";
+				background-color: ~"var(--kt-point-a20)";
+
+				.cl-output.num,
+				.cl-output.lbl {
+					color: @dkt-dark-red;
+				}
+			}
+		}
+	}
+
+	.kt-stock {
+		outline-color: @dkt-dark-line;
+		background-color: @dkt-dark-panel;
+
+		.row {
+			&:not(.cl-last-row) {
+				border-bottom-color: @dkt-dark-line;
+			}
+
+			.cl-output.nm,
+			.cl-output.qty {
+				color: @dkt-dark-text;
+			}
+
+			.cl-progress {
+				background: fade(#ffffff, 10%);
+
+				.cl-progress-bar {
+					background: @dkt-dark-text;
+				}
+			}
+
+			&.low {
+				.cl-output.qty {
+					color: @dkt-dark-red;
+				}
+
+				.cl-progress .cl-progress-bar {
+					background: @dkt-red;
+				}
+			}
+		}
+	}
+}
+
+/* 메인 색상별 포틀릿 제목 아이콘 */
+[data-cl-mode="default"] @{dkt} .cl-output.tit-blue {
+	filter: grayscale(1);
+}
+
+[data-cl-mode="blue-theme"] @{dkt} .cl-output.tit-blue {
+	background-image: url("@{dkt-main-img}/ic_tit_blue.svg");
+}
+
+[data-cl-mode="green-theme"] @{dkt} .cl-output.tit-blue {
+	background-image: url("@{dkt-main-img}/ic_tit_green.svg");
+}
+
+[data-cl-mode="purple-theme"] @{dkt} .cl-output.tit-blue {
+	background-image: url("@{dkt-main-img}/ic_tit_purple.svg");
+}
+
+[data-cl-mode="orange-theme"] @{dkt} .cl-output.tit-blue {
+	background-image: url("@{dkt-main-img}/ic_tit_orange.svg");
+}
+
+/* ==========================================================================
+ 경고(지연·부족·주의) 표시는 메인 색상과 무관하게 레드로 둔다(의미가 바뀌지 않도록)
+ ========================================================================== */
+@dkt-warn: #E4002B;
+@dkt-warn-5: #FFF1F3;
+
+@{dkt} {
+	.kt-portlet .cl-output.kt-base.warn {
+		color: @dkt-warn;
+	}
+
+	.cl-container.leader-status-board.kt-target .cl-container.item {
+		.cl-progress.plan .cl-progress-bar {
+			background: @dkt-warn;
+		}
+
+		.cl-output.badge.away {
+			background-color: @dkt-warn-5;
+			color: @dkt-warn;
+		}
+	}
+
+	.kt-flow .step.warn {
+		border-color: fade(@dkt-warn, 30%);
+		background-color: @dkt-warn-5;
+
+		.cl-output.num,
+		.cl-output.lbl {
+			color: @dkt-warn;
+		}
+	}
+
+	.kt-stock .row.low {
+		.cl-output.qty {
+			color: @dkt-warn;
+		}
+
+		.cl-progress .cl-progress-bar {
+			background: @dkt-warn;
+		}
+	}
+}
+
+/* ==========================================================================
+ 레드 사용 줄이기 — 제목 글자·분류 칩·화살표·더보기 버튼은 무채색으로 둔다.
+ (탭 밑줄, 새 글 표시, 경고는 그대로 포인트색/레드)
+ ========================================================================== */
+@{dkt} {
+	.cl-output.tit-green {
+		color: @dkt-ink;
+	}
+
+	.cl-container.total-login-group {
+		.cl-button.btn-hashtag {
+			&:focus,
+			&.cl-focus,
+			&:not(.cl-disabled).cl-activated,
+			&:not(.cl-disabled):active {
+				background-color: @dkt-ink;
+			}
+		}
+
+		.cl-button.btn-hashtag-more {
+			background-color: @dkt-ink;
+		}
+	}
+
+	.cl-container.news-group {
+		.cl-tabfolder:not(.cl-mdifolder).line .cl-tabfolder-header .cl-tabfolder-item.cl-selected {
+			color: @dkt-ink;
+		}
+
+		.cl-container.news-list .cl-container.list .cl-output.category {
+			border: 1px solid #D0D0D0;
+			color: #555555;
+		}
+
+		.cl-button.btn-scroll-left,
+		.cl-button.btn-scroll-right {
+			background-color: @dkt-ink;
+
+			&:not(.cl-disabled):hover,
+			&:focus,
+			&.cl-focus,
+			&:not(.cl-disabled).cl-activated,
+			&:not(.cl-disabled):active {
+				background-color: @dkt-ink-soft;
+			}
+		}
+	}
+}
+
+[data-cl-mode="high-contrast"] @{dkt} {
+	.cl-output.tit-green {
+		color: #e1e1e1;
+	}
+
+	.cl-container.total-login-group .cl-button.btn-hashtag-more {
+		background-color: #4A525A;
+	}
+
+	.cl-container.news-group {
+		.cl-tabfolder:not(.cl-mdifolder).line .cl-tabfolder-header .cl-tabfolder-item.cl-selected {
+			color: #ffffff;
+		}
+
+		.cl-container.news-list .cl-container.list .cl-output.category {
+			border-color: fade(#ffffff, 24%);
+			color: #BDBDBD;
+		}
+
+		.cl-button.btn-scroll-left,
+		.cl-button.btn-scroll-right {
+			background-color: #4A525A;
+		}
+	}
+}
+
+/* ==========================================================================
+ 엔터프라이즈 톤 다듬기 — 카드는 흰 면 + 가는 테두리, 바탕은 옅은 회색(그림자 없음)
+ ========================================================================== */
+.dash.dash-kt {
+	background-color: #F6F7F9;
+}
+
+@{dkt} {
+	.cl-container.group {
+		border: 1px solid #DFE2E6;
+		border-radius: 6px;
+		background-color: #ffffff;
+	}
+
+	// 카드 안의 카드(이중 테두리)를 없앤다
+	.cl-container.leader-status-board.kt-target,
+	.kt-stock {
+		padding: 0;
+		border-radius: 0;
+		outline: none;
+		background-color: transparent;
+	}
+
+	.cl-output.tit-blue {
+		font-size: @cl-pc-font-size-label-xlarge;
+	}
+
+	.kt-flow .step {
+		border-radius: 4px;
+
+		// 완료는 검정 면 대신 옅은 면으로 낮추고 숫자만 강조한다
+		&.done {
+			border-color: #DFE2E6;
+			background-color: #F6F7F9;
+
+			.cl-output.num {
+				color: @dkt-ink;
+			}
+
+			.cl-output.lbl {
+				color: @dkt-muted;
+			}
+		}
+	}
+
+	.cl-container.user-card-group {
+		border: none;
+	}
+
+	.cl-container.news-group .cl-container.news-list .cl-container.list {
+		border-radius: 4px;
+	}
+}
+
+[data-cl-mode="high-contrast"] .dash.dash-kt {
+	background-color: transparent;
+}
+
+[data-cl-mode="high-contrast"] @{dkt} {
+	.cl-container.group {
+		border-color: fade(#ffffff, 10%);
+		background-color: #2A3037;
+	}
+
+	.cl-container.leader-status-board.kt-target,
+	.kt-stock {
+		background-color: transparent;
+	}
+
+	.kt-flow .step.done {
+		border-color: fade(#ffffff, 10%);
+		background-color: #363d44;
+
+		.cl-output.num {
+			color: #ffffff;
+		}
+
+		.cl-output.lbl {
+			color: #BDBDBD;
+		}
+	}
+}

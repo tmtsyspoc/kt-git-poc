@@ -1,0 +1,95 @@
+@import "../core/include.part.less";
+
+/**
+ * ============================================================================
+ * @file      progress.part.less
+ * @desc      CORE-UI 컨트롤 스타일 정의
+ * @rule
+ * 1. 독립성 유지
+ *  - 이 파일 내부에 선언된 변수는 외부에서 참조할 수 없음
+ * @contents  
+ * 1. Base (공통 스타일)
+ * 2. Variants (유형별 스타일)
+ * 3. Mode (테마 스타일)
+ * ============================================================================
+ */
+
+/* ==========================================================================
+   Component Tokens
+ ========================================================================== */
+
+/* 사이즈 변수 */
+@progress__radius: @cl-radius-xsmall3;
+@progress__pc-font-size: @cl-pc-font-size-label-xsmall;
+@progress__mobile-font-size: @cl-mobile-font-size-label-xsmall;
+
+/* 색상 변수 */
+@progress__color-surface: @cl-base-color-surface-gray-soft;
+@progress__color-surface--disabled: @cl-base-color-surface-gray-soft;
+@progress__color-border: @cl-base-color-border-transparency;
+@progress__color-border--disabled: @cl-base-color-border-transparency;
+@progress__color-text: @cl-base-color-text-inverse-static;
+@progress__color-text--disabled: @cl-base-color-text-inverse-static;
+@progress__bar-color-background: @cl-base-color-element-secondary;
+@progress__bar-color-background--disabled: @cl-base-color-element-gray;
+
+/* ==========================================================================
+    Local Mixins
+ ========================================================================== */
+
+
+
+/* ==========================================================================
+ 1. Base
+ ========================================================================== */
+
+.cl-progress {
+	background: @progress__color-surface;
+	border: 0; //1px solid @progress__color-border;
+	border-radius: @progress__radius;
+	font-size: @progress__pc-font-size;
+	font-weight: @cl-font-weight-medium;
+	color: @progress__color-text;
+	text-shadow: none;
+	.focus-reset();
+	
+	@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+		// 767까지
+		font-size: @progress__mobile-font-size;
+	}
+	
+	.cl-progress-bar {
+		background: @progress__bar-color-background;
+		border-radius: @progress__radius;
+		transition: @transition-base;
+	}
+	
+	.cl-text {
+		font: inherit;
+		color: inherit;
+		padding: @cl-padding-0;
+	}
+	
+	&.cl-disabled {
+		background: @progress__color-surface--disabled;
+		border-color: @progress__color-border--disabled;
+		color: @progress__color-text--disabled;
+		
+		.cl-progress-bar {
+			background: @progress__bar-color-background--disabled;
+		}
+	}
+}
+
+/* ==========================================================================
+ 2. Variants
+ ========================================================================== */
+
+
+
+/* ==========================================================================
+ 3. Mode
+ ========================================================================== */
+
+.color-mode(@mode: high-contrast) {
+}

@@ -1,0 +1,124 @@
+@import "../core/include.part.less";
+
+/************************************************
+ * 반응형 그리드 스타일
+ ************************************************/ 
+ 
+/************************************************
+ * dialogType
+ ************************************************/
+ 
+/************************************************
+ * accordionType
+ ************************************************/
+ .cl-container.table {
+	background-color: white;
+	border: 1px solid #d6d6d6;
+	border-top-color: #555555;
+	border-width: 1px 0px;
+	border-radius: 0px;
+	
+	.cl-formlayout-row-shade.table-header {
+		background-color: #F6FBFF;
+	}
+	
+	.cl-control.table-header-cell {
+		text-align: center;
+	}
+	
+	.cl-container.table-row {
+		border-top: 1px solid #eaeaea;
+		
+		.cl-text{
+			text-align: center;
+		}
+		.cl-control.table-cell {
+			
+		}
+		
+		.cl-button.btn-expander {
+			background-color: transparent;
+			border : none;
+			background-image : none;
+			
+			&:before {
+				content: "▶";
+				display: block;
+				position: absolute;
+				color: #333333;
+				left: calc(50% - 5px);
+			    top: calc(50% - 8px);
+			    width: 10px;
+			    height: 10px;
+			    text-align: center;
+			}
+		}
+		
+		&.selected {
+			background-color: #D9E3F2;
+		}
+	}
+	
+	.cl-container.table-accordion-row {
+		border-top: 1px solid #eaeaea;
+
+		.cl-output.title {
+			font-size: 16px;
+			font-weight: 600;
+		}
+			
+		.cl-output.label {
+			font-weight: 500;
+		}
+		
+		.cl-output:not(.label):not(.title) {
+			text-align: right;
+			color: #999999;
+		}
+	}
+	
+	.cl-formlayout-horizontal-separator,
+	.cl-formlayout-vertical-separator {
+		background-color: #eaeaea;
+	}
+}
+
+/************************************************
+ * list
+ ************************************************/
+ .cl-container.list-card {
+ 	
+ 	.cl-container.card {
+	 	border : 2px solid @cl-color-base-gray-30;
+	 	box-shadow: @cl-box-shadow-outline;
+	 	
+	 	.cl-formlayout-horizontal-separator {
+	 		background-color: #eaeaea;
+	 	}
+	 	.cl-output.card-label {
+	 	}
+	 	
+	 	.card-detail {
+	 	}
+ 	}
+ }
+ 
+/************************************************
+ * massiveList
+ ************************************************/
+ .cl-grid-row {
+	&.cl-grid-listType {
+		border-top: 1px solid #dddddd;
+		
+		.cl-grid-header {
+			border : none;
+			border-radius : 0px;
+			border-left : 1px solid #dddddd;
+			border-right : 1px solid #dddddd;
+			
+			.cl-text {
+				font-weight : @cl-font-weight-bold;
+			}
+		}
+	}
+}

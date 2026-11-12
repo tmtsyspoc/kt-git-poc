@@ -1,0 +1,160 @@
+@import "../core/include.part.less";
+
+/**
+ * ============================================================================
+ * @file      notifier.part.less
+ * @desc      CORE-UI 컨트롤 스타일 정의
+ * @rule
+ * 1. 독립성 유지
+ *  - 이 파일 내부에 선언된 변수는 외부에서 참조할 수 없음
+ * @contents  
+ * 1. Base (공통 스타일)
+ * 2. Variants (유형별 스타일)
+ * 3. Mode (테마 스타일)
+ * ============================================================================
+ */
+
+/* ==========================================================================
+   Component Tokens
+ ========================================================================== */
+
+/* 사이즈 변수 */
+@notifier__size-max-width: 846px;
+@notifier__padding: @cl-padding-1;
+@notifier__radius: @cl-radius-xsmall3;
+@notifier__gap: @cl-gap-2;
+@notifier__pc-font-size: @cl-pc-font-size-label-small;
+@notifier__mobile-font-size: @cl-mobile-font-size-label-small;
+@notifier__icon-gap: @cl-gap-2;
+@notifier__icon-size: @cl-icon--size-medium;
+
+/* 색상 변수 */
+@notifier__color-surface: @cl-base-color-alpha-basic100;
+@notifier__color-border: @cl-base-color-border-gray;
+@notifier__color-text: @cl-base-color-text-basic;
+
+/* ==========================================================================
+    Local Mixins
+ ========================================================================== */
+
+.notifier__color(@notifier-style) {
+	& when (@notifier-style = success) {
+		@notifier__color-surface: @cl-base-color-surface-success-softer;
+		@notifier__color-border: @cl-base-color-border-success-soft;
+		@notifier__color-text: @cl-base-color-text-success;
+	}
+	
+	& when (@notifier-style = information) {
+		@notifier__color-surface: @cl-base-color-surface-information-softer;
+		@notifier__color-border: @cl-base-color-border-information-soft;
+		@notifier__color-text: @cl-base-color-text-information;
+	}
+	
+	& when (@notifier-style = warning) {
+		@notifier__color-surface: @cl-base-color-surface-warning-softer;
+		@notifier__color-border: @cl-base-color-border-warning-soft;
+		@notifier__color-text: @cl-base-color-text-warning;
+	}
+	
+	& when (@notifier-style = danger) {
+		@notifier__color-surface: @cl-base-color-surface-danger-softer;
+		@notifier__color-border: @cl-base-color-border-danger-soft;
+		@notifier__color-text: @cl-base-color-text-danger;
+	}
+	
+	background-color: @notifier__color-surface;
+	border-color: @notifier__color-border;
+	color: @notifier__color-text;
+}
+
+/* ==========================================================================
+ 1. Base
+ ========================================================================== */
+
+.cl-notifier-item {
+	width: auto;
+//	max-width: @notifier__size-max-width;
+	border: 1px solid @notifier__color-border;
+	border-radius: @notifier__radius;
+	font-size: @notifier__pc-font-size;
+	font-weight: @cl-font-weight-medium;
+	
+	@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+		font-size: @notifier__mobile-font-size;
+	}
+	
+	&.cl-output {
+		border : 0px;
+	}
+	
+	.cl-notifier-icon {
+		.svg-icon(@cl-icon--size-small);
+		.icon-set(ico_info_circle_fill);
+	}
+	
+	.cl-text {
+		font: inherit;
+		padding: 0 0 0 @notifier__icon-gap;
+	}
+	
+	.cl-notifier-closebutton {
+		.icon-set(ico_delete);
+		
+		&:focus {
+			.focus-inside();
+		}
+	}
+	
+	&.cl-notifier-default {
+		color: @notifier__color-text;
+		
+		.cl-notifier-icon {
+		}
+	}
+}
+
+/* ==========================================================================
+ 2. Variants
+ ========================================================================== */
+
+/* --- 성공 메세지 --- */
+.cl-notifier-item.cl-notifier-success {
+	.notifier__color(success);
+	
+	.cl-notifier-icon {
+		//background-color: @notifier__color-text;
+	}
+}
+
+/* --- 정보 메세지 --- */
+.cl-notifier-item.cl-notifier-info {
+	.notifier__color(information);
+	
+	.cl-notifier-icon {
+		//background-color: @notifier__color-text;
+	}
+}
+
+/* --- 경고 메세지 --- */
+.cl-notifier-item.cl-notifier-warning {
+	.notifier__color(warning);
+	
+	.cl-notifier-icon {
+		//background-color: @notifier__color-text;
+	}
+}
+/* --- 오류 메세지 --- */
+.cl-notifier-item.cl-notifier-danger {
+	.notifier__color(danger);
+	
+	.cl-notifier-icon {
+		//background-color: @notifier__color-text;
+	}
+}
+
+/* ==========================================================================
+ 3. Mode
+ ========================================================================== */
+
+.color-mode(@mode: high-contrast) {
+}

@@ -1,0 +1,76 @@
+@import "../core/include.part.less";
+
+/**
+ * ============================================================================
+ * @file      tooltip.part.less
+ * @desc      CORE-UI 컨트롤 스타일 정의
+ * @rule
+ * 1. 독립성 유지
+ *  - 이 파일 내부에 선언된 변수는 외부에서 참조할 수 없음
+ * @contents  
+ * 1. Base (공통 스타일)
+ * 2. Variants (유형별 스타일)
+ * 3. Mode (테마 스타일)
+ * ============================================================================
+ */
+
+/* ==========================================================================
+   Component Tokens
+ ========================================================================== */
+
+/* 사이즈 변수 */
+@tooltip__popover-radius: @cl-radius-xsmall3;
+@tooltip__popover-padding-x: @cl-padding-3;
+@tooltip__popover-padding-y: @cl-padding-1;
+@tooltip__popover-contents-pc-font-size: @cl-pc-font-size-body-small;
+@tooltip__popover-contents-mobile-font-size: @cl-mobile-font-size-body-small;
+
+/* 색상 변수 */
+@tooltip__popover-color-shadow: 0 2px 4px 0 @cl-base-color-alpha-shadow2;
+@tooltip__popover-color-surface: @cl-base-color-surface-inverse;
+@tooltip__popover-color-border: @cl-base-color-border-gray;
+@tooltip__popover-color-text: @cl-base-color-text-inverse;
+
+/* ==========================================================================
+    Local Mixins
+ ========================================================================== */
+
+
+
+/* ==========================================================================
+ 1. Base
+ ========================================================================== */
+
+.cl-tooltip {
+	background: @tooltip__popover-color-surface;
+	border: 1px solid @tooltip__popover-color-border;
+	border-radius: @tooltip__popover-radius;
+	box-shadow: @tooltip__popover-color-shadow;
+	color: @tooltip__popover-color-text;
+	font-size: @tooltip__popover-contents-pc-font-size;
+	font-weight: @cl-font-weight-medium;
+	padding: @tooltip__popover-padding-y @tooltip__popover-padding-x;
+	
+	@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+		// 767까지
+		font-size: @tooltip__popover-contents-mobile-font-size;
+	}
+	
+	.cl-control {
+		font: inherit;
+		color: inherit;
+	}
+}
+
+/* ==========================================================================
+ 2. Variants
+ ========================================================================== */
+
+
+
+/* ==========================================================================
+ 3. Mode
+ ========================================================================== */
+
+.color-mode(@mode: high-contrast) {
+}

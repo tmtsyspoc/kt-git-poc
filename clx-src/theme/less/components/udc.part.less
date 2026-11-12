@@ -1,0 +1,747 @@
+@import "../core/include.part.less";
+@import "../../img/@phosphor-icons/web/src/ph-variables.part.less";
+
+/**
+ * ============================================================================
+ * @file      udc.part.less
+ * @desc      CORE-UI UDC 스타일 정의
+ * @rule
+ * 1. 독립성 유지
+ *  - 이 파일 내부에 선언된 변수는 외부에서 참조할 수 없음
+ * @contents  
+ * 1. Base (공통 스타일)
+ * 2. Variants (유형별 스타일)
+ * 3. Mode (테마 스타일)
+ * ============================================================================
+ */
+
+// udcComAppHeader
+.cl-container.page-tit-wrap {
+	.cl-output.tit {
+		font-size: @cl-pc-font-size-heading-xsmall + 2px;
+		font-weight: @cl-font-weight-bold;
+		// 제목 앞 점 3개 — 브랜드 컬러(블랙·포인트색·그레이). 포인트색은 KT 메인의 메인 색상(--kt-point)을 따르고, 없으면 KT 레드
+		background-image:
+			radial-gradient(circle at 10.3px 50%, var(--kt-point, #E4002B) 0, var(--kt-point, #E4002B) 2.8px, transparent 3.1px),
+			radial-gradient(circle at 5.6px 50%, #1A1A1A 0, #1A1A1A 2.8px, transparent 3.1px),
+			radial-gradient(circle at 18.4px 50%, #BDBDBD 0, #BDBDBD 2.8px, transparent 3.1px);
+		background-repeat: no-repeat;
+		background-position: 0 center;
+		background-size: 24px 24px;
+		
+		.cl-text {
+			padding-left: 28px;
+		}
+	}
+	
+	.cl-output.complete {
+		color: #02819d;
+		font-size: @cl-pc-font-size-body-small;
+		font-weight: @cl-font-weight-medium;
+	}
+	
+	.cl-checkbox.fav {
+		.cl-icon-wrapper {
+			padding-top : 0px;
+			.cl-checkbox-icon {
+				background-color: transparent;
+				border: 0;
+				border-radius: 0;
+				background-size: contain;
+				
+				&::before, &::after {
+					content: none;
+				}
+				
+				background-image: url("../../img/icons/ico_star.svg") !important;
+			}
+		}
+		
+		&.cl-checked {
+			.cl-checkbox-icon {
+				background-color: transparent;
+				background-image: url("../../img/icons/ico_star_fill.svg") !important;
+			}
+		}
+	}
+	.cl-button {
+		&.btn-pdf {
+			.cl-icon {
+				 background-image: url("../../img/pages/udc/ico_file_pdf.svg") !important;
+//				.ph-icon-set(@ph-file-pdf);
+				font-size : 18px;
+			}
+			
+			&:not(.cl-disabled):hover {
+				color : inherit;
+			}
+		}
+		
+		&.btn-clx {
+			.cl-icon {
+				background-image: url("../../img/pages/udc/ico_clx_copy.svg") !important;
+				background-size : auto;
+			}
+		}
+		
+		&.btn-scenario {
+			.cl-icon {
+				background-image: url("../../img/pages/udc/ico_scenario.svg") !important;
+				background-size : auto;
+			}
+		}
+	}
+}
+
+// udcComFormTitle, udcComGridTitle
+.cl-container.title-area {
+	.cl-output.tit {
+		font-size: @cl-pc-font-size-label-xlarge;
+		font-weight: @cl-font-weight-semibold;
+		// 섹션 제목 아이콘 — svg 를 마스크로 써서 칠한다. 화면마다 여러 번 나오므로 무채색으로 둔다
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 24px;
+			height: 24px;
+			transform: translateY(-50%);
+			background-color: #3D3D3D;
+			-webkit-mask: url("../../img/pages/udc/ico_conts_tit.svg") no-repeat center / contain;
+			mask: url("../../img/pages/udc/ico_conts_tit.svg") no-repeat center / contain;
+		}
+		
+		.cl-text {
+			padding-left: 26px;
+		}
+	}
+	
+	.cl-output.sub-tit {
+		font-size: @cl-pc-font-size-label-xlarge;
+		font-weight: @cl-font-weight-semibold;
+		
+		&::before {
+			content: "";
+			display: inline;
+			position: absolute;
+			width: 3px;
+			height: 20px;
+			top: 50%;
+			transform: translateY(-50%);
+			background-color: var(--kt-point, @cl-color-base-primary-50);
+		}
+		
+		.cl-text {
+			padding-left: 9px;
+		}
+	}
+	
+	.cl-output.table-row-count {
+		color: #666666;
+		font-size: @cl-pc-font-size-body-large;
+		
+		.key {
+			color: var(--kt-point, #E4002B);
+			font-weight: @cl-font-weight-medium;
+		}
+	}
+	
+	.cl-button.btn-setting,
+	.cl-button.btn-excel,
+	.cl-button.btn-pdf,
+	.cl-button.btn-pivot,
+	.cl-button.btn-eye,
+	.cl-button.btn-goto {
+		border-radius: @cl-radius-xsmall3;
+		padding: 0;
+		
+		.cl-text-wrapper {
+			gap: 0;
+			
+			.cl-icon {
+				background-color: initial;
+			}
+		}
+	}
+	
+	.cl-button.btn-setting {
+		.cl-icon {
+			background-image: url("../../img/pages/udc/ico_setting.svg") !important;
+		}
+	}
+	
+	.cl-button.btn-excel {
+		.cl-icon {
+			background-image: url("../../img/pages/udc/ico_excel.svg") !important;
+		}
+	}
+	
+	.cl-button.btn-pdf {
+		.cl-icon {
+			background-image: url("../../img/icons/ic_btn_pdf.svg") !important;
+		}
+	}
+
+	.cl-button.btn-pivot {
+		.cl-icon {
+			background-image: url("../../img/pages/udc/ico_pivot.svg") !important;
+		}
+	}
+
+	.cl-button.btn-eye {
+		.cl-icon {
+			background-image: url("../../img/pages/udc/ico_eye.svg") !important;
+			&.off {
+				background-image: url("../../img/pages/udc/ico_eye_closed.svg") !important;
+			}
+		}
+	}
+}
+
+.cl-button.btn-goto {
+	.cl-icon {
+		background-image: url("../../img/pages/udc/ico_popup.svg") !important;
+	}
+}
+	
+// udcComSearchToggle
+.cl-container.search-toggle {
+	.cl-button.tertiary {
+		.cl-icon {
+			transform: rotate(180deg);
+		}
+		
+		&.expand {
+			.cl-icon {
+				transform: rotate(0deg);
+			}
+		}
+	}
+}
+
+// udcComBreadCrumb
+.cl-container.bread-crumb {
+	.cl-container.page {
+		> .cl-layout > .cl-layout-content > .cl-layout-wrap {
+			&.cl-last {
+				font-weight: @cl-font-weight-semibold;
+			}
+		}
+		
+		.cl-output {
+			&::before {
+				content: "";
+				display: inline;
+				position: absolute;
+				width: 14px;
+				height: 14px;
+				background-image: url("../../img/icons/ico_right.svg");
+				background-size: contain;
+				background-repeat: no-repeat;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			
+			.cl-text {
+				padding-left: 28px;
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+ Mode
+ ========================================================================== */
+.color-mode(@mode: high-contrast) {
+
+	// udcComFormTitle, udcComGridTitle — 어두운 배경에서는 아이콘을 밝게
+	.cl-container.title-area .cl-output.tit::before {
+		background-color: #BDBDBD;
+	}
+
+	
+	// udcComAppHeader
+	.cl-container.page-tit-wrap {
+		// 어두운 배경에서는 블랙 점이 보이지 않아 밝은 회색으로 바꾼다
+		.cl-output.tit {
+			background-image:
+				radial-gradient(circle at 10.3px 50%, var(--kt-point, #E4002B) 0, var(--kt-point, #E4002B) 2.8px, transparent 3.1px),
+				radial-gradient(circle at 5.6px 50%, #E1E1E1 0, #E1E1E1 2.8px, transparent 3.1px),
+				radial-gradient(circle at 18.4px 50%, #767676 0, #767676 2.8px, transparent 3.1px);
+		}
+
+		.cl-checkbox.fav {
+			.cl-checkbox-icon {
+				&::before, &::after {
+					content: none;
+				}
+
+				background-image: url("../../img/icons/ico_star_dark.svg") !important;
+			}
+		}
+	}
+}
+
+/************************************************
+ * [UDC] 패널
+ * → 
+ ************************************************/
+
+.cl-container.scenario-panel {
+	background-color : @cl-color-base-alpha-white100;
+	.text-red {
+		color : #F51919;
+	}
+	
+	.text-blue {
+		color : @cl-color-base-primary-50;
+	}
+	
+	.fw-bold {
+		font-weight : @cl-font-weight-bold;
+	}
+	
+	&.fill-container {
+		border-left: @cl-base-border-width-variable-regular @cl-base-color-border-gray solid;
+		
+		.cl-container.flt-right-process {
+			border: 0;
+			//border-bottom: 1px solid @component-border-color;
+		}
+	}
+	
+	.cl-container.flt-right-process {
+		border-left: @cl-base-border-width-variable-regular @cl-base-color-border-gray solid;
+		
+		.cl-container {
+			//background-color: @white;
+		}
+		
+		.cl-output.title {
+			font-size: 16px;
+			font-weight: @cl-font-weight-semibold;
+		}
+		
+		.cl-grid {
+			border: 0;
+			background-color: transparent;	
+		
+			.cl-grid-detail {
+				border: none;
+			}
+			
+			.cl-grid-cell {
+				border: 0;
+				
+				.cl-control {
+					text-align: left;
+
+					&.cl-output {
+						padding: 0;
+						
+						.cl-text {
+							padding: 4px 0;
+						}
+					}
+				}
+				
+				&.symbol {
+					.cl-default-cell {
+						padding-right: 4px;
+						text-align: right;
+					}
+				}
+			}
+			
+			.cl-rowgroup-header {
+				~ .cl-rowgroup-header {
+					.title {
+						//border-top: 1px solid #8a949e;
+					}
+				}
+				
+				~ .cl-grid-row:not(.cl-rowgroup-header) {
+					//background-color: @gray-5;
+				}
+				
+				.cl-grid-cell {
+				}
+
+				.title {
+					background-color: @cl-color-base-primary-50;
+					background-image: url("../../img/icons/ico_arrow_down_w.svg");
+					background-repeat: no-repeat;
+					background-position: calc(100% - 4px) center;
+					border-bottom: 2px solid white;
+					font-size: 16px;
+					font-weight: @cl-font-weight-semibold;
+					padding: 0 8px;
+					text-align: left;
+					
+					.cl-text {
+						color: white;
+					}
+				}
+				
+				.sub-title {
+					font-size: 14px;
+					font-weight: @cl-font-weight-medium;
+					text-align: left;
+					
+					.cl-text {
+						&::before {
+							content: "";
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 4px;
+							height: 4px;
+							background-color: black;
+							border-radius: @cl-radius-max;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/************************************************
+ * [UDC] 로드 마스크
+ * → 
+ ************************************************/
+
+.loader-overlay {
+	//background-color: @modal-overlay-background-color;
+	
+	.cl-container.loader-box {
+		.cl-container.in {
+			.cl-output.table-row-count {
+				background-color: #c6c6c6;
+				font-weight: @cl-font-weight-semibold;
+				font-size: @cl-number-10;
+			}
+			.cl-output.txt {
+				color: @cl-color-base-gray-60;
+				font-size: @cl-number-10;
+				font-weight: @cl-font-weight-semibold;
+				text-align: center;
+			}
+		}
+	}
+}
+
+
+/************************************************
+ * [UDC] 피벗 그리드
+ * --> udc/exam/udcExamPivotGrid
+ * --> udc/poc/udcPocPivotGrid
+ ************************************************/
+ 
+.cl-container.cl-container.pivot-panel {
+	.cl-container.pivot-helper-header {
+		border: 1px solid @cl-color-base-gray-30;
+		padding: 0 4px;
+
+		.cl-button {
+			background-repeat: no-repeat;
+			background-color : transparent;
+			border : none;
+						
+			&.btn-reset {
+				background-image: url("../../img/pages/udc/pivot/ico_reset_20.svg");
+			}
+			
+			&.btn-run {
+				background-image: url("../../img/pages/udc/pivot/ico_pivot_play.svg");
+			}
+			
+			&.btn-toggle {
+				background-position: center;
+				&.expand {
+					background-image: url("../../img/pages/udc/pivot/ico_arr_down_20.svg");
+					transform: rotate(-180deg);
+				}
+				
+				&.collapse {
+					background-image: url("../../img/pages/udc/pivot/ico_arr_down_20.svg");
+				}
+			}
+		}
+		
+		.cl-checkbox.sum {
+			font-weight: @cl-font-weight-medium;
+			
+			.cl-checkbox-icon {
+				width: 16px;
+				height: 16px;
+				min-height: 16px;
+			}
+			
+			.cl-text {
+				padding: 0 0 0 4px;
+			}
+		}
+		
+		.cl-checkbox.auto-update {
+			.cl-checkbox-icon {
+				background-image: url("../../img/pages/udc/pivot/ico_auto.svg");
+			}
+			
+			.cl-text {
+				padding: 0;
+			}
+			
+			&.cl-checked {
+				.cl-checkbox-icon {
+					background-image: url("../../img/pages/udc/pivot/ico_auto_selected.svg");
+				}
+			}
+		}
+	}
+	
+	.cl-container.pivot-helper-body {
+		border: 1px solid @cl-color-base-gray-30;
+		border-top: 0;
+		
+		.cl-output.label {
+			background-color: fade(@cl-color-base-secondary-10, 50%);
+			border-bottom: 1px solid @cl-color-base-gray-30;
+			font-weight: @cl-font-weight-semibold;
+			padding: 0 16px;
+		}
+		
+		.cl-container.field-content {
+			.cl-button.field {
+				background-position: 12px center;
+				background-size: 24px;
+				border-color: @cl-color-base-gray-30;
+				font-weight: @cl-font-weight-medium;
+				text-align: left;
+				background-repeat: no-repeat;
+				
+				.cl-text {
+					text-overflow: ellipsis;
+					overflow: hidden;
+				}
+				
+				/* 전체 필드 스타일 */
+				&.list {
+				}
+				
+				/* 컬럼과 로우 필드 스타일 */
+				&.column, &.row {
+					padding-left: 12px + 20 + 6;
+					
+					/* 필드 오름차순 스타일 */
+					&.asc {
+						background-image: url("../../img/pages/udc/pivot/ico_sort_asc.svg");
+					}
+					
+					/* 필드 내림차순 스타일 */
+					&.desc {
+						background-image: url("../../img/pages/udc/pivot/ico_sort_desc.svg");
+					}
+				}
+				
+				/* 값 필드 스타일 */
+				&.value {
+					padding-left: 12px + 20 + 6;
+
+					/* 값 필드 합계 상태 스타일 */
+					&.sum {
+						background-image: url("../../img/pages/udc/pivot/pivot_sum.svg");
+					}
+					
+					/* 값 필드 평균 상태 스타일 */
+					&.avg {
+						background-image: url("../../img/pages/udc/pivot/pivot_avg.svg");
+					}
+					
+					/* 값 필드 개수 상태 스타일 */
+					&.count {
+						background-image: url("../../img/pages/udc/pivot/pivot_cnt.svg");
+					}
+					
+					/* 값 필드 최솟값 상태 스타일 */
+					&.min {
+						background-image: url("../../img/pages/udc/pivot/pivot_min.svg");
+					}
+					
+					/* 값 필드 최댓값 상태 스타일 */
+					&.max {
+						background-image: url("../../img/pages/udc/pivot/pivot_max.svg");
+					}
+				}
+			}
+		}
+	}
+}
+
+.cl-container.dash-item {
+	background-color : white;
+	border : 1px solid @cl-color-base-gray-30;
+	border-radius : 4px;
+	
+	.cl-output.title {
+		font-size : 12px;
+		font-weight : @cl-font-weight-semibold;
+	}
+	
+	.cl-output.dash-value {
+		font-weight : @cl-font-weight-bold;
+		font-size : 20px;
+	}
+}
+
+.color-mode(@mode: high-contrast) {
+	.cl-container.dash-item {
+		background-color : transparent;
+	}
+}
+
+/************************************************
+ * [UDC] 워크플로우
+ ************************************************/
+.cl-container.workflow {
+	.cl-button {
+		border: 1px solid @cl-color-base-gray-50;
+		
+		&.active {
+			background-color: @cl-color-base-gray-20;
+			color: @cl-color-base-gray-95;
+			font-weight: @cl-font-weight-bold;
+			border: 1px solid @cl-base-color-button-primary-border;
+		}
+	}
+}
+
+.cl-container.workflow-group {
+	.cl-container.workflow-unit {
+		.cl-button.shape {
+			background-color: transparent;
+			color: @cl-base-color-text-basic;
+			
+			&.cl-focus {
+				outline: none;
+			}
+			position: relative;
+			display: inline-flex;
+			align-items: center;
+			height: 40px;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			/* 배경 이미지가 버튼 크기에 꽉 차게 */             
+			border: none;
+			
+			.cl-text {
+				flex-grow: 1;
+				text-align: center;
+			}
+			
+			/* 원형 */
+			&.circle {
+				padding: 0 16px;
+				background-image: url('../../img/pages/udc/circle.svg');
+				
+				&:not(.cl-disabled):active,
+				&:not(.cl-disabled):focus,
+				&:not(.cl-disabled):hover {
+					background-color: transparent;
+				}
+				
+				&.disabled {
+					&:not(.cl-disabled):hover {
+						background-color: transparent;
+					}
+					background-image: url('../../img/pages/udc/circle_disabled.svg');
+					color: @cl-base-color-text-disabled;
+				}
+				
+				&.active {
+					font-weight: @cl-font-weight-semibold;
+					color: @cl-base-color-text-basic;
+					background-image: url('../../img/pages/udc/circle_active.svg');
+				}
+			}
+			
+			/* 네모 */
+			&.rectangle {
+				background-image: url('../../img/pages/udc/rectangle.svg');
+				
+				&:not(.cl-disabled):active,
+				&:not(.cl-disabled):focus,
+				&:not(.cl-disabled):hover {
+					background-color: transparent;
+				}
+				
+				&.disabled {
+					&:not(.cl-disabled):hover {
+						background-color: transparent;
+					}
+					background-image: url('../../img/pages/udc/rectangle_disabled.svg');
+					color: @cl-base-color-text-disabled;
+				}
+				
+				&.active {
+					font-weight: @cl-font-weight-semibold;
+					color: @cl-base-color-text-basic;
+					background-image: url('../../img/pages/udc/rectangle_active.svg');
+				}
+			}
+			
+			/* 다이아몬드 */
+			&.diamond {
+				padding: 0 40px;
+				background-image: url('../../img/pages/udc/diamond.svg');
+				
+				&:not(.cl-disabled):active,
+				&:not(.cl-disabled):focus,
+				&:not(.cl-disabled):hover {
+					background-color: transparent;
+				}
+				
+				&.disabled {
+					&:not(.cl-disabled):hover {
+						background-color: transparent;
+					}
+					background-image: url('../../img/pages/udc/diamond_disabled.svg');
+					color: @cl-base-color-text-disabled;
+				}
+				
+				&.active {
+					font-weight: @cl-font-weight-semibold;
+					color: @cl-base-color-text-basic;
+					background-image: url('../../img/pages/udc/diamond_active.svg');
+				}
+			}
+			
+			/* 육각형 */
+			&.hexagon {
+				padding: 0 24px;
+				background-image: url('../../img/pages/udc/hexagon.svg');
+				
+				&:not(.cl-disabled):active,
+				&:not(.cl-disabled):focus,
+				&:not(.cl-disabled):hover {
+					background-color: transparent;
+				}
+				
+				&.disabled {
+					&:not(.cl-disabled):hover {
+						background-color: transparent;
+					}
+					background-image: url('../../img/pages/udc/hexagon_disabled.svg');
+					color: @cl-base-color-text-disabled;
+				}
+				
+				&.active {
+					font-weight: @cl-font-weight-semibold;
+					color: @cl-base-color-text-basic;
+					background-image: url('../../img/pages/udc/hexagon_active.svg');
+				}
+			}
+		}
+	}
+}

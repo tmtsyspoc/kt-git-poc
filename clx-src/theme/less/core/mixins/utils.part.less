@@ -1,0 +1,430 @@
+@import "../variables/variables.part.less";
+
+/**
+ * ============================================================================
+ * @file      utils.part.less
+ * @desc      CORE-UI 믹스인 및 공통 유틸리티 함수 정의
+ * @rule
+ * 1. 클래스 출력 방지
+ *  - 모든 믹스인은 반드시 이름 뒤에 괄호 '()'를 붙여 선언
+ *    → 괄호가 없으면 불필요한 CSS 클래스로 컴파일됨
+ * 2. 선택자 생성 지양
+ *  - 믹스인 내부에서 새로운 선택자 생성 최소화
+ *  - 순수한 CSS 속성 묶음만 반환하도록 설계
+ * 3. 레이아웃 관련 믹스인 사용 주의
+ *  - 레이아웃 시스템에 영향을 줄 수 있는 퍼블리싱 포인트에는 사용 지양
+ * ============================================================================
+ */
+ 
+/* --- 포커스 --- */
+.focus(@color: @cl-focus-ring) {
+	outline: 2px solid @cl-base-color-border-inverse;
+	outline-offset: 0;
+	box-shadow: 0 0 0 4px @cl-focus-ring;
+}
+
+.focus-outside(@offset: 2px) {
+	outline: 2px solid @cl-focus-ring;
+	outline-offset: @offset;
+	box-shadow: none;
+}
+
+.focus-inside(@offset: -4px) {
+	outline-offset: @offset;
+	box-shadow: @cl-box-shadow-outline-inset;
+}
+
+.focus-reset() {
+	box-shadow: none;
+	outline: none;
+}
+
+/* --- 포지션 --- */
+.position(@p: absolute, @t: ~"", @r: ~"", @b: ~"", @l: ~"") {
+	position: @p;
+	& when not (@t = ~"") {
+		top: @t;
+	}
+	& when not (@r = ~"") {
+		right: @r;
+	}
+	& when not (@b = ~"") {
+		bottom: @b;
+	}
+	& when not (@l = ~"") {
+		left: @l;
+	}
+}
+
+.position-center(@type: both) {
+	position: absolute;
+	& when (@type = x) {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	& when (@type = y) {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	& when (@type = both) {
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+}
+
+/* --- 정사각형 --- */
+.square(@size) {
+	@w: @size;
+	@h: @w;
+	width: @w;
+	height: @h;
+}
+
+/* --- 삼각형 --- */
+.triangle(@d: top, @size: 6px, @color: @cl-base-color-surface-white) {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	
+	& when (@d = top) {
+		border-width: 0 @size @size @size;
+		border-color: transparent transparent @color transparent;
+	}
+	
+	& when (@d = bottom) {
+		border-width: @size @size 0 @size;
+		border-color: @color transparent transparent transparent;
+	}
+	
+	& when (@d = left) {
+		border-width: @size @size @size 0;
+		border-color: transparent @color transparent transparent;
+	}
+	
+	& when (@d = right) {
+		border-width: @size 0 @size @size;
+		border-color: transparent transparent transparent @color;
+	}
+}
+
+/* --- 가상요소 --- */
+.pseudo(@c: "") {
+	content: @c;
+}
+
+/* --- 플렉스 레이아웃 --- */
+.flex-layout(@d: flex, @ai: flex-start, @jc: flex-start, @fd: row) {
+	display: @d;
+	align-items: @ai;
+	justify-content: @jc;
+	flex-direction: @fd;
+}
+
+/* --- 플렉스 확대 축소 --- */
+.flex-size(@shrink: 0, @grow: 0) {
+	flex-shrink: @shrink;
+	flex-grow: @grow;
+}
+
+/* --- 그룹 콘텐츠 --- */
+.group-wrap() {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	position: relative;
+	width: 100%;
+}
+
+.group() {
+	flex: 1 1 auto;
+	position: relative;
+	width: 1%;
+	min-width: 0;
+}
+
+/* --- 균등 너비 --- */
+.eual-width() {
+	flex: 1 1 0px;
+	min-width: 0;
+}
+
+/* --- 트랜스폼 기준점 중앙 정렬 --- */
+.transform-origin(@x: 50%, @y: 50%) {
+	transform-origin: @x @y;
+}
+
+/* --- 비율 유지 박스 --- */
+.aspect-ratio-box(@w, @h) {
+	position: relative;
+	width: 100%;
+	padding-top: (@h / @w) * 100%;
+	
+	> * {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+/* --- 글래스모피즘 --- */
+.backdrop-blur(@blur: 8px, @color: @cl-color-base-gray-0, @alpha: .5) {
+	background-color: @color;
+	backgdrop-filter: blur(@blur);
+	-webkit-backdrop-filter: blue(@blur);
+}
+
+/* --- 텍스트 말줄임 --- */
+.ellipsis(@line) {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.ellipsis-lines(@line: 2) {
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: @line;
+}
+
+/* --- 스크린 리더 전용 읽기 --- */
+
+// (=.cl-sound-only)
+.sound-only() {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	clip: rect(0, 0, 0, 0) !important;
+	white-space: nowrap !important;
+	border: 0 !important;
+}
+
+/* --- 텍스트 초기화 --- */
+.reset-text() {
+	font-size: @cl-pc-font-size-body-medium;
+	font-style: normal;
+	font-weight: @cl-font-weight-regular;
+	line-height: @cl-line-height-base;
+	text-align: left;
+	text-decoration: none;
+	text-shadow: none;
+	text-transform: none;
+	letter-spacing: normal;
+	//word-break: normal;
+	white-space: normal;
+	word-spacing: normal;
+	line-break: auto;
+	
+	@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+		// 767까지
+		font-size: @cl-mobile-font-size-body-medium;
+	}
+}
+
+/* --- CSS 애니메이션 --- */
+.visibility(@v) {
+	& when (@v = hidden) {
+		visibility: hidden;
+		z-index: -1;
+		opacity: 0;
+	}
+	& when (@v = visible) {
+		visibility: visible;
+		z-index: auto;
+		opacity: 1;
+	}
+}
+
+/* --- 스크롤 --- */
+.scrollbar(@mode: light) {
+	@mode-setting: @mode;
+	
+	&::-webkit-scrollbar {
+		width: .8rem;
+	}
+	
+	.scrollbar-mode(@mode-setting);
+}
+
+.scrollbar-hide() {
+	// 스크롤바 숨김 - 스크롤 기능은 유지
+	-ms-overflow-style: none;	/* IE, Edge */
+	scrollbar-width: none;		/* Firefox */
+	
+	&::-webkit-scrollbar {
+		display: none;			/* Chrome, Safari, Opera */
+	}
+}
+
+/* --- 텍스트 밑줄 --- */
+.text-underline(@offset: @cl-font-underline-offset) {
+	text-decoration: underline;
+	text-underline-offset: @offset;
+}
+
+/* --- 아이콘 처리 --- */
+
+//// SVG 이미지 영역
+.svg-icon(@size: @cl-icon--size-small, @mode: base, @effect: ~"") {
+	display: inline-flex;
+	.square(@size);
+	
+	& when (@mode = base) {
+		background-color: @cl-base-color-text-basic;
+	}
+	
+	& when (@mode = high-contrast) {
+		background-color: @cl-high-contrast-color-text-basic;
+	}
+	
+	& when (@effect = pure) {
+		background-color: transparent !important;
+	}
+	forced-color-adjust: none;
+}
+
+// 버튼 내 SVG 아이콘 세팅
+.icon-set(@name, @effect: ~"") {
+	& when not (@effect = pure) {
+		//mask 효과 없이 디자인된 svg 그대로 사용
+		background-image: none !important;
+		-webkit-mask-repeat: no-repeat;
+		-webkit-mask-position: center center;
+		-webkit-mask-size: contain;
+		mask-repeat: no-repeat;
+		mask-position: center center;
+		mask-size: contain;
+		-webkit-mask-image: url("../../../img/icons/@{name}.svg");
+		mask-image: url("../../../img/icons/@{name}.svg");
+	}
+	
+	& when (@effect = pure) {
+		//mask 효과 없이 디자인된 svg 그대로 사용
+		-webkit-mask-image: none;
+		mask-image: none;
+		background-image: url("../../../img/icons/@{name}.svg");
+		background-color: transparent;
+		background-size: contain;
+		background-repeat: no-repeat;
+		-webkit-mask: none;
+		mask: none;
+	}
+}
+
+
+//// SVG 이미지 영역
+//.svg-icon(@size: @cl-icon--size-small) {
+//	display: inline-flex;
+//	.square(@size);
+//}
+//
+//// SVG 아이콘 세팅
+//.icon-set(@name) {
+//	// 디자인된 svg 그대로 사용
+//	background-image: url("../../../img/icons/@{name}.svg") !important;
+//	background-size: contain;
+//	background-repeat: no-repeat;
+//}
+
+/* --- @phosphor-icons 전용 설정 --- */
+.ph-icon(@size: @cl-icon--size-small, @style: regular) {
+	// 인자로 받은 스타일에 따라 font-family를 다르게 적용합니다.
+	& when (@style = regular) {
+		font-family: "Phosphor" !important;
+	}
+	& when (@style = fill) {
+		font-family: "Phosphor-Fill" !important;
+	}
+	& when (@style = duotone) {
+		font-family: "Phosphor-Duotone" !important;
+	}
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-size: @size;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	
+	&::before, &::after {
+		.flex-layout(@jc: center, @ai: center);
+		.square(100%);
+		font: inherit;
+	}
+	
+	& when not (@style = duotone) {
+		&::before {
+			content: "";
+		}
+	}
+	
+	& when (@style = duotone) {
+		&::before {
+			content: "";
+			opacity: 0.2;
+		}
+		
+		&::after {
+			content: "";
+			margin-left: -1em;
+		}
+	}
+}
+
+.ph-icon-set(@name, @name2: ~"") {
+	&::before {
+		content: @name;
+	}
+	
+	& when not (@name2 = ~"") {
+		&::after {
+			content: @name2;
+		}
+	}
+}
+
+/* --- 고대비 모드 --- */
+//.color-mode(@mode: light) {
+//}
+
+/* --- 버튼 사이즈별 처리 --- */
+//.btn-size(@unit) {
+//	gap: var(~"--xb-button--gap-@{unit}");
+//	height: var(~"--xb-button--size-height-@{unit}");
+//	padding: var(~"--xb-button--padding-y-@{unit}") var(~"--xb-button--padding-x-@{unit}");
+//	border-radius: var(~"xb-button--radius-@{unit}");
+//	font-size: var(~"--xb-button--pc-font-size-@{unit}");
+//	font-weight: var(~"xb-button--font-weight-@{unit}");
+//	
+//	.cl-icon, .icon {
+//		.square(var(~"--xb-icon--size-@{unit}"));
+//	}
+//}
+
+/* --- 고대비 모드인 경우 border-width 가 두꺼워짐 --- */
+.border-size-mode(@mode: base, @size: regular) {
+	& when (@mode = base) and (@size = regular) {
+		border-width: @cl-base-border-width-variable-regular;
+	}
+	
+	& when (@mode = base) and (@size = medium) {
+		border-width: @cl-base-border-width-variable-medium;
+	}
+	
+	& when (@mode = high-contrast) and (@size = regular) {
+//		border-width: @cl-high-contrast-border-width-variable-regular;
+	}
+	
+	& when (@mode = high-contrast) and (@size = medium) {
+//		border-width: @cl-high-contrast-border-width-variable-medium;
+	}
+}

@@ -1,0 +1,323 @@
+@import "../core/include.part.less";
+
+/**
+ * ============================================================================
+ * @file      file-upload.part.less
+ * @desc      CORE-UI 컨트롤 스타일 정의
+ * @rule
+ * 1. 독립성 유지
+ *  - 이 파일 내부에 선언된 변수는 외부에서 참조할 수 없음
+ * @contents  
+ * 1. Base (공통 스타일)
+ * 2. Variants (유형별 스타일)
+ * 3. Mode (테마 스타일)
+ * ============================================================================
+ */
+
+/* ==========================================================================
+   Component Tokens
+ ========================================================================== */
+
+/* 사이즈 변수 */
+@file-upload__gap: @cl-gap-2;
+@file-upload__pc-font-size: @cl-pc-font-size-label-small;
+@file-upload__mobile-font-size: @cl-mobile-font-size-label-small;
+
+@file-upload__head-size-height: @cl-size-height-7;
+@file-upload__head-pc-font-size: @cl-pc-font-size-label-small;
+@file-upload__head-mobile-font-size: @cl-mobile-font-size-label-small;
+
+@file-upload__list-padding: @cl-padding-0;
+
+@file-upload__file-radius: @cl-radius-xsmall3;
+@file-upload__file-size-height: @cl-size-height-7 - 1;
+@file-upload__file-padding: @cl-padding-2;
+
+@file-upload__foot-gap: @cl-gap-2;
+@file-upload__foot-padding: @cl-padding-2;
+@file-upload__foot-size-height: @cl-size-height-7;
+@file-upload__foot-pc-font-size: @cl-pc-font-size-label-xsmall;
+@file-upload__foot-mobile-font-size: @cl-mobile-font-size-label-xsmall;
+
+/* 색상 변수 */
+@file-upload__color-border: @cl-base-color-border-gray-softer;
+@file-upload__color-text: @cl-base-color-text-basic;
+
+@file-upload__head-color-surface: @cl-base-color-surface-gray-softer;
+@file-upload__head-color-text: @cl-base-color-text-bold;
+
+@file-upload__file-color-surface: @cl-base-color-alpha-basic0;
+@file-upload__file-color-surface--hover: @cl-base-color-action-secondary-hover;
+@file-upload__file-color-border: @cl-base-color-border-gray-softer;
+
+@file-upload__foot-color-surface: @cl-base-color-alpha-basic0;
+@file-upload__foot-color-text: @cl-base-color-text-bold;
+
+/* ==========================================================================
+    Local Mixins
+ ========================================================================== */
+
+
+
+/* ==========================================================================
+ 1. Base
+ ========================================================================== */
+
+.cl-fileupload {
+	border: 1px solid @file-upload__color-border;
+	color: @file-upload__color-text;
+	font-size: @file-upload__pc-font-size;
+	
+	@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+		font-size: @file-upload__mobile-font-size;
+	}
+	
+	.cl-fileupload-checkbox {
+		background-position : center;
+		.selection__check-button();
+		
+		// selection.part.less 에 정의됨
+		&:focus {
+			.focus-reset();
+		}
+		
+		&.cl-checked,
+        &:focus.cl-checked   { .selection__check-selected(); }
+	}
+	
+	.cl-fileupload-header .cl-fileupload-checkheader,
+	.cl-fileupload-detail .cl-fileupload-file .cl-fileupload-checkcolumn,
+	.cl-fileupload-detail .cl-fileupload-uploadedfile .cl-fileupload-checkcolumn {
+		width: 30px; // 체크박스 컬럼 크기
+		height: 100%;
+	}
+	
+	.cl-fileupload-header .cl-fileupload-sizeheader,
+	.cl-fileupload-detail .cl-fileupload-file .cl-fileupload-sizecolumn,
+	.cl-fileupload-detail .cl-fileupload-uploadedfile .cl-fileupload-sizecolumn {
+		min-width: 80px; // 파일크기 컬럼 크기
+		height: 100%;
+	}
+	
+	.cl-fileupload-header {
+		height: @file-upload__head-size-height;
+		background: @file-upload__head-color-surface;
+		border-bottom: 1px solid @file-upload__file-color-border;
+		color: @file-upload__head-color-text;
+		font-size: @file-upload__head-pc-font-size;
+		font-weight: @cl-font-weight-medium;
+		
+		@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+			font-size: @file-upload__head-mobile-font-size;
+		}
+		
+		.cl-fileupload-checkheader,
+		.cl-fileupload-nameheader,
+		.cl-fileupload-sizeheader {
+			font: inherit;
+			border: 0;
+			color: inherit;
+		}
+		
+		.cl-fileupload-nameheader,
+		.cl-fileupload-sizeheader {
+			border-left: 1px solid @file-upload__file-color-border;
+		}
+	}
+	
+	.cl-fileupload-detail {
+		.cl-emptymsg {
+			color: @cl-base-color-text-disabled;
+			vertical-align: middle;
+		}
+		
+		.cl-fileupload-file,
+		.cl-fileupload-uploadedfile {
+			align-items: center;
+			height: @file-upload__file-size-height;
+			border-bottom: 1px solid @file-upload__file-color-border;
+			
+			.cl-fileupload-checkcolumn,
+			.cl-fileupload-sizecolumn {
+				border: 0;
+			}
+			
+			.cl-fileupload-fileicon {
+				width: @cl-icon--size-small + (@file-upload__file-padding * 2);
+				height: 100%;
+				.icon-set(ico_file, pure);
+				background-size: @cl-icon--size-small !important;
+			}
+			
+			.cl-fileupload-fileicon,
+			.cl-fileupload-sizecolumn {
+				border-left: 1px solid @file-upload__file-color-border; // 줄 형태 스타일인 경우
+				padding: 0 @file-upload__file-padding;
+			}
+		}
+		
+		.cl-fileupload-uploadedfile {
+			.cl-fileupload-download {
+				.square(@cl-icon--size-small);
+				.icon-set(ico_download, pure);
+				margin-right: @cl-gap-2;
+				
+				&:hover {
+				}
+			}
+		}
+	}
+	
+	.cl-fileupload-footer {
+		height: @file-upload__foot-size-height;
+		background: @file-upload__foot-color-surface;
+		border-top: 1px solid @file-upload__file-color-border;
+		color: @file-upload__foot-color-text;
+		font-size: @file-upload__foot-pc-font-size;
+		font-weight: @cl-font-weight-regular;
+		padding: 0 @file-upload__foot-padding;
+		
+		.cl-text {
+			font: inherit;
+			color: inherit;
+			padding: 0;
+			
+			.point {
+				color: @cl-base-color-text-point;
+				font-weight: @cl-font-weight-medium;
+			}
+		}
+		
+		.cl-fileupload-buttons {
+			.flex-layout(@d: inline-flex, @jc: center, @ai: center);
+			gap: @file-upload__foot-gap;
+			padding: 0;
+			overflow: visible;
+			
+			.cl-fileupload-button {
+				background-image: none;
+				margin: 0;
+			}
+			
+			.cl-fileupload-button.cl-fileupload-add {
+				// button.part.less 에 정의됨
+			}
+			
+			.cl-fileupload-button.cl-fileupload-remove {
+				// button.part.less 에 정의됨
+			}
+			
+			.cl-fileupload-button.cl-fileupload-send {
+				// button.part.less 에 정의됨
+			}
+		}
+	}
+	
+	&:not(.cl-disabled) {
+		.cl-fileupload-file,
+		.cl-fileupload-uploadedfile {
+			&:hover {
+				background-color: @file-upload__file-color-surface--hover;
+			}
+		}
+	}
+}
+
+/* --- 파일 확장자별 아이콘 스타일 --- */
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-file .cl-fileupload-fileicon.cl-filetype-mp3,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-uploadedfile .cl-fileupload-fileicon.cl-filetype-mp3,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-file .cl-fileupload-fileicon.cl-filetype-wav,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-uploadedfile .cl-fileupload-fileicon.cl-filetype-wav,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-file .cl-fileupload-fileicon.cl-filetype-flac,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-uploadedfile .cl-fileupload-fileicon.cl-filetype-flac,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-file .cl-fileupload-fileicon.cl-filetype-midi,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-uploadedfile .cl-fileupload-fileicon.cl-filetype-midi {
+	// 미디어
+	.icon-set(ico_file_audio, pure);
+}
+
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-file .cl-fileupload-fileicon.cl-filetype-mkv,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-uploadedfile .cl-fileupload-fileicon.cl-filetype-mkv,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-file .cl-fileupload-fileicon.cl-filetype-mp4,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-uploadedfile .cl-fileupload-fileicon.cl-filetype-mp4,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-file .cl-fileupload-fileicon.cl-filetype-mpeg,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-uploadedfile .cl-fileupload-fileicon.cl-filetype-mpeg,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-file .cl-fileupload-fileicon.cl-filetype-avi,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-uploadedfile .cl-fileupload-fileicon.cl-filetype-avi {
+	// 동영상
+	.icon-set(ico_file_video, pure);
+}
+
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-file .cl-fileupload-fileicon.cl-filetype-xls,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-uploadedfile .cl-fileupload-fileicon.cl-filetype-xls,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-file .cl-fileupload-fileicon.cl-filetype-xlsx,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-uploadedfile .cl-fileupload-fileicon.cl-filetype-xlsx {
+	// EXCEL
+	.icon-set(ico_file_xls, pure);
+}
+
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-file .cl-fileupload-fileicon.cl-filetype-ppt,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-uploadedfile .cl-fileupload-fileicon.cl-filetype-ppt,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-file .cl-fileupload-fileicon.cl-filetype-pptx,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-uploadedfile .cl-fileupload-fileicon.cl-filetype-pptx {
+	// PPT
+	.icon-set(ico_file_ppt, pure);
+}
+
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-file .cl-fileupload-fileicon.cl-filetype-doc,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-uploadedfile .cl-fileupload-fileicon.cl-filetype-doc,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-file .cl-fileupload-fileicon.cl-filetype-docx,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-uploadedfile .cl-fileupload-fileicon.cl-filetype-docx {
+	// DOCS
+	.icon-set(ico_file_doc, pure);
+}
+
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-file .cl-fileupload-fileicon.cl-filetype-zip,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-uploadedfile .cl-fileupload-fileicon.cl-filetype-zip,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-file .cl-fileupload-fileicon.cl-filetype-rar,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-uploadedfile .cl-fileupload-fileicon.cl-filetype-rar,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-file .cl-fileupload-fileicon.cl-filetype-alz,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-uploadedfile .cl-fileupload-fileicon.cl-filetype-alz {
+	// 압축파일
+	.icon-set(ico_file_zip, pure);
+}
+
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-file .cl-fileupload-fileicon.cl-filetype-png,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-uploadedfile .cl-fileupload-fileicon.cl-filetype-png,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-file .cl-fileupload-fileicon.cl-filetype-gif,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-uploadedfile .cl-fileupload-fileicon.cl-filetype-gif,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-file .cl-fileupload-fileicon.cl-filetype-jpg,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-uploadedfile .cl-fileupload-fileicon.cl-filetype-jpg {
+	// 이미지
+	.icon-set(ico_file_image, pure);
+}
+
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-file .cl-fileupload-fileicon.cl-filetype-pdf,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-uploadedfile .cl-fileupload-fileicon.cl-filetype-pdf {
+	// PDF
+	.icon-set(ico_file_pdf, pure);
+}
+
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-file .cl-fileupload-fileicon.cl-filetype-txt,
+.cl-fileupload .cl-fileupload-detail .cl-fileupload-uploadedfile .cl-fileupload-fileicon.cl-filetype-txt {
+	// 텍스트
+	.icon-set(ico_file_txt, pure);
+}
+
+/* ==========================================================================
+ 2. Variants
+ ========================================================================== */
+
+/* --- 드롭존 --- */
+.cl-container.dropzone {
+	border: 2px dashed @file-upload__color-border;
+	border-radius: @cl-radius-medium1;
+}
+
+
+/* ==========================================================================
+ 3. Mode
+ ========================================================================== */
+
+.color-mode(@mode: high-contrast) {
+}

@@ -1,0 +1,166 @@
+@import "../core/include.part.less";
+
+/**
+ * ============================================================================
+ * @file      pagination.part.less
+ * @desc      CORE-UI 컨트롤 스타일 정의
+ * @rule
+ * 1. 독립성 유지
+ *  - 이 파일 내부에 선언된 변수는 외부에서 참조할 수 없음
+ * @contents  
+ * 1. Base (공통 스타일)
+ * 2. Variants (유형별 스타일)
+ * 3. Mode (테마 스타일)
+ * ============================================================================
+ */
+
+/* ==========================================================================
+   Component Tokens
+ ========================================================================== */
+
+/* 사이즈 변수 */
+@pagination__gap: @cl-gap-1;
+@pagination__margin-top: @cl-gap-6;
+@pagination__button-size-height: @cl-size-height-6;
+@pagination__button-radius: @cl-radius-xsmall3;
+
+/* 색상 변수 */
+@pagination__color-text: @cl-base-color-text-basic;
+@pagination__color-text--active: @cl-base-color-text-inverse;
+@pagination__color-text--disabled: @cl-base-color-text-disabled-on;
+@pagination__color-action: @cl-base-color-action-secondary;
+@pagination__color-action--hover: @cl-base-color-action-secondary-hover;
+@pagination__color-action--pressed: @cl-base-color-action-secondary-pressed;
+@pagination__color-action--active: @cl-base-color-action-secondary-active;
+@pagination__color-action--disabled: @cl-base-color-action-disabled;
+
+/* ==========================================================================
+    Local Mixins
+ ========================================================================== */
+
+.pagination__button-style(@name) {
+	background-image: url("../../img/icons/@{name}.svg");
+	background-size: @cl-icon--size-medium;
+}
+
+/* ==========================================================================
+ 1. Base
+ ========================================================================== */
+
+.cl-pageindexer {
+	color: @pagination__color-text;
+	padding: 0;
+	overflow: visible !important;
+	
+	.cl-pageindexer-index-area,
+	.cl-text-wrapper {
+		min-height: 0;
+	}
+	
+	.cl-pageindexer-first, .cl-pageindexer-prev, .cl-pageindexer-next, .cl-pageindexer-last, .cl-pageindexer-index {
+		.square(@pagination__button-size-height);
+		min-height: @pagination__button-size-height;
+		background-color: @pagination__color-action;
+		border: 0;
+		border-radius: @pagination__button-radius;
+		margin: 0 @pagination__gap;
+		transition: @transition-base;
+		
+		&:focus {
+			.focus-reset();
+		}
+		
+		&:active {
+			background-color: @pagination__color-action--active;
+			color: @pagination__color-text--active;
+		}
+	}
+	
+	.cl-pageindexer-first, .cl-pageindexer-prev, .cl-pageindexer-next, .cl-pageindexer-last {
+		&.cl-disabled {
+		}
+	}
+	
+	.cl-pageindexer-first {
+		.pagination__button-style(ico_double_left);
+	}
+	
+	.cl-pageindexer-prev {
+		.pagination__button-style(ico_left);
+	}
+	
+	.cl-pageindexer-next {
+		.pagination__button-style(ico_right);
+	}
+	
+	.cl-pageindexer-last {
+		.pagination__button-style(ico_double_right);
+	}
+	
+	.cl-pageindexer-index-area {
+		.cl-pageindexer-index {
+			&.cl-selected {
+				background-color: @pagination__color-action--active;
+				color: @pagination__color-text--active;
+			}
+		}
+	}
+	
+	.cl-pageindexer-text {
+		overflow: visible !important;
+		
+		// 현재 페이지 스타일
+		.pagination-current {
+			color: @pagination__color-action--active;
+			font-weight: @cl-font-weight-bold;
+		}
+		
+		// 전체 페이지 스타일
+		.pagination-total {
+		}
+		
+		&:focus {
+			.focus();
+		}
+	}
+	
+	&:not(.cl-disabled) {
+		.cl-pageindexer-first, .cl-pageindexer-prev, .cl-pageindexer-next, .cl-pageindexer-last, .cl-pageindexer-index {
+			&:not(.cl-selected):hover,
+			&:not(.cl-selected).cl-hover {
+				background-color: @pagination__color-action--hover;
+				color: @pagination__color-text;
+			}
+		}
+	}
+	
+	&:focus, &.cl-focus {
+		.focus-reset();
+	}
+	
+	&.cl-disabled {
+		color: @pagination__color-text--disabled;
+		
+		.cl-pageindexer-index {
+			&.cl-disabled {
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+ 2. Variants
+ ========================================================================== */
+
+
+
+/* ==========================================================================
+ 3. Mode
+ ========================================================================== */
+
+.color-mode(@mode: high-contrast) {
+	.cl-pageindexer {
+		.cl-pageindexer-first, .cl-pageindexer-prev, .cl-pageindexer-next, .cl-pageindexer-last, .cl-pageindexer-index {
+		}
+	}
+}

@@ -1,0 +1,158 @@
+@import "../core/include.part.less";
+
+/**
+ * ============================================================================
+ * @file      common.part.less
+ * @desc      CORE-UI 공통 클래스
+ * @rule      
+ * 1. 컴포넌트 클래스 최우선 사용
+ *  - 사전에 정의된 클래스를 반드시 우선 사용
+ *  - 본 공통 클래스를 여러 개 조합하여 새로운 UI 컴포넌트의 외형을 처음부터 만들어내는 것을 금지함
+ * 2. 예외 상황에서의 제한적 사용
+ *  - 컴포넌트의 기본 가이드를 벗어나는 특수한 상황에 제한적으로 사용
+ * 3. 인라인 스타일 대체
+ *  - 인라인 스타일 속성 사용을 금지
+ *  - 부득이하게 스타일을 덮어씌워야 할 경우 본 공통 클래스를 활용하여 해결
+ * 4. 과도한 중첩 사용 지양
+ *  - 본 공통 클래스가 4~5개 이상 결합되면 해당 요소는 새로운 컴포넌트 클래스로 분리
+ * @contents
+ * 1. 레이아웃
+ * 2. 스페이싱
+ * 3. 타이포그래피
+ * 4. 백그라운드
+ * 5. 보더
+ * 6. 이팩트
+ * 7. 트랜지션 및 애니메이션
+ * ============================================================================
+ */
+
+/* ==========================================================================
+ 1. 레이아웃
+ ========================================================================== */
+
+.p-0 {padding: 0px !important;}
+.px-0 {padding-left: 0px !important; padding-right: 0px !important;}
+.py-0 {padding-top: 0px !important; padding-bottom: 0px !important;}
+.pt-0 {padding-top: 0px !important;}
+.pr-0 {padding-right: 0px !important;}
+.pb-0 {padding-bottom: 0px !important;}
+.pl-0 {padding-left: 0px !important;}
+
+.px-4 {.cl-text {padding-left: 4px; padding-right: 4px;}}
+
+.m-0 {margin: 0px !important;}
+.mx-0 {margin-left: 0px !important; margin-right: 0px !important;}
+.my-0 {margin-top: 0px !important; margin-bottom: 0px !important;}
+.mt-0 {margin-top: 0px !important;}
+.mr-0 {margin-right: 0px !important;}
+.mb-0 {margin-bottom: 0px !important;}
+.ml-0 {margin-left: 0px !important;}
+
+/* ==========================================================================
+ 2. 스페이싱
+ ========================================================================== */
+
+/* ==========================================================================
+ 3. 타이포그래피
+ ========================================================================== */
+
+/* --- font-style --- */
+.italic { font-style: italic; }
+.not-italic { font-style: normal; }
+
+/* --- font-size --- */
+.font-size-xxlarge {font-size : @cl-pc-font-size-label-xxlarge !important;}
+
+/* --- font-weight --- */
+.font-light { font-weight: 300; }
+.font-normal { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+
+/* --- text-align --- */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+/* --- text-color --- */
+.text-inherit { color: inherit; }
+.text-transparent { color: transparent; }
+.text-black { color: black; }
+.text-white { color: white; }
+
+.text-normal { color: @cl-base-color-text-basic; }
+.text-primary { color: @cl-base-color-text-primary; }
+.text-secondary { color: @cl-base-color-text-secondary; }
+.text-information { color: @cl-base-color-text-information; }
+.text-success { color: @cl-base-color-text-success; }
+.text-warning { color: @cl-base-color-text-warning; }
+.text-danger { color: @cl-base-color-text-danger; }
+.text-point { color: @cl-base-color-text-point; }
+
+/* --- vertical-align --- */
+.align-baseline { vertical-align: baseline; }
+.align-top { vertical-align: top; }
+.align-middle { vertical-align: middle; }
+.align-bottom { vertical-align: bottom; }
+
+/* --- line-height --- */
+.leading-none { line-height: 1; }
+.leading-tight { line-height: 1.25; }
+.leading-normal { line-height: 1.5; }
+
+/* --- white-space --- */
+.whitespace-normal { white-space: normal; }
+.whitespace-nowrap { white-space: nowrap; }
+.whitespace-pre { white-space: pre; }
+.whitespace-pre-line { white-space: pre-line; }
+.whitespace-pre-wrap { white-space: pre-wrap; }
+.whitespace-break-spaces { white-space: break-spaces; }
+
+/* --- word-break --- */
+.break-normal { word-break: normal; }
+.break-all { word-break: break-all; }
+.break-keep { word-break: keep-all; }
+
+
+/* ==========================================================================
+ 4. 백그라운드
+ ========================================================================== */
+
+/* --- background-color --- */
+.bg-inherit { background-color: inherit; }
+.bg-transparent { background-color: transparent; }
+.bg-black { background-color: black; }
+.bg-white { background-color: white; }
+.bg-gray {background-color : @cl-base-color-border-gray; }
+.bg-gray-soft {background-color : @cl-base-color-border-gray-soft; }
+.bg-primary {background-color : @cl-base-color-border-primary;}
+
+/* ==========================================================================
+ 5. 보더
+ ========================================================================== */
+.border {border : 1px solid @cl-color-base-gray-30;}
+
+/* --- border-radius --- */
+.rounded { border-radius: 4px; }
+.rounded-none { border-radius: 0; }
+.rounded-full { border-radius: 9999px; }
+
+/* --- transform --- */
+.transform-none { transform: none; }
+
+/* ==========================================================================
+ 6. 이팩트
+ ========================================================================== */
+
+/* ==========================================================================
+ 7. 트랜지션 및 애니메이션
+ ========================================================================== */
+
+/* ==========================================================================
+ 8. 고대비 테마 관련
+ ========================================================================== */
+.invert-0 {filter: invert(0);}
+.invert {filter: invert(100%);}
+
+.max-200 {max-height : 200px;}

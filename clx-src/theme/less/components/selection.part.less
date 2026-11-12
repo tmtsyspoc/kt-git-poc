@@ -1,0 +1,734 @@
+@import "../core/include.part.less";
+
+/**
+ * ============================================================================
+ * @file      selection.part.less
+ * @desc      CORE-UI 컨트롤 스타일 정의
+ * @rule
+ * 1. 독립성 유지
+ *  - 이 파일 내부에 선언된 변수는 외부에서 참조할 수 없음
+ * @contents  
+ * 1. Base (공통 스타일)
+ * 2. Variants (유형별 스타일)
+ * 3. Mode (테마 스타일)
+ * ============================================================================
+ */
+
+/* ==========================================================================
+   Component Tokens
+ ========================================================================== */
+
+/* 사이즈 변수 */
+@selection__button-size: @cl-size-height-4; // 체크박스 또는 라디오버튼 아이콘 영역 크기
+@selection__button-gap: @cl-gap-2; // 아이콘 영역과 텍스트 간격
+@selection__button-margin-top: @cl-gap-1; // 아이콘 상단 고정 시 아이콘 위치 조정 수치
+@selection__button-size-large: @cl-size-height-5;
+@selection__button-gap-large: @cl-gap-4;
+@selection__button-margin-top-large: @cl-gap-1;
+
+@selection__check-icon-size: @cl-size-height-2; // 체크박스 아이콘 크기
+@selection__check-icon-size-large: @cl-number-8;
+@selection__check-button-radius: @cl-radius-xsmall2;
+@selection__radio-icon-size: 9.69px; // 라디오버튼 아이콘 크기
+@selection__radio-icon-size-large: @cl-number-8;
+@selection__radio-button-radius: @cl-radius-max;
+
+@selection__pc-font-size: @cl-pc-font-size-label-small;
+@selection__mobile-font-size: @cl-mobile-font-size-label-small;
+@selection__pc-font-size-large: @cl-pc-font-size-label-large;
+@selection__mobile-font-size-large: @cl-mobile-font-size-label-large;
+
+/* 색상 변수 */
+@selection__color-text: @cl-base-color-text-basic;
+@selection__color-text-additional: @cl-base-color-text-softer;
+@selection__color-text--disabled: @cl-base-color-text-disabled-on;
+@selection__button-color-background: @cl-base-color-element-inverse;
+@selection__button-color-background--seleced: @cl-base-color-element-primary;
+@selection__button-color-background--disabled: @selection__button-color-background;
+@selection__button-color-border: @cl-base-color-border-gray;
+@selection__button-color-border--selected: @cl-color-kt-ink;
+@selection__button-color-border--disabled: @cl-color-base-gray-30;
+
+@selection__check-color-background: @cl-color-base-alpha-white0;
+@selection__check-color-background--selected: @cl-base-color-icon-inverse-staic;
+@selection__check-color-background--disabled: @cl-base-color-element-disabled-bold;
+@selection__radio-color-background: @cl-color-base-alpha-black0;
+@selection__radio-color-background--selected: @cl-color-kt-ink;
+@selection__radio-color-background--disabled: @selection__button-color-border;
+
+/* ==========================================================================
+    Local Mixins
+ ========================================================================== */
+
+.selection__button() {
+	position: relative;
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+	.square(@selection__button-size);
+	min-height: 0;
+	background-image: none;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 16px 16px;
+	background-color: @selection__button-color-background;
+	border: 1px solid @selection__button-color-border;
+	box-sizing: border-box;
+	margin: 0;
+}
+
+.selection__check-button() {
+	border-radius: @selection__check-button-radius;
+	
+	&::after {
+		width: 16px;
+		height: 16px;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
+
+.selection__check-selected() {
+	background-color: @selection__button-color-border--selected;
+	border-color: @selection__button-color-border--selected;
+}
+
+.selection__check-partial-selected() {
+	background-color: @selection__button-color-border--selected;
+	border-color: @selection__button-color-border--selected;
+	background-image: url("../../img/icons/ico_check_partial.svg");
+	background-size: auto;
+}
+
+.selection__radio-button() {
+	border-radius: @selection__radio-button-radius;
+}
+
+.selection__radio-selected() {
+	background-image: url("../../img/icons/ico_radio_selected_black.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 16px 16px;
+	background-color: @selection__button-color-background;
+}
+
+.selection__additional-text() {
+	color: @selection__color-text-additional;
+}
+
+/* ==========================================================================
+ 1. Base
+ ========================================================================== */
+
+// 컨트롤 (루트 스타일러)
+.cl-checkbox,
+.cl-checkboxgroup,
+.cl-radiobutton {
+	color: @selection__color-text;
+	font-size: @selection__pc-font-size;
+	overflow: visible !important;
+	padding: 0;
+	
+	> *:not([class]) {
+		line-height: 0;
+		
+		> *:not([class]) {
+			line-height: 0;
+		}
+	}
+	
+	// fixedWidth = true
+	&.cl-fixedWidth {
+		.cl-icon-wrapper {
+			table-layout: auto;
+			min-width: 0;
+		}
+	}
+	
+	// iconAlign = top | right | bottom | left
+	&.cl-iconalign-top,
+	&.cl-iconalign-right,
+	&.cl-iconalign-bottom,
+	&.cl-iconalign-left {
+		.cl-radiobutton-item {
+			.cl-radiobutton-icon {
+				height: 16px;
+			}
+		}
+		
+		.cl-text {
+			padding: 0;
+		}
+	}
+	
+	// colCount = -1
+	&.cl-flow {
+		vertical-align: middle;
+	}
+	
+	&:focus, &.cl-focus {
+		.focus-reset();
+	}
+	
+	&.cl-disabled {
+
+	}
+	
+	@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+		font-size: @selection__mobile-font-size;
+	}
+}
+
+
+// 아이템
+.cl-checkboxgroup .cl-checkbox,
+.cl-radiobutton .cl-radiobutton-item {
+	overflow: visible !important;
+	padding: 0;
+	
+	&.cl-disabled {
+		color: @selection__color-text--disabled;
+	}
+}
+
+// 아이템 내부 영역
+.cl-checkbox-field,
+.cl-radiobutton-field {
+//	display: flex !important;
+//	gap: @selection__button-gap;
+}
+
+.cl-radiobutton-field {
+	display: flex !important;
+}
+
+.cl-iconalign-top, .cl-iconalign-bottom {
+	.cl-checkbox-field, .cl-radiobutton-field {
+		flex-direction: column;
+		
+		> *:not([class]) {
+			display: flex !important;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}
+
+// 아이콘 래퍼
+.cl-checkbox .cl-icon-wrapper,
+.cl-checkboxgroup .cl-checkbox .cl-icon-wrapper,
+.cl-radiobutton .cl-radiobutton-item .cl-icon-wrapper {
+	line-height: 0;
+	padding-top: @selection__button-margin-top;
+	vertical-align: top;
+}
+
+.cl-control.cl-iconalign-top .cl-icon-wrapper,
+.cl-control.cl-iconalign-bottom .cl-icon-wrapper {
+	padding-top: 0;
+}
+
+// 텍스트
+.cl-checkbox .cl-text,
+.cl-checkboxgroup .cl-checkbox .cl-text,
+.cl-radiobutton .cl-radiobutton-item .cl-text {
+	padding-left : @selection__button-gap;
+	padding-right : 0px;
+	padding-top : 0px;
+	padding-bottom : 0px;
+//	padding: 0;
+}
+
+// 아이콘 영역
+.cl-checkbox .cl-checkbox-icon,
+.cl-checkboxgroup .cl-checkbox .cl-checkbox-icon,
+.cl-radiobutton .cl-radiobutton-item .cl-radiobutton-icon {
+	.selection__button();
+}
+
+.cl-checkbox .cl-checkbox-icon,
+.cl-checkboxgroup .cl-checkbox .cl-checkbox-icon {
+	.selection__check-button();
+}
+
+.cl-radiobutton .cl-radiobutton-item .cl-radiobutton-icon {
+	.selection__radio-button();
+}
+
+.cl-checkbox,
+.cl-checkboxgroup .cl-checkbox {
+	&:hover, &.cl-hover {
+		.cl-checkbox-icon {
+		}
+	}
+	
+	.cl-checkbox-icon:focus {
+		.focus-reset();
+	}
+}
+
+.cl-radiobutton .cl-radiobutton-item {
+  &:not(.cl-selected):hover,
+  &:not(.cl-selected).cl-hover {
+    .cl-radiobutton-icon {
+//      .selection__radio-selected();
+    }
+  }
+}
+
+.cl-checkbox.cl-checked,
+.cl-checkboxgroup .cl-checkbox.cl-checked {
+	.cl-checkbox-icon {
+		.selection__check-selected();
+	}
+}
+
+.cl-checkbox.cl-partialchecked {
+	.cl-checkbox-icon {
+		.selection__check-partial-selected();
+	}
+}
+
+.cl-radiobutton .cl-radiobutton-item.cl-selected {
+	.cl-radiobutton-icon {
+		.selection__radio-selected();
+	}
+}
+
+.cl-checkbox:focus, .cl-checkbox.cl-focus {
+	.cl-checkbox-icon, .cl-checkbox-icon:focus, &.cl-iconalign-none .cl-text {
+		.focus-reset();
+	}
+	
+	.cl-checkbox-icon:focus-visible {
+		.focus();
+	}
+}
+
+.cl-checkboxgroup:focus, .cl-checkboxgroup.cl-focus {
+	.cl-checkbox {
+		.cl-checkbox-icon {
+			&:focus, &.cl-focus {
+				.focus-reset();
+			}
+			
+			&:focus-visible {
+				.focus();
+			}
+		}
+	}
+}
+
+.cl-radiobutton:focus, .cl-radiobutton.cl-focus {
+	.cl-radiobutton-item {
+		.cl-radiobutton-icon {
+			&:focus, &.cl-focus {
+				.focus-reset();
+			}
+			
+			&:focus-visible {
+				.focus();
+			}
+		}
+	}
+}
+
+.cl-checkbox.cl-disabled,
+.cl-checkboxgroup.cl-disabled .cl-checkbox,
+.cl-checkboxgroup .cl-checkbox.cl-disabled {
+	.cl-checkbox-icon {
+		background-color: @selection__button-color-background--disabled;
+		border-color: @selection__button-color-border--disabled;
+	}
+	
+	&.cl-checked {
+		.cl-checkbox-icon {
+			background-color: @selection__button-color-border--disabled;
+			
+			&::after {
+				background-image: url("../../img/icons/ico_check_disabled.svg");
+			}
+		}
+	}
+}
+
+.cl-checkbox.cl-partialchecked.cl-disabled .cl-checkbox-icon {
+	background-color: @selection__button-color-background--disabled;
+	border-color: @selection__button-color-border--disabled;
+	
+}
+
+.cl-radiobutton.cl-disabled .cl-radiobutton-item,
+.cl-radiobutton .cl-radiobutton-item.cl-disabled {
+	.cl-radiobutton-icon {
+		background-image: url("../../img/icons/ico_radio_disabled.svg") !important;
+		background-color: #f5f5f5;
+		border-color: @selection__button-color-border;
+	}
+	
+	&.cl-selected {
+		.cl-radiobutton-icon {
+			background-image: url("../../img/icons/ico_radio_selected_disabled.svg") !important;
+		}
+	}
+}
+
+/* ==========================================================================
+ 2. Variants
+ ========================================================================== */
+
+/* 큰 체크박스 및 라디오 버튼 */
+.cl-checkbox.large,
+.cl-checkboxgroup.large,
+.cl-radiobutton.large {
+	font-size: @selection__pc-font-size-large;
+	
+	@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+		font-size: @selection__mobile-font-size-large;
+	}
+}
+
+.cl-checkbox.large .cl-checkbox-field,
+.cl-checkboxgroup.large .cl-checkbox .cl-checkbox-field,
+.cl-radiobutton.large .cl-radiobutton-item .cl-radiobutton-field {
+	gap: @selection__button-gap-large;
+}
+
+.cl-checkbox.large .cl-icon-wrapper,
+.cl-checkboxgroup.large .cl-checkbox .cl-icon-wrapper,
+.cl-radiobutton.large .cl-radiobutton-item .cl-icon-wrapper {
+	padding-top: @selection__button-margin-top-large;
+}
+
+.cl-checkbox.large .cl-checkbox-icon,
+.cl-checkboxgroup.large .cl-checkbox .cl-checkbox-icon {
+	.square(@selection__button-size-large);
+	
+	&::after {
+		width: @selection__check-icon-size-large / 2;
+		height: @selection__check-icon-size-large;
+	}
+}
+
+.cl-radiobutton.large .cl-radiobutton-item .cl-radiobutton-icon {
+	.square(@selection__button-size-large);
+	
+	&::after {
+		.square(@selection__radio-icon-size-large);
+	}
+}
+
+/* 체크박스 및 라디오 버튼 정렬 */
+.cl-checkbox.text-center,
+.cl-checkbogroup.text-center .cl-checkbox,
+.cl-radiobutton.text-center .cl-radiobutton-item {
+	.cl-checkbox-field,
+	.cl-radiobutton-field {
+		justify-content: center;
+	}
+}
+
+.cl-checkbox.text-right,
+.cl-checkbogroup.text-right .cl-checkbox,
+.cl-radiobutton.text-right .cl-radiobutton-item {
+	.cl-checkbox-field,
+	.cl-radiobutton-field {
+		justify-content: flex-end;
+	}
+}
+
+/* 부가설명 텍스트 */
+.cl-checkbox,
+.cl-checkboxgroup,
+.cl-radiobutton {
+	.helper-text {
+		.selection__additional-text();
+	}
+}
+
+/* 트리 내 체크박스 */
+.cl-tree .cl-tree-item,
+.cl-treecell .cl-treecell-item {
+	// 아이템 체크박스 (showItemCheckbox = true)
+	.cl-checkbox {
+		.selection__button();
+		.selection__check-button();
+		font-size: 0;
+		
+		&.cl-checked {
+			.selection__check-selected();
+		}
+		
+		&.cl-partialchecked {
+			.selection__check-partial-selected();
+		}
+	}
+}
+
+.cl-tree .cl-tree-item {
+	// 다중선택 체크박스 (multiple = true)
+	.cl-tree-checkbox {
+		.selection__button();
+		.selection__check-button();
+		font-size: 0;
+	}
+	
+	&.cl-checked {
+		> .cl-tree-checkbox {
+			.selection__check-selected();
+		}
+	}
+	
+	&.cl-partialchecked {
+		> .cl-tree-checkbox {
+			.selection__check-partial-selected();
+		}
+	}
+}
+
+/* 파일 업로드 내 체크박스 */
+.cl-fileupload .cl-fileupload-checkbox {
+	.selection__button();
+	.selection__check-button();
+	
+	&.cl-fileupload-allcheck {
+		// 헤더 전체 체크박스
+	}
+	
+	&.cl-checked {
+		.selection__check-selected();
+	}
+}
+
+/* ==========================================================================
+ 3. Mode
+ ========================================================================== */
+
+.color-mode(@mode: high-contrast) {
+
+	/* 색상 변수 */
+	@selection__color-text: #e1e1e1;
+	@selection__color-text-additional: @selection__color-text;
+	@selection__color-text--disabled: #999999;
+	@selection__button-color-background: #2f363d;
+	@selection__button-color-background--seleced: @cl-color-high-contrast-primary-50;
+	@selection__button-color-background--disabled: #2f363d;
+	@selection__button-color-border: fade(#ffffff, 20%);
+	@selection__button-color-border--selected: @selection__button-color-border;
+	@selection__button-color-border--disabled: @selection__button-color-border;
+	
+	@selection__check-color-background: @cl-color-base-alpha-white0;
+	@selection__check-color-background--selected: @cl-base-color-icon-inverse-staic;
+	@selection__check-color-background--disabled: @cl-base-color-element-disabled-bold;
+	@selection__radio-color-background: @cl-color-base-alpha-black0;
+	@selection__radio-color-background--selected: @selection__button-color-background--seleced;
+	@selection__radio-color-background--disabled: @selection__button-color-border;
+
+	.selection__button() {
+		background-color: @selection__button-color-background;
+		border: 1px solid @selection__button-color-border;
+	}
+	
+	.selection__check-selected() {
+		background-color: @selection__button-color-background--seleced;
+		border-color: @selection__button-color-border--selected;
+		background-image: url("../../img/icons/ico_check.svg") !important;
+		background-size: auto;
+	}
+	
+	.selection__check-partial-selected() {
+		background-color: #E4002B;
+		border-color: @selection__button-color-border--selected;
+		background-image: url("../../img/icons/ico_check_partial.svg") !important;
+		background-size: auto;
+	}
+	
+	.selection__radio-button() {
+		border-radius: @selection__radio-button-radius;
+		
+	}
+	
+	.selection__radio-selected() {
+		background-color: @selection__button-color-background;
+		border-color: @cl-color-high-contrast-primary-50;
+	}
+	
+	.selection__additional-text() {
+		color: @selection__color-text-additional;
+	}
+	
+	/* ==========================================================================
+	 1. Base
+	 ========================================================================== */
+	
+	// 컨트롤 (루트 스타일러)
+	.cl-checkbox,
+	.cl-checkboxgroup,
+	.cl-radiobutton {
+		color: @selection__color-text;
+		
+		&.cl-disabled {
+			color: @selection__color-text--disabled;
+		}
+	}
+	
+	
+	// 아이템
+	.cl-checkboxgroup .cl-checkbox,
+	.cl-radiobutton .cl-radiobutton-item {
+		&.cl-disabled {
+			color: @selection__color-text--disabled;
+		}
+	}
+	
+	// 아이콘 영역
+	.cl-checkbox .cl-checkbox-icon,
+	.cl-checkboxgroup .cl-checkbox .cl-checkbox-icon,
+	.cl-radiobutton .cl-radiobutton-item .cl-radiobutton-icon {
+		.selection__button();
+	}
+	
+	.cl-checkbox .cl-checkbox-icon,
+	.cl-checkboxgroup .cl-checkbox .cl-checkbox-icon {
+		.selection__check-button();
+	}
+	
+	.cl-radiobutton .cl-radiobutton-item .cl-radiobutton-icon {
+		.selection__radio-button();
+	}
+	
+	.cl-checkbox.cl-checked,
+	.cl-checkboxgroup .cl-checkbox.cl-checked {
+		.cl-checkbox-icon {
+			.selection__check-selected();
+		}
+	}
+	
+	.cl-checkbox.cl-partialchecked {
+		.cl-checkbox-icon {
+			.selection__check-partial-selected();
+		}
+	}
+	
+	.cl-radiobutton .cl-radiobutton-item.cl-selected {
+		.cl-radiobutton-icon {
+			.selection__radio-selected();
+		}
+	}
+	
+	.cl-checkbox.cl-disabled,
+	.cl-checkboxgroup.cl-disabled .cl-checkbox,
+	.cl-checkboxgroup .cl-checkbox.cl-disabled {
+		color: @selection__color-text--disabled;
+		
+		.cl-checkbox-icon {
+			background-color: @selection__button-color-background--disabled;
+			border-color: @selection__button-color-border--disabled;
+		}
+		
+		&.cl-checked {
+			.cl-checkbox-icon {
+				background-color: #444c55;
+				border-color: #444c55;
+				
+				&::after {
+					background-image: url("../../img/icons/ico_check_disabled.svg");
+				}
+			}
+		}
+	}
+	
+	.cl-checkbox.cl-partialchecked.cl-disabled .cl-checkbox-icon {
+		background-color: @selection__button-color-background--disabled;
+		border-color: @selection__button-color-border--disabled;
+		
+		&::after {
+			background-color: @selection__check-color-background--disabled;
+		}
+	}
+	
+	.cl-radiobutton.cl-disabled .cl-radiobutton-item,
+	.cl-radiobutton .cl-radiobutton-item.cl-disabled {
+		.cl-radiobutton-icon {
+			background-color: @selection__button-color-background;
+			border-color: @selection__button-color-border;
+		}
+		
+		&.cl-selected {
+			.cl-radiobutton-icon {
+				&::after {
+					background-color: @selection__radio-color-background--disabled;
+				}
+			}
+		}
+	}
+	
+	/* ==========================================================================
+	 2. Variants
+	 ========================================================================== */
+	
+	/* 부가설명 텍스트 */
+	.cl-checkbox,
+	.cl-checkboxgroup,
+	.cl-radiobutton {
+		.helper-text {
+			.selection__additional-text();
+		}
+	}
+	
+	/* 트리 내 체크박스 */
+	.cl-tree .cl-tree-item,
+	.cl-treecell .cl-treecell-item {
+		// 아이템 체크박스 (showItemCheckbox = true)
+		.cl-checkbox {
+			.selection__button();
+			.selection__check-button();
+			font-size: 0;
+			
+			&.cl-checked {
+				.selection__check-selected();
+			}
+			
+			&.cl-partialchecked {
+				.selection__check-partial-selected();
+			}
+		}
+	}
+	
+	.cl-tree .cl-tree-item {
+		// 다중선택 체크박스 (multiple = true)
+		.cl-tree-checkbox {
+			.selection__button();
+			.selection__check-button();
+			font-size: 0;
+		}
+		
+		&.cl-checked {
+			> .cl-tree-checkbox {
+				.selection__check-selected();
+			}
+		}
+		
+		&.cl-partialchecked {
+			> .cl-tree-checkbox {
+				.selection__check-partial-selected();
+			}
+		}
+	}
+	
+	/* 파일 업로드 내 체크박스 */
+	.cl-fileupload .cl-fileupload-checkbox {
+		.selection__button();
+		.selection__check-button();
+		
+		&.cl-fileupload-allcheck {
+			// 헤더 전체 체크박스
+		}
+		
+		&.cl-checked {
+			.selection__check-selected();
+		}
+	}
+
+}

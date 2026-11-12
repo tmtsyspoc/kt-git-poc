@@ -1,0 +1,226 @@
+@import "../core/include.part.less";
+
+/**
+ * ============================================================================
+ * @file      modal.part.less
+ * @desc      CORE-UI 컨트롤 스타일 정의
+ * @rule
+ * 1. 독립성 유지
+ *  - 이 파일 내부에 선언된 변수는 외부에서 참조할 수 없음
+ * @contents  
+ * 1. Base (공통 스타일)
+ * 2. Variants (유형별 스타일)
+ * 3. Mode (테마 스타일)
+ * ============================================================================
+ */
+
+/* ==========================================================================
+   Component Tokens
+ ========================================================================== */
+
+/* 사이즈 변수 */
+@modal__size-min-height: 264px;
+@modal__wrap-border-width: @cl-base-border-width-variable-regular;
+@modal__wrap-radius: @cl-radius-medium1;
+@modal__padding: @cl-padding-0;
+@modal__head-padding-x: @cl-padding-7;
+@modal__head-padding-y: @cl-padding-0;
+@modal__head-size-height: 48px;
+@modal__head-pc-font-size: @cl-pc-font-size-heading-small;
+@modal__head-mobile-font-size: @cl-mobile-font-size-heading-xsmall;
+@modal__btn-padding-x: @cl-padding-6;
+@modal__btn-padding-y: @cl-padding-0;
+@modal__btn-size-min-width: 68px;
+
+/* 색상 변수 */
+@modal__color-text: @cl-base-color-text-basic;
+@modal__wrap-color-surface: @cl-base-color-surface-white;
+@modal__wrap-color-border: @cl-base-color-border-gray-bold;
+@modal__wrap-color-shadow: 0px 4px 16px 0px fade(#000000, 20%);
+@modal__head-color-surface: @cl-color-base-gray-0;
+@modal__head-color-border: @cl-color-base-gray-30;
+@modal__head-color-text: @cl-base-color-text-bolder;
+@modal__head-button-color-surface: @cl-base-color-alpha-inverse10;
+@modal__body-surface: @cl-base-color-alpha-basic0;
+@modal__color-dim: @cl-base-color-background-dim;
+
+@modal__overlay_blur: blur(5px);
+
+/* ==========================================================================
+    Local Mixins
+ ========================================================================== */
+
+.modal__button-style(@name) {
+	.icon-set(@name, pure);
+}
+
+/* ==========================================================================
+ 1. Base
+ ========================================================================== */
+
+/* --- 공통 --- */
+.cl-dialog {
+	background-color: @modal__wrap-color-surface;
+	border: none;
+	border-radius: @modal__wrap-radius;
+	box-shadow: @modal__wrap-color-shadow;
+	color: @modal__color-text;
+	
+	.cl-dialog-header {
+		align-items: center;
+		height: @modal__head-size-height;
+		background-color: @modal__head-color-surface;
+		border-bottom: 1px solid @modal__head-color-border;
+		color: @modal__head-color-text;
+		font-size: @modal__head-pc-font-size;
+		font-weight: @cl-font-weight-bold;
+		padding: 0 @cl-gap-9;
+		
+		@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+			// 767까지
+			font-size: @modal__head-mobile-font-size;
+		}
+		
+		.cl-text {
+			font: inherit;
+		}
+		
+		.cl-dialog-close,
+		.cl-dialog-min,
+		.cl-dialog-max,
+		.cl-dialog-restore {
+			background-color: @modal__head-button-color-surface;
+			background-size: @cl-icon--size-medium;
+			width: @cl-icon--size-large;
+			height: 100%;
+			margin-left: @cl-number-7;
+			
+			&:focus {
+				.focus-inside();
+			}
+		}
+		
+		.cl-dialog-close,
+		.cl-dialog-close:active {
+			.modal__button-style(ico_dialog_close);
+		}
+		
+		.cl-dialog-min,
+		.cl-dialog-min:active {
+			.modal__button-style(ico_dialog_min);
+		}
+		
+		.cl-dialog-max,
+		.cl-dialog-max:active {
+			.modal__button-style(ico_dialog_max);
+		}
+		
+		.cl-dialog-restore,
+		.cl-dialog-restore:active {
+			.modal__button-style(ico_restore);
+		}
+	}
+	
+	.cl-dialog-body {
+		border: 0; //@modal__wrap-border-width solid @modal__wrap-color-border;
+		border-top: 0;
+	}
+	
+	&.cl-maximized {
+		// 다이얼로그 최대화 시
+		border-radius: 0;
+	}
+	
+	&:focus, &.cl-focus {
+	}
+	
+	&.full-dialog {
+		border-radius : 0px;
+	}
+}
+
+/* --- 오버레이 --- */
+.cl-overlay {
+	background: @modal__color-dim;
+	backdrop-filter : @modal__overlay_blur;
+}
+
+/* ==========================================================================
+ 2. Variants
+ ========================================================================== */
+
+/* --- 대화창 다이얼로그 --- */
+.cl-dialog.modal {
+	.cl-dialog-header {
+		background: 0;
+		border: 0;
+		
+		.cl-dialog-close,
+		.cl-dialog-min,
+		.cl-dialog-max,
+		.cl-dialog-restore {
+			background-color: @modal__body-surface;
+		}
+	}
+}
+
+/* --- 다이얼로그 내 콘텐츠 영역 --- */
+.cl-container.modal-content {
+	.cl-container.modal-header {
+		// 모달 헤더 영역
+	}
+	
+	.cl-container.modal-conts {
+		// 모달 콘텐츠 영역
+	}
+	
+	.cl-container.modal-btn {
+		// 모달 버튼 영역
+	}
+}
+
+/* ==========================================================================
+ 3. Mode
+ ========================================================================== */
+
+.color-mode(@mode: high-contrast) {
+	@modal__color-text: @cl-high-contrast-color-text-basic;
+	@modal__wrap-color-surface: #121212;
+	@modal__wrap-color-border: fade(#ffffff, 20%);
+	@modal__wrap-color-shadow: 0 0px 1px 0 @cl-high-contrast-color-alpha-shadow2;
+	@modal__head-color-surface: #121212;
+	@modal__head-color-border: fade(#ffffff, 20%);
+	@modal__head-color-text: #ffffff;
+	@modal__body-surface: #121212;
+	@modal__color-dim: @cl-high-contrast-color-background-dim;
+	
+	.cl-dialog {
+		background-color: @modal__wrap-color-surface;
+		border: 1px solid @modal__wrap-color-border;
+		box-shadow: @modal__wrap-color-shadow;
+		color: @modal__color-text;
+		
+		.cl-dialog-header {
+			background-color: @modal__head-color-surface;
+			border-bottom: 1px solid @modal__head-color-border;
+			color: @modal__head-color-text;
+			
+			.cl-dialog-close,
+			.cl-dialog-min,
+			.cl-dialog-max,
+			.cl-dialog-restore {
+			}
+		}
+		
+		.cl-dialog-body {
+			border-color: @modal__wrap-color-border;
+		}
+		
+		&:focus, &.cl-focus {
+		}
+	}
+	
+	.cl-overlay {
+		background: @modal__color-dim;
+	}
+}

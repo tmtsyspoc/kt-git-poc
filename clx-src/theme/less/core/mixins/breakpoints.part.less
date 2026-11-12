@@ -1,0 +1,57 @@
+@import "../variables/variables.part.less";
+
+/**
+ * ============================================================================
+ * @file      breakpoints.part.less
+ * @desc      CORE-UI 미디어 쿼리 관련 믹스인 및 공통 유틸리티 함수 정의
+ * @rule
+ * 1. 클래스 출력 방지
+ *  - 모든 믹스인은 반드시 이름 뒤에 괄호 '()'를 붙여 선언
+ *    → 괄호가 없으면 불필요한 CSS 클래스로 컴파일됨
+ * 2. 선택자 생성 지양
+ *  - 믹스인 내부에서 새로운 선택자 생성 최소화
+ *  - 순수한 CSS 속성 묶음만 반환하도록 설계
+ * ============================================================================
+ */
+
+/* --- 아래의 코드를 참고하여 미디어 쿼리를 작성 --- */ 
+
+// .size-medium();
+@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+	// 767까지
+}
+
+// .size-medium-more();
+@media (min-width: @{breakpoint-medium}) {
+	// 768이상
+}
+
+//.size-medium-to-large();
+@media (min-width: @{breakpoint-medium}) and (max-width: calc(@{breakpoint-large} - 1px)) {
+	// 768이상 1023까지
+}
+
+// .size-large-less();
+@media (max-width: calc(@{breakpoint-large} - 1px)) {
+	// 1023까지
+}
+
+// .size-large-more();
+@media (min-width: @{breakpoint-large}) {
+	// 1024이상
+}
+
+// .size-large-to-xlarge();
+@media (min-width: @{breakpoint-large}) and (max-width: calc(@{breakpoint-xlarge} - 1px)) {
+	// 1024이상 1279까지
+}
+
+// .size-xlarge-less();
+@media (max-width: calc(@{breakpoint-xlarge} - 1px)) {
+	// 1279까지
+}
+
+//.size-xlarge();
+@media (min-width: @{breakpoint-xlarge}) {
+	// 1280이상
+}

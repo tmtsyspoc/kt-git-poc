@@ -1,0 +1,68 @@
+@charset "UTF-8";
+@import "../core/include.part.less";
+
+/**
+ * ============================================================================
+ * @file      common.part.less
+ * @desc      CORE-UI 컨트롤 스타일 정의
+ * @contents  
+ * 1. Base (공통 스타일)
+ * 2. Variants (유형별 스타일)
+ * 3. Mode (테마 스타일)
+ * ============================================================================
+ */
+
+/* ==========================================================================
+ 1. Base
+ ========================================================================== */
+
+/* --- 모든 컨트롤 공통 스타일 --- */
+.cl-control {
+	font-style: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	font-family: inherit;
+	color: inherit;
+	
+	.cl-text {
+		line-height: inherit;
+	}
+}
+
+/* ==========================================================================
+ 2. Variants
+ ========================================================================== */
+
+/* --- 다이얼로그 열렸을 시 적용되는 스타일 --- */
+body.cl-has-modal {
+	overflow: hidden;
+}
+
+/* --- 모바일 스크롤바 스타일 --- */
+//.cl-scrollbar.cl-touchdevice::-webkit-scrollbar {
+//	-webkit-appearance: none;
+//	width: 5px;
+//	height: 5px;
+//}
+//.cl-scrollbar.cl-touchdevice::-moz-scrollbar {
+//	-moz-appearance: none;
+//	width: 5px;
+//	height: 5px;
+//}
+//.cl-scrollbar.cl-touchdevice::-webkit-scrollbar-thumb {
+//	border-radius: 4px;
+//	background-color: rgba(0,0,0,.3);
+//	border: solid 1px transparent;
+//	background-clip: content-box;
+//}
+//.cl-scrollbar.cl-touchdevice::-moz-scrollbar-thumb {
+//	border-radius: 4px;
+//	background-color: rgba(0,0,0,.3);
+//	border: solid 1px transparent;
+//	background-clip: content-box;
+//}
+
+/* ==========================================================================
+ 3. Mode
+ ========================================================================== */

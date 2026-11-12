@@ -1,0 +1,230 @@
+@import "../core/include.part.less";
+
+/**
+ * ============================================================================
+ * @file      slider.part.less
+ * @desc      CORE-UI 컨트롤 스타일 정의
+ * @rule
+ * 1. 독립성 유지
+ *  - 이 파일 내부에 선언된 변수는 외부에서 참조할 수 없음
+ * @contents  
+ * 1. Base (공통 스타일)
+ * 2. Variants (유형별 스타일)
+ * 3. Mode (테마 스타일)
+ * ============================================================================
+ */
+
+/* ==========================================================================
+   Component Tokens
+ ========================================================================== */
+
+/* 사이즈 변수 */
+@slider__radius: @cl-radius-max;
+@slider__bar-size: 2px;
+@slider__handle-size: @cl-size-height-5;
+@slider__handle-radius: @cl-radius-max;
+@slider__label-radius: @cl-radius-xsmall3;
+@slider__label-pc-font-size: @cl-pc-font-size-label-xsmall;
+@slider__label-mobile-font-size: @cl-mobile-font-size-label-xsmall;
+@slider__label-padding-y: @cl-padding-1;
+@slider__label-padding-x: @cl-padding-3;
+@slider__label-margin-y: @cl-gap-4;
+
+/* 색상 변수 */
+@slider__color-text: @cl-base-color-text-basic;
+@slider__bar-background: @cl-base-color-border-gray;
+@slider__bar-background--disabled: @cl-base-color-border-gray-softer;
+@slider__bar-range-color-background: @cl-base-color-element-primary;
+@slider__bar-range-color-background--disabled: @cl-base-color-border-gray;
+@slider__handle-color-action: @cl-base-color-element-inverse;
+@slider__handle-color-action--hover: @cl-base-color-button-tertiary-fill-hover;
+@slider__handle-color-action--pressed: @cl-base-color-button-tertiary-fill-pressed;
+@slider__handle-color-action--disabled: @cl-base-color-button-disabled-fill;
+@slider__handle-color-border: @cl-base-color-button-tertiary-border;
+@slider__label-color-surface: @cl-base-color-background-inverse;
+@slider__label-color-text: @cl-base-color-text-inverse;
+
+/* ==========================================================================
+    Local Mixins
+ ========================================================================== */
+
+.slider__bar-position(@direction) {
+	@bar-position: (@slider__handle-size / 2);
+	
+	& when (@direction = horizontal) {
+		height: @slider__bar-size;
+		top: 50%;
+		left: @bar-position;
+		right: @bar-position;
+		transform: translateY(-50%);
+	}
+	
+	& when (@direction = vertical) {
+		width: @slider__bar-size;
+		left: 50%;
+		top: @bar-position;
+		bottom: @bar-position;
+		transform: translateX(-50%);
+	}
+}
+
+.slider__handle() {
+	.square(@slider__handle-size);
+	background: @slider__handle-color-action;
+	border: 1px solid @slider__handle-color-border;
+	border-radius: @slider__handle-radius;
+}
+
+.slider__label() {
+	background-color: @slider__label-color-surface;
+	border: 0;
+	border-radius: @slider__label-radius;
+	color: @slider__label-color-text;
+	font-size: @slider__label-pc-font-size;
+	padding: @slider__label-padding-y @slider__label-padding-x;
+	
+	@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+		font-size: @slider__label-mobile-font-size;
+	}
+}
+
+/* ==========================================================================
+ 1. Base
+ ========================================================================== */
+
+.cl-slider {
+	overflow: visible !important;
+	
+	.cl-slider-bar {
+		background: @slider__bar-background;
+		border: 0;
+		border-radius: @slider__radius;
+
+		&.cl-horizontal,
+		&.cl-vertical {
+		}
+		
+		&.cl-horizontal {
+			.slider__bar-position(horizontal);
+		}
+		
+		&.cl-vertical {
+			.slider__bar-position(vertical);
+		}
+		
+		.cl-slider-handle {
+			.slider__handle();
+			
+			&.cl-horizontal,
+			&.cl-vertical {
+				transform: translate(-50%, -50%);
+				
+				.cl-slider-label {
+					&.cl-leading {
+						margin-bottom: @slider__label-margin-y;
+					}
+					
+					&.cl-trailing {
+						margin-top: @slider__label-margin-y;
+					}
+				}
+			}
+			
+			&.cl-horizontal {
+				top: 50%;
+			}
+			
+			&.cl-vertical {
+				left: 50%;
+			}
+			
+			.cl-slider-label {
+				.slider__label();
+				
+				&.cl-leading,
+				&.cl-trailing {
+					// 말풍선 화살표 표시
+					@tooltip-arrow-size: @cl-number-7;
+					@tooltip-arrow-gap: calc((@tooltip-arrow-size / 2) * -1);
+					
+					&::before {
+						.pseudo();
+						.position(@t: calc(100% + @tooltip-arrow-gap), @l: 50%);
+						display: block;
+						.square(@tooltip-arrow-size);
+						background-color: @slider__label-color-surface;
+						transform: translateX(-50%) rotate(45deg);
+					}
+				}
+				
+				&.cl-trailing {
+					&::before {
+						top: @tooltip-arrow-gap;
+					}
+				}
+			}
+		}
+		
+		.cl-slider-range {
+			background: @slider__bar-range-color-background;
+			border-radius: @slider__radius;
+		}
+	}
+	
+	&.cl-horizontal {
+		min-height: @slider__handle-size;
+	}
+	
+	&.cl-vertical {
+		min-width: @slider__handle-size;
+	}
+	
+	&:not(.cl-disabled) {
+		.cl-slider-bar {
+			.cl-slider-handle {
+				&:hover, &.cl-hover {
+					background: @slider__handle-color-action--hover;
+				}
+				
+				&:active {
+					background: @slider__handle-color-action--pressed;
+				}
+			}
+		}
+	}
+	
+	&.cl-focus {
+		.focus-reset();
+		
+		.cl-slider-handle {
+			.focus();
+		}
+	}
+	
+	&.cl-disabled {
+		.cl-slider-bar {
+			background: @slider__bar-background--disabled;
+		}
+		
+		.cl-slider-handle {
+			background: @slider__handle-color-action--disabled;
+		}
+		
+		.cl-slider-range {
+			background: @slider__bar-range-color-background--disabled;
+		}
+	}
+}
+
+/* ==========================================================================
+ 2. Variants
+ ========================================================================== */
+
+
+
+/* ==========================================================================
+ 3. Mode
+ ========================================================================== */
+
+.color-mode(@mode: high-contrast) {
+}

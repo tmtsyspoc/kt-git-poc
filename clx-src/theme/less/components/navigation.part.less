@@ -1,0 +1,340 @@
+@import "../core/include.part.less";
+
+/**
+ * ============================================================================
+ * @file      navigation.part.less
+ * @desc      CORE-UI 컨트롤 스타일 정의
+ * @rule
+ * 1. 독립성 유지
+ *  - 이 파일 내부에 선언된 변수는 외부에서 참조할 수 없음
+ * @contents  
+ * 1. Base (공통 스타일)
+ * 2. Variants (유형별 스타일)
+ * 3. Mode (테마 스타일)
+ * ============================================================================
+ */
+
+/* ==========================================================================
+   Component Tokens
+ ========================================================================== */
+
+/* 사이즈 변수 */
+@navigation__padding-x: @cl-padding-0;
+@navigation__pc-font-size: @cl-pc-font-size-heading-xsmall;
+@navigation__mobile-font-size: @cl-mobile-font-size-heading-xsmall;
+@navigation__item-size-height: @cl-size-height-9;
+@navigation__item-gap: @cl-gap-2;
+@navigation__item-padding-x: @cl-padding-7;
+@navigation__item-padding-y: @cl-padding-3;
+
+@navigation__list-radius: @cl-radius-small2;
+@navigation__list-padding-x: @cl-padding-6;
+@navigation__list-padding-y: @cl-padding-3;
+
+/* 색상 변수 */
+@navigation__color-text: @cl-base-color-text-basic;
+@navigation__color-text--disabled: @cl-base-color-text-disabled;
+@navigation__item-color-action--hover: @cl-base-color-action-secondary-on-hover;
+@navigation__item-color-action--selected: @cl-base-color-action-secondary-on-active;
+@navigation__item-color-text--hover: @cl-base-color-text-secondary;
+@navigation__item-color-text--selected: @cl-base-color-text-secondary;
+
+@navigation__list-color-surface: @cl-base-color-surface-white;
+@navigation__list-color-border: @cl-base-color-border-gray-softer;
+
+/* ==========================================================================
+    Local Mixins
+ ========================================================================== */
+
+
+
+/* ==========================================================================
+ 1. Base
+ ========================================================================== */
+
+/* --- 공통 --- */
+.cl-navigationbar {
+	background: 0;
+	border: 0;
+	border-radius: 0;
+	color: @navigation__color-text;
+	font-size: @navigation__pc-font-size;
+	font-weight: @cl-font-weight-medium;
+	
+	@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+		font-size: @navigation__mobile-font-size;
+	}
+	
+	.cl-navigationbar-prev,
+	.cl-navigationbar-next {
+		position: relative;
+	}
+	
+	.cl-navigationbar-bar {
+		.cl-navigationbar-item {
+			position: relative;
+			
+			.cl-navigationbar-content {
+				.focus-reset();
+				gap: @navigation__item-gap;
+			}
+			
+			.cl-navigationbar-icon {
+				display: none;
+			}
+			
+			.cl-text {
+			}
+			
+			.cl-navigationbar-accesskey {
+			}
+			
+			.cl-navigationbar-arrow {
+				.square(@cl-icon--size-medium);
+				.icon-set(ico_down);
+			}
+			
+			&.cl-hover,
+			&:not(.cl-disabled):not(.cl-selected):hover,
+			&:not(.cl-disabled).cl-hover {
+				background-color: @navigation__item-color-action--hover;
+				color: @navigation__item-color-text--hover;
+			}
+			
+			&.cl-selected,
+			&:not(.cl-disabled).cl-selected:hover,
+			&:not(.cl-disabled).cl-selected.cl-hover {
+				background-color: @navigation__item-color-action--selected;
+				color: @navigation__item-color-text--selected;
+				
+				.cl-navigationbar-arrow {
+					.icon-set(ico_down);
+				}
+			}
+			
+			&.cl-disabled {
+				color: @navigation__color-text--disabled;
+			}
+		}
+	}
+	
+	&.cl-focus {
+		.focus-reset();
+	}
+	
+	// barItemWidths = "equal" 시 스타일
+	&.cl-equalwidths {
+	}
+}
+
+/* --- 메뉴 타입별 스타일 --- */
+.cl-navigationbar-menu,
+.cl-navigationbar-megamenu,
+.cl-navigationbar-fullmenu,
+.cl-navigationbar-accessiblemegamenu {
+	.cl-level-1 {
+		.cl-navigationbar-listitem {
+			background: 0;
+			font-weight: @cl-font-weight-regular;
+		}
+	}
+	
+	.cl-level-2, .cl-level-3, .cl-level-4 {
+		.cl-navigationbar-listitem {
+			padding-left: 0;
+		}
+	}
+	
+	.cl-navigationbar-category {
+		width: 100%;
+		padding: 0;
+	}
+	
+	.cl-navigationbar-listitem {
+		background: 0;
+		font-weight: @cl-font-weight-regular;
+		padding: 0;
+		
+		.cl-navigationbar-icon-wrapper {
+			width: 0;
+			
+			> .cl-navigationbar-icon {
+				display: none;
+			}
+		}
+		
+		.cl-navigationbar-accesskey-wrapper {
+			width: auto;
+			
+			> .cl-navigationbar-accesskey {
+				width: auto;
+			}
+		}
+		
+		&.cl-hover,
+		&:not(.cl-disabled):not(.cl-selected):hover,
+		&:not(.cl-disabled).cl-hover {
+			background: 0;
+			color: @navigation__item-color-text--hover;
+		}
+		
+		&.cl-selected,
+		&:not(.cl-disabled).cl-selected:hover,
+		&:not(.cl-disabled).cl-selected.cl-hover {
+			background: 0;
+			color: @navigation__item-color-text--selected;
+		}
+		
+		&:focus {
+			.focus-reset();
+		}
+		
+		&:focus-visible {
+			.focus-inside();
+		}
+	}
+}
+
+// menuType = "menu"
+.cl-navigationbar-menu {
+	.cl-navigationbar-list {
+		background-color: @navigation__list-color-surface;
+		border: 1px solid @navigation__list-color-border;
+		border-radius: @navigation__list-radius;
+		padding: @navigation__list-padding-y @navigation__list-padding-x;
+		
+		.cl-navigationbar-listitem {
+			.cl-navigationbar-icon-wrapper {
+				width: 0;
+				
+				> .cl-navigationbar-icon {
+					display: none;
+				}
+			}
+			
+			.cl-navigationbar-arrow-wrapper {
+				width: 0;
+				
+				> .cl-navigationbar-arrow {
+				}
+			}
+			
+			&.cl-folder {
+				> .cl-navigationbar-arrow-wrapper {
+					> .cl-navigationbar-arrow {
+						.icon-set(ico_down);
+						transform: rotate(-90deg);
+					}
+				}
+			}
+			
+			&.cl-hover,
+			&:not(.cl-disabled):not(.cl-selected):hover,
+			&:not(.cl-disabled).cl-hover {
+			}
+			
+			&.cl-selected,
+			&:not(.cl-disabled).cl-selected:hover,
+			&:not(.cl-disabled).cl-selected.cl-hover {
+				&.cl-folder {
+					> .cl-navigationba-arrow-wrapper {
+						> .cl-navigationbar-arrow {
+							.icon-set(ico_down);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// menuType = "megamenu"
+.cl-navigationbar-megamenu {
+	background-color: @navigation__list-color-surface;
+	border: 1px solid @navigation__list-color-border;
+	border-radius: 0;
+	padding: @cl-padding-11 0;
+	
+	.cl-navigationbar-list {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+//		grid-auto-rows: minmax(100px, auto);
+		gap: @cl-gap-9;
+		width: @contents-size;
+		margin: 0 auto;
+		
+		.cl-navigationbar-category {
+			.sub-items {
+				.flex-layout(@fd: column);
+				width: 100%;
+				
+				.cl-navigationbar-listitem-wrapper {
+					width: 100%;
+				}
+			}
+		}
+		
+		.cl-navigationbar-listitem {
+		}
+	}
+}
+
+// menuType = "fullmenu"
+.cl-navigationbar-fullmenu {
+	background-color: @navigation__list-color-surface;
+	border: 1px solid @navigation__list-color-border;
+	border-radius: 0;
+	
+	.cl-navigationbar-list {
+		background: 0;
+		border: 0;
+		
+		.cl-navigationbar-group {
+			.cl-navigationbar-category {
+			}
+		}
+	}
+}
+
+// menuType = "accessiblemegamenu"
+.cl-navigationbar-accessiblemegamenu {
+	background-color: @navigation__list-color-surface;
+	border: 1px solid @navigation__list-color-border;
+	border-radius: 0;
+	padding: @cl-padding-11 0;
+	
+	.cl-navigationbar-list {
+		display: grid;
+		grid-template-columns: repeat(4, 150px);
+//		grid-auto-rows: minmax(100px, auto);
+		gap: @cl-gap-9;
+		width: @contents-size;
+		margin: 0 auto;
+		
+		background: 0;
+		border: 0;
+		
+		.cl-navigationbar-category {
+			.sub-items {
+				.cl-navigationbar-listitem-wrapper {
+				}
+			}
+		}
+		
+		.cl-navigationbar-listitem {
+		}
+	}
+}
+
+/* ==========================================================================
+ 2. Variants
+ ========================================================================== */
+
+
+
+/* ==========================================================================
+ 3. Mode
+ ========================================================================== */
+
+.color-mode(@mode: high-contrast) {
+}

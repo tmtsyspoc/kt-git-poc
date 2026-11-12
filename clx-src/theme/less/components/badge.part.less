@@ -1,0 +1,994 @@
+@import "../core/include.part.less";
+
+/**
+ * ============================================================================
+ * @file      badge.part.less
+ * @desc      CORE-UI 컨트롤 스타일 정의
+ * @rule
+ * 1. 독립성 유지
+ *  - 이 파일 내부에 선언된 변수는 외부에서 참조할 수 없음
+ * @contents  
+ * 1. Base (공통 스타일)
+ * 2. Variants (유형별 스타일)
+ * 3. Mode (테마 스타일)
+ * ============================================================================
+ */
+
+/* ==========================================================================
+   Component Tokens
+ ========================================================================== */
+
+/* 사이즈 변수 */
+@badge__size-height: @cl-size-height-5;
+@badge__size-height-large: @cl-size-height-6;
+@badge__padding: @cl-number-5;
+@badge__padding-large: (@cl-number-7 - 1px);
+@badge__radius: @cl-radius-xsmall3;
+@badge__radius-max: @cl-radius-max;
+@badge__pc-font-size: @cl-pc-font-size-label-xsmall;
+@badge__mobile-font-size: @cl-mobile-font-size-label-xsmall;
+@badge__pc-font-size-large: @cl-pc-font-size-label-small;
+@badge__mobile-font-size-large: @cl-mobile-font-size-label-small;
+
+@badge__number-size-height: @cl-size-height-4;
+@badge__dot-size: @cl-size-height-1;
+@badge__dot-padding: @cl-padding-1;
+
+/* 색상 변수 */
+@badge__color-element: @cl-base-color-background-white;
+@badge__color-element-lighter: @cl-base-color-element-primary-softer;
+@badge__color-element-text: @cl-base-color-text-basic;
+
+@badge__color-primary-element: @cl-base-color-element-primary;
+@badge__color-primary-element-lighter: @cl-base-color-element-primary-softer;
+@badge__color-primary-element-text: @cl-color-base-primary-50;
+
+@badge__color-secondary-element: @cl-base-color-element-secondary;
+@badge__color-secondary-element-lighter: @cl-base-color-element-secondary-softer;
+@badge__color-secondary-element-text: @cl-base-color-text-secondary;
+
+@badge__color-gray-element: @cl-base-color-element-gray;
+@badge__color-gray-element-lighter: @cl-base-color-element-gray-softer;
+@badge__color-gray-element-text: @cl-base-color-text-soft;
+
+@badge__color-point-element: @cl-base-color-element-point;
+@badge__color-point-element-lighter: @cl-base-color-element-point-softer;
+@badge__color-point-element-text: @cl-base-color-text-point;
+
+@badge__color-information-element: @cl-base-color-element-information;
+@badge__color-information-element-lighter: @cl-base-color-element-information-softer;
+@badge__color-information-element-text: @cl-base-color-text-information;
+
+@badge__color-success-element: @cl-base-color-element-success;
+@badge__color-success-element-lighter: @cl-base-color-element-success-softer;
+@badge__color-success-element-text: @cl-base-color-text-success;
+
+@badge__color-warning-element: @cl-base-color-element-warning;
+@badge__color-warning-element-lighter: @cl-base-color-element-warning-softer;
+@badge__color-warning-element-text: @cl-base-color-text-warning;
+
+@badge__color-danger-element: @cl-base-color-element-danger;
+@badge__color-danger-element-lighter: @cl-base-color-element-danger-softer;
+@badge__color-danger-element-text: @cl-base-color-text-danger;
+
+@badge__color-disable-element: @cl-base-color-element-disabled-bold;
+@badge__color-disable-element-lighter: @cl-base-color-element-disabled-soft;
+@badge__color-disable-element-text: @cl-base-color-text-disabled-on;
+
+/* ==========================================================================
+    Local Mixins
+ ========================================================================== */
+
+.badge__color-background(@color) {
+	color: @cl-base-color-text-inverse-static;
+	
+	& when (@color = primary) {
+		background-color: @badge__color-primary-element;
+	}
+	
+	& when (@color = secondary) {
+		background-color: @badge__color-secondary-element;
+	}
+	
+	& when (@color = gray) {
+		background-color: @badge__color-gray-element;
+	}
+	
+	& when (@color = point) {
+		background-color: @badge__color-point-element;
+	}
+	
+	& when (@color = information) {
+		background-color: @badge__color-information-element;
+	}
+	
+	& when (@color = success) {
+		background-color: @badge__color-success-element;
+	}
+	
+	& when (@color = warning) {
+		background-color: @badge__color-warning-element;
+	}
+	
+	& when (@color = danger) {
+		background-color: @badge__color-danger-element;
+	}
+	
+	& when (@color = disable) {
+		background-color: @badge__color-disable-element;
+	}
+}
+
+.badge__color-background-light(@color) {
+	@badge__color-primary-element: @badge__color-primary-element-lighter;
+	@badge__color-secondary-element: @badge__color-secondary-element-lighter;
+	@badge__color-gray-element: @badge__color-gray-element-lighter;
+	@badge__color-point-element: @badge__color-point-element-lighter;
+	@badge__color-information-element: @badge__color-information-element-lighter;
+	@badge__color-success-element: @badge__color-success-element-lighter;
+	@badge__color-warning-element: @badge__color-warning-element-lighter;
+	@badge__color-danger-element: @badge__color-danger-element-lighter;
+	@badge__color-disable-element: @badge__color-disable-element-lighter;
+	
+	& when (@color = primary) {
+		background-color: @badge__color-primary-element-lighter;
+	}
+	
+	& when (@color = secondary) {
+		background-color: @badge__color-secondary-element-lighter;
+	}
+	
+	& when (@color = gray) {
+		background-color: @badge__color-gray-element-lighter;
+	}
+	
+	& when (@color = point) {
+		background-color: @badge__color-point-element-lighter;
+	}
+	
+	& when (@color = information) {
+		background-color: @badge__color-information-element-lighter;
+	}
+	
+	& when (@color = success) {
+		background-color: @badge__color-success-element-lighter;
+	}
+	
+	& when (@color = warning) {
+		background-color: @badge__color-warning-element-lighter;
+	}
+	
+	& when (@color = danger) {
+		background-color: @badge__color-danger-element-lighter;
+	}
+	
+	& when (@color = disable) {
+		background-color: @badge__color-disable-element-lighter;
+	}
+}
+
+.badge__color-border(@color) {
+	.border-size-mode(base);
+	border-style: solid;
+	
+	& when (@color = primary) {
+		border-color: @badge__color-primary-element;
+	}
+	
+	& when (@color = secondary) {
+		border-color: @badge__color-secondary-element;
+	}
+	
+	& when (@color = gray) {
+		border-color: @badge__color-gray-element;
+	}
+	
+	& when (@color = point) {
+		border-color: @badge__color-point-element;
+	}
+	
+	& when (@color = information) {
+		border-color: @badge__color-information-element;
+	}
+	
+	& when (@color = success) {
+		border-color: @badge__color-success-element;
+	}
+	
+	& when (@color = warning) {
+		border-color: @badge__color-warning-element;
+	}
+	
+	& when (@color = danger) {
+		border-color: @badge__color-danger-element;
+	}
+	
+	& when (@color = disable) {
+		border-color: @badge__color-disable-element;
+	}
+}
+
+.badge__color-border-light(@color) {
+	.border-size-mode(base);
+	border-style: solid;
+	
+	@badge__color-primary-element: @cl-color-base-primary-20;
+	@badge__color-secondary-element: @cl-color-base-secondary-20;
+	@badge__color-gray-element: @cl-color-base-gray-30;
+	@badge__color-point-element: @cl-color-base-point-20;
+	@badge__color-information-element: @cl-color-base-information-20;
+	@badge__color-success-element: @cl-color-base-success-20;
+	@badge__color-warning-element: @cl-color-base-warning-20;
+	@badge__color-danger-element: @cl-color-base-danger-20;
+	@badge__color-disable-element: @cl-color-base-gray-30;
+	
+	& when (@color = primary) {
+		border-color: @badge__color-primary-element;
+	}
+	
+	& when (@color = secondary) {
+		border-color: @badge__color-secondary-element;
+	}
+	
+	& when (@color = gray) {
+		border-color: @badge__color-gray-element;
+	}
+	
+	& when (@color = point) {
+		border-color: @badge__color-point-element;
+	}
+	
+	& when (@color = information) {
+		border-color: @badge__color-information-element;
+	}
+	
+	& when (@color = success) {
+		border-color: @badge__color-success-element;
+	}
+	
+	& when (@color = warning) {
+		border-color: @badge__color-warning-element;
+	}
+	
+	& when (@color = danger) {
+		border-color: @badge__color-danger-element;
+	}
+	
+	& when (@color = disable) {
+		border-color: @badge__color-disable-element;
+	}
+}
+
+.badge__color-text(@color) {
+	& when (@color = primary) {
+		color: @badge__color-primary-element-text;
+	}
+	
+	& when (@color = secondary) {
+		color: @badge__color-secondary-element-text;
+	}
+	
+	& when (@color = gray) {
+		color: @badge__color-gray-element-text;
+	}
+	
+	& when (@color = point) {
+		color: @badge__color-point-element-text;
+	}
+	
+	& when (@color = information) {
+		color: @badge__color-information-element-text;
+	}
+	
+	& when (@color = success) {
+		color: @badge__color-success-element-text;
+	}
+	
+	& when (@color = warning) {
+		color: @badge__color-warning-element-text;
+	}
+	
+	& when (@color = danger) {
+		color: @badge__color-danger-element-text;
+	}
+	
+	& when (@color = disable) {
+		color: @badge__color-disable-element-text;
+	}
+}
+
+.badge__color-text-light(@color) {
+	@badge__color-primary-element-text: @cl-color-base-primary-40;
+	@badge__color-secondary-element-text: @cl-color-base-secondary-50;
+	@badge__color-gray-element-text: @cl-color-base-gray-50;
+	@badge__color-point-element-text: @cl-color-base-point-40;
+	@badge__color-information-element-text: @cl-color-base-information-40;
+	@badge__color-success-element-text: @cl-color-base-success-40;
+	@badge__color-warning-element-text: @cl-color-base-warning-60;
+	@badge__color-danger-element-text: @cl-color-base-danger-50;
+	@badge__color-disable-element-text: @cl-color-base-gray-40;
+	
+	& when (@color = primary) {
+		color: @badge__color-primary-element-text;
+	}
+	
+	& when (@color = secondary) {
+		color: @badge__color-secondary-element-text;
+	}
+	
+	& when (@color = gray) {
+		color: @badge__color-gray-element-text;
+	}
+	
+	& when (@color = point) {
+		color: @badge__color-point-element-text;
+	}
+	
+	& when (@color = information) {
+		color: @badge__color-information-element-text;
+	}
+	
+	& when (@color = success) {
+		color: @badge__color-success-element-text;
+	}
+	
+	& when (@color = warning) {
+		color: @badge__color-warning-element-text;
+	}
+	
+	& when (@color = danger) {
+		color: @badge__color-danger-element-text;
+	}
+	
+	& when (@color = disable) {
+		color: @badge__color-disable-element-text;
+	}
+}
+
+
+/* ==========================================================================
+ 1. Base
+ ========================================================================== */
+
+/* --- 공통 --- */
+.badge {
+	border-radius: @badge__radius;
+	font-size: @badge__pc-font-size;
+	font-weight: @cl-font-weight-regular;
+	padding: 0 @badge__padding;
+	
+	@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+		// 767까지
+		font-size: @badge__mobile-font-size;
+	}
+	
+	&.large {
+		font-size: @badge__pc-font-size-large;
+		padding: 0 @badge__padding-large;
+		
+		@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+			// 767까지
+			font-size: @badge__mobile-font-size-large;
+		}
+	}
+}
+
+/* --- 일반 HTML --- */
+.badge:not(.cl-control) {
+	.flex-layout(@d: inline-flex, @jc: flex-start, @ai:center);
+	height: @badge__size-height;
+	
+	&.large {
+		height: @badge__size-height-large;
+	}
+}
+
+/* --- 컨트롤에 적용하는 경우 --- */
+.cl-control.badge {
+	line-height: (@badge__size-height - 2px);
+	
+	&.large {
+		line-height: (@badge__size-height-large - 2px);
+	}
+}
+
+/* --- SSTR(Styled String)로 적용하는 경우 --- */
+.cl-control .badge {
+}
+
+/* ==========================================================================
+ 2. Variants
+ ========================================================================== */
+
+/* --- 배지 유형 --- */
+
+
+/* --- 숫자형 --- */
+.badge.number {
+	border-radius: @badge__radius-max;
+	line-height: (@cl-size-height-4 - 2px);
+}
+
+/* --- 도트형 --- */
+.badge.dot {
+	//.square(@badge__dot-size);
+	border-radius: @badge__radius-max;
+	padding: @badge__dot-padding;
+	
+	.cl-text {
+		.sound-only();
+	}
+}
+
+/* --- 스타일 계층 --- */
+.badge {
+	// 아웃라인
+	&.outline-primary {
+		.badge__color-border(primary);
+		.badge__color-text(primary);
+	}
+	
+	&.outline-secondary {
+		.badge__color-border(secondary);
+		.badge__color-text(secondary);
+	}
+	
+	&.outline-gray {
+		.badge__color-border(gray);
+		.badge__color-text(gray);
+	}
+	
+	&.outline-point {
+		.badge__color-border(point);
+		.badge__color-text(point);
+	}
+	
+	&.outline-information {
+		.badge__color-border(information);
+		.badge__color-text(information);
+	}
+	
+	&.outline-success {
+		.badge__color-border(success);
+		.badge__color-text(success);
+	}
+	
+	&.outline-warning {
+		.badge__color-border(warning);
+		.badge__color-text(warning);
+	}
+	
+	&.outline-danger {
+		.badge__color-border(danger);
+		.badge__color-text(danger);
+	}
+	
+	&.outline-disable {
+		.badge__color-border(disable);
+		.badge__color-text(disable);
+	}
+	
+	// 솔리드
+	&.bg-primary {
+		.badge__color-background(primary);
+		.badge__color-border(primary);
+	}
+	
+	&.bg-secondary {
+		.badge__color-background(secondary);
+		.badge__color-border(secondary);
+	}
+	
+	&.bg-gray {
+		.badge__color-background(gray);
+		.badge__color-border(gray);
+	}
+	
+	&.bg-point {
+		.badge__color-background(point);
+		.badge__color-border(point);
+	}
+	
+	&.bg-information {
+		.badge__color-background(information);
+		.badge__color-border(information);
+	}
+	
+	&.bg-success {
+		.badge__color-background(success);
+		.badge__color-border(success);
+	}
+	
+	&.bg-warning {
+		.badge__color-background(warning);
+		.badge__color-border(warning);
+	}
+	
+	&.bg-danger {
+		.badge__color-background(danger);
+		.badge__color-border(danger);
+	}
+	
+	&.bg-disable {
+		.badge__color-background(disable);
+		.badge__color-border(disable);
+	}
+	
+	// 소프트
+	&.bg-light-primary {
+		.badge__color-background-light(primary);
+		.badge__color-border(primary);
+		.badge__color-text(primary);
+	}
+	
+	&.bg-light-secondary {
+		.badge__color-background-light(secondary);
+		.badge__color-border(secondary);
+		.badge__color-text(secondary);
+	}
+	
+	&.bg-light-gray {
+		.badge__color-background-light(gray);
+		.badge__color-border(gray);
+		.badge__color-text(gray);
+	}
+	
+	&.bg-light-point {
+		.badge__color-background-light(point);
+		.badge__color-border(point);
+		.badge__color-text(point);
+	}
+	
+	&.bg-light-information {
+		.badge__color-background-light(information);
+		.badge__color-border(information);
+		.badge__color-text(information);
+	}
+	
+	&.bg-light-success {
+		.badge__color-background-light(success);
+		.badge__color-border(success);
+		.badge__color-text(success);
+	}
+	
+	&.bg-light-warning {
+		.badge__color-background-light(warning);
+		.badge__color-border(warning);
+		.badge__color-text(warning);
+	}
+	
+	&.bg-light-danger {
+		.badge__color-background-light(danger);
+		.badge__color-border(danger);
+		.badge__color-text(danger);
+	}
+	
+	&.bg-light-disable {
+		.badge__color-background-light(disable);
+		.badge__color-border(disable);
+		.badge__color-text(disable);
+	}
+	
+	// 라인
+	&.line-primary {
+		.badge__color-background-light(primary);
+		.badge__color-border-light(primary);
+		.badge__color-text-light(primary);
+	}
+	
+	&.line-secondary {
+		.badge__color-background-light(secondary);
+		.badge__color-border-light(secondary);
+		.badge__color-text-light(secondary);
+	}
+	
+	&.line-gray {
+		.badge__color-background-light(gray);
+		.badge__color-border-light(gray);
+		.badge__color-text-light(gray);
+	}
+	
+	&.line-point {
+		.badge__color-background-light(point);
+		.badge__color-border-light(point);
+		.badge__color-text-light(point);
+	}
+	
+	&.line-information {
+		.badge__color-background-light(information);
+		.badge__color-border-light(information);
+		.badge__color-text-light(information);
+	}
+	
+	&.line-success {
+		.badge__color-background-light(success);
+		.badge__color-border-light(success);
+		.badge__color-text-light(success);
+	}
+	
+	&.line-warning {
+		.badge__color-background-light(warning);
+		.badge__color-border-light(warning);
+		.badge__color-text-light(warning);
+	}
+	
+	&.line-danger {
+		.badge__color-background-light(danger);
+		.badge__color-border-light(danger);
+		.badge__color-text-light(danger);
+	}
+	
+	&.line-disable {
+		.badge__color-background-light(disable);
+		.badge__color-border-light(disable);
+		.badge__color-text-light(disable);
+	}
+}
+
+/* ==========================================================================
+ 3. Mode
+ ========================================================================== */
+
+.color-mode(@mode: high-contrast) {
+	
+	/* 색상 변수 */
+	@cl-base-color-text-inverse-static: #ffffff;
+	
+	@badge__color-element: @cl-base-color-background-white;
+	@badge__color-element-lighter: @cl-base-color-element-primary-softer;
+	@badge__color-element-text: @cl-base-color-text-basic;
+	
+	@badge__color-primary-element: @cl-base-color-element-primary;
+	@badge__color-primary-element-lighter: fade(@cl-base-color-element-primary, 20%);
+	@badge__color-primary-element-text: @cl-color-base-primary-50;
+	
+	@badge__color-secondary-element: @cl-base-color-element-secondary;
+	@badge__color-secondary-element-lighter: fade(@cl-base-color-element-secondary, 20%);
+	@badge__color-secondary-element-text: @cl-base-color-text-secondary;
+	
+	@badge__color-gray-element: @cl-base-color-element-gray;
+	@badge__color-gray-element-lighter: fade(@cl-base-color-element-gray, 20%);
+	@badge__color-gray-element-text: @cl-base-color-text-soft;
+	
+	@badge__color-point-element: @cl-base-color-element-point;
+	@badge__color-point-element-lighter: fade(@cl-base-color-element-point, 20%);
+	@badge__color-point-element-text: @cl-base-color-text-point;
+	
+	@badge__color-information-element: @cl-base-color-element-information;
+	@badge__color-information-element-lighter: fade(@cl-base-color-element-information, 20%);
+	@badge__color-information-element-text: @cl-base-color-text-information;
+	
+	@badge__color-success-element: @cl-base-color-element-success;
+	@badge__color-success-element-lighter: fade(#49b87d, 20%);
+	@badge__color-success-element-text: @cl-base-color-text-success;
+	
+	@badge__color-warning-element: @cl-base-color-element-warning;
+	@badge__color-warning-element-lighter: fade(#f3a616, 25%);
+	@badge__color-warning-element-text: @cl-base-color-text-warning;
+	
+	@badge__color-danger-element: @cl-base-color-element-danger;
+	@badge__color-danger-element-lighter: fade(#e65555, 35%);
+	@badge__color-danger-element-text: @cl-base-color-text-danger;
+	
+	@badge__color-disable-element: @cl-base-color-element-disabled-bold;
+	@badge__color-disable-element-lighter: fade(@cl-base-color-element-disabled-bold, 20%);
+	@badge__color-disable-element-text: @cl-base-color-text-disabled-on;
+
+//	.badge__color-border-light(@color) {
+//		
+//		/* --- 색상 변수 --- */
+//		@badge__color-primary-element: fade(@cl-base-color-element-primary, 20%);
+//		@badge__color-secondary-element: fade(@cl-base-color-element-secondary, 20%);
+//		@badge__color-gray-element: fade(@cl-base-color-element-gray, 20%);
+//		@badge__color-point-element: fade(@cl-base-color-element-point, 20%);
+//		@badge__color-information-element: fade(@cl-base-color-element-information, 20%);
+//		@badge__color-success-element: fade(#49b87d, 20%);
+//		@badge__color-warning-element: fade(#f3a616, 20%);
+//		@badge__color-danger-element: fade(#e65555, 30%);
+//		@badge__color-disable-element: fade(@cl-base-color-element-disabled-bold, 20%);
+//		
+//		& when (@color = primary) {
+//			border-color: @badge__color-primary-element;
+//		}
+//		
+//		& when (@color = secondary) {
+//			border-color: @badge__color-secondary-element;
+//		}
+//		
+//		& when (@color = gray) {
+//			border-color: @badge__color-gray-element;
+//		}
+//		
+//		& when (@color = point) {
+//			border-color: @badge__color-point-element;
+//		}
+//		
+//		& when (@color = information) {
+//			border-color: @badge__color-information-element;
+//		}
+//		
+//		& when (@color = success) {
+//			border-color: @badge__color-success-element;
+//		}
+//		
+//		& when (@color = warning) {
+//			border-color: @badge__color-warning-element;
+//		}
+//		
+//		& when (@color = danger) {
+//			border-color: @badge__color-danger-element;
+//		}
+//		
+//		& when (@color = disable) {
+//			border-color: @badge__color-disable-element;
+//		}
+//	}
+	
+//	.badge__color-text-light(@color) {
+//		@badge__color-primary-element-text: @cl-color-base-primary-40;
+//		@badge__color-secondary-element-text: @cl-color-base-secondary-50;
+//		@badge__color-gray-element-text: @cl-color-base-gray-50;
+//		@badge__color-point-element-text: @cl-color-base-point-40;
+//		@badge__color-information-element-text: @cl-color-base-information-40;
+//		@badge__color-success-element-text: fade(#8de8be, 80%);
+//		@badge__color-warning-element-text: #ffc75d;
+//		@badge__color-danger-element-text: #ffaaaa;
+//		@badge__color-disable-element-text: @cl-color-base-gray-40;
+//		
+//		& when (@color = primary) {
+//			color: @badge__color-primary-element-text;
+//		}
+//		
+//		& when (@color = secondary) {
+//			color: @badge__color-secondary-element-text;
+//		}
+//		
+//		& when (@color = gray) {
+//			color: @badge__color-gray-element-text;
+//		}
+//		
+//		& when (@color = point) {
+//			color: @badge__color-point-element-text;
+//		}
+//		
+//		& when (@color = information) {
+//			color: @badge__color-information-element-text;
+//		}
+//		
+//		& when (@color = success) {
+//			color: @badge__color-success-element-text;
+//		}
+//		
+//		& when (@color = warning) {
+//			color: @badge__color-warning-element-text;
+//		}
+//		
+//		& when (@color = danger) {
+//			color: @badge__color-danger-element-text;
+//		}
+//		
+//		& when (@color = disable) {
+//			color: @badge__color-disable-element-text;
+//		}
+//	}
+
+	/* --- 스타일 계층 --- */
+	.badge {
+		// 아웃라인
+		&.outline-primary {
+			.badge__color-border(primary);
+			.badge__color-text(primary);
+		}
+		
+		&.outline-secondary {
+			.badge__color-border(secondary);
+			.badge__color-text(secondary);
+		}
+		
+		&.outline-gray {
+			.badge__color-border(gray);
+			.badge__color-text(gray);
+		}
+		
+		&.outline-point {
+			.badge__color-border(point);
+			.badge__color-text(point);
+		}
+		
+		&.outline-information {
+			.badge__color-border(information);
+			.badge__color-text(information);
+		}
+		
+		&.outline-success {
+			.badge__color-border(success);
+			.badge__color-text(success);
+		}
+		
+		&.outline-warning {
+			.badge__color-border(warning);
+			.badge__color-text(warning);
+		}
+		
+		&.outline-danger {
+			.badge__color-border(danger);
+			.badge__color-text(danger);
+		}
+		
+		&.outline-disable {
+			.badge__color-border(disable);
+			.badge__color-text(disable);
+		}
+		
+		// 솔리드
+		&.bg-primary {
+			.badge__color-background(primary);
+			.badge__color-border(primary);
+		}
+		
+		&.bg-secondary {
+			.badge__color-background(secondary);
+			.badge__color-border(secondary);
+		}
+		
+		&.bg-gray {
+			.badge__color-background(gray);
+			.badge__color-border(gray);
+		}
+		
+		&.bg-point {
+			.badge__color-background(point);
+			.badge__color-border(point);
+		}
+		
+		&.bg-information {
+			.badge__color-background(information);
+			.badge__color-border(information);
+		}
+		
+		&.bg-success {
+			.badge__color-background(success);
+			.badge__color-border(success);
+		}
+		
+		&.bg-warning {
+			.badge__color-background(warning);
+			.badge__color-border(warning);
+		}
+		
+		&.bg-danger {
+			.badge__color-background(danger);
+			.badge__color-border(danger);
+		}
+		
+		&.bg-disable {
+			.badge__color-background(disable);
+			.badge__color-border(disable);
+		}
+		
+		// 소프트
+		&.bg-light-primary {
+			.badge__color-background-light(primary);
+//			.badge__color-border(primary);
+			border: none;
+			.badge__color-text(primary);
+		}
+		
+		&.bg-light-secondary {
+			.badge__color-background-light(secondary);
+//			.badge__color-border(secondary);
+			border: none;
+			.badge__color-text(secondary);
+		}
+		
+		&.bg-light-gray {
+			.badge__color-background-light(gray);
+//			.badge__color-border(gray);
+			border: none;
+			.badge__color-text(gray);
+		}
+		
+		&.bg-light-point {
+			.badge__color-background-light(point);
+//			.badge__color-border(point);
+			border: none;
+			.badge__color-text(point);
+		}
+		
+		&.bg-light-information {
+			.badge__color-background-light(information);
+//			.badge__color-border(information);
+			border: none;
+			.badge__color-text(information);
+		}
+		
+		&.bg-light-success {
+			.badge__color-background-light(success);
+//			.badge__color-border(success);
+			border: none;
+			.badge__color-text(success);
+		}
+		
+		&.bg-light-warning {
+			.badge__color-background-light(warning);
+//			.badge__color-border(warning);
+			border: none;
+			.badge__color-text(warning);
+		}
+		
+		&.bg-light-danger {
+			.badge__color-background-light(danger);
+//			.badge__color-border(danger);
+			border: none;
+			.badge__color-text(danger);
+		}
+		
+		&.bg-light-disable {
+			.badge__color-background-light(disable);
+//			.badge__color-border(disable);
+			border: none;
+			.badge__color-text(disable);
+		}
+		
+		// 라인
+		&.line-primary {
+			.badge__color-background-light(primary);
+			.badge__color-border-light(primary);
+			.badge__color-text-light(primary);
+		}
+		
+		&.line-secondary {
+			.badge__color-background-light(secondary);
+			.badge__color-border-light(secondary);
+			.badge__color-text-light(secondary);
+		}
+		
+		&.line-gray {
+			.badge__color-background-light(gray);
+			.badge__color-border-light(gray);
+			.badge__color-text-light(gray);
+		}
+		
+		&.line-point {
+			.badge__color-background-light(point);
+			.badge__color-border-light(point);
+			.badge__color-text-light(point);
+		}
+		
+		&.line-information {
+			.badge__color-background-light(information);
+			.badge__color-border-light(information);
+			.badge__color-text-light(information);
+		}
+		
+		&.line-success {
+			.badge__color-background-light(success);
+//			.badge__color-border-light(success);
+//			.badge__color-text-light(success);
+			border-color: fade(#49b87d, 20%);
+			color: fade(#8de8be, 80%);
+		}
+		
+		&.line-warning {
+			.badge__color-background-light(warning);
+//			.badge__color-border-light(warning);
+//			.badge__color-text-light(warning);
+			border-color: fade(#f3a616, 20%);
+			color: #ffc75d;
+		}
+		
+		&.line-danger {
+			.badge__color-background-light(danger);
+//			.badge__color-border-light(danger);
+//			.badge__color-text-light(danger);
+			border-color: fade(#e65555, 30%);
+			color: #ffaaaa;
+		}
+		
+		&.line-disable {
+			.badge__color-background-light(disable);
+			.badge__color-border-light(disable);
+			.badge__color-text-light(disable);
+		}
+	}
+}

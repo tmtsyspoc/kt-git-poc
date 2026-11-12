@@ -1,0 +1,570 @@
+/**
+ * ============================================================================
+ * @file      variables.part.less
+ * @desc      CORE-UI 컴포넌트 토큰 매핑
+ * @rule      
+ * 1. 하드 코딩 금지
+ *  - 절대 수치를 직접 입력하는 것을 금지함
+ * 2. 명명규칙
+ *  - @cl-[요소]-[속성]-[상태] 형식으로 작성 ( 또는 @cl-[테마]-[요소]-[속성]-[상태] )
+ * @contents
+ * 1. 공통
+ * 2. 기본
+ * 3. 고대비
+ * ============================================================================
+ */
+ 
+ /*!
+ * ============================================================================
+ * @copyright
+ * - 본 저작물은 행정안전부에서 2024년 작성하여 공공누리 제1유형으로 개방한 ‘범정부 UI/UX 디자인시스템(KRDS)’을 이용하였으며,
+ *   해당 저작물은 ‘KRDS 디자인시스템 홈페이지(www.krds.go.kr)에서 무료로 다운받으실 수 있습니다.
+ * ============================================================================
+ */
+
+@import "tokens.part.less";
+
+/* ==========================================================================
+ 1. 공통
+ ========================================================================== */
+ 
+@cl-contents-size: @contents-size;
+@cl-contents-padding-x: @contents-padding-x-pc;
+@cl-contents-wrap-size: @contents-wrap-size;
+
+@cl-transition-base: @transition-base;
+@cl-transition-fade: @transition-fade;
+@cl-transition-collapse: @transition-collapse;
+@cl-transition-collapse-width: @transition-collapse-width;
+
+@cl-focus-ring: @cl-base-color-border-primary;
+@cl-focus-ring-inverse: @cl-high-contrast-color-border-inverse;
+
+@cl-box-shadow-outline: 0 0 0 4px @cl-focus-ring;
+@cl-box-shadow-outline-inset: inset 0 0 0 2px @cl-focus-ring;
+
+/* 12 */
+@cl-icon--size-xsmall: @icon-size-xsmall;
+/* 16 */
+@cl-icon--size-small: @icon-size-small;
+/* 20 */
+@cl-icon--size-medium: @icon-size-medium;
+/* 24 */
+@cl-icon--size-large: @icon-size-large;
+/* 36 */
+@cl-icon--size-xlarge: @icon-size-xlarge;
+
+/* ==========================================================================
+ 2. 기본
+ ========================================================================== */
+
+/* --- 표면 색상 --- */
+@cl-base-color-surface-gray-softer: @cl-color-base-gray-5;
+@cl-base-color-surface-gray-soft: @cl-color-base-gray-10;
+@cl-base-color-surface-disabled: @cl-color-base-gray-20;
+@cl-base-color-surface-primary-softer: @cl-color-base-primary-5;
+@cl-base-color-surface-primary-soft: @cl-color-base-primary-10;
+@cl-base-color-surface-secondary-softer: @cl-color-base-secondary-5;
+@cl-base-color-surface-secondary-soft: @cl-color-base-secondary-10;
+@cl-base-color-surface-information-softer: @cl-color-base-information-5;
+@cl-base-color-surface-information-soft: @cl-color-base-information-10;
+@cl-base-color-surface-success-softer: @cl-color-base-success-5;
+@cl-base-color-surface-success-soft: @cl-color-base-success-10;
+@cl-base-color-surface-warning-softer: @cl-color-base-warning-5;
+@cl-base-color-surface-warning-soft: @cl-color-base-warning-10;
+@cl-base-color-surface-danger-softer: @cl-color-base-danger-5;
+@cl-base-color-surface-danger-soft: @cl-color-base-danger-10;
+@cl-base-color-surface-point-softer: @cl-color-base-point-5;
+@cl-base-color-surface-point-soft: @cl-color-base-point-10;
+@cl-base-color-surface-white: @cl-color-base-gray-0;
+@cl-base-color-surface-inverse: @cl-color-base-gray-90;
+@cl-base-color-surface-white-static: @cl-color-base-gray-0;
+@cl-base-color-surface-inverse-static: @cl-color-base-gray-90;
+
+/* --- 배경 색상 --- */
+@cl-base-color-background-white: @cl-color-base-gray-0;
+@cl-base-color-background-inverse: @cl-color-base-gray-90;
+@cl-base-color-background-gray-soft: @cl-color-base-gray-10;
+@cl-base-color-background-gray-softer: @cl-color-base-gray-5;
+@cl-base-color-background-dim: @cl-color-base-alpha-black50;
+
+/* --- 테두리 색상 --- */
+@cl-base-color-border-gray: #cccccc;
+@cl-base-color-border-gray-bolder: @cl-color-base-gray-60;
+@cl-base-color-border-gray-bold: @cl-color-base-gray-70;
+@cl-base-color-border-gray-soft: @cl-color-base-gray-30;
+@cl-base-color-border-gray-softer: @cl-color-base-gray-30;
+@cl-base-color-border-primary: @cl-color-base-primary-50;
+@cl-base-color-border-primary-soft: @cl-color-base-primary-10;
+@cl-base-color-border-secondary: @cl-color-base-secondary-70;
+@cl-base-color-border-secondary-soft: @cl-color-base-secondary-10;
+@cl-base-color-border-information: @cl-color-base-information-50;
+@cl-base-color-border-information-soft: @cl-color-base-information-10;
+@cl-base-color-border-success: @cl-color-base-success-50;
+@cl-base-color-border-success-soft: @cl-color-base-success-10;
+@cl-base-color-border-warning: @cl-color-base-warning-50;
+@cl-base-color-border-warning-soft: @cl-color-base-warning-10;
+@cl-base-color-border-danger: @cl-color-base-danger-50;
+@cl-base-color-border-danger-soft: @cl-color-base-danger-10;
+@cl-base-color-border-point: @cl-color-base-point-50;
+@cl-base-color-border-point-soft: @cl-color-base-point-10;
+@cl-base-color-border-inverse: @cl-color-base-gray-0;
+@cl-base-color-border-transparency: @cl-color-base-alpha-black0;
+@cl-base-color-border-disabled: @cl-color-base-gray-30;
+
+/* --- 구분선 색상 --- */
+@cl-base-color-divider-gray: @cl-color-base-gray-40;
+@cl-base-color-divider-gray-bold: @cl-color-base-gray-70;
+@cl-base-color-divider-gray-soft: @cl-color-base-gray-20;
+@cl-base-color-divider-primary: @cl-color-base-primary-50;
+@cl-base-color-divider-primary-soft: @cl-color-base-primary-10;
+@cl-base-color-divider-secondary: @cl-color-base-secondary-70;
+@cl-base-color-divider-secondary-soft: @cl-color-base-secondary-10;
+@cl-base-color-divider-information: @cl-color-base-information-50;
+@cl-base-color-divider-success: @cl-color-base-success-50;
+@cl-base-color-divider-warning: @cl-color-base-warning-50;
+@cl-base-color-divider-danger: @cl-color-base-danger-50;
+@cl-base-color-divider-point: @cl-color-base-point-50;
+@cl-base-color-divider-inverse: @cl-color-base-gray-0;
+
+/* --- 텍스트 색상 --- */
+@cl-base-color-text-basic: @cl-color-base-gray-80;
+@cl-base-color-text-bolder: @cl-color-base-gray-100;
+@cl-base-color-text-bold: @cl-color-base-gray-95;
+@cl-base-color-text-soft: @cl-color-base-gray-70;
+@cl-base-color-text-softer: @cl-color-base-gray-60;
+@cl-base-color-text-disabled: @cl-color-base-gray-40;
+@cl-base-color-text-disabled-on: @cl-color-base-gray-70;
+@cl-base-color-text-primary: @cl-color-kt-ink;
+@cl-base-color-text-secondary: @cl-color-base-secondary-80;
+@cl-base-color-text-information: @cl-color-base-information-50;
+@cl-base-color-text-success: @cl-color-base-success-60;
+@cl-base-color-text-warning: @cl-color-base-warning-70;
+@cl-base-color-text-danger: @cl-color-base-danger-60;
+@cl-base-color-text-point: @cl-color-base-point-60;
+@cl-base-color-text-inverse: @cl-color-base-gray-0;
+@cl-base-color-text-inverse-static: @cl-color-base-gray-0;
+
+/* --- 아이콘 색상 --- */
+@cl-base-color-icon-gray: @cl-color-base-gray-80;
+@cl-base-color-icon-gray-fill: @cl-color-base-gray-60;
+@cl-base-color-icon-gray-bold: @cl-color-base-gray-100;
+@cl-base-color-icon-gray-soft: @cl-color-base-gray-70;
+@cl-base-color-icon-disabled: @cl-color-base-gray-40;
+@cl-base-color-icon-disabled-on: @cl-color-base-gray-70;
+@cl-base-color-icon-primary: @cl-color-base-primary-50;
+@cl-base-color-icon-secondary: @cl-color-base-secondary-80;
+@cl-base-color-icon-information: @cl-color-base-information-50;
+@cl-base-color-icon-success: @cl-color-base-success-50;
+@cl-base-color-icon-warning: @cl-color-base-warning-50;
+@cl-base-color-icon-danger: @cl-color-base-danger-50;
+@cl-base-color-icon-point: @cl-color-base-point-50;
+@cl-base-color-icon-inverse: @cl-color-base-gray-0;
+@cl-base-color-icon-gray-staic: @cl-color-base-gray-80;
+@cl-base-color-icon-primary-staic: @cl-color-base-primary-50;
+@cl-base-color-icon-secondary-staic: @cl-color-base-secondary-70;
+@cl-base-color-icon-information-staic: @cl-color-base-information-50;
+@cl-base-color-icon-success-staic: @cl-color-base-success-50;
+@cl-base-color-icon-warning-staic: @cl-color-base-warning-50;
+@cl-base-color-icon-danger-staic: @cl-color-base-danger-50;
+@cl-base-color-icon-point-staic: @cl-color-base-point-50;
+@cl-base-color-icon-inverse-staic: @cl-color-base-gray-0;
+
+/* --- 링크 색상 --- */
+@cl-base-color-link-basic: @cl-color-base-primary-50;
+@cl-base-color-link-hover: @cl-color-base-primary-60;
+@cl-base-color-link-pressed: @cl-color-base-primary-70;
+@cl-base-color-link-visited: #5917b8;
+
+/* --- 버튼 색상 --- */
+@cl-base-color-button-primary-fill: @cl-color-kt-ink;
+@cl-base-color-button-primary-fill-hover: @cl-color-kt-ink-hover;
+@cl-base-color-button-primary-fill-focus: @cl-color-kt-ink;
+@cl-base-color-button-primary-fill-pressed: @cl-color-kt-ink-pressed;
+@cl-base-color-button-primary-border: @cl-color-kt-ink;
+@cl-base-color-button-primary-border-focus: @cl-color-kt-ink-pressed;
+@cl-base-color-button-secondary-fill: @cl-color-base-alpha-white100;
+@cl-base-color-button-secondary-fill-hover: @cl-color-base-alpha-white100;
+@cl-base-color-button-secondary-fill-focus: @cl-color-base-alpha-white100;
+@cl-base-color-button-secondary-fill-pressed: @cl-color-base-alpha-white100;
+@cl-base-color-button-secondary-border: #C4C9D0;
+@cl-base-color-button-secondary-border-hover: @cl-color-kt-ink;
+@cl-base-color-button-secondary-border-pressed: @cl-color-kt-ink-pressed;
+@cl-base-color-button-secondary-text: @cl-color-kt-ink;
+@cl-base-color-button-secondary-text-hover: @cl-color-kt-ink;
+@cl-base-color-button-secondary-text-focus: @cl-color-kt-ink;
+@cl-base-color-button-secondary-text-pressed: @cl-color-kt-ink-pressed;
+@cl-base-color-button-tertiary-fill: @cl-color-base-alpha-white100;
+@cl-base-color-button-tertiary-fill-hover: @cl-color-base-alpha-white100;
+@cl-base-color-button-tertiary-fill-focus: @cl-color-base-alpha-white100;
+@cl-base-color-button-tertiary-fill-pressed: @cl-color-base-alpha-white100;
+@cl-base-color-button-tertiary-border: #cccccc;
+@cl-base-color-button-tertiary-border-hover: @cl-color-base-gray-80;
+@cl-base-color-button-tertiary-border-focus: @cl-color-base-gray-80;
+@cl-base-color-button-tertiary-border-pressed: @cl-color-base-gray-80;
+@cl-base-color-button-tertiary-text: @cl-color-base-gray-60;
+@cl-base-color-button-tertiary-text-hover: @cl-color-base-gray-90;
+@cl-base-color-button-tertiary-text-pressed: @cl-color-base-gray-90;
+@cl-base-color-button-disabled-fill: @cl-color-base-gray-30;
+@cl-base-color-button-disabled-border: @cl-base-color-button-disabled-fill;
+@cl-base-color-button-disabled-text: @cl-color-base-gray-60;
+@cl-base-color-button-text-fill: @cl-color-base-alpha-white0;
+@cl-base-color-button-text-fill-hover: @cl-color-base-secondary-5;
+@cl-base-color-button-text-fill-pressed: @cl-color-base-secondary-10;
+@cl-base-color-button-text-border: @cl-color-base-alpha-black0;
+
+/* --- 컨트롤 공통 색상 --- */
+@cl-base-color-element-disabled-bold: @cl-color-base-gray-40;
+@cl-base-color-element-disabled-soft: @cl-color-base-gray-20;
+@cl-base-color-element-gray: @cl-color-base-gray-70;
+@cl-base-color-element-gray-soft: @cl-color-base-gray-10;
+@cl-base-color-element-gray-softer: @cl-color-base-gray-5;
+@cl-base-color-element-primary: @cl-color-kt-ink;
+@cl-base-color-element-primary-soft: @cl-color-base-primary-10;
+@cl-base-color-element-primary-softer: @cl-color-base-primary-5;
+@cl-base-color-element-secondary: @cl-color-base-secondary-70;
+@cl-base-color-element-secondary-soft: @cl-color-base-secondary-10;
+@cl-base-color-element-secondary-softer: @cl-color-base-secondary-5;
+@cl-base-color-element-information: @cl-color-base-information-50;
+@cl-base-color-element-information-soft: @cl-color-base-information-10;
+@cl-base-color-element-information-softer: @cl-color-base-information-5;
+@cl-base-color-element-success: @cl-color-base-success-50;
+@cl-base-color-element-success-soft: @cl-color-base-success-10;
+@cl-base-color-element-success-softer: @cl-color-base-success-5;
+@cl-base-color-element-warning: @cl-color-base-warning-50;
+@cl-base-color-element-warning-soft: @cl-color-base-warning-10;
+@cl-base-color-element-warning-softer: @cl-color-base-warning-5;
+@cl-base-color-element-danger: @cl-color-base-danger-50;
+@cl-base-color-element-danger-soft: @cl-color-base-danger-10;
+@cl-base-color-element-danger-softer: @cl-color-base-danger-5;
+@cl-base-color-element-point: @cl-color-base-point-50;
+@cl-base-color-element-point-soft: @cl-color-base-point-10;
+@cl-base-color-element-point-softer: @cl-color-base-point-5;
+@cl-base-color-element-inverse: @cl-color-base-gray-0;
+@cl-base-color-element-inverse-static: @cl-color-base-gray-0;
+
+/* --- 액션 색상 --- */
+@cl-base-color-action-white: @cl-color-base-gray-0;
+@cl-base-color-action-primary: @cl-color-base-alpha-white0;
+@cl-base-color-action-primary-hover: @cl-color-base-primary-10;
+@cl-base-color-action-primary-pressed: @cl-color-base-primary-20;
+@cl-base-color-action-primary-active: @cl-color-base-primary-50;
+@cl-base-color-action-primary-selected: @cl-color-kt-ink-hover;
+@cl-base-color-action-secondary: @cl-color-base-alpha-white0;
+@cl-base-color-action-secondary-hover: @cl-color-base-secondary-5;
+@cl-base-color-action-secondary-pressed: @cl-color-base-secondary-10;
+@cl-base-color-action-secondary-active: @cl-color-base-secondary-70;
+@cl-base-color-action-secondary-selected: @cl-color-base-secondary-5;
+@cl-base-color-action-secondary-on: @cl-color-base-alpha-white0;
+@cl-base-color-action-secondary-on-hover: @cl-color-base-gray-0;
+@cl-base-color-action-secondary-on-pressed: @cl-color-base-secondary-10;
+@cl-base-color-action-secondary-on-active: @cl-color-base-gray-5;
+@cl-base-color-action-secondary-on-selected: @cl-color-base-gray-0;
+@cl-base-color-action-disabled: @cl-color-base-gray-20;
+
+/* --- 인풋 색상 --- */
+@cl-base-color-input-surface: @cl-color-base-gray-0;
+@cl-base-color-input-surface-disabled: @cl-color-base-gray-20;
+@cl-base-color-input-border:  @cl-color-base-gray-30;
+@cl-base-color-input-border-disabled:  @cl-color-base-gray-30;
+@cl-base-color-input-border-active:  @cl-color-kt-ink;
+@cl-base-color-input-border-error: #e44242;
+
+/* --- 그래픽 요소 색상 --- */
+@cl-base-color-graphic-basic-softer: @cl-color-base-graphic-10;
+@cl-base-color-graphic-basic-soft: @cl-color-base-graphic-30;
+@cl-base-color-graphic-basic: @cl-color-base-graphic-50;
+@cl-base-color-graphic-basic-bold: @cl-color-base-graphic-70;
+@cl-base-color-graphic-basic-bolder: @cl-color-base-graphic-90;
+@cl-base-color-graphic-point-softer: @cl-color-base-point-5;
+@cl-base-color-graphic-point-soft: @cl-color-base-point-10;
+@cl-base-color-graphic-point: @cl-color-base-point-20;
+@cl-base-color-graphic-point-bold: @cl-color-base-point-40;
+@cl-base-color-graphic-point-bolder: @cl-color-base-point-70;
+@cl-base-color-graphic-brand: @cl-color-base-primary-50;
+
+/* --- 알파 색상 --- */
+@cl-base-color-alpha-basic100: @cl-color-base-alpha-white100;
+@cl-base-color-alpha-basic75: @cl-color-base-alpha-white75;
+@cl-base-color-alpha-basic50: @cl-color-base-alpha-white50;
+@cl-base-color-alpha-basic25: @cl-color-base-alpha-white25;
+@cl-base-color-alpha-basic10: @cl-color-base-alpha-white10;
+@cl-base-color-alpha-basic5: @cl-color-base-alpha-white5;
+@cl-base-color-alpha-basic0: @cl-color-base-alpha-white0;
+@cl-base-color-alpha-inverse100: @cl-color-base-alpha-black100;
+@cl-base-color-alpha-inverse75: @cl-color-base-alpha-black75;
+@cl-base-color-alpha-inverse50: @cl-color-base-alpha-black50;
+@cl-base-color-alpha-inverse25: @cl-color-base-alpha-black25;
+@cl-base-color-alpha-inverse10: @cl-color-base-alpha-black10;
+@cl-base-color-alpha-inverse5: @cl-color-base-alpha-black5;
+@cl-base-color-alpha-inverse0: @cl-color-base-alpha-black0;
+
+/* --- 그림자 색상 --- */
+@cl-base-color-alpha-shadow1: @cl-color-base-alpha-black5;
+@cl-base-color-alpha-shadow2: @cl-color-base-alpha-black10;
+@cl-base-color-alpha-shadow3: fade(@cl-color-base-gray-100, 12%);
+@cl-base-color-alpha-shadow4: fade(@cl-color-base-secondary-70, 4%);
+@cl-base-color-alpha-shadow5: fade(@cl-color-base-secondary-70, 8%);
+
+/* --- 테두리 두께 수치 --- */
+@cl-base-border-width-variable-regular: 1px;
+@cl-base-border-width-variable-medium: 2px;
+@cl-base-border-width-static-regular: 1px;
+@cl-base-border-width-static-medium: 2px;
+
+
+/* ==========================================================================
+ 3. 고대비
+ ========================================================================== */
+
+/* --- 표면 색상 --- */
+@cl-high-contrast-color-surface-gray-softer: @cl-color-high-contrast-gray-95;
+@cl-high-contrast-color-surface-gray-soft: @cl-color-high-contrast-gray-90;
+@cl-high-contrast-color-surface-disabled: @cl-color-high-contrast-gray-70;
+@cl-high-contrast-color-surface-primary-softer: @cl-color-high-contrast-primary-95;
+@cl-high-contrast-color-surface-primary-soft: @cl-color-high-contrast-primary-90;
+@cl-high-contrast-color-surface-secondary-softer: @cl-color-high-contrast-secondary-95;
+@cl-high-contrast-color-surface-secondary-soft: @cl-color-high-contrast-secondary-90;
+@cl-high-contrast-color-surface-information-softer: @cl-color-high-contrast-information-95;
+@cl-high-contrast-color-surface-information-soft: @cl-color-high-contrast-information-90;
+@cl-high-contrast-color-surface-success-softer: @cl-color-high-contrast-success-95;
+@cl-high-contrast-color-surface-success-soft: @cl-color-high-contrast-success-90;
+@cl-high-contrast-color-surface-warning-softer: @cl-color-high-contrast-warning-95;
+@cl-high-contrast-color-surface-warning-soft: @cl-color-high-contrast-warning-90;
+@cl-high-contrast-color-surface-danger-softer: @cl-color-high-contrast-danger-95;
+@cl-high-contrast-color-surface-danger-soft: @cl-color-high-contrast-danger-90;
+@cl-high-contrast-color-surface-point-softer: @cl-color-high-contrast-point-95;
+@cl-high-contrast-color-surface-point-soft: @cl-color-high-contrast-point-90;
+@cl-high-contrast-color-surface-white: @cl-color-high-contrast-gray-0;
+@cl-high-contrast-color-surface-inverse: @cl-color-high-contrast-gray-10;
+@cl-high-contrast-color-surface-white-static: @cl-color-high-contrast-gray-0;
+@cl-high-contrast-color-surface-inverse-static: @cl-color-high-contrast-gray-90;
+
+/* --- 배경 색상 --- */
+@cl-high-contrast-color-background-white: @cl-color-high-contrast-gray-100;
+@cl-high-contrast-color-background-inverse: @cl-color-high-contrast-gray-10;
+@cl-high-contrast-color-background-gray-soft: @cl-color-high-contrast-gray-90;
+@cl-high-contrast-color-background-gray-softer: @cl-color-high-contrast-gray-95;
+@cl-high-contrast-color-background-dim: @cl-color-high-contrast-alpha-black50;
+
+/* --- 테두리 색상 --- */
+@cl-high-contrast-color-border-gray: @cl-color-high-contrast-gray-70;
+@cl-high-contrast-color-border-gray-bolder: @cl-color-high-contrast-gray-40;
+@cl-high-contrast-color-border-gray-bold: @cl-color-high-contrast-gray-10;
+@cl-high-contrast-color-border-gray-soft: @cl-color-high-contrast-gray-80;
+@cl-high-contrast-color-border-gray-softer: @cl-color-high-contrast-gray-20;
+@cl-high-contrast-color-border-primary: @cl-color-high-contrast-primary-50;
+@cl-high-contrast-color-border-primary-soft: @cl-color-high-contrast-primary-90;
+@cl-high-contrast-color-border-secondary: @cl-color-high-contrast-secondary-70;
+@cl-high-contrast-color-border-secondary-soft: @cl-color-high-contrast-secondary-90;
+@cl-high-contrast-color-border-information: @cl-color-high-contrast-information-50;
+@cl-high-contrast-color-border-information-soft: @cl-color-high-contrast-information-90;
+@cl-high-contrast-color-border-success: @cl-color-high-contrast-success-50;
+@cl-high-contrast-color-border-success-soft: @cl-color-high-contrast-success-90;
+@cl-high-contrast-color-border-warning: @cl-color-high-contrast-warning-50;
+@cl-high-contrast-color-border-warning-soft: @cl-color-high-contrast-warning-90;
+@cl-high-contrast-color-border-danger: @cl-color-high-contrast-danger-50;
+@cl-high-contrast-color-border-danger-soft: @cl-color-high-contrast-danger-90;
+@cl-high-contrast-color-border-point: @cl-color-high-contrast-point-50;
+@cl-high-contrast-color-border-point-soft: @cl-color-high-contrast-point-90;
+@cl-high-contrast-color-border-inverse: @cl-color-high-contrast-gray-0;
+@cl-high-contrast-color-border-transparency: @cl-color-high-contrast-alpha-white25;
+@cl-high-contrast-color-border-disabled: @cl-color-high-contrast-gray-70;
+
+/* --- 구분선 색상 --- */
+@cl-high-contrast-color-divider-gray: @cl-color-high-contrast-gray-70;
+@cl-high-contrast-color-divider-gray-bold: @cl-color-high-contrast-gray-50;
+@cl-high-contrast-color-divider-gray-soft: @cl-color-high-contrast-gray-80;
+@cl-high-contrast-color-divider-primary: @cl-color-high-contrast-primary-50;
+@cl-high-contrast-color-divider-primary-soft: @cl-color-high-contrast-primary-90;
+@cl-high-contrast-color-divider-secondary: @cl-color-high-contrast-secondary-70;
+@cl-high-contrast-color-divider-secondary-soft: @cl-color-high-contrast-secondary-90;
+@cl-high-contrast-color-divider-information: @cl-color-high-contrast-information-50;
+@cl-high-contrast-color-divider-success: @cl-color-high-contrast-success-50;
+@cl-high-contrast-color-divider-warning: @cl-color-high-contrast-warning-50;
+@cl-high-contrast-color-divider-danger: @cl-color-high-contrast-danger-50;
+@cl-high-contrast-color-divider-point: @cl-color-high-contrast-point-50;
+@cl-high-contrast-color-divider-inverse: @cl-color-high-contrast-gray-100;
+
+/* --- 텍스트 색상 --- */
+@cl-high-contrast-color-text-basic: @cl-color-high-contrast-gray-0;
+@cl-high-contrast-color-text-bolder: @cl-color-high-contrast-gray-0;
+@cl-high-contrast-color-text-bold: @cl-color-high-contrast-gray-5;
+@cl-high-contrast-color-text-soft: @cl-color-high-contrast-gray-20;
+@cl-high-contrast-color-text-softer: @cl-color-high-contrast-gray-30;
+@cl-high-contrast-color-text-disabled: @cl-color-high-contrast-gray-60;
+@cl-high-contrast-color-text-disabled-on: #999999;
+@cl-high-contrast-color-text-primary: @cl-color-high-contrast-primary-20;
+@cl-high-contrast-color-text-secondary: @cl-color-high-contrast-secondary-20;
+@cl-high-contrast-color-text-information: @cl-color-high-contrast-information-20;
+@cl-high-contrast-color-text-success: @cl-color-high-contrast-success-20;
+@cl-high-contrast-color-text-warning: @cl-color-high-contrast-warning-20;
+@cl-high-contrast-color-text-danger: @cl-color-high-contrast-danger-20;
+@cl-high-contrast-color-text-point: @cl-color-high-contrast-point-20;
+@cl-high-contrast-color-text-inverse: @cl-color-high-contrast-gray-90;
+@cl-high-contrast-color-text-inverse-static: @cl-color-high-contrast-gray-90;
+
+/* --- 아이콘 색상 --- */
+@cl-high-contrast-color-icon-gray: @cl-color-high-contrast-gray-5;
+@cl-high-contrast-color-icon-gray-fill: @cl-color-high-contrast-gray-70;
+@cl-high-contrast-color-icon-gray-bold: @cl-color-high-contrast-gray-0;
+@cl-high-contrast-color-icon-gray-soft: @cl-color-high-contrast-gray-30;
+@cl-high-contrast-color-icon-disabled: @cl-color-high-contrast-gray-60;
+@cl-high-contrast-color-icon-disabled-on: @cl-color-high-contrast-gray-50;
+@cl-high-contrast-color-icon-primary: @cl-color-high-contrast-primary-20;
+@cl-high-contrast-color-icon-secondary: @cl-color-high-contrast-secondary-20;
+@cl-high-contrast-color-icon-information: @cl-color-high-contrast-information-20;
+@cl-high-contrast-color-icon-success: @cl-color-high-contrast-success-20;
+@cl-high-contrast-color-icon-warning: @cl-color-high-contrast-warning-20;
+@cl-high-contrast-color-icon-danger: @cl-color-high-contrast-danger-20;
+@cl-high-contrast-color-icon-point: @cl-color-high-contrast-point-20;
+@cl-high-contrast-color-icon-inverse: @cl-color-high-contrast-gray-90;
+@cl-high-contrast-color-icon-gray-staic: @cl-color-high-contrast-gray-80;
+@cl-high-contrast-color-icon-primary-staic: @cl-color-high-contrast-primary-50;
+@cl-high-contrast-color-icon-secondary-staic: @cl-color-high-contrast-secondary-80;
+@cl-high-contrast-color-icon-information-staic: @cl-color-high-contrast-information-50;
+@cl-high-contrast-color-icon-success-staic: @cl-color-high-contrast-success-50;
+@cl-high-contrast-color-icon-warning-staic: @cl-color-high-contrast-warning-50;
+@cl-high-contrast-color-icon-danger-staic: @cl-color-high-contrast-danger-50;
+@cl-high-contrast-color-icon-point-staic: @cl-color-high-contrast-point-50;
+@cl-high-contrast-color-icon-inverse-staic: @cl-color-high-contrast-gray-0;
+
+/* --- 링크 색상 --- */
+@cl-high-contrast-color-link-basic: @cl-color-high-contrast-primary-30;
+@cl-high-contrast-color-link-hover: @cl-color-high-contrast-primary-20;
+@cl-high-contrast-color-link-pressed: @cl-color-high-contrast-primary-10;
+@cl-high-contrast-color-link-visited: #c49ff9;
+
+/* --- 버튼 색상 --- */
+@cl-high-contrast-color-button-primary-fill: @cl-color-high-contrast-primary-40;
+@cl-high-contrast-color-button-primary-fill-hover: @cl-color-high-contrast-primary-20;
+@cl-high-contrast-color-button-primary-fill-focus: @cl-color-high-contrast-primary-40;
+@cl-high-contrast-color-button-primary-fill-pressed: @cl-color-high-contrast-primary-50;
+@cl-high-contrast-color-button-primary-border: @cl-color-high-contrast-primary-40;
+@cl-high-contrast-color-button-primary-border-focus: @cl-color-high-contrast-primary-50;
+@cl-high-contrast-color-button-primary-text: @cl-color-base-gray-0;
+@cl-high-contrast-color-button-secondary-fill: rgba(0, 0, 0, 0);
+@cl-high-contrast-color-button-secondary-fill-hover: @cl-high-contrast-color-button-secondary-fill;
+@cl-high-contrast-color-button-secondary-fill-focus: @cl-high-contrast-color-button-secondary-fill;
+@cl-high-contrast-color-button-secondary-fill-pressed: @cl-high-contrast-color-button-secondary-fill;
+@cl-high-contrast-color-button-secondary-border: #FF6B81;
+@cl-high-contrast-color-button-secondary-border-hover: @cl-color-high-contrast-primary-20;
+@cl-high-contrast-color-button-secondary-border-focus: @cl-high-contrast-color-button-secondary-border;
+@cl-high-contrast-color-button-secondary-border-pressed: @cl-color-high-contrast-primary-50;
+@cl-high-contrast-color-button-secondary-text: #FF6B81;
+@cl-high-contrast-color-button-secondary-text-hover: @cl-color-high-contrast-primary-20;
+@cl-high-contrast-color-button-secondary-text-focus: @cl-high-contrast-color-button-secondary-text;
+@cl-high-contrast-color-button-secondary-text-pressed: @cl-color-high-contrast-primary-50;
+@cl-high-contrast-color-button-tertiary-fill: rgba(0, 0, 0, 0);
+@cl-high-contrast-color-button-tertiary-fill-hover: @cl-high-contrast-color-button-tertiary-fill;
+@cl-high-contrast-color-button-tertiary-fill-pressed: @cl-high-contrast-color-button-tertiary-fill;
+@cl-high-contrast-color-button-tertiary-border: fade(@cl-color-high-contrast-gray-0, 20%);
+@cl-high-contrast-color-button-tertiary-border-hover: @cl-color-high-contrast-gray-0;
+@cl-high-contrast-color-button-tertiary-text: #bdbdbd;
+@cl-high-contrast-color-button-tertiary-text-hover: @cl-high-contrast-color-button-tertiary-border-hover;
+@cl-high-contrast-color-button-disabled-fill: #444c55;
+@cl-high-contrast-color-button-disabled-border: @cl-high-contrast-color-button-disabled-fill;
+@cl-high-contrast-color-button-disabled-text: #999999;
+@cl-high-contrast-color-button-text-fill: @cl-color-high-contrast-alpha-black0;
+@cl-high-contrast-color-button-text-fill-hover: @cl-color-high-contrast-secondary-95;
+@cl-high-contrast-color-button-text-fill-pressed: @cl-color-high-contrast-secondary-90;
+@cl-high-contrast-color-button-text-border: @cl-color-high-contrast-alpha-white50;
+
+/* --- 컨트롤 공통 색상 --- */
+@cl-high-contrast-color-element-disabled-bold: @cl-color-high-contrast-gray-80;
+@cl-high-contrast-color-element-disabled-soft: @cl-color-high-contrast-gray-60;
+@cl-high-contrast-color-element-gray: @cl-color-high-contrast-gray-50;
+@cl-high-contrast-color-element-gray-soft: @cl-color-high-contrast-gray-90;
+@cl-high-contrast-color-element-gray-softer: @cl-color-high-contrast-gray-95;
+@cl-high-contrast-color-element-primary: @cl-color-high-contrast-primary-50;
+@cl-high-contrast-color-element-primary-soft: @cl-color-high-contrast-primary-90;
+@cl-high-contrast-color-element-primary-softer: @cl-color-high-contrast-primary-95;
+@cl-high-contrast-color-element-secondary: @cl-color-high-contrast-secondary-50;
+@cl-high-contrast-color-element-secondary-soft: @cl-color-high-contrast-secondary-90;
+@cl-high-contrast-color-element-secondary-softer: @cl-color-high-contrast-secondary-95;
+@cl-high-contrast-color-element-information: @cl-color-high-contrast-information-50;
+@cl-high-contrast-color-element-information-soft: @cl-color-high-contrast-information-90;
+@cl-high-contrast-color-element-information-softer: @cl-color-high-contrast-information-95;
+@cl-high-contrast-color-element-success: @cl-color-high-contrast-success-50;
+@cl-high-contrast-color-element-success-soft: @cl-color-high-contrast-success-90;
+@cl-high-contrast-color-element-success-softer: @cl-color-high-contrast-success-95;
+@cl-high-contrast-color-element-warning: @cl-color-high-contrast-warning-50;
+@cl-high-contrast-color-element-warning-soft: @cl-color-high-contrast-warning-90;
+@cl-high-contrast-color-element-warning-softer: @cl-color-high-contrast-warning-95;
+@cl-high-contrast-color-element-danger: @cl-color-high-contrast-danger-50;
+@cl-high-contrast-color-element-danger-soft: @cl-color-high-contrast-danger-90;
+@cl-high-contrast-color-element-danger-softer: @cl-color-high-contrast-danger-95;
+@cl-high-contrast-color-element-point: @cl-color-high-contrast-point-50;
+@cl-high-contrast-color-element-point-soft: @cl-color-high-contrast-point-90;
+@cl-high-contrast-color-element-point-softer: @cl-color-high-contrast-point-95;
+@cl-high-contrast-color-element-inverse: @cl-color-high-contrast-gray-95;
+@cl-high-contrast-color-element-inverse-static: @cl-color-high-contrast-gray-0;
+
+/* --- 액션 색상 --- */
+@cl-high-contrast-color-action-white: @cl-color-base-gray-100;
+@cl-high-contrast-color-action-primary: @cl-color-high-contrast-alpha-black0;
+@cl-high-contrast-color-action-primary-hover: @cl-color-high-contrast-primary-95;
+@cl-high-contrast-color-action-primary-pressed: @cl-color-high-contrast-primary-90;
+@cl-high-contrast-color-action-primary-active: @cl-color-high-contrast-primary-50;
+@cl-high-contrast-color-action-primary-selected: @cl-color-high-contrast-primary-95;
+@cl-high-contrast-color-action-secondary: @cl-color-base-alpha-black0;
+@cl-high-contrast-color-action-secondary-hover: @cl-color-high-contrast-secondary-95;
+@cl-high-contrast-color-action-secondary-pressed: @cl-color-high-contrast-secondary-90;
+@cl-high-contrast-color-action-secondary-active: @cl-color-high-contrast-secondary-60;
+@cl-high-contrast-color-action-secondary-selected: @cl-color-high-contrast-secondary-95;
+@cl-high-contrast-color-action-secondary-on: @cl-color-high-contrast-alpha-black0;
+@cl-high-contrast-color-action-secondary-on-hover: @cl-color-high-contrast-gray-100;
+@cl-high-contrast-color-action-secondary-on-pressed: @cl-color-high-contrast-secondary-90;
+@cl-high-contrast-color-action-secondary-on-active: @cl-color-high-contrast-gray-95;
+@cl-high-contrast-color-action-secondary-on-selected: @cl-color-high-contrast-gray-95;
+@cl-high-contrast-color-action-disabled: @cl-color-high-contrast-gray-20;
+
+/* --- 인풋 색상 --- */
+@cl-high-contrast-color-input-surface: #2f363d;
+@cl-high-contrast-color-input-surface-disabled: #444c55;
+@cl-high-contrast-color-input-border:  fade(#ffffff, 8%);
+@cl-high-contrast-color-input-border-disabled:  @cl-high-contrast-color-input-border;
+@cl-high-contrast-color-input-border-active:  #6692cc;
+@cl-high-contrast-color-input-border-error: @cl-base-color-input-border-error;
+
+/* --- 그래픽 요소 색상 --- */
+@cl-high-contrast-color-graphic-basic-softer: @cl-color-high-contrast-graphic-10;
+@cl-high-contrast-color-graphic-basic-soft: @cl-color-high-contrast-graphic-30;
+@cl-high-contrast-color-graphic-basic: @cl-color-high-contrast-graphic-50;
+@cl-high-contrast-color-graphic-basic-bold: @cl-color-high-contrast-graphic-70;
+@cl-high-contrast-color-graphic-basic-bolder: @cl-color-high-contrast-graphic-90;
+@cl-high-contrast-color-graphic-point-softer: @cl-color-high-contrast-point-5;
+@cl-high-contrast-color-graphic-point-soft: @cl-color-high-contrast-point-10;
+@cl-high-contrast-color-graphic-point: @cl-color-high-contrast-point-20;
+@cl-high-contrast-color-graphic-point-bold: @cl-color-high-contrast-point-40;
+@cl-high-contrast-color-graphic-point-bolder: @cl-color-high-contrast-point-70;
+@cl-high-contrast-color-graphic-brand: @cl-color-high-contrast-primary-50;
+
+/* --- 알파 색상 --- */
+@cl-high-contrast-color-alpha-basic100: @cl-color-high-contrast-alpha-black100;
+@cl-high-contrast-color-alpha-basic75: @cl-color-high-contrast-alpha-black75;
+@cl-high-contrast-color-alpha-basic50: @cl-color-high-contrast-alpha-black50;
+@cl-high-contrast-color-alpha-basic25: @cl-color-high-contrast-alpha-black25;
+@cl-high-contrast-color-alpha-basic10: @cl-color-high-contrast-alpha-black10;
+@cl-high-contrast-color-alpha-basic5: @cl-color-high-contrast-alpha-black5;
+@cl-high-contrast-color-alpha-basic0: @cl-color-high-contrast-alpha-black0;
+@cl-high-contrast-color-alpha-inverse100: @cl-color-high-contrast-alpha-white100;
+@cl-high-contrast-color-alpha-inverse75: @cl-color-high-contrast-alpha-white75;
+@cl-high-contrast-color-alpha-inverse50: @cl-color-high-contrast-alpha-white50;
+@cl-high-contrast-color-alpha-inverse25: @cl-color-high-contrast-alpha-white25;
+@cl-high-contrast-color-alpha-inverse10: @cl-color-high-contrast-alpha-white10;
+@cl-high-contrast-color-alpha-inverse5: @cl-color-high-contrast-alpha-white5;
+@cl-high-contrast-color-alpha-inverse0: @cl-color-high-contrast-alpha-white0;
+
+/* --- 그림자 색상 --- */
+@cl-high-contrast-color-alpha-shadow1: fade(@cl-color-high-contrast-gray-0, 12%);
+@cl-high-contrast-color-alpha-shadow2: @cl-color-high-contrast-alpha-white80;
+@cl-high-contrast-color-alpha-shadow3: @cl-color-high-contrast-alpha-white60;
+@cl-high-contrast-color-alpha-shadow4: fade(@cl-color-high-contrast-secondary-50, 4%);
+@cl-high-contrast-color-alpha-shadow5: fade(@cl-color-high-contrast-secondary-50, 8%);
+
+/* --- 테두리 두께 수치 --- */
+@cl-high-contrast-border-width-variable-regular: 2px;
+@cl-high-contrast-border-width-variable-medium: 3px;
+@cl-high-contrast-border-width-static-regular: 1px;
+@cl-high-contrast-border-width-static-medium: 2px;

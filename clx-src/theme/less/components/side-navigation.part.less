@@ -1,0 +1,208 @@
+@import "../core/include.part.less";
+
+/**
+ * ============================================================================
+ * @file      side-navigation.part.less
+ * @desc      CORE-UI 컨트롤 스타일 정의
+ * @rule
+ * 1. 독립성 유지
+ *  - 이 파일 내부에 선언된 변수는 외부에서 참조할 수 없음
+ * @contents  
+ * 1. Base (공통 스타일)
+ * 2. Variants (유형별 스타일)
+ * 3. Mode (테마 스타일)
+ * ============================================================================
+ */
+
+/* ==========================================================================
+   Component Tokens
+ ========================================================================== */
+
+/* 사이즈 변수 */
+@side-navigation__padding-y: @cl-padding-7;
+@side-navigation__padding-x: @cl-padding-0;
+@side-navigation__indnet: @cl-number-10;
+@side-navigation__button-height: @cl-size-height-6;
+@side-navigation__button-gap: @cl-gap-2;
+@side-navigation__button-padding-y: @cl-padding-0;
+@side-navigation__button-padding-x: @cl-padding-6;
+@side-navigation__button-pc-font-size: @cl-pc-font-size-heading-xsmall;
+@side-navigation__button-mobile-font-size: @cl-mobile-font-size-heading-xsmall;
+
+/* 색상 변수 */
+@side-navigation__color-action: @cl-base-color-alpha-basic0;
+@side-navigation__color-action--hover: @cl-base-color-alpha-basic0;
+@side-navigation__color-action--pressed: @cl-base-color-alpha-basic0;
+@side-navigation__color-action--selected: @cl-base-color-alpha-basic0;
+@side-navigation__color-text: @cl-base-color-text-basic;
+@side-navigation__color-text--hover: @cl-base-color-text-basic;
+@side-navigation__color-text--selected: @cl-base-color-text-basic;
+
+/* ==========================================================================
+    Local Mixins
+ ========================================================================== */
+
+
+
+/* ==========================================================================
+ 1. Base
+ ========================================================================== */
+
+.cl-sidenavigation {
+	background: 0;
+	border: 0;
+	border-radius: 0;
+	color: @side-navigation__color-text;
+	font-size: @side-navigation__button-pc-font-size;
+	
+	@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+		font-size: @side-navigation__button-mobile-font-size;
+	}
+	
+	.cl-sidenavigation-item {
+		background-color: @side-navigation__color-action;
+		height: auto;
+		min-height: @side-navigation__button-height;
+		padding: @side-navigation__button-padding-y @side-navigation__button-padding-x;
+		
+		.cl-icon {
+			width: 16px;
+			height: 16px;
+			background-image: url(../../img/icons/ico_tree_file.svg);
+			background-size: 20px;
+			background-size: contain;
+			.square(@cl-icon--size-medium);
+			position: relative;
+			margin-right: @cl-gap-2;
+		}
+		
+		.cl-text {
+			padding: 0;
+			white-space: normal;
+			text-overflow: clip;
+		}
+		
+		.cl-badge {
+		}
+		
+		.cl-expand-icon {
+		}
+		
+		&.cl-folder {
+			.cl-icon {
+				background-image: url(../../img/icons/ico_tree_folder.svg);
+    			background-size: 20px;
+			}
+			
+			.cl-expand-icon {
+			}
+			
+			&.cl-collapsed {
+			}
+			
+			&.cl-expanded {
+			}
+		}
+		
+		&:focus {
+			.focus-reset();
+		}
+		
+		&:focus-visible {
+			.focus-inside();
+		}
+	}
+	
+	&.cl-focus {
+		.focus-reset();
+	}
+	
+	&.cl-disabled {
+	}
+}
+
+/* 상세페이지의 sub-side */
+.cl-sidenavigation.sub-side {
+	background-color: #f4f6f9;
+	border-radius: 20px;
+	border: none;
+	padding: 20px 15px;
+	
+	.cl-sidenavigation-item {
+		margin-bottom: 4px;
+		padding: 12px;
+		border-radius: 12px;
+		color: #666666;
+		font-size: 15px;
+		transition: all 0.3s;
+		
+		.cl-icon {
+			display: none;
+		}
+		
+		&:focus, &:hover, &.cl-hover {
+			background-color: #e8ebf0;
+            color: #333333;
+		}
+		
+		&:active {
+			background-color: #dee1e6;
+            transform: scale(0.98);
+		}
+		
+		&.cl-selected {
+			background-color: #2ecb84;
+            color: #ffffff;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(46, 203, 132, 0.35);
+		}
+		
+		.cl-badge {
+			width: 20px;
+			height: 20px;
+			background: url("../../img/pages/login/ic_arrow_right24.svg") no-repeat center / contain;
+		}
+	}
+}
+
+
+
+/* ==========================================================================
+ 2. Variants
+ ========================================================================== */
+
+
+
+/* ==========================================================================
+ 3. Mode
+ ========================================================================== */
+
+.color-mode(@mode: high-contrast) {
+	.cl-sidenavigation.sub-side {
+		background-color: #272c32;
+		border: 1px solid rgba(255, 255, 255, 0.08);
+		.cl-sidenavigation-item {
+			color: #a0a6b5;
+			
+			&:focus,
+			&:hover,
+			&.cl-hover {
+				background-color: #2a2f3d;
+				color: #ffffff;
+			}
+			
+			&:active {
+				background-color: #343a4a;
+			}
+			
+			&.cl-selected {
+				background-color: #26a672;
+				box-shadow: 0 4px 15px rgba(38, 166, 114, 0.4);
+			}
+			
+			.cl-badge {
+				background: url("../../img/pages/login/ic_arrow_white_right24.svg") no-repeat center / contain;
+			}
+		}
+	}
+}

@@ -1,0 +1,229 @@
+@import "../core/include.part.less";
+
+/**
+ * ============================================================================
+ * @file      accordion.part.less
+ * @desc      CORE-UI 컨트롤 스타일 정의
+ * @rule
+ * 1. 독립성 유지
+ *  - 이 파일 내부에 선언된 변수는 외부에서 참조할 수 없음
+ * @contents  
+ * 1. Base (공통 스타일)
+ * 2. Variants (유형별 스타일)
+ * 3. Mode (테마 스타일)
+ * ============================================================================
+ */
+
+/* ==========================================================================
+   Component Tokens
+ ========================================================================== */
+
+/* 사이즈 변수 */
+@accordion__padding: @cl-padding-3;
+@accordion__gap: @cl-gap-4;
+
+@accordion__head-padding-x: @cl-padding-5;
+@accordion__head-padding-y: @cl-padding-0;
+@accordion__head-radius: @cl-radius-xsmall3;
+@accordion__head-size-height: @cl-size-height-9;
+@accordion__head-pc-font-size: @cl-pc-font-size-label-large;
+@accordion__head-mobile-font-size: @cl-mobile-font-size-label-large;
+@accordion__line-head-padding-y: @cl-padding-3;
+
+@accordion__body-padding: @accordion__head-padding-x;
+@accordion__line-body-padding: @accordion__line-head-padding-y;
+
+/* 색상 변수 */
+@accordion__color-border: @cl-base-color-border-gray-soft;
+
+@accordion__head-color-surface: @cl-base-color-alpha-basic0;
+@accordion__head-color-surface--hover: @cl-base-color-action-secondary-hover;
+@accordion__head-color-surface--active: @cl-base-color-action-secondary-hover;
+@accordion__head-color-text: @cl-base-color-text-basic;
+@accordion__head-color-text--hover: @cl-base-color-text-basic;
+@accordion__head-color-text--active: @cl-base-color-text-secondary;
+@accordion__head-color-text--disabled: @cl-base-color-text-disabled;
+
+@accordion__body-color-surface: @cl-base-color-action-secondary-hover;
+@accordion__line-body-color-surface: @cl-base-color-alpha-basic0;
+
+/* ==========================================================================
+    Local Mixins
+ ========================================================================== */
+
+
+
+/* ==========================================================================
+ 1. Base
+ ========================================================================== */
+
+.cl-accordion {
+	background: 0;
+	border: 1px solid @accordion__color-border;
+	border-width: 1px 0;
+	padding: @accordion__padding 0;
+	
+	.cl-accordion-header {
+		height: auto;
+		min-height: @accordion__head-size-height;
+		background-color: @accordion__head-color-surface;
+//		border: 0;
+		border-color: @cl-color-base-primary-40;
+		border-radius: @accordion__head-radius;
+		color: @accordion__head-color-text;
+		font-size: @accordion__head-pc-font-size;
+		font-weight: @cl-font-weight-medium;
+		padding: @accordion__head-padding-y @accordion__head-padding-x;
+		text-align: left;
+		
+		@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+			font-size: @accordion__head-mobile-font-size;
+		}
+		
+		.cl-accordion-expander {
+			.square(@cl-icon--size-medium);
+			background-image : url("../../img/icons/ico_down.svg");
+			background-size : contain;
+//			.icon-set(ico_down);
+			transition: @transition-base;
+			transform: rotate(0deg);
+		}
+		
+		&.cl-title-collapse:focus {
+			.focus-reset();
+			text-decoration: none;
+		}
+		
+		&.cl-title-collapse:focus-visible {
+//			.focus();
+		}
+		
+		&:not(.cl-disabled):not(.cl-activated):hover {
+			background-color: @accordion__head-color-surface--hover;
+			color: @accordion__head-color-text--hover;
+		}
+		
+		&.cl-activated {
+			background-color: @accordion__head-color-surface--active;
+			color: @accordion__head-color-text--active;
+			border-color :@cl-color-base-primary-40;
+			border-radius: @accordion__head-radius;
+			
+			.cl-accordion-expander {
+				background-image : url("../../img/icons/ico_down.svg");
+//				.icon-set(ico_down);
+				transform: rotate(-180deg);
+			}
+		}
+		
+		&.cl-disabled {
+			background-color: @accordion__head-color-surface;
+			color: @accordion__head-color-text--disabled;
+			border-color :@accordion__head-color-text--disabled;
+			cursor: default;
+			
+			.cl-accordion-expander {
+				opacity: 0.5;
+			}
+			
+			+ .cl-accordion-section:not(.cl-accordion-placeholder) {
+				background-color: @accordion__head-color-surface;
+			}
+		}
+	}
+	
+	.cl-accordion-section:not(.cl-accordion-placeholder) {
+//		background-color: @accordion__body-color-surface;
+//		border-radius: 0 0 @accordion__head-radius @accordion__head-radius;
+//		padding: @accordion__body-padding;
+//		z-index: -1;
+		
+		.cl-accordion-content {
+			background: 0;
+			border: 0;
+			border-radius: 0;
+		}
+	}
+	
+	.cl-accordion-section + .cl-accordion-header {
+		margin-top: @accordion__gap;
+	}
+	
+	/* 부모 Accordion Disabled 처리 */
+	&.cl-disabled {
+		.cl-accordion-header {
+			background-color: @accordion__head-color-surface;
+			color: @accordion__head-color-text--disabled;
+			border-color :@accordion__head-color-text--disabled;
+			cursor: default;
+			
+			.cl-accordion-expander {
+				opacity: 0.5;
+			}
+		}
+		
+		.cl-accordion-section:not(.cl-accordion-placeholder) {
+			background-color: @accordion__head-color-surface;
+		}
+		
+		.cl-text {
+			color: @accordion__head-color-text--disabled;
+		}
+		
+	}
+}
+
+/* ==========================================================================
+ 2. Variants
+ ========================================================================== */
+
+/* --- 라인형 --- */
+.cl-accordion.line {
+	border: 0;
+	padding: 0;
+	
+	.cl-accordion-header {
+		border: 1px solid @accordion__color-border;
+		border-width: 0 0 1px 0;
+		border-radius: 0;
+		min-height: 0;
+		padding: 0 0 @accordion__line-head-padding-y;
+		
+		&:not(.cl-disabled):not(.cl-activated):hover {
+			background-color: @accordion__head-color-surface;
+			color: @accordion__head-color-text--active;
+		}
+		
+		&.cl-activated {
+			background-color: @accordion__head-color-surface;
+			border-bottom-color: @cl-base-color-border-transparency;
+		}
+		
+		&.cl-disabled {
+		}
+	}
+	
+	.cl-accordion-section:not(.cl-accordion-placeholder) {
+		background-color: @accordion__line-body-color-surface;
+		border-bottom: 1px solid @accordion__color-border;
+		border-radius: 0;
+		padding: @accordion__line-body-padding 0;
+		
+		.cl-accordion-content {
+		}
+	}
+	
+	.cl-accordion-section + .cl-accordion-header {
+		//margin-top: -1px;
+	}
+	
+	&.cl-disbaled {
+	}
+}
+
+/* ==========================================================================
+ 3. Mode
+ ========================================================================== */
+
+.color-mode(@mode: high-contrast) {
+}

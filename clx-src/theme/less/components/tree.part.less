@@ -1,0 +1,422 @@
+@import "../core/include.part.less";
+
+/**
+ * ============================================================================
+ * @file      tree.part.less
+ * @desc      CORE-UI 컨트롤 스타일 정의
+ * @rule
+ * 1. 독립성 유지
+ *  - 이 파일 내부에 선언된 변수는 외부에서 참조할 수 없음
+ * @contents  
+ * 1. Base (공통 스타일)
+ * 2. Variants (유형별 스타일)
+ * 3. Mode (테마 스타일)
+ * ============================================================================
+ */
+
+/* ==========================================================================
+   Component Tokens
+ ========================================================================== */
+
+/* 사이즈 변수 */
+@tree__padding: @cl-padding-0;
+@tree__radius: @cl-radius-xsmall3;
+@tree__pc-font-size: @cl-pc-font-size-label-small;
+@tree__mobile-font-size: @cl-mobile-font-size-label-small;
+@tree__item-size-height: @cl-size-height-6;
+@tree__item-gap: @cl-gap-2;
+@tree__item-padding-x: @cl-padding-2;
+@tree__item-padding-y: @cl-padding-0;
+@tree__item-icon-size: @cl-icon--size-small;
+
+/* 색상 변수 */
+@tree__color-surface: @cl-base-color-input-surface;
+@tree__color-surface--disabled: @cl-base-color-input-surface;
+@tree__color-border: @cl-base-color-input-border;
+@tree__color-border--active: @cl-base-color-input-border-active;
+@tree__color-border--disabled: @cl-base-color-input-border-disabled;
+@tree__color-text: @cl-base-color-text-basic;
+@tree__color-text--disabled: @cl-base-color-text-disabled;
+@tree__item-color-icon-background: @cl-base-color-icon-gray;
+@tree__item-color-icon-background--selected: @cl-base-color-icon-secondary;
+@tree__item-color-icon-background--disabled: @cl-base-color-icon-disabled-on;
+@tree__item-color-action--hover: @cl-base-color-action-primary-hover;
+@tree__item-color-action--pressed: @cl-base-color-action-primary-pressed;
+@tree__item-color-action--selected: @cl-base-color-action-primary-selected;
+@tree__item-color-action--disabled: @cl-base-color-action-disabled;
+@tree__item-color-text--hover: @cl-base-color-text-basic;
+@tree__item-color-text--selected: white;
+@tree__item-color-text--disabled: @cl-base-color-text-disabled-on;
+
+/* ==========================================================================
+    Local Mixins
+ ========================================================================== */
+
+.tree__button-style(@name) {
+	background-image: url("../../@{img}/icons/@{name}.svg");
+	background-size: @cl-icon--size-medium;
+}
+
+.tree__icon-image(@name){
+	background-image: url("../../@{img}/icons/@{name}.svg") !important;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	-webkit-mask-image: none !important;
+	mask-image: none !important;
+}
+
+/**
+ * #tree__line-vertical
+ * 라인형 — 수직선 (::before pseudo)
+ * @param @top    시작 위치
+ * @param @height 높이
+ */
+.tree__line-vertical(@top, @height) {
+    content:          "";
+    display:          block;
+    position:         absolute;
+    top:              @top;
+    left:             50%;
+    transform:        translateX(-50%);
+    width:            1px;
+    height:           @height;
+    background-color: @tree__color-border;
+}
+
+/**
+ * #tree__line-horizontal
+ * 라인형 — 수평선 (::after pseudo)
+ */
+.tree__line-horizontal() {
+    content:          "";
+    display:          block;
+    position:         absolute;
+    top:              50%;
+    left:             50%;
+    transform: translateY(-50%);
+    width:            50%;
+    height:           1px;
+    background-color: @tree__color-border;
+}
+
+/* ==========================================================================
+ 1. Base
+ ========================================================================== */
+
+.cl-tree,
+.cl-treecell {
+	background-color: @tree__color-surface;
+	border: 1px solid @tree__color-border;
+	color: @tree__color-text;
+	font-size: @tree__pc-font-size;
+	transition: @transition-base;
+	padding: 0;
+	
+	@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+		font-size: @tree__mobile-font-size;
+	}
+	
+	&:focus, &.cl-focus {
+		border-color: @tree__color-border--active;
+		border-width: 2px;
+		.focus-reset();
+	}
+	
+	&.cl-disabled {
+		color: @tree__color-text--disabled;
+	}
+}
+
+.cl-tree {
+	border-radius: @tree__radius;
+
+	/* 상태 - disabled */
+	&.cl-disabled {
+		.cl-checkbox,
+		.cl-tree-checkbox {
+			color: @tree__color-text--disabled;
+			background-color: @tree__color-border--disabled;
+			border-color: @tree__color-border--disabled;
+		}
+
+		.cl-checkbox.cl-checked,
+		.cl-tree-item.cl-checked .cl-tree-checkbox {
+			background-color: @tree__color-border--disabled;
+			border-color: @tree__color-border--disabled;
+
+			&::after {
+				background-image: .icon-set(ico_check_disabled);
+			}
+		}
+
+		.cl-checkbox.cl-partialchecked,
+		.cl-tree-item.cl-partialchecked .cl-tree-checkbox {
+			background-color: @tree__color-border--disabled;
+			border-color: @tree__color-border--disabled;
+
+			&::after {
+				background-color: @tree__color-border--disabled;
+			}
+		}
+	}
+
+	/* tree item 자체에 disabled가 붙는 경우 */
+	.cl-tree-item.cl-disabled {
+		.cl-checkbox,
+		.cl-tree-checkbox {
+			color: @tree__color-text--disabled;
+			background-color: @tree__color-border--disabled;
+			border-color: @tree__color-border--disabled;
+		}
+
+		.cl-checkbox.cl-checked,
+		&.cl-checked .cl-tree-checkbox {
+			background-color: @tree__color-border--disabled;
+			border-color: @tree__color-border--disabled;
+
+			&::after {
+				background-image: .icon-set(ico_check_disabled);
+			}
+		}
+
+		.cl-checkbox.cl-partialchecked,
+		&.cl-partialchecked .cl-tree-checkbox {
+			background-color: @tree__color-border--disabled;
+			border-color: @tree__color-border--disabled;
+
+			&::after {
+				background-color: @tree__color-border--disabled;
+			}
+		}
+	}
+}
+
+
+.cl-treecell {
+}
+
+.cl-tree .cl-tree-item,
+.cl-treecell .cl-treecell-item {
+	align-items: center;
+	.focus-reset();
+	height: auto;
+	min-height: @tree__item-size-height;
+	gap: @tree__item-gap;
+	padding: @tree__item-padding-y @tree__item-padding-x;
+	
+	.cl-text {
+		padding: 0;
+	}
+}
+
+.cl-tree .cl-tree-item .cl-tree-treeicon,
+.cl-treecell .cl-treecell-item .cl-treecell-treeicon {
+	position: relative;
+	.square(@tree__item-icon-size);
+	background-size: contain;
+//	transition: @transition-base;
+}
+
+.cl-tree .cl-tree-item .cl-tree-itemicon,
+.cl-treecell .cl-treecell-item .cl-treecell-itemicon {
+	.square(@tree__item-icon-size);
+	.tree__button-style(ico_tree_file);
+	background-size: contain;
+}
+
+// 아이템 아이콘
+.cl-tree .cl-tree-item.cl-folder,
+.cl-treecell .cl-treecell-item.cl-folder {
+}
+
+.cl-tree .cl-tree-item.cl-folder .cl-tree-itemicon,
+.cl-treecell .cl-treecell-item.cl-folder .cl-treecell-itemicon {
+	.tree__button-style(ico_tree_folder);
+}
+
+// 트리 아이콘
+.cl-tree .cl-tree-item.cl-folder.cl-collapsed > .cl-tree-treeicon,
+.cl-tree .cl-tree-item.cl-folder.cl-expanded > .cl-tree-treeicon,
+.cl-treecell .cl-treecell-item.cl-folder.cl-collapsed > .cl-treecell-treeicon,
+.cl-treecell .cl-treecell-item.cl-folder.cl-expanded > .cl-treecell-treeicon {
+	.icon-set(ico_down);
+}
+
+.cl-tree .cl-tree-item.cl-folder.cl-selected.cl-collapsed > .cl-tree-treeicon,
+.cl-tree .cl-tree-item.cl-folder.cl-selected.cl-expanded > .cl-tree-treeicon,
+.cl-treecell .cl-treecell-item.cl-folder.cl-selected.cl-collapsed > .cl-treecell-treeicon,
+.cl-treecell .cl-treecell-item.cl-folder.cl-selected.cl-expanded > .cl-treecell-treeicon {
+	.icon-set(ico_down);
+}
+
+.cl-tree .cl-tree-item.cl-folder.cl-collapsed > .cl-tree-treeicon,
+.cl-treecell .cl-treecell-item.cl-folder.cl-collapsed > .cl-treecell-treeicon {
+	transform: rotate(-90deg);
+}
+
+.cl-tree .cl-tree-item.cl-folder.cl-expanded > .cl-tree-treeicon,
+.cl-treecell .cl-treecell-item.cl-folder.cl-expanded > .cl-treecell-treeicon {
+	transform: rotate(0deg);
+}
+
+.cl-tree .cl-tree-item.cl-selected,
+.cl-treecell .cl-treecell-item.cl-selected {
+	background-color: @tree__item-color-action--selected;
+	color: @tree__item-color-text--selected;
+}
+
+.cl-tree .cl-tree-item.cl-folder.cl-selected .cl-tree-itemicon,
+.cl-treecell .cl-treecell-item.cl-folder.cl-selected .cl-treecell-itemicon {
+}
+
+.cl-tree .cl-tree-item.cl-folder.cl-selected > .cl-tree-treeicon,
+.cl-treecell .cl-treecell-item.cl-folder.cl-selected > .cl-treecell-treeicon {
+	.icon-set(ico_down);
+}
+
+.cl-tree:not(.cl-disabled) .cl-tree-item:not(.cl-disabled) {
+	&:not(.cl-selected):hover,
+	&:not(.cl-selected).cl-hover {
+		background-color: @tree__item-color-action--hover;
+		color: @tree__item-color-text--hover;
+	}
+	
+	// 드래그 앤 드롭 스타일
+	&.cl-dropbottom {
+		box-shadow: inset 0 -2px 0 0 @cl-focus-ring;
+	}
+	
+	&.cl-dropmiddle,
+	&:not(.cl-selected).cl-dropmiddle {
+		background-color: @cl-focus-ring;
+	}
+	
+	&.cl-droptop {
+		box-shadow: inset 0 2px 0 0 @cl-focus-ring;
+	}
+}
+
+.cl-tree.cl-focus .cl-tree-item,
+.cl-treecell.cl-focus .cl-treecell-item {
+	.focus-reset();
+}
+
+.cl-tree.cl-disabled .cl-tree-item,
+.cl-treecell.cl-disaabled .cl-treecell-item {
+	&.cl-selected {
+		background-color: @tree__item-color-action--disabled;
+		color: @tree__item-color-text--disabled;
+	}
+}
+
+// 라인 표시 (showLines = true)
+.cl-tree.cl-tree-lines .cl-tree-item,
+.cl-treecell.cl-treecell-lines .cl-treecell-item {
+	.cl-tree-line,
+	.cl-treecell-line,
+	.cl-tree-treeicon,
+	.cl-treecell-treeicon,
+	.cl-tree-iconline,
+	.cl-treecell-iconline {
+		padding: 0;
+	}
+	
+	.cl-tree-line,
+	.cl-treecell-line,
+	.cl-tree-iconline,
+	.cl-treecell-iconline {
+		height: 100%;
+	}
+	
+	.cl-tree-treeicon,
+	.cl-treecell-treeicon {
+		.square(@tree__item-icon-size);
+		margin: auto !important;
+		background-position: center center;
+		background-size: contain;
+	}
+	
+	&.cl-folder.cl-collapsed,
+	&.cl-folder.cl-selected.cl-collapsed {
+		> .cl-tree-treeicon,
+		> .cl-treecell-treeicon {
+			.tree__icon-image(ico_caret_right);
+			transform: none !important;
+		}
+	}
+	
+	&.cl-folder.cl-expanded,
+	&.cl-folder.cl-selected.cl-expanded {
+		> .cl-tree-treeicon,
+		> .cl-treecell-treeicon {
+			.tree__icon-image(ico_caret);
+			transform: none !important;
+		}
+	}
+	
+	// 라인 스타일
+	.cl-tree-line,
+	.cl-treecell-line {
+		background-image: none !important;
+		position: relative;
+		
+		&::before {
+			.tree__line-vertical(0, 100%);
+		}
+	}
+	
+	.cl-tree-iconline,
+	.cl-treecell-iconline {
+		background-image: none !important;
+		position: relative;
+		
+		&::before {
+			.tree__line-vertical(0, 100%);
+		}
+		
+		&::after {
+			.tree__line-horizontal();
+		}
+	}
+	
+	&.cl-first {
+		.cl-tree-iconline,
+		.cl-treecell-iconline {
+			&::before {
+				.tree__line-vertical(50%, 50%);
+			}
+		}
+	}
+	
+	&.cl-last {
+		.cl-tree-iconline,
+		.cl-treecell-iconline {
+			&::before {
+				.tree__line-vertical(0, 50%);
+			}
+		}
+	}
+	
+	&.cl-first.cl-last {
+		.cl-tree-iconline,
+		.cl-treecell-iconline {
+			&::before {
+				display: none;
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+ 2. Variants
+ ========================================================================== */
+
+
+
+/* ==========================================================================
+ 3. Mode
+ ========================================================================== */
+
+.color-mode(@mode: high-contrast) {
+}

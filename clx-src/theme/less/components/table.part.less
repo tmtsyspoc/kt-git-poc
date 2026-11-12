@@ -1,0 +1,704 @@
+@import "../core/include.part.less";
+
+/**
+ * ============================================================================
+ * @file      table.part.less
+ * @desc      CORE-UI 컨트롤 스타일 정의
+ * @rule
+ * 1. 독립성 유지
+ *  - 이 파일 내부에 선언된 변수는 외부에서 참조할 수 없음
+ * @contents  
+ * 1. Base (공통 스타일)
+ * 2. Variants (유형별 스타일)
+ * 3. Mode (테마 스타일)
+ * ============================================================================
+ */
+
+/* ==========================================================================
+   Component Tokens
+ ========================================================================== */
+
+/* 사이즈 변수 */
+@table__border-width: @cl-base-border-width-variable-regular;
+@table__radius: @cl-number-0;
+@table__pc-font-size: @cl-pc-font-size-label-small;
+@table__mobile-font-size: @cl-mobile-font-size-label-xsmall;
+@table__thead-padding-x: @cl-padding-3;
+@table__thead-padding-y: @cl-padding-0;
+@table__thead-icon-size: @cl-icon--size-small;
+@table__thead-pc-font-size: @cl-pc-font-size-label-small;
+@table__thead-mobile-font-size: @cl-mobile-font-size-label-small;
+@table__tbody-padding-x: @cl-padding-2;
+@table__tbody-padding-y: @cl-padding-1;
+
+/* 색상 변수 */
+@table__color-surface: @cl-base-color-surface-white;
+@table__color-border: @cl-base-color-border-gray-softer;
+@table__thead-color-surface: #F4F5F7;
+@table__thead-color-border: @cl-color-base-gray-0;
+@table__thead-color-border-point: @cl-base-color-border-gray-bolder;
+@table__thead-color-text: @cl-base-color-text-bold;
+@table__tbody-color-border: @cl-base-color-border-gray-softer;
+@table__tbody-color-text: @cl-base-color-text-basic;
+@table__tbody-color-text--disabled: @cl-base-color-text-softer;
+@table__tbody-row-color-surface-striped: fade(@cl-color-base-secondary-95, 3%);
+@table__tbody-row-color-surface-add: fade(@cl-color-base-success-50, 8%);
+@table__tbody-row-color-surface-update: fade(@cl-color-base-warning-50, 8%);
+@table__tbody-row-color-surface-delete: fade(@cl-color-base-gray-100, 8%);
+@table__tbody-row-color-surface--selected: fade(@cl-base-color-element-primary, 8%);
+@table__tfoot-color-surface: @cl-base-color-surface-danger-softer;
+
+/* ==========================================================================
+    Local Mixins
+ ========================================================================== */
+
+
+
+/* ==========================================================================
+ 1. Base
+ ========================================================================== */
+
+.cl-grid {
+	background-color: @table__color-surface;
+	border: none;
+	border-radius: @table__radius;
+	font-size: @table__pc-font-size;
+	
+	@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+		// 767까지
+		font-size: @table__mobile-font-size;
+	}
+	
+	&.cl-focus {
+		.focus-reset();
+	}
+	
+	&.cl-disabled {
+	}
+	
+	// 그리드 데이터 없음 스타일
+	.cl-nodatamsg-wrapper {
+		.cl-nodatamsg {
+			vertical-align: middle;
+		}
+	}
+	
+	// 틀고정 스타일
+	&.cl-leftsplit {
+	}
+	
+	&.cl-rightsplit {
+	}
+	
+	.cl-grid-topsplit {
+	}
+	
+	.cl-grid-bottomsplit {
+	}
+	
+	// 그리드 구성요소
+	.cl-grid-cell,
+	.cl-default-cell {
+		text-align: center;
+		
+		.cl-control {
+			&.cl-output, &.cl-checkbox, &.cl-checkboxgroup, &.cl-radiobutton {
+				text-align: inherit;
+			}
+			
+			&.cl-output {
+				color: #666666;
+				
+				&.cl-number-format {
+					text-align: right;
+				}
+				
+				&.badge {
+					border-radius: @cl-radius-xsmall3;
+					min-height: 24px;
+					text-align: center;
+					font-weight: @cl-font-weight-medium;
+					font-size: @cl-pc-font-size-body-small;
+					
+					//결재가능
+					&.available {
+						background-color: fade(#8bc491, 20%);
+						color: #4b8854;
+					}
+					
+					//회의중
+					&.meeting {
+						background-color: fade(#EFEFEF, 80%);
+						color: #3D3D3D;
+					}
+					
+					//부재중
+					&.away {
+						background-color: fade(#f3a616, 15%);
+						color: #e99800;
+					}
+				}
+			}
+		}
+	}
+	
+	.cl-grid-cell {
+		border: 0;
+		border-right: 1px solid @table__tbody-color-border;
+		border-bottom: 1px solid @table__tbody-color-border;
+		
+		&.border-r-0 {
+			border-right : none;
+		}
+		
+		&.cl-builtin {
+			&.cl-checkbox {
+			}
+			
+			&.cl-radiobutton {
+			}
+			
+			&.cl-rowindex {
+			}
+		}
+		
+		&.cl-first-column {
+		}
+		
+		&.cl-last-column {
+			border-right: 0;
+		}
+		
+		.cl-control {
+			color: #666666;
+			
+			&.cl-border-none {
+				border-radius: 0;
+			}
+		}
+		
+		.cl-expander {
+//			.icon-set(ico_down);
+//			width: 100%;
+			background-image : url("../../img/icons/ico_down.svg");
+			background-size: @icon-size-small;
+			margin-left : 4px;
+			
+			&.cl-collapsed {
+				transition: @cl-transition-base;
+				transform: rotate(-90deg);
+			}
+			
+			&.cl-expanded {
+			}
+			
+			+ .cl-grid-cell-inherit .cl-control {
+				padding: 0;
+			}
+		}
+		
+		&:focus {
+			.focus-reset();
+		}
+	}
+	
+	.cl-default-cell {
+	}
+	
+	.cl-grid-header {
+		border: 1px solid #D9DCE1;
+		border-top: 1px solid #3D3D3D;
+		border-radius: 0;
+		background: @table__thead-color-surface;
+		font-weight: @cl-font-weight-medium;
+		
+		@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+			// 767까지
+			font-size: @table__thead-mobile-font-size;
+		}
+		
+		.cl-grid-cell {
+//			border-right: none;
+//			border-bottom: none;
+			font-weight: @cl-font-weight-semibold;
+			
+			&:not(.cl-last-column) {
+				&::after {
+					content: "";
+					display: inline;
+					position: absolute;
+					width: 1px;
+					height: 32px;
+					background-color: @table__thead-color-border;
+					top: 50%;
+					transform: translateY(-50%);
+					right: 0;
+				}
+			}
+			
+			&:focus {
+				.focus-reset();
+			}
+			
+			> .cl-grid-cell-inherit {
+				width: 100%;
+			}
+			
+			.cl-control {
+				font: inherit;
+				color: #333333;
+			}
+		}
+		
+		// 필터
+		.cl-filter {
+			.position(@r: @cl-padding-1);
+			.svg-icon(@table__thead-icon-size);
+			.icon-set(ico_filter_fill);
+			clear: both;
+			z-index: 1;
+			width : 15px;
+			height : 25px !important;
+			&:hover {
+				.icon-set(ico_filter_fill);
+			}
+			
+			&.cl-filtered {
+				.icon-set(ico_filter_fill);
+				
+				&::before {
+					.pseudo();
+					.position(@t: calc(50% - 7px - @cl-gap-1), @r: -1px);
+					.square(7px);
+					background-color: @cl-base-color-icon-point;
+					border: 1px solid @table__thead-color-surface;
+					border-radius: @cl-radius-max;
+				}
+			}
+			
+			// 필터 아이콘(절대 위치)과 헤더 텍스트가 겹치지 않도록 정렬 여부와 관계없이 아이콘 폭만큼 여백 확보
+			+ .cl-sortable-cell {
+				padding-right: @table__thead-icon-size;
+			}
+		}
+		
+		// 정렬
+		.cl-sortable-cell {
+			.cl-sort {
+				display: none;
+				width: auto;
+				font-size: @cl-pc-font-size-label-xxsmall;
+				
+				.cl-sort-icon {
+					.flex-layout(@d: inline-flex, @jc: center, @ai: center);
+					.square(@table__thead-icon-size);
+					
+					&::before {
+						.pseudo();
+						.svg-icon(100%);
+						.icon-set(ico_down);
+						transition: @transition-base;
+					}
+				}
+				
+				.cl-sort-seq {
+				}
+			}
+			
+			&.cl-sort-asc, &.cl-sort-desc {
+				.cl-sort {
+					.flex-layout(@jc: center, @ai: center, @fd: column);
+					
+					.cl-sort-icon {
+						&::before {
+						}
+					}
+				}
+			}
+			
+			&.cl-sort-asc {
+				.cl-sort-icon {
+					&::before {
+					}
+				}
+			}
+			
+			&.cl-sort-desc {
+				.cl-sort-icon {
+					&::before {
+						transform: rotate(-180deg);
+					}
+				}
+			}
+		}
+		
+		.cl-blank {
+			background-color: @cl-base-color-alpha-basic0;
+		}
+	}
+	
+	.cl-grid-detail {
+		border: solid @table__border-width @table__color-border;
+		border-top : none;
+		
+		.cl-grid-row {
+			.cl-grid-cell {
+				.cl-control {
+					&:not(.cl-inputbox),
+					&:not(.cl-combobox),
+					&:not(.cl-searchinput),
+					&:not(.cl-numbereditor),
+					&:not(.cl-maskeditor),
+					&:not(.cl-dateinput),
+					&:not(.cl-fileinput),
+					&:not(.cl-textarea) {
+						padding: 0 12px;
+					}
+					
+					&.cl-treecell {
+						padding : 0px;
+					}
+				}
+			}
+		}
+		
+		.cl-rowgroup-footer {
+			background-color : @cl-base-color-surface-warning-softer;
+			.cl-text {
+				font-weight: @cl-font-weight-semibold;
+			}
+		}
+		
+		.cl-blank {
+		}
+	}
+	
+	.cl-grid-footer {
+		background-color: @table__tfoot-color-surface;
+		border: none;
+		
+		.cl-grid-cell {
+			font-weight: @cl-font-weight-semibold;
+			
+			.cl-control {
+				font: inherit;
+				color: #333333;
+				padding: 0 12px;
+				
+				&.cl-output.cl-format-number {
+					text-align: right;
+				}
+			}
+		}
+	}
+}
+
+/* 상태값에 따른 행 또는 열 스타일 */
+.cl-grid .cl-grid-detail .cl-grid-row {
+	color: @table__tbody-color-text;
+	
+	.cl-default-cell, .cl-grid-ctrl-inherit {
+		font-style: normal;
+		font-weight: @cl-font-weight-regular;
+	}
+	
+	&.cl-even-row {
+		//background: @table__tbody-row-color-surface-striped;
+	}
+	
+	&.cl-inserted {
+		background: @table__tbody-row-color-surface-add;
+	}
+	
+	&.cl-modified {
+		background: @table__tbody-row-color-surface-update;
+	}
+	
+	&.cl-deleted, &.cl-nullified {
+		background: @table__tbody-row-color-surface-delete;
+		color: @table__tbody-color-text--disabled;
+		
+		.cl-default-cell, .cl-grid-ctrl-inherit:not(.cl-button) {
+			background-color: inherit;
+			color: inherit;
+		}
+	}
+	
+	&.cl-selected {
+		background: @table__tbody-row-color-surface--selected;
+	}
+	
+	&.cl-editing {
+		background: @table__tbody-row-color-surface--selected;
+	}
+	
+	// 선택 유형이 열 또는 셀인 경우
+	.cl-grid-cell.cl-selected {
+		background: @table__tbody-row-color-surface--selected;
+		color: inherit;
+	}
+}
+
+/* 필터 다이얼로그 */
+.cl-gridfilter {
+	@modal__radius: @cl-radius-small2;
+	@modal__gap: @cl-padding-5;
+	@modal__head-gap: @cl-gap-2;
+	@modal__head-padding-x: @cl-padding-6;
+	@modal__head-padding-y: @cl-padding-2;
+	@modal__head-icon-size: @cl-icon--size-medium;
+	@modal__list-gap: @cl-gap-2;
+	@modal__foot-button-gap: @cl-gap-2;
+	
+	@modal__color-surface: @cl-base-color-surface-white;
+	@modal__color-border: @cl-base-color-border-gray-soft;
+	@modal__head-color-surface: @cl-base-color-surface-white;
+	@modal__head-color-border: @cl-base-color-border-gray-softer;
+	@modal__head-color-text: @cl-base-color-text-bold;
+
+	&.cl-overlay {
+		background-color: @cl-base-color-background-dim;
+	}
+	
+	.cl-filterdlg {
+		background: @modal__color-surface;
+		border: 1px solid @modal__color-border;
+		border-radius: @modal__radius;
+		padding: 0;
+		
+		.cl-filterdlg-header {
+			align-items: center;
+			gap: @modal__head-gap;
+			background: @modal__head-color-surface;
+			border-bottom: 1px solid @modal__head-color-border;
+			color: @modal__head-color-text;
+			height: auto;
+			font-size: @cl-pc-font-size-heading-xsmall;
+			font-weight: @cl-font-weight-medium;
+			padding: @modal__head-padding-y @modal__head-padding-x;
+			
+			@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+				font-size: @cl-mobile-font-size-heading-xsmall;
+			}
+			
+			.cl-text {
+				font: inherit;
+				padding: 0;
+				
+				&:focus {
+					.focus-reset();
+				}
+			}
+			
+			.cl-filterdlg-sortable {
+				.svg-icon(@modal__head-icon-size);
+				.icon-set(ico_down);
+				transition: @transition-base;
+				
+				&.cl-filterdlg-asc {
+				}
+				
+				&.cl-filterdlg-desc {
+					transform: rotate(-180deg);
+				}
+			}
+			
+			.cl-filterdlg-close {
+				.svg-icon(@modal__head-icon-size);
+				.icon-set(ico_x);
+			}
+		}
+		
+		.cl-filterdlg-search {
+			margin: @modal__gap 0;
+			padding: 0 @modal__head-padding-x;
+			
+			.cl-search-input {
+				// input.part.less 에 정의됨
+			}
+		}
+		
+		.cl-filterdlg-itemlist {
+			margin: 0;
+			padding: 0;
+			
+			.-cl-filterdlg-item-wrap {
+				display: flex !important;
+				flex-direction: column;
+				gap: @modal__list-gap;
+				padding: 0 @modal__head-padding-x;
+			}
+			
+			.cl-filterdlg-item.cl-checkbox {
+				// selection.part.less 상속됨
+				
+				.cl-checkbox-icon:focus {
+					.focus();
+				}
+			}
+		}
+		
+		.cl-filterdlg-buttons {
+			.flex-layout(@d: inline-flex, @jc: flex-end, @ai: center);
+			gap: @modal__foot-button-gap;
+			margin: 0;
+			padding: @modal__head-padding-y @modal__head-padding-x;
+			
+			.cl-button {
+				display: inline-flex !important;
+				justify-content: center;
+				align-items: center;
+				gap: @cl-gap-2;
+				margin: 0;
+				
+				&.cl-select {
+					// button.part.less 에 정의됨
+				}
+				
+				&.cl-cancel {
+					// button.part.less 에 정의됨
+				}
+			}
+			
+			.cl-checkbox {
+				display: flex !important;
+				gap: @cl-gap-2;
+				flex: 1;
+			}
+		}
+		
+		&:focus {
+			.focus-reset();
+			//XXX 포커스링을 표시하고 싶을 때 해당 라인 주석 해제
+			//.focus-outside();
+		}
+		
+		&:focus-visible {
+		}
+	}
+}
+
+/* ==========================================================================
+ 2. Variants
+ ========================================================================== */
+
+/* 헤더 필수입력 셀 스타일 */
+.cl-grid .cl-grid-header .cl-grid-cell.required,
+.cl-grid .cl-grid-header .cl-grid-cell .cl-grid-cell-inherit.required {
+	@triangle-size: 6px;
+	
+	&::before {
+		.pseudo();
+		.position(@t: 2px, @l: 2px);
+		border-top: @triangle-size solid @cl-base-color-element-danger;
+		border-right: @triangle-size solid transparent; 
+	}
+}
+
+/* 그리드 상태 컬럼 */
+.cl-grid .cl-grid-detail .cl-grid-row {
+	.cl-control.cl-state-cell {
+	}
+	
+	&.cl-inserted .cl-control.cl-state-cell {
+	}
+	
+	&.cl-modified .cl-control.cl-state-cell {
+	}
+	
+	&.cl-deleted .cl-control.cl-state-cell,
+	&.cl-nullified .cl-control.cl-state-cell {
+	}
+}
+
+/* ==========================================================================
+ 3. Mode
+ ========================================================================== */
+
+.color-mode(@mode: high-contrast) {
+
+	/* --- 색상 변수 --- */
+	@table__color-surface: @cl-color-base-alpha-black0;
+	@table__thead-color-surface: #363d44;
+	@table__thead-color-border: fade(#ffffff, 20%);
+	@table__tbody-color-border: fade(#ffffff, 8%);
+	@table__tfoot-color-surface: #363d44;
+
+	.cl-grid {
+		background-color: @table__color-surface;
+		
+		.cl-grid-cell {
+			border-bottom: 1px solid @table__tbody-color-border;
+			
+			.cl-control {
+				color: @cl-color-base-gray-30;
+			}
+		}
+		
+		.cl-grid-header {
+			border: 1px solid fade(#ffffff, 20%);
+			background: @table__thead-color-surface;
+			
+			.cl-grid-cell {
+				&:not(.cl-last-column) {
+					&::after {
+						background-color: @table__thead-color-border;
+					}
+				}
+				
+				.cl-control {
+					color: #ffffff;
+				}
+			}
+		}
+		
+		.cl-grid-footer {
+			background-color: @table__tfoot-color-surface;
+		}
+	}
+}
+
+/************************************************
+ * 그리드 상태컬럼
+ * → 
+ ************************************************/
+.cl-grid {
+	.cl-grid-detail {
+		.cl-grid-row {
+			&.cl-inserted {
+				.cl-output.state-cell {
+					background: url("../../img/icons/ic_sts_insert.svg") no-repeat center / 20px;
+				}
+			}
+			
+			&.cl-modified {
+				.cl-output.state-cell {
+					background: url("../../img/icons/ic_sts_update.svg") no-repeat center / 20px;
+				}
+			}
+			
+			&.cl-deleted,
+			&.cl-nullified {
+				.cl-output.state-cell {
+					background: url("../../img/icons/ic_sts_delete.svg") no-repeat center / 20px;
+				}
+			}
+		}
+	}
+}
+
+.cl-grid.line {
+	.cl-grid-detail {
+		border-left : solid 1px #dddddd;
+		border-right : solid 1px #dddddd;
+		border-bottom : solid 1px #dddddd;
+	}
+	
+	.cl-grid-header {
+		.cl-grid-cell {
+			border-right: solid 1px #dddddd;
+		}
+	}
+	
+				
+}

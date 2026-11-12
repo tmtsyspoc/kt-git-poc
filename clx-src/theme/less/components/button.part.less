@@ -1,0 +1,1117 @@
+@import "../core/include.part.less";
+
+/**
+ * ============================================================================
+ * @file      button.part.less
+ * @desc      CORE-UI 컨트롤 스타일 정의
+ * @rule
+ * 1. 독립성 유지
+ *  - 이 파일 내부에 선언된 변수는 외부에서 참조할 수 없음
+ * @contents  
+ * 1. Base (공통 스타일)
+ * 2. Variants (유형별 스타일)
+ * 3. Mode (테마 스타일)
+ * ============================================================================
+ */
+
+/* ==========================================================================
+   Component Tokens
+ ========================================================================== */
+
+/* 사이즈 변수 */
+@button__size-height: @cl-size-height-6;
+@button__padding-x: @cl-padding-5;
+@button__padding-y: @cl-padding-0;
+@button__gap: @cl-gap-2;
+@button__radius: @cl-radius-xsmall2 * 2;
+@button__pc-font-size: @cl-pc-font-size-label-medium;
+@button__mobile-font-size: @cl-mobile-font-size-label-small;
+
+@button__text-padding-x: @cl-padding-1;
+
+@button__link-pc-font-size: @cl-pc-font-size-label-small;
+@button__link-mobile-font-size: @cl-mobile-font-size-label-small;
+@button__link-padding-x: @cl-padding-1;
+
+/* 색상 변수 */
+@button__color-primary-fill: @cl-base-color-button-primary-fill;
+@button__color-primary-fill--hover: @cl-base-color-button-primary-fill-hover;
+@button__color-primary-fill--focus: @cl-base-color-button-primary-fill-focus;
+@button__color-primary-fill--pressed: @cl-base-color-button-primary-fill-pressed;
+@button__color-primary-fill--disabled: @cl-base-color-button-disabled-fill;
+@button__color-primary-border: @cl-base-color-button-primary-border;
+@button__color-primary-border--hover: @button__color-primary-fill--hover;
+@button__color-primary-border--focus: @cl-base-color-button-primary-border-focus;
+@button__color-primary-border--pressed: @button__color-primary-fill--pressed;
+@button__color-primary-border--disabled: @cl-base-color-button-disabled-border;
+@button__color-primary-text: @cl-base-color-text-inverse-static;
+@button__color-primary-text--hover: @cl-base-color-text-inverse-static;
+@button__color-primary-text--pressed: @cl-base-color-text-inverse-static;
+@button__color-primary-text--disabled: @cl-base-color-button-disabled-text;
+
+@button__color-secondary-fill: @cl-base-color-button-secondary-fill;
+@button__color-secondary-fill--hover: @cl-base-color-button-secondary-fill-hover;
+@button__color-secondary-fill--focus: @cl-base-color-button-secondary-fill-focus;
+@button__color-secondary-fill--pressed: @cl-base-color-button-secondary-fill-pressed;
+@button__color-secondary-fill--disabled: @cl-base-color-button-disabled-fill;
+@button__color-secondary-border: @cl-base-color-button-secondary-border;
+@button__color-secondary-border--hover: @cl-base-color-button-secondary-border-hover;
+@button__color-secondary-border--focus: @cl-base-color-button-secondary-border;
+@button__color-secondary-border--pressed: @cl-base-color-button-secondary-border-pressed;
+@button__color-secondary-border--disabled: @cl-base-color-button-disabled-border;
+@button__color-secondary-text: @cl-base-color-button-secondary-text;
+@button__color-secondary-text--hover: @cl-base-color-button-secondary-text-hover;
+@button__color-secondary-text--focus: @cl-base-color-button-secondary-text-focus;
+@button__color-secondary-text--pressed: @cl-base-color-button-secondary-text-pressed;
+@button__color-secondary-text--disabled: @cl-base-color-button-disabled-text;
+
+@button__color-tertiary-fill: @cl-base-color-button-tertiary-fill;
+@button__color-tertiary-fill--hover: @cl-base-color-button-tertiary-fill-hover;
+@button__color-tertiary-fill--pressed: @cl-base-color-button-tertiary-fill-pressed;
+@button__color-tertiary-fill--disabled: @cl-base-color-button-disabled-fill;
+@button__color-tertiary-border: @cl-base-color-button-tertiary-border;
+@button__color-tertiary-border--hover: @cl-base-color-button-tertiary-border-hover;
+@button__color-tertiary-border--focus: @cl-base-color-button-tertiary-border-focus;
+@button__color-tertiary-border--pressed: @cl-base-color-button-tertiary-border-pressed;
+@button__color-tertiary-border--disabled: @cl-base-color-button-disabled-border;
+@button__color-tertiary-text: @cl-base-color-button-tertiary-text;
+@button__color-tertiary-text--hover: @cl-base-color-button-tertiary-text-hover;
+@button__color-tertiary-text--pressed: @cl-base-color-button-tertiary-text-pressed;
+@button__color-tertiary-text--disabled: @cl-base-color-button-disabled-text;
+
+@button__color-text-fill: @cl-base-color-button-text-fill;
+@button__color-text-fill--hover: @cl-base-color-button-text-fill-hover;
+@button__color-text-fill--pressed: @cl-base-color-button-text-fill-pressed;
+@button__color-text-fill--disabled: @cl-base-color-button-text-fill;
+@button__color-text-border: @cl-base-color-button-text-border;
+@button__color-text-border--disabled: @cl-base-color-border-transparency;
+@button__color-text-text: @cl-base-color-text-basic;
+@button__color-text-text--disabled: @cl-base-color-button-disabled-text;
+
+@button__color-link-fill: @cl-base-color-button-text-fill;
+@button__color-link-fill--hover: @cl-base-color-button-text-fill;
+@button__color-link-fill--pressed: @cl-base-color-button-text-fill;
+@button__color-link-fill--disabled: @cl-base-color-button-text-fill;
+@button__color-link-border: @cl-base-color-button-text-border;
+@button__color-link-border--disabled: @cl-base-color-border-transparency;
+@button__color-link-text: @cl-base-color-link-basic;
+@button__color-link-text--disabled: @cl-base-color-button-disabled-text;
+
+/* ==========================================================================
+    Local Mixins
+ ========================================================================== */
+
+.button__color(@button-style) {
+	& when (@button-style = primary) {
+		background-color: @button__color-primary-fill;
+		border-color: @button__color-primary-border;
+		color: @button__color-primary-text;
+	}
+	
+	& when (@button-style = secondary) {
+		background-color: @button__color-secondary-fill;
+		border-color: @button__color-secondary-border;
+		color: @button__color-secondary-text;
+	}
+	
+	& when (@button-style = tertiary) {
+		background-color: @button__color-tertiary-fill;
+		border-color: @button__color-tertiary-border;
+		color: @button__color-tertiary-text;
+	}
+	
+	& when (@button-style = text) {
+		background-color: @button__color-text-fill;
+		border-color: @button__color-text-border;
+		color: @button__color-text-text;
+	}
+	
+	& when (@button-style = link) {
+		background-color: @button__color-link-fill;
+		border-color: @button__color-link-border;
+		color: @button__color-link-text;
+	}
+}
+
+.button__color-hover(@button-style) {
+	& when (@button-style = primary) {
+		background-color: @button__color-primary-fill--hover;
+		border-color: @button__color-primary-border--hover;
+		color: @button__color-primary-text--hover;
+	}
+	
+	& when (@button-style = secondary) {
+		background-color: @button__color-secondary-fill--hover;
+		border-color: @button__color-secondary-border--hover;
+		color: @button__color-secondary-text--hover;
+	}
+	
+	& when (@button-style = tertiary) {
+		background-color: @button__color-tertiary-fill--hover;
+		border-color: @button__color-tertiary-border--hover;
+		color: @button__color-tertiary-text--hover;
+	}
+	
+	& when (@button-style = text) {
+		background-color: @button__color-text-fill--hover;
+		color: @button__color-text-text;
+	}
+	
+	& when (@button-style = link) {
+		background-color: @button__color-link-fill--hover;
+		color: @button__color-link-text;
+	}
+}
+
+.button__color-focus(@button-style) {
+	& when (@button-style = primary) {
+		background-color: @button__color-primary-fill--focus;
+		border-color: @button__color-primary-border--focus;
+		color: @button__color-primary-text;
+	}
+	
+	& when (@button-style = secondary) {
+		background-color: @button__color-secondary-fill--focus;
+		border-color: @button__color-secondary-border--focus;
+		color: @button__color-secondary-text--focus;
+	}
+	
+	& when (@button-style = tertiary) {
+		background-color: @button__color-tertiary-fill--hover;
+		border-color: @button__color-tertiary-border--hover;
+		color: @button__color-tertiary-text--hover;
+	}
+	
+	& when (@button-style = text) {
+		background-color: @button__color-text-fill--hover;
+		color: @button__color-text-text;
+	}
+	
+	& when (@button-style = link) {
+		background-color: @button__color-link-fill--hover;
+		color: @button__color-link-text;
+	}
+}
+
+.button__color-pressed(@button-style) {
+	& when (@button-style = primary) {
+		background-color: @button__color-primary-fill--pressed;
+		border-color: @button__color-primary-border--pressed;
+		color: @button__color-primary-text--pressed;
+	}
+	
+	& when (@button-style = secondary) {
+		background-color: @button__color-secondary-fill--pressed;
+		border-color: @button__color-secondary-border--pressed;
+		color: @button__color-secondary-text--pressed;
+	}
+	
+	& when (@button-style = tertiary) {
+		background-color: @button__color-tertiary-fill--pressed;
+		border-color: @button__color-tertiary-border--pressed;
+		color: @button__color-tertiary-text--pressed;
+	}
+	
+	& when (@button-style = text) {
+		background-color: @button__color-text-fill--pressed;
+		border-color: @button__color-text-border;
+	}
+	
+	& when (@button-style = link) {
+		background-color: @button__color-link-fill--pressed;
+		border-color: @button__color-link-border;
+	}
+}
+
+.button__color-disabled(@button-style) {
+	& when (@button-style = primary) {
+		background-color: @button__color-primary-fill--disabled;
+		border-color: @button__color-primary-border--disabled;
+		color: @button__color-primary-text--disabled;
+	}
+	
+	& when (@button-style = secondary) {
+		background-color: @button__color-secondary-fill--disabled;
+		border-color: @button__color-secondary-border--disabled;
+		color: @button__color-secondary-text--disabled;
+	}
+	
+	& when (@button-style = tertiary) {
+		background-color: @button__color-tertiary-fill--disabled;
+		border-color: @button__color-tertiary-border--disabled;
+		color: @button__color-tertiary-text--disabled;
+	}
+	
+	& when (@button-style = text) {
+		background-color: @button__color-text-fill--disabled;
+		border-color: @button__color-text-border--disabled;
+		color: @button__color-text-text--disabled;
+	}
+	
+	& when (@button-style = link) {
+		background-color: @button__color-link-fill--disabled;
+		border-color: @button__color-link-border--disabled;
+		color: @button__color-link-text--disabled;
+	}
+}
+
+.button__color-icon(@button-style) {
+	& when (@button-style = primary) {
+		background-color: @button__color-primary-text;
+	}
+	
+	& when (@button-style = secondary) {
+		background-color: @button__color-secondary-text;
+	}
+	
+	& when (@button-style = tertiary) {
+		background-color: @button__color-tertiary-text;
+	}
+	
+	& when (@button-style = text) {
+		background-color: @button__color-text-text;
+	}
+	
+	& when (@button-style = link) {
+		background-color: @button__color-link-text;
+	}
+}
+
+/* ==========================================================================
+ 1. Base
+ ========================================================================== */
+
+.cl-button {
+	@button-style: primary;
+	.button__color(@button-style);
+	background-image: none;
+	border-style: solid;
+	border-width: @cl-base-border-width-static-regular;
+	border-radius: @button__radius;
+	font-size: @button__pc-font-size;
+	font-weight: @cl-font-weight-medium;
+	padding: @button__padding-y @button__padding-x;
+	text-shadow: none;
+//	transition: @transition-base;
+	white-space: nowrap;
+	word-break: break-all;
+	
+	@media (max-width: calc(@{breakpoint-medium} - 1px)) {
+		// 767까지
+		font-size: @button__mobile-font-size;
+	}
+	
+	.cl-text-wrapper {
+		.cl-text {
+			white-space: inherit;
+		}
+	}
+	
+	.cl-icon {
+		flex-shrink: 0; // 아이콘 크기 보장
+		transition: @transition-base;
+	}
+	
+	&:not(.cl-disabled):hover {
+//		transition: @transition-base;
+		.button__color-hover(@button-style);
+		
+		&.icon {
+			color : inherit;
+		}
+	}
+	
+	&.cl-focus {
+//		transition: @tran/**/sition-base;
+		border-width: 2px;
+		.focus-reset();
+		.button__color-focus(@button-style);
+	}
+	
+	&:focus-visible {
+		.focus();
+	}
+	
+	&:not(.cl-disabled).cl-activated,
+	&:not(.cl-disabled):active {
+		.button__color-pressed(@button-style);
+		background-image: none;
+	}
+	
+	&.cl-disabled {
+		.button__color-disabled(@button-style);
+		
+		.cl-icon {
+//			background-color: #666666;
+		}
+	}
+}
+
+/* --- 컨트롤 내 버튼 영역 -- */
+.cl-icon {
+	// 일반 배경이미지
+	&:not(.icon) {
+		.flex-layout(@jc: center, @ai: center);
+		.square(@cl-icon--size-small);
+		line-height: @cl-line-height-none;
+	}
+	
+	&.icon {
+		.ph-icon(@cl-icon--size-small);
+		background-image: none !important;
+		color: inherit;
+		.square(16px);
+		
+		&[class*="ico-"] {
+		}
+	}
+}
+
+/* --- 그리드 필터 내 버튼 --- */
+.cl-gridfilter {
+	.cl-button {
+		height: @button__size-height;
+		padding: @button__padding-y @button__padding-x;
+	}
+	
+	.cl-button.cl-select {
+		@button-style: secondary;
+		.button__color(@button-style);
+		
+		&:not(.cl-disabled):hover {
+			.button__color-hover(@button-style);
+		}
+		
+		&.cl-focus {
+			.button__color(@button-style);
+		}
+		
+		&:not(.cl-disabled).cl-activated,
+		&:not(.cl-disabled):active {
+			.button__color-pressed(@button-style);
+		}
+		
+		&.cl-disabled {
+			.button__color-disabled(@button-style);
+		}
+	}
+	
+	.cl-button.cl-cancel {
+		@button-style: tertiary;
+		.button__color(@button-style);
+		
+		&:not(.cl-disabled):hover {
+			.button__color-hover(@button-style);
+		}
+		
+		&.cl-focus {
+			.button__color(@button-style);
+		}
+		
+		&:not(.cl-disabled).cl-activated,
+		&:not(.cl-disabled):active {
+			.button__color-pressed(@button-style);
+		}
+		
+		&.cl-disabled {
+			.button__color-disabled(@button-style);
+		}
+	}
+}
+
+/* --- 파일 업로드 버튼 --- */
+.cl-fileupload .cl-fileupload-footer .cl-fileupload-buttons {
+	.cl-fileupload-button {
+		display: inline-flex !important;
+		justify-content: center;
+		align-items: center;
+		border-radius: @button__radius;
+		font-weight: @cl-font-weight-medium;
+		height: @button__size-height;
+		padding: @button__padding-y @button__padding-x;
+		
+		&:focus {
+			.focus-reset();
+		}
+		
+		&:focus-visible {
+			.focus();
+		}
+		
+		&.cl-fileupload-add,
+		&.cl-fileupload-remove {
+			@button-style: tertiary;
+			.button__color(@button-style);
+			
+			&:focus {
+				.button__color(@button-style);
+			}
+			
+			&:hover {
+				.button__color-hover(@button-style);
+			}
+			
+			&:active {
+				.button__color-pressed(@button-style);
+			}
+		}
+		
+		&.cl-fileupload-send {
+			@button-style: secondary;
+			.button__color(@button-style);
+			
+			&:focus {
+				.button__color(@button-style);
+			}
+			
+			&:hover {
+				.button__color-hover(@button-style);
+			}
+			
+			&:active {
+				.button__color-pressed(@button-style);
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+ 2. Variants
+ ========================================================================== */
+
+/* --- 버튼 내 말줄임표시 --- */
+.cl-button .ellipsis {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+/* --- 버튼 계층 --- */
+.cl-button.primary {
+	@button-style: primary;
+	.button__color(@button-style);
+	
+	&:not(.btn-save):not(.btn-search) {
+		.cl-icon {
+//			background-color: #ffffff;
+		}
+	}
+	
+	&:not(.cl-disabled):hover {
+		.button__color-hover(@button-style);
+	}
+	
+	&.cl-focus {
+		.button__color-focus(@button-style);
+	}
+	
+	&:not(.cl-disabled).cl-activated,
+	&:not(.cl-disabled):active {
+		.button__color-pressed(@button-style);
+	}
+	
+	&.cl-disabled {
+		.button__color-disabled(@button-style);
+		
+		.cl-icon {
+			background-color: #666666;
+		}
+	}
+}
+
+.cl-button.secondary {
+	@button-style: secondary;
+	.button__color(@button-style);
+	
+	.cl-icon {
+//		background-color: #004aaa;
+	}
+	
+	&.reset {
+		.cl-icon {
+			background-color: transparent;
+			background-image: url("../../img/pages/main/ic_synchronize_blue.svg") !important;
+		}
+	}
+	
+	&:not(.cl-disabled):hover {
+		.button__color-hover(@button-style);
+	}
+	
+	&.cl-focus {
+		.button__color-focus(@button-style);
+	}
+	
+	&:not(.cl-disabled).cl-activated,
+	&:not(.cl-disabled):active {
+		.button__color-pressed(@button-style);
+	}
+	
+	&.cl-disabled {
+		.button__color-disabled(@button-style);
+		
+		.cl-icon {
+			background-color: #666666;
+		}
+	}
+}
+
+.cl-button.tertiary {
+	@button-style: tertiary;
+	.button__color(@button-style);
+	
+//	&:not(.btn-add):not(.btn-edit):not(.btn-remove) {
+//		.cl-icon {
+//			background-color: #8c8c8c;
+//		}
+//	}
+	
+	&:not(.cl-disabled):hover {
+		.button__color-hover(@button-style);
+	}
+	
+	&.cl-focus {
+		.button__color-focus(@button-style);
+	}
+	
+	&:not(.cl-disabled).cl-activated,
+	&:not(.cl-disabled):active {
+		.button__color-pressed(@button-style);
+	}
+	
+	&.cl-disabled {
+		.button__color-disabled(@button-style);
+		
+		.cl-icon {
+			background-color: #666666;
+		}
+	}
+}
+
+/* --- 그리드 내 버튼 --- */
+.cl-grid .cl-grid-cell.cl-grid-cell-inherit .cl-button.cl-grid-ctrl-inherit {
+	&.primary {
+		@button-style: primary;
+		.button__color(@button-style);
+		
+		&:not(.cl-disabled):hover {
+			.button__color-hover(@button-style);
+		}
+		
+		&.cl-focus {
+			.button__color(@button-style);
+		}
+		
+		&:not(.cl-disabled).cl-activated,
+		&:not(.cl-disabled):active {
+			.button__color-pressed(@button-style);
+		}
+		
+		&.cl-disabled {
+			.button__color-disabled(@button-style);
+		}
+	}
+	
+	&.secondary {
+		@button-style: secondary;
+		.button__color(@button-style);
+		
+		&:not(.cl-disabled):hover {
+			.button__color-hover(@button-style);
+		}
+		
+		&.cl-focus {
+			.button__color(@button-style);
+		}
+		
+		&:not(.cl-disabled).cl-activated,
+		&:not(.cl-disabled):active {
+			.button__color-pressed(@button-style);
+		}
+		
+		&.cl-disabled {
+			.button__color-disabled(@button-style);
+		}
+	}
+	
+	&.tertiary {
+		@button-style: tertiary;
+		.button__color(@button-style);
+		
+		.cl-icon.icon {
+			//.button__color-icon(@button-style);
+		}
+		
+		&:not(.cl-disabled):hover {
+			.button__color-hover(@button-style);
+		}
+		
+		&.cl-focus {
+			.button__color(@button-style);
+		}
+		
+		&:not(.cl-disabled).cl-activated,
+		&:not(.cl-disabled):active {
+			.button__color-pressed(@button-style);
+		}
+		
+		&.cl-disabled {
+			.button__color-disabled(@button-style);
+		}
+	}
+}
+
+/* --- 아이콘만 표시되는 버튼 --- */
+.cl-button.icon {
+	@button__color-icon-fill: @cl-base-color-button-text-fill;
+	@button__color-icon-border: @cl-base-color-border-transparency;
+	
+	.flex-layout(@jc: center, @ai: center);
+	background-color: @button__color-icon-fill;
+	border-color: @button__color-icon-border;
+	color: inherit;
+	padding: 0;
+	min-width: @button__size-height;
+	min-height: @button__size-height;
+	
+	.cl-text-wrapper {
+		gap: 0;
+		
+		.cl-text {
+			.sound-only();
+		}
+	}
+	
+	.cl-icon.icon {
+	}
+	
+	&:not(.cl-disabled):hover,
+	&.cl-focus,
+	&:not(.cl-disabled).cl-activated,
+	&:not(.cl-disabled):active {
+		background-color: inherit;
+		border-color: @button__color-icon-border;
+	}
+	
+	&.cl-disabled {
+		.button__color-disabled(@button-style);
+	}
+}
+
+.cl-button.btn-add {
+	.cl-icon {
+		background-image: url("../../img/icons/ico_add_gray.svg") !important;
+	}
+}
+
+.cl-button.btn-edit {
+	.cl-icon {
+		background-image: url("../../img/icons/ico_edit_gray.svg") !important;
+	}
+}
+
+.cl-button.btn-remove {
+	.cl-icon {
+		background-image: url("../../img/icons/ico_remove.svg") !important;
+	}
+}
+
+.cl-button.btn-save {
+	.cl-icon {
+		background-image: url("../../img/icons/ico_save_white.svg") !important;
+	}
+}
+
+.cl-button.btn-search {
+	.cl-icon {
+		background-image: url("../../img/icons/ico_search_w.svg") !important;
+	}
+}
+
+.cl-button.btn-search-secondary {
+	.cl-icon {
+		background-image: url("../../img/icons/ico_search.svg") !important;
+	}
+}
+
+.cl-button {
+	.cl-icon {
+		&.ico-question {
+			background-image: url("../../img/icons/ico_question.svg") !important;
+		}
+	}
+}
+
+// 아이콘과 텍스트 간격 처리
+.cl-button:not(.icon) {
+	.cl-text-wrapper {
+		gap: @button__gap;
+	}
+}
+
+// 배경이미지로 처리
+.cl-button.icon.pure {
+	.cl-icon.icon {
+	}
+}
+
+.cl-button.icon-pdf {
+	.cl-icon {
+		background-image: url("../../img/icons/ic_btn_pdf.svg") !important;
+		width : 17px;
+	}
+}
+
+.cl-button.icon-download {
+	.cl-icon {
+		background-image: url("../../img/icons/ico_download_white.svg") !important;
+		width : 17px;
+	}
+}
+
+.cl-button.icon-excel {
+	.cl-icon {
+		background-image: url("../../img/icons/ico_excel.svg") !important;
+		width : 17px;
+	}
+}
+
+.cl-button.icon.border {
+	@button-style: tertiary;
+	
+	.button__color(@button-style);
+	//border-radius: @cl-radius-max;
+	
+	&:not(.cl-disabled):hover {
+		.button__color-hover(@button-style);
+	}
+	
+	&.cl-focus {
+		.button__color(@button-style);
+	}
+	
+	&:not(.cl-disabled).cl-activated,
+	&:not(.cl-disabled):active {
+		.button__color-pressed(@button-style);
+	}
+	
+	&.cl-disabled {
+		.button__color-disabled(@button-style);
+	}
+}
+
+/* --- 텍스트 버튼 --- */
+.cl-button.text {
+	@button-style: text;
+	.button__color(@button-style);
+	padding: @button__padding-y @button__text-padding-x;
+	
+	.cl-icon {
+	}
+	
+	&:not(.cl-disabled):hover {
+		.button__color-hover(@button-style);
+	}
+	
+	&.cl-focus {
+		.button__color(@button-style);
+	}
+	
+	&:not(.cl-disabled).cl-activated,
+	&:not(.cl-disabled):active {
+		.button__color-pressed(@button-style);
+	}
+	
+	&.cl-disabled {
+		.button__color-disabled(@button-style);
+	}
+}
+
+/* --- 링크 버튼 --- */
+.link,
+.cl-button.link {
+	@button-style: link;
+	.button__color(@button-style);
+	border: 0;
+	padding: @button__padding-y @button__link-padding-x;
+	
+	.cl-icon {
+	}
+	
+	&:not(.cl-disabled):hover {
+		.button__color-hover(@button-style);
+	}
+	
+	&.cl-focus {
+		.button__color(@button-style);
+	}
+	
+	&:focus-visible {
+		.focus-inside();
+	}
+	
+	&:not(.cl-disabled).cl-activated,
+	&:not(.cl-disabled):active {
+		.button__color-pressed(@button-style);
+	}
+	
+	&.cl-disabled {
+		.button__color-disabled(@button-style);
+	}
+	
+	// 호버 또는 액티브 시 밑줄 처리
+	.underline.hidden-underline {
+		text-decoration-color: @cl-base-color-border-transparency;
+		transition: @cl-transition-base;
+	}
+	
+	&:not(.cl-disabled):hover,
+	&.cl-focus,
+	&:not(.cl-disabled).cl-activated,
+	&:not(.cl-disabled):active {
+		.underline.hidden-underline {
+			text-decoration-color: inherit;
+		}
+	}
+}
+
+.link.basic,
+.cl-button.link.basic {
+	@color: @cl-base-color-text-basic;
+	color: @color;
+	
+	.cl-icon {
+	}
+	
+	&:not(.cl-disabled):hover,
+	&.cl-focus,
+	&:not(.cl-disabled).cl-activated,
+	&:not(.cl-disabled):active {
+	}
+}
+
+/* ==========================================================================
+ 3. Mode
+ ========================================================================== */
+
+.color-mode(@mode: high-contrast) {
+	
+	/* 색상 변수 */
+	@button__color-primary-fill: @cl-high-contrast-color-button-primary-fill;
+	@button__color-primary-fill--hover: @cl-high-contrast-color-button-primary-fill-hover;
+	@button__color-primary-fill--focus: @cl-high-contrast-color-button-primary-fill-focus;
+	@button__color-primary-fill--pressed: @cl-high-contrast-color-button-primary-fill-pressed;
+	@button__color-primary-fill--disabled: @cl-high-contrast-color-button-disabled-fill;
+	@button__color-primary-border: @button__color-primary-fill;
+	@button__color-primary-border--hover: @button__color-primary-fill--hover;
+	@button__color-primary-border--focus: @cl-high-contrast-color-button-primary-border-focus;
+	@button__color-primary-border--pressed: @button__color-primary-fill--pressed;
+	@button__color-primary-border--disabled: @cl-high-contrast-color-button-disabled-border;
+	@button__color-primary-text: #ffffff;
+	@button__color-primary-text--hover: @button__color-primary-text;
+	@button__color-primary-text--pressed: @button__color-primary-text;
+	@button__color-primary-text--disabled: @cl-high-contrast-color-button-disabled-text;
+	
+	@button__color-secondary-fill: @cl-high-contrast-color-button-secondary-fill;
+	@button__color-secondary-fill--hover: @cl-high-contrast-color-button-secondary-fill-hover;
+	@button__color-secondary-fill--focus: @cl-high-contrast-color-button-secondary-fill-focus;
+	@button__color-secondary-fill--pressed: @cl-high-contrast-color-button-secondary-fill-pressed;
+	@button__color-secondary-fill--disabled: @cl-high-contrast-color-button-disabled-fill;
+	@button__color-secondary-border: @cl-high-contrast-color-button-secondary-border;
+	@button__color-secondary-border--hover: @cl-high-contrast-color-button-secondary-border-hover;
+	@button__color-secondary-border--focus: @cl-high-contrast-color-button-secondary-border-focus;
+	@button__color-secondary-border--pressed: @cl-high-contrast-color-button-secondary-border-pressed;
+	@button__color-secondary-border--disabled: @cl-high-contrast-color-button-disabled-border;
+	@button__color-secondary-text: @cl-high-contrast-color-button-secondary-text;
+	@button__color-secondary-text--hover: @cl-high-contrast-color-button-secondary-text-hover;
+	@button__color-secondary-text--focus: @cl-high-contrast-color-button-secondary-text-focus;
+	@button__color-secondary-text--pressed: @cl-high-contrast-color-button-secondary-text-pressed;
+	@button__color-secondary-text--disabled: @cl-high-contrast-color-button-disabled-text;
+	
+	@button__color-tertiary-fill: @cl-high-contrast-color-button-tertiary-fill;
+	@button__color-tertiary-fill--hover: @cl-high-contrast-color-button-tertiary-fill-hover;
+	@button__color-tertiary-fill--pressed: @cl-high-contrast-color-button-tertiary-fill-pressed;
+	@button__color-tertiary-fill--disabled: @cl-high-contrast-color-button-disabled-fill;
+	@button__color-tertiary-border: @cl-high-contrast-color-button-tertiary-border;
+	@button__color-tertiary-border--hover: @cl-high-contrast-color-button-tertiary-border-hover;
+	@button__color-tertiary-border--focus: @button__color-tertiary-border--hover;
+	@button__color-tertiary-border--pressed: @button__color-tertiary-border--hover;
+	@button__color-tertiary-border--disabled: @cl-high-contrast-color-button-disabled-border;
+	@button__color-tertiary-text: @cl-high-contrast-color-button-tertiary-text;
+	@button__color-tertiary-text--hover: @cl-high-contrast-color-button-tertiary-text-hover;
+	@button__color-tertiary-text--pressed: @button__color-tertiary-text--hover;
+	@button__color-tertiary-text--disabled: @cl-high-contrast-color-button-disabled-text;
+	
+	@button__color-text-fill: @cl-base-color-button-text-fill;
+	@button__color-text-fill--hover: @cl-base-color-button-text-fill-hover;
+	@button__color-text-fill--pressed: @cl-base-color-button-text-fill-pressed;
+	@button__color-text-fill--disabled: @cl-base-color-button-text-fill;
+	@button__color-text-border: @cl-base-color-button-text-border;
+	@button__color-text-border--disabled: @cl-base-color-border-transparency;
+	@button__color-text-text: @cl-base-color-text-basic;
+	@button__color-text-text--disabled: @cl-base-color-button-disabled-text;
+	
+	@button__color-link-fill: @cl-base-color-button-text-fill;
+	@button__color-link-fill--hover: @cl-base-color-button-text-fill;
+	@button__color-link-fill--pressed: @cl-base-color-button-text-fill;
+	@button__color-link-fill--disabled: @cl-base-color-button-text-fill;
+	@button__color-link-border: @cl-base-color-button-text-border;
+	@button__color-link-border--disabled: @cl-base-color-border-transparency;
+	@button__color-link-text: @cl-base-color-link-basic;
+	@button__color-link-text--disabled: @cl-base-color-button-disabled-text;
+
+	.cl-button {
+		@button-style: primary;
+		.button__color(@button-style);
+		
+		&:not(.cl-disabled):hover {
+			.button__color-hover(@button-style);
+		}
+		
+		&.cl-focus {
+			.button__color-focus(@button-style);
+		}
+		
+		&:not(.cl-disabled).cl-activated,
+		&:not(.cl-disabled):active {
+			.button__color-pressed(@button-style);
+		}
+		
+		&.cl-disabled {
+			.button__color-disabled(@button-style);
+			
+			.cl-icon {
+				background-color: #666666;
+			}
+		}
+	}
+
+	/* --- 버튼 계층 --- */
+	.cl-button.primary {
+		@button-style: primary;
+		.button__color(@button-style);
+		
+		&:not(.cl-disabled):hover {
+			.button__color-hover(@button-style);
+		}
+		
+		&.cl-focus {
+			.button__color-focus(@button-style);
+		}
+		
+		&:not(.cl-disabled).cl-activated,
+		&:not(.cl-disabled):active {
+			.button__color-pressed(@button-style);
+		}
+		
+		&.cl-disabled {
+			.button__color-disabled(@button-style);
+			
+			.cl-icon {
+				background-color: #999999;
+			}
+		}
+	}
+	
+	.cl-button.secondary {
+		@button-style: secondary;
+		.button__color(@button-style);
+		
+		.cl-icon {
+			background-color: @cl-high-contrast-color-button-secondary-border;
+		}
+		
+		&.cl-focus {
+			.cl-icon {
+				background-color: @cl-high-contrast-color-button-secondary-border-focus;
+			}
+		}
+		
+		&:not(.cl-disabled):hover {
+			.cl-icon {
+				background-color: @cl-high-contrast-color-button-secondary-border-hover;
+			}
+		}
+		&:not(.cl-disabled).cl-activated,
+		&:not(.cl-disabled):active {
+			.cl-icon {
+				background-color: @cl-high-contrast-color-button-secondary-border-pressed;
+			}
+		}
+		
+		&:not(.cl-disabled):hover {
+			.button__color-hover(@button-style);
+		}
+		
+		&.cl-focus {
+			.button__color-focus(@button-style);
+		}
+		
+		&:not(.cl-disabled).cl-activated,
+		&:not(.cl-disabled):active {
+			.button__color-pressed(@button-style);
+		}
+		
+		&.cl-disabled {
+			.button__color-disabled(@button-style);
+			
+			.cl-icon {
+				background-color: #999999;
+			}
+		}
+	}
+	
+	.cl-button.tertiary {
+		@button-style: tertiary;
+		.button__color(@button-style);
+		
+		.cl-icon {
+			background-color: #bdbdbd;
+		}
+		
+		&:not(.cl-disabled):hover,
+		&.cl-focus,
+		&:not(.cl-disabled).cl-activated,
+		&:not(.cl-disabled):active {
+			.cl-icon {
+				background-color: @cl-color-high-contrast-gray-0;
+			}
+		}
+		
+		&:not(.cl-disabled):hover {
+			.button__color-hover(@button-style);
+		}
+		
+		&.cl-focus {
+			.button__color-focus(@button-style);
+		}
+		
+		&:not(.cl-disabled).cl-activated,
+		&:not(.cl-disabled):active {
+			.button__color-pressed(@button-style);
+		}
+		
+		&.cl-disabled {
+			.button__color-disabled(@button-style);
+			
+			.cl-icon {
+				background-color: #999999;
+			}
+		}
+	}
+}
+ .cl-button{
+ 	// 상세 버튼
+ 	&.btn-modile-detail{
+		background-color: transparent;
+		border: none;
+		.cl-icon {
+			background-image: url("../../img/icons/ico_sch2_20.svg") !important;
+		}
+		
+		&:not(.cl-disabled):hover,
+		&.cl-focus {
+			background-color: transparent;
+			border: none;
+		}
+ 	}
+ }

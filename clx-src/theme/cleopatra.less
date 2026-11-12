@@ -1,0 +1,53 @@
+/* --- Phosphor-icons --- */
+@import "img/@phosphor-icons/web/src/regular/style.css";
+@import "img/@phosphor-icons/web/src/fill/style.css";
+@import "img/@phosphor-icons/web/src/duotone/style.css";
+
+/* --- 모든 개별 컴포넌트 스타일시트 --- */
+@import "less/style.part.less";
+
+/* --- 테마 설정 구역 --- */
+
+// 고대비 모드
+[data-cl-mode="high-contrast"] {
+	@mode: high-contrast;
+	.color-mode(@mode);
+}
+
+// 오렌지 테마 모드
+[data-cl-mode="orange-theme"] {
+	#orange-theme();
+}
+
+// 화이트 테마 모드
+//[data-cl-mode="white-theme"] {
+//	#white-theme();
+//}
+body:not([data-cl-mode]),
+[data-cl-mode="light"],
+[data-cl-mode="white-theme"] {
+        #white-theme();
+}
+
+// 퍼플 테마 모드
+[data-cl-mode="purple-theme"] {
+	#purple-theme();
+}
+
+// 레드 테마 모드
+[data-cl-mode="red-theme"] {
+	#red-theme();
+}
+
+// 그린 테마 모드
+[data-cl-mode="green-theme"] {
+	#green-theme();
+}
+
+// 시스템 설정 모드 (data-xb-mode 가 theme 인 경우 고대비 모드 생성)
+[data-cl-mode="theme"] {
+	@mode-theme: dark;
+	@media (prefers-color-scheme: ~"@{mode-theme}") {
+		.color-mode(@mode: high-contrast);
+	}
+}

@@ -1,0 +1,916 @@
+@import "../core/include.part.less";
+
+/* ==========================================================================
+    Component Tokens
+ ========================================================================== */
+ 
+@cl-login-color-none: transparent;
+@cl-login-color-slate-80: #20252B;
+@cl-login-color-slate-90: #1E293B;
+@cl-login-color-slate-95: #121212;
+
+
+@cl-login-gray-0: #FFFFFF; 
+@cl-login-gray-5: #F8F8FD;
+@cl-login-gray-20: #E9EAEC; 
+@cl-login-gray-30: #D3D4D9;
+@cl-login-gray-50: #64748B;
+@cl-login-gray-60: #5E616E;
+@cl-login-gray-70: #384C68;
+@cl-login-gray-80: #26272C;
+
+@cl-login-blue-10: #FFF1F3;
+@cl-login-blue-40: #FF6B81;
+@cl-login-blue-50: #1A1A1A;
+@cl-login-blue-70: #E4002B;
+@cl-login-blue-90: #1A1A1A;
+@cl-login-blue-95: #1A1A1A;
+
+@cl-login-color-slate-50: #F5F7FF;
+
+@cl-login-color-white-alpha8: fade(#ffffff, 8%);
+@cl-login-color-white-alpha20: fade(#ffffff, 20%);
+
+@cl-login-shadow-blue-alpha7: fade(#284783, 7%);
+@cl-login-shadow-blue: 0px 2px 16px 0px rgba(40, 71, 131, 0.16);
+
+@cl-login-bg-image-default: url("../../img/pages/login/bg_login.png");
+@cl-login-bg-image-dark: url("../../img/pages/login/bg_dark_login.png");
+@cl-login-mobile-bg-image: url("../../img/pages/login/m_bg_login.png");
+@cl-login-mobile-dark-bg-image: url("../../img/pages/login/m_bg_dark_login.png");
+
+@cl-login-logo-image: url("../../img/pages/main/logo.png");
+@cl-login-logo-white-image:  url("../../img/pages/main/logo_w.png");
+@cl-login-phone-icon-image: url("../../img/pages/login/ic_phone.svg");
+@cl-login-phone-icon-dark-image: url("../../img/pages/login/ic_phone2.svg");
+@cl-login-bell-icon-image: url("../../img/pages/login/ic_bell.svg");
+@cl-login-bell-icon-dark-image: url("../../img/pages/login/ic_bell_light.svg");
+@cl-login-arrow-icon-image: url("../../img/pages/login/ic_arrow_right16.svg");
+@cl-login-arrow-icon-white-image: url("../../img/pages/login/ic_arrow_white_right16.svg");
+@cl-login-input-id-image: url("../../img/pages/login/ic_input_id.svg");
+@cl-login-input-id-white-image: url("../../img/pages/login/ic_input_id_whtie.svg");
+@cl-login-input-pw-image: url("../../img/pages/login/ic_input_pw.svg");
+@cl-login-input-pw-white-image: url("../../img/pages/login/ic_input_pw_white.svg");
+@cl-login-eye-on-image: url("../../img/pages/login/ic_eye_on.svg");
+@cl-login-eye-on-white-image: url("../../img/pages/login/ic_eye_on_white.svg");
+@cl-login-eye-off-image: url("../../img/pages/login/ic_eye_off.svg");
+@cl-login-eye-off-white-image: url("../../img/pages/login/ic_eye_off_white.svg");
+@cl-login-icon-security-image: url("../../img/pages/login/ic_security.svg");
+@cl-login-icon-security-right-image: url("../../img/pages/login/ic_security_right.svg");
+@cl-login-icon-auth-image: url("../../img/pages/login/ic_auth.svg");
+@cl-login-icon-auth-right-image: url("../../img/pages/login/ic_auth_right.svg");
+@cl-login-icon-cert-image: url("../../img/pages/login/ic_cert.svg");
+@cl-login-icon-cert-white-image: url("../../img/pages/login/ic_cert_white.svg");
+@cl-login-icon-help-image: url("../../img/pages/login/ic_help.svg");
+@cl-login-icon-help-white-image: url("../../img/pages/login/ic_help_white.svg");
+ 
+// * ============================================================================ *
+
+@cl-login-bg-white: @cl-base-color-background-white;
+@cl-login-color-0: @cl-login-color-none;
+@cl-login-color-white: @cl-color-base-gray-0;    
+@cl-login-color-black: @cl-color-base-gray-100;  
+@cl-login-color-dark: @cl-login-color-slate-80; 
+@cl-login-primary: @cl-base-color-element-primary;
+@cl-login-primary-70: @cl-color-base-primary-70;
+@cl-login-btn-primary: @cl-base-color-button-primary-fill;
+@cl-login-btn-border-color: @cl-login-gray-30;
+@cl-login-color-blue-10: @cl-login-blue-10;
+@cl-login-color-blue-40: @cl-login-blue-40;
+@cl-login-color-blue-70: @cl-login-blue-70;
+@cl-login-color-blue-90: @cl-login-blue-90;
+@cl-login-border-bottom-color: @cl-login-gray-20; 
+@cl-login-border-color: @cl-login-gray-30;
+@cl-login-font-white-color: @cl-login-gray-0;
+@cl-login-font-help-color: @cl-login-gray-50;
+@cl-login-font-base-color: @cl-login-gray-60; 
+@cl-login-font-dark-color: @cl-login-gray-80; 
+@cl-login-footer-bg-blue-color: @cl-login-blue-95;
+@cl-login-footer-bg-gray-color: @cl-login-gray-70;
+@cl-login-font-strong-color: @cl-login-color-slate-90;
+@cl-login-box-shadow-blue: @cl-login-shadow-blue;
+@cl-login-bg-shadow-blue: @cl-login-shadow-blue-alpha7;
+
+@cl-login-input-focus-color: @cl-color-base-primary-50;
+
+@cl-login-m-bg-color: @cl-login-gray-5;
+@cl-login-m-bg-dark-color: @cl-login-color-slate-95;
+
+/* ==========================================================================
+ 1. Base
+ ========================================================================== */
+
+.login {
+	.cl-button:not(.primary){
+		background-color: rgba(0, 0, 0, 0);
+	}
+	background: @cl-login-bg-image-default no-repeat center / cover;
+	
+	.cl-output.bar {
+		width: 1px !important;
+		background-color: @cl-login-border-color;
+	}
+	
+	.cl-button.text {
+		padding: 0;
+		border-radius: 0;
+		/* 마우스 호버 스타일 */
+		&:not(.cl-disabled):hover,
+		&.cl-focus,
+		&:focus,
+		&:not(.cl-disabled).cl-activated,
+		&:not(.cl-disabled):active {
+			background-color: transparent;
+			border-color: transparent;
+			border-width: 1px;
+		}
+	}
+	
+	.cl-container.header {
+		background-color: @cl-login-color-white;
+		padding: 0px 48px;
+		border-bottom: 1px solid @cl-login-border-bottom-color;
+		
+		.cl-button.logo {
+			background-image: none;
+			background-color: #2F66E4 !important;
+			-webkit-mask-image: url("../../img/pages/main/logo_w.png");
+			mask-image: url("../../img/pages/main/logo_w.png");
+			-webkit-mask-size: 200px;
+			mask-size: 200px;
+			-webkit-mask-repeat: no-repeat;
+			mask-repeat: no-repeat;
+			-webkit-mask-position: center;
+			mask-position: center;
+		}
+		.cl-container.header-utils {
+			.cl-container.btn-group {
+				.cl-button {
+					color: @cl-login-font-base-color;
+					font-weight: @cl-font-weight-regular;
+					font-size: @cl-pc-font-size-body-large;
+				}
+			}
+			
+			.cl-output {
+				font-size: @cl-pc-font-size-body-large;
+				color: @cl-login-font-base-color;
+				
+				&.ico-phone {
+					background: @cl-login-phone-icon-image no-repeat center / contain;
+				}
+				
+				&.help-num {
+					span.num {
+						color: @cl-login-primary;
+						font-weight: @cl-font-weight-semibold;
+					}
+				}
+			}
+		}
+	}
+	
+	.cl-container.login-wrap {
+		//공지사항
+		.cl-container.notice-board {
+			.cl-container.slogan-group {
+				.cl-output {
+					font-size: @cl-pc-font-size-body-large;
+					color: @cl-login-font-base-color;
+				}
+				
+				.cl-output.brand {
+					font-size: @cl-pc-font-size-body-large;
+					font-weight: @cl-font-weight-semibold;
+					color: @cl-login-primary-70;
+				}
+				
+				.cl-output.title {
+					font-size: (@cl-pc-font-size-heading-xlarge + 8);
+					font-weight: @cl-font-weight-bold;
+					color: @cl-login-font-strong-color;
+					line-height: 1.2;
+					span.strong-txt{
+						color: @cl-login-primary;
+					}
+				}
+			}
+			
+			.cl-container.notice-wrap {
+				.cl-container.notice-header {
+					.cl-output.title {
+						font-size: @cl-pc-font-size-heading-xsmall;
+						font-weight: @cl-font-weight-bold;
+						color: @cl-login-primary-70;
+						background: @cl-login-bell-icon-image no-repeat left 0;
+						
+						.cl-text {
+							padding-left: 32px;
+						}
+					}
+					
+					.cl-button.btn-more {
+						color: @cl-login-font-dark-color;
+						.cl-icon {
+							background-image: @cl-login-arrow-icon-image !important;
+						}
+					}
+				}
+				
+				.cl-container.notice-list {
+					.cl-container.notice-item {
+						border-bottom: 1px solid @cl-login-border-color;
+						
+						&.cl-first-row {
+							border-top: 1px solid @cl-login-border-color;
+						}
+					}
+					
+					.cl-output.badge {
+						border-radius: 6px;
+						text-align: center;
+						font-weight: @cl-font-weight-bold;
+						font-size: @cl-pc-font-size-body-large;
+						
+						//공지
+						&.notice {
+							background-color: @cl-login-color-blue-10;
+							color: @cl-login-color-blue-70;
+						}
+					}
+					.cl-button.btn-subject {
+						font-size: (@cl-pc-font-size-body-large + 2);
+						font-weight: @cl-font-weight-regular;
+						color: @cl-login-font-dark-color;
+						text-align: left;
+						
+						.cl-text {
+//							overflow: hidden;
+							text-overflow: ellipsis;
+							white-space: nowrap;
+						}
+					}
+					.cl-output.date {
+						font-size: @cl-pc-font-size-body-large;
+						color: @cl-login-font-dark-color;
+					}
+				}
+				
+				.cl-container.notice-btn-group {
+					.cl-button {
+						color: @cl-login-font-dark-color;
+						font-size: @cl-pc-font-size-body-large;
+						font-weight: @cl-font-weight-regular;
+						
+						.cl-text-wrapper {
+							gap: 8px;
+						}
+						
+						&.btn-security {
+							.cl-icon {
+								width: 24px;
+								height: 24px;
+								background-image: @cl-login-icon-security-image !important;
+							}
+						}
+						
+						&.btn-auth {
+							.cl-icon {
+								width: 24px;
+								height: 24px;
+								background-image: @cl-login-icon-auth-image !important;
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		//로그인
+		.cl-container.login-box {
+			background-color: @cl-login-bg-white;
+			box-shadow: @cl-login-box-shadow-blue;
+			border-radius: 24px;
+			
+			.cl-container.login-info {
+				padding: 72px 32px;
+			}
+			
+			.cl-container.text-title-group {
+				.cl-output.tit {
+					font-size: @cl-pc-font-size-heading-xlarge;
+					font-weight: @cl-font-weight-bold;
+					color: @cl-login-font-dark-color;
+					line-height: 1.2;
+					text-align: center;
+				}
+				.cl-output.sub {
+					font-size: @cl-pc-font-size-label-xlarge;
+					color: @cl-login-font-base-color;
+					text-align: center;
+				}
+			}
+			
+			.cl-container.info-group {
+				padding: 0 18px;
+				
+				.cl-container.info {
+					.cl-output {
+						color: @cl-login-font-base-color;
+						font-size: @cl-pc-font-size-label-medium;
+						font-weight: @cl-font-weight-semibold;
+						line-height: 1.4;
+					}
+					
+					.cl-inputbox.form-input {
+						border: 1px solid @cl-login-border-color;
+						border-radius: 10px;
+						background: no-repeat 12px center;
+						padding: 0 12px 0 48px;
+						font-size: @cl-pc-font-size-label-xlarge;
+						
+						.cl-text {
+							&.cl-placeholder {
+								color: @cl-login-font-base-color !important;
+							}
+						}
+						
+						&.cl-focus {
+							border-color: @cl-login-input-focus-color;
+						}
+						
+						&.ico-user {
+							background-image: @cl-login-input-id-image;
+						}
+						
+						&.ico-password {
+							background-image: @cl-login-input-pw-image;
+							padding-right: 36px;
+							
+							.cl-inputbox-clear {
+								margin: 0;
+							}
+						}
+					}
+					
+					.cl-checkbox.password-visibility {
+						margin-right: @cl-padding-5;
+						
+						.cl-checkbox-icon {
+							border: 0;
+							border-radius: 0;
+							background-color: transparent;
+							background-image: @cl-login-eye-off-image !important;
+							width: 24px;
+							height: 24px;
+							
+							&::after {
+								display: none;
+							}
+						}
+						
+						.cl-text {
+							padding: 0;
+						}
+						
+						&.cl-checked {
+							.cl-checkbox-icon {
+								background-image: @cl-login-eye-on-image !important;
+							}
+						}
+					}
+				}
+				
+				.cl-checkbox.cbx-remember {
+					color: @cl-login-font-base-color;
+					font-size: @cl-pc-font-size-body-large;
+					
+					.cl-icon-wrapper {
+						padding: 0;
+					}
+					
+					.cl-text {
+						line-height: 1.4;
+					}
+					
+					.cl-checkbox-icon {
+						width: 20px;
+						height: 20px;
+						border: 0;
+						border-radius: 0;
+						background-color: transparent;
+						background-image: url("../../img/pages/login/ic_checkbox.svg") !important;
+							&::after {
+								display: none;
+							}
+					}
+					
+					&.cl-checked {
+						.cl-checkbox-icon {
+							background-image: url("../../img/pages/login/ic_checkbox_selected.svg") !important;
+						}
+					}
+				}
+				
+				.cl-button.btn-login,
+				.cl-button.btn-login-cert {
+					background-color: @cl-login-btn-primary;
+					border-color:@cl-login-btn-primary;
+					border-radius: 12px;
+					font-size: @cl-pc-font-size-label-xlarge;
+				}
+				
+				.cl-button.btn-login-cert {
+					background-color: @cl-login-color-white; 
+					border: 1px solid @cl-login-btn-border-color;
+					color: @cl-login-font-base-color;
+					
+					.cl-icon {
+						background-image: @cl-login-icon-cert-image !important;
+						width: 24px;
+						height: 24px;
+					}
+				}
+				.cl-container.find-wrap {
+					> .cl-layout > .cl-layout-content {
+						align-items: center;
+					}
+					
+					.cl-container.login-find {
+						.cl-button.text {
+							color: @cl-login-font-base-color;
+							font-size: @cl-pc-font-size-label-medium;
+							font-weight: @cl-font-weight-regular;
+							border: 0;
+							padding: 0;
+							border-radius: 0;
+							
+							/* 마우스 호버 스타일 */
+							&:not(.cl-disabled):hover,
+							&.cl-focus,
+							&:focus,
+							&:not(.cl-disabled).cl-activated,
+							&:not(.cl-disabled):active {
+								background-color: transparent;
+								border-color: transparent;
+							}
+							.cl-text{
+								color: @cl-login-font-base-color;
+							}
+						}
+					}
+					
+					.cl-button.btn-signup {
+						display: inline-flex;
+						align-items: center;
+						background-color: transparent;
+						border-color: @cl-login-border-color;
+						border-radius: @cl-radius-small2;
+						color: @cl-login-font-base-color;
+						font-size: @cl-pc-font-size-label-medium;
+						font-weight: @cl-font-weight-regular;
+						min-height: 36px;
+						
+						&.cl-focus,
+						&:focus {
+							border-width: 1px;
+						}
+					}
+				}
+			}
+
+			.cl-container.login-help-info {
+				border-top: 1px solid @cl-login-border-color;
+				padding: 18px 32px;
+				
+				.cl-output.txt {
+					font-size: @cl-pc-font-size-label-xxlarge;
+					font-weight: @cl-font-weight-regular;
+					color: @cl-login-font-help-color;
+					background: @cl-login-icon-help-image no-repeat left center;
+					padding-left: 32px;
+				}
+				
+				.cl-output.badge.solution {
+					border-radius: 999px;
+					text-align: center;
+					font-weight: @cl-font-weight-semibold;
+					font-size: @cl-pc-font-size-body-large;
+					color: @cl-login-color-blue-90;
+					background-color: @cl-login-bg-shadow-blue;
+					padding: 0 16px;
+				}
+				
+				.cl-button.btn-more {
+					.cl-icon {
+						background-image: url("../../img/pages/login/ic_arrow_right24.svg") !important;
+						width: 24px;
+						height: 24px;
+					}
+				}
+			}
+		}
+	}
+	
+	.cl-container.footer {
+		background-color: @cl-login-footer-bg-blue-color;
+		padding: 0px 48px;
+		
+		.cl-output.copy {
+			color: @cl-login-font-white-color;
+		}
+		
+		.cl-container.footer-terms {
+			.cl-button.link {
+				color: @cl-login-font-white-color;
+				font-size: @cl-pc-font-size-label-medium;
+				font-weight: @cl-font-weight-regular;
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+ 2. Dark Mode
+ ========================================================================== */
+
+.color-mode(@mode: high-contrast) {
+    @cl-login-color-white: transparent;
+    @cl-login-border-bottom-color: @cl-login-color-white-alpha8;
+    @cl-login-logo-image: @cl-login-logo-white-image;
+    @cl-login-font-base-color: @cl-login-font-white-color;
+    @cl-login-primary: @cl-login-color-blue-40;
+    @cl-login-primary-70: @cl-login-color-blue-40;
+    @cl-login-font-strong-color: @cl-base-color-text-inverse;
+    @cl-login-font-dark-color: @cl-base-color-text-inverse;
+    @cl-login-border-color: @cl-login-color-white-alpha20; 
+    @cl-login-color-blue-10: @cl-login-color-white-alpha20;
+    @cl-login-color-blue-70: @cl-login-color-blue-40;
+    @cl-login-bg-white: @cl-login-color-white-alpha8;
+    @cl-login-font-help-color: @cl-base-color-text-inverse;
+    @cl-login-color-blue-90: @cl-login-color-blue-40;
+    @cl-login-bg-shadow-blue: @cl-login-color-white-alpha8;
+    @cl-login-btn-primary: @cl-color-base-primary-40;
+    @cl-login-phone-icon-image: @cl-login-phone-icon-dark-image;
+    @cl-login-bell-icon-image: @cl-login-bell-icon-dark-image;
+    @cl-login-arrow-icon-image: @cl-login-arrow-icon-white-image;
+    @cl-login-icon-security-image: @cl-login-icon-security-right-image;
+    @cl-login-icon-auth-image: @cl-login-icon-auth-right-image;
+    @cl-login-icon-cert-image: @cl-login-icon-cert-white-image;
+    @cl-login-icon-help-image: @cl-login-icon-help-white-image;
+    @cl-login-footer-bg-blue-color: @cl-login-footer-bg-gray-color;
+    @cl-login-input-focus-color : @cl-login-blue-50;
+    
+    
+	.login {
+		.cl-button {
+			background-color: rgba(0, 0, 0, 0);
+			border-color: rgba(0, 0, 0, 0);
+		}
+		background: @cl-login-bg-image-dark no-repeat center / cover;
+		
+		.cl-container.header {
+			background-color: @cl-login-color-white;
+			border-bottom: 1px solid @cl-login-border-bottom-color;
+			
+			.cl-button.logo {
+				background: transparent @cl-login-logo-image no-repeat center / contain;
+			}
+			
+			.cl-container.header-utils {
+				.cl-container.btn-group {
+					.cl-button {
+						color: @cl-login-font-base-color;
+					}
+				}
+				
+				.cl-output {
+					color: @cl-login-font-base-color;
+					
+					&.ico-phone {
+						background: @cl-login-phone-icon-image no-repeat center / contain;
+					}
+					
+					&.help-num {
+						span.num {
+							color: @cl-login-primary;
+						}
+					}
+				}
+			}
+		}
+		
+		.cl-container.login-wrap {
+			//공지사항
+			.cl-container.notice-board {
+				.cl-container.slogan-group {
+					.cl-output {
+						color: @cl-login-font-base-color;
+					}
+					
+					.cl-output.brand {
+						color: @cl-login-primary-70;
+					}
+					
+					.cl-output.title {
+						color: @cl-login-font-strong-color;
+						
+						span.strong-txt {
+							color: @cl-login-primary;
+						}
+					}
+				}
+				
+				.cl-container.notice-wrap {
+					.cl-container.notice-header {
+						.cl-output.title {
+							color: @cl-login-primary-70;
+							background: @cl-login-bell-icon-image no-repeat left 0;
+						}
+						
+						.cl-button.btn-more {
+							color: @cl-login-font-dark-color;
+							
+							.cl-icon {
+								background-image: @cl-login-arrow-icon-image !important;
+							}
+						}
+					}
+					
+					.cl-container.notice-list {
+						.cl-container.notice-item {
+							border-bottom: 1px solid @cl-login-border-color;
+							
+							&.cl-first-row {
+								border-top: 1px solid @cl-login-border-color;
+							}
+						}
+						
+						.cl-output.badge {
+							font-weight: @cl-font-weight-bold;
+							font-size: @cl-pc-font-size-body-large;
+							
+							//공지
+							&.notice {
+								background-color: @cl-login-color-blue-10;
+								color: @cl-login-color-blue-70;
+							}
+						}
+						
+						.cl-button.btn-subject {
+							color: @cl-login-font-dark-color;
+						}
+						
+						.cl-output.date {
+							color: @cl-login-font-dark-color;
+						}
+					}
+					
+					.cl-container.notice-btn-group {
+						.cl-button {
+							color: @cl-login-font-dark-color;
+							font-size: @cl-pc-font-size-body-large;
+							font-weight: @cl-font-weight-regular;
+							
+							&.btn-security {
+								.cl-icon {
+									background-image: @cl-login-icon-security-image !important;
+								}
+							}
+							
+							&.btn-auth {
+								.cl-icon {
+									background-image: @cl-login-icon-auth-image !important;
+								}
+							}
+						}
+					}
+				}
+			}
+			
+			//로그인
+			.cl-container.login-box {
+				background-color: @cl-login-bg-white;
+				box-shadow: @cl-login-box-shadow-blue;
+				
+				.cl-container.text-title-group {
+					.cl-output.tit {
+						color: @cl-login-font-base-color;
+					}
+					
+					.cl-output.sub {
+						color: @cl-login-font-base-color;
+					}
+				}
+				
+				.cl-container.info-group {
+					.cl-container.info {
+						.cl-output {
+							color: @cl-login-font-base-color;
+						}
+						
+						.cl-inputbox.form-input {
+							border: 1px solid @cl-login-border-color;
+							
+							.cl-text {
+								&.cl-placeholder {
+									color: @cl-login-font-base-color !important;
+								}
+							}
+							
+							&.cl-focus {
+								border-color: @cl-login-input-focus-color;
+							}
+							
+							&.ico-user {
+								background-image: @cl-login-input-id-white-image;
+							}
+							
+							&.ico-password {
+								background-image: @cl-login-input-pw-white-image;
+							}
+						}
+						
+						.cl-checkbox.password-visibility {
+							
+							.cl-checkbox-icon {
+								background-image: @cl-login-eye-off-white-image !important;
+							}
+							
+							&.cl-checked {
+								.cl-checkbox-icon {
+									background-image: @cl-login-eye-on-white-image !important;
+								}
+							}
+						}
+					}
+					
+					.cl-checkbox.cbx-remember {
+						color: @cl-login-font-base-color;
+					}
+					
+					.cl-button.btn-login,
+					.cl-button.btn-login-cert {
+						background-color: @cl-login-btn-primary;
+						border-color: @cl-login-btn-primary;
+					}
+					
+					.cl-button.btn-login-cert {
+						background-color: @cl-login-color-white;
+						border-color: @cl-login-btn-border-color;
+						color: @cl-login-font-base-color;
+						
+						.cl-icon {
+							background-image: @cl-login-icon-cert-image !important;
+						}
+					}
+					
+					.cl-container.find-wrap {
+						.cl-container.login-find {
+							.cl-button {
+								color: @cl-login-font-base-color;
+							}
+						}
+						
+						.cl-button.btn-signup {
+							color: @cl-login-font-base-color;
+						}
+					}
+				}
+				
+				.cl-container.login-help-info {
+					border-top: 1px solid @cl-login-border-color;
+					
+					.cl-output.txt {
+						color: @cl-login-font-help-color;
+						background: @cl-login-icon-help-image no-repeat left center;
+					}
+					
+					.cl-output.badge.solution {
+						color: @cl-login-color-blue-90;
+						background-color: @cl-login-bg-shadow-blue;
+					}
+				}
+			}
+		}
+		.cl-container.footer {
+			background-color: @cl-login-footer-bg-blue-color;
+		}
+	}
+	
+@media (max-width: calc(@{breakpoint-medium} - 1px)) {	
+    // 767까지
+    .login {
+    	background: @cl-login-m-bg-dark-color @cl-login-mobile-dark-bg-image no-repeat center bottom / cover;
+    }
+}
+	
+}
+
+
+/* ==========================================================================
+	미디어 쿼리
+ ========================================================================== */
+// .size-xlarge-less();
+@media (max-width: calc(@{breakpoint-xlarge} - 1px)) {
+	// 1279까지
+	 .login {
+	 	.cl-container.login-wrap {
+	 		.cl-container.login-box {
+	 			.cl-container.login-info {
+	 				padding: 72px 18px;
+	 			}
+	 		}
+	 	}
+	 }
+}
+
+@media (max-width: calc(@{breakpoint-medium} - 1px)) {	
+    // 767까지
+    .login {
+    	background: @cl-login-m-bg-color @cl-login-mobile-bg-image no-repeat center bottom / cover;
+    	
+    	.cl-container.login-wrap {
+    		.cl-container.login-box {
+    			.cl-container.login-info {
+    				padding: 30px 18px;
+    				
+    				.cl-container.text-title-group {
+    					.cl-last-row.cl-layout-wrap {
+    						margin-top: 4px;
+    					}
+    					
+    					.cl-output.tit {
+    						font-size: @cl-mobile-font-size-display-small;
+    					}
+    					
+    					.cl-output.sub {
+    						font-size: @cl-mobile-font-size-body-large;
+    					}
+    				}
+    				
+    				.cl-container.info-group {
+    					padding: 0;
+    					
+    					.cl-container.info {
+    						.cl-last-row.cl-layout-wrap {
+    							margin-top: 5px !important;
+    						}
+    						
+    						.cl-output.label {
+    							font-size: @cl-mobile-font-size-body-large;
+    							font-weight: @cl-font-weight-regular;
+    						}
+    						
+    						.cl-inputbox.form-input {
+    							font-size: @cl-mobile-font-size-body-large;
+    						}
+    					}
+    					
+    					.cl-container.login-find {
+    						.cl-button {
+    							font-size: @cl-mobile-font-size-body-large;
+    						}
+    					}
+    				}
+    				
+    				.cl-button.btn-signup {
+    					font-size: @cl-mobile-font-size-body-large;
+    					min-height: 28px;
+    				}
+    				
+    				.cl-container.login-btn-group {
+    					.cl-last-row.cl-layout-wrap {
+    						margin-top: 8px !important;
+    					}
+    					
+    					.cl-button.btn-login,
+    					.cl-button.btn-login-cert {
+    						font-size: @cl-mobile-font-size-label-large;
+    						border-radius: 10px;
+    					}
+    				}
+    			}
+    			
+    			.cl-container.login-help-info {
+    				padding: 8px 18px;
+    				
+    				.cl-output.txt {
+    					font-size: @cl-mobile-font-size-body-large;
+    					background-image: none !important;
+    					padding-left: 0;
+    				}
+    				
+    				.cl-output.badge.solution {
+    					font-size: @cl-mobile-font-size-body-large;
+    					padding: 0 @cl-padding-3;
+    				}
+    			}
+    		}
+    	}
+    }
+}
+
+
+
+
