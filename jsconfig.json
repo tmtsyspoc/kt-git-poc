@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"target": "es6",
+		"checkJs": false
+	},
+	"include": [
+		"clx-src/**/*.js",
+		".eb6/types/**/*.d.ts"
+	],
+	"exclude": [
+		"clx-src/**/*.module.js"
+	]
+}
