@@ -1,0 +1,74 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-3151e428" version="1.0.6209">
+  <head std:sid="head-fafc16b3">
+    <screen std:sid="screen-c3cbad13" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-84911a34" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-11020df0" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-5ecd349d">
+      <cl:dataset comment="프로세스 목록" std:sid="d-set-694cecee" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="" std:sid="d-column-77bc9445" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-6a0b50c2" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn comment="" std:sid="d-column-7aa4b7eb" name="SUB_TITLE"/>
+          <cl:datacolumn comment="" std:sid="d-column-443c6544" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-57841372" name="CONT" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-e0b16994" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-bf0b2c3b" name="SUB_CODE"/>
+          <cl:datacolumn comment="" std:sid="d-column-f2739343" name="TARGET_CTRL"/>
+          <cl:datacolumn std:sid="d-column-9b7d069d" name="TARGET_EMB"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[버전·변경영향 관리]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[공통 컴포넌트 버전, 호환성, 사용처, 변경영향을 추적한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="[DEV-02]컴포넌트 버전·영향관리"/>
+  </head>
+  <body std:sid="body-426ed400" class="wrap">
+    <cl:udc std:sid="ud-control-f8a3406f" type="udc.com.udcComAppHeader">
+      <cl:verticaldata std:sid="v-data-d1455567" width="900px" height="28px"/>
+    </cl:udc>
+    <cl:group std:sid="group-8116ac76" id="grpData" class="conts-area">
+      <cl:verticaldata std:sid="v-data-33b2a7a8" width="976px" height="903px" autosize="none" grow="1"/>
+      <cl:output std:sid="output-94357e16" value="확인필요">
+        <cl:verticaldata std:sid="v-data-955f6cd2" width="100px" height="340px"/>
+      </cl:output>
+      <cl:verticallayout std:sid="v-layout-41ffd6ae" spacing="16" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-b0d19124" spacing="16" leftmargin="24" rightmargin="24" topmargin="16" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

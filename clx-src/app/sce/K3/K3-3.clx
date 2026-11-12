@@ -1,0 +1,285 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-15c4ca87" version="1.0.6209">
+  <head std:sid="head-4e188d46">
+    <screen std:sid="screen-d5463a5b" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-dc148a6f" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-4e8d2e60" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-b28ed320">
+      <cl:dataset comment="프로세스 목록" std:sid="d-set-699236e9" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="" std:sid="d-column-3be520a9" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-a104e4c9" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn comment="" std:sid="d-column-da5085d3" name="SUB_TITLE"/>
+          <cl:datacolumn comment="" std:sid="d-column-0ed73719" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-4ff5e847" name="CONT" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-9564bbc2" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-c12eb4b6" name="SUB_CODE"/>
+          <cl:datacolumn comment="" std:sid="d-column-e1bb9261" name="TARGET_CTRL"/>
+          <cl:datacolumn std:sid="d-column-c80cf441" name="TARGET_EMB"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[오류 방지·입력내용 보호]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[잘못된 입력이나 중복 실행을 방지하고, 처리 실패 시 오류 원인과 조치방법을 안내하며 사용자가 입력한 내용을 보존해야 한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    <cl:dataset id="dsData">
+        <cl:datacolumnlist>
+          <cl:datacolumn name="id"/>
+          <cl:datacolumn name="first_name"/>
+          <cl:datacolumn name="last_name"/>
+          <cl:datacolumn name="email"/>
+          <cl:datacolumn name="gender"/>
+          <cl:datacolumn name="university"/>
+          <cl:datacolumn name="email_mask"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+<cl:submission id="subRetrieve" action="app/sce/A7/data/MOCK_DATA.json">
+        <cl:responsedata dataid="dsData"/>
+      </cl:submission>
+</cl:model>
+    <cl:appspec dev-comment="10.5 버그 및 오류 관리&#x9;app/sce/A10/A10-3.clx&#xD;&#xA;16.4 오류 관리&#x9;app/sce/A10/A10-3.clx&#xD;&#xA;" title="[UX-03]오류예방·입력보호"/>
+  </head>
+  <body std:sid="body-1ad33a7a" class="wrap">
+    <cl:listener name="init" handler="onBodyInit"/>
+    <cl:udc std:sid="ud-control-74494267" type="udc.com.udcComAppHeader">
+      <cl:verticaldata std:sid="v-data-a5abac8e" width="900px" height="28px"/>
+    </cl:udc>
+    <cl:group id="grpGoverning" class="governing">
+      <cl:verticaldata width="976px" height="110px" autosize="height"/>
+      <cl:output id="opt3" class="tit" value="마스킹·서브미션 호출 및 오류 처리 시연">
+        <cl:verticaldata width="100px" height="28px" autosize="height"/>
+      </cl:output>
+      <cl:output id="opt4" class="txt" displayexp="&quot;개인정보는 화면에서 마스킹하여 표시하고, 서버 호출(서브미션) 중 오류가 발생해도 입력 내용이 유지되며 오류 내용을 팝업에서 확인할 수 있습니다. eXBuilder6는 자체적인 에러 핸들러를 내장하고 있어 발생한 오류를 수집합니다.&quot; ">
+        <cl:verticaldata width="1218px" height="31px" autosize="height"/>
+      </cl:output>
+      <cl:verticallayout scrollable="false" spacing="8"/>
+    </cl:group>
+    <cl:group id="grpData" class="conts-area">
+      <cl:verticaldata width="976px" height="903px" autosize="none" grow="1"/>
+      <cl:group id="grpMask" class="conts-wrap">
+        <cl:verticaldata width="976px" height="300px" autosize="height"/>
+        <cl:udc id="udcComFormTitle1" type="udc.com.udcComFormTitle">
+          <cl:verticaldata width="800px" height="28px" autosize="height"/>
+          <cl:property name="title" value="개인정보 마스킹" type="string"/>
+        </cl:udc>
+        <cl:group id="grpMaskForm" class="form">
+          <cl:verticaldata width="972px" height="190px" autosize="height"/>
+          <cl:output id="optM1" class="label" value="이름">
+            <cl:formdata row="0" col="0"/>
+          </cl:output>
+          <cl:inputbox id="ipbMName" value="홍길동">
+            <cl:formdata row="0" col="1"/>
+          </cl:inputbox>
+          <cl:output id="optM1r" class="label" value="마스킹 결과">
+            <cl:formdata row="0" col="2"/>
+          </cl:output>
+          <cl:output id="optMName">
+            <cl:formdata row="0" col="3"/>
+          </cl:output>
+          <cl:output id="optM2" class="label" value="전화번호">
+            <cl:formdata row="1" col="0"/>
+          </cl:output>
+          <cl:inputbox id="ipbMTel" value="010-7890-1234">
+            <cl:formdata row="1" col="1"/>
+          </cl:inputbox>
+          <cl:output id="optM2r" class="label" value="마스킹 결과">
+            <cl:formdata row="1" col="2"/>
+          </cl:output>
+          <cl:output id="optMTel">
+            <cl:formdata row="1" col="3"/>
+          </cl:output>
+          <cl:output id="optM3" class="label" value="주민등록번호">
+            <cl:formdata row="2" col="0"/>
+          </cl:output>
+          <cl:inputbox id="ipbMJumin" value="760421-1234567">
+            <cl:formdata row="2" col="1"/>
+          </cl:inputbox>
+          <cl:output id="optM3r" class="label" value="마스킹 결과">
+            <cl:formdata row="2" col="2"/>
+          </cl:output>
+          <cl:output id="optMJumin">
+            <cl:formdata row="2" col="3"/>
+          </cl:output>
+          <cl:output id="optM4" class="label" value="카드번호">
+            <cl:formdata row="3" col="0"/>
+          </cl:output>
+          <cl:inputbox id="ipbMCard" value="1234-5678-9012-3456">
+            <cl:formdata row="3" col="1"/>
+          </cl:inputbox>
+          <cl:output id="optM4r" class="label" value="마스킹 결과">
+            <cl:formdata row="3" col="2"/>
+          </cl:output>
+          <cl:output id="optMCard">
+            <cl:formdata row="3" col="3"/>
+          </cl:output>
+          <cl:output id="optM5" class="label" value="이메일">
+            <cl:formdata row="4" col="0"/>
+          </cl:output>
+          <cl:inputbox id="ipbMEmail" value="gildong@kt.com">
+            <cl:formdata row="4" col="1"/>
+          </cl:inputbox>
+          <cl:output id="optM5r" class="label" value="마스킹 결과">
+            <cl:formdata row="4" col="2"/>
+          </cl:output>
+          <cl:output id="optMEmail">
+            <cl:formdata row="4" col="3"/>
+          </cl:output>
+          <cl:formlayout scrollable="false" hspace="16px" vspace="12px" top-margin="8px" right-margin="8px" bottom-margin="8px" left-margin="8px" hseparatorwidth="1" hseparatortype="BY_CLASS">
+            <cl:rows length="28" unit="PIXEL"/>
+            <cl:rows length="28" unit="PIXEL"/>
+            <cl:rows length="28" unit="PIXEL"/>
+            <cl:rows length="28" unit="PIXEL"/>
+            <cl:rows length="28" unit="PIXEL"/>
+            <cl:columns length="140" unit="PIXEL" shadetype="BY_CLASS"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="140" unit="PIXEL" shadetype="BY_CLASS"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:group id="grpMaskBtns">
+          <cl:verticaldata width="972px" height="28px" autosize="height"/>
+          <cl:checkbox id="cbxUnmask" text="마스킹 해제(권한자 조회)">
+            <cl:listener name="value-change" handler="onCbxUnmaskValueChange"/>
+            <cl:flowlayoutdata width="200px" height="28px" autosize="none"/>
+          </cl:checkbox>
+          <cl:button id="btnMask" class="primary" value="마스킹 적용">
+            <cl:listener name="click" handler="onBtnMaskClick"/>
+            <cl:flowlayoutdata width="110px" height="28px" autosize="none"/>
+          </cl:button>
+          <cl:flowlayout hspacing="8" halign="right"/>
+        </cl:group>
+        <cl:verticallayout spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:group id="grpSubmit" class="conts-wrap">
+        <cl:verticaldata width="976px" height="330px" autosize="height"/>
+        <cl:group id="grpSubTitle">
+          <cl:verticaldata width="972px" height="28px" autosize="height"/>
+          <cl:udc id="udcComGridTitle1" type="udc.com.udcComGridTitle">
+            <cl:formdata row="0" col="0"/>
+            <cl:property name="title" value="서브미션 호출 결과" type="string"/>
+            <cl:property name="ctrl" value="grdData" type="control"/>
+            <cl:property name="showExportExcel" value="false" type="boolean"/>
+            <cl:property name="showOption" value="false" type="boolean"/>
+            <cl:property name="showPivot" value="false" type="boolean"/>
+          </cl:udc>
+          <cl:button id="btnRetrieve" class="primary" value="서브미션 조회">
+            <cl:listener name="click" handler="onBtnRetrieveClick"/>
+            <cl:formdata row="0" col="1"/>
+          </cl:button>
+          <cl:formlayout scrollable="false" hspace="8px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="120" unit="PIXEL"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:grid id="grdData" fieldLabel="서브미션 호출 결과" datasetid="dsData" clickmode="select">
+          <cl:verticaldata width="972px" height="240px" autosize="none"/>
+          <cl:gridcolumn width="60px"/>
+          <cl:gridcolumn width="120px"/>
+          <cl:gridcolumn width="120px"/>
+          <cl:gridcolumn width="200px"/>
+          <cl:gridcolumn width="1fr"/>
+          <cl:gridheader>
+            <cl:gridrow height="36px"/>
+            <cl:gridcell rowindex="0" colindex="0" text="ID"/>
+            <cl:gridcell rowindex="0" colindex="1" text="이름"/>
+            <cl:gridcell rowindex="0" colindex="2" text="성별"/>
+            <cl:gridcell rowindex="0" colindex="3" text="이메일(마스킹)"/>
+            <cl:gridcell rowindex="0" colindex="4" text="소속"/>
+          </cl:gridheader>
+          <cl:griddetail>
+            <cl:gridrow height="34px"/>
+            <cl:gridcell rowindex="0" colindex="0" columnname="id">
+              <cl:output id="optGId" style="text-align:center;">
+                <cl:celldata/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell rowindex="0" colindex="1" columnname="first_name">
+              <cl:output id="optGName">
+                <cl:celldata/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell rowindex="0" colindex="2" columnname="gender">
+              <cl:output id="optGGender" style="text-align:center;">
+                <cl:celldata/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell rowindex="0" colindex="3" columnname="email_mask">
+              <cl:output id="optGEmail">
+                <cl:celldata/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell rowindex="0" colindex="4" columnname="university">
+              <cl:output id="optGUniv">
+                <cl:celldata/>
+              </cl:output>
+            </cl:gridcell>
+          </cl:griddetail>
+        </cl:grid>
+        <cl:verticallayout spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:group id="grpErr" class="conts-wrap">
+        <cl:verticaldata width="976px" height="300px" autosize="height"/>
+        <cl:udc id="udcComFormTitle2" type="udc.com.udcComFormTitle">
+          <cl:verticaldata width="800px" height="28px" autosize="height"/>
+          <cl:property name="title" value="오류 처리" type="string"/>
+        </cl:udc>
+        <cl:group id="grp7">
+          <cl:verticaldata width="972px" height="28px" autosize="height"/>
+          <cl:button id="btn3" value="오류 강제 발생">
+            <cl:listener name="click" handler="onBtn3Click"/>
+            <cl:flowlayoutdata width="130px" height="28px" autosize="none"/>
+          </cl:button>
+          <cl:button id="btnErrView" class="primary" value="오류내용 확인">
+            <cl:listener name="click" handler="onBtnErrViewClick"/>
+            <cl:flowlayoutdata width="130px" height="28px" autosize="none"/>
+          </cl:button>
+          <cl:button id="btn1" value="로그 출력">
+            <cl:listener name="click" handler="onBtn1Click2"/>
+            <cl:flowlayoutdata width="100px" height="28px" autosize="none"/>
+          </cl:button>
+          <cl:flowlayout hspacing="4" halign="left"/>
+        </cl:group>
+        <cl:textarea id="txa1" readonly="true">
+          <cl:verticaldata width="976px" height="200px" autosize="none"/>
+        </cl:textarea>
+        <cl:verticallayout spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:verticallayout spacing="16"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-13626c32" spacing="16" leftmargin="24" rightmargin="24" topmargin="16" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

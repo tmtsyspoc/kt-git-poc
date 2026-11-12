@@ -1,0 +1,71 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-4be54d0a" version="1.0.6209">
+  <head std:sid="head-b15ecd02">
+    <screen std:sid="screen-143cc3d8" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-e89040b8" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-b404a513" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-a3ba79a9">
+      <cl:dataset comment="프로세스 목록" std:sid="d-set-13c7f681" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="" std:sid="d-column-ce034120" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-57d926ae" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn comment="" std:sid="d-column-fcd1a044" name="SUB_TITLE"/>
+          <cl:datacolumn comment="" std:sid="d-column-a87e4e5d" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-904203e4" name="CONT" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-c029420f" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-ad8ca615" name="SUB_CODE"/>
+          <cl:datacolumn comment="" std:sid="d-column-d96d54ce" name="TARGET_CTRL"/>
+          <cl:datacolumn std:sid="d-column-b40dc7a5" name="TARGET_EMB"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[복합 업무화면 구현]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[고객정보, 조회조건, 대량 Grid, 상세·입력영역, 업무 탭, 팝업, 메시지·진행상태 및 접기·펼치기 부가영역 등 PoC에서 지정한 UI 구성요소를 한 화면 또는 연계 화면으로 구현할 수 있어야 한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="[FUN-03]복합 업무화면"/>
+  </head>
+  <body std:sid="body-20d64175" class="wrap">
+    <cl:udc std:sid="ud-control-66c555dd" type="udc.com.udcComAppHeader">
+      <cl:verticaldata std:sid="v-data-da32f905" width="900px" height="28px"/>
+    </cl:udc>
+    <cl:group std:sid="group-cd05c96a" id="grpData" class="conts-area">
+      <cl:verticaldata std:sid="v-data-b14587fd" width="976px" height="903px" autosize="none" grow="1"/>
+      <cl:verticallayout std:sid="v-layout-b6a2c8e1" spacing="16" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-c72530f7" spacing="16" leftmargin="24" rightmargin="24" topmargin="16" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

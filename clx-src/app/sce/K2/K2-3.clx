@@ -1,0 +1,389 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-7f49b501" version="1.0.6209">
+  <head std:sid="head-e8bd531b">
+    <script std:sid="script-9a290749" src="../../../thirdparty/tailwind/tailwind.js" type="text/javascript"/>
+    <screen std:sid="screen-2853b861" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-40b5746a" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-d011c5f1" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-f6f00936">
+      <cl:dataset comment="프로세스 목록" std:sid="d-set-b8a97465" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="" std:sid="d-column-f24bf4b6" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-5289b8cb" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn comment="" std:sid="d-column-4e3bedd0" name="SUB_TITLE"/>
+          <cl:datacolumn comment="" std:sid="d-column-ccc4b02b" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-a7ced51c" name="CONT" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-8985caa3" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-26edc9cf" name="SUB_CODE"/>
+          <cl:datacolumn comment="" std:sid="d-column-7c0377ac" name="TARGET_CTRL"/>
+          <cl:datacolumn std:sid="d-column-b1c9b059" name="TARGET_EMB"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[테마·브랜딩 변경]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[코드 중복 없이 조직/업무 테마를 변경할 수 있어야 한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec dev-comment="9.1 스타일 커스터마이징&#x9;app/sce/A9/A9-1.clx&#xD;&#xA;9.3 CSS 프레임워크&#x9;app/sce/A9/A9-3.clx&#xD;&#xA;12.2 고대비 및 색약 모드&#x9;app/sce/A12/A12-2.clx&#xD;&#xA;" title="[UX-02]테마·브랜딩"/>
+  </head>
+  <body std:sid="body-1e5eda84" class="wrap">
+    <cl:listener std:sid="listener-99ac0663" name="load" handler="onBodyLoad"/>
+    <cl:udc std:sid="ud-control-e09be71a" type="udc.com.udcComAppHeader">
+      <cl:verticaldata std:sid="v-data-96f872db" width="900px" height="28px"/>
+    </cl:udc>
+    <cl:group std:sid="group-257690ef" id="grpData" class="conts-area">
+      <cl:verticaldata std:sid="v-data-a6f48420" width="976px" height="903px" autosize="none" grow="1"/>
+      <cl:tabfolder std:sid="t-folder-2a9477da" id="tabMain" class="conts-area" headerarrowposition="both">
+        <cl:verticaldata std:sid="v-data-93d52e83" width="100px" height="100%" autosize="none" grow="1"/>
+        <cl:tabitem std:sid="t-item-845cd36d" selected="true" text="조직/업무 테마 변경">
+          <std:metadata>
+            <std:property key="is-active-item" value="true"/>
+          </std:metadata>
+          <cl:group std:sid="group-72367701" id="grpOrgTab" class="conts-area">
+            <cl:group std:sid="group-66a2759e" id="grpOrgGoverning" class="governing">
+              <cl:verticaldata std:sid="v-data-fd53e774" width="1250px" height="136px" autosize="height"/>
+              <cl:output std:sid="output-706d7094" id="optOrgGovTit" class="tit" value="조직/업무 테마 변경">
+                <cl:verticaldata std:sid="v-data-a549b0a1" width="100px" height="33px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-b202f875" id="optOrgGovTxt" class="txt" displayexp="&quot;화면 코드는 그대로 두고 &quot; + sstr(&quot;컨테이너의 테마 class만 교체&quot;, [&quot;fw-bold&quot;]) + &quot;하면 조직·업무별 색상이 바뀝니다.&quot; + &quot;\r\n&quot; + &quot;테마는 &quot; + sstr(&quot;LESS 믹스인 한 줄(org-theme.part.less)&quot;, [&quot;fw-bold&quot;]) + &quot;로 정의하므로, 신규 조직/업무도 코드 중복 없이 추가할 수 있습니다.&quot;">
+                <cl:verticaldata std:sid="v-data-8e365d62" width="1218px" height="69px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-3c02e5ba" scrollable="false" spacing="8"/>
+            </cl:group>
+            <cl:group std:sid="group-a9ca957a" id="grpOrgSelect" class="conts-wrap">
+              <cl:verticaldata std:sid="v-data-6b1f280e" width="992px" height="202px" autosize="height"/>
+              <cl:udc std:sid="ud-control-b8817089" id="udcOrgSelectTitle" type="udc.com.udcComFormTitle">
+                <cl:verticaldata std:sid="v-data-7132a043" width="300px" height="28px" autosize="height"/>
+                <cl:property name="title" value="조직 / 업무 선택" type="string"/>
+              </cl:udc>
+              <cl:group std:sid="group-dc2424af" id="grpOrgSelectForm" class="form">
+                <cl:attribute name="table-min-height" value=""/>
+                <cl:attribute name="mobile-column-count" value="1"/>
+                <cl:attribute name="tablet-column-count" value="2"/>
+                <cl:verticaldata std:sid="v-data-01e03d92" width="100px" height="134px" autosize="height"/>
+                <cl:output std:sid="output-15aabdcd" id="optOrgLabel1" class="label" value="조직">
+                  <cl:formdata std:sid="f-data-d1163a7a" row="0" col="0"/>
+                </cl:output>
+                <cl:radiobutton std:sid="r-button-d37c25ca" id="rdbOrg" value="theme-hq" colcount="-1" hspacing="16" vspacing="0">
+                  <cl:listener std:sid="listener-c4beeff0" name="selection-change" handler="onRdbOrgSelectionChange"/>
+                  <cl:formdata std:sid="f-data-8fcff349" row="0" col="1"/>
+                  <cl:item std:sid="item-be6379d5" label="본사" value="theme-hq"/>
+                  <cl:item std:sid="item-b18b83ab" label="영업본부" value="theme-sales"/>
+                  <cl:item std:sid="item-b28965ba" label="네트워크본부" value="theme-network"/>
+                  <cl:item std:sid="item-4081a65e" label="고객센터" value="theme-cs"/>
+                </cl:radiobutton>
+                <cl:output std:sid="output-088f6d7c" id="optOrgLabel2" class="label" value="업무">
+                  <cl:formdata std:sid="f-data-c7ace2bc" row="1" col="0"/>
+                </cl:output>
+                <cl:radiobutton std:sid="r-button-6c7be14c" id="rdbWork" value="work-fee" colcount="-1" hspacing="16" vspacing="0">
+                  <cl:listener std:sid="listener-991cf70d" name="selection-change" handler="onRdbWorkSelectionChange"/>
+                  <cl:formdata std:sid="f-data-0c26710c" row="1" col="1"/>
+                  <cl:item std:sid="item-f381e669" label="공통" value="work-common"/>
+                  <cl:item std:sid="item-c3f58b32" label="요금" value="work-fee"/>
+                  <cl:item std:sid="item-72cb9489" label="장애" value="work-fault"/>
+                  <cl:item std:sid="item-175b1797" label="정산" value="work-settle"/>
+                </cl:radiobutton>
+                <cl:output std:sid="output-f6a2d9cf" id="optOrgLabel3" class="label" value="적용 class">
+                  <cl:formdata std:sid="f-data-7fc4fecb" row="2" col="0"/>
+                </cl:output>
+                <cl:output std:sid="output-b5a6f707" id="optApplied" class="class-chip" value="org-preview theme-hq work-fee">
+                  <cl:formdata std:sid="f-data-616a42ef" halign="LEFT" width="420" row="2" col="1"/>
+                </cl:output>
+                <cl:formlayout std:sid="f-layout-23d3afb3" scrollable="false" hspace="16px" vspace="17px" top-margin="8px" right-margin="8px" bottom-margin="8px" left-margin="8px" hseparatorwidth="1" hseparatortype="BY_CLASS">
+                  <cl:rows length="28" unit="PIXEL"/>
+                  <cl:rows length="28" unit="PIXEL"/>
+                  <cl:rows length="28" unit="PIXEL"/>
+                  <cl:columns length="100" unit="PIXEL" shadetype="BY_CLASS"/>
+                  <cl:columns length="1" unit="FRACTION"/>
+                </cl:formlayout>
+              </cl:group>
+              <cl:verticallayout std:sid="v-layout-469e7d29" spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+            </cl:group>
+            <cl:group std:sid="group-00f4e2d9" id="grpOrgPreviewWrap" class="conts-wrap">
+              <cl:verticaldata std:sid="v-data-3892eb23" width="992px" height="300px" autosize="height"/>
+              <cl:udc std:sid="ud-control-f4748db5" id="udcOrgPreviewTitle" type="udc.com.udcComFormTitle">
+                <cl:verticaldata std:sid="v-data-c907ea3b" width="300px" height="28px" autosize="height"/>
+                <cl:property name="title" value="미리보기 (샘플 데이터)" type="string"/>
+              </cl:udc>
+              <cl:group std:sid="group-1f4088ba" id="grpOrgPreview" class="org-preview theme-hq work-fee">
+                <cl:verticaldata std:sid="v-data-a9445a4a" width="100px" height="232px" autosize="none"/>
+                <cl:group std:sid="group-d19356c4" id="grpOrgHd" class="org-hd">
+                  <cl:verticaldata std:sid="v-data-5b24f82e" width="100px" height="52px" autosize="none"/>
+                  <cl:output std:sid="output-a974d76b" id="optPvOrg" class="org-hd-title" value="본사">
+                    <cl:formdata std:sid="f-data-220de07e" row="0" col="0"/>
+                  </cl:output>
+                  <cl:output std:sid="output-a866e8d4" id="optPvWork" class="org-tag accent" value="요금">
+                    <cl:formdata std:sid="f-data-e090250f" halign="LEFT" valign="CENTER" width="80" height="24" row="0" col="1"/>
+                  </cl:output>
+                  <cl:formlayout std:sid="f-layout-7151d27e" scrollable="false" hspace="12px" vspace="0px" top-margin="0px" right-margin="16px" bottom-margin="0px" left-margin="16px">
+                    <cl:rows length="1" unit="FRACTION"/>
+                    <cl:columns length="220" unit="PIXEL"/>
+                    <cl:columns length="1" unit="FRACTION"/>
+                  </cl:formlayout>
+                </cl:group>
+                <cl:group std:sid="group-1707442b" id="grpOrgBody">
+                  <cl:verticaldata std:sid="v-data-c95401ce" width="100px" height="180px" autosize="none"/>
+                  <cl:group std:sid="group-d0136eb4" id="grpOrgKpiRow">
+                    <cl:verticaldata std:sid="v-data-96e00271" width="100px" height="72px" autosize="none"/>
+                    <cl:group std:sid="group-85197289" id="grpOrgKpi1" class="org-kpi">
+                      <cl:formdata std:sid="f-data-4e26ffc8" row="0" col="0"/>
+                      <cl:output std:sid="output-e4dde0dc" id="optOrgKpiLabel1" class="org-kpi-label" value="처리 건수">
+                        <cl:verticaldata std:sid="v-data-5b2251fd" width="100px" height="18px" autosize="height"/>
+                      </cl:output>
+                      <cl:output std:sid="output-56033466" id="optOrgKpiValue1" class="org-kpi-value" value="1,284건">
+                        <cl:verticaldata std:sid="v-data-872cf075" width="100px" height="28px" autosize="height"/>
+                      </cl:output>
+                      <cl:verticallayout std:sid="v-layout-ed016195" spacing="4" leftmargin="16" rightmargin="16" topmargin="8" bottommargin="8"/>
+                    </cl:group>
+                    <cl:group std:sid="group-3577ecb0" id="grpOrgKpi2" class="org-kpi">
+                      <cl:formdata std:sid="f-data-f16deb29" row="0" col="1"/>
+                      <cl:output std:sid="output-1a89a3df" id="optOrgKpiLabel2" class="org-kpi-label" value="처리율">
+                        <cl:verticaldata std:sid="v-data-cbd65fde" width="100px" height="18px" autosize="height"/>
+                      </cl:output>
+                      <cl:output std:sid="output-9e24f2b9" id="optOrgKpiValue2" class="org-kpi-value" value="96.4%">
+                        <cl:verticaldata std:sid="v-data-ea229a12" width="100px" height="28px" autosize="height"/>
+                      </cl:output>
+                      <cl:verticallayout std:sid="v-layout-eccfb653" spacing="4" leftmargin="16" rightmargin="16" topmargin="8" bottommargin="8"/>
+                    </cl:group>
+                    <cl:group std:sid="group-e099488c" id="grpOrgKpi3" class="org-kpi accent">
+                      <cl:formdata std:sid="f-data-b0921602" row="0" col="2"/>
+                      <cl:output std:sid="output-60afbfc6" id="optOrgKpiLabel3" class="org-kpi-label" value="미결">
+                        <cl:verticaldata std:sid="v-data-20bac59b" width="100px" height="18px" autosize="height"/>
+                      </cl:output>
+                      <cl:output std:sid="output-586fe571" id="optOrgKpiValue3" class="org-kpi-value" value="12건">
+                        <cl:verticaldata std:sid="v-data-d8407484" width="100px" height="28px" autosize="height"/>
+                      </cl:output>
+                      <cl:verticallayout std:sid="v-layout-dad4c40a" spacing="4" leftmargin="16" rightmargin="16" topmargin="8" bottommargin="8"/>
+                    </cl:group>
+                    <cl:formlayout std:sid="f-layout-7d3b4572" scrollable="false" hspace="12px" vspace="0px">
+                      <cl:rows length="1" unit="FRACTION"/>
+                      <cl:columns length="1" unit="FRACTION"/>
+                      <cl:columns length="1" unit="FRACTION"/>
+                      <cl:columns length="1" unit="FRACTION"/>
+                    </cl:formlayout>
+                  </cl:group>
+                  <cl:group std:sid="group-b5430ab9" id="grpOrgBtnRow">
+                    <cl:verticaldata std:sid="v-data-5d7043d5" width="100px" height="28px" autosize="none"/>
+                    <cl:button std:sid="button-690ffdce" id="btnOrgSearch" class="ico-sch" value="조회" icon="0">
+                      <cl:flowlayoutdata std:sid="f-data-0806a734" width="96px" height="28px"/>
+                    </cl:button>
+                    <cl:button std:sid="button-d2bb3697" id="btnOrgNew" class="ico-plus" value="신규" icon="0">
+                      <cl:flowlayoutdata std:sid="f-data-df4e2205" width="96px" height="28px"/>
+                    </cl:button>
+                    <cl:button std:sid="button-bdf8956d" id="btnOrgSave" value="저장">
+                      <cl:flowlayoutdata std:sid="f-data-46d5c8d5" width="96px" height="28px"/>
+                    </cl:button>
+                    <cl:button std:sid="button-a6750721" id="btnOrgCancel" class="secondary" value="취소">
+                      <cl:flowlayoutdata std:sid="f-data-b2641fab" width="96px" height="28px"/>
+                    </cl:button>
+                    <cl:flowlayout std:sid="f-layout-95ddc733" scrollable="false" hspacing="8" vspacing="0"/>
+                  </cl:group>
+                  <cl:group std:sid="group-3da6df13" id="grpOrgTagRow">
+                    <cl:verticaldata std:sid="v-data-ba6caa79" width="100px" height="24px" autosize="none"/>
+                    <cl:output std:sid="output-2048d73a" id="optOrgTag1" class="org-tag" value="조직 색상">
+                      <cl:flowlayoutdata std:sid="f-data-7cb94a1f" width="88px" height="24px"/>
+                    </cl:output>
+                    <cl:output std:sid="output-33f74eef" id="optOrgTag2" class="org-tag accent" value="업무 색상">
+                      <cl:flowlayoutdata std:sid="f-data-2eedad2c" width="88px" height="24px"/>
+                    </cl:output>
+                    <cl:output std:sid="output-aa582598" id="optOrgTag3" class="org-tag" value="접수">
+                      <cl:flowlayoutdata std:sid="f-data-ad1adee9" width="88px" height="24px"/>
+                    </cl:output>
+                    <cl:output std:sid="output-913d2a58" id="optOrgTag4" class="org-tag accent" value="처리중">
+                      <cl:flowlayoutdata std:sid="f-data-ce46cade" width="88px" height="24px"/>
+                    </cl:output>
+                    <cl:flowlayout std:sid="f-layout-89e657f1" scrollable="false" hspacing="8" vspacing="0"/>
+                  </cl:group>
+                  <cl:verticallayout std:sid="v-layout-b88f4b46" spacing="12" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+                </cl:group>
+                <cl:verticallayout std:sid="v-layout-b12f4429" scrollable="false" spacing="0" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+              </cl:group>
+              <cl:verticallayout std:sid="v-layout-2e57a525" spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+            </cl:group>
+            <cl:group std:sid="group-9e17e2c7" id="grpOrgDefine" class="conts-wrap">
+              <cl:verticaldata std:sid="v-data-b9654569" width="992px" height="250px" autosize="height"/>
+              <cl:udc std:sid="ud-control-95e60f56" id="udcOrgDefineTitle" type="udc.com.udcComFormTitle">
+                <cl:verticaldata std:sid="v-data-ed0884b5" width="300px" height="28px" autosize="height"/>
+                <cl:property name="title" value="테마 정의 위치" type="string"/>
+              </cl:udc>
+              <cl:group std:sid="group-0794f64d" id="grpOrgDefineForm" class="form">
+                <cl:attribute name="table-min-height" value=""/>
+                <cl:attribute name="mobile-column-count" value="1"/>
+                <cl:attribute name="tablet-column-count" value="2"/>
+                <cl:verticaldata std:sid="v-data-8ad713cd" width="100px" height="182px" autosize="height"/>
+                <cl:output std:sid="output-77cebd61" id="optOrgDefLabel1" class="label" value="조직 테마 믹스인">
+                  <cl:formdata std:sid="f-data-131a88be" row="0" col="0"/>
+                </cl:output>
+                <cl:output std:sid="output-adf183f5" id="optOrgDefChip1" class="class-chip" value=".org-theme-palette()">
+                  <cl:formdata std:sid="f-data-87c7e531" halign="LEFT" width="260" row="0" col="1"/>
+                </cl:output>
+                <cl:output std:sid="output-b50d5012" id="optOrgDefFile1" class="class-chip file" value="pages/org-theme.part.less">
+                  <cl:formdata std:sid="f-data-86c0e891" halign="LEFT" width="220" row="0" col="2"/>
+                </cl:output>
+                <cl:output std:sid="output-77178947" id="optOrgDefLabel2" class="label" value="업무 테마 믹스인">
+                  <cl:formdata std:sid="f-data-75b024e4" row="1" col="0"/>
+                </cl:output>
+                <cl:output std:sid="output-d2819266" id="optOrgDefChip2" class="class-chip" value=".org-work-accent()">
+                  <cl:formdata std:sid="f-data-0b5a2b89" halign="LEFT" width="260" row="1" col="1"/>
+                </cl:output>
+                <cl:output std:sid="output-cf8ab3f4" id="optOrgDefFile2" class="class-chip file" value="pages/org-theme.part.less">
+                  <cl:formdata std:sid="f-data-e9444f42" halign="LEFT" width="220" row="1" col="2"/>
+                </cl:output>
+                <cl:output std:sid="output-9b6e2cc7" id="optOrgDefLabel3" class="label" value="조직 테마 class">
+                  <cl:formdata std:sid="f-data-8faa7b28" row="2" col="0"/>
+                </cl:output>
+                <cl:output std:sid="output-5039b32b" id="optOrgDefChip3" class="class-chip" value="theme-hq · sales · network · cs">
+                  <cl:formdata std:sid="f-data-c1160a7e" halign="LEFT" width="260" row="2" col="1"/>
+                </cl:output>
+                <cl:output std:sid="output-e100487d" id="optOrgDefFile3" class="class-chip file" value="pages/org-theme.part.less">
+                  <cl:formdata std:sid="f-data-de667380" halign="LEFT" width="220" row="2" col="2"/>
+                </cl:output>
+                <cl:output std:sid="output-7502ca2a" id="optOrgDefLabel4" class="label" value="업무 테마 class">
+                  <cl:formdata std:sid="f-data-702787a1" row="3" col="0"/>
+                </cl:output>
+                <cl:output std:sid="output-8be97664" id="optOrgDefChip4" class="class-chip" value="work-common · fee · fault · settle">
+                  <cl:formdata std:sid="f-data-27f015d4" halign="LEFT" width="260" row="3" col="1"/>
+                </cl:output>
+                <cl:output std:sid="output-eb567817" id="optOrgDefFile4" class="class-chip file" value="pages/org-theme.part.less">
+                  <cl:formdata std:sid="f-data-2b656fd1" halign="LEFT" width="220" row="3" col="2"/>
+                </cl:output>
+                <cl:formlayout std:sid="f-layout-3724ccdf" scrollable="false" hspace="16px" vspace="17px" top-margin="8px" right-margin="8px" bottom-margin="8px" left-margin="8px" hseparatorwidth="1" hseparatortype="BY_CLASS">
+                  <cl:rows length="28" unit="PIXEL"/>
+                  <cl:rows length="28" unit="PIXEL"/>
+                  <cl:rows length="28" unit="PIXEL"/>
+                  <cl:rows length="28" unit="PIXEL"/>
+                  <cl:columns length="180" unit="PIXEL" shadetype="BY_CLASS"/>
+                  <cl:columns length="280" unit="PIXEL"/>
+                  <cl:columns length="1" unit="FRACTION"/>
+                </cl:formlayout>
+              </cl:group>
+              <cl:verticallayout std:sid="v-layout-361dc17e" spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+            </cl:group>
+            <cl:verticallayout std:sid="v-layout-8bbc490f" spacing="16"/>
+          </cl:group>
+        </cl:tabitem>
+        <cl:tabitem std:sid="t-item-2edb91e4" text="고대비 및 색약 모드">
+          <cl:group std:sid="group-d18545e0" id="grpTab3" class="conts-area">
+            <cl:group std:sid="group-e3d65666" id="grpGoverning" class="governing">
+              <cl:verticaldata std:sid="v-data-7470cb3d" width="992px" height="124px" autosize="height"/>
+              <cl:output std:sid="output-e53c5b41" id="opt2_2" class="tit" value="다양한 테마 변경">
+                <cl:verticaldata std:sid="v-data-0b8e925f" width="100px" height="28px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-f0911930" id="opt5" class="txt" value="다양한 테마 및 고대비, 색상 필터를 적용하여 다양한 사용자로부터 접근성을 높힐 수 있습니다.">
+                <cl:verticaldata std:sid="v-data-a249fb30" width="1218px" height="54px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-0319e275" scrollable="false" spacing="8"/>
+            </cl:group>
+            <cl:group std:sid="group-dbc924d0" id="grp2" class="conts-wrap">
+              <std:metadata>
+                <std:property key="template-uuid" value="f91b19be-4854-4d7d-b7e1-c43b9a18b816"/>
+                <std:property key="template-rev" value="5"/>
+              </std:metadata>
+              <cl:verticaldata std:sid="v-data-fb12ec84" width="992px" height="174px" autosize="height"/>
+              <cl:group std:sid="group-76ca3d87" id="grp4" class="form _setting">
+                <cl:attribute name="table-min-height" value=""/>
+                <cl:attribute name="mobile-column-count" value="1"/>
+                <cl:attribute name="tablet-column-count" value="2"/>
+                <cl:verticaldata std:sid="v-data-9b8d2fbb" width="992px" height="140px" autosize="height"/>
+                <cl:group std:sid="group-aa94d72c" class="setting-list p-0" clipcontent="false">
+                  <cl:formdata std:sid="f-data-94481778" row="0" col="1" rowspan="1" colspan="1"/>
+                  <cl:group std:sid="group-a22d4e38" class="li" clipcontent="false">
+                    <cl:xylayoutdata std:sid="xyl-data-fd57c745" left="0px" width="810px" height="30px" horizontalAnchor="LEFT" verticalAnchor="CENTER"/>
+                    <cl:radiobutton std:sid="r-button-3d3cef17" id="rdbColor" class="color-set v2" value="orange-theme" colcount="-1" fixedwidth="true" hspacing="8" vspacing="0" clickRegion="item">
+                      <cl:listener std:sid="listener-29e72dfe" name="selection-change" handler="onRdbColorSelectionChange"/>
+                      <cl:flowlayoutdata std:sid="f-data-b26a8483" width="159px" height="100%" autosize="width"/>
+                      <cl:item std:sid="item-30fa4464" label="화이트" value="white-theme">
+                        <cl:expbind property="tooltip" category="PROPERTY" expression="label"/>
+                      </cl:item>
+                      <cl:item std:sid="item-9ccd4e18" label="네이비" value="default">
+                        <cl:expbind property="tooltip" category="PROPERTY" expression="label"/>
+                      </cl:item>
+                      <cl:item std:sid="item-1c8cf821" label="주황" value="orange-theme">
+                        <cl:expbind property="tooltip" category="PROPERTY" expression="label"/>
+                      </cl:item>
+                      <cl:item std:sid="item-f2c82ae9" label="보라" value="purple-theme">
+                        <cl:expbind property="tooltip" category="PROPERTY" expression="label"/>
+                      </cl:item>
+                      <cl:item std:sid="item-a3b81933" label="빨강" value="red-theme">
+                        <cl:expbind property="tooltip" category="PROPERTY" expression="label"/>
+                      </cl:item>
+                      <cl:item std:sid="item-3d369a6a" label="초록" value="green-theme">
+                        <cl:expbind property="tooltip" category="PROPERTY" expression="label"/>
+                      </cl:item>
+                      <cl:itemstyle>
+                        <cl:expbind property="class" category="CLASS" expression="value"/>
+                      </cl:itemstyle>
+                    </cl:radiobutton>
+                    <cl:flowlayout std:sid="f-layout-8e140c0a"/>
+                  </cl:group>
+                  <cl:xylayout std:sid="xylayout-52e2bb31"/>
+                </cl:group>
+                <cl:output std:sid="output-224c45bd" id="opt3" class="label" value="테마">
+                  <cl:formdata std:sid="f-data-a6d50af6" row="0" col="0"/>
+                </cl:output>
+                <cl:output std:sid="output-94a9f282" id="opt4" class="label" value="고대비">
+                  <cl:formdata std:sid="f-data-8ef198f3" row="1" col="0"/>
+                </cl:output>
+                <cl:checkbox std:sid="c-box-7208a6a3" id="cbx3" text="">
+                  <cl:listener std:sid="listener-336562c2" name="value-change" handler="onCbx3ValueChange"/>
+                  <cl:formdata std:sid="f-data-3991ddcf" row="1" col="1"/>
+                </cl:checkbox>
+                <cl:output std:sid="output-a52d78ba" id="opt6" class="label" value="색상 필터">
+                  <cl:formdata std:sid="f-data-12444fb7" row="2" col="0"/>
+                </cl:output>
+                <cl:checkbox std:sid="c-box-3e1b62dc" id="cbx1" text="">
+                  <cl:listener std:sid="listener-db4fe6f9" name="value-change" handler="onCbx1ValueChange"/>
+                  <cl:formdata std:sid="f-data-1c2fce84" row="2" col="1"/>
+                </cl:checkbox>
+                <cl:formlayout std:sid="f-layout-ccdf4ba7" scrollable="false" hspace="16px" vspace="17px" top-margin="8px" right-margin="8px" bottom-margin="8px" left-margin="8px" hseparatorwidth="1" hseparatortype="BY_CLASS">
+                  <cl:rows length="32" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="true"/>
+                  <cl:rows length="28" unit="PIXEL" autoSizing="true"/>
+                  <cl:rows length="28" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+                  <cl:columns length="100" unit="PIXEL" shadetype="BY_CLASS"/>
+                  <cl:columns length="1" unit="FRACTION"/>
+                </cl:formlayout>
+              </cl:group>
+              <cl:verticallayout std:sid="v-layout-d190f096" spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+            </cl:group>
+            <cl:verticallayout std:sid="v-layout-b976c7e4" spacing="16"/>
+          </cl:group>
+        </cl:tabitem>
+      </cl:tabfolder>
+      <cl:verticallayout std:sid="v-layout-dbca53fe" spacing="16" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-a34b746c" spacing="16" leftmargin="24" rightmargin="24" topmargin="16" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

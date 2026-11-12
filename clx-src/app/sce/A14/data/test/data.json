@@ -1,0 +1,116 @@
+{
+	"DS_CUST": [
+		{
+			"CS_NAM": "하눈눈",
+			"RRN": "9110201085217",
+			"PRCMPAG": "31",
+			"GNDR_SECD": "남자",
+			"CPNM": "회사 사무직 종사자",
+			"OCPT_PEL_GRDE_COD": "5",
+			"DRVG_SENM": "운전안함",
+			"DRVG_PEL_GRDE_COD": "N",
+			"BRTYMD": "19911020",
+			"RGDT": "20230420"
+		}
+	],
+	"DS_CMB_OCPT": [
+		{
+			"COD": "00",
+			"COD_NAM": "해당없음"
+		},
+		{
+			"COD": "1",
+			"COD_NAM": "위험1급"
+		},
+		{
+			"COD": "5",
+			"COD_NAM": "비위험직"
+		}
+	],
+	"DS_CMB_DRVB": [
+		{
+			"COD": "N",
+			"COD_NAM": "해당없음"
+		},
+		{
+			"COD": "A",
+			"COD_NAM": "위험1급"
+		},
+		{
+			"COD": "F",
+			"COD_NAM": "비위험직"
+		}
+	],
+	"DS_MPRD_INF": [
+		{
+			"PRD_SECD": "연금"
+		},
+		{
+			"PRD_SECD": "변액"
+		}
+	],
+	"DS_VAR_MPRD": [
+		{
+			"PRDCD": "74",
+			"PRDNM": "페이백 변액연금보험"
+		},
+		{
+			"PRDCD": "46",
+			"PRDNM": "무배당변액연금전환특약(미보증형)"
+		}
+	],
+	"DS_ANTY_MPRD": [
+		{
+			"PRDCD": "54",
+			"PRDNM": "무배당 평생플러스 연금보험"
+		},
+		{
+			"PRDCD": "59",
+			"PRDNM": "프리미엄 연금보험"
+		},
+		{
+			"PRDCD": "63",
+			"PRDNM": "나만의연금보험"
+		}
+	],
+	"DS_FUND_INF": [
+		{
+			"FUND_COD": "BBC100",
+			"FUND_NAM": "채권형펀드"
+		},
+		{
+			"FUND_COD": "BBC200",
+			"FUND_NAM": "Active 주식형펀드"
+		},
+		{
+			"FUND_COD": "BBC300",
+			"FUND_NAM": "MSCI 인덱스 주식형 펀드"
+		},
+		{
+			"FUND_COD": "BBC400",
+			"FUND_NAM": "KRX100 인덱스 주식형 펀드"
+		},
+		{
+			"FUND_COD": "BBC500",
+			"FUND_NAM": "글로벌 채권형 펀드"
+		}
+	],
+	"DS_NTPRD_MTT": [
+		{
+			"COD": "1",
+			"COD_NAM": "월납"
+		},
+		{
+			"COD": "3",
+			"COD_NAM": "3개월납"
+		},
+		{
+			"COD": "8",
+			"COD_NAM": "연납"
+		},
+		{
+			"COD": "9",
+			"COD_NAM": "일시납"
+		}
+	]
+}

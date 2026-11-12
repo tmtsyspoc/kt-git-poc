@@ -1,0 +1,637 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-9702cc60" version="1.0.4034">
+  <head std:sid="head-9e0e2459">
+    <std:metadata>
+      <std:property key="template-file" value="templates/일반/0.프레임/0-1.프레임_버티컬레이아웃.clx"/>
+    </std:metadata>
+    <script std:sid="script-a3c2ba3d" src="../../../thirdparty/echarts/echarts.min.js" type="text/javascript"/>
+    <screen std:sid="screen-9a88bd19" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-40716af5" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-00fe98fe" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-90321062">
+      <cl:dataset comment="프로세스 목록" std:sid="d-set-406d885d" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="" std:sid="d-column-9f37779a" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-ab49d9a4" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn comment="" std:sid="d-column-7fe5300f" name="SUB_TITLE"/>
+          <cl:datacolumn comment="" std:sid="d-column-c68cb733" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-fa740970" name="CONT" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-c9d6a3d7" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-b4004ac2" name="SUB_CODE"/>
+          <cl:datacolumn comment="" std:sid="d-column-8d6dc077" name="TARGET_CTRL"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[업무화면 개발 생산성]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[조회·등록·변경 대표화면 구현의 순 작업시간을 단축한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="DELIMITER">○</cl:datavalue>
+            <cl:datavalue columnname="CONT">목적</cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[P.59]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">개발산출물 자동 생성기능 확인</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">진행</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[eXBuilder6 파일을 화면 설계서로 생성한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[eXBuilder6 파일]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">진행</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[생성된 개발산출물(화면 설계서)을/n확인한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">개발산출물</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">기타</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">설계서 문서 포멧 변경가능(엑셀양식)</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">기타</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">설계서에 정의된 항목은 eXBuilder6의 컴포넌트 및 이벤트에 약속된 포멧으로 작성 필요</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">기타</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">EXPORT방식은 HTML, EXCEL만 가능</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+      <cl:dataset comment="상담Data" std:sid="d-set-ad0f4c1d" id="DS_COUNSEL" sortcondition="CONS_NO DESC" filtercondition="CUST_NO == #dmCustInfo.getValue(&quot;custNo&quot;)">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="고객번호" std:sid="d-column-a75ebf63" name="CUST_NO"/>
+          <cl:datacolumn comment="상담일시" std:sid="d-column-39158aa5" name="CONS_NO"/>
+          <cl:datacolumn comment="상담사" std:sid="d-column-1113643f" name="CONS_NM"/>
+          <cl:datacolumn comment="계약번호" std:sid="d-column-6560f9df" name="CON_NO"/>
+          <cl:datacolumn comment="인입전화번호" std:sid="d-column-29eda7a6" name="TEL"/>
+          <cl:datacolumn comment="상담유형" std:sid="d-column-fadaa035" name="CONS_TYPE"/>
+          <cl:datacolumn comment="상담상세내용" std:sid="d-column-8750dce5" name="CONS_DESC"/>
+        </cl:datacolumnlist>
+        <cl:dataview std:sid="d-view-c13dfd5b" id="dv1" sortcondition="CONS_NO DESC" filtercondition="CUST_NO == #dmCustInfo.getValue(&quot;custNo&quot;)"/>
+        <cl:datarowlist/>
+      </cl:dataset>
+      <cl:dataset comment="지급Data" std:sid="d-set-193f57ef" id="DS_PAY" sortcondition="PAY_DATE DESC" filtercondition="CUST_NO == #dmCustInfo.getValue(&quot;custNo&quot;)">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="고객번호" std:sid="d-column-baec51b4" name="CUST_NO"/>
+          <cl:datacolumn comment="지급일자" std:sid="d-column-788ed536" name="PAY_DATE"/>
+          <cl:datacolumn comment="지급방법" std:sid="d-column-1cfa4a4c" name="PAY_WAY"/>
+          <cl:datacolumn comment="수령인" std:sid="d-column-3fb1faed" name="REC_NM"/>
+          <cl:datacolumn comment="금액" std:sid="d-column-23c1c143" name="AMOUNT" datatype="number"/>
+          <cl:datacolumn comment="지급사유" std:sid="d-column-c29746fd" name="PAY_RSN"/>
+          <cl:datacolumn comment="계약번호" std:sid="d-column-9e55a786" name="CON_NO"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist/>
+      </cl:dataset>
+      <cl:dataset std:sid="d-set-92a704f5" id="DS_COM_CD">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-3afd6044" name="label"/>
+          <cl:datacolumn std:sid="d-column-1239780f" name="value"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+      <cl:dataset comment="인입시간대별 분포 차트" std:sid="d-set-347b94ad" id="dsInTime">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="시간" std:sid="d-column-e4300b47" info="시간" name="COLUMN1"/>
+          <cl:datacolumn comment="건수" std:sid="d-column-25c19419" info="건수" name="COLUMN2" datatype="number"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist/>
+      </cl:dataset>
+      <cl:dataset comment="상담유형별 분포 차트" std:sid="d-set-ddd6924d" id="dsCounsType">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="상담유형" std:sid="d-column-019f8681" info="상담유형" name="NAME"/>
+          <cl:datacolumn comment="건수" std:sid="d-column-4b2ff094" info="건수" name="VALUE" datatype="number"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist/>
+      </cl:dataset>
+      <cl:dataset comment="상담사-상담유형별 분포 차트" std:sid="d-set-70ab97f3" id="dsCsCounsType">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="상담사" std:sid="d-column-38e90b21" info="상담사" name="CONS_NM"/>
+          <cl:datacolumn comment="LMS문구문의" std:sid="d-column-087f6315" info="LMS문구문의" name="CONS_TYPE1" datatype="number"/>
+          <cl:datacolumn comment="결제금액문의" std:sid="d-column-037fb6bc" info="결제금액문의" name="CONS_TYPE2" datatype="number"/>
+          <cl:datacolumn comment="결제일문의" std:sid="d-column-e93a881d" info="결제일문의" name="CONS_TYPE3" datatype="number"/>
+          <cl:datacolumn comment="계약문의" std:sid="d-column-20ffe231" info="계약문의" name="CONS_TYPE4" datatype="number"/>
+          <cl:datacolumn comment="고객정보변경" std:sid="d-column-e8ee71d9" info="고객정보변경" name="CONS_TYPE5" datatype="number"/>
+          <cl:datacolumn comment="연락처변경" std:sid="d-column-29e16d0d" info="연락처변경" name="CONS_TYPE6" datatype="number"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+      <cl:dataset comment="상담유형-계약번호별 분포 차트" std:sid="d-set-fac07eb4" id="dsCsContractNum">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="계약번호" std:sid="d-column-0214e663" info="계약번호" name="CON_NO"/>
+          <cl:datacolumn comment="LMS문구문의" std:sid="d-column-327595d6" info="LMS문구문의" name="CONS_TYPE1" datatype="number"/>
+          <cl:datacolumn comment="결제금액문의" std:sid="d-column-23fb884c" info="결제금액문의" name="CONS_TYPE2" datatype="number"/>
+          <cl:datacolumn comment="결제일문의" std:sid="d-column-b332693e" info="결제일문의" name="CONS_TYPE3" datatype="number"/>
+          <cl:datacolumn comment="계약문의" std:sid="d-column-cc9f4db6" info="계약문의" name="CONS_TYPE4" datatype="number"/>
+          <cl:datacolumn comment="고객정보변경" std:sid="d-column-118784a2" info="고객정보변경" name="CONS_TYPE5" datatype="number"/>
+          <cl:datacolumn comment="연락처변경" std:sid="d-column-d203959f" info="연락처변경" name="CONS_TYPE6" datatype="number"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+      <cl:datamap std:sid="d-map-c36dfed7" id="dmSearch">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-813ba3f6" name="custNo"/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+      <cl:datamap std:sid="d-map-12176db6" id="dmCustInfo">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-71aad1a4" name="custNo" defaultvalue=""/>
+          <cl:datacolumn std:sid="d-column-ebfd87c2" name="korNm" defaultvalue=""/>
+          <cl:datacolumn std:sid="d-column-8a8fa081" name="engNm" defaultvalue=""/>
+          <cl:datacolumn std:sid="d-column-77133981" name="jumin"/>
+          <cl:datacolumn std:sid="d-column-bd83da43" name="job" defaultvalue=""/>
+          <cl:datacolumn std:sid="d-column-afaa2d96" name="age" defaultvalue=""/>
+          <cl:datacolumn std:sid="d-column-70f4ca5f" name="drvYn" defaultvalue=""/>
+          <cl:datacolumn std:sid="d-column-2895724c" name="birth"/>
+          <cl:datacolumn std:sid="d-column-fd08f001" name="nation" defaultvalue=""/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+      <cl:datamap comment="페이지 정보" std:sid="d-map-84c921c9" id="DM_PAGE_INFO_1">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="총 로우수" std:sid="d-column-cec7d2a2" name="RECORD_TOTAL" datatype="string" defaultvalue="0"/>
+          <cl:datacolumn comment="한 페이지에 출력할 로우수" std:sid="d-column-57bb6413" name="RECORD_CNT_PER_PAGE" defaultvalue="10"/>
+          <cl:datacolumn comment="페이지 번호" std:sid="d-column-98dabf83" name="PAGE_NO" defaultvalue="1"/>
+          <cl:datacolumn comment="페이지 카운트" std:sid="d-column-aa81f203" name="PAGE_INDEXER_CNT" defaultvalue="10"/>
+          <cl:datacolumn comment="데이터 뷰 ID" std:sid="d-column-468b7399" name="DATA_VIEW_ID" defaultvalue="dv1"/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+      <cl:submission std:sid="submission-b86e6eeb" id="subCustInfo" action="app/sce/A1/data/custInfo.json">
+        <cl:requestdata dataid="dmSearch"/>
+        <cl:responsedata dataid="dmCustInfo"/>
+      </cl:submission>
+      <cl:submission std:sid="submission-57d3f107" id="subCustHist"/>
+      <cl:submission std:sid="submission-debbede2" id="subPayHist"/>
+      <cl:submission std:sid="submission-9679775f" id="subAll" action="app/sce/A1/data/all.json">
+        <cl:requestdata dataid="dmSearch"/>
+        <cl:responsedata dataid="DS_PAY"/>
+        <cl:responsedata dataid="DS_COUNSEL"/>
+      </cl:submission>
+      <cl:submission std:sid="submission-84fdb573" id="subComCd" action="app/sce/A1/data/comCdList.json">
+        <cl:responsedata dataid="DS_COM_CD"/>
+      </cl:submission>
+    </cl:model>
+    <cl:appspec dev-comment="&lt;p>SYSTEM: 토마토시스템&#xD;&#xA;&lt;p>SUB-SYSTEM: 고객기본&#xD;&#xA;&lt;p>RUN-TYPE: 메인&#xD;&#xA;&lt;p>UI-ID: A62-1&#xD;&#xA;&lt;p>UI-NAME: 고객정보 통합조회&#xD;&#xA;&lt;p>CRUD: C,R,U&#xD;&#xA;&lt;p>UI-COMMENT: 고객 기본정보 및 고객 상담 패턴 차트, 콜센터 상담이력, 지급이력을 조회한다.&#xD;&#xA;&lt;p>UI-REMARK:&#xD;&#xA;1. 고객번호 컴포넌트를 클릭하여 고객검색 팝업을 호출한다.&#xD;&#xA;2. 고객 선택시 팝업은 자동으로 닫고 고객정보 및&#xD;&#xA;    고객이력을 조회한다.   &#xD;&#xA;3. 조회된 고객정보 데이터는 고객기본 목록에 추가하며 &#xD;&#xA;   아래의 조건에 따라 컴포넌트를 구성한다.&#xD;&#xA;  1) 고객주민번호 : 출력(mask:000000-0******)&#xD;&#xA;  2) 고객한글성명 : 출력&#xD;&#xA;  3) 고객영문성명 : 출력&#xD;&#xA;  4) 고객국적 : 콤보선택(국적 데이터)&#xD;&#xA;  5) 고객직업 : 라디오선택(주부/직장인)&#xD;&#xA;  6) 고객연령 : 숫자 입력&#xD;&#xA;  7) 운전여부 : 라디오선택(운전/미운전)&#xD;&#xA;  8) 생년월일 : 데이트선택&#xD;&#xA;4. 조회된 고객상담이력 데이터는 &#xD;&#xA;   고객상담 패턴 그래프 탭에 차트로 구성한다.&#xD;&#xA;5. 조회된 콜센터상담이력 데이터는&#xD;&#xA;   콜센터상담이력 탭에 그리드로 구성한다.&#xD;&#xA;6. 조회된 지급이력 데이터는 &#xD;&#xA;   지급이력 탭에 그리드로 구성한다. " title="개발산출물 자동완성"/>
+  </head>
+  <body std:sid="body-a0c207fd" class="wrap">
+    <cl:udc std:sid="ud-control-8c71e0ab" id="udcComAppHeader" type="udc.com.udcComAppHeader">
+      <cl:verticaldata std:sid="v-data-d23e67ba" width="1238px" height="40px" autosize="height"/>
+      <cl:property name="title" value="14.2 개발산출물 자동완성" type="string"/>
+      <cl:property name="isExpandAllPocProcess" value="true" type="boolean"/>
+    </cl:udc>
+    <cl:group std:sid="group-7e5559d4" id="grpGoverning" class="governing">
+      <cl:verticaldata std:sid="v-data-b3d3e7f4" width="992px" height="140px" autosize="height"/>
+      <cl:output std:sid="output-6fb83195" id="opt8" class="tit" value="개발산출물 자동완성 기능">
+        <cl:verticaldata std:sid="v-data-d68a450b" width="100px" height="36px" autosize="height"/>
+      </cl:output>
+      <cl:output std:sid="output-5953dfd4" id="opt9" class="txt" displayexp="&quot;eXBuilder6로 작성된 UI(화면)는 화면 설계서 및 개발산출물 등의 &quot; + sstr(&quot;문서 작업으로 소요되는 시간을 절감&quot;, [&quot;fw-bold&quot;]) + &quot;할 수 있도록 &quot;+  sstr(&quot;화면 설계 정의서 자동 생성&quot;, [&quot;fw-bold&quot;, &quot;text-red&quot;]) + &quot;기능을 제공하고 있습니다.&quot; + &quot;\n\r&quot; +sstr(&quot;설계된 화면은 이벤트만 추가하여 바로 개발&quot;, [&quot;fw-bold&quot;])+&quot;할 수 있어 &quot;+ sstr(&quot;프로젝트 생산성을 향상&quot;, [&quot;fw-bold&quot;]) + &quot;시킬 수 있습니다.&quot;&#xD;&#xA;&#xD;&#xA;">
+        <cl:verticaldata std:sid="v-data-6574ec63" width="1218px" height="54px" autosize="height"/>
+      </cl:output>
+      <cl:verticallayout std:sid="v-layout-62f1ecf3" scrollable="false" spacing="8"/>
+    </cl:group>
+    <cl:group comment="결제일문의" std:sid="group-b00f5249" id="grpSearch" class="sch-filter-box">
+      <cl:attribute name="mobile-column-count" value="3"/>
+      <cl:verticaldata std:sid="v-data-dead8965" width="1080px" height="61px" autosize="height"/>
+      <cl:output std:sid="output-f70d3266" id="opt1" class="label required" value="고객번호">
+        <cl:formdata std:sid="f-data-d1306916" row="0" col="0"/>
+      </cl:output>
+      <cl:udc comment="&lt;R>E-NAME: 고객번호 변경 이벤트&#xD;&#xA;&lt;R>E-DOC: 고객검색 팝업 호출&#xD;&#xA;&lt;R>E-PARAM: CUST_NO:고객번호&#xD;&#xA;&lt;R>E-RR-UI-NAME: 고객검색팝업(A01-1)&#xD;&#xA;&lt;R>E-CALL-SRV-NAME: onCustValueChange()&#xD;&#xA;&lt;R>E-REP: CUSR_NO:고객번호, KOR_NM:한글 고객명, ENG_NM:영문 고객명,JUMIN:주민등록번호, JOB:직업, AGE:나이, NATION:국적, BIRTH:생년월일, DRV_YN:운전여부 &#xD;&#xA;&lt;R>E-REMARK: 컨트롤 ID : udcCustNo" std:sid="ud-control-217941b5" id="udcCustNo" type="udc.cmn.udcCmnCustNoSearch">
+        <cl:datamapbind property="custNo" datacontrolid="dmCustInfo" columnname="custNo"/>
+        <cl:datamapbind property="korNm" datacontrolid="dmCustInfo" columnname="korNm"/>
+        <cl:datamapbind property="jumin" datacontrolid="dmCustInfo" columnname="jumin"/>
+        <cl:datamapbind property="job" datacontrolid="dmCustInfo" columnname="job"/>
+        <cl:datamapbind property="age" datacontrolid="dmCustInfo" columnname="age"/>
+        <cl:datamapbind property="drvYn" datacontrolid="dmCustInfo" columnname="drvYn"/>
+        <cl:datamapbind property="birth" datacontrolid="dmCustInfo" columnname="birth"/>
+        <cl:datamapbind property="nation" datacontrolid="dmCustInfo" columnname="nation"/>
+        <cl:datamapbind property="engNm" datacontrolid="dmCustInfo" columnname="engNm"/>
+        <cl:formdata std:sid="f-data-95eb536c" row="0" col="1"/>
+      </cl:udc>
+      <cl:output std:sid="output-68b408d9" id="optNm">
+        <cl:datamapbind property="value" datacontrolid="dmCustInfo" columnname="korNm"/>
+        <cl:formdata std:sid="f-data-3d64d2ab" valign="FILL" row="0" col="2"/>
+      </cl:output>
+      <cl:button comment="&lt;R>E-NAME: 조회 이벤트&#xD;&#xA;&lt;R>E-DOC: 입력된 고객번호로 고객정보 데이터 조회&#xD;&#xA;&lt;R>E-PARAM: CUST_NO:고객번호&#xD;&#xA;&lt;R>E-RR-UI-NAME:&#xD;&#xA;&lt;R>E-CALL-SRV-NAME: onBtnSearchClick()&#xD;&#xA;&lt;R>E-REP: 고객정보 조회&#xD;&#xA;&lt;R>E-REMARK: 컨트롤 ID : btnSearch" std:sid="button-f920d17c" id="btnSearch" class="primary btn-search" value="조회" icon="../../../theme/images/controls/button/ic_btn.png">
+        <cl:formdata std:sid="f-data-8da0925d" row="0" col="4"/>
+      </cl:button>
+      <cl:formlayout std:sid="f-layout-55939e8f" scrollable="false" hspace="8px" vspace="8px">
+        <cl:rows length="28" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+        <cl:columns length="80" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+        <cl:columns length="135" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+        <cl:columns length="120" autoSizing="false" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="80" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" minlength="0" syncminlength="false"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-2ee1e8ce" id="grpData" class="conts-area">
+      <cl:attribute name="dataType" value="a"/>
+      <cl:attribute name="portlet" value="Y"/>
+      <cl:verticaldata std:sid="v-data-504a9598" width="992px" height="887px" autosize="height"/>
+      <cl:group std:sid="group-9149ea29" id="grpCust" class="conts-wrap">
+        <std:metadata>
+          <std:property key="template-uuid" value="0db7c191-48c9-437d-a599-6fd99230eefd"/>
+          <std:property key="template-rev" value="1"/>
+        </std:metadata>
+        <cl:formdata std:sid="f-data-cf242175" width="100" height="-6" row="0" col="0"/>
+        <cl:group std:sid="group-66386052" id="grpCustTit">
+          <cl:verticaldata std:sid="v-data-5493d03a" width="1240px" height="28px" autosize="height"/>
+          <cl:udc std:sid="ud-control-6143fb59" id="udcComFormTitle2" type="udc.com.udcComFormTitle">
+            <cl:formdata std:sid="f-data-adcf59eb" row="0" col="0"/>
+            <cl:property name="title" value="고객기본" type="string"/>
+          </cl:udc>
+          <cl:group std:sid="group-65e5d8c1" id="grp7">
+            <cl:formdata std:sid="f-data-812f166f" row="0" col="1"/>
+            <cl:flowlayout std:sid="f-layout-28e1f01f" scrollable="false" hspacing="6" vspacing="6" halign="right"/>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-7947ed41" scrollable="false" hspace="8px" vspace="8px">
+            <cl:rows length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+            <cl:columns length="320" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:group std:sid="group-f0a9f2db" id="grpCustInfo" class="form">
+          <cl:attribute name="table-min-height" value=""/>
+          <cl:attribute name="mobile-column-count" value="1"/>
+          <cl:attribute name="tablet-column-count" value="2"/>
+          <cl:verticaldata std:sid="v-data-471cef8f" width="1250px" height="181px" autosize="height"/>
+          <cl:output std:sid="output-21507a3f" id="optJumin" class="label" value="고객주민번호">
+            <cl:formdata std:sid="f-data-07a356e8" row="0" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-4dcc1350" id="optJumin2" format="000000-0******">
+            <cl:datamapbind property="value" datacontrolid="dmCustInfo" columnname="jumin"/>
+            <cl:formdata std:sid="f-data-6d3860b3" row="0" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-b66bc744" id="optJob" class="label required" value="고객직업">
+            <cl:formdata std:sid="f-data-a9d321b9" row="0" col="2"/>
+          </cl:output>
+          <cl:radiobutton std:sid="r-button-9bb92dca" id="rdbJob" fieldLabel="고객직업">
+            <cl:attribute name="required" value="Y"/>
+            <cl:datamapbind property="value" datacontrolid="dmCustInfo" columnname="job"/>
+            <cl:formdata std:sid="f-data-17a50086" row="0" col="3"/>
+            <cl:item std:sid="item-330347e7" label="주부" value="value1"/>
+            <cl:item std:sid="item-e150ab94" label="직장인" value="value2"/>
+          </cl:radiobutton>
+          <cl:output std:sid="output-a407737d" id="optKorNm" class="label" value="고객한글성명">
+            <cl:formdata std:sid="f-data-33f4c518" row="1" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-f8cf9e6b" id="optKorNm2">
+            <cl:datamapbind property="value" datacontrolid="dmCustInfo" columnname="korNm"/>
+            <cl:formdata std:sid="f-data-5c1d8295" row="1" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-1045f8c4" id="optAge" class="label" value="고객연령">
+            <cl:formdata std:sid="f-data-12e3cf63" row="1" col="2"/>
+          </cl:output>
+          <cl:group std:sid="group-311eead5" id="grp3">
+            <cl:formdata std:sid="f-data-90fb75fe" row="1" col="3"/>
+            <cl:output std:sid="output-2484d850" id="opt2" style="text-align:center;" value="세">
+              <cl:formdata std:sid="f-data-45421304" row="0" col="1"/>
+            </cl:output>
+            <cl:numbereditor std:sid="n-editor-68bc119e" id="nbe1" fieldLabel="고객연령" spinbutton="false" format="s999">
+              <cl:datamapbind property="value" datacontrolid="dmCustInfo" columnname="age"/>
+              <cl:formdata std:sid="f-data-79c5524b" row="0" col="0"/>
+            </cl:numbereditor>
+            <cl:formlayout std:sid="f-layout-965233b7" scrollable="false" hspace="5px" vspace="5px">
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION" autoSizing="false" minlength="0" syncminlength="false"/>
+              <cl:columns length="50" unit="PIXEL" autoSizing="true" minlength="30" syncminlength="false"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:output std:sid="output-138c4afc" id="optEngNm" class="label" value="고객영문성명">
+            <cl:formdata std:sid="f-data-230828be" row="2" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-d0ddc94b" id="optEngNm2">
+            <cl:datamapbind property="value" datacontrolid="dmCustInfo" columnname="engNm"/>
+            <cl:formdata std:sid="f-data-158e1401" row="2" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-90357320" id="optDrvYn" class="label required" value="운전여부">
+            <cl:formdata std:sid="f-data-d8d6cf4a" row="2" col="2"/>
+          </cl:output>
+          <cl:radiobutton std:sid="r-button-429bed11" id="rdbDriv" fieldLabel="운전여부">
+            <cl:attribute name="required" value="Y"/>
+            <cl:datamapbind property="value" datacontrolid="dmCustInfo" columnname="drvYn"/>
+            <cl:formdata std:sid="f-data-3481c0e1" row="2" col="3"/>
+            <cl:item std:sid="item-76806026" label="운전" value="Y"/>
+            <cl:item std:sid="item-ec670e8e" label="미운전" value="N"/>
+          </cl:radiobutton>
+          <cl:output std:sid="output-f838ae99" id="optNation" class="label" value="고객국적">
+            <cl:formdata std:sid="f-data-e1e4968b" row="3" col="0"/>
+          </cl:output>
+          <cl:combobox std:sid="c-box-7d4d9f78" id="cmbNation" fieldLabel="납입주기" preventinput="true">
+            <cl:attribute name="required" value="Y"/>
+            <cl:datamapbind property="value" datacontrolid="dmCustInfo" columnname="nation"/>
+            <cl:formdata std:sid="f-data-5d29aed5" row="3" col="1"/>
+            <cl:itemset datasetid="DS_COM_CD" label="label" value="value"/>
+          </cl:combobox>
+          <cl:output std:sid="output-3a0de154" id="optBirth" class="label" value="생년월일">
+            <cl:formdata std:sid="f-data-29a0ef37" row="3" col="2"/>
+          </cl:output>
+          <cl:dateinput std:sid="d-input-72c0e0e4" id="dtiBirth">
+            <cl:datamapbind property="value" datacontrolid="dmCustInfo" columnname="birth"/>
+            <cl:formdata std:sid="f-data-a1f7d9e2" row="3" col="3"/>
+          </cl:dateinput>
+          <cl:formlayout std:sid="f-layout-a152eb13" scrollable="false" hspace="16px" vspace="17px" top-margin="8px" right-margin="8px" bottom-margin="8px" left-margin="8px" hseparatorwidth="1" hseparatortype="BY_CLASS">
+            <cl:rows length="28" unit="PIXEL"/>
+            <cl:rows length="28" unit="PIXEL"/>
+            <cl:rows length="28" unit="PIXEL"/>
+            <cl:rows length="28" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+            <cl:columns length="180" unit="PIXEL" shadetype="BY_CLASS"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="180" unit="PIXEL" shadetype="BY_CLASS"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-e0d2df05" spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:tabfolder std:sid="t-folder-48f6ad1d" id="tabCont1" item-dragging-mode="internal">
+        <cl:attribute name="transform-on-mobile" value="Y"/>
+        <cl:formdata std:sid="f-data-1bde5c82" row="1" col="0" rowspan="1" colspan="1"/>
+        <cl:tabitem std:sid="t-item-4f6017bc" selected="true" text="고객 상담 패턴 그래프">
+          <cl:group std:sid="group-39d0bc47" id="grpTabRoot1">
+            <std:metadata>
+              <std:property key="locked" value="true"/>
+            </std:metadata>
+            <cl:attribute name="mobile-column-count" value="1"/>
+            <cl:attribute name="tablet-column-count" value="1"/>
+            <cl:udc std:sid="ud-control-5ed6e61d" id="cmnInTimeChart" type="udc.cmn.chart.cmnChart">
+              <cl:formdata std:sid="f-data-ec17e830" row="0" col="0"/>
+              <cl:property name="title" value="인입시간대별 분포" type="string"/>
+              <cl:property name="dataSet" value="dsInTime" type="control"/>
+              <cl:property name="categoryColNm" value="COLUMN1" type="string"/>
+              <cl:property name="valueColNms" value="COLUMN2" type="string"/>
+              <cl:property name="chartType" value="line : fold" type="enumeration"/>
+            </cl:udc>
+            <cl:udc std:sid="ud-control-6e67bef2" id="cmnCounsTypeChart" type="udc.cmn.chart.cmnChart">
+              <cl:formdata std:sid="f-data-be998d91" row="0" col="1"/>
+              <cl:property name="title" value="상담유형별 분포" type="string"/>
+              <cl:property name="dataSet" value="dsCounsType" type="control"/>
+              <cl:property name="valueColNms" value="VALUE" type="string"/>
+              <cl:property name="categoryColNm" value="NAME" type="string"/>
+              <cl:property name="chartType" value="circle : ring" type="enumeration"/>
+            </cl:udc>
+            <cl:udc std:sid="ud-control-003eb284" id="cmnCsCounsTypeChart" type="udc.cmn.chart.cmnChart">
+              <cl:formdata std:sid="f-data-a8b06d95" row="1" col="0"/>
+              <cl:property name="title" value="상담사-상담유형별 분포" type="string"/>
+              <cl:property name="dataSet" value="dsCsCounsType" type="control"/>
+              <cl:property name="categoryColNm" value="CONS_NM" type="string"/>
+              <cl:property name="valueColNms" value="CONS_TYPE1,CONS_TYPE2,CONS_TYPE3,CONS_TYPE4,CONS_TYPE5,CONS_TYPE6" type="string"/>
+              <cl:property name="chartType" value="bar : horizontal" type="enumeration"/>
+            </cl:udc>
+            <cl:udc std:sid="ud-control-43688971" id="cmnCsContractNumChart" type="udc.cmn.chart.cmnChart">
+              <cl:formdata std:sid="f-data-192f1708" row="1" col="1"/>
+              <cl:property name="title" value="상담유형-계약번호별 분포" type="string"/>
+              <cl:property name="dataSet" value="dsCsContractNum" type="control"/>
+              <cl:property name="categoryColNm" value="CON_NO" type="string"/>
+              <cl:property name="valueColNms" value="CONS_TYPE1,CONS_TYPE2,CONS_TYPE3,CONS_TYPE4,CONS_TYPE5,CONS_TYPE6" type="string"/>
+            </cl:udc>
+            <cl:formlayout std:sid="f-layout-608074c9" scrollable="false" hspace="16px" vspace="16px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="300" unit="PIXEL" autoSizing="true" syncminlength="true"/>
+              <cl:rows length="300" unit="PIXEL" autoSizing="true" syncminlength="true"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
+        </cl:tabitem>
+        <cl:tabitem std:sid="t-item-06c6fbeb" text="콜센터상담이력">
+          <std:metadata>
+            <std:property key="is-active-item" value="true"/>
+          </std:metadata>
+          <cl:group std:sid="group-85673b7a" id="grpTabRoot2">
+            <std:metadata>
+              <std:property key="locked" value="true"/>
+            </std:metadata>
+            <cl:group std:sid="group-3b9be269" id="grpCont2" class="conts-wrap">
+              <cl:formdata std:sid="f-data-b5a39882" row="0" col="0" rowspan="1" colspan="1"/>
+              <cl:udc std:sid="ud-control-d6f8a3b6" id="udcComGridTitle2" type="udc.com.udcComGridTitle">
+                <cl:datamapbind property="rowCount" datacontrolid="DM_PAGE_INFO_1" columnname="RECORD_TOTAL"/>
+                <cl:formdata std:sid="f-data-8fd48926" row="0" col="0"/>
+                <cl:property name="showTitle" value="true" type="boolean"/>
+                <cl:property name="title" value="콜센터상담이력" type="string"/>
+                <cl:property name="ctrl" value="grdConsList" type="control"/>
+              </cl:udc>
+              <cl:group std:sid="group-9d1fb1aa" id="grpTabCont2">
+                <cl:formdata std:sid="f-data-69487e34" row="1" col="0"/>
+                <cl:grid comment="&lt;R>E-NAME: 콜센터상담이력 상세조회 이벤트&#xD;&#xA;&lt;R>E-DOC: 선택된 상담번호로 콜센터상담이력상세 팝업 호출&#xD;&#xA;&lt;R>E-PARAM: COUNS_NO:상담번호&#xD;&#xA;&lt;R>E-RR-UI-NAME: 콜센터상담이력상세&#xD;&#xA;&lt;R>E-CALL-SRV-NAME: onGrdConsListRowDblclick()&#xD;&#xA;&lt;R>E-REP: 콜센터 상담이력상세 정보 조회&#xD;&#xA;&lt;R>E-REMARK: 컨트롤 ID : grdConsList" std:sid="grid-86706a60" id="grdConsList" fieldLabel="콜센터상담이력" datasetid="DS_COUNSEL" autofit="1, 2, 3, 4, 5, 6" clickmode="select" columnMovable="true">
+                  <cl:attribute name="transform-on-mobile" value="detailType"/>
+                  <cl:formdata std:sid="f-data-60005cd8" row="0" col="0"/>
+                  <cl:gridcolumn std:sid="g-column-7fd1b256" width="60px"/>
+                  <cl:gridcolumn std:sid="g-column-9761ebbf" width="140px"/>
+                  <cl:gridcolumn std:sid="g-column-7d3ff60b" width="120px"/>
+                  <cl:gridcolumn std:sid="g-column-23b5df30" width="120px"/>
+                  <cl:gridcolumn std:sid="g-column-d5d2cf9c" width="120px"/>
+                  <cl:gridcolumn std:sid="g-column-e4b9e2f3" width="165px"/>
+                  <cl:gridcolumn std:sid="g-column-8d6948eb" width="140px"/>
+                  <cl:gridheader std:sid="gh-band-6e0bca9e">
+                    <cl:gridrow std:sid="g-row-08411319" height="44px"/>
+                    <cl:gridcell std:sid="gh-cell-af36a6aa" rowindex="0" colindex="1" text="상담일시"/>
+                    <cl:gridcell std:sid="gh-cell-384833b5" rowindex="0" colindex="2" text="상담사"/>
+                    <cl:gridcell std:sid="gh-cell-f6deb220" rowindex="0" colindex="3" text="계약번호"/>
+                    <cl:gridcell std:sid="gh-cell-3371e295" rowindex="0" colindex="4" text="인입&#xD;&#xA;전화번호"/>
+                    <cl:gridcell std:sid="gh-cell-cee4951c" rowindex="0" colindex="5" text="상담유형"/>
+                    <cl:gridcell std:sid="gh-cell-5d577e31" rowindex="0" colindex="6" text="상담내용"/>
+                    <cl:gridcell std:sid="gh-cell-db3fa83d" rowindex="0" colindex="0" text="번호"/>
+                  </cl:gridheader>
+                  <cl:griddetail std:sid="gd-band-34f6d9c1">
+                    <cl:gridrow std:sid="g-row-85e09b29" height="45px"/>
+                    <cl:gridcell std:sid="gd-cell-a6551dac" rowindex="0" colindex="1" columnname="CONS_NO">
+                      <cl:output std:sid="output-9a1ffd97" id="opt3" style="text-align:center;">
+                        <cl:celldata std:sid="c-data-7a405cf7"/>
+                      </cl:output>
+                    </cl:gridcell>
+                    <cl:gridcell std:sid="gd-cell-6d6523e9" rowindex="0" colindex="2" columnname="CONS_NM">
+                      <cl:output std:sid="output-4b3a3deb" id="opt4" style="text-align:center;">
+                        <cl:celldata std:sid="c-data-70aba48d"/>
+                      </cl:output>
+                    </cl:gridcell>
+                    <cl:gridcell std:sid="gd-cell-61c44815" rowindex="0" colindex="3" columnname="CON_NO">
+                      <cl:output std:sid="output-8d33ea45" id="opt33" style="text-align:center;">
+                        <cl:celldata std:sid="c-data-070acaf6"/>
+                      </cl:output>
+                    </cl:gridcell>
+                    <cl:gridcell std:sid="gd-cell-c117406b" rowindex="0" colindex="4" columnname="TEL">
+                      <cl:output std:sid="output-6d86aa42" id="opt63" style="text-align:center;">
+                        <cl:celldata std:sid="c-data-553fed12"/>
+                      </cl:output>
+                    </cl:gridcell>
+                    <cl:gridcell std:sid="gd-cell-f95c6eab" rowindex="0" colindex="5" columnname="CONS_TYPE">
+                      <cl:output std:sid="output-ecab2d1c" id="opt64" style="text-align:center;">
+                        <cl:celldata std:sid="c-data-d0222222"/>
+                      </cl:output>
+                    </cl:gridcell>
+                    <cl:gridcell std:sid="gd-cell-06b812b9" rowindex="0" colindex="6" columnname="CONS_DESC">
+                      <cl:output std:sid="output-9e999386" id="opt65" style="text-align:center;">
+                        <cl:celldata std:sid="c-data-102ea12e"/>
+                      </cl:output>
+                    </cl:gridcell>
+                    <cl:gridcell std:sid="gd-cell-6bc3b55d" rowindex="0" colindex="0">
+                      <cl:output std:sid="output-f6bbcd22" id="opt121" style="text-align:center;">
+                        <cl:expbind property="value" category="PROPERTY" expression="((#DM_PAGE_INFO_1.PAGE_NO - 1) * #DM_PAGE_INFO_1.RECORD_CNT_PER_PAGE) + getIndex() +1 "/>
+                        <cl:celldata std:sid="c-data-92c42e4d"/>
+                      </cl:output>
+                    </cl:gridcell>
+                  </cl:griddetail>
+                </cl:grid>
+                <cl:udc std:sid="ud-control-73bfdfb2" id="udccompageindexer2" type="udc.com.udcComPageindexer">
+                  <cl:formdata std:sid="f-data-94ef2864" row="1" col="0"/>
+                  <cl:property name="ctrl" value="grdConsList" type="control"/>
+                  <cl:property name="pageInfo" value="DM_PAGE_INFO_1" type="control"/>
+                </cl:udc>
+                <cl:formlayout std:sid="f-layout-f9821a09" scrollable="false" hspace="8px" vspace="8px">
+                  <cl:rows length="398" unit="PIXEL"/>
+                  <cl:rows length="36" unit="PIXEL"/>
+                  <cl:columns length="1" unit="FRACTION"/>
+                </cl:formlayout>
+              </cl:group>
+              <cl:formlayout std:sid="f-layout-601301d3" scrollable="false" hspace="0px" vspace="8px" top-margin="16px" right-margin="16px" bottom-margin="16px" left-margin="16px">
+                <cl:rows length="28" unit="PIXEL" autoSizing="true" shadecolor="transparent" syncminlength="false"/>
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-56a51a23" scrollable="false" hspace="16px" vspace="16px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
+        </cl:tabitem>
+        <cl:tabitem std:sid="t-item-69984741" text="지급이력">
+          <cl:group std:sid="group-82ba9ec3" id="grpTabRoot3">
+            <std:metadata>
+              <std:property key="locked" value="true"/>
+            </std:metadata>
+            <cl:group std:sid="group-4a9f151c" id="grpCont3" class="conts-wrap">
+              <cl:formdata std:sid="f-data-897bbf17" row="0" col="0" rowspan="1" colspan="1"/>
+              <cl:udc std:sid="ud-control-6af86436" id="udcComGridTitle3" type="udc.com.udcComGridTitle">
+                <cl:formdata std:sid="f-data-543d867a" row="0" col="0"/>
+                <cl:property name="showTitle" value="true" type="boolean"/>
+                <cl:property name="title" value="지급이력" type="string"/>
+                <cl:property name="ctrl" value="grdPayList" type="control"/>
+              </cl:udc>
+              <cl:group std:sid="group-2e8b96c2" id="grpTabCont3">
+                <cl:formdata std:sid="f-data-23e87396" row="1" col="0"/>
+                <cl:grid comment="&lt;R>E-NAME: 지급이력 상세조회 이벤트&#xD;&#xA;&lt;R>E-DOC: 선택된 지급번호로 지급이력상세 팝업 호출&#xD;&#xA;&lt;R>E-PARAM: CON_NO:계약번호&#xD;&#xA;&lt;R>E-RR-UI-NAME: 지급이력상세&#xD;&#xA;&lt;R>E-CALL-SRV-NAME: onGrdPayListRowDblclick()&#xD;&#xA;&lt;R>E-REP: 지급이력상세 정보 조회&#xD;&#xA;&lt;R>E-REMARK: 컨트롤 ID : grdPayList" std:sid="grid-12466039" id="grdPayList" fieldLabel="지급이력" datasetid="DS_PAY" autofit="6, 5, 2, 1, 3, 4" columnMovable="true">
+                  <cl:attribute name="transform-on-mobile" value="formType"/>
+                  <cl:attribute name="hide-column-indicies" value="0,3.5,6"/>
+                  <cl:formdata std:sid="f-data-755c831c" row="0" col="0"/>
+                  <cl:gridcolumn std:sid="g-column-c5bafc8f" width="60px"/>
+                  <cl:gridcolumn std:sid="g-column-0c853031" width="140px"/>
+                  <cl:gridcolumn std:sid="g-column-0becefbc" width="140px"/>
+                  <cl:gridcolumn std:sid="g-column-4215f106" width="100px"/>
+                  <cl:gridcolumn std:sid="g-column-34bafc76" width="140px"/>
+                  <cl:gridcolumn std:sid="g-column-63cecbc3" width="140px"/>
+                  <cl:gridcolumn std:sid="g-column-8f72988f" width="140px"/>
+                  <cl:gridheader std:sid="gh-band-cc23c7c7">
+                    <cl:gridrow std:sid="g-row-78d0c9fc" height="44px"/>
+                    <cl:gridcell std:sid="gh-cell-88345772" rowindex="0" colindex="0" text="번호"/>
+                    <cl:gridcell std:sid="gh-cell-18cf2853" rowindex="0" colindex="1" text="지급일자"/>
+                    <cl:gridcell std:sid="gh-cell-afdde1a3" rowindex="0" colindex="2" text="지급방법"/>
+                    <cl:gridcell std:sid="gh-cell-d8576270" rowindex="0" colindex="3" text="수령인"/>
+                    <cl:gridcell std:sid="gh-cell-b9ecfba4" rowindex="0" colindex="4" class="bg-warning-dim" text="금액"/>
+                    <cl:gridcell std:sid="gh-cell-da5c457f" rowindex="0" colindex="5" text="지급사유"/>
+                    <cl:gridcell std:sid="gh-cell-24237b4d" rowindex="0" colindex="6" text="계약번호"/>
+                  </cl:gridheader>
+                  <cl:griddetail std:sid="gd-band-9cb2e880">
+                    <cl:gridrow std:sid="g-row-cfbd2b8f" height="45px"/>
+                    <cl:gridcell std:sid="gd-cell-2696d548" rowindex="0" colindex="0" columntype="rowindex"/>
+                    <cl:gridcell std:sid="gd-cell-c9f7ea19" rowindex="0" colindex="1" columnname="PAY_DATE">
+                      <cl:output std:sid="output-13120df6" id="opt35" style="text-align:center;" datatype="date" format="YYYY-MM-DD">
+                        <cl:celldata std:sid="c-data-9a74533f"/>
+                      </cl:output>
+                    </cl:gridcell>
+                    <cl:gridcell std:sid="gd-cell-39cfcd35" rowindex="0" colindex="2" columnname="PAY_WAY">
+                      <cl:output std:sid="output-8a40d639" id="opt34" style="text-align:center;">
+                        <cl:celldata std:sid="c-data-56c61e00"/>
+                      </cl:output>
+                    </cl:gridcell>
+                    <cl:gridcell std:sid="gd-cell-d60d1b11" rowindex="0" colindex="3" columnname="REC_NM">
+                      <cl:output std:sid="output-f2820265" id="opt36" style="text-align:center;">
+                        <cl:celldata std:sid="c-data-825e7261"/>
+                      </cl:output>
+                    </cl:gridcell>
+                    <cl:gridcell std:sid="gd-cell-4826edca" rowindex="0" colindex="4" columnname="AMOUNT">
+                      <cl:output std:sid="output-dbf858f9" id="opt37" style="text-align:right;" datatype="number" format="s#,##0">
+                        <cl:celldata std:sid="c-data-42edfc2f"/>
+                      </cl:output>
+                    </cl:gridcell>
+                    <cl:gridcell std:sid="gd-cell-c62f934b" rowindex="0" colindex="5" columnname="PAY_RSN">
+                      <cl:output std:sid="output-a40dc8e5" id="opt6" style="text-align:center;">
+                        <cl:celldata std:sid="c-data-6a82910e"/>
+                      </cl:output>
+                    </cl:gridcell>
+                    <cl:gridcell std:sid="gd-cell-8e55e482" rowindex="0" colindex="6" columnname="CON_NO">
+                      <cl:output std:sid="output-cff620b7" id="opt5" style="text-align:center;">
+                        <cl:celldata std:sid="c-data-6d3d892c"/>
+                      </cl:output>
+                    </cl:gridcell>
+                  </cl:griddetail>
+                </cl:grid>
+                <cl:formlayout std:sid="f-layout-7ba13da4" scrollable="false" hspace="0px" vspace="0px">
+                  <cl:rows length="398" unit="PIXEL"/>
+                  <cl:columns length="1" unit="FRACTION"/>
+                </cl:formlayout>
+              </cl:group>
+              <cl:formlayout std:sid="f-layout-d43ea8e8" scrollable="false" hspace="0px" vspace="8px" top-margin="16px" right-margin="16px" bottom-margin="16px" left-margin="16px">
+                <cl:rows length="28" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-e54339c0" scrollable="false" hspace="16px" vspace="16px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
+        </cl:tabitem>
+      </cl:tabfolder>
+      <cl:formlayout std:sid="f-layout-56ac0773" scrollable="false" hspace="16px" vspace="16px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="217" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+        <cl:rows length="660" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-5f3cdbe3" spacing="16" leftmargin="24" rightmargin="24" topmargin="16" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

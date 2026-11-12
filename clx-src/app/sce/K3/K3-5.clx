@@ -1,0 +1,838 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-e6c8265c" version="1.0.6209">
+  <head std:sid="head-ddecd67a">
+    <screen std:sid="screen-27fdb915" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-972989c8" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-44e941d4" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-8d61a842">
+      <cl:dataset comment="프로세스 목록" std:sid="d-set-4466e2c9" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="" std:sid="d-column-f931f90f" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-6db6b531" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn comment="" std:sid="d-column-782655a7" name="SUB_TITLE"/>
+          <cl:datacolumn comment="" std:sid="d-column-74da81e0" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-52ae149c" name="CONT" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-dae4d757" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-42cb6c4c" name="SUB_CODE"/>
+          <cl:datacolumn comment="" std:sid="d-column-36213828" name="TARGET_CTRL"/>
+          <cl:datacolumn std:sid="d-column-9eb9e139" name="TARGET_EMB"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[브라우저·해상도 호환]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[표준 브라우저 및 업무 해상도에서 기능과 사용성이 동일해야 한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    <cl:dataset comment="고객 목록" id="DS_CUST">
+        <cl:datacolumnlist>
+          <cl:datacolumn name="custNo" defaultvalue=""/>
+          <cl:datacolumn name="korNm" defaultvalue=""/>
+          <cl:datacolumn name="engNm" defaultvalue=""/>
+          <cl:datacolumn name="jumin"/>
+          <cl:datacolumn name="job" defaultvalue="value2"/>
+          <cl:datacolumn name="age" defaultvalue=""/>
+          <cl:datacolumn name="drvYn" defaultvalue="N"/>
+          <cl:datacolumn name="birth"/>
+          <cl:datacolumn name="nation" defaultvalue="1"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist/>
+      </cl:dataset>
+<cl:dataset id="dsList">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="고객ID" name="customerId" datatype="string" displayonly="false"/>
+          <cl:datacolumn comment="이름" name="name" datatype="string" displayonly="false"/>
+          <cl:datacolumn comment="회사명" name="company" datatype="string" displayonly="false"/>
+          <cl:datacolumn comment="부서" name="department" datatype="string" displayonly="false"/>
+          <cl:datacolumn comment="직급" name="position" datatype="string" displayonly="false"/>
+          <cl:datacolumn comment="이메일" name="email" datatype="string" displayonly="false"/>
+          <cl:datacolumn comment="휴대폰" name="phone" datatype="string" displayonly="false"/>
+          <cl:datacolumn comment="담당 프로젝트" name="project" datatype="string" displayonly="false"/>
+          <cl:datacolumn comment="프로젝트 상태" name="projectStatus" datatype="string" displayonly="false"/>
+          <cl:datacolumn comment="계약금액" name="contractAmount" datatype="string" displayonly="false"/>
+          <cl:datacolumn comment="최근 연락일자" name="lastContactDate" datatype="string" displayonly="false"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+<cl:submission id="SUB_LIST" action="app/sce/A1/data/custList.json" mediatype="application/json">
+        <cl:responsedata dataid="DS_CUST"/>
+        <cl:responsedata dataid="dsList"/>
+      </cl:submission>
+</cl:model>
+    <cl:appspec dev-comment="2.1 O/S, 브라우저 호환성&#x9;app/sce/A2/A2-1.clx&#xD;&#xA;6.2 반응형 디자인&#x9;app/sce/A6/A6-2.clx&#xD;&#xA;" title="[UX-06]브라우저·해상도 호환"/>
+  </head>
+  <body std:sid="body-b4172b5f" class="wrap">
+<cl:listener name="load" handler="onBodyLoad"/>
+    <cl:udc std:sid="ud-control-3d540efe" type="udc.com.udcComAppHeader">
+      <cl:verticaldata std:sid="v-data-a109949e" width="900px" height="28px"/>
+    </cl:udc>
+    <cl:group std:sid="group-ec281769" id="grpData" class="conts-area">
+<cl:verticaldata std:sid="v-data-f98501a5" width="976px" height="903px" autosize="none" grow="1"/>
+<cl:tabfolder id="tabMain" class="conts-area" headerarrowposition="both">
+<cl:verticaldata width="100px" height="100%" autosize="none" grow="1"/>
+<cl:tabitem selected="true" text="O/S, 브라우저 호환성">
+<std:metadata><std:property key="is-active-item" value="true"/></std:metadata>
+<cl:group id="grpTab1" class="conts-area">
+      
+      <cl:group class="conts-wrap">
+        <cl:formdata row="0" col="0" rowspan="1" colspan="1"/>
+        <cl:udc id="udcPocDocViewer" type="udc.poc.udcPocDocViewer">
+          <cl:formdata row="0" col="0"/>
+          <cl:property name="fileUrl" value="../A2/data/docs/A2-1.png" type="resource"/>
+        </cl:udc>
+        <cl:formlayout scrollable="false" hspace="0px" vspace="8px" top-margin="16px" right-margin="16px" bottom-margin="16px" left-margin="16px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:formlayout scrollable="false" hspace="16px" vspace="16px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+</cl:tabitem>
+<cl:tabitem text="반응형 디자인">
+<cl:group id="grpTab2" class="conts-area">
+      
+      <cl:group id="grpGoverning" class="governing">
+        <cl:verticaldata width="992px" height="164px" autosize="height"/>
+        <cl:output id="opt18" class="tit" value="반응형 디자인">
+          <cl:verticaldata width="100px" height="33px" autosize="height"/>
+        </cl:output>
+        <cl:output id="opt19" class="txt" displayexp="&quot;사용자 화면에 맞춰 UI컨트롤의 배치 자동변경 및 텍스트가 줄바꿈되는 &quot;+sstr(&quot;반응형 웹 특화 전용 레이아웃&quot;, [&quot;font-bold&quot;])+&quot;을 기본 제공하여, 한개의 화면 소스로 다양한 해상도에 최적화 된 UI를 제공합니다.\n&quot;&#xD;&#xA;+&quot;이를 통해 반응형 웹 화면 개발 시 &quot;+sstr(&quot;생산성은 향상&quot;, [&quot;font-bold&quot;])+&quot;되며,  해당도별 관리 포인트를 절감하여 &quot;+sstr(&quot;운영 효율성 또한 향상&quot;, [&quot;font-bold&quot;])+&quot;됩니다.&quot;">
+          <cl:verticaldata width="1218px" height="89px" autosize="height"/>
+        </cl:output>
+        <cl:verticallayout scrollable="false" spacing="8"/>
+      </cl:group>
+      <cl:group class="conts-area">
+        <cl:verticaldata width="1592px" height="998px" autosize="height"/>
+        <cl:tabfolder id="tab" item-spacing="5">
+          <cl:verticaldata width="992px" height="998px" autosize="height"/>
+          <cl:tabitem text="반응형 레이아웃" visible="false">
+            <cl:group id="grp18">
+              <std:metadata>
+                <std:property key="locked" value="true"/>
+              </std:metadata>
+              <cl:group class="conts-wrap">
+                <cl:verticaldata width="1592px" height="618px" autosize="height"/>
+                <cl:group id="grp10">
+                  <cl:verticaldata width="1558px" height="134px" autosize="height"/>
+                  <cl:udc id="udcComFormTitle3" type="udc.com.udcComFormTitle">
+                    <cl:verticaldata width="800px" height="28px" autosize="height"/>
+                    <cl:property name="title" value="반응형 레이아웃" type="string"/>
+                  </cl:udc>
+                  <cl:output id="opt9" value="eXBuilder6 에서 제공하는 5개의 레이아웃 중 반응형에 최적화 되어 있는 두 가지 레이아웃을 제공합니다.">
+                    <cl:verticaldata width="1250px" height="18px" autosize="height"/>
+                  </cl:output>
+                  <cl:verticallayout spacing="8" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+                </cl:group>
+                <cl:group id="grp4">
+                  <cl:verticaldata width="1558px" height="226px" autosize="height"/>
+                  <cl:output id="opt10" class="tit" value="■ 버티컬 레이아웃" outputtype="h3">
+                    <cl:verticaldata width="100px" height="28px" autosize="height"/>
+                  </cl:output>
+                  <cl:group id="grp8" class="border border-solid border-primary">
+                    <cl:verticaldata width="400px" height="200px" autosize="height"/>
+                    <cl:button id="btn1" class="primary" value="버튼1">
+                      <cl:verticaldata width="52px" height="28px"/>
+                    </cl:button>
+                    <cl:button id="btn2" class="primary" value="버튼2">
+                      <cl:verticaldata width="52px" height="28px"/>
+                    </cl:button>
+                    <cl:button id="btn3" class="primary" value="버튼3">
+                      <cl:verticaldata width="52px" height="28px"/>
+                    </cl:button>
+                    <cl:button id="btn4" class="primary" value="버튼4">
+                      <cl:verticaldata width="52px" height="28px"/>
+                    </cl:button>
+                    <cl:button id="btn5" class="primary" value="버튼5">
+                      <cl:verticaldata width="52px" height="28px"/>
+                    </cl:button>
+                    <cl:verticallayout spacing="8" leftmargin="8" rightmargin="8" topmargin="8" bottommargin="8"/>
+                  </cl:group>
+                  <cl:verticallayout spacing="8" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+                </cl:group>
+                <cl:group id="grp5">
+                  <cl:verticaldata width="1558px" height="226px" autosize="height"/>
+                  <cl:output id="opt12" class="tit" value="■ 플로우 레이아웃" outputtype="h3">
+                    <cl:verticaldata width="1218px" height="28px" autosize="height"/>
+                  </cl:output>
+                  <cl:group id="grp9" class="border border-solid border-primary">
+                    <cl:verticaldata width="400px" height="200px" autosize="height"/>
+                    <cl:button id="btn6" class="primary" value="버튼1">
+                      <cl:flowlayoutdata width="200px" height="28px" autosize="none"/>
+                    </cl:button>
+                    <cl:button id="btn7" class="primary" value="버튼2">
+                      <cl:flowlayoutdata width="200px" height="28px" autosize="none"/>
+                    </cl:button>
+                    <cl:button id="btn8" class="primary" value="버튼3">
+                      <cl:flowlayoutdata width="200px" height="28px" autosize="none"/>
+                    </cl:button>
+                    <cl:button id="btn9" class="primary" value="버튼4">
+                      <cl:flowlayoutdata width="200px" height="28px" autosize="none"/>
+                    </cl:button>
+                    <cl:button id="btn10" class="primary" value="버튼5">
+                      <cl:flowlayoutdata width="200px" height="28px" autosize="none"/>
+                    </cl:button>
+                    <cl:flowlayout leftmargin="8" rightmargin="8" topmargin="8" bottommargin="8"/>
+                  </cl:group>
+                  <cl:verticallayout spacing="8" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+                </cl:group>
+                <cl:verticallayout spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+              </cl:group>
+              <cl:verticallayout spacing="16" leftmargin="0" rightmargin="0" topmargin="10" bottommargin="0"/>
+            </cl:group>
+          </cl:tabitem>
+          <cl:tabitem selected="true" text="반응형 컨트롤">
+            <std:metadata>
+              <std:property key="is-active-item" value="true"/>
+            </std:metadata>
+            <cl:group id="grp19">
+              <std:metadata>
+                <std:property key="locked" value="true"/>
+              </std:metadata>
+              <cl:group class="conts-wrap">
+                <cl:verticaldata width="1592px" height="896px" autosize="height"/>
+                <cl:group id="grp12">
+                  <cl:verticaldata width="992px" height="178px" autosize="height"/>
+                  <cl:output id="opt13" class="tit" removeOnBuild="true" value="■ 반응형 폼 레이아웃" outputtype="h3">
+                    <cl:verticaldata width="1218px" height="28px" autosize="height"/>
+                  </cl:output>
+                  <cl:udc id="udcComFormTitle6" type="udc.com.udcComFormTitle">
+                    <cl:verticaldata width="1608px" height="28px" autosize="height"/>
+                    <cl:property name="title" value="반응형 그룹" type="string"/>
+                    <cl:property name="ctrl" value="grp3" type="control"/>
+                  </cl:udc>
+                  <cl:group id="grp3" class="form" fieldLabel="반응형 그룹">
+                    <cl:attribute name="table-min-height" value=""/>
+                    <cl:attribute name="mobile-column-count" value="1"/>
+                    <cl:attribute name="tablet-column-count" value="2"/>
+                    <cl:verticaldata width="1218px" height="146px" autosize="height"/>
+                    <cl:output id="opt1" class="label" value="고객번호">
+                      <cl:formdata row="0" col="0"/>
+                    </cl:output>
+                    <cl:inputbox id="ipb1" value="00000001">
+                      <cl:formdata row="0" col="1"/>
+                    </cl:inputbox>
+                    <cl:output id="opt5" class="label" value="국적">
+                      <cl:formdata row="0" col="2"/>
+                    </cl:output>
+                    <cl:combobox id="cmb1" value="kr">
+                      <cl:formdata row="0" col="3"/>
+                      <cl:item label="한국" value="kr"/>
+                      <cl:item label="미국" value="us"/>
+                      <cl:item label="일본" value="jp"/>
+                      <cl:item label="중국" value="ch"/>
+                    </cl:combobox>
+                    <cl:output id="opt2" class="label" value="한글성명">
+                      <cl:formdata row="1" col="0"/>
+                    </cl:output>
+                    <cl:inputbox id="ipb2" value="홍길동">
+                      <cl:formdata row="1" col="1"/>
+                    </cl:inputbox>
+                    <cl:output id="opt6" class="label" value="직업">
+                      <cl:formdata row="1" col="2"/>
+                    </cl:output>
+                    <cl:inputbox id="ipb6" value="웹 개발자">
+                      <cl:formdata row="1" col="3"/>
+                    </cl:inputbox>
+                    <cl:output id="opt3" class="label" value="영문성명">
+                      <cl:formdata row="2" col="0"/>
+                    </cl:output>
+                    <cl:inputbox id="ipb3" value="HONG KILDONG">
+                      <cl:formdata row="2" col="1"/>
+                    </cl:inputbox>
+                    <cl:output id="opt7" class="label" value="연령">
+                      <cl:formdata row="2" col="2"/>
+                    </cl:output>
+                    <cl:numbereditor id="nbe2" value="42">
+                      <cl:formdata row="2" col="3"/>
+                    </cl:numbereditor>
+                    <cl:output id="opt4" class="label" value="주민번호">
+                      <cl:formdata row="3" col="0"/>
+                    </cl:output>
+                    <cl:maskeditor id="mse1" value="8412101999999" mask="000000-0000000">
+                      <cl:formdata row="3" col="1"/>
+                    </cl:maskeditor>
+                    <cl:output id="opt8" class="label" value="생년월일">
+                      <cl:formdata row="3" col="2"/>
+                    </cl:output>
+                    <cl:dateinput id="dti1" value="20251210">
+                      <cl:formdata row="3" col="3"/>
+                    </cl:dateinput>
+                    <cl:formlayout scrollable="false" hspace="16px" vspace="17px" top-margin="8px" right-margin="8px" bottom-margin="8px" left-margin="8px" hseparatorwidth="1" hseparatortype="BY_CLASS">
+                      <cl:rows length="28" unit="PIXEL"/>
+                      <cl:rows length="28" unit="PIXEL"/>
+                      <cl:rows length="28" unit="PIXEL"/>
+                      <cl:rows length="28" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+                      <cl:columns length="180" unit="PIXEL" shadetype="BY_CLASS"/>
+                      <cl:columns length="1" unit="FRACTION"/>
+                      <cl:columns length="180" unit="PIXEL" shadetype="BY_CLASS"/>
+                      <cl:columns length="1" unit="FRACTION"/>
+                    </cl:formlayout>
+                  </cl:group>
+                  <cl:verticallayout spacing="8"/>
+                </cl:group>
+                <cl:group id="grp2">
+                  <cl:verticaldata width="958px" height="258px" autosize="height"/>
+                  <cl:output id="opt14" class="tit" removeOnBuild="true" value="■ 반응형 그리드" outputtype="h3">
+                    <cl:verticaldata width="1218px" height="28px" autosize="height"/>
+                  </cl:output>
+                  <cl:group id="grp27">
+                    <cl:attribute name="mobile-column-count" value="1"/>
+                    <cl:verticaldata width="992px" height="26px" autosize="height"/>
+                    <cl:udc id="udcComGridTitle3" type="udc.com.udcComGridTitle">
+                      <cl:attribute name="needs-auto-height" value="true"/>
+                      <cl:formdata row="0" col="0"/>
+                      <cl:property name="ctrl" value="grdCust" type="control"/>
+                      <cl:property name="title" value="반응형 그리드" type="string"/>
+                    </cl:udc>
+                    <cl:group id="grp28">
+                      <cl:attribute name="needs-auto-height" value="true"/>
+                      <cl:formdata row="0" col="1"/>
+                      <cl:radiobutton id="rdb1" value="dialogType">
+                        <cl:listener name="selection-change" handler="onRdb1SelectionChange"/>
+                        <cl:flowlayoutdata width="450px" height="28px" autosize="both"/>
+                        <cl:item label="dialogType" value="dialogType"/>
+                        <cl:item label="accordionType" value="accordionType"/>
+                        <cl:item label="list" value="list"/>
+                        <cl:item label="massiveList" value="massiveList"/>
+                      </cl:radiobutton>
+                      <cl:flowlayout halign="right"/>
+                    </cl:group>
+                    <cl:formlayout scrollable="false" hspace="8px" vspace="8px">
+                      <cl:rows length="1" unit="FRACTION"/>
+                      <cl:columns length="1" unit="FRACTION"/>
+                      <cl:columns length="494" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                    </cl:formlayout>
+                  </cl:group>
+                  <cl:grid id="grdCust" fieldLabel="등록고객" datasetid="DS_CUST" autofit="1, 2, 3, 4, 5, 6, 7, 8">
+                    <cl:attribute name="transform-on-mobile" value="dialogType"/>
+                    <cl:attribute name="view-column-indicies" value="0,1,2"/>
+                    <cl:attribute name="grid-list-spacing" value="8"/>
+                    <cl:verticaldata width="1070px" height="150px" autosize="height"/>
+                    <cl:rowstyle style="cursor:pointer;"/>
+                    <cl:gridcolumn width="120px"/>
+                    <cl:gridcolumn width="120px"/>
+                    <cl:gridcolumn width="120px"/>
+                    <cl:gridcolumn width="120px"/>
+                    <cl:gridcolumn width="120px"/>
+                    <cl:gridcolumn width="150px"/>
+                    <cl:gridcolumn width="90px"/>
+                    <cl:gridcolumn width="150px"/>
+                    <cl:gridcolumn width="125px"/>
+                    <cl:gridheader>
+                      <cl:gridrow height="44px"/>
+                      <cl:gridcell rowindex="0" colindex="1" sortable="false" filterable="false" text="한글성명"/>
+                      <cl:gridcell rowindex="0" colindex="3" sortable="false" filterable="false" text="주민번호"/>
+                      <cl:gridcell rowindex="0" colindex="5" sortable="false" filterable="false" text="직업"/>
+                      <cl:gridcell rowindex="0" colindex="0" text="고객번호"/>
+                      <cl:gridcell rowindex="0" colindex="2" text="영문성명"/>
+                      <cl:gridcell rowindex="0" colindex="6" text="연령"/>
+                      <cl:gridcell rowindex="0" colindex="7" text="운전여부"/>
+                      <cl:gridcell rowindex="0" colindex="8" text="생년월일"/>
+                      <cl:gridcell rowindex="0" colindex="4" text="국적"/>
+                    </cl:gridheader>
+                    <cl:griddetail>
+                      <cl:gridrow height="45px"/>
+                      <cl:gridcell rowindex="0" colindex="1" columnname="korNm"/>
+                      <cl:gridcell rowindex="0" colindex="3" columnname="jumin">
+                        <cl:output id="optJumin2" format="000000-0******">
+                          <cl:celldata/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell rowindex="0" colindex="5" columnname="job">
+                        <cl:radiobutton id="rdbJob" fieldLabel="고객직업">
+                          <cl:attribute name="required" value="Y"/>
+                          <cl:celldata/>
+                          <cl:item label="주부" value="value1"/>
+                          <cl:item label="직장인" value="value2"/>
+                        </cl:radiobutton>
+                      </cl:gridcell>
+                      <cl:gridcell rowindex="0" colindex="0" columnname="custNo"/>
+                      <cl:gridcell rowindex="0" colindex="2" columnname="engNm"/>
+                      <cl:gridcell rowindex="0" colindex="6" columnname="age">
+                        <cl:numbereditor id="nbe1" fieldLabel="고객연령" spinbutton="false" format="s999">
+                          <cl:celldata/>
+                        </cl:numbereditor>
+                      </cl:gridcell>
+                      <cl:gridcell rowindex="0" colindex="7" columnname="drvYn">
+                        <cl:radiobutton id="rdbDriv" fieldLabel="운전여부">
+                          <cl:attribute name="required" value="Y"/>
+                          <cl:celldata/>
+                          <cl:item label="운전" value="Y"/>
+                          <cl:item label="미운전" value="N"/>
+                        </cl:radiobutton>
+                      </cl:gridcell>
+                      <cl:gridcell rowindex="0" colindex="8" columnname="birth">
+                        <cl:dateinput id="dtiBirth">
+                          <cl:celldata/>
+                        </cl:dateinput>
+                      </cl:gridcell>
+                      <cl:gridcell rowindex="0" colindex="4" columnname="nation">
+                        <cl:combobox id="cmbNation" fieldLabel="납입주기" preventinput="true">
+                          <cl:attribute name="required" value="Y"/>
+                          <cl:celldata/>
+                          <cl:item label="한국" value="1"/>
+                          <cl:item label="미국" value="2"/>
+                        </cl:combobox>
+                      </cl:gridcell>
+                    </cl:griddetail>
+                  </cl:grid>
+                  <cl:verticallayout spacing="8"/>
+                </cl:group>
+                <cl:group id="grp13">
+                  <cl:verticaldata width="992px" height="428px" autosize="height"/>
+                  <cl:output id="opt15" class="tit" removeOnBuild="true" value="■ 반응형 탭폴더" outputtype="h3">
+                    <cl:verticaldata width="1218px" height="28px" autosize="height"/>
+                  </cl:output>
+                  <cl:udc id="udcComFormTitle8" type="udc.com.udcComFormTitle">
+                    <cl:verticaldata width="1608px" height="28px" autosize="height"/>
+                    <cl:property name="title" value="반응형 탭폴더" type="string"/>
+                  </cl:udc>
+                  <cl:tabfolder id="tab1" item-spacing="4">
+                    <cl:attribute name="transform-on-mobile" value="Y"/>
+                    <cl:verticaldata width="992px" height="379px" autosize="height"/>
+                    <cl:tabitem selected="true" text="전체 고객 목록">
+                      <std:metadata>
+                        <std:property key="is-active-item" value="true"/>
+                      </std:metadata>
+                      <cl:group id="grp1">
+                        <std:metadata>
+                          <std:property key="locked" value="true"/>
+                        </std:metadata>
+                        <cl:group id="grp14">
+                          <std:metadata>
+                            <std:property key="template-uuid" value="b11f0d6f-b781-4426-b3e5-761783bd5926"/>
+                            <std:property key="template-rev" value="9"/>
+                          </std:metadata>
+                          <cl:verticaldata width="1260px" height="319px" autosize="height"/>
+                          <cl:grid id="grd1" fieldLabel="고객정보" datasetid="dsList" resizablecolumns="all" columnMovable="true">
+                            <cl:attribute name="transform-on-mobile" value="dialogType"/>
+                            <cl:attribute name="view-column-indicies" value="0,1"/>
+                            <cl:attribute name="selectAfterLoad" value="N"/>
+                            <cl:formdata row="1" col="0"/>
+                            <cl:gridcolumn/>
+                            <cl:gridcolumn/>
+                            <cl:gridcolumn/>
+                            <cl:gridcolumn/>
+                            <cl:gridcolumn/>
+                            <cl:gridcolumn/>
+                            <cl:gridcolumn/>
+                            <cl:gridcolumn/>
+                            <cl:gridcolumn/>
+                            <cl:gridcolumn/>
+                            <cl:gridcolumn/>
+                            <cl:gridheader>
+                              <cl:gridrow height="44px"/>
+                              <cl:gridcell rowindex="0" colindex="0" targetcolumnname="customerId" sortable="false" filterable="false" text="고객ID"/>
+                              <cl:gridcell rowindex="0" colindex="1" targetcolumnname="name" sortable="false" filterable="false" text="이름"/>
+                              <cl:gridcell rowindex="0" colindex="2" targetcolumnname="company" sortable="false" filterable="false" text="회사명"/>
+                              <cl:gridcell rowindex="0" colindex="3" targetcolumnname="department" sortable="false" filterable="false" text="부서"/>
+                              <cl:gridcell rowindex="0" colindex="4" targetcolumnname="position" sortable="false" filterable="false" text="직급"/>
+                              <cl:gridcell rowindex="0" colindex="5" targetcolumnname="email" sortable="false" filterable="false" text="이메일"/>
+                              <cl:gridcell rowindex="0" colindex="6" targetcolumnname="phone" sortable="false" filterable="false" text="휴대폰"/>
+                              <cl:gridcell rowindex="0" colindex="7" targetcolumnname="project" sortable="false" filterable="false" text="담당 프로젝트"/>
+                              <cl:gridcell rowindex="0" colindex="8" targetcolumnname="projectStatus" sortable="false" filterable="false" text="프로젝트 상태"/>
+                              <cl:gridcell rowindex="0" colindex="9" targetcolumnname="contractAmount" sortable="false" filterable="false" text="계약금액"/>
+                              <cl:gridcell rowindex="0" colindex="10" targetcolumnname="lastContactDate" sortable="false" filterable="false" text="최근 연락일자"/>
+                            </cl:gridheader>
+                            <cl:griddetail>
+                              <cl:gridrow height="45px"/>
+                              <cl:gridcell rowindex="0" colindex="0" columnname="customerId"/>
+                              <cl:gridcell rowindex="0" colindex="1" columnname="name"/>
+                              <cl:gridcell rowindex="0" colindex="2" columnname="company"/>
+                              <cl:gridcell rowindex="0" colindex="3" columnname="department"/>
+                              <cl:gridcell rowindex="0" colindex="4" columnname="position"/>
+                              <cl:gridcell rowindex="0" colindex="5" columnname="email"/>
+                              <cl:gridcell rowindex="0" colindex="6" columnname="phone"/>
+                              <cl:gridcell rowindex="0" colindex="7" columnname="project"/>
+                              <cl:gridcell rowindex="0" colindex="8" columnname="projectStatus"/>
+                              <cl:gridcell rowindex="0" colindex="9" columnname="contractAmount">
+                                <cl:numbereditor id="nbe3">
+                                  <cl:celldata/>
+                                </cl:numbereditor>
+                              </cl:gridcell>
+                              <cl:gridcell rowindex="0" colindex="10" columnname="lastContactDate">
+                                <cl:dateinput id="dti2">
+                                  <cl:celldata/>
+                                </cl:dateinput>
+                              </cl:gridcell>
+                            </cl:griddetail>
+                          </cl:grid>
+                          <cl:udc id="udcComGridTitle1" type="udc.com.udcComGridTitle">
+                            <cl:formdata row="0" col="0"/>
+                            <cl:property name="ctrl" value="grd1" type="control"/>
+                          </cl:udc>
+                          <cl:formlayout scrollable="false" hspace="0px" vspace="8px" top-margin="10px">
+                            <cl:rows length="28" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                            <cl:rows length="1" unit="FRACTION"/>
+                            <cl:columns length="1" unit="FRACTION"/>
+                          </cl:formlayout>
+                        </cl:group>
+                        <cl:verticallayout spacing="16"/>
+                      </cl:group>
+                    </cl:tabitem>
+                    <cl:tabitem text="고객 상세">
+                      <cl:group id="grp16">
+                        <std:metadata>
+                          <std:property key="locked" value="true"/>
+                        </std:metadata>
+                        <cl:group id="grp21">
+                          <std:metadata>
+                            <std:property key="template-uuid" value="f91b19be-4854-4d7d-b7e1-c43b9a18b816"/>
+                            <std:property key="template-rev" value="12"/>
+                          </std:metadata>
+                          <cl:verticaldata width="984px" height="354px" autosize="height"/>
+                          <cl:udc id="udcComFormTitle1" type="udc.com.udcComFormTitle">
+                            <cl:verticaldata width="1024px" height="28px" autosize="height"/>
+                            <cl:property name="title" value="고객 상세" type="string"/>
+                            <cl:property name="ctrl" value="grp22" type="control"/>
+                          </cl:udc>
+                          <cl:group id="grp22" class="form" fieldLabel="고객 상세">
+                            <cl:attribute name="table-min-height" value=""/>
+                            <cl:attribute name="mobile-column-count" value="1"/>
+                            <cl:attribute name="tablet-column-count" value="2"/>
+                            <cl:datarowcontext datacontrolid="dsList"/>
+                            <cl:verticaldata width="984px" height="261px" autosize="height"/>
+                            <cl:output id="opt17" class="label required" value="고객ID">
+                              <cl:formdata row="0" col="0"/>
+                            </cl:output>
+                            <cl:output id="opt26">
+                              <cl:relativebind property="value" columnname="customerId"/>
+                              <cl:formdata row="0" col="1"/>
+                            </cl:output>
+                            <cl:output id="opt20" class="label" value="이름">
+                              <cl:formdata row="0" col="2"/>
+                            </cl:output>
+                            <cl:inputbox id="ipb5">
+                              <cl:relativebind property="value" columnname="name"/>
+                              <cl:formdata row="0" col="3"/>
+                            </cl:inputbox>
+                            <cl:output id="opt21" class="label" value="회사명">
+                              <cl:formdata row="1" col="0"/>
+                            </cl:output>
+                            <cl:inputbox id="ipb7">
+                              <cl:relativebind property="value" columnname="company"/>
+                              <cl:formdata row="1" col="1"/>
+                            </cl:inputbox>
+                            <cl:output id="opt22" class="label" value="부서">
+                              <cl:formdata row="1" col="2"/>
+                            </cl:output>
+                            <cl:inputbox id="ipb8">
+                              <cl:relativebind property="value" columnname="department"/>
+                              <cl:formdata row="1" col="3"/>
+                            </cl:inputbox>
+                            <cl:output id="opt23" class="label" value="직급">
+                              <cl:formdata row="2" col="0"/>
+                            </cl:output>
+                            <cl:inputbox id="ipb9">
+                              <cl:relativebind property="value" columnname="position"/>
+                              <cl:formdata row="2" col="1"/>
+                            </cl:inputbox>
+                            <cl:output id="opt24" class="label" value="휴대폰">
+                              <cl:formdata row="2" col="2"/>
+                            </cl:output>
+                            <cl:inputbox id="ipb10">
+                              <cl:relativebind property="value" columnname="phone"/>
+                              <cl:formdata row="2" col="3"/>
+                            </cl:inputbox>
+                            <cl:output id="opt25" class="label" value="담당 프로젝트">
+                              <cl:formdata row="3" col="0"/>
+                            </cl:output>
+                            <cl:inputbox id="ipb11">
+                              <cl:relativebind property="value" columnname="project"/>
+                              <cl:formdata row="3" col="1" rowspan="1" colspan="3"/>
+                            </cl:inputbox>
+                            <cl:output id="opt27" class="label" value="이메일">
+                              <cl:formdata row="4" col="0"/>
+                            </cl:output>
+                            <cl:inputbox id="ipb4">
+                              <cl:relativebind property="value" columnname="email"/>
+                              <cl:formdata row="4" col="1"/>
+                            </cl:inputbox>
+                            <cl:output id="opt29" class="label" value="프로젝트 상태">
+                              <cl:formdata row="4" col="2"/>
+                            </cl:output>
+                            <cl:inputbox id="ipb12">
+                              <cl:relativebind property="value" columnname="projectStatus"/>
+                              <cl:formdata row="4" col="3"/>
+                            </cl:inputbox>
+                            <cl:output id="opt28" class="label" value="계약금액">
+                              <cl:formdata row="5" col="0"/>
+                            </cl:output>
+                            <cl:numbereditor id="nbe4">
+                              <cl:relativebind property="value" columnname="contractAmount"/>
+                              <cl:formdata row="5" col="1"/>
+                            </cl:numbereditor>
+                            <cl:output id="opt30" class="label" value="최근 연락일자">
+                              <cl:formdata row="5" col="2"/>
+                            </cl:output>
+                            <cl:dateinput id="dti3">
+                              <cl:relativebind property="value" columnname="lastContactDate"/>
+                              <cl:formdata row="5" col="3"/>
+                            </cl:dateinput>
+                            <cl:formlayout scrollable="false" hspace="16px" vspace="17px" top-margin="8px" right-margin="8px" bottom-margin="8px" left-margin="8px" hseparatorwidth="1" hseparatortype="BY_CLASS">
+                              <cl:rows length="28" unit="PIXEL"/>
+                              <cl:rows length="28" unit="PIXEL"/>
+                              <cl:rows length="28" unit="PIXEL"/>
+                              <cl:rows length="28" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+                              <cl:rows length="28" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+                              <cl:rows length="28" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+                              <cl:columns length="180" unit="PIXEL" shadetype="BY_CLASS"/>
+                              <cl:columns length="1" unit="FRACTION"/>
+                              <cl:columns length="180" unit="PIXEL" shadetype="BY_CLASS"/>
+                              <cl:columns length="1" unit="FRACTION"/>
+                            </cl:formlayout>
+                          </cl:group>
+                          <cl:verticallayout spacing="8" leftmargin="0" rightmargin="0" topmargin="10" bottommargin="0"/>
+                        </cl:group>
+                        <cl:verticallayout spacing="16"/>
+                      </cl:group>
+                    </cl:tabitem>
+                    <cl:tabitem text="고객정보 수정">
+                      <cl:group id="grp17">
+                        <std:metadata>
+                          <std:property key="locked" value="true"/>
+                        </std:metadata>
+                        <cl:group id="grp24">
+                          <cl:attribute name="mobile-column-count" value="1"/>
+                          <cl:attribute name="tablet-column-count" value="1"/>
+                          <cl:verticaldata width="984px" height="376px" autosize="height"/>
+                          <cl:group id="grp23">
+                            <std:metadata>
+                              <std:property key="template-uuid" value="b11f0d6f-b781-4426-b3e5-761783bd5926"/>
+                              <std:property key="template-rev" value="9"/>
+                            </std:metadata>
+                            <cl:attribute name="needs-auto-height" value="true"/>
+                            <cl:formdata row="0" col="0"/>
+                            <cl:grid id="grd2" fieldLabel="고객정보" datasetid="dsList" clickmode="select" resizablecolumns="all" columnMovable="true">
+                              <cl:attribute name="transform-on-mobile" value=""/>
+                              <cl:formdata row="1" col="0"/>
+                              <cl:gridcolumn/>
+                              <cl:gridcolumn/>
+                              <cl:gridheader>
+                                <cl:gridrow height="44px"/>
+                                <cl:gridcell rowindex="0" colindex="0" targetcolumnname="customerId" sortable="false" filterable="false" text="고객ID"/>
+                                <cl:gridcell rowindex="0" colindex="1" targetcolumnname="name" sortable="false" filterable="false" text="이름"/>
+                              </cl:gridheader>
+                              <cl:griddetail>
+                                <cl:gridrow height="45px"/>
+                                <cl:gridcell rowindex="0" colindex="0" columnname="customerId"/>
+                                <cl:gridcell rowindex="0" colindex="1" columnname="name"/>
+                              </cl:griddetail>
+                            </cl:grid>
+                            <cl:udc id="udcComGridTitle2" type="udc.com.udcComGridTitle">
+                              <cl:formdata row="0" col="0"/>
+                              <cl:property name="ctrl" value="grd2" type="control"/>
+                            </cl:udc>
+                            <cl:formlayout scrollable="false" hspace="0px" vspace="8px" top-margin="10px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                              <cl:rows length="28" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                              <cl:rows length="1" unit="FRACTION"/>
+                              <cl:columns length="1" unit="FRACTION"/>
+                            </cl:formlayout>
+                          </cl:group>
+                          <cl:group id="grp25">
+                            <std:metadata>
+                              <std:property key="template-uuid" value="f91b19be-4854-4d7d-b7e1-c43b9a18b816"/>
+                              <std:property key="template-rev" value="12"/>
+                            </std:metadata>
+                            <cl:attribute name="needs-auto-height" value="true"/>
+                            <cl:formdata row="0" col="1"/>
+                            <cl:udc id="udcComFormTitle5" type="udc.com.udcComFormTitle">
+                              <cl:verticaldata width="1024px" height="24px" autosize="height"/>
+                              <cl:property name="title" value="상세정보" type="string"/>
+                              <cl:property name="ctrl" value="grp26" type="control"/>
+                            </cl:udc>
+                            <cl:group id="grp26" class="form" fieldLabel="상세정보">
+                              <cl:attribute name="table-min-height" value=""/>
+                              <cl:attribute name="mobile-column-count" value="1"/>
+                              <cl:attribute name="tablet-column-count" value="2"/>
+                              <cl:selectioncontext selectionProvider="grd2"/>
+                              <cl:verticaldata width="984px" height="287px" autosize="height"/>
+                              <cl:output id="opt31" class="label required" value="고객ID">
+                                <cl:formdata row="0" col="0"/>
+                              </cl:output>
+                              <cl:output id="opt32">
+                                <cl:relativebind property="value" columnname="customerId"/>
+                                <cl:formdata row="0" col="1"/>
+                              </cl:output>
+                              <cl:output id="opt33" class="label" value="이름">
+                                <cl:formdata row="0" col="2"/>
+                              </cl:output>
+                              <cl:inputbox id="ipb13">
+                                <cl:relativebind property="value" columnname="name"/>
+                                <cl:formdata row="0" col="3"/>
+                              </cl:inputbox>
+                              <cl:output id="opt34" class="label" value="회사명">
+                                <cl:formdata row="1" col="0"/>
+                              </cl:output>
+                              <cl:inputbox id="ipb14">
+                                <cl:relativebind property="value" columnname="company"/>
+                                <cl:formdata row="1" col="1"/>
+                              </cl:inputbox>
+                              <cl:output id="opt35" class="label" value="부서">
+                                <cl:formdata row="1" col="2"/>
+                              </cl:output>
+                              <cl:inputbox id="ipb15">
+                                <cl:relativebind property="value" columnname="department"/>
+                                <cl:formdata row="1" col="3"/>
+                              </cl:inputbox>
+                              <cl:output id="opt36" class="label" value="직급">
+                                <cl:formdata row="2" col="0"/>
+                              </cl:output>
+                              <cl:inputbox id="ipb16">
+                                <cl:relativebind property="value" columnname="position"/>
+                                <cl:formdata row="2" col="1"/>
+                              </cl:inputbox>
+                              <cl:output id="opt37" class="label" value="휴대폰">
+                                <cl:formdata row="2" col="2"/>
+                              </cl:output>
+                              <cl:inputbox id="ipb17">
+                                <cl:relativebind property="value" columnname="phone"/>
+                                <cl:formdata row="2" col="3"/>
+                              </cl:inputbox>
+                              <cl:output id="opt38" class="label" value="담당 프로젝트">
+                                <cl:formdata row="3" col="0"/>
+                              </cl:output>
+                              <cl:inputbox id="ipb18">
+                                <cl:relativebind property="value" columnname="project"/>
+                                <cl:formdata row="3" col="1" rowspan="1" colspan="3"/>
+                              </cl:inputbox>
+                              <cl:output id="opt39" class="label" value="이메일">
+                                <cl:formdata row="4" col="0"/>
+                              </cl:output>
+                              <cl:inputbox id="ipb19">
+                                <cl:relativebind property="value" columnname="email"/>
+                                <cl:formdata row="4" col="1"/>
+                              </cl:inputbox>
+                              <cl:output id="opt40" class="label" value="프로젝트 상태">
+                                <cl:formdata row="4" col="2"/>
+                              </cl:output>
+                              <cl:inputbox id="ipb20">
+                                <cl:relativebind property="value" columnname="projectStatus"/>
+                                <cl:formdata row="4" col="3"/>
+                              </cl:inputbox>
+                              <cl:output id="opt41" class="label" value="계약금액">
+                                <cl:formdata row="5" col="0"/>
+                              </cl:output>
+                              <cl:numbereditor id="nbe5">
+                                <cl:relativebind property="value" columnname="contractAmount"/>
+                                <cl:formdata row="5" col="1"/>
+                              </cl:numbereditor>
+                              <cl:output id="opt42" class="label" value="최근 연락일자">
+                                <cl:formdata row="5" col="2"/>
+                              </cl:output>
+                              <cl:dateinput id="dti4">
+                                <cl:relativebind property="value" columnname="lastContactDate"/>
+                                <cl:formdata row="5" col="3"/>
+                              </cl:dateinput>
+                              <cl:formlayout scrollable="false" hspace="17px" vspace="17px" top-margin="8px" right-margin="8px" bottom-margin="8px" left-margin="8px" hseparatorwidth="1" hseparatortype="BY_CLASS">
+                                <cl:rows length="28" unit="PIXEL"/>
+                                <cl:rows length="28" unit="PIXEL"/>
+                                <cl:rows length="28" unit="PIXEL"/>
+                                <cl:rows length="28" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+                                <cl:rows length="28" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+                                <cl:rows length="28" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+                                <cl:columns length="180" unit="PIXEL" shadetype="BY_CLASS"/>
+                                <cl:columns length="1" unit="FRACTION"/>
+                                <cl:columns length="180" unit="PIXEL" shadetype="BY_CLASS"/>
+                                <cl:columns length="1" unit="FRACTION"/>
+                              </cl:formlayout>
+                            </cl:group>
+                            <cl:verticallayout spacing="8" leftmargin="0" rightmargin="0" topmargin="10" bottommargin="0"/>
+                          </cl:group>
+                          <cl:formlayout scrollable="false" hspace="16px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                            <cl:rows length="1" unit="FRACTION"/>
+                            <cl:columns length="1" unit="FRACTION"/>
+                            <cl:columns length="2" unit="FRACTION"/>
+                          </cl:formlayout>
+                        </cl:group>
+                        <cl:verticallayout spacing="16"/>
+                      </cl:group>
+                    </cl:tabitem>
+                    <cl:header-style class="line"/>
+                    <cl:item-style class="line"/>
+                  </cl:tabfolder>
+                  <cl:verticallayout spacing="8"/>
+                </cl:group>
+                <cl:verticallayout spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+              </cl:group>
+              <cl:verticallayout spacing="16" topmargin="10"/>
+            </cl:group>
+          </cl:tabitem>
+          <cl:tabitem text="반응형 디자인" visible="false">
+            <cl:group id="grp20">
+              <std:metadata>
+                <std:property key="locked" value="true"/>
+              </std:metadata>
+              <cl:group class="conts-wrap">
+                <cl:verticaldata width="1592px" height="173px" autosize="height"/>
+                <cl:group id="grp15">
+                  <cl:verticaldata width="1218px" height="48px" autosize="height"/>
+                  <cl:udc id="udcComFormTitle2" type="udc.com.udcComFormTitle">
+                    <cl:verticaldata width="800px" height="28px" autosize="height"/>
+                    <cl:property name="title" value="반응형 디자인 화면 확인" type="string"/>
+                  </cl:udc>
+                  <cl:output id="opt16" value="시나리오 S1 화면을 통해 실제로 반응형이 적용된 화면을 확인합니다.">
+                    <cl:verticaldata width="1250px" height="18px" autosize="none"/>
+                  </cl:output>
+                  <cl:verticallayout spacing="8"/>
+                </cl:group>
+                <cl:group id="grp6">
+                  <cl:verticaldata width="992px" height="28px" autosize="height"/>
+                  <cl:button id="btn11" value="시나리오 S1 화면 호출">
+                    <cl:listener name="click" handler="onBtn11Click"/>
+                    <cl:flowlayoutdata width="150px" height="28px" autosize="width"/>
+                  </cl:button>
+                  <cl:flowlayout/>
+                </cl:group>
+                <cl:verticallayout spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+              </cl:group>
+              <cl:verticallayout spacing="16" leftmargin="0" rightmargin="0" topmargin="10" bottommargin="0"/>
+            </cl:group>
+          </cl:tabitem>
+          <cl:header-style class="line"/>
+          <cl:item-style class="line"/>
+        </cl:tabfolder>
+        <cl:verticallayout spacing="16"/>
+      </cl:group>
+      <cl:verticallayout spacing="16"/>
+    </cl:group>
+</cl:tabitem>
+</cl:tabfolder>
+<cl:verticallayout spacing="16" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+</cl:group>
+    <cl:verticallayout std:sid="v-layout-b8303aa2" spacing="16" leftmargin="24" rightmargin="24" topmargin="16" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

@@ -1,0 +1,440 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-df1a74d1" version="1.0.6209">
+  <head std:sid="head-5c903dd4">
+    <screen std:sid="screen-134b15c4" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-38a186d6" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-d021cd92" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-7f3a4145">
+      <cl:dataset comment="프로세스 목록" std:sid="d-set-96bb01b0" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="" std:sid="d-column-a3f5c860" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-586b2fea" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn comment="" std:sid="d-column-f45e0acf" name="SUB_TITLE"/>
+          <cl:datacolumn comment="" std:sid="d-column-09d607b9" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-65a3d665" name="CONT" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-ba9a6ac7" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-c49f4288" name="SUB_CODE"/>
+          <cl:datacolumn comment="" std:sid="d-column-ff0eecb3" name="TARGET_CTRL"/>
+          <cl:datacolumn std:sid="d-column-c50301b0" name="TARGET_EMB"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[키보드·단축키 업무]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[핵심 업무는 키보드만으로 수행할 수 있어야 한다. Tab·Shift+Tab·Enter·방향키 및 단축키 사용 시 입력 위치는 사전에 정의된 업무 순서에 따라 이동해야 하며, 팝업·오류·화면 전환 후에도 작업을 계속할 수 있는 위치로 복귀해야 한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+      <cl:dataset comment="고객 목록(시연)" id="dsList">
+        <cl:datacolumnlist>
+          <cl:datacolumn name="ID" datatype="string"/>
+          <cl:datacolumn name="NAME" datatype="string"/>
+          <cl:datacolumn name="TEL" datatype="string"/>
+          <cl:datacolumn name="TYPE" datatype="string"/>
+          <cl:datacolumn name="JOIN_DT" datatype="string"/>
+          <cl:datacolumn name="AMT" datatype="number"/>
+          <cl:datacolumn name="USE_YN" datatype="string"/>
+          <cl:datacolumn name="OPTS" datatype="string"/>
+          <cl:datacolumn name="MEMO" datatype="string"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="ID"><![CDATA[1001]]></cl:datavalue>
+            <cl:datavalue columnname="NAME"><![CDATA[김민수]]></cl:datavalue>
+            <cl:datavalue columnname="TEL"><![CDATA[010-1234-5678]]></cl:datavalue>
+            <cl:datavalue columnname="TYPE"><![CDATA[P]]></cl:datavalue>
+            <cl:datavalue columnname="JOIN_DT"><![CDATA[20240105]]></cl:datavalue>
+            <cl:datavalue columnname="AMT"><![CDATA[55000]]></cl:datavalue>
+            <cl:datavalue columnname="USE_YN"><![CDATA[Y]]></cl:datavalue>
+            <cl:datavalue columnname="OPTS"><![CDATA[S1,S2]]></cl:datavalue>
+            <cl:datavalue columnname="MEMO"><![CDATA[우수 고객]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="ID"><![CDATA[1002]]></cl:datavalue>
+            <cl:datavalue columnname="NAME"><![CDATA[이서연]]></cl:datavalue>
+            <cl:datavalue columnname="TEL"><![CDATA[010-2345-6789]]></cl:datavalue>
+            <cl:datavalue columnname="TYPE"><![CDATA[G]]></cl:datavalue>
+            <cl:datavalue columnname="JOIN_DT"><![CDATA[20240318]]></cl:datavalue>
+            <cl:datavalue columnname="AMT"><![CDATA[38000]]></cl:datavalue>
+            <cl:datavalue columnname="USE_YN"><![CDATA[Y]]></cl:datavalue>
+            <cl:datavalue columnname="OPTS"><![CDATA[S2]]></cl:datavalue>
+            <cl:datavalue columnname="MEMO"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="ID"><![CDATA[1003]]></cl:datavalue>
+            <cl:datavalue columnname="NAME"><![CDATA[박지훈]]></cl:datavalue>
+            <cl:datavalue columnname="TEL"><![CDATA[010-3456-7890]]></cl:datavalue>
+            <cl:datavalue columnname="TYPE"><![CDATA[S]]></cl:datavalue>
+            <cl:datavalue columnname="JOIN_DT"><![CDATA[20230921]]></cl:datavalue>
+            <cl:datavalue columnname="AMT"><![CDATA[29000]]></cl:datavalue>
+            <cl:datavalue columnname="USE_YN"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="OPTS"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="MEMO"><![CDATA[해지 예정]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="ID"><![CDATA[1004]]></cl:datavalue>
+            <cl:datavalue columnname="NAME"><![CDATA[최유진]]></cl:datavalue>
+            <cl:datavalue columnname="TEL"><![CDATA[010-4567-8901]]></cl:datavalue>
+            <cl:datavalue columnname="TYPE"><![CDATA[P]]></cl:datavalue>
+            <cl:datavalue columnname="JOIN_DT"><![CDATA[20240702]]></cl:datavalue>
+            <cl:datavalue columnname="AMT"><![CDATA[72000]]></cl:datavalue>
+            <cl:datavalue columnname="USE_YN"><![CDATA[Y]]></cl:datavalue>
+            <cl:datavalue columnname="OPTS"><![CDATA[S1,S3]]></cl:datavalue>
+            <cl:datavalue columnname="MEMO"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="ID"><![CDATA[1005]]></cl:datavalue>
+            <cl:datavalue columnname="NAME"><![CDATA[정하늘]]></cl:datavalue>
+            <cl:datavalue columnname="TEL"><![CDATA[010-5678-9012]]></cl:datavalue>
+            <cl:datavalue columnname="TYPE"><![CDATA[G]]></cl:datavalue>
+            <cl:datavalue columnname="JOIN_DT"><![CDATA[20250211]]></cl:datavalue>
+            <cl:datavalue columnname="AMT"><![CDATA[41000]]></cl:datavalue>
+            <cl:datavalue columnname="USE_YN"><![CDATA[Y]]></cl:datavalue>
+            <cl:datavalue columnname="OPTS"><![CDATA[S3]]></cl:datavalue>
+            <cl:datavalue columnname="MEMO"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+      <cl:datamap comment="상세 폼(시연)" id="dmForm">
+        <cl:datacolumnlist>
+          <cl:datacolumn name="ID" datatype="string"/>
+          <cl:datacolumn name="NAME" datatype="string"/>
+          <cl:datacolumn name="TEL" datatype="string"/>
+          <cl:datacolumn name="TYPE" datatype="string"/>
+          <cl:datacolumn name="JOIN_DT" datatype="string"/>
+          <cl:datacolumn name="AMT" datatype="number"/>
+          <cl:datacolumn name="USE_YN" datatype="string"/>
+          <cl:datacolumn name="OPTS" datatype="string"/>
+          <cl:datacolumn name="MEMO" datatype="string"/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+      <cl:submission comment="오류 발생 시연용(존재하지 않는 경로)" id="subFail" action="app/sce/K3/data/not-exist.json"/>
+    </cl:model>
+    <cl:appspec dev-comment="12.1 키보드 내비게이션&#x9;app/sce/A12/A12-1.clx&#xD;&#xA;" title="[FUN-05]키보드·업무 사용성"/>
+  </head>
+  <body std:sid="body-b8179661" class="wrap">
+    <cl:listener name="init" handler="onBodyInit2"/>
+    <cl:listener name="load" handler="onBodyLoad"/>
+    <cl:udc std:sid="ud-control-d666de8b" type="udc.com.udcComAppHeader">
+      <cl:verticaldata std:sid="v-data-ad6320bc" width="900px" height="28px"/>
+    </cl:udc>
+    <cl:group id="grpData" class="conts-area">
+      <cl:verticaldata width="976px" height="903px" autosize="none" grow="1"/>
+      <cl:tabfolder id="tabMain" class="conts-area" headerarrowposition="both">
+        <cl:listener name="selection-change" handler="onTabMainSelectionChange"/>
+        <cl:verticaldata width="100px" height="100%" autosize="none" grow="1"/>
+        <cl:tabitem selected="true" text="요구사항 설명">
+          <std:metadata>
+            <std:property key="is-active-item" value="true"/>
+          </std:metadata>
+          <cl:group id="grpTab1" class="conts-area">
+            <cl:group class="conts-wrap">
+              <cl:verticaldata width="976px" height="670px" autosize="height"/>
+              <cl:udc id="udcPocDocViewer1" type="udc.poc.udcPocDocViewer">
+                <cl:verticaldata width="500px" height="620px" autosize="height"/>
+                <cl:property name="fileUrl" value="../A12/data/docs/A12-1.png" type="resource"/>
+              </cl:udc>
+              <cl:verticallayout spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+            </cl:group>
+            <cl:verticallayout spacing="16"/>
+          </cl:group>
+        </cl:tabitem>
+        <cl:tabitem text="키보드 업무 시연">
+          <cl:group id="grpTab2" class="conts-area">
+            <cl:group id="grpGoverning" class="governing">
+              <cl:verticaldata width="992px" height="80px" autosize="height"/>
+              <cl:output id="optGovTit" class="tit" value="포커스 원복 시연">
+                <cl:verticaldata width="100px" height="28px" autosize="height"/>
+              </cl:output>
+              <cl:output id="optGovTxt" class="txt" value="입력 후 탭 이동·팝업·오류·화면 전환을 해도 직전에 작업하던 컨트롤로 포커스가 돌아옵니다. Tab/Shift+Tab/Enter로 이동하며 확인하세요.">
+                <cl:verticaldata width="1218px" height="31px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout scrollable="false" spacing="8"/>
+            </cl:group>
+            <cl:group id="grpSearch" class="sch-filter-box">
+              <cl:verticaldata width="976px" height="96px" autosize="height"/>
+              <cl:output id="optSch1" class="label" value="고객명">
+                <cl:formdata row="0" col="0"/>
+              </cl:output>
+              <cl:inputbox id="ipbSchName" placeholder="고객명 입력">
+                <cl:listener name="keydown" handler="onIpbSchNameKeydown"/>
+                <cl:formdata row="0" col="1"/>
+              </cl:inputbox>
+              <cl:output id="optSch2" class="label" value="요금제">
+                <cl:formdata row="0" col="2"/>
+              </cl:output>
+              <cl:combobox id="cmbSchType" value="">
+                <cl:formdata row="0" col="3"/>
+                <cl:item label="전체" value=""/>
+                <cl:item label="프리미엄" value="P"/>
+                <cl:item label="일반" value="G"/>
+                <cl:item label="절약형" value="S"/>
+              </cl:combobox>
+              <cl:output id="optSch3" class="label" value="가입일">
+                <cl:formdata row="0" col="4"/>
+              </cl:output>
+              <cl:group id="grpSchDate" class="form-control">
+                <cl:formdata row="0" col="5"/>
+                <cl:dateinput id="dtiSchFrom">
+                  <cl:formdata row="0" col="0"/>
+                </cl:dateinput>
+                <cl:output id="optSchTilde" value="~">
+                  <cl:formdata row="0" col="1"/>
+                </cl:output>
+                <cl:dateinput id="dtiSchTo">
+                  <cl:formdata row="0" col="2"/>
+                </cl:dateinput>
+                <cl:formlayout scrollable="false" hspace="4px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                  <cl:rows length="1" unit="FRACTION"/>
+                  <cl:columns length="1" unit="FRACTION"/>
+                  <cl:columns length="10" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+                  <cl:columns length="1" unit="FRACTION"/>
+                </cl:formlayout>
+              </cl:group>
+              <cl:output id="optSch4" class="label" value="사용여부">
+                <cl:formdata row="1" col="0"/>
+              </cl:output>
+              <cl:radiobutton id="rdbSchUse" value="">
+                <cl:formdata row="1" col="1"/>
+                <cl:item label="전체" value=""/>
+                <cl:item label="사용" value="Y"/>
+                <cl:item label="미사용" value="N"/>
+              </cl:radiobutton>
+              <cl:button id="btnReset" value="초기화">
+                <cl:listener name="click" handler="onBtnResetClick"/>
+                <cl:formdata row="1" col="6"/>
+              </cl:button>
+              <cl:button id="btnSearch" class="primary btn-search" value="조회" icon="0">
+                <cl:listener name="click" handler="onBtnSearchClick"/>
+                <cl:formdata row="1" col="7"/>
+              </cl:button>
+              <cl:formlayout scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="28" unit="PIXEL" autoSizing="false"/>
+                <cl:rows length="28" unit="PIXEL" autoSizing="false"/>
+                <cl:columns length="80" autoSizing="true"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="80" autoSizing="true"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="80" autoSizing="true"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="80" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                <cl:columns length="70" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:group id="grpList" class="conts-wrap">
+              <cl:verticaldata width="976px" height="300px" autosize="height"/>
+              <cl:udc id="udcComGridTitle1" type="udc.com.udcComGridTitle">
+                <cl:verticaldata width="800px" height="28px" autosize="height"/>
+                <cl:property name="title" value="고객 목록" type="string"/>
+                <cl:property name="ctrl" value="grdList" type="control"/>
+                <cl:property name="showExportExcel" value="false" type="boolean"/>
+                <cl:property name="showOption" value="false" type="boolean"/>
+                <cl:property name="showPivot" value="false" type="boolean"/>
+              </cl:udc>
+              <cl:grid id="grdList" fieldLabel="고객 목록" datasetid="dsList" clickmode="select">
+                <cl:listener name="selection-change" handler="onGrdListSelectionChange"/>
+                <cl:verticaldata width="400px" height="200px"/>
+                <cl:gridcolumn width="70px"/>
+                <cl:gridcolumn width="140px"/>
+                <cl:gridcolumn width="120px"/>
+                <cl:gridcolumn width="120px"/>
+                <cl:gridcolumn width="120px"/>
+                <cl:gridcolumn width="80px"/>
+                <cl:gridheader>
+                  <cl:gridrow height="36px"/>
+                  <cl:gridcell rowindex="0" colindex="0" text="번호"/>
+                  <cl:gridcell rowindex="0" colindex="1" text="고객명"/>
+                  <cl:gridcell rowindex="0" colindex="2" text="요금제"/>
+                  <cl:gridcell rowindex="0" colindex="3" text="가입일"/>
+                  <cl:gridcell rowindex="0" colindex="4" text="월요금"/>
+                  <cl:gridcell rowindex="0" colindex="5" text="사용여부"/>
+                </cl:gridheader>
+                <cl:griddetail>
+                  <cl:gridrow height="36px"/>
+                  <cl:gridcell rowindex="0" colindex="0" columnname="ID">
+                    <cl:output id="optGrdId" style="text-align:center;">
+                      <cl:celldata/>
+                    </cl:output>
+                  </cl:gridcell>
+                  <cl:gridcell rowindex="0" colindex="1" columnname="NAME">
+                    <cl:output id="optGrdName">
+                      <cl:celldata/>
+                    </cl:output>
+                  </cl:gridcell>
+                  <cl:gridcell rowindex="0" colindex="2" columnname="TYPE">
+                    <cl:output id="optGrdType" style="text-align:center;">
+                      <cl:celldata/>
+                    </cl:output>
+                  </cl:gridcell>
+                  <cl:gridcell rowindex="0" colindex="3" columnname="JOIN_DT">
+                    <cl:output id="optGrdJoin" style="text-align:center;" datatype="date" format="YYYY-MM-DD">
+                      <cl:celldata/>
+                    </cl:output>
+                  </cl:gridcell>
+                  <cl:gridcell rowindex="0" colindex="4" columnname="AMT">
+                    <cl:output id="optGrdAmt" class="text-right" datatype="number" format="s#,##0">
+                      <cl:celldata/>
+                    </cl:output>
+                  </cl:gridcell>
+                  <cl:gridcell rowindex="0" colindex="5" columnname="USE_YN">
+                    <cl:output id="optGrdUse" style="text-align:center;">
+                      <cl:celldata/>
+                    </cl:output>
+                  </cl:gridcell>
+                </cl:griddetail>
+              </cl:grid>
+              <cl:verticallayout spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+            </cl:group>
+            <cl:group id="grpForm" class="conts-wrap">
+              <cl:verticaldata width="976px" height="400px" autosize="height"/>
+              <cl:udc id="udcComFormTitle3" type="udc.com.udcComFormTitle">
+                <cl:verticaldata width="800px" height="28px" autosize="height"/>
+                <cl:property name="title" value="고객 상세" type="string"/>
+              </cl:udc>
+              <cl:group id="grpFormBody" class="form">
+                <cl:verticaldata width="972px" height="230px" autosize="height"/>
+                <cl:output id="optF1" class="label required" value="고객명">
+                  <cl:formdata row="0" col="0"/>
+                </cl:output>
+                <cl:inputbox id="ipbName" maxlength="20">
+                  <cl:datamapbind property="value" datacontrolid="dmForm" columnname="NAME"/>
+                  <cl:formdata row="0" col="1"/>
+                </cl:inputbox>
+                <cl:output id="optF2" class="label" value="연락처">
+                  <cl:formdata row="0" col="2"/>
+                </cl:output>
+                <cl:inputbox id="ipbTel" maxlength="13" placeholder="010-0000-0000">
+                  <cl:datamapbind property="value" datacontrolid="dmForm" columnname="TEL"/>
+                  <cl:formdata row="0" col="3"/>
+                </cl:inputbox>
+                <cl:output id="optF3" class="label required" value="요금제">
+                  <cl:formdata row="1" col="0"/>
+                </cl:output>
+                <cl:combobox id="cmbType">
+                  <cl:datamapbind property="value" datacontrolid="dmForm" columnname="TYPE"/>
+                  <cl:formdata row="1" col="1"/>
+                  <cl:item label="선택" value=""/>
+                  <cl:item label="프리미엄" value="P"/>
+                  <cl:item label="일반" value="G"/>
+                  <cl:item label="절약형" value="S"/>
+                </cl:combobox>
+                <cl:output id="optF4" class="label" value="가입일">
+                  <cl:formdata row="1" col="2"/>
+                </cl:output>
+                <cl:dateinput id="dtiJoin">
+                  <cl:datamapbind property="value" datacontrolid="dmForm" columnname="JOIN_DT"/>
+                  <cl:formdata row="1" col="3"/>
+                </cl:dateinput>
+                <cl:output id="optF5" class="label" value="월요금">
+                  <cl:formdata row="2" col="0"/>
+                </cl:output>
+                <cl:numbereditor id="nbeAmt" spinbutton="true">
+                  <cl:datamapbind property="value" datacontrolid="dmForm" columnname="AMT"/>
+                  <cl:formdata row="2" col="1"/>
+                </cl:numbereditor>
+                <cl:output id="optF6" class="label" value="사용여부">
+                  <cl:formdata row="2" col="2"/>
+                </cl:output>
+                <cl:radiobutton id="rdbUse" value="Y">
+                  <cl:datamapbind property="value" datacontrolid="dmForm" columnname="USE_YN"/>
+                  <cl:formdata row="2" col="3"/>
+                  <cl:item label="사용" value="Y"/>
+                  <cl:item label="미사용" value="N"/>
+                </cl:radiobutton>
+                <cl:output id="optF7" class="label" value="부가서비스">
+                  <cl:formdata row="3" col="0"/>
+                </cl:output>
+                <cl:checkboxgroup id="cbgOpt">
+                  <cl:datamapbind property="value" datacontrolid="dmForm" columnname="OPTS"/>
+                  <cl:formdata row="3" col="1" rowspan="1" colspan="3"/>
+                  <cl:item label="로밍" value="S1"/>
+                  <cl:item label="데이터 쉐어링" value="S2"/>
+                  <cl:item label="단말보험" value="S3"/>
+                </cl:checkboxgroup>
+                <cl:output id="optF8" class="label" value="메모">
+                  <cl:formdata row="4" col="0"/>
+                </cl:output>
+                <cl:textarea id="txaMemo">
+                  <cl:datamapbind property="value" datacontrolid="dmForm" columnname="MEMO"/>
+                  <cl:formdata row="4" col="1" rowspan="1" colspan="3"/>
+                </cl:textarea>
+                <cl:formlayout scrollable="false" hspace="16px" vspace="17px" top-margin="8px" right-margin="8px" bottom-margin="8px" left-margin="8px" hseparatorwidth="1" hseparatortype="BY_CLASS">
+                  <cl:rows length="28" unit="PIXEL"/>
+                  <cl:rows length="28" unit="PIXEL"/>
+                  <cl:rows length="28" unit="PIXEL"/>
+                  <cl:rows length="28" unit="PIXEL"/>
+                  <cl:rows length="70" unit="PIXEL"/>
+                  <cl:columns length="120" unit="PIXEL" shadetype="BY_CLASS"/>
+                  <cl:columns length="1" unit="FRACTION"/>
+                  <cl:columns length="120" unit="PIXEL" shadetype="BY_CLASS"/>
+                  <cl:columns length="1" unit="FRACTION"/>
+                </cl:formlayout>
+              </cl:group>
+              <cl:group id="grpFormBtns">
+                <cl:verticaldata width="972px" height="28px" autosize="height"/>
+                <cl:button id="btnNew" value="신규">
+                  <cl:listener name="click" handler="onBtnNewClick"/>
+                  <cl:flowlayoutdata width="80px" height="28px" autosize="none"/>
+                </cl:button>
+                <cl:button id="btnSave" class="primary" value="저장">
+                  <cl:listener name="click" handler="onBtnSaveClick"/>
+                  <cl:flowlayoutdata width="80px" height="28px" autosize="none"/>
+                </cl:button>
+                <cl:button id="btnPopup" value="팝업 확인">
+                  <cl:listener name="click" handler="onBtnPopupClick"/>
+                  <cl:flowlayoutdata width="100px" height="28px" autosize="none"/>
+                </cl:button>
+                <cl:button id="btnError" value="오류 발생">
+                  <cl:listener name="click" handler="onBtnErrorClick"/>
+                  <cl:flowlayoutdata width="100px" height="28px" autosize="none"/>
+                </cl:button>
+                <cl:button id="btnSwitch" value="화면 전환">
+                  <cl:listener name="click" handler="onBtnSwitchClick"/>
+                  <cl:flowlayoutdata width="100px" height="28px" autosize="none"/>
+                </cl:button>
+                <cl:flowlayout hspacing="4" halign="right"/>
+              </cl:group>
+              <cl:output id="optFocusInfo" class="txt" value="포커스 기록: -">
+                <cl:verticaldata width="972px" height="28px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+            </cl:group>
+            <cl:verticallayout spacing="16"/>
+          </cl:group>
+        </cl:tabitem>
+      </cl:tabfolder>
+      <cl:verticallayout spacing="16" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-92cc3d8a" spacing="16" leftmargin="24" rightmargin="24" topmargin="16" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

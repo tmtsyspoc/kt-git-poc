@@ -1,0 +1,520 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-2e023c80" version="1.0.6209">
+  <head std:sid="head-a5fa62a1">
+    <screen std:sid="screen-99d9f7cd" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-0cd44b02" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-fb0687b7" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-b941f832">
+      <cl:dataset comment="프로세스 목록" std:sid="d-set-c98ee2a7" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="" std:sid="d-column-771168a5" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-5e81ccc4" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn comment="" std:sid="d-column-30ada883" name="SUB_TITLE"/>
+          <cl:datacolumn comment="" std:sid="d-column-87bfc754" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-be9bba40" name="CONT" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-e0cf0045" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-b2756c25" name="SUB_CODE"/>
+          <cl:datacolumn comment="" std:sid="d-column-75168200" name="TARGET_CTRL"/>
+          <cl:datacolumn std:sid="d-column-97eb6f38" name="TARGET_EMB"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[웹 접근성]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[마우스를 사용하지 않아도 키보드로 주요 기능을 실행할 수 있어야 한다. 입력항목의 이름, 제목, 표·영역의 구조와 오류상태가 브라우저 및 화면읽기 프로그램이 인식할 수 있는 표준 HTML 의미구조로 제공되어야 하며, 글자 확대와 명암 대비를 지원해야 한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+      <cl:dataset comment="원그리드 예제 품목" id="dsOne">
+        <cl:datacolumnlist>
+          <cl:datacolumn name="ITEM_NM" datatype="string"/>
+          <cl:datacolumn name="ITEM_TYPE" datatype="string"/>
+          <cl:datacolumn name="PRICE" datatype="number"/>
+          <cl:datacolumn name="STOCK" datatype="number"/>
+          <cl:datacolumn name="REG_DT" datatype="string"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="ITEM_NM"><![CDATA[스마트폰 A]]></cl:datavalue>
+            <cl:datavalue columnname="ITEM_TYPE"><![CDATA[D]]></cl:datavalue>
+            <cl:datavalue columnname="PRICE"><![CDATA[1200000]]></cl:datavalue>
+            <cl:datavalue columnname="STOCK"><![CDATA[35]]></cl:datavalue>
+            <cl:datavalue columnname="REG_DT"><![CDATA[20260102]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="ITEM_NM"><![CDATA[5G 슈퍼플랜]]></cl:datavalue>
+            <cl:datavalue columnname="ITEM_TYPE"><![CDATA[P]]></cl:datavalue>
+            <cl:datavalue columnname="PRICE"><![CDATA[75000]]></cl:datavalue>
+            <cl:datavalue columnname="STOCK"><![CDATA[999]]></cl:datavalue>
+            <cl:datavalue columnname="REG_DT"><![CDATA[20260215]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="ITEM_NM"><![CDATA[단말보험 프리미엄]]></cl:datavalue>
+            <cl:datavalue columnname="ITEM_TYPE"><![CDATA[S]]></cl:datavalue>
+            <cl:datavalue columnname="PRICE"><![CDATA[9900]]></cl:datavalue>
+            <cl:datavalue columnname="STOCK"><![CDATA[999]]></cl:datavalue>
+            <cl:datavalue columnname="REG_DT"><![CDATA[20260320]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="ITEM_NM"><![CDATA[태블릿 B]]></cl:datavalue>
+            <cl:datavalue columnname="ITEM_TYPE"><![CDATA[D]]></cl:datavalue>
+            <cl:datavalue columnname="PRICE"><![CDATA[680000]]></cl:datavalue>
+            <cl:datavalue columnname="STOCK"><![CDATA[12]]></cl:datavalue>
+            <cl:datavalue columnname="REG_DT"><![CDATA[20260411]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec dev-comment="12.1 키보드 내비게이션&#x9;app/sce/A12/A12-1.clx&#xD;&#xA;12.2 고대비 및 색약 모드&#x9;app/sce/A12/A12-2.clx&#xD;&#xA;" title="[UX-05]웹 접근성"/>
+  </head>
+  <body std:sid="body-8f423110" class="wrap">
+<cl:listener name="init" handler="onBodyInit2"/>
+<cl:listener name="load" handler="onBodyLoad"/>
+    <cl:udc std:sid="ud-control-91b3d469" type="udc.com.udcComAppHeader">
+      <cl:verticaldata std:sid="v-data-d648891a" width="900px" height="28px"/>
+    </cl:udc>
+    <cl:group std:sid="group-6f403eaa" id="grpData" class="conts-area">
+<cl:verticaldata std:sid="v-data-d8458593" width="976px" height="903px" autosize="none" grow="1"/>
+<cl:tabfolder id="tabMain" class="conts-area" headerarrowposition="both">
+<cl:verticaldata width="100px" height="100%" autosize="none" grow="1"/>
+<cl:tabitem selected="true" text="키보드 내비게이션">
+<std:metadata><std:property key="is-active-item" value="true"/></std:metadata>
+<cl:group id="grpTab1" class="conts-area">
+      
+      <cl:group class="conts-wrap">
+        <cl:verticaldata width="976px" height="670px" autosize="height"/>
+        <cl:udc id="udcPocDocViewer1" type="udc.poc.udcPocDocViewer">
+          <cl:verticaldata width="500px" height="620px" autosize="height"/>
+          <cl:property name="fileUrl" value="../A12/data/docs/A12-1.png" type="resource"/>
+        </cl:udc>
+        <cl:verticallayout spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:group id="grp1" class="conts-wrap">
+        <std:metadata>
+          <std:property key="template-uuid" value="f91b19be-4854-4d7d-b7e1-c43b9a18b816"/>
+          <std:property key="template-rev" value="5"/>
+        </std:metadata>
+        <cl:verticaldata width="992px" height="293px" autosize="height"/>
+        <cl:group id="grp2">
+          <cl:verticaldata width="1240px" height="28px" autosize="height"/>
+          <cl:udc id="udcComFormTitle1" type="udc.com.udcComFormTitle">
+            <cl:formdata row="0" col="0"/>
+            <cl:property name="title" value="키보드 내비게이션 확인" type="string"/>
+          </cl:udc>
+          <cl:formlayout scrollable="false" hspace="8px" vspace="8px">
+            <cl:rows length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+            <cl:columns length="1" unit="FRACTION" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:output id="opt8" value="아래 폼 영역에서 TAB 키를 통해 포커스 이동을 합니다.&#xD;&#xA;방향키 또는 엔터키를 통해 컨트롤 기능을 조작할 수 있습니다.">
+          <cl:verticaldata width="1218px" height="40px" autosize="height"/>
+        </cl:output>
+        <cl:group id="grp3" class="form">
+          <cl:attribute name="table-min-height" value=""/>
+          <cl:attribute name="mobile-column-count" value="1"/>
+          <cl:attribute name="tablet-column-count" value="2"/>
+          <cl:verticaldata width="972px" height="181px" autosize="height"/>
+          <cl:output id="opt1" class="label" value="인풋박스">
+            <cl:formdata row="0" col="0"/>
+          </cl:output>
+          <cl:inputbox id="ipb1">
+            <cl:formdata row="0" col="1"/>
+          </cl:inputbox>
+          <cl:output id="opt5" class="label" value="넘버에디터">
+            <cl:formdata row="0" col="2"/>
+          </cl:output>
+          <cl:numbereditor id="nbe1" spinbutton="true">
+            <cl:formdata row="0" col="3"/>
+          </cl:numbereditor>
+          <cl:output id="opt2" class="label" value="콤보박스">
+            <cl:formdata row="1" col="0"/>
+          </cl:output>
+          <cl:combobox id="cmb1" value="value0">
+            <cl:formdata row="1" col="1"/>
+            <cl:item label="전체" value="value0"/>
+            <cl:item label="미지급형" value="value1"/>
+            <cl:item label="일부지급형" value="value2"/>
+            <cl:item label="갱신형" value="value3"/>
+            <cl:item label="표준형" value="value4"/>
+          </cl:combobox>
+          <cl:output id="opt6" class="label" value="데이트인풋">
+            <cl:formdata row="1" col="2"/>
+          </cl:output>
+          <cl:dateinput id="dti1" buttonfocusable="true">
+            <cl:formdata row="1" col="3"/>
+          </cl:dateinput>
+          <cl:output id="opt3" class="label" value="체크박스 그룹">
+            <cl:formdata row="2" col="0"/>
+          </cl:output>
+          <cl:checkboxgroup id="cbg1">
+            <cl:formdata row="2" col="1"/>
+            <cl:item label="뇌/심진단" value="value1"/>
+            <cl:item label="통합암특약" value="value2"/>
+            <cl:item label="재해사망특약" value="value3"/>
+            <cl:item label="상해특약" value="value4"/>
+          </cl:checkboxgroup>
+          <cl:output id="opt7" class="label" value="라디오버튼">
+            <cl:formdata row="2" col="2"/>
+          </cl:output>
+          <cl:radiobutton id="rdb1" value="value1">
+            <cl:formdata row="2" col="3"/>
+            <cl:item label="전체" value="value1"/>
+            <cl:item label="선택특약" value="value2"/>
+            <cl:item label="미선택특약" value="value3"/>
+          </cl:radiobutton>
+          <cl:output id="opt4" class="label" value="버튼">
+            <cl:formdata row="3" col="0"/>
+          </cl:output>
+          <cl:button id="btn1" value="click 이벤트">
+            <cl:listener name="click" handler="onBtn1Click"/>
+            <cl:formdata halign="LEFT" width="120" row="3" col="1" rowspan="1" colspan="3"/>
+          </cl:button>
+          <cl:formlayout scrollable="false" hspace="16px" vspace="17px" top-margin="8px" right-margin="8px" bottom-margin="8px" left-margin="8px" hseparatorwidth="1" hseparatortype="BY_CLASS">
+            <cl:rows length="28" unit="PIXEL" autoSizing="true"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+            <cl:columns length="180" unit="PIXEL" shadetype="BY_CLASS"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="180" unit="PIXEL" shadetype="BY_CLASS"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:group id="grp4" class="conts-wrap">
+        <std:metadata>
+          <std:property key="template-uuid" value="f91b19be-4854-4d7d-b7e1-c43b9a18b816"/>
+          <std:property key="template-rev" value="5"/>
+        </std:metadata>
+        <cl:verticaldata width="992px" height="293px" autosize="height"/>
+        <cl:group id="grp5">
+          <cl:verticaldata width="1240px" height="28px" autosize="height"/>
+          <cl:udc id="udcComFormTitle2" type="udc.com.udcComFormTitle">
+            <cl:formdata row="0" col="0"/>
+            <cl:property name="title" value="표시순으로 자식 정렬" type="string"/>
+          </cl:udc>
+          <cl:formlayout scrollable="false" hspace="8px" vspace="8px">
+            <cl:rows length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+            <cl:columns length="1" unit="FRACTION" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:output id="opt9" value="eXBuilder6 에서는 [표시순으로 자식 정렬] 기능을 제공하고 있습니다.&#xD;&#xA;해당 기능을 통해 빠르게 컨트롤의 포커스 순서를 논리적인 순서로 정렬 할 수 있습니다.">
+          <cl:verticaldata width="1218px" height="40px" autosize="height"/>
+        </cl:output>
+        <cl:group id="grp6" class="form">
+          <cl:attribute name="table-min-height" value=""/>
+          <cl:attribute name="mobile-column-count" value="1"/>
+          <cl:attribute name="tablet-column-count" value="2"/>
+          <cl:verticaldata width="972px" height="181px" autosize="height"/>
+          <cl:output id="opt10" class="label" value="인풋박스">
+            <cl:formdata row="0" col="0"/>
+          </cl:output>
+          <cl:inputbox id="ipb2">
+            <cl:formdata row="0" col="1"/>
+          </cl:inputbox>
+          <cl:output id="opt11" class="label" value="넘버에디터">
+            <cl:formdata row="0" col="2"/>
+          </cl:output>
+          <cl:numbereditor id="nbe2" spinbutton="true">
+            <cl:formdata row="0" col="3"/>
+          </cl:numbereditor>
+          <cl:output id="opt12" class="label" value="콤보박스">
+            <cl:formdata row="1" col="0"/>
+          </cl:output>
+          <cl:combobox id="cmb2" value="value0">
+            <cl:formdata row="1" col="1"/>
+            <cl:item label="전체" value="value0"/>
+            <cl:item label="미지급형" value="value1"/>
+            <cl:item label="일부지급형" value="value2"/>
+            <cl:item label="갱신형" value="value3"/>
+            <cl:item label="표준형" value="value4"/>
+          </cl:combobox>
+          <cl:output id="opt13" class="label" value="데이트인풋">
+            <cl:formdata row="1" col="2"/>
+          </cl:output>
+          <cl:dateinput id="dti2" buttonfocusable="true">
+            <cl:formdata row="1" col="3"/>
+          </cl:dateinput>
+          <cl:output id="opt14" class="label" value="체크박스 그룹">
+            <cl:formdata row="2" col="0"/>
+          </cl:output>
+          <cl:checkboxgroup id="cbg2">
+            <cl:formdata row="2" col="1"/>
+            <cl:item label="뇌/심진단" value="value1"/>
+            <cl:item label="통합암특약" value="value2"/>
+            <cl:item label="재해사망특약" value="value3"/>
+            <cl:item label="상해특약" value="value4"/>
+          </cl:checkboxgroup>
+          <cl:output id="opt15" class="label" value="라디오버튼">
+            <cl:formdata row="2" col="2"/>
+          </cl:output>
+          <cl:radiobutton id="rdb2" value="value1">
+            <cl:formdata row="2" col="3"/>
+            <cl:item label="전체" value="value1"/>
+            <cl:item label="선택특약" value="value2"/>
+            <cl:item label="미선택특약" value="value3"/>
+          </cl:radiobutton>
+          <cl:output id="opt16" class="label" value="버튼">
+            <cl:formdata row="3" col="0"/>
+          </cl:output>
+          <cl:button id="btn2" value="click 이벤트">
+            <cl:formdata halign="LEFT" width="120" row="3" col="1" rowspan="1" colspan="3"/>
+          </cl:button>
+          <cl:formlayout scrollable="false" hspace="16px" vspace="17px" top-margin="8px" right-margin="8px" bottom-margin="8px" left-margin="8px" hseparatorwidth="1" hseparatortype="BY_CLASS">
+            <cl:rows length="28" unit="PIXEL" autoSizing="true"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+            <cl:columns length="180" unit="PIXEL" shadetype="BY_CLASS"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="180" unit="PIXEL" shadetype="BY_CLASS"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:verticallayout spacing="16"/>
+    </cl:group>
+</cl:tabitem>
+<cl:tabitem text="고대비 및 색약 모드">
+<cl:group id="grpTab2" class="conts-area">
+      
+      <cl:group id="grpGoverning" class="governing">
+        <cl:verticaldata width="992px" height="124px" autosize="height"/>
+        <cl:output id="opt2_2" class="tit" value="다양한 테마 변경">
+          <cl:verticaldata width="100px" height="28px" autosize="height"/>
+        </cl:output>
+        <cl:output id="opt5_2" class="txt" value="다양한 테마 및 고대비, 색상 필터를 적용하여 다양한 사용자로부터 접근성을 높힐 수 있습니다.">
+          <cl:verticaldata width="1218px" height="54px" autosize="height"/>
+        </cl:output>
+        <cl:verticallayout scrollable="false" spacing="8"/>
+      </cl:group>
+      <cl:group id="grp2_2" class="conts-wrap">
+        <std:metadata>
+          <std:property key="template-uuid" value="f91b19be-4854-4d7d-b7e1-c43b9a18b816"/>
+          <std:property key="template-rev" value="5"/>
+        </std:metadata>
+        <cl:verticaldata width="992px" height="174px" autosize="height"/>
+        <cl:group id="grp4_2" class="form _setting">
+          <cl:attribute name="table-min-height" value=""/>
+          <cl:attribute name="mobile-column-count" value="1"/>
+          <cl:attribute name="tablet-column-count" value="2"/>
+          <cl:verticaldata width="992px" height="140px" autosize="height"/>
+          <cl:group class="setting-list p-0" clipcontent="false">
+            <cl:formdata row="0" col="1" rowspan="1" colspan="1"/>
+            <cl:group class="li" clipcontent="false">
+              <cl:xylayoutdata left="0px" width="810px" height="30px" horizontalAnchor="LEFT" verticalAnchor="CENTER"/>
+              <cl:radiobutton id="rdbColor" class="color-set v2" value="orange-theme" colcount="-1" fixedwidth="true" hspacing="8" vspacing="0" clickRegion="item">
+                <cl:listener name="selection-change" handler="onRdbColorSelectionChange"/>
+                <cl:flowlayoutdata width="159px" height="100%" autosize="none"/>
+                <cl:item label="기본" value="default">
+                  <cl:expbind property="tooltip" category="PROPERTY" expression="label"/>
+                </cl:item>
+                <cl:item label="보라" value="purple-theme">
+                  <cl:expbind property="tooltip" category="PROPERTY" expression="label"/>
+                </cl:item>
+                <cl:item label="초록" value="green-theme">
+                  <cl:expbind property="tooltip" category="PROPERTY" expression="label"/>
+                </cl:item>
+                <cl:item label="주황" value="orange-theme">
+                  <cl:expbind property="tooltip" category="PROPERTY" expression="label"/>
+                </cl:item>
+                <cl:item label="빨강" value="red-theme">
+                  <cl:expbind property="tooltip" category="PROPERTY" expression="label"/>
+                </cl:item>
+                <cl:itemstyle>
+                  <cl:expbind property="class" category="CLASS" expression="value"/>
+                </cl:itemstyle>
+              </cl:radiobutton>
+              <cl:flowlayout/>
+            </cl:group>
+            <cl:xylayout/>
+          </cl:group>
+          <cl:output id="opt3_2" class="label" value="테마">
+            <cl:formdata row="0" col="0"/>
+          </cl:output>
+          <cl:output id="opt4_2" class="label" value="고대비">
+            <cl:formdata row="1" col="0"/>
+          </cl:output>
+          <cl:checkbox id="cbx3" text="">
+            <cl:listener name="value-change" handler="onCbx3ValueChange"/>
+            <cl:formdata row="1" col="1"/>
+          </cl:checkbox>
+          <cl:output id="opt6_2" class="label" value="색상 필터">
+            <cl:formdata row="2" col="0"/>
+          </cl:output>
+          <cl:checkbox id="cbx1" text="">
+            <cl:listener name="value-change" handler="onCbx1ValueChange"/>
+            <cl:formdata row="2" col="1"/>
+          </cl:checkbox>
+          <cl:formlayout scrollable="false" hspace="16px" vspace="17px" top-margin="8px" right-margin="8px" bottom-margin="8px" left-margin="8px" hseparatorwidth="1" hseparatortype="BY_CLASS">
+            <cl:rows length="32" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="true"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+            <cl:columns length="100" unit="PIXEL" shadetype="BY_CLASS"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:verticallayout spacing="16"/>
+    </cl:group>
+</cl:tabitem>
+<cl:tabitem text="원그리드 예제">
+<cl:group id="grpTab3" class="conts-area">
+      <cl:group id="grpOneSearch" class="sch-filter-box">
+        <cl:verticaldata width="976px" height="44px" autosize="height"/>
+        <cl:output id="optOneS1" class="label" value="품목명">
+          <cl:formdata row="0" col="0"/>
+        </cl:output>
+        <cl:inputbox id="ipbOneSchName" placeholder="품목명 입력">
+          <cl:listener name="keydown" handler="onIpbOneSchNameKeydown"/>
+          <cl:formdata row="0" col="1"/>
+        </cl:inputbox>
+        <cl:output id="optOneS2" class="label" value="구분">
+          <cl:formdata row="0" col="2"/>
+        </cl:output>
+        <cl:combobox id="cmbOneSchType" value="">
+          <cl:formdata row="0" col="3"/>
+          <cl:item label="전체" value=""/>
+          <cl:item label="단말" value="D"/>
+          <cl:item label="요금제" value="P"/>
+          <cl:item label="부가서비스" value="S"/>
+        </cl:combobox>
+        <cl:button id="btnOneSearch" class="primary btn-search" value="조회" icon="0">
+          <cl:listener name="click" handler="onBtnOneSearchClick"/>
+          <cl:formdata row="0" col="5"/>
+        </cl:button>
+        <cl:formlayout scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="28" unit="PIXEL" autoSizing="false"/>
+          <cl:columns length="80" autoSizing="true"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="80" autoSizing="true"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="70" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:group id="grpOneCont" class="conts-wrap">
+        <cl:verticaldata width="976px" height="560px" autosize="none" grow="1"/>
+        <cl:group id="grpOneTitle">
+          <cl:attribute name="mobile-column-count" value="1"/>
+          <cl:verticaldata width="972px" height="28px" autosize="height"/>
+          <cl:udc id="udcComGridTitleOne" type="udc.com.udcComGridTitle">
+            <cl:formdata row="0" col="0"/>
+            <cl:property name="title" value="품목 목록" type="string"/>
+            <cl:property name="ctrl" value="grdOne" type="control"/>
+          </cl:udc>
+          <cl:group id="grpOneBtns">
+            <cl:formdata row="0" col="1"/>
+            <cl:udc id="udcComGridCudBtnsOne" type="udc.com.udcComGridCudBtns">
+              <cl:listener name="save" handler="onUdcComGridCudBtnsOneSave"/>
+              <cl:flowlayoutdata width="345px" height="28px" autosize="both"/>
+              <cl:property name="grid" value="grdOne" type="control"/>
+              <cl:property name="focusColumnName" value="ITEM_NM" type="string"/>
+            </cl:udc>
+            <cl:flowlayout halign="right"/>
+          </cl:group>
+          <cl:formlayout scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="453" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:grid id="grdOne" fieldLabel="품목 목록" datasetid="dsOne" clickmode="edit">
+          <cl:verticaldata width="972px" height="480px" autosize="none" grow="1"/>
+          <cl:gridcolumn width="60px"/>
+          <cl:gridcolumn width="1fr"/>
+          <cl:gridcolumn width="140px"/>
+          <cl:gridcolumn width="140px"/>
+          <cl:gridcolumn width="120px"/>
+          <cl:gridcolumn width="120px"/>
+          <cl:gridheader>
+            <cl:gridrow height="36px"/>
+            <cl:gridcell rowindex="0" colindex="0" text="번호"/>
+            <cl:gridcell rowindex="0" colindex="1" text="품목명"/>
+            <cl:gridcell rowindex="0" colindex="2" text="구분"/>
+            <cl:gridcell rowindex="0" colindex="3" text="단가"/>
+            <cl:gridcell rowindex="0" colindex="4" text="재고수량"/>
+            <cl:gridcell rowindex="0" colindex="5" text="등록일"/>
+          </cl:gridheader>
+          <cl:griddetail>
+            <cl:gridrow height="36px"/>
+            <cl:gridcell rowindex="0" colindex="0">
+              <cl:output id="optOneNo" style="text-align:center;">
+                <cl:expbind property="value" category="PROPERTY" expression="getIndex() + 1"/>
+                <cl:celldata/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell rowindex="0" colindex="1" columnname="ITEM_NM">
+              <cl:inputbox id="ipbOneNm" maxlength="30">
+                <cl:celldata/>
+              </cl:inputbox>
+            </cl:gridcell>
+            <cl:gridcell rowindex="0" colindex="2" columnname="ITEM_TYPE">
+              <cl:combobox id="cmbOneType">
+                <cl:celldata/>
+                <cl:item label="단말" value="D"/>
+                <cl:item label="요금제" value="P"/>
+                <cl:item label="부가서비스" value="S"/>
+              </cl:combobox>
+            </cl:gridcell>
+            <cl:gridcell rowindex="0" colindex="3" columnname="PRICE">
+              <cl:numbereditor id="nbeOnePrice" format="s#,##0">
+                <cl:celldata/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell rowindex="0" colindex="4" columnname="STOCK">
+              <cl:numbereditor id="nbeOneStock" format="s#,##0">
+                <cl:celldata/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell rowindex="0" colindex="5" columnname="REG_DT">
+              <cl:dateinput id="dtiOneReg">
+                <cl:celldata/>
+              </cl:dateinput>
+            </cl:gridcell>
+          </cl:griddetail>
+        </cl:grid>
+        <cl:verticallayout spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:verticallayout spacing="16"/>
+    </cl:group>
+</cl:tabitem>
+</cl:tabfolder>
+<cl:verticallayout spacing="16" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+</cl:group>
+    <cl:verticallayout std:sid="v-layout-89585e47" spacing="16" leftmargin="24" rightmargin="24" topmargin="16" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

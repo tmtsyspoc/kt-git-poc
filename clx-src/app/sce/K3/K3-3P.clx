@@ -1,0 +1,49 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" version="1.0.6209">
+  <head>
+    <screen id="default" name="default" width="1024px" height="768px" useCustomWidth="true" useCustomHeight="true" customHeight="480" customWidth="720" active="true"/>
+    <screen id="tablet" name="tablet" width="1024px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model/>
+    <cl:appspec title="오류내용 확인 팝업"/>
+  </head>
+  <body class="wrap pop" clipcontent="true">
+    <cl:listener name="load" handler="onBodyLoad"/>
+    <cl:group id="grpData" class="conts-area">
+      <cl:verticaldata width="752px" height="400px" autosize="none" grow="1"/>
+      <cl:group class="conts-wrap">
+        <cl:verticaldata width="752px" height="360px" autosize="none" grow="1"/>
+        <cl:udc id="udcComFormTitle1" type="udc.com.udcComFormTitle">
+          <cl:verticaldata width="600px" height="28px" autosize="height"/>
+          <cl:property name="title" value="오류 내용" type="string"/>
+        </cl:udc>
+        <cl:textarea id="txaError" readonly="true">
+          <cl:verticaldata width="600px" height="300px" autosize="none" grow="1"/>
+        </cl:textarea>
+        <cl:verticallayout spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:verticallayout spacing="16" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+    </cl:group>
+    <cl:group id="grpFooter" class="conts-footer">
+      <cl:verticaldata width="752px" height="52px" autosize="height"/>
+      <cl:group>
+        <cl:verticaldata width="400px" height="28px" autosize="height"/>
+        <cl:button id="btnLogDown" class="secondary" value="로그 저장">
+          <cl:listener name="click" handler="onBtnLogDownClick"/>
+          <cl:flowlayoutdata width="90px" height="28px" autosize="width"/>
+        </cl:button>
+        <cl:button id="btnClose" class="primary" value="닫기">
+          <cl:listener name="click" handler="onBtnCloseClick"/>
+          <cl:flowlayoutdata width="80px" height="28px" autosize="width"/>
+        </cl:button>
+        <cl:flowlayout halign="right" valign="middle" hspacing="4"/>
+      </cl:group>
+      <cl:verticallayout/>
+    </cl:group>
+    <cl:verticallayout scrollable="false" spacing="16" leftmargin="24" rightmargin="24" topmargin="16" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

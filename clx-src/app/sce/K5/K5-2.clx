@@ -1,0 +1,207 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-c84b2eb2" version="1.0.6209">
+  <head std:sid="head-65ee6d80">
+    <screen std:sid="screen-5e7b7160" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-24230283" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-443fe7d8" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-c3df3173">
+      <cl:dataset comment="프로세스 목록" std:sid="d-set-0b3e1332" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="" std:sid="d-column-3ecdd331" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-bff70713" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn comment="" std:sid="d-column-9d95c580" name="SUB_TITLE"/>
+          <cl:datacolumn comment="" std:sid="d-column-e2954865" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-1993bb01" name="CONT" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-aad1f2f9" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-e638f230" name="SUB_CODE"/>
+          <cl:datacolumn comment="" std:sid="d-column-ed7664f3" name="TARGET_CTRL"/>
+          <cl:datacolumn std:sid="d-column-86cfff78" name="TARGET_EMB"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[코드 품질 규칙]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[정적분석, 코딩규칙, 금지패턴을 빌드/Commit 단계에서 강제한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+      <cl:dataset comment="정적분석 결과" id="dsResult">
+        <cl:datacolumnlist>
+          <cl:datacolumn name="NO" datatype="string"/>
+          <cl:datacolumn name="CTRL_ID" datatype="string"/>
+          <cl:datacolumn name="CTRL_TYPE" datatype="string"/>
+          <cl:datacolumn name="RESULT" datatype="string"/>
+          <cl:datacolumn name="GUIDE" datatype="string"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="[DEV-06]코드품질·표준통제"/>
+  </head>
+  <body class="wrap">
+    <cl:listener name="load" handler="onBodyLoad"/>
+    <cl:udc type="udc.com.udcComAppHeader">
+      <cl:verticaldata width="900px" height="28px"/>
+    </cl:udc>
+    <cl:group id="grpData" class="conts-area">
+      <cl:verticaldata width="976px" height="903px" autosize="none" grow="1"/>
+      <cl:group id="grpGoverning" class="governing">
+        <cl:verticaldata width="976px" height="80px" autosize="height"/>
+        <cl:output id="optGovTit" class="tit" value="정적분석 예제 - 컨트롤 ID 명명규칙 점검">
+          <cl:verticaldata width="100px" height="28px" autosize="height"/>
+        </cl:output>
+        <cl:output id="optGovTxt" class="txt" value="화면 소스를 실행하지 않고 정의된 컨트롤의 ID가 표준 접두어 규칙(ipb, cmb, btn, grd …)을 따르는지 점검하는 간단한 예제입니다. 아래 '점검 대상 샘플' 중 일부는 규칙을 일부러 위반하도록 구성되어 있습니다.">
+          <cl:verticaldata width="1218px" height="31px" autosize="height"/>
+        </cl:output>
+        <cl:verticallayout scrollable="false" spacing="8"/>
+      </cl:group>
+      <cl:group id="grpTarget" class="conts-wrap">
+        <cl:verticaldata width="976px" height="190px" autosize="height"/>
+        <cl:udc id="udcComFormTitle1" type="udc.com.udcComFormTitle">
+          <cl:verticaldata width="800px" height="28px" autosize="height"/>
+          <cl:property name="title" value="점검 대상 샘플" type="string"/>
+        </cl:udc>
+        <cl:group id="grpTargetForm" class="form">
+          <cl:verticaldata width="972px" height="110px" autosize="height"/>
+          <cl:output id="optT1" class="label" value="고객명">
+            <cl:formdata row="0" col="0"/>
+          </cl:output>
+          <cl:inputbox id="ipbCustNm">
+            <cl:formdata row="0" col="1"/>
+          </cl:inputbox>
+          <cl:output id="optT2" class="label" value="구분">
+            <cl:formdata row="0" col="2"/>
+          </cl:output>
+          <cl:combobox id="cmbCustType">
+            <cl:formdata row="0" col="3"/>
+            <cl:item label="개인" value="P"/>
+            <cl:item label="법인" value="C"/>
+          </cl:combobox>
+          <cl:output id="optT3" class="label" value="연락처 (위반 샘플)">
+            <cl:formdata row="1" col="0"/>
+          </cl:output>
+          <cl:inputbox id="telNo">
+            <cl:formdata row="1" col="1"/>
+          </cl:inputbox>
+          <cl:output id="optT4" class="label" value="가입일 (위반 샘플)">
+            <cl:formdata row="1" col="2"/>
+          </cl:output>
+          <cl:dateinput id="joinDate">
+            <cl:formdata row="1" col="3"/>
+          </cl:dateinput>
+          <cl:formlayout scrollable="false" hspace="16px" vspace="12px" top-margin="8px" right-margin="8px" bottom-margin="8px" left-margin="8px" hseparatorwidth="1" hseparatortype="BY_CLASS">
+            <cl:rows length="28" unit="PIXEL"/>
+            <cl:rows length="28" unit="PIXEL"/>
+            <cl:columns length="160" unit="PIXEL" shadetype="BY_CLASS"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="160" unit="PIXEL" shadetype="BY_CLASS"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:group id="grpResult" class="conts-wrap">
+        <cl:verticaldata width="976px" height="400px" autosize="none" grow="1"/>
+        <cl:group id="grpResultTitle">
+          <cl:verticaldata width="972px" height="28px" autosize="height"/>
+          <cl:udc id="udcComGridTitle1" type="udc.com.udcComGridTitle">
+            <cl:formdata row="0" col="0"/>
+            <cl:property name="title" value="점검 결과" type="string"/>
+            <cl:property name="ctrl" value="grdResult" type="control"/>
+            <cl:property name="showExportExcel" value="false" type="boolean"/>
+            <cl:property name="showOption" value="false" type="boolean"/>
+            <cl:property name="showPivot" value="false" type="boolean"/>
+          </cl:udc>
+          <cl:button id="btnAnalyze" class="primary" value="정적분석 실행">
+            <cl:listener name="click" handler="onBtnAnalyzeClick"/>
+            <cl:formdata row="0" col="1"/>
+          </cl:button>
+          <cl:formlayout scrollable="false" hspace="8px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="130" unit="PIXEL"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:output id="optSummary" class="txt" value="[정적분석 실행]을 눌러 점검하세요.">
+          <cl:verticaldata width="972px" height="28px" autosize="height"/>
+        </cl:output>
+        <cl:grid id="grdResult" fieldLabel="점검 결과" datasetid="dsResult" clickmode="select">
+          <cl:verticaldata width="972px" height="300px" autosize="none" grow="1"/>
+          <cl:gridcolumn width="60px"/>
+          <cl:gridcolumn width="150px"/>
+          <cl:gridcolumn width="120px"/>
+          <cl:gridcolumn width="90px"/>
+          <cl:gridcolumn width="1fr"/>
+          <cl:gridheader>
+            <cl:gridrow height="36px"/>
+            <cl:gridcell rowindex="0" colindex="0" text="번호"/>
+            <cl:gridcell rowindex="0" colindex="1" text="컨트롤 ID"/>
+            <cl:gridcell rowindex="0" colindex="2" text="컨트롤 유형"/>
+            <cl:gridcell rowindex="0" colindex="3" text="결과"/>
+            <cl:gridcell rowindex="0" colindex="4" text="조치 안내"/>
+          </cl:gridheader>
+          <cl:griddetail>
+            <cl:gridrow height="34px"/>
+            <cl:gridcell rowindex="0" colindex="0" columnname="NO">
+              <cl:output id="optGNo" style="text-align:center;">
+                <cl:celldata/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell rowindex="0" colindex="1" columnname="CTRL_ID">
+              <cl:output id="optGId">
+                <cl:celldata/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell rowindex="0" colindex="2" columnname="CTRL_TYPE">
+              <cl:output id="optGType">
+                <cl:celldata/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell rowindex="0" colindex="3" columnname="RESULT">
+              <cl:output id="optGResult" style="text-align:center;font-weight:bold;">
+                <cl:celldata/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell rowindex="0" colindex="4" columnname="GUIDE">
+              <cl:output id="optGGuide">
+                <cl:celldata/>
+              </cl:output>
+            </cl:gridcell>
+          </cl:griddetail>
+        </cl:grid>
+        <cl:verticallayout spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:verticallayout spacing="16" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+    </cl:group>
+    <cl:verticallayout spacing="16" leftmargin="24" rightmargin="24" topmargin="16" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>
