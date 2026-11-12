@@ -1,0 +1,57 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-6c3d1542" version="1.0.5306">
+  <head std:sid="head-105b3ff6">
+    <screen std:sid="screen-03d52b27" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-db5cfe29" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-32b894dc" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="375"/>
+    <cl:model std:sid="model-b3a97803"/>
+    <cl:appspec title="MDI 분할">
+      <cl:property name="divideType" type="enumeration" default="default" std:desc="[Enumeration] 분할방식 (default: default)&#xD;&#xA;- default: 분할 해제&#xD;&#xA;- horizontal: 가로분할&#xD;&#xA;- vertical: 세로분할&#xD;&#xA;- division: 바둑판 분할&#xD;&#xA;- window: 계단형 분할">
+        <cl:available-value>default</cl:available-value>
+        <cl:available-value>horizontal</cl:available-value>
+        <cl:available-value>vertical</cl:available-value>
+        <cl:available-value>division</cl:available-value>
+        <cl:available-value>window</cl:available-value>
+      </cl:property>
+      <cl:property name="mdiFolder" type="string" default="mdiCn" std:desc="[String] 분할하고자 하는 MDI폴더 ID (default: mdiCn)"/>
+      <cl:property name="dashboardNm" type="string" default="dashboard" std:desc="[String] 대시보드 탭 아이템 name (default: dashboard)&#xD;&#xA;대시보드 탭 아이템이 숨겨져 있고, MDI 헤더에 배치된 버튼으로 동작되는 경우 작성합니다."/>
+      <cl:event name="changeDivideType" type="cpr.events.CAppEvent" std:desc="분할 방식을 변경했을 때 발생하는 이벤트"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-a9ebd7ac" style="top:0px; left:0px; width:24px; height:24px;">
+    <cl:listener std:sid="listener-1fb2073d" name="property-change" handler="onBodyPropertyChange"/>
+    <cl:button std:sid="button-5de75e62" id="btnMdiDiv" class="btn-tab-div" fieldLabel="MDI 분할" tooltip="MDI 분할" icon="0">
+      <cl:listener std:sid="listener-865e0fcb" name="click" handler="onBtnMdiDivClick"/>
+      <cl:xylayoutdata std:sid="xyl-data-07508064" top="0px" left="0px" width="24px" height="24px" horizontalAnchor="LEFT" verticalAnchor="TOP"/>
+    </cl:button>
+    <cl:group std:sid="group-77fd81a3" id="grpDivPop" class="mdi-split-wrap" visible="false">
+      <cl:xylayoutdata std:sid="xyl-data-7a784f81" top="24px" width="24px" height="128px" horizontalAnchor="CENTER" verticalAnchor="TOP"/>
+      <cl:button std:sid="button-14a71495" id="btnMdiDivN" class="btn-tab-div" fieldLabel="분할 기본값" tooltip="분할 기본값" icon="0">
+        <cl:listener std:sid="listener-2aefbc68" name="click" handler="onBtnMdiDivNClick"/>
+        <cl:verticaldata std:sid="v-data-7eb6cd43" width="24px" height="24px" autosize="none"/>
+      </cl:button>
+      <cl:button std:sid="button-3c7b63ee" id="btnMdiDivH" class="btn-tab-div horizontal" fieldLabel="분할 가로" tooltip="분할 가로" icon="0">
+        <cl:listener std:sid="listener-b1d62733" name="click" handler="onBtnMdiDivNClick"/>
+        <cl:verticaldata std:sid="v-data-46687c07" width="24px" height="24px" autosize="none"/>
+      </cl:button>
+      <cl:button std:sid="button-c2ede148" id="btnMdiDivV" class="btn-tab-div vertical" fieldLabel="분할 세로" tooltip="분할 세로" icon="0">
+        <cl:listener std:sid="listener-e078d232" name="click" handler="onBtnMdiDivNClick"/>
+        <cl:verticaldata std:sid="v-data-5f2707c8" width="24px" height="24px" autosize="none"/>
+      </cl:button>
+      <cl:button std:sid="button-de6c2d4e" id="btnMdiDivD" class="btn-tab-div division" fieldLabel="분할 바둑판" tooltip="분할 바둑판" icon="0">
+        <cl:listener std:sid="listener-1420c6ea" name="click" handler="onBtnMdiDivNClick"/>
+        <cl:verticaldata std:sid="v-data-c90d6e3b" width="24px" height="24px" autosize="none"/>
+      </cl:button>
+      <cl:button std:sid="button-06109f86" id="btnMdiDivW" class="btn-tab-div window" fieldLabel="분할 창보기" tooltip="분할 창보기" icon="0">
+        <cl:listener std:sid="listener-3330ede3" name="click" handler="onBtnMdiDivNClick"/>
+        <cl:verticaldata std:sid="v-data-c02dbf69" width="24px" height="24px" autosize="none"/>
+      </cl:button>
+      <cl:verticallayout std:sid="v-layout-2070696c" scrollable="false" spacing="2"/>
+    </cl:group>
+    <cl:xylayout std:sid="xylayout-b4225bb1" scrollable="false"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

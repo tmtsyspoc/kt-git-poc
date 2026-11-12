@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-fd10b4dd" version="1.0.0.0">
+  <head std:sid="head-dc780033">
+    <title>udcPocTableCombo</title>
+    <screen std:sid="screen-e161aa0b" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-c5922d0e" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-1e8eb018" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-8301aed9"/>
+    <cl:appspec title="그리드 테이블 콤보 컴포넌트">
+      <cl:property name="itemDataSet" type="control"/>
+      <cl:property name="labelColumn" type="string"/>
+      <cl:property name="valueColumn" type="string"/>
+      <cl:property name="values" type="string" bindable="true"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-0f1b6145" style="top:0px; left:0px; width:100px; height:30px;">
+    <cl:listener std:sid="listener-5979a7ce" name="load" handler="onBodyLoad"/>
+    <cl:combobox std:sid="c-box-51f474a7" id="cmb1" style="background-color:inherit;">
+      <cl:listener std:sid="listener-26a24fe6" name="blur" handler="onCmb1Blur"/>
+      <cl:listener std:sid="listener-80a962d9" name="open" handler="onCmb1Open"/>
+      <cl:apppropbind property="value" app-property="values"/>
+      <cl:xylayoutdata std:sid="xyl-data-b7e49b67" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+    </cl:combobox>
+    <cl:xylayout std:sid="xylayout-8130e99b"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

@@ -1,0 +1,30 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-4df2d857" version="1.0.4034">
+  <head std:sid="head-5049f934">
+    <screen std:sid="screen-73df3f0e" id="EXB-FULL" name="EXB-FULL" width="1580px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-23b34dc0" id="EXB-DIV" name="EXB-DIV" width="1128px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-21bcfa72" id="EXB-PART" name="EXB-PART" width="672px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-e796a910"/>
+    <cl:appspec title="Html 에디터 컴포넌트">
+      <cl:property name="imgUploadUrl" type="string"/>
+      <cl:property name="hideToolbar" type="boolean" default="false" std:desc="에디터 툴바 숨김여부(default:false)"/>
+      <cl:event name="afterLoad" type="cpr.events.CUIEvent"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-6c81bac4" style="top:0px; left:0px; width:800px; height:400px;" class="conts-wrap" clipcontent="false">
+    <cl:listener std:sid="listener-805dc090" name="init" handler="onBodyInit"/>
+    <cl:uicontrolshell std:sid="uic-shell-3ebc56c9" id="shlHtmlEditor">
+      <cl:listener std:sid="listener-d11dc4fb" name="init" handler="onShlHtmlEditorInit"/>
+      <cl:listener std:sid="listener-c7425e45" name="load" handler="onShlHtmlEditorLoad"/>
+      <cl:formdata std:sid="f-data-a3c8e7ef" row="0" col="0"/>
+    </cl:uicontrolshell>
+    <cl:formlayout std:sid="f-layout-797ca1c1" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

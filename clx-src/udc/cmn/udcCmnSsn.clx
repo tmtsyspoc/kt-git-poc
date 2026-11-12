@@ -1,0 +1,38 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-402c188c" version="1.0.6087">
+  <head std:sid="head-b8c7db1f">
+    <screen std:sid="screen-6f9a8004" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-b568c3ac" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-4ff77729" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-56eb8ede"/>
+    <cl:appspec title="주민등록번호">
+      <cl:property name="value1" type="string" bindable="true" std:desc="주민등록번호 앞자리"/>
+      <cl:property name="value2" type="string" bindable="true" std:desc="주민등록번호 뒷자리"/>
+      <cl:property name="enabledInputMask" type="boolean" default="true" bindable="true" std:desc="주민번호 앞자리 입력 시 마스킹 해제여부"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-0275bfcb" style="top:0px; left:0px; width:300px; height:28px;">
+    <cl:listener std:sid="listener-46efdefb" name="load" handler="onBodyLoad"/>
+    <cl:output std:sid="output-b8ad1321" value="-">
+      <cl:formdata std:sid="f-data-1fe41889" row="0" col="1"/>
+    </cl:output>
+    <cl:maskeditor std:sid="m-editor-2181f040" id="mse1" mask="000000">
+      <cl:apppropbind property="value" app-property="value1"/>
+      <cl:formdata std:sid="f-data-a7846979" row="0" col="0"/>
+    </cl:maskeditor>
+    <cl:maskeditor std:sid="m-editor-ec2c58cd" id="mse2" mask="0******">
+      <cl:apppropbind property="value" app-property="value2"/>
+      <cl:formdata std:sid="f-data-9a772bb0" row="0" col="2"/>
+    </cl:maskeditor>
+    <cl:formlayout std:sid="f-layout-0a09dbf8" scrollable="false" hspace="4px" vspace="4px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+      <cl:columns length="10" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

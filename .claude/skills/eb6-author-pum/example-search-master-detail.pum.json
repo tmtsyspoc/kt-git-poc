@@ -1,0 +1,57 @@
+{
+    "title": "[시연] 검색/등록 - 마스터 - 디테일",
+    "description": "전형적인 구조의 마스터 디테일 화면입니다.",
+    "contents": [{
+        "type": "field-set",
+        "title": "검색 조건",
+        "subject": "직원 검색",
+        "description": "검색할 직원의 정보를 입력하십시오.",
+        "purpose": "search",
+        "fields": [
+            { "label": "부서", "dataType": "부서명", "required": true },
+            { "label": "이름", "dataType": "이름", "required": true },
+            { "label": "나이", "dataType": "int" },
+            { "label": "입사일", "dataType": "date" }
+        ],
+        "actions": [
+            { "label": "재검색" },
+            { "label": "검색", "kind": "primary" }
+        ]
+    }, {
+        "type": "data-grid",
+        "title" : "검색 결과",
+        "subject": "직원",
+        "purpose": "read",
+        "fields": [
+            { "label": "이름", "dataType": "이름" },
+            { "label": "나이", "dataType": "int" },
+            { "label": "입사일", "dataType": "date" },
+            { "label": "부서", "dataType": "부서명" },
+            { "label": "주민등록번호", "dataType": "주민등록번호" },
+            { "label": "거주지", "dataType": "주소" },
+            { "label": "전화", "dataType": "전화번호" },
+            { "label": "메모", "dataType": "text" }
+        ],
+        "actions": [
+            { "label": "삭제", "kind": "danger" },
+            { "label": "", "kind": "separator" },
+            { "label": "수정" },
+            { "label": "신규" , "kind" : "primary"}
+        ]
+    }, {
+        "type": "field-set",
+        "title": "세부 사항",
+        "subject": "직원",
+        "purpose": "read",
+        "fields": [
+            { "label": "이름", "dataType": "이름" },
+            { "label": "나이", "dataType": "int" },
+            { "label": "입사일", "dataType": "date" },
+            { "label": "부서", "dataType": "부서명" },
+            { "label": "주민등록번호", "dataType": "주민등록번호" },
+            { "label": "거주지", "dataType": "주소" },
+            { "label": "전화", "dataType": "전화번호" },
+            { "label": "메모", "dataType": "text" }
+        ]
+    }]
+}

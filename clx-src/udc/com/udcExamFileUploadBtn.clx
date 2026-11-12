@@ -1,0 +1,72 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-7729ab1a" version="1.0.0.0">
+  <head std:sid="head-c112436d">
+    <title>comFileDownloader</title>
+    <screen std:sid="screen-47a4665e" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-85f3c47f" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-5ad80d51" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-f13bf4d2">
+      <cl:datamap std:sid="d-map-b0ecf2f8" id="dmUpload">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-b9cb7556" name="attcFileNo"/>
+          <cl:datacolumn std:sid="d-column-aee0dd7c" name="fileNm"/>
+          <cl:datacolumn std:sid="d-column-3dae97e0" name="fileSize"/>
+          <cl:datacolumn std:sid="d-column-e467e99a" name="fileCnt"/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+      <cl:datamap std:sid="d-map-b4bbb323" id="dmTemp">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-420ed74c" info="임시저장 첨부파일번호" name="tempAccFileNo"/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+      <cl:datamap std:sid="d-map-071e125d" id="dmParam">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-fbdc10dd" name="attcFileNo" defaultvalue="aaaaa"/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+      <cl:submission std:sid="submission-cb243db3" id="subUpload" action="/CmnFile/upload.do" mediatype="multipart/form-data" responsetype="text">
+        <cl:requestdata dataid="dmParam"/>
+        <cl:responsedata dataid="dmUpload"/>
+      </cl:submission>
+    </cl:model>
+    <cl:appspec dev-description="(공통) 파일업로드">
+      <cl:property name="attcFileNo" type="string" default="" bindable="true" std:desc="첨부파일번호"/>
+      <cl:property name="buttonLabel" type="string" default="업로드" bindable="true" std:desc="버튼 명칭"/>
+      <cl:property name="multi" type="boolean" default="true" bindable="true" std:desc="다중 파일업로드 가능여부(false인 경우- 단건 업로드임)"/>
+      <cl:property name="allowFileExt" type="string" default="" bindable="true" std:desc="업로드 파일 확장자 (확장자가 여러개인 경우 콤마로 구분. ex: .xls, .xlsx)"/>
+      <cl:property name="maxUploadSize" type="number" default="50" bindable="true" std:desc="업로드 파일 용량 제한(최대 50Mb)"/>
+      <cl:property name="fileSizeUnit" type="string" default="mb" bindable="true" std:desc="업로드 파일 사이즈 단위(byte, kb, mb)"/>
+      <cl:property name="uploadUrl" type="string" default="/CmnFile/upload.do" bindable="true" std:desc="업로드 URL 경로. 디폴트는 CmnFile/upload.do임"/>
+      <cl:property name="onlyDownload" type="boolean" default="false" bindable="true" std:desc="다운로드만 가능한지여부(true/false)"/>
+      <cl:property name="userDefineStorePgmId" type="string" default="" bindable="true" std:desc="부모 프로그램ID 가 아닌 사용자 정의한 파일저장소에 대한 프로그램ID"/>
+      <cl:property name="addDataMapId" type="string" bindable="true" std:desc="서브미션에 추가할 데이터맵 ID"/>
+      <cl:property name="infoMsgShowYn" type="string" default="Y" bindable="true" std:desc="최초업로드시저장안내메세지표시여부(N:표시안함)"/>
+      <cl:property name="targetCtrlId" type="string" bindable="true" std:desc="[미사용]업로드 대상 컨트롤ID(그리드 또는 프리폼ID)"/>
+      <cl:property name="forceAvailableUpload" type="boolean" default="false" bindable="true" std:desc="메뉴권한에 관계없이 업로드 가능여부"/>
+      <cl:property name="closeMsg" type="string" bindable="true" std:desc="파업업로드 팝업닫기후 다른 메시지 처리가 필요한경우 메시지 입력"/>
+      <cl:event name="uploadComplete" type="cpr.events.CUIEvent"/>
+      <cl:event name="beforeUpload" type="cpr.events.CUIEvent"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-7b7bd34e" style="top:0px; left:0px; width:800px; height:30px;">
+    <cl:listener std:sid="listener-2722cd36" name="property-change" handler="onBodyPropertyChange"/>
+    <cl:fileinput std:sid="f-input-e77f662b" id="fileinput1" visible="false" placeholder="">
+      <cl:listener std:sid="listener-f542e075" name="value-change" handler="onFileinput1ValueChange"/>
+      <cl:listener std:sid="listener-641ab6ba" name="maxsize-exceed" handler="onFileinput1MaxsizeExceed"/>
+      <cl:apppropbind property="limitFileSize" category="PROPERTY" app-property="maxUploadSize"/>
+      <cl:apppropbind property="limitFileSizeUnit" category="PROPERTY" app-property="fileSizeUnit"/>
+      <cl:xylayoutdata std:sid="xyl-data-c7952fe5" top="0px" left="0px" width="800px" height="30px" horizontalAnchor="LEFT" verticalAnchor="TOP"/>
+    </cl:fileinput>
+    <cl:button std:sid="button-edde791d" id="btnUpload" icon="0">
+      <cl:listener std:sid="listener-df197fd3" name="click" handler="onBtnUploadClick"/>
+      <cl:apppropbind property="value" category="PROPERTY" app-property="buttonLabel"/>
+      <cl:xylayoutdata std:sid="xyl-data-ed271fe6" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+      <cl:iconstyle class="icon ico-upload"/>
+    </cl:button>
+    <cl:xylayout std:sid="xylayout-d61a4194"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

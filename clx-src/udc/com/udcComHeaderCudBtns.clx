@@ -1,0 +1,117 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-e94b94f4" version="1.0.5186">
+  <head std:sid="head-f8e0940e">
+    <screen std:sid="screen-90f41b7c" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="1449" active="true"/>
+    <screen std:sid="screen-c77f8981" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-b518bb63" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-6c2ac1ce"/>
+    <cl:appspec dev-description="헤더에 배치되는 조회/신규/삭제/취소/저장/엑셀 액션을 위한 공통버튼">
+      <cl:property name="grid" type="control" std:desc="[Grid] 대상 그리드 객체"/>
+      <cl:property name="focusColumnName" type="string" std:desc="[String] 행추가 후, 최초 포커스(focus) 할 컬럼명&#xD;&#xA;ex. CD_NM"/>
+      <cl:property name="ignoreDefaultNewAction" type="boolean" default="false" std:desc="[Boolean] 디폴트 행추가 액션을 무시할지 여부 (default: false)&#xD;&#xA;&#xD;&#xA;true 일 경우, 행추가 기능이 동작하지 않고 insert 이벤트만 발생합니다."/>
+      <cl:property name="ignoreDefaultDeleteAction" type="boolean" default="false" std:desc="[Boolean] 디폴트 행삭제 액션을 무시할지 여부 (default: false)&#xD;&#xA;&#xD;&#xA;true 일 경우, 행삭제 기능이 동작하지 않고 delete 이벤트만 발생합니다."/>
+      <cl:property name="ignoreDefaultRestoreAction" type="boolean" default="false" std:desc="[Boolean] 디폴트 행취소 액션을 무시할지 여부 (default: false)&#xD;&#xA;&#xD;&#xA;true 일 경우, 행취소 기능이 동작하지 않고 restore 이벤트만 발생합니다."/>
+      <cl:property name="ignoreDefaultExcelAction" type="boolean" default="false" std:desc="[Boolean] 디폴트 엑셀 다운로드 액션을 무시할지 여부 (default: false)&#xD;&#xA;&#xD;&#xA;true 일 경우, 엑셀 다운로그 기능이 동작하지 않고 excel-download 이벤트만 발생합니다."/>
+      <cl:property name="buttonNewLabel" type="string" default="신규" bindable="true" std:desc="[String] 행추가 버튼 text (default: 행추가)"/>
+      <cl:property name="buttonDelLabel" type="string" default="삭제" bindable="true" std:desc="[String] 행삭제 버튼 text (default: 행삭제)"/>
+      <cl:property name="buttonSaveLabel" type="string" default="저장" bindable="true" std:desc="[String] 저장 버튼 text (default: 저장)"/>
+      <cl:property name="buttonRestoreLable" type="string" default="취소" bindable="true" std:desc="[String] 행취소 버튼 text (default: 행취소)"/>
+      <cl:property name="buttonSearchLabel" type="string" default="조회" bindable="true" std:desc="[String] 조회 버튼 text (default: 조회)"/>
+      <cl:property name="buttonExcelLabel" type="string" default="엑셀" bindable="true" std:desc="[String] 엑셀 버튼 text (default: 엑셀)"/>
+      <cl:property name="visibleNewButton" type="boolean" default="false" bindable="true" std:desc="[Boolean] 행추가 버튼 보이기 여부 (default: true)"/>
+      <cl:property name="visibleDeleteButton" type="boolean" default="false" bindable="true" std:desc="[Boolean] 행삭제 버튼 보이기 여부 (default: true)"/>
+      <cl:property name="visibleRestoreButton" type="boolean" default="false" bindable="true" std:desc="[Boolean] 행취소 버튼 보이기 여부 (default: true)"/>
+      <cl:property name="visibleSaveButton" type="boolean" default="true" bindable="true" std:desc="[Boolean] 저장 버튼 보이기 여부 (default: true)"/>
+      <cl:property name="visibleSearchButton" type="boolean" default="true" bindable="true" std:desc="[Boolean] 조회 버튼 보이기 여부 (default: true)"/>
+      <cl:property name="visibleExcelButton" type="boolean" default="false" bindable="true" std:desc="[Boolean] 엑셀 버튼 보이기 여부 (default: true)"/>
+      <cl:property name="showExportExcel" type="boolean" default="true" bindable="false" std:desc="[Boolean] 엑셀 파일 Export 버튼 보이기 여부 (default: true)"/>
+      <cl:property name="exportExcelTitle" type="string" bindable="true" std:desc="[String] 엑셀 Export 시, 엑셀 파일명 (default: title 속성값)"/>
+      <cl:property name="showOption" type="boolean" default="true" std:desc="[Boolean] 그리드 설정 버튼 표시여부"/>
+      <cl:property name="exportHiddenColumns" type="boolean" default="false" bindable="true" std:desc="[Boolean] 엑셀 Export 시, 숨긴 컬럼도 포함시킬지 여부 (default: false) &#xD;&#xA;true 로 지정하면, 숨긴 컬럼도 엑셀 Export에 포함됩니다."/>
+      <cl:property name="exportExcludePart" type="string" bindable="true" std:desc="[String] 엑셀 Export 시, 숨긴 컬럼 외 추가적으로 제외할 컬럼 (ex. COL1, COL2)"/>
+      <cl:property name="exportType" type="enumeration" default="server" std:desc="[Enumeration] 엑셀 다운로드 방식 (default: server)&#xD;&#xA;">
+        <cl:available-value>client</cl:available-value>
+        <cl:available-value>server</cl:available-value>
+        <cl:available-value>clientPdf</cl:available-value>
+        <cl:available-value>serverPdf</cl:available-value>
+      </cl:property>
+      <cl:property name="exportApplyFormat" type="boolean" default="true" bindable="true" std:desc="[Boolean] 엑셀 Export 시, 포맷 적용시킬지 여부 (default: true)"/>
+      <cl:property name="exportApplySuppress" type="boolean" default="true" bindable="true" std:desc="[Boolean] 엑셀 Export 시, suppress, mergedToIndexExpr에 의한 셀 병합을 반영할지 여부(default: true)"/>
+      <cl:property name="exportshowRowIndex" type="boolean" default="false" bindable="true" std:desc="[Boolean] 엑셀 Export 시, rowindex 특수컬럼을 포함시킬지 여부 (default: false)"/>
+      <cl:property name="exportApplyClassStyle" type="boolean" default="false" bindable="true" std:desc="[Boolean] 엑셀 Export 시, 클래스 스타일 적용 여부 (default: false)"/>
+      <cl:property name="exportUseFormat" type="boolean" default="true" bindable="true" std:desc="[Boolean] 엑셀 Export 시, 엑셀의 format 기능을 적용할지 여부 (default: true)"/>
+      <cl:property name="showInfoText" type="boolean" default="false" bindable="true" std:desc="[Boolean] 엑셀 Export 시, 첫번째 셀에 정보성 텍스트를 추가할지 여부"/>
+      <cl:property name="infoText" type="string" bindable="true" std:desc="[String] 엑셀 Export 시, 첫번째 셀에 추가할 정보성 텍스트 (showInfoText=true 일 때 적용가능)"/>
+      <cl:property name="showSetting" type="boolean" default="true" bindable="true" std:desc="[Boolean] 그리드 설정 정보 메뉴 제공여부"/>
+      <cl:property name="showExportPdf" type="boolean" default="false" bindable="true" std:desc="[Boolean] PDF 파일 Export 버튼 보이기 여부"/>
+      <cl:property name="exportMassiveType" type="enumeration" default="standard" std:desc="[Enurmeration] 엑셀 Export 시, 다운로드 대용량 호출 방식 (default: standard) &#xD;&#xA;- exportType이 server인 경우에만 사용가능합니다. &#xD;&#xA;- 그리드의 행이 20만행이 넘어가면 대용량 방식으로 설정됩니다">
+        <cl:available-value>standard</cl:available-value>
+        <cl:available-value>massive</cl:available-value>
+      </cl:property>
+      <cl:event name="search" type="cpr.events.CUIEvent" std:desc="조회 클릭 이벤트"/>
+      <cl:event name="insert" type="cpr.events.CUIEvent" std:desc="신규 클릭 이벤트"/>
+      <cl:event name="delete" type="cpr.events.CUIEvent" std:desc="삭제 클릭 이벤트"/>
+      <cl:event name="restore" type="cpr.events.CUIEvent" std:desc="취소 클릭 이벤트"/>
+      <cl:event name="save" type="cpr.events.CUIEvent" std:desc="저장 클릭 이벤트"/>
+      <cl:event name="beforeInsert" type="cpr.events.CUIEvent" std:desc="신규버튼 클릭전 호출 이벤트(신규 행 추가전에 체크할 비지니스 로직이 있는 경우 사용)"/>
+      <cl:event name="beforeDelete" type="cpr.events.CUIEvent" std:desc="삭제버튼 클릭전 호출 이벤트(행 삭제전에 체크할 비지니스 로직이 있는 경우 사용)"/>
+      <cl:event name="beforeRestore" type="cpr.events.CUIEvent" std:desc="취소버튼 클릭전 호출 이벤트(행 취소전에 체크할 비지니스 로직이 있는 경우 사용)"/>
+      <cl:event name="commonEvent" type="cpr.events.CUIEvent" std:desc="신규, 삭제, 취소 클릭 공통 이벤트(e.userData의 status로 확인 가능)"/>
+      <cl:event name="excel-download" type="cpr.events.CUIEvent" std:desc="엑셀 클릭 이벤트"/>
+      <cl:event name="before-excel-download" type="cpr.events.CUIEvent" std:desc="엑셀버튼 클릭전 호출 이벤트(엑셀다운로드 전 체크할 비지니스 로직이 있는 경우 사용)"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-df10819b" style="top:0px; left:0px; width:500px; height:28px;">
+    <cl:listener std:sid="listener-417b7d93" name="property-change" handler="onBodyPropertyChange"/>
+    <cl:button std:sid="button-9d6ff854" id="btnNew" class="tertiary btn-add" icon="0">
+      <cl:listener std:sid="listener-05769aef" name="click" handler="onBtnNewClick"/>
+      <cl:apppropbind property="visible" category="PROPERTY" app-property="visibleNewButton"/>
+      <cl:apppropbind property="value" category="PROPERTY" app-property="buttonNewLabel"/>
+      <cl:formdata std:sid="f-data-ab9246ce" row="0" col="1"/>
+    </cl:button>
+    <cl:button std:sid="button-5a91756d" id="btnRestore" class="tertiary ico-reset" icon="0">
+      <cl:listener std:sid="listener-297d054f" name="click" handler="onBtnRestoreClick"/>
+      <cl:apppropbind property="visible" category="PROPERTY" app-property="visibleRestoreButton"/>
+      <cl:apppropbind property="value" category="PROPERTY" app-property="buttonRestoreLable"/>
+      <cl:formdata std:sid="f-data-42b015f9" row="0" col="2"/>
+    </cl:button>
+    <cl:button std:sid="button-281dd9da" id="btnDelete" class="tertiary btn-remove" icon="0">
+      <cl:listener std:sid="listener-c43ba3ca" name="click" handler="onBtnDeleteClick"/>
+      <cl:apppropbind property="value" category="PROPERTY" app-property="buttonDelLabel"/>
+      <cl:apppropbind property="visible" category="PROPERTY" app-property="visibleDeleteButton"/>
+      <cl:formdata std:sid="f-data-f63538f6" row="0" col="3"/>
+    </cl:button>
+    <cl:button std:sid="button-7f318a32" id="btnSave" class="btn-save" icon="0">
+      <cl:listener std:sid="listener-ebb02e63" name="click" handler="onBtnSaveClick"/>
+      <cl:apppropbind property="visible" category="PROPERTY" app-property="visibleSaveButton"/>
+      <cl:apppropbind property="value" category="PROPERTY" app-property="buttonSaveLabel"/>
+      <cl:formdata std:sid="f-data-1c1f4b1c" row="0" col="4"/>
+    </cl:button>
+    <cl:button std:sid="button-4b4e474e" id="btnSearch" class="primary ico-sch" icon="0">
+      <cl:listener std:sid="listener-f7b4ad35" name="click" handler="onBtnNew2Click"/>
+      <cl:apppropbind property="value" app-property="buttonSearchLabel"/>
+      <cl:apppropbind property="visible" category="PROPERTY" app-property="visibleSearchButton"/>
+      <cl:formdata std:sid="f-data-4d459245" row="0" col="0"/>
+    </cl:button>
+    <cl:button std:sid="button-9dd817fd" id="btnSave2" class="tertiary" icon="0">
+      <cl:listener std:sid="listener-144c83fc" name="click" handler="onBtnSave2Click"/>
+      <cl:apppropbind property="value" app-property="buttonExcelLabel"/>
+      <cl:apppropbind property="visible" category="PROPERTY" app-property="visibleExcelButton"/>
+      <cl:formdata std:sid="f-data-32aae3df" row="0" col="5"/>
+      <cl:iconstyle class="icon ico-excel"/>
+    </cl:button>
+    <cl:formlayout std:sid="f-layout-2ca12650" scrollable="false" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="74" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      <cl:columns length="74" unit="PIXEL" autoSizing="true" hidden="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+      <cl:columns length="74" unit="PIXEL" autoSizing="true" hidden="true" syncminlength="false"/>
+      <cl:columns length="74" unit="PIXEL" autoSizing="true" hidden="true" syncminlength="false"/>
+      <cl:columns length="74" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+      <cl:columns length="74" unit="PIXEL" autoSizing="true" hidden="true" syncminlength="false"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

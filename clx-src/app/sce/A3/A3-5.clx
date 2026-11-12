@@ -1,0 +1,1602 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-9702cc60" version="1.0.4034">
+  <head std:sid="head-9e0e2459">
+    <std:metadata>
+      <std:property key="template-file" value="templates/일반/0.프레임/0-1.프레임_버티컬레이아웃.clx"/>
+    </std:metadata>
+    <script std:sid="script-837c16a2" src="../../../thirdparty/echarts/echarts.min.js" type="text/javascript"/>
+    <screen std:sid="screen-1a5f3bf9" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-7d43adeb" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-c9d3c829" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-90321062">
+      <cl:dataset comment="프로세스 목록" std:sid="d-set-406d885d" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="" std:sid="d-column-9f37779a" name="TITLE"/>
+          <cl:datacolumn comment="" std:sid="d-column-7fe5300f" name="SUB_TITLE"/>
+          <cl:datacolumn comment="" std:sid="d-column-c68cb733" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-fa740970" name="CONT" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-c9d6a3d7" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-b4004ac2" name="SUB_CODE"/>
+          <cl:datacolumn comment="" std:sid="d-column-8d6dc077" name="TARGET_CTRL"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[컴포넌트 재사용·조합]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[공통 컴포넌트를 독립적으로 조합·재사용할 수 있어야 한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">○</cl:datavalue>
+            <cl:datavalue columnname="CONT">목적</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">충분한 기본 제공 컴포넌트를 제공한다</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">○</cl:datavalue>
+            <cl:datavalue columnname="CONT">검증조건</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">기본 제공 컴포넌트 수를 확인한다.</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">○</cl:datavalue>
+            <cl:datavalue columnname="CONT">측정</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">기본 제공 컴포넌트 수를 확인한다.</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[개발 스튜디오의 Palette 뷰를 확인한다.]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[Palette 뷰]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[스튜디오]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+      <cl:dataset std:sid="d-set-fc0a7b60" id="dsList">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-a1b96246" name="column1"/>
+          <cl:datacolumn std:sid="d-column-c4783d54" name="column2"/>
+          <cl:datacolumn std:sid="d-column-b55765aa" name="level"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="column1">column11</cl:datavalue>
+            <cl:datavalue columnname="column2">column21</cl:datavalue>
+            <cl:datavalue columnname="level">1</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1">column12</cl:datavalue>
+            <cl:datavalue columnname="column2">column22</cl:datavalue>
+            <cl:datavalue columnname="level">2</cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+      <cl:dataset std:sid="d-set-fb34d67f" id="dsArea">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-6b9fccc9" name="COLUMN1"/>
+          <cl:datacolumn std:sid="d-column-483db84c" name="COLUMN2"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="COLUMN1">Mon</cl:datavalue>
+            <cl:datavalue columnname="COLUMN2">120</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="COLUMN1">Tue</cl:datavalue>
+            <cl:datavalue columnname="COLUMN2">200</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="COLUMN1">Wed</cl:datavalue>
+            <cl:datavalue columnname="COLUMN2">300</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="COLUMN1">Thu</cl:datavalue>
+            <cl:datavalue columnname="COLUMN2">400</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="COLUMN1">Fri</cl:datavalue>
+            <cl:datavalue columnname="COLUMN2">350</cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+      <cl:matrix-submission std:sid="m-submission-f8da131b" id="msub1" async="true" withCredentials="false" method="post" action="">
+        <cl:matrix>
+          <cl:request type="object">
+            <cl:data key="items">
+              <cl:complex type="array">
+                <cl:data key="id">
+                  <cl:pathref columnName="id"/>
+                </cl:data>
+                <cl:data key="title">
+                  <cl:pathref columnName="title"/>
+                </cl:data>
+                <cl:data key="date_published">
+                  <cl:pathref columnName="date_published"/>
+                </cl:data>
+                <cl:data key="author">
+                  <cl:complex type="array">
+                    <cl:data key="name">
+                      <cl:pathref columnName="name"/>
+                    </cl:data>
+                    <cl:data key="avatar">
+                      <cl:pathref columnName="avatar"/>
+                    </cl:data>
+                  </cl:complex>
+                </cl:data>
+              </cl:complex>
+            </cl:data>
+            <cl:data key="body">
+              <cl:complex type="object">
+                <cl:data key="list1">
+                  <cl:complex type="array"/>
+                </cl:data>
+                <cl:data key="list2">
+                  <cl:complex type="array"/>
+                </cl:data>
+              </cl:complex>
+            </cl:data>
+          </cl:request>
+          <cl:response type="object"/>
+        </cl:matrix>
+      </cl:matrix-submission>
+    </cl:model>
+    <cl:appspec title="기본 컴포넌트 지원 수량"/>
+  </head>
+  <body std:sid="body-a0c207fd" class="wrap">
+    <cl:listener std:sid="listener-c1f492a2" name="load" handler="onBodyLoad"/>
+    <cl:udc std:sid="ud-control-8c71e0ab" id="udcComAppHeader" type="udc.com.udcComAppHeader">
+      <cl:verticaldata std:sid="v-data-d23e67ba" width="1238px" height="22px" autosize="height"/>
+      <cl:property name="title" value="3.7 기본 컴포넌트 지원 수량" type="string"/>
+      <cl:property name="isExpandAllPocProcess" value="true" type="boolean"/>
+    </cl:udc>
+    <cl:group std:sid="group-be39b9f1" id="grpData" class="conts-area">
+      <cl:verticaldata std:sid="v-data-851ebd20" width="992px" height="5063px" autosize="height"/>
+      <cl:group std:sid="group-7e5559d4" id="grpGoverning" class="governing">
+        <cl:verticaldata std:sid="v-data-f4e41045" width="992px" height="215px" autosize="height"/>
+        <cl:output std:sid="output-6fb83195" id="opt198" class="tit" value="40개 이상의 기본 컴포넌트 지원">
+          <cl:verticaldata std:sid="v-data-d68a450b" width="100px" height="28px" autosize="height"/>
+        </cl:output>
+        <cl:output std:sid="output-5953dfd4" id="opt199" class="txt" displayexp="&quot;eXBuilde6는 다양한 요건에 따라 입,출력 등의 기능을 제공하는 &quot; + sstr(&quot;기본 컴포넌트 38개&quot;, [&quot;fw-bold&quot;]) + &quot;와 화면을 구성하는 &quot; + sstr(&quot;레이아웃 5개&quot;, [&quot;fw-bold&quot;]) + &quot;를 지원하며,&quot; + &quot;\n\r&quot; + &quot;데이터를 구성하는 &quot;+ sstr(&quot;데이터 객체 3개&quot;, [&quot;fw-bold&quot;]) + &quot;와 통신 프로토콜 &quot; + sstr(&quot;서브미션 2개&quot;, [&quot;fw-bold&quot;]) + &quot;를 지원합니다.&quot; + &quot;\n\r&quot; + &quot;기본 컴포넌트를 포함하여 &quot; + sstr(&quot;총 48개&quot;, [&quot;fw-bold&quot;]) + &quot;의 컴포넌트를 지원합니다.&quot;&#xD;&#xA;+ &quot;\n\reXBuilde6는 &quot; + sstr(&quot;모바일 및 PC 전용 컨트롤을 구분하지 않고&quot;,[&quot;text-red&quot;,&quot;fw-bold&quot;]) + &quot; 모든 컨트롤은 동일한 환경에서 사용 가능합니다.&quot;">
+          <cl:verticaldata std:sid="v-data-6574ec63" width="1218px" height="145px" autosize="height"/>
+        </cl:output>
+        <cl:verticallayout std:sid="v-layout-62f1ecf3" scrollable="false" spacing="8"/>
+      </cl:group>
+      <cl:group std:sid="group-a47f66c3" id="grp1" class="conts-wrap">
+        <cl:verticaldata std:sid="v-data-53211d7f" width="992px" height="4846px" autosize="height"/>
+        <cl:udc std:sid="ud-control-832e3ad2" id="udcComFormTitle1" type="udc.com.udcComFormTitle">
+          <cl:verticaldata std:sid="v-data-57799b3d" width="800px" height="28px" autosize="height"/>
+          <cl:property name="title" value="기본 컴포넌트 목록" type="string"/>
+        </cl:udc>
+        <cl:group std:sid="group-e83090b9" id="grp2" class="form">
+          <std:metadata>
+            <std:property key="template-uuid" value="4773e6bb-e377-4d0f-a2b8-c7e060936076"/>
+            <std:property key="template-rev" value="1"/>
+          </std:metadata>
+          <cl:attribute name="table-min-height" value=""/>
+          <cl:attribute name="mobile-column-count" value="1"/>
+          <cl:attribute name="tablet-column-count" value="1"/>
+          <cl:verticaldata std:sid="v-data-fa33c59e" width="968px" height="4801px" autosize="height"/>
+          <cl:output std:sid="output-f580ec34" id="opt1" style="text-align:center;" class="label" value="No">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-bb588e3a" row="0" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-2acb42bd" id="opt2" style="text-align:center;" class="label" value="컨트롤 구분">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-624a825e" row="0" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-65493982" id="opt7" style="text-align:center;" class="label" value="컨트롤 명">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-45be640e" row="0" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-51547225" id="opt8" style="text-align:center;" class="label" value="컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-15ac3562" row="0" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-2fbb87a7" id="opt13" style="text-align:center;" class="label" value="비고">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-b131a675" row="0" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-c1e6bd0e" id="opt9" style="text-align:center;" class="label" value="1">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-84d86236" row="1" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-ff1eb803" id="opt6" style="text-align:center;" class="label" value="입력">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-b662643c" row="1" col="1" rowspan="6" colspan="1"/>
+          </cl:output>
+          <cl:output std:sid="output-467ea0e2" id="opt5" class="label" value="인풋박스">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-fdef0326" row="1" col="2"/>
+          </cl:output>
+          <cl:inputbox std:sid="i-box-b1de1103" id="ipb1" value="Input Box">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-b746077a" row="1" col="3"/>
+          </cl:inputbox>
+          <cl:output std:sid="output-c68a9e89" id="opt14" value="데이터를 입력 할 수 있는 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-d02f663f" row="1" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-e9d55d11" id="opt10" style="text-align:center;" class="label" value="2">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-5835e7f1" row="2" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-d2161272" id="opt19" class="label" value="서치인풋">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-07cce5e1" row="2" col="2"/>
+          </cl:output>
+          <cl:searchinput std:sid="s-input-1f937022" id="searchinput1" value="Search Box">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-9e0b6711" row="2" col="3"/>
+          </cl:searchinput>
+          <cl:output std:sid="output-e6e534b0" id="opt15" value="인풋박스와 검색버튼이 결합된 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-a732fe3a" row="2" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-c11566e7" id="opt3" style="text-align:center;" class="label" value="3">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-5a4cde5d" row="3" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-ad4d9253" id="opt16" class="label" value="마스크 에디터">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-b1d8cb2a" row="3" col="2"/>
+          </cl:output>
+          <cl:maskeditor std:sid="m-editor-79966714" id="mse1" value="030517-1234567" mask="000000-0******">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-d0280439" row="3" col="3"/>
+          </cl:maskeditor>
+          <cl:output std:sid="output-430c7fbc" id="opt118" value="입력 형식을 지정할 수 있는 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-cb260e09" row="3" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-bdb66a15" id="opt4" style="text-align:center;" class="label" value="4">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-7257ec0b" row="4" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-168f839e" id="opt11" class="label" value="넘버에디터">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-d6d72855" row="4" col="2"/>
+          </cl:output>
+          <cl:numbereditor std:sid="n-editor-5c30d7c8" id="nbe1" value="1000" spinbutton="true">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-a76bcfe8" row="4" col="3"/>
+          </cl:numbereditor>
+          <cl:output std:sid="output-9c44d158" id="opt119" value="숫자를 입력하는 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-ce71be8e" row="4" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-1db7e8ee" id="opt61" style="text-align:center;" class="label" value="5">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-76cd678e" row="5" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-9bdae0e7" id="opt12" class="label" value="데이트인풋">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-96669c89" row="5" col="2"/>
+          </cl:output>
+          <cl:dateinput std:sid="d-input-4ac905c3" id="dti1" value="20230101">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-831db058" row="5" col="3"/>
+          </cl:dateinput>
+          <cl:output std:sid="output-e29ef739" id="opt117" value="날짜를 입력하는 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-a072be00" row="5" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-340048a6" id="opt73" style="text-align:center;" class="label" value="6">
+            <cl:listener std:sid="listener-35f73ee9" name="value-change" handler="onOpt73ValueChange"/>
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-c30a69f9" row="6" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-51362bb0" id="opt17" class="label" value="텍스트 에리어">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-d2506bae" row="6" col="2"/>
+          </cl:output>
+          <cl:textarea std:sid="t-area-98134e8c" id="txa1" value="Text Area&#xD;&#xA;Text Area">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-80a2c00e" row="6" col="3"/>
+          </cl:textarea>
+          <cl:output std:sid="output-96d7f925" id="opt120" value="여러 줄의 텍스트를 입력 할 수 있는 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-aff4dc70" row="6" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-1dba1829" id="opt75" style="text-align:center;" class="label" value="7">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-27c2f5e1" row="7" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-758ea5bf" id="opt20" style="text-align:center;" class="label" value="출력">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-3d4693fc" row="7" col="1" rowspan="5" colspan="1"/>
+          </cl:output>
+          <cl:output std:sid="output-4f710dba" id="opt21" class="label" value="아웃풋">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-b5201c8c" row="7" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-223e641c" id="opt113" value="Output">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-323b4dd9" row="7" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-a9e87b36" id="opt121" value="데이터를 출력하는 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-cd62f164" row="7" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-0d57d229" id="opt74" style="text-align:center;" class="label" value="8">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-aa31a20d" row="8" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-01ab9d67" id="opt22" class="label" value="HTML 스니펫">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-ce4c8708" row="8" col="2"/>
+          </cl:output>
+          <cl:htmlsnippet std:sid="htmlsnippet-fcb9f56c" id="hspt1" value="&lt;p>&lt;span style=&quot;color:hsl(0,75%,60%);&quot;>HTML&lt;/span> &lt;span style=&quot;color:hsl(210, 75%, 60%);&quot;>Snippet&lt;/span>&lt;/p>">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-68729dd5" row="8" col="3"/>
+          </cl:htmlsnippet>
+          <cl:output std:sid="output-17d0c079" id="opt116" value="HTML 태그 형식의 데이터를 출력하는 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-146e6cbf" row="8" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-bbb7dfcc" id="opt76" style="text-align:center;" class="label" value="9">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-f0882242" row="9" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-4afb592a" id="opt42" class="label" value="이미지">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-af52f537" row="9" col="2"/>
+          </cl:output>
+          <cl:img std:sid="image-1b35bcb0" id="img1" class="m-rate" src="data/image/eb6_logo.png">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-eb429f13" halign="CENTER" width="150" row="9" col="3"/>
+          </cl:img>
+          <cl:output std:sid="output-1554e3db" id="opt122" value="이미지 데이터를 표현하는 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-36347921" row="9" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-a27d9313" id="opt77" style="text-align:center;" class="label" value="10">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-0eea64ac" row="10" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-5be2d789" id="opt40" class="label" value="오디오">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-1e1467f4" row="10" col="2"/>
+          </cl:output>
+          <cl:audio std:sid="audio-45724644" id="aud1" src="data/image/smp_audio.mp3" displaycontrol="true">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-a3503e96" row="10" col="3"/>
+          </cl:audio>
+          <cl:output std:sid="output-30dd103b" id="opt123" value="음성(MP3, WAV, OGG) 출력이 가능한 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-1396c3bf" row="10" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-e8da03de" id="opt60" style="text-align:center;" class="label" value="11">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-52d6897d" row="11" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-944f04e5" id="opt41" class="label" value="비디오">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-dbdd2d8c" row="11" col="2"/>
+          </cl:output>
+          <cl:video std:sid="video-07e1ab59" id="vid1" src="data/image/smp_video.mp4" displaycontrol="true">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-90d5180d" row="11" col="3"/>
+          </cl:video>
+          <cl:output std:sid="output-ef8efad0" id="opt124" value="영상(MP4, WebM, OGG) 출력이 가능한 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-c9038b30" row="11" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-45a908a6" id="opt78" style="text-align:center;" class="label" value="12">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-3f34c662" row="12" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-9680ff8e" id="opt23" style="text-align:center;" class="label" value="셀렉트">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-9ccae9e4" row="12" col="1" rowspan="11" colspan="1"/>
+          </cl:output>
+          <cl:output std:sid="output-9cfa1698" id="opt26" class="label" value="체크박스">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-a46461e9" row="12" col="2"/>
+          </cl:output>
+          <cl:checkbox std:sid="c-box-936a8b05" id="cbx1" text="Check">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-be1c71c0" row="12" col="3"/>
+          </cl:checkbox>
+          <cl:output std:sid="output-768f3f7d" id="opt125" value="선택항목 체크를 표현하는 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-1bfff7f9" row="12" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-b9db67e4" id="opt79" style="text-align:center;" class="label" value="13">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-13f25c10" row="13" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-d935a52b" id="opt27" class="label" value="체크박스그룹">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-3bdedbed" row="13" col="2"/>
+          </cl:output>
+          <cl:checkboxgroup std:sid="cb-group-beb70c6b" id="cbg1">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-6d0a275d" row="13" col="3"/>
+            <cl:item std:sid="item-566b03c5" label="check1" value="value1"/>
+            <cl:item std:sid="item-08ab4866" label="check1" value="value2"/>
+            <cl:value>value1</cl:value>
+          </cl:checkboxgroup>
+          <cl:output std:sid="output-1b8c645a" id="opt126" value="여러 가지 선택사항 중 다중 선택하는 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-41c0d197" row="13" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-31f4b2b2" id="opt80" style="text-align:center;" class="label" value="13">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-872aceb5" row="14" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-8845e94a" id="opt28" class="label" value="라디오버튼">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-3c60b7e4" row="14" col="2"/>
+          </cl:output>
+          <cl:radiobutton std:sid="r-button-f9adef80" id="rdb1" value="value1">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-32e8dc22" row="14" col="3"/>
+            <cl:item std:sid="item-27547335" label="radio1" value="value1"/>
+            <cl:item std:sid="item-b90f91e2" label="radio2" value="value2"/>
+          </cl:radiobutton>
+          <cl:output std:sid="output-f8cb8f73" id="opt127" value="여러 가지 선택사항 중 단일 선택하는 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-5ee2312f" row="14" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-ed01cb52" id="opt82" style="text-align:center;" class="label" value="14">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-8b04e4b2" row="15" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-93160392" id="opt24" class="label" value="콤보박스">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-d6609bcc" row="15" col="2"/>
+          </cl:output>
+          <cl:combobox std:sid="c-box-2f1e8e7e" id="cmb1" value="value1">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-bf1e1426" row="15" col="3"/>
+            <cl:item std:sid="t-item-05fc609f" label="combo1" value="value1"/>
+            <cl:item std:sid="t-item-78529ba3" label="combo2" value="value2"/>
+          </cl:combobox>
+          <cl:output std:sid="output-fb447f01" id="opt128" value="정해진 값들 중에서 단일 값을 선택하는 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-6696d17e" row="15" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-cc3302b5" id="opt81" style="text-align:center;" class="label" value="15">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-0dda3987" row="16" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-3c7c515e" id="opt25" class="label" value="링크드 콤보박스">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-d0bca445" row="16" col="2"/>
+          </cl:output>
+          <cl:linkedcombobox std:sid="lc-box-09342a75" id="lcb1">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-497bafce" row="16" col="3"/>
+            <cl:treeitem std:sid="t-item-af508ae6" label="combo1" value="value1"/>
+            <cl:treeitem std:sid="t-item-f3f38221" label="combo1-1" value="value2" parent="value1"/>
+            <cl:treeitem std:sid="t-item-8e857e65" label="combo1-1-1" value="value3" parent="value2"/>
+            <cl:value>value1</cl:value>
+            <cl:value>value2</cl:value>
+            <cl:value>value3</cl:value>
+          </cl:linkedcombobox>
+          <cl:output std:sid="output-6c78a8ed" id="opt129" value="연결된 목록형 데이터를 선택하는 콤보 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-d76b1524" row="16" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-25ff9fd8" id="opt83" style="text-align:center;" class="label" value="16">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-1455b4e4" row="17" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-51233277" id="opt29" class="label" value="리스트박스">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-04019d61" row="17" col="2"/>
+          </cl:output>
+          <cl:listbox std:sid="l-box-710ab309" id="lbx1">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-81a7ecf4" row="17" col="3"/>
+            <cl:item std:sid="item-c68d57f8" label="list1" value="value1"/>
+            <cl:item std:sid="item-62ce4ec3" label="list2" value="value2"/>
+            <cl:value>value1</cl:value>
+          </cl:listbox>
+          <cl:output std:sid="output-c976279a" id="opt130" value="다중 선택 사항 중 하나 그 이상 선택이 &#xD;&#xA;가능한 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-b71da4bc" row="17" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-366f4c2e" id="opt84" style="text-align:center;" class="label" value="17">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-15a68bf1" row="18" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-126316b6" id="opt30" class="label" value="링크드 리스트박스">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-191c049a" row="18" col="2"/>
+          </cl:output>
+          <cl:linkedlistbox std:sid="ll-box-24178806" id="llb1">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-67118dd1" row="18" col="3"/>
+            <cl:treeitem std:sid="t-item-2cf00055" label="list1" value="value1"/>
+            <cl:treeitem std:sid="t-item-2c760899" label="list2" value="value2"/>
+            <cl:treeitem std:sid="t-item-2477bd6b" label="list1-1" value="value4" parent="value1" checked="false"/>
+            <cl:treeitem std:sid="t-item-149bb1ca" label="list1-1-1" value="value5" parent="value4"/>
+            <cl:value>value1</cl:value>
+          </cl:linkedlistbox>
+          <cl:output std:sid="output-17b6dd48" id="opt131" value="연결된 목록형 데이터를 선택하는&#xD;&#xA;리스트 형식 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-85a12864" row="18" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-1063ae9a" id="opt85" style="text-align:center;" class="label" value="18">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-31d9b07f" row="19" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-9b9ca8bc" id="opt33" class="label" value="메뉴">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-f51ddbdc" row="19" col="2"/>
+          </cl:output>
+          <cl:menu std:sid="menu-6bb797bb" id="mnu1" value="value1">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-9042eef4" row="19" col="3"/>
+            <cl:menuitem std:sid="m-item-148e0dc4" label="menu1" value="value1"/>
+            <cl:menuitem std:sid="m-item-905c2af7" label="menu2" value="value2"/>
+          </cl:menu>
+          <cl:output std:sid="output-af53cc94" id="opt132" value="아이템 목록이 수직 선상에 나열되어 있는 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-e96cac9d" row="19" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-3de25c0e" id="opt86" style="text-align:center;" class="label" value="19">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-6b108d9f" row="20" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-7d2a0d31" id="opt34" class="label" value="내비게이션 바">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-772a54e3" row="20" col="2"/>
+          </cl:output>
+          <cl:navigationbar std:sid="n-bar-171d7102" id="ngb1" value="value1">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-3e20f9db" row="20" col="3"/>
+            <cl:menuitem std:sid="m-item-3322b6bd" label="navbar1" value="value1"/>
+            <cl:menuitem std:sid="m-item-7a768199" label="navbar2" value="value2"/>
+          </cl:navigationbar>
+          <cl:output std:sid="output-bdb55bdc" id="opt133" value="아이템 목록이 수평 선상에 나열되어 있는 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-4521c8ac" row="20" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-8df00707" id="opt87" style="text-align:center;" class="label" value="20">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-859829d4" row="21" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-4b18e694" id="opt35" class="label" value="사이드 내비게이션 바">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-38fd29dd" row="21" col="2"/>
+          </cl:output>
+          <cl:sidenavigation std:sid="s-navigation-43d940d0" id="sidenavigation1" value="value1" selectionHighlightType="independent">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-a8eb9da1" row="21" col="3"/>
+            <cl:treeitem std:sid="t-item-1a6a365c" label="navbar1" value="value1"/>
+            <cl:treeitem std:sid="t-item-608dc983" label="navbar1-1" value="value2" parent="value1"/>
+            <cl:treeitem std:sid="t-item-b35d3d5a" label="navbar2" value="value3"/>
+          </cl:sidenavigation>
+          <cl:output std:sid="output-6e8ce291" id="opt134" value="Left, Right 내비게이션을 위한 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-9f4e2ce5" row="21" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-9d881a2a" id="opt89" style="text-align:center;" class="label" value="21">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-78329690" row="22" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-6d199141" id="opt67" class="label" value="캘린더">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-7da0d7c0" row="22" col="2"/>
+          </cl:output>
+          <cl:calendar std:sid="calendar-f335d694" id="cal1">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-949b4056" row="22" col="3"/>
+          </cl:calendar>
+          <cl:output std:sid="output-82a0cab9" id="opt135" value="날짜를 선택하는 달력 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-14d9e989" row="22" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-1df78792" id="opt88" style="text-align:center;" class="label" value="22">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-d6e84576" row="23" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-8b8f2096" id="opt63" style="text-align:center;" class="label" value="트리">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-692f110f" row="23" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-167de3f7" id="opt62" class="label" value="트리">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-ab99fdd7" row="23" col="2"/>
+          </cl:output>
+          <cl:tree std:sid="tree-1b437c03" id="tre1" autoOpen="1">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-89e2a2bd" row="23" col="3"/>
+            <cl:treeitem std:sid="t-item-b0169048" label="tree1" value="value1"/>
+            <cl:treeitem std:sid="t-item-bdd9f583" label="tree1-1" value="value2" parent="value1"/>
+            <cl:treeitem std:sid="t-item-f3a6227a" label="tree2" value="value4"/>
+          </cl:tree>
+          <cl:output std:sid="output-03a18e38" id="opt136" value="트리 형태의 데이터를 표현하는 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-15e31315" row="23" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-81de148c" id="opt90" style="text-align:center;" class="label" value="23">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-b49528ac" row="24" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-315d7625" id="opt54" style="text-align:center;" class="label" value="버튼">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-2aaf356c" row="24" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-a366f5d1" id="opt55" class="label" value="버튼">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-6a2bf6bb" row="24" col="2"/>
+          </cl:output>
+          <cl:button std:sid="button-8009fcf0" id="btn1" value="Button">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-61820a44" row="24" col="3"/>
+          </cl:button>
+          <cl:output std:sid="output-84163693" id="opt137" value="클릭이 가능한 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-107b773e" row="24" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-58f13abf" id="opt91" style="text-align:center;" class="label" value="24">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-97fd9130" row="25" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-6b0f005f" id="opt31" style="text-align:center;" class="label" value="테이블">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-5129687d" row="25" col="1" rowspan="3" colspan="1"/>
+          </cl:output>
+          <cl:output std:sid="output-5bf6cafe" id="opt32" class="label" value="그리드">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-74253cb1" row="25" col="2"/>
+          </cl:output>
+          <cl:grid std:sid="grid-10780c80" id="grd1" datasetid="dsList">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-33f386c3" row="25" col="3"/>
+            <cl:gridcolumn std:sid="g-column-d3b94383" width="50px"/>
+            <cl:gridcolumn std:sid="g-column-77a5f1e6" width="50px"/>
+            <cl:gridcolumn std:sid="g-column-29b38b43" width="120px"/>
+            <cl:gridcolumn std:sid="g-column-f816b05c" width="120px"/>
+            <cl:gridheader std:sid="gh-band-551ed904">
+              <cl:gridrow std:sid="g-row-742bdf2d" height="36px"/>
+              <cl:gridcell std:sid="gh-cell-d924d974" rowindex="0" colindex="0" sortable="false" filterable="false" columntype="checkbox"/>
+              <cl:gridcell std:sid="gh-cell-2622f9ff" rowindex="0" colindex="1" sortable="false" filterable="false" text="No"/>
+              <cl:gridcell std:sid="gh-cell-ca67235d" rowindex="0" colindex="2" targetcolumnname="column1" sortable="false" filterable="false" text="column1"/>
+              <cl:gridcell std:sid="gh-cell-8b291553" rowindex="0" colindex="3" targetcolumnname="column2" sortable="false" filterable="false" text="column2"/>
+            </cl:gridheader>
+            <cl:griddetail std:sid="gd-band-36f7017a">
+              <cl:gridrow std:sid="g-row-d6830362" height="36px"/>
+              <cl:gridcell std:sid="gd-cell-238e5ca6" rowindex="0" colindex="0" columntype="checkbox"/>
+              <cl:gridcell std:sid="gd-cell-136c309a" rowindex="0" colindex="1" columntype="rowindex"/>
+              <cl:gridcell std:sid="gd-cell-3f196674" rowindex="0" colindex="2" columnname="column1"/>
+              <cl:gridcell std:sid="gd-cell-288e804f" rowindex="0" colindex="3" columnname="column2"/>
+            </cl:griddetail>
+          </cl:grid>
+          <cl:output std:sid="output-35e69749" id="opt138" value="테이블 형태의 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-72256dec" row="25" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-9a73dbd3" id="opt92" style="text-align:center;" class="label" value="25">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-fdc36ed9" row="26" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-e4a620ed" id="opt114" class="label" value="그리드-트리셀">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-0ffb0e7d" row="26" col="2"/>
+          </cl:output>
+          <cl:grid std:sid="grid-fed473fa" id="grd2" datasetid="dsList">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-c677358b" row="26" col="3"/>
+            <cl:gridcolumn std:sid="g-column-4e14c7a3" width="120px"/>
+            <cl:gridcolumn std:sid="g-column-48f74902" width="120px"/>
+            <cl:gridheader std:sid="gh-band-d888717c">
+              <cl:gridrow std:sid="g-row-dd876342" height="36px"/>
+              <cl:gridcell std:sid="gh-cell-52df8429" rowindex="0" colindex="0" targetcolumnname="column1" sortable="false" filterable="false" text="column1"/>
+              <cl:gridcell std:sid="gh-cell-e815d2e7" rowindex="0" colindex="1" targetcolumnname="column2" sortable="false" filterable="false" text="column2"/>
+            </cl:gridheader>
+            <cl:griddetail std:sid="gd-band-3e815af3">
+              <cl:gridrow std:sid="g-row-2f30e1ab" height="36px"/>
+              <cl:gridcell std:sid="gd-cell-a5626de2" rowindex="0" colindex="0" columnname="column1">
+                <cl:treecell std:sid="t-cell-5602ff42">
+                  <cl:expbind property="level" category="PROPERTY" expression="getValue(&quot;level&quot;)"/>
+                  <cl:celldata std:sid="c-data-738c61c9"/>
+                </cl:treecell>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-1fdd7c3b" rowindex="0" colindex="1" columnname="column2"/>
+            </cl:griddetail>
+          </cl:grid>
+          <cl:output std:sid="output-2dc27647" id="opt139" value="그리드 내부 트리 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-637eba91" row="26" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-53413d2c" id="opt93" style="text-align:center;" class="label" value="26">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-257a3585" row="27" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-1c29f61f" id="opt68" class="label" value="페이지 인덱서">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-048f072a" row="27" col="2"/>
+          </cl:output>
+          <cl:pageindexer std:sid="p-indexer-5a4ce2fb" id="pix1" totalrowcount="5" pagerowcount="1">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-b9f1a49e" row="27" col="3"/>
+          </cl:pageindexer>
+          <cl:output std:sid="output-b26cf8f1" id="opt140" value="적용된 데이터양 표현을 지원하는 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-269c5930" row="27" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-b7646c57" id="opt94" style="text-align:center;" class="label" value="27">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-8e272069" row="28" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-e8216224" id="opt64" style="text-align:center;" class="label" value="파일">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-bc39c9d7" row="28" col="1" rowspan="2" colspan="1"/>
+          </cl:output>
+          <cl:output std:sid="output-ce9b530b" id="opt65" class="label" value="파일 인풋">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-e01e43a1" row="28" col="2"/>
+          </cl:output>
+          <cl:fileinput std:sid="f-input-9d7f03c9" id="fit1" style="text-align:left;" value="file.xlsx">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-083185dc" row="28" col="3"/>
+          </cl:fileinput>
+          <cl:output std:sid="output-09761bcd" id="opt141" value="단일 파일을 업로드 할 수 있는 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-0c03a2ea" row="28" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-d582a2b2" id="opt95" style="text-align:center;" class="label" value="28">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-e82eb400" row="29" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-d964a525" id="opt66" class="label" value="파일 업로드">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-2df9ed37" row="29" col="2"/>
+          </cl:output>
+          <cl:fileupload std:sid="f-upload-a5d62fb9" id="fid1">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-ab8ef657" row="29" col="3"/>
+          </cl:fileupload>
+          <cl:output std:sid="output-9e61a35e" id="opt142" value="다수의 파일을 동시에 업로드 할 수 있는 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-1a7c61ad" row="29" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-53aecb75" id="opt96" style="text-align:center;" class="label" value="29">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-6756b1f0" row="30" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-a12b8f3c" id="opt51" style="text-align:center;" class="label" value="외부 콘텐츠 구성">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-d7baa817" row="30" col="1" rowspan="4" colspan="1"/>
+          </cl:output>
+          <cl:output std:sid="output-e9ce5e2a" id="opt49" class="label" value="임베디드 앱">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-4c58f067" row="30" col="2"/>
+          </cl:output>
+          <cl:embeddedapp std:sid="e-app-2d18a662" id="embapp" src="A3-5sample.clx">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-36295c9f" row="30" col="3"/>
+          </cl:embeddedapp>
+          <cl:output std:sid="output-158eb4f0" id="opt143" value="다른 앱을 포함할 수 있는 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-e5c3167b" row="30" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-6a93c3df" id="opt97" style="text-align:center;" class="label" value="30">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-0dcdd359" row="31" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-394d6bff" id="opt50" class="label" value="임베디드 페이지">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-36332437" row="31" col="2"/>
+          </cl:output>
+          <cl:embeddedpage std:sid="e-page-ea9b1cf8" id="embpage1" src="A3-5sample.html">
+            <cl:listener std:sid="listener-87a6ea8b" name="load" handler="onEmbpage1Load"/>
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-6736697e" row="31" col="3"/>
+          </cl:embeddedpage>
+          <cl:output std:sid="output-e9af4296" id="opt144" value="다른 웹페이지를 포함할 수 있는 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-549ba57e" row="31" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-a756668c" id="opt98" style="text-align:center;" class="label" value="31">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-11999bdc" row="32" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-74777c63" id="opt52" class="label" value="쉘">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-e76ec80b" row="32" col="2"/>
+          </cl:output>
+          <cl:udc std:sid="ud-control-5d7ee5fe" id="cmnchart1" type="udc.cmn.chart.cmnChart">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-7bf4ee33" row="32" col="3"/>
+            <cl:property name="dataSet" value="dsArea" type="control"/>
+            <cl:property name="valueColNms" value="COLUMN2" type="string"/>
+            <cl:property name="categoryColNm" value="COLUMN1" type="string"/>
+          </cl:udc>
+          <cl:output std:sid="output-b2828d3c" id="opt145" value="Third-party widget을 포함할 수 있는 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-d1b2b3a4" row="32" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-4f3909d0" id="opt100" style="text-align:center;" class="label" value="32">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-bc015539" row="33" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-4cf193fe" id="opt53" class="label" value="HTML 오브젝트">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-27a3a6ae" row="33" col="2"/>
+          </cl:output>
+          <cl:htmlobject std:sid="htmlobject-380e1c58" id="hobj1" data="https://edu.tomatosystem.co.kr/">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-3719146b" row="33" col="3"/>
+          </cl:htmlobject>
+          <cl:output std:sid="output-8cf51e84" id="opt146" value="외부 리소스 및 문서를 포함할 수 있는 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-1551348a" row="33" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-31a9ae47" id="opt99" style="text-align:center;" class="label" value="33">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-067433c4" row="34" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-2edce221" id="opt36" style="text-align:center;" class="label" value="다중 콘텐츠 구성">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-dd3f38a6" row="34" col="1" rowspan="3" colspan="1"/>
+          </cl:output>
+          <cl:output std:sid="output-0f0f9602" id="opt37" class="label" value="탭 폴더">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-3dd97253" row="34" col="2"/>
+          </cl:output>
+          <cl:tabfolder std:sid="t-folder-553dbd19" id="tab1">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-3b6a3833" row="34" col="3"/>
+            <cl:tabitem std:sid="t-item-1558c06e" selected="true" text="tab1">
+              <cl:group std:sid="group-35946d62" id="grp3">
+                <std:metadata>
+                  <std:property key="locked" value="true"/>
+                </std:metadata>
+                <cl:output std:sid="output-6d49a2a6" id="opt174" style="text-align:center;" value="Content1">
+                  <cl:xylayoutdata std:sid="xyl-data-166a0100" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+                </cl:output>
+                <cl:xylayout std:sid="xylayout-a1780b98"/>
+              </cl:group>
+            </cl:tabitem>
+            <cl:tabitem std:sid="t-item-3fee48b9" text="tab 2">
+              <cl:group std:sid="group-50ce60b3" id="grp11">
+                <std:metadata>
+                  <std:property key="locked" value="true"/>
+                </std:metadata>
+                <cl:output std:sid="output-26a5fe86" id="opt175" style="text-align:center;" value="Content2">
+                  <cl:xylayoutdata std:sid="xyl-data-77928fea" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+                </cl:output>
+                <cl:xylayout std:sid="xylayout-d7ddfaf6"/>
+              </cl:group>
+            </cl:tabitem>
+            <cl:tabitem std:sid="t-item-8535ecc5" text="tab 3">
+              <std:metadata>
+                <std:property key="is-active-item" value="true"/>
+              </std:metadata>
+              <cl:group std:sid="group-7a419318" id="grp12">
+                <std:metadata>
+                  <std:property key="locked" value="true"/>
+                </std:metadata>
+                <cl:output std:sid="output-d50b9739" id="opt176" style="text-align:center;" value="Content3">
+                  <cl:xylayoutdata std:sid="xyl-data-727b048d" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+                </cl:output>
+                <cl:xylayout std:sid="xylayout-022dace2"/>
+              </cl:group>
+            </cl:tabitem>
+          </cl:tabfolder>
+          <cl:output std:sid="output-3d6ce7b7" id="opt147" value="여러 페이지를 탭으로 표시하는 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-4288a052" row="34" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-b036a973" id="opt101" style="text-align:center;" class="label" value="34">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-ca782a90" row="35" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-1570b91c" id="opt39" class="label" value="MDI 폴터">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-59787d4e" row="35" col="2"/>
+          </cl:output>
+          <cl:mdifolder std:sid="mdifolder-38cf9a9b" id="mdi1" headerarrowvisible="hide">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-5cefcedb" row="35" col="3"/>
+            <cl:tabitem std:sid="t-item-c4316a07" selected="true" text="mdi1">
+              <std:metadata>
+                <std:property key="is-active-item" value="true"/>
+              </std:metadata>
+              <cl:group std:sid="group-c8ee5e46" id="grp13">
+                <std:metadata>
+                  <std:property key="locked" value="true"/>
+                </std:metadata>
+                <cl:output std:sid="output-24e91f30" id="opt177" style="text-align:center;" value="app1">
+                  <cl:xylayoutdata std:sid="xyl-data-2aac5cdc" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+                </cl:output>
+                <cl:xylayout std:sid="xylayout-034e3550"/>
+              </cl:group>
+            </cl:tabitem>
+            <cl:tabitem std:sid="t-item-bfa5539d" text="mdi2">
+              <cl:group std:sid="group-7a309bb0" id="grp14">
+                <std:metadata>
+                  <std:property key="locked" value="true"/>
+                </std:metadata>
+                <cl:output std:sid="output-2b4c1e99" id="opt178" style="text-align:center;" value="App2">
+                  <cl:xylayoutdata std:sid="xyl-data-c4f186a1" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+                </cl:output>
+                <cl:xylayout std:sid="xylayout-4a6d3306"/>
+              </cl:group>
+            </cl:tabitem>
+          </cl:mdifolder>
+          <cl:output std:sid="output-bc3e88ff" id="opt148" value="여러 페이지 및 앱을 탭으로 표시하는 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-19e191e8" row="35" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-d14cf05e" id="opt102" style="text-align:center;" class="label" value="35">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-eac4a7ae" row="36" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-e84405f8" id="opt38" class="label" value="아코디언">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-5f3be149" row="36" col="2"/>
+          </cl:output>
+          <cl:accordion std:sid="accordion-d5ebf516" id="acd1">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-a823c9c9" row="36" col="3"/>
+            <cl:sectionitem std:sid="s-item-d58ecccb" selected="true" title="acd1">
+              <std:metadata>
+                <std:property key="is-active-item" value="true"/>
+              </std:metadata>
+              <cl:group std:sid="group-2b8ddf99" id="grp4">
+                <std:metadata>
+                  <std:property key="locked" value="true"/>
+                </std:metadata>
+                <cl:output std:sid="output-6cca9815" id="opt179" style="text-align:center;" value="Content1">
+                  <cl:xylayoutdata std:sid="xyl-data-f48a951c" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+                </cl:output>
+                <cl:xylayout std:sid="xylayout-8994856f"/>
+              </cl:group>
+            </cl:sectionitem>
+            <cl:sectionitem std:sid="s-item-6568a973" title="acd2">
+              <cl:group std:sid="group-e8a7923a" id="grp5">
+                <std:metadata>
+                  <std:property key="locked" value="true"/>
+                </std:metadata>
+                <cl:output std:sid="output-86a2edf3" id="opt180" style="text-align:center;" value="Content1">
+                  <cl:xylayoutdata std:sid="xyl-data-b4f2202e" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+                </cl:output>
+                <cl:xylayout std:sid="xylayout-2e681d98"/>
+              </cl:group>
+            </cl:sectionitem>
+          </cl:accordion>
+          <cl:output std:sid="output-af0d1604" id="opt149" value="여러 페이지를 슬라이드로 표시하는 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-29474fc4" row="36" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-937f9718" id="opt103" style="text-align:center;" class="label" value="36">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-9f63f130" row="37" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-6ffa156b" id="opt56" style="text-align:center;" class="label" value="특수표현">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-766ca5f6" row="37" col="1" rowspan="3" colspan="1"/>
+          </cl:output>
+          <cl:output std:sid="output-a0cbd230" id="opt58" class="label" value="알림">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-cb7248ca" row="37" col="2"/>
+          </cl:output>
+          <cl:group std:sid="group-7957b5ba" id="grp15">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-42b91a77" row="37" col="3"/>
+            <cl:group std:sid="group-7a3a2d50" id="grp16" class="cl-notifier-item cl-notifier-default m-0">
+              <cl:formdata std:sid="f-data-a8c807c2" row="0" col="0"/>
+              <cl:group std:sid="group-d389721c" id="grp17" class="cl-notifier-icon cl-notifier-default-icon">
+                <cl:xylayoutdata std:sid="xyl-data-24157737" left="0px" width="24px" height="24px" horizontalAnchor="LEFT" verticalAnchor="CENTER"/>
+                <cl:xylayout std:sid="xylayout-39f22b61"/>
+              </cl:group>
+              <cl:output std:sid="output-a1fbbd71" id="opt189" value="메세지를 입력하세요">
+                <cl:xylayoutdata std:sid="xyl-data-175915d3" right="17px" left="24px" height="19px" horizontalAnchor="BOTH" verticalAnchor="CENTER"/>
+              </cl:output>
+              <cl:group std:sid="group-23bf56cd" id="grp18" class="cl-notifier-closebutton">
+                <cl:xylayoutdata std:sid="xyl-data-54f866a2" right="0px" width="16px" height="16px" horizontalAnchor="RIGHT" verticalAnchor="CENTER"/>
+                <cl:xylayout std:sid="xylayout-b5686e3b"/>
+              </cl:group>
+              <cl:xylayout std:sid="xylayout-3e5e3d0b" scrollable="false"/>
+            </cl:group>
+            <cl:group std:sid="group-2f4651a0" id="grp19" class="cl-notifier-item cl-notifier-info m-0">
+              <cl:formdata std:sid="f-data-0927a931" row="1" col="0"/>
+              <cl:group std:sid="group-f3a43bb7" id="grp20" class="cl-notifier-icon cl-notifier-info-icon">
+                <cl:xylayoutdata std:sid="xyl-data-2660b7f0" left="0px" width="24px" height="24px" horizontalAnchor="LEFT" verticalAnchor="CENTER"/>
+                <cl:xylayout std:sid="xylayout-fa2f0fce"/>
+              </cl:group>
+              <cl:output std:sid="output-35ee15df" id="opt190" value="메세지를 입력하세요">
+                <cl:xylayoutdata std:sid="xyl-data-f2df1e0a" right="17px" left="24px" height="19px" horizontalAnchor="BOTH" verticalAnchor="CENTER"/>
+              </cl:output>
+              <cl:group std:sid="group-f59aa7d6" id="grp21" class="cl-notifier-closebutton">
+                <cl:xylayoutdata std:sid="xyl-data-ef0f3392" right="0px" width="16px" height="16px" horizontalAnchor="RIGHT" verticalAnchor="CENTER"/>
+                <cl:xylayout std:sid="xylayout-153e4f45"/>
+              </cl:group>
+              <cl:xylayout std:sid="xylayout-9deee939" scrollable="false"/>
+            </cl:group>
+            <cl:group std:sid="group-422234a6" id="grp22" class="cl-notifier-item cl-notifier-success m-0">
+              <cl:formdata std:sid="f-data-06f391b7" row="2" col="0"/>
+              <cl:group std:sid="group-72d74896" id="grp25" class="cl-notifier-icon cl-notifier-success-icon">
+                <cl:xylayoutdata std:sid="xyl-data-ae544461" left="0px" width="24px" height="24px" horizontalAnchor="LEFT" verticalAnchor="CENTER"/>
+                <cl:xylayout std:sid="xylayout-82e89a82"/>
+              </cl:group>
+              <cl:output std:sid="output-68914f7c" id="opt191" value="메세지를 입력하세요">
+                <cl:xylayoutdata std:sid="xyl-data-bbef74dd" right="17px" left="24px" height="19px" horizontalAnchor="BOTH" verticalAnchor="CENTER"/>
+              </cl:output>
+              <cl:group std:sid="group-7c15759e" id="grp26" class="cl-notifier-closebutton">
+                <cl:xylayoutdata std:sid="xyl-data-c6590226" right="0px" width="16px" height="16px" horizontalAnchor="RIGHT" verticalAnchor="CENTER"/>
+                <cl:xylayout std:sid="xylayout-44b9cbbc"/>
+              </cl:group>
+              <cl:xylayout std:sid="xylayout-25356354" scrollable="false"/>
+            </cl:group>
+            <cl:group std:sid="group-ade469d2" id="grp27" class="cl-notifier-item cl-notifier-warning m-0">
+              <cl:formdata std:sid="f-data-fe33e75e" row="3" col="0"/>
+              <cl:group std:sid="group-4bc1764f" id="grp28" class="cl-notifier-icon cl-notifier-warning-icon">
+                <cl:xylayoutdata std:sid="xyl-data-554d4cf6" left="0px" width="24px" height="24px" horizontalAnchor="LEFT" verticalAnchor="CENTER"/>
+                <cl:xylayout std:sid="xylayout-7a36f4a6"/>
+              </cl:group>
+              <cl:output std:sid="output-fc15f2b7" id="opt192" value="메세지를 입력하세요">
+                <cl:xylayoutdata std:sid="xyl-data-247239b0" right="17px" left="24px" height="19px" horizontalAnchor="BOTH" verticalAnchor="CENTER"/>
+              </cl:output>
+              <cl:group std:sid="group-70216752" id="grp29" class="cl-notifier-closebutton">
+                <cl:xylayoutdata std:sid="xyl-data-d6548cce" right="0px" width="16px" height="16px" horizontalAnchor="RIGHT" verticalAnchor="CENTER"/>
+                <cl:xylayout std:sid="xylayout-58263a79"/>
+              </cl:group>
+              <cl:xylayout std:sid="xylayout-ab885adf" scrollable="false"/>
+            </cl:group>
+            <cl:group std:sid="group-6e6410a1" id="grp30" class="cl-notifier-item cl-notifier-danger m-0">
+              <cl:formdata std:sid="f-data-a6cd0890" row="4" col="0"/>
+              <cl:group std:sid="group-02b31ed3" id="grp31" class="cl-notifier-icon cl-notifier-danger-icon">
+                <cl:xylayoutdata std:sid="xyl-data-f942f389" left="0px" width="24px" height="24px" horizontalAnchor="LEFT" verticalAnchor="CENTER"/>
+                <cl:xylayout std:sid="xylayout-1b00291a"/>
+              </cl:group>
+              <cl:output std:sid="output-ca001e86" id="opt193" value="메세지를 입력하세요">
+                <cl:xylayoutdata std:sid="xyl-data-2a443558" right="17px" left="24px" height="19px" horizontalAnchor="BOTH" verticalAnchor="CENTER"/>
+              </cl:output>
+              <cl:group std:sid="group-177f6a65" id="grp32" class="cl-notifier-closebutton">
+                <cl:xylayoutdata std:sid="xyl-data-ff252d85" right="0px" width="16px" height="16px" horizontalAnchor="RIGHT" verticalAnchor="CENTER"/>
+                <cl:xylayout std:sid="xylayout-5195aea1"/>
+              </cl:group>
+              <cl:xylayout std:sid="xylayout-8d1af7aa" scrollable="false"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-e6b13ce3" scrollable="false" hspace="8px" vspace="8px" hseparatorwidth="1" vseparatorwidth="1">
+              <cl:rows length="40" unit="PIXEL"/>
+              <cl:rows length="40" unit="PIXEL"/>
+              <cl:rows length="40" unit="PIXEL"/>
+              <cl:rows length="40" unit="PIXEL"/>
+              <cl:rows length="40" unit="PIXEL"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:output std:sid="output-81937b1d" id="opt150" value="알림 표현하는 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-93e56129" row="37" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-7c27418f" id="opt104" style="text-align:center;" class="label" value="37">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-0f42cb13" row="38" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-64b896b5" id="opt57" class="label" value="슬라이더">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-7f88c7f4" row="38" col="2"/>
+          </cl:output>
+          <cl:slider std:sid="slider-911af231" id="sld1" value="50">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-4d95fc89" row="38" col="3"/>
+          </cl:slider>
+          <cl:output std:sid="output-2a2f853e" id="opt152" value="슬라이더 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-02424486" row="38" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-bddc8f90" id="opt106" style="text-align:center;" class="label" value="38">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-0cb58ce2" row="39" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-dad5f797" id="opt59" class="label" value="프로그레스">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-a9f3d844" row="39" col="2"/>
+          </cl:output>
+          <cl:progress std:sid="progress-f42e9c0b" id="pgr1" value="80" showtext="true" displayexp="text + &quot;%&quot;">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-0aeae780" row="39" col="3"/>
+          </cl:progress>
+          <cl:output std:sid="output-50504529" id="opt151" value="작업의 진행 상태를 시각적으로 표현하는 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-3f203142" row="39" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-af2aa28b" id="opt105" style="text-align:center;" class="label" value="39">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-36994c69" row="40" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-0cc73b0a" id="opt43" style="text-align:center;" class="label" value="그룹(레이아웃)">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-12475b56" row="40" col="1" rowspan="5" colspan="1"/>
+          </cl:output>
+          <cl:output std:sid="output-0ebd70f5" id="opt45" class="label" value="폼 레이아웃">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-00aa90a8" row="40" col="2"/>
+          </cl:output>
+          <cl:group std:sid="group-4792ec71" id="grp6">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-45ddf7f8" row="40" col="3"/>
+            <cl:output std:sid="output-54a69165" id="opt161" style="text-align:center;" class="bg-danger-dim" value="Area 1-1">
+              <cl:formdata std:sid="f-data-9ffbc0ee" row="0" col="0"/>
+            </cl:output>
+            <cl:output std:sid="output-2f055647" id="opt162" style="text-align:center;" class="bg-warning-dim" value="Area 1-2">
+              <cl:formdata std:sid="f-data-3672bd37" row="0" col="1"/>
+            </cl:output>
+            <cl:output std:sid="output-9023d302" id="opt163" style="text-align:center;" class="bg-info-dim" value="Area 2-1">
+              <cl:formdata std:sid="f-data-a4aa1a4e" row="1" col="0"/>
+            </cl:output>
+            <cl:output std:sid="output-e9fac7dd" id="opt164" style="text-align:center;" class="bg-success-dim" value="Area 2-2">
+              <cl:formdata std:sid="f-data-3523821e" row="1" col="1"/>
+            </cl:output>
+            <cl:formlayout std:sid="f-layout-303edbc1" scrollable="false">
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:output std:sid="output-d5a6ca2a" id="opt153" value="컨테이너에 컨트롤 배치를&#xD;&#xA;그리드 형식으로 할 수 있는 레이아웃">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-a91200b0" row="40" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-ebc4f374" id="opt107" style="text-align:center;" class="label" value="40">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-542ebf1e" row="41" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-a297aab0" id="opt46" class="label" value="버티컬레이아웃">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-6b629c67" row="41" col="2"/>
+          </cl:output>
+          <cl:group std:sid="group-9938e253" id="grp7">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-fda6afa0" row="41" col="3"/>
+            <cl:output std:sid="output-407aef1b" id="opt165" style="text-align:center;" class="bg-danger-dim" value="Area 1">
+              <cl:verticaldata std:sid="v-data-4eb715dc" width="175px" height="35px" autosize="none"/>
+            </cl:output>
+            <cl:output std:sid="output-d80042c1" id="opt166" style="text-align:center;" class="bg-warning-dim" value="Area 2">
+              <cl:verticaldata std:sid="v-data-8a442bbc" width="174px" height="35px" autosize="none"/>
+            </cl:output>
+            <cl:output std:sid="output-10d6d6cb" id="opt194" style="text-align:center;" class="bg-info-dim" value="Area 3">
+              <cl:verticaldata std:sid="v-data-d75aa1bd" width="80px" height="35px" autosize="none"/>
+            </cl:output>
+            <cl:verticallayout std:sid="v-layout-7c073e4e"/>
+          </cl:group>
+          <cl:output std:sid="output-1aaef869" id="opt155" value="컨트롤을 수직으로 배치할 수 있는 레이아웃">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-2bc8d1aa" row="41" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-c5522b32" id="opt108" style="text-align:center;" class="label" value="41">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-9b5ffb35" row="42" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-378f7539" id="opt47" class="label" value="플로우레이아웃">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-16c19b8d" row="42" col="2"/>
+          </cl:output>
+          <cl:group std:sid="group-43ca2add" id="grp8">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-ef26ee31" row="42" col="3"/>
+            <cl:output std:sid="output-6bc5dae6" id="opt167" style="text-align:center;" class="bg-danger-dim" value="Area 1">
+              <cl:flowlayoutdata std:sid="f-data-a3924620" width="80px" height="90px" autosize="none"/>
+            </cl:output>
+            <cl:output std:sid="output-e7aff29a" id="opt168" style="text-align:center;" class="bg-warning-dim" value="Area 2">
+              <cl:flowlayoutdata std:sid="f-data-7dedaa4f" width="80px" height="90px" autosize="none"/>
+            </cl:output>
+            <cl:output std:sid="output-0d0125bb" id="opt173" style="text-align:center;" class="bg-info-dim" value="Area 3">
+              <cl:flowlayoutdata std:sid="f-data-c8aa7ec6" width="80px" height="90px" autosize="none"/>
+            </cl:output>
+            <cl:flowlayout std:sid="f-layout-1c7331af"/>
+          </cl:group>
+          <cl:output std:sid="output-3d2ed324" id="opt154" value="컨트롤을 수평으로 배치할 수 있는 레이아웃입니다">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-26c5c9dd" row="42" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-1de457c1" id="opt109" style="text-align:center;" class="label" value="42">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-1b2278c7" row="43" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-21f9c7e2" id="opt44" class="label" value="XY 레이아웃">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-0969c529" row="43" col="2"/>
+          </cl:output>
+          <cl:group std:sid="group-1442f0c4" id="grp9">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-3a7509e3" row="43" col="3"/>
+            <cl:output std:sid="output-6c6d571a" id="opt169" style="text-align:center;" class="bg-danger-dim" value="Area 1">
+              <cl:xylayoutdata std:sid="xyl-data-bc60a922" top="0px" bottom="0px" left="0px" width="85px" horizontalAnchor="LEFT" verticalAnchor="BOTH"/>
+            </cl:output>
+            <cl:output std:sid="output-2a721414" id="opt170" style="text-align:center;" class="bg-warning-dim" value="Area 2">
+              <cl:xylayoutdata std:sid="xyl-data-4c979fe0" top="0px" left="85px" width="140px" height="100px" horizontalAnchor="LEFT" verticalAnchor="TOP"/>
+            </cl:output>
+            <cl:output std:sid="output-51de95f7" id="opt171" style="text-align:center;" class="bg-info-dim" value="Area 3">
+              <cl:xylayoutdata std:sid="xyl-data-d999b7b4" right="0px" bottom="0px" left="85px" height="35px" horizontalAnchor="BOTH" verticalAnchor="BOTTOM"/>
+            </cl:output>
+            <cl:output std:sid="output-b1603696" id="opt172" style="text-align:center;" class="bg-success-dim" value="Area 4">
+              <cl:xylayoutdata std:sid="xyl-data-261648de" top="0px" right="0px" bottom="35px" left="226px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+            </cl:output>
+            <cl:xylayout std:sid="xylayout-5d8ccd04"/>
+          </cl:group>
+          <cl:output std:sid="output-f3ccf877" id="opt156" value="컨테이너에 포함된 컨트롤들이&#xD;&#xA;top, right, bottom, left에 위치값을 갖는 레이아웃">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-3d46fe8b" row="43" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-5b3060fe" id="opt110" style="text-align:center;" class="label" value="43">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-4ceb59f7" row="44" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-c78170ae" id="opt48" class="label" value="반응형 XY 레이아웃">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-4e5e245c" row="44" col="2"/>
+          </cl:output>
+          <cl:group std:sid="group-35149e17" id="grp10">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-b7ab43e2" row="44" col="3"/>
+            <cl:output std:sid="output-af0c09c9" id="opt185" style="text-align:center;" class="bg-danger-dim" value="Area 1">
+              <cl:responsivexylayoutdata std:sid="rxyl-data-669bee94">
+                <cl:xylayoutdata std:sid="sxyl-data-4e24417e" top="0px" bottom="0px" left="0px" width="131px" horizontalAnchor="LEFT" verticalAnchor="BOTH" screenid="EXB-FULL"/>
+              </cl:responsivexylayoutdata>
+            </cl:output>
+            <cl:output std:sid="output-edad01ec" id="opt187" style="text-align:center;" class="bg-warning-dim" value="Area 2">
+              <cl:responsivexylayoutdata std:sid="rxyl-data-180533eb">
+                <cl:xylayoutdata std:sid="sxyl-data-a35f7a1a" top="0px" left="131px" width="216px" height="100px" horizontalAnchor="LEFT" verticalAnchor="TOP" screenid="EXB-FULL"/>
+              </cl:responsivexylayoutdata>
+            </cl:output>
+            <cl:output std:sid="output-dea706ff" id="opt186" style="text-align:center;" class="bg-info-dim" value="Area 3">
+              <cl:responsivexylayoutdata std:sid="rxyl-data-3afb4568">
+                <cl:xylayoutdata std:sid="sxyl-data-98f419c6" right="0px" bottom="0px" left="131px" height="35px" horizontalAnchor="BOTH" verticalAnchor="BOTTOM" screenid="EXB-FULL"/>
+              </cl:responsivexylayoutdata>
+            </cl:output>
+            <cl:output std:sid="output-0dd7a5c6" id="opt188" style="text-align:center;" class="bg-success-dim" value="Area 4">
+              <cl:responsivexylayoutdata std:sid="rxyl-data-1dac109e">
+                <cl:xylayoutdata std:sid="sxyl-data-1eac4060" top="0px" right="0px" bottom="35px" left="349px" horizontalAnchor="BOTH" verticalAnchor="BOTH" screenid="EXB-FULL"/>
+              </cl:responsivexylayoutdata>
+            </cl:output>
+            <cl:responsivexylayout std:sid="r-xylayout-3759a383"/>
+          </cl:group>
+          <cl:output std:sid="output-f1b87ef1" id="opt157" value="스크린 사이즈에 따라 컨테이너에 포함된 컨트롤들의 레이아웃을 변경 가능한 레이아웃">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-9ab44fcf" row="44" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-6f6518de" id="opt111" style="text-align:center;" class="label" value="44">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-9783d39b" row="45" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-0c306789" id="opt69" class="label" value="데이터">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-2941757c" row="45" col="1" rowspan="3" colspan="1"/>
+          </cl:output>
+          <cl:output std:sid="output-0d9f6ab6" id="opt72" class="label" value="데이터 맵">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-424fdf0c" row="45" col="2"/>
+          </cl:output>
+          <cl:img std:sid="image-498ce0ca" id="img2" src="data/image/dm.png">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-e72b05f3" halign="CENTER" width="152" row="45" col="3"/>
+          </cl:img>
+          <cl:output std:sid="output-8439b62e" id="opt160" value="데이터를 1차원 배열로 가지고 있는 데이터 객체">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-8c1a49ef" row="45" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-fa12f38c" id="opt112" style="text-align:center;" class="label" value="45">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-b26e9c71" row="46" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-062fee87" id="opt70" class="label" value="데이터 셋">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-ca13d859" row="46" col="2"/>
+          </cl:output>
+          <cl:img std:sid="image-5dc74be0" id="img3" src="data/image/ds.png">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-a811cef2" halign="CENTER" width="152" row="46" col="3"/>
+          </cl:img>
+          <cl:output std:sid="output-d8d69583" id="opt158" value="데이터를 2차원 배열로 가지고 있는 데이터 객체">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-659217aa" row="46" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-a724bd3c" id="opt115" style="text-align:center;" class="label" value="46">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-0507ba10" row="47" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-aeea3bbc" id="opt71" class="label" value="데이터 뷰">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-bb4cbb23" row="47" col="2"/>
+          </cl:output>
+          <cl:img std:sid="image-550bc765" id="img4" src="data/image/dv.png">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-af923c9e" halign="CENTER" width="152" row="47" col="3"/>
+          </cl:img>
+          <cl:output std:sid="output-96819856" id="opt159" value="데이터 셋을 복제한 가상의 독립적인 데이터 객체">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-f6c82dda" row="47" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-aae8b460" id="opt181" style="text-align:center;" class="label" value="47">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-d84efa6c" row="48" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-7a133589" id="opt182" class="label" value="통신 프로토콜">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-2f28dbf0" row="48" col="1" rowspan="2" colspan="1"/>
+          </cl:output>
+          <cl:output std:sid="output-879d3c04" id="opt183" class="label" value="서브미션">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-6cd8819b" row="48" col="2"/>
+          </cl:output>
+          <cl:img std:sid="image-b9fbe044" id="img5" src="data/image/submit.png">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-e81109ac" halign="CENTER" width="152" row="48" col="3"/>
+          </cl:img>
+          <cl:output std:sid="output-2e0dc792" id="opt184" value="통신을 처리하기 위한 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-536355df" row="48" col="4"/>
+          </cl:output>
+          <cl:output std:sid="output-755a0d68" id="opt195" style="text-align:center;" class="label" value="48">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="hide-on-mobile" value="true"/>
+            <cl:attribute name="hide-on-tablet" value="true"/>
+            <cl:formdata std:sid="f-data-4c3b3fa5" row="49" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-c91a1e9b" id="opt196" class="label" value="매트릭스 서브미션">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-0f54e9aa" row="49" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-340e1c00" id="opt197" value="비정형적인 데이터를 통신할 수 있는 컨트롤">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-55b3a9b5" row="49" col="4"/>
+          </cl:output>
+          <cl:img std:sid="image-d7fb81b2" id="img6" src="data/image/matrixSubmit.png">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-1362d348" halign="CENTER" width="152" row="49" col="3"/>
+          </cl:img>
+          <cl:formlayout std:sid="f-layout-eae5e2eb" scrollable="false" hspace="16px" vspace="17px" top-margin="8px" right-margin="8px" bottom-margin="8px" left-margin="8px" hseparatorwidth="1" hseparatortype="BY_CLASS" vseparatorwidth="1" vseparatortype="BY_CLASS">
+            <cl:rows length="28" unit="PIXEL" autoSizing="true" shadetype="BY_CLASS" shadecolor="transparent"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true"/>
+            <cl:rows length="28" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="28" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="28" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="86" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" minlength="200" syncminlength="false"/>
+            <cl:rows length="28" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="50" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="150" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="60" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="60" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="60" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="60" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="100" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="60" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="28" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="90" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="90" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="60" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="100" unit="PIXEL" autoSizing="false" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="100" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="300" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="235" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="100" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="100" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="150" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="235" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+            <cl:rows length="28" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="100" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="100" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="90" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="100" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="100" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="136" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="136" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="136" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="136" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="136" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+            <cl:columns length="40" unit="PIXEL" autoSizing="true" shadetype="BY_CLASS"/>
+            <cl:columns length="100" unit="PIXEL" shadetype="BY_CLASS" syncminlength="false"/>
+            <cl:columns length="100" unit="PIXEL" autoSizing="true" shadetype="BY_CLASS" syncminlength="false"/>
+            <cl:columns length="3" unit="FRACTION"/>
+            <cl:columns length="2" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-63c3bf60" scrollable="false" spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-4167ee7a" spacing="16"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-5f3cdbe3" spacing="16" leftmargin="24" rightmargin="24" topmargin="16" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

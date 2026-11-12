@@ -1,0 +1,68 @@
+/************************************************
+ * udcCmnEmail.js
+ * Created at 2026. 5. 18. 오후 6:58:43.
+ *
+ * @author dyseo
+ ************************************************/
+
+/**
+ * UDC 컨트롤이 그리드의 뷰 모드에서 표시할 텍스트를 반환합니다.
+ */
+exports.getText = function(){
+	// TODO: 그리드의 뷰 모드에서 표시할 텍스트를 반환하는 하는 코드를 작성해야 합니다.
+	return "";
+};
+
+/*
+ * 루트 컨테이너에서 property-change 이벤트 발생 시 호출.
+ * 앱의 속성이 변경될 때 발생하는 이벤트 입니다.
+ */
+function onBodyPropertyChange(e) {
+	if(e.property == "visibleDomainSelecter") {
+		var voLayout =app.getContainer().getLayout();
+		switch(e.newValue){
+			case "input" :
+				voLayout.setColumnVisible(2, true);
+				voLayout.setColumnVisible(3, false);
+				break;
+			case "combo" :
+				voLayout.setColumnVisible(2, false);
+				voLayout.setColumnVisible(3, true);
+				var vcCmbDomain = app.lookup("cmbDomain");
+				vcCmbDomain.deleteItemByValue("value1");
+				break;
+			case "both" :
+				voLayout.setColumnVisible(2, true);
+				voLayout.setColumnVisible(3, true);
+				break;
+		}
+	}
+}
+
+/*
+ * 콤보 박스에서 selection-change 이벤트 발생 시 호출.
+ * ComboBox Item을 선택하여 선택된 값이 저장된 후에 발생하는 이벤트.
+ */
+function onComboBoxSelectionChange(e) {
+	var comboBox = e.control;
+	
+	var vcIpbDomain = app.lookup("ipbDomain");
+	var vsSelection = e.newSelection[0].value;
+	if(vsSelection == "value1") {
+		vcIpbDomain.value = "";
+		vcIpbDomain.focus();
+	} else {
+		vcIpbDomain.value = vsSelection;
+	}
+}
+
+/*
+ * 루트 컨테이너에서 load 이벤트 발생 시 호출.
+ * 앱이 최초 구성된후 최초 랜더링 직후에 발생하는 이벤트 입니다.
+ */
+function onBodyLoad(e) {
+	if(app.getAppProperty("visibleDomainSelecter") == "combo") {
+		var vcCmbDomain = app.lookup("cmbDomain");
+		vcCmbDomain.deleteItemByValue("value1");
+	}
+}

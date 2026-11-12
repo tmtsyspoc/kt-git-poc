@@ -1,0 +1,46 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-b50035dd" version="1.0.6087">
+  <head std:sid="head-29525848">
+    <screen std:sid="screen-22cfa150" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-e49428d2" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-b0f5e2a7" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-450b3e52"/>
+    <cl:appspec title="주소 검색">
+      <cl:property name="zipCd" type="string" bindable="true"/>
+      <cl:property name="addr1" type="string" bindable="true"/>
+      <cl:property name="addr2" type="string" bindable="true"/>
+      <cl:property name="visibleAddress1" type="boolean" default="false" bindable="true"/>
+      <cl:property name="visibleAddress2" type="boolean" default="false" bindable="true"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-2e88b114" style="top:0px; left:0px; width:500px; height:30px;">
+    <cl:listener std:sid="listener-6594b721" name="property-change" handler="onBodyPropertyChange"/>
+    <cl:searchinput std:sid="s-input-d7d0eb3a" id="schAddr" value="주소찾기" hidesearchbutton="true">
+      <cl:apppropbind property="value" app-property="zipCd"/>
+      <cl:formdata std:sid="f-data-a1b68aee" row="0" col="0"/>
+    </cl:searchinput>
+    <cl:button std:sid="button-e8d5330b" class="primary btn-search" value="" icon="0">
+      <cl:listener std:sid="listener-64c9d30b" name="click" handler="onButtonClick"/>
+      <cl:formdata std:sid="f-data-d5a5b6de" row="0" col="1"/>
+    </cl:button>
+    <cl:inputbox std:sid="i-box-58a2f1be">
+      <cl:apppropbind property="value" app-property="addr1"/>
+      <cl:formdata std:sid="f-data-bef05b24" row="0" col="2"/>
+    </cl:inputbox>
+    <cl:inputbox std:sid="i-box-e67b9887">
+      <cl:apppropbind property="value" app-property="addr2"/>
+      <cl:formdata std:sid="f-data-d27c1e51" row="0" col="3"/>
+    </cl:inputbox>
+    <cl:formlayout std:sid="f-layout-dcfe2fb4" scrollable="false" hspace="4px" vspace="4px" top-margin="1fr" right-margin="0px" bottom-margin="1fr" left-margin="0px">
+      <cl:rows length="30" unit="PIXEL"/>
+      <cl:columns length="1" unit="FRACTION"/>
+      <cl:columns length="50" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      <cl:columns length="1" unit="FRACTION" hidden="true"/>
+      <cl:columns length="2" unit="FRACTION" hidden="true"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

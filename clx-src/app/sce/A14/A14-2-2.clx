@@ -26,10 +26,10 @@
           <cl:datacolumn comment="주민등록번호" std:sid="d-column-8ede22d1" name="RRN"/>
           <cl:datacolumn comment="성별" std:sid="d-column-d024703f" name="GNDR_SECD"/>
           <cl:datacolumn comment="나이" std:sid="d-column-d79b859d" name="PRCMPAG"/>
-          <cl:datacolumn comment="상령일(등록일자)" std:sid="d-column-14ad289f" name="RGDT"/>
+          <cl:datacolumn comment="등록일자" std:sid="d-column-14ad289f" name="RGDT"/>
           <cl:datacolumn comment="주피와의 관계" std:sid="d-column-848c4718" name="JUPI_RELA"/>
           <cl:datacolumn comment="직업" std:sid="d-column-b2fe05c1" name="CPNM"/>
-          <cl:datacolumn comment="운전" std:sid="d-column-0ec5e5e7" name="DRVG_SENM"/>
+          <cl:datacolumn comment="운전여부" std:sid="d-column-0ec5e5e7" name="DRVG_SENM"/>
         </cl:datacolumnlist>
         <cl:datarowlist/>
       </cl:dataset>

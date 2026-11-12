@@ -1,0 +1,37 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-3ebb14f6" version="1.0.4221">
+  <head std:sid="head-2b8cc41c">
+    <screen std:sid="screen-c6175f43" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-afba710e" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-98e54235" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="375"/>
+    <cl:model std:sid="model-f3897586"/>
+    <cl:appspec title="판매자검색 컴포넌트">
+      <cl:property name="SELLER_NM" type="string" bindable="true" std:desc="[String] 판매자명"/>
+      <cl:property name="SELLER_NO" type="number" bindable="true" std:desc="[Number] 판매자 번호"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-5cda2741" style="top:0px; left:0px; width:205px; height:26px;">
+    <cl:inputbox std:sid="i-box-4518e705" id="ipbNm" fieldLabel="판매자명">
+      <cl:apppropbind property="value" app-property="SELLER_NM"/>
+      <cl:formdata std:sid="f-data-2b2ccb80" row="0" col="0"/>
+    </cl:inputbox>
+    <cl:button std:sid="button-fb2f2bf9" id="btnSearch" style="padding-left:0px; padding-right:0px;" class="btn-search-secondary icon border" fieldLabel="판매자 검색" value="" icon="0">
+      <cl:formdata std:sid="f-data-377bb955" row="0" col="1"/>
+    </cl:button>
+    <cl:numbereditor std:sid="n-editor-3fadc0df" id="nbeSellerNo" class="text-center" fieldLabel="판매자번호" format="#0">
+      <cl:apppropbind property="value" app-property="SELLER_NO"/>
+      <cl:formdata std:sid="f-data-91bcba0e" row="0" col="2"/>
+    </cl:numbereditor>
+    <cl:formlayout std:sid="f-layout-eb2817a3" scrollable="false">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="87" unit="PIXEL"/>
+      <cl:columns length="28" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+      <cl:columns length="80" unit="PIXEL"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

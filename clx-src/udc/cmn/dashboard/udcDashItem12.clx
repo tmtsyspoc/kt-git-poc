@@ -1,0 +1,62 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-c519e8df" version="1.0.6087">
+  <head std:sid="head-b890bc2f">
+    <screen std:sid="screen-81ae2583" id="default" name="default" width="1640px" height="984px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="2216" active="true"/>
+    <screen std:sid="screen-62b5dcac" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-ae27daaa" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-6a10e580"/>
+    <cl:appspec title="파이 차트">
+      <cl:event name="resize" type="cpr.events.CUIEvent"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-865be414" style="top:0px; left:0px; width:600px; height:600px;">
+    <cl:attribute name="mobile-index" value="4"/>
+    <cl:attribute name="tablet-index" value="4"/>
+    <cl:group std:sid="group-c50b2fa4" class="group border" clipcontent="false">
+      <cl:attribute name="needs-auto-height" value="true"/>
+      <cl:formdata std:sid="f-data-ce0f483d" width="676" height="25" row="0" col="0"/>
+      <cl:group std:sid="group-fea09f2c" clipcontent="false">
+        <cl:formdata std:sid="f-data-77cd8e5d" row="0" col="0" rowspan="1" colspan="1"/>
+        <cl:output std:sid="output-8ee7c11b" class="tit-blue" value="회선 개통 오더 현황">
+          <cl:formdata std:sid="f-data-064b21ce" row="0" col="0"/>
+        </cl:output>
+        <cl:formlayout std:sid="f-layout-b3b05b32" scrollable="false" hspace="16px" vspace="16px" top-margin="16px" right-margin="16px" bottom-margin="0px" left-margin="16px">
+          <cl:rows length="1" unit="FRACTION" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:group std:sid="group-741f7f9a" style="border-radius:12px;">
+        <cl:formdata std:sid="f-data-659caefe" row="1" col="0" rowspan="1" colspan="1"/>
+        <cl:group std:sid="group-d2076980" class="leader-status-board" clipcontent="false">
+          <cl:formdata std:sid="f-data-ada9bec0" row="0" col="0" rowspan="1" colspan="1"/>
+          <cl:uicontrolshell std:sid="uic-shell-0de66f9a" id="shl1">
+            <cl:listener std:sid="listener-a670c407" name="init" handler="onUIControlShellInit"/>
+            <cl:listener std:sid="listener-0065859b" name="load" handler="onUIControlShellLoad"/>
+            <cl:formdata std:sid="f-data-6024260a" row="0" col="0"/>
+          </cl:uicontrolshell>
+          <cl:formlayout std:sid="f-layout-260cf3eb" hspace="0px" vspace="16px">
+            <cl:rows length="1" unit="FRACTION" shadecolor="transparent" minlength="0"/>
+            <cl:columns length="1" unit="FRACTION" shadecolor="transparent" minlength="0"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-953fab6f" hspace="8px" vspace="16px">
+          <cl:rows length="1" unit="FRACTION" shadecolor="transparent" minlength="0"/>
+          <cl:columns length="1" unit="FRACTION" shadecolor="transparent"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-ca7ba5d0" hspace="8px" vspace="16px">
+        <cl:rows length="27" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+        <cl:rows length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent" minlength="250"/>
+        <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-41651c90" scrollable="false">
+      <cl:rows length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent" minlength="0"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

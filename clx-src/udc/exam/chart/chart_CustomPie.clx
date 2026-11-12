@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-e586e0b1" version="1.0.0.0">
+  <head std:sid="head-2581a1b9">
+    <title>chart_line</title>
+    <screen std:sid="screen-0ad8c47f" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-ba2f8e1e" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-1364fde8" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-b16b7ac3"/>
+    <cl:appspec title="커스텀 파이" dev-icon="iVBORw0KGgoAAAANSUhEUgAAACAAAAAcCAYAAAAAwr0iAAAD+klEQVR4nJWX+WtUVxTH5y/RijbGROOkmhCMoqFoiRYrSGoD/qJi6gL+IKRi6/pDCUpL6xLXSn8wCaIQTRRRsS6ZESNaIwrGjlMwEMcss2/JZPt6zs3cx3v3LfMy8A0z5N33/bxzzzn3PA/oMzU1ZdLk5KRBExMTJqnXqPdw8/E4GauG4+PjQk4wM4XwFDKXpqrGxsaEVCgVxDWAnbE0YuVyOZNUEAmjBykI4GQujUZHRzEyMiKUTSSQDAaRCPxngrGKiBOECUA1Z2NWNpXCsK8LH/74De92/4jehq34/+ghAcT/10BoXTQaQ5wgB4eGDRBWIJ5C5mwQffMawcMHhKleQQLIZrNaZPj6SDSqRcJNXpgAeHEo9Ek8RTgSwYDfpz2xCeDIQaTTaWQyGQGS4K1JpgzboW6FCuFRzfVPHvn3BXp3NViaswIHf0Z4YAAp2h7W0NCQAJFboodwBaA3T9PNAo17bc1Z/vo6/FJSjJMbvsPd5mbEKGIcDX1eSAirPmEAUJ++v+2yo7kA+KEOjV/Mwk95nfh2HQb7+pCmrVAh7KLgsQp/hm7wbs+uGQPsI52r/QYttWsQ7e+3jEJBAJH1r3oKmqsA++fMxrGieWheUIQzpO7TJ7USdsoFS4CBW52uAdj80Nw5+LP4S5wmSYBrm+q0bZAAudyYSFL+bQvACz62tTgav2Vt3wL/po1oKpqLU9JcB3CpugoRSspYjJpSPE7lmaQyTVKlDAswA4CahDFqPIP37+ElZXn3mho8/Xol/DUr4FtZja7lVXi0rBIPqpbibkU5WstKcL5k/rR5cZEG8PeKZaIiZB5YnREmAJasAl7c07ANXZXl6CKjR6SHFV48kFrqxe0li9G+uFSotawUF0qLhTmrfXO9oSeoABLC1Ij0AO9PnYCPAUiPBYRXQEiQW3mA60IL0e5diBYC4Yg8O3tGA1CT0BFAbgMvjtJp96S6chqigiG8AkKC3PyqDNfJVOpGXvy951iTeBCrjqg/IS3PAlkNDBH4/Tj8BOCrYAivgJgGKUcHAdwoX0SmizRzVgfpfVurbTd0DcBKhsN4Xv99HsIrIFgP6XcHmavqJL1q+hUjLvbfBMDi04xPQS6ZFJ104XAEyVAIr3fvEBAChPQPRaAzbyh1Z9VyBK9eMbRhq2PZAKAOJJx8MarbeDwhILSkpDrua72M5xvWCYDHtatxj1ru/fVr8WQnnZh/XUQoEND23e5IVickx5nQahzL8LHb/RQxSlA5B+iHEo6eHqDQUGI7lqs5oR/P7MTXiOqh7scdcJi2z6r/GwD4j9NoPtPp2K7k7N4VPPKLUyTU9wNpYjeSO5m7BrCCsHtZcfuWZDUVfwZQ0E832czORwAAAABJRU5ErkJggg==">
+      <cl:property name="dataSet" type="control"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-a9a7e635" style="top:0px; left:0px; width:300px; height:300px;" removeOnBuild="false">
+    <cl:uicontrolshell std:sid="uic-shell-6f65fe55" id="shl1">
+      <cl:listener std:sid="listener-9239d0ae" name="init" handler="onShl1Init"/>
+      <cl:listener std:sid="listener-e4eea1c1" name="load" handler="onShl1Load"/>
+      <cl:xylayoutdata std:sid="xyl-data-1d09ac1e" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+    </cl:uicontrolshell>
+    <cl:xylayout std:sid="xylayout-7618ab8f" scrollable="false"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

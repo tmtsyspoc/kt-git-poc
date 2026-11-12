@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-2cd78f3c" version="1.0.3167">
+  <head std:sid="head-f265b7fe">
+    <screen std:sid="screen-f9914be1" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-120e4b35" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-f5d3815e" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-72aa6f88"/>
+    <cl:appspec dev-description="화면상단에 스텝박스를 표시합니다." title="스텝화면박스">
+      <cl:property name="values" type="string" std:desc="스텝을 구성하는 텍스트"/>
+      <cl:property name="step" type="number" default="1" std:desc="현재 스탭"/>
+      <cl:property name="delimiter" type="string" default="," std:desc="values 구분자"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-4724d115" style="top:0px; left:0px; width:300px; height:300px;">
+    <cl:listener std:sid="listener-3302acd5" name="before-draw" handler="onBodyBeforeDraw"/>
+    <cl:group std:sid="group-8de42451" id="grpStep" class="stepProgressBox">
+      <cl:verticaldata std:sid="v-data-e1478966" width="82px" height="177px" autosize="height"/>
+      <cl:udc std:sid="ud-control-f3aeb789" type="udc.com.udcComStepItem">
+        <cl:flowlayoutdata std:sid="f-data-152ae6a0" width="150px" height="100px"/>
+      </cl:udc>
+      <cl:flowlayout std:sid="f-layout-d9431ece" scrollable="false" hspacing="0" vspacing="0" halign="center"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-b6fc8cc6" scrollable="false"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

@@ -1,0 +1,134 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-dd985209" version="1.0.6209">
+  <head std:sid="head-c1d7087d">
+    <screen std:sid="screen-ed130665" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-d5765691" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-f40ec368" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-d5dfe0bf">
+      <cl:dataset comment="프로세스 목록" std:sid="d-set-19ce8ea9" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="" std:sid="d-column-4dea290f" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-fc6f3ae0" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn comment="" std:sid="d-column-631769f1" name="SUB_TITLE"/>
+          <cl:datacolumn comment="" std:sid="d-column-9930e4e3" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-2725a6c6" name="CONT" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-8add761f" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-49fe6ffd" name="SUB_CODE"/>
+          <cl:datacolumn comment="" std:sid="d-column-6e4d1694" name="TARGET_CTRL"/>
+          <cl:datacolumn std:sid="d-column-d7ec6d73" name="TARGET_EMB"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[롤백·복구]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[이전 안정 버전으로 예측 가능한 시간 내 복구할 수 있어야 한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="[OPS-05]배포·롤백·복구"/>
+  </head>
+  <body std:sid="body-6b901aab" class="wrap">
+    <cl:udc std:sid="ud-control-a140a961" type="udc.com.udcComAppHeader">
+      <cl:verticaldata std:sid="v-data-5714db67" width="900px" height="28px"/>
+    </cl:udc>
+    <cl:group std:sid="group-c42b2a02" id="grpData" class="conts-area">
+      <cl:verticaldata std:sid="v-data-733f030b" width="1592px" height="903px" autosize="none" grow="1"/>
+      <cl:tabfolder std:sid="t-folder-3e6fb5af" id="tabMain" class="conts-area" headerarrowposition="both">
+        <cl:verticaldata std:sid="v-data-59d6e0d9" width="100px" height="100%" autosize="none" grow="1"/>
+        <cl:tabitem std:sid="t-item-5c74a853" selected="true" text="버전 관리">
+          <std:metadata>
+            <std:property key="is-active-item" value="true"/>
+          </std:metadata>
+          <cl:group std:sid="group-dcdfd422" id="grpTab1" class="conts-area">
+            <cl:group std:sid="group-618c2cec" class="conts-wrap">
+              <cl:formdata std:sid="f-data-547b211f" row="0" col="0" rowspan="1" colspan="1"/>
+              <cl:udc std:sid="ud-control-5be6c331" id="udcPocDocViewer1" type="udc.poc.udcPocDocViewer">
+                <cl:formdata std:sid="f-data-f33f1e22" row="0" col="0"/>
+                <cl:property name="fileUrl" value="../A13/data/docs/A13-2.png" type="resource"/>
+              </cl:udc>
+              <cl:formlayout std:sid="f-layout-3466d1ba" scrollable="false" hspace="8px" vspace="8px" top-margin="16px" right-margin="16px" bottom-margin="16px" left-margin="16px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-ba3aa28b" scrollable="false" hspace="16px" vspace="16px">
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
+        </cl:tabitem>
+        <cl:tabitem std:sid="t-item-d3accb2d" text="다중 사용자 협업">
+          <cl:group std:sid="group-1f5758ec" id="grpTab2" class="conts-area">
+            <cl:group std:sid="group-d322363b" class="conts-wrap">
+              <cl:formdata std:sid="f-data-ae4f36d5" row="0" col="0" rowspan="1" colspan="1"/>
+              <cl:udc std:sid="ud-control-edcb9400" id="udcPocDocViewer1_2" type="udc.poc.udcPocDocViewer">
+                <cl:formdata std:sid="f-data-0b5430ab" row="0" col="0"/>
+                <cl:property name="fileUrl" value="../A13/data/docs/A13-3.png" type="resource"/>
+              </cl:udc>
+              <cl:formlayout std:sid="f-layout-bcbbecc8" scrollable="false" hspace="0px" vspace="8px" top-margin="16px" right-margin="16px" bottom-margin="16px" left-margin="16px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-ed0bb772" scrollable="false" hspace="16px" vspace="16px">
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
+        </cl:tabitem>
+        <cl:tabitem std:sid="t-item-beb51151" text="코드 협업 도구 통합">
+          <cl:group std:sid="group-87aaf77c" id="grpTab3" class="conts-area">
+            <cl:group std:sid="group-588aeef1" class="conts-wrap">
+              <cl:formdata std:sid="f-data-a2eb7a4e" row="0" col="0" rowspan="1" colspan="1"/>
+              <cl:udc std:sid="ud-control-67a6bf59" id="udcPocDocViewer1_3" type="udc.poc.udcPocDocViewer">
+                <cl:formdata std:sid="f-data-ae808b44" row="0" col="0"/>
+                <cl:property name="fileUrl" value="../A13/data/docs/A13-4.png" type="resource"/>
+              </cl:udc>
+              <cl:formlayout std:sid="f-layout-4c8ef0c2" scrollable="false" hspace="8px" vspace="8px" top-margin="16px" right-margin="16px" bottom-margin="16px" left-margin="16px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-2bd7ddb8" scrollable="false" hspace="16px" vspace="16px">
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
+        </cl:tabitem>
+      </cl:tabfolder>
+      <cl:verticallayout std:sid="v-layout-9ff371c9" spacing="16" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-7d5f29c8" spacing="16" leftmargin="24" rightmargin="24" topmargin="16" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

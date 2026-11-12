@@ -1,0 +1,260 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-f2ff89b6" version="1.0.5542">
+  <head std:sid="head-f36d9863">
+    <std:metadata>
+      <std:property key="template-file" value="templates/일반화면/2.폼/F_폼(좌)+폼.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-5f2856ff" id="default" name="default" width="1024px" height="768px" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-d6b24566" id="tablet" name="tablet" width="500px" height="667px"/>
+    <screen std:sid="screen-52808dde" id="mobile" name="mobile" width="350px" height="525px"/>
+    <cl:model std:sid="model-e5dcf96c">
+      <cl:dataset std:sid="d-set-34b3419b" id="dsYCol">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-c159e44b" name="column"/>
+          <cl:datacolumn std:sid="d-column-c34fac80" name="type"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+      <cl:dataset std:sid="d-set-4bd23574" id="dsChartType">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-1a88899d" name="label"/>
+          <cl:datacolumn std:sid="d-column-dbc689f6" name="value"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="label">라인</cl:datavalue>
+            <cl:datavalue columnname="value">line</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">파이</cl:datavalue>
+            <cl:datavalue columnname="value">circle : pie</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">바: 수직</cl:datavalue>
+            <cl:datavalue columnname="value">bar : vertical</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">바: 수평</cl:datavalue>
+            <cl:datavalue columnname="value">bar : horizontal</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">링</cl:datavalue>
+            <cl:datavalue columnname="value">circle : ring</cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="컨텐츠관리-차트">
+      <cl:event name="mng-delete" type="cpr.events.CAppEvent"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-291207ad" style="top:0px; left:0px; width:450px; height:350px;" class="conts-wrap">
+    <cl:group std:sid="group-89cf033a">
+      <cl:verticaldata std:sid="v-data-4faddec5" width="424px" height="32px"/>
+      <cl:output std:sid="output-bbd36e2f" class="cms-subtitle" value="Chart">
+        <cl:formdata std:sid="f-data-da39b622" row="0" col="0"/>
+      </cl:output>
+      <cl:button std:sid="button-3ef63fdc" class="btn-close">
+        <cl:listener std:sid="listener-7550389a" name="click" handler="onButtonClick2"/>
+        <cl:formdata std:sid="f-data-759e5ec1" row="0" col="1"/>
+      </cl:button>
+      <cl:formlayout std:sid="f-layout-18744977" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+        <cl:columns length="32" unit="PIXEL"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:tabfolder std:sid="t-folder-e04c15c9" id="tab1">
+      <cl:verticaldata std:sid="v-data-837ed3b6" width="424px" height="718px" autosize="height"/>
+      <cl:tabitem std:sid="t-item-8d12cada" selected="true" text="그리드생성">
+        <cl:group std:sid="group-0572123a">
+          <std:metadata>
+            <std:property key="locked" value="true"/>
+          </std:metadata>
+          <cl:textarea std:sid="t-area-41251293" id="txa1">
+            <cl:verticaldata std:sid="v-data-c19bbd7a" width="100px" height="148px"/>
+          </cl:textarea>
+          <cl:group std:sid="group-e5807577">
+            <cl:verticaldata std:sid="v-data-c0f01688" width="424px" height="34px"/>
+            <cl:fileinput std:sid="f-input-2ba158ca" id="fi1" visible="false" acceptfile=".csv">
+              <cl:listener std:sid="listener-e22877bb" name="value-change" handler="onFi1ValueChange"/>
+              <cl:flowlayoutdata std:sid="f-data-3a89c42b" width="100px" height="34px"/>
+            </cl:fileinput>
+            <cl:button std:sid="button-8be8de85" value="csv파일 읽기">
+              <cl:listener std:sid="listener-3c6715f6" name="click" handler="onButtonClick4"/>
+              <cl:flowlayoutdata std:sid="f-data-eef867ca" width="122px" height="34px" autosize="width"/>
+            </cl:button>
+            <cl:button std:sid="button-a751cdf5" value="데이터로 그리드 만들기">
+              <cl:listener std:sid="listener-e17cde78" name="click" handler="onButtonClick"/>
+              <cl:flowlayoutdata std:sid="f-data-03ea139c" width="143px" height="34px" autosize="width"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-0d5490b2" halign="right"/>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-36adc943" spacing="16" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+        </cl:group>
+      </cl:tabitem>
+      <cl:tabitem std:sid="t-item-edd54f33" text="차트 설정" enabled="false">
+        <std:metadata>
+          <std:property key="is-active-item" value="true"/>
+        </std:metadata>
+        <cl:group std:sid="group-05d156ab">
+          <std:metadata>
+            <std:property key="locked" value="true"/>
+          </std:metadata>
+          <cl:group std:sid="group-10bd0d9b">
+            <cl:verticaldata std:sid="v-data-c59adf99" width="424px" height="68px" autosize="height"/>
+            <cl:inputbox std:sid="i-box-2c00f7ab" id="ipbTitle">
+              <cl:formdata std:sid="f-data-64e90a95" row="1" col="0"/>
+            </cl:inputbox>
+            <cl:group std:sid="group-1cdbaef8">
+              <cl:formdata std:sid="f-data-a77db6ce" row="0" col="0" rowspan="1" colspan="1"/>
+              <cl:output std:sid="output-7995a78f" value="차트 타이틀">
+                <cl:formdata std:sid="f-data-3d7ef8c5" row="0" col="0"/>
+              </cl:output>
+              <cl:combobox std:sid="c-box-10ad6f1d" id="cmbPosiVer" value="top">
+                <cl:formdata std:sid="f-data-c6f77db1" valign="CENTER" height="24" row="0" col="1"/>
+                <cl:item std:sid="t-item-62c42337" label="top" value="top"/>
+                <cl:item std:sid="t-item-aa9edd67" label="bottom" value="bottom"/>
+              </cl:combobox>
+              <cl:combobox std:sid="c-box-255dc26b" id="cmbPosiHori" value="left">
+                <cl:formdata std:sid="f-data-43133316" valign="CENTER" height="24" row="0" col="2"/>
+                <cl:item std:sid="t-item-14bd0d66" label="left" value="left"/>
+                <cl:item std:sid="t-item-9bae8e77" label="center" value="center"/>
+                <cl:item std:sid="t-item-251fdfe6" label="right" value="right"/>
+              </cl:combobox>
+              <cl:formlayout std:sid="f-layout-aadba396" scrollable="false" hspace="4px" vspace="4px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="100" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                <cl:columns length="80" unit="PIXEL"/>
+                <cl:columns length="80" unit="PIXEL"/>
+                <cl:columns length="1" unit="FRACTION"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-dc051046" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="32" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+              <cl:rows length="32" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:group std:sid="group-253fbaa5">
+            <cl:verticaldata std:sid="v-data-0b4bcbba" width="450px" height="61px" autosize="height"/>
+            <cl:output std:sid="output-39c46ff6" value="x축 대상 컬럼">
+              <cl:formdata std:sid="f-data-52b346cf" row="0" col="0"/>
+            </cl:output>
+            <cl:combobox std:sid="c-box-c18e1d84" id="cmb1">
+              <cl:formdata std:sid="f-data-fec57bb7" row="1" col="0"/>
+            </cl:combobox>
+            <cl:formlayout std:sid="f-layout-84d45728" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="25" unit="PIXEL"/>
+              <cl:rows length="32" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:group std:sid="group-f4ffe5ea" class="content">
+            <std:metadata>
+              <std:property key="template-uuid" value="eb5323ac-ca81-448f-b148-620d31527e47"/>
+              <std:property key="template-rev" value="1"/>
+            </std:metadata>
+            <cl:verticaldata std:sid="v-data-b7ccdb44" width="1064px" height="234px" autosize="height"/>
+            <cl:group std:sid="group-f6771733" class="content-title-box">
+              <cl:verticaldata std:sid="v-data-03a1e758" width="1064px" height="26px" autosize="none"/>
+              <cl:group std:sid="group-2609e70f" class="title-button-group">
+                <cl:formdata std:sid="f-data-31c30316" row="0" col="1"/>
+                <cl:button std:sid="button-6d8a6441" value="추가">
+                  <cl:listener std:sid="listener-e03905fe" name="click" handler="onButtonClick5"/>
+                  <cl:flowlayoutdata std:sid="f-data-75c2b05c" width="100px" height="20px"/>
+                </cl:button>
+                <cl:button std:sid="button-ab588040" value="삭제">
+                  <cl:listener std:sid="listener-492a2897" name="click" handler="onButtonClick6"/>
+                  <cl:flowlayoutdata std:sid="f-data-d2f3801d" width="100px" height="20px"/>
+                </cl:button>
+                <cl:flowlayout std:sid="f-layout-e9b7a231" scrollable="false" halign="right"/>
+              </cl:group>
+              <cl:output std:sid="output-1caf1ddf" value="y축 대상 컬럼">
+                <cl:formdata std:sid="f-data-86e78fe4" row="0" col="0"/>
+              </cl:output>
+              <cl:formlayout std:sid="f-layout-dfc21339" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="200" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                <cl:columns length="1" unit="FRACTION"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:grid std:sid="grid-3400986f" id="grd2" datasetid="dsYCol" showdeletedrow="false" clickmode="edit">
+              <cl:verticaldata std:sid="v-data-4c9a79b6" width="1064px" height="200px" autosize="height"/>
+              <cl:gridcolumn std:sid="g-column-826a58c2"/>
+              <cl:gridcolumn std:sid="g-column-306d9481"/>
+              <cl:gridheader std:sid="gh-band-1668a9c5">
+                <cl:gridrow std:sid="g-row-74b5104d" height="44px"/>
+                <cl:gridcell std:sid="gh-cell-cdcc2961" rowindex="0" colindex="0" targetcolumnname="column" sortable="false" filterable="false" text="대상컬럼명"/>
+                <cl:gridcell std:sid="gh-cell-e692f56a" rowindex="0" colindex="1" targetcolumnname="type" sortable="false" filterable="false" text="차트 타입"/>
+              </cl:gridheader>
+              <cl:griddetail std:sid="gd-band-6a10296c">
+                <cl:gridrow std:sid="g-row-82b8093b" height="45px"/>
+                <cl:gridcell std:sid="gd-cell-022450f2" rowindex="0" colindex="0" columnname="column">
+                  <cl:combobox std:sid="c-box-fc6abcec" id="cmb2">
+                    <cl:celldata std:sid="c-data-35428d10"/>
+                  </cl:combobox>
+                </cl:gridcell>
+                <cl:gridcell std:sid="gd-cell-56ce1f15" rowindex="0" colindex="1" columnname="type">
+                  <cl:combobox std:sid="c-box-1246c6ad" id="cmb4">
+                    <cl:celldata std:sid="c-data-31fc9992"/>
+                    <cl:itemset datasetid="dsChartType" label="label" value="value"/>
+                  </cl:combobox>
+                </cl:gridcell>
+              </cl:griddetail>
+            </cl:grid>
+            <cl:verticallayout std:sid="v-layout-723c2b88" scrollable="false" spacing="8"/>
+          </cl:group>
+          <cl:grid std:sid="grid-5e38dc36" id="grd1">
+            <cl:verticaldata std:sid="v-data-a5de3844" width="400px" height="200px"/>
+            <cl:gridcolumn std:sid="g-column-469b6f8e"/>
+            <cl:gridcolumn std:sid="g-column-112adc4b"/>
+            <cl:gridcolumn std:sid="g-column-1f1cc913"/>
+            <cl:gridcolumn std:sid="g-column-5899f655"/>
+            <cl:gridcolumn std:sid="g-column-0efa79de"/>
+            <cl:gridheader std:sid="gh-band-0ebede01">
+              <cl:gridrow std:sid="g-row-07de8f3e"/>
+              <cl:gridcell std:sid="gh-cell-cdc8f805" rowindex="0" colindex="0"/>
+              <cl:gridcell std:sid="gh-cell-84dbcdbc" rowindex="0" colindex="1"/>
+              <cl:gridcell std:sid="gh-cell-6f021abd" rowindex="0" colindex="2"/>
+              <cl:gridcell std:sid="gh-cell-2dc3d1f6" rowindex="0" colindex="3"/>
+              <cl:gridcell std:sid="gh-cell-a59ab710" rowindex="0" colindex="4"/>
+            </cl:gridheader>
+            <cl:griddetail std:sid="gd-band-002f2e8f">
+              <cl:gridrow std:sid="g-row-f4fba14c"/>
+              <cl:gridcell std:sid="gd-cell-ee4929c4" rowindex="0" colindex="0"/>
+              <cl:gridcell std:sid="gd-cell-d785ddd3" rowindex="0" colindex="1"/>
+              <cl:gridcell std:sid="gd-cell-adf4145b" rowindex="0" colindex="2"/>
+              <cl:gridcell std:sid="gd-cell-13f87bcd" rowindex="0" colindex="3"/>
+              <cl:gridcell std:sid="gd-cell-5c227d05" rowindex="0" colindex="4"/>
+            </cl:griddetail>
+          </cl:grid>
+          <cl:group std:sid="group-a808311a">
+            <cl:verticaldata std:sid="v-data-ab5dd476" width="424px" height="32px" autosize="none"/>
+            <cl:button std:sid="button-cca1684f" value="차트 미리보기">
+              <cl:listener std:sid="listener-2f4afb79" name="click" handler="onButtonClick3"/>
+              <cl:flowlayoutdata std:sid="f-data-b2fcc130" width="118px" height="32px" autosize="width"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-8cddb633" halign="right"/>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-8c36d954" spacing="16" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+        </cl:group>
+      </cl:tabitem>
+      <cl:tabitem std:sid="t-item-ca080f9a" text="차트" enabled="false">
+        <cl:group std:sid="group-40002189">
+          <std:metadata>
+            <std:property key="locked" value="true"/>
+          </std:metadata>
+          <cl:udc std:sid="ud-control-a878b89f" id="ch1" type="udc.stock.chart.udcCmnChart">
+            <cl:verticaldata std:sid="v-data-35c4f99e" width="300px" height="300px"/>
+          </cl:udc>
+          <cl:verticallayout std:sid="v-layout-eb79a25d" spacing="16" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+        </cl:group>
+      </cl:tabitem>
+    </cl:tabfolder>
+    <cl:verticallayout std:sid="v-layout-87a37a7d" spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

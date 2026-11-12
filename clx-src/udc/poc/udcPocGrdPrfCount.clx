@@ -1,0 +1,227 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-19335db6" version="1.0.0.0">
+  <head std:sid="head-c4437e7d">
+    <title>gridPrfCount</title>
+    <screen std:sid="screen-8a8d1f32" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-d115f624" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-c48abe10" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-1330b01b"/>
+    <cl:appspec title="그리드 성능 측정 컴포넌트">
+      <cl:property name="value" type="string" bindable="true"/>
+      <cl:property name="rowCount" type="string" default="0" bindable="true"/>
+      <cl:property name="randerTime" type="string" default="0" bindable="true"/>
+      <cl:property name="serverTime" type="string" default="0" bindable="true"/>
+      <cl:property name="networkTime" type="string" default="0" bindable="true"/>
+      <cl:property name="downloadTime" type="string" default="0" bindable="true"/>
+      <cl:property name="uploadTime" type="string" default="0" bindable="true"/>
+      <cl:property name="totalTime" type="string" default="0" bindable="true"/>
+      <cl:property name="titleVisible" type="boolean" bindable="true"/>
+      <cl:property name="randerVisible" type="boolean" bindable="true"/>
+      <cl:property name="serverTimeVisible" type="boolean" default="false" bindable="true"/>
+      <cl:property name="networkVisible" type="boolean" default="false" bindable="true"/>
+      <cl:property name="rowCountVisible" type="boolean" bindable="true"/>
+      <cl:property name="downloadTimeVisible" type="boolean" default="false" bindable="true"/>
+      <cl:property name="uploadTimeVisible" type="boolean" default="false" bindable="true"/>
+      <cl:property name="totalTimeVisible" type="boolean" default="false" bindable="true"/>
+      <cl:property name="startTimeVisible" type="boolean" bindable="true"/>
+      <cl:property name="endTimeVisible" type="boolean" bindable="true"/>
+      <cl:property name="firstLoadTimeVisible" type="boolean" default="false" bindable="true"/>
+      <cl:property name="startRanderTime" type="string" default="0"/>
+      <cl:property name="endRanderTime" type="string" default="0"/>
+      <cl:property name="totalRanderTime" type="string" default="0"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-6879e92f" style="top:0px; left:0px; width:1150px; height:30px;" class="grid-title-wrap">
+    <cl:listener std:sid="listener-8e679235" name="property-change" handler="onBodyPropertyChange"/>
+    <cl:output std:sid="output-07da5fa7" id="optTitle" class="grid-title" value="Output">
+      <cl:apppropbind property="value" category="PROPERTY" app-property="value"/>
+      <cl:flowlayoutdata std:sid="f-data-5e76ee41" width="50px" height="28px" autosize="width"/>
+    </cl:output>
+    <cl:group std:sid="group-ad13bd81" id="grp1" class="grid-title-count-wrap" visible="false">
+      <cl:flowlayoutdata std:sid="f-data-a6711aef" width="170px" height="28px" autosize="width"/>
+      <cl:output std:sid="output-d711c421" id="opt1" class="brackets" value="ms">
+        <cl:formdata std:sid="f-data-76893f65" row="0" col="2"/>
+      </cl:output>
+      <cl:output std:sid="output-1c328b82" id="optUploadTime" style="text-align:center;" class="grid-title-count" datatype="number" format="s#,###">
+        <cl:apppropbind property="value" app-property="uploadTime"/>
+        <cl:formdata std:sid="f-data-dfeb5d70" row="0" col="1"/>
+      </cl:output>
+      <cl:output std:sid="output-4f09de59" id="opt2" style="font-weight:600; text-align:right;" class="brackets" value="XML READ 시간">
+        <cl:formdata std:sid="f-data-7aa08b5e" row="0" col="0"/>
+      </cl:output>
+      <cl:formlayout std:sid="f-layout-0015a40d" hspace="5px" vspace="5px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="120" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+        <cl:columns length="15" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+        <cl:columns length="25" unit="PIXEL" autoSizing="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-93d050d4" id="grp2" class="grid-title-count-wrap" visible="false">
+      <cl:flowlayoutdata std:sid="f-data-a1960bf7" width="170px" height="28px" autosize="width"/>
+      <cl:output std:sid="output-c559b158" id="opt3" class="brackets" value="ms">
+        <cl:formdata std:sid="f-data-afdd0893" row="0" col="2"/>
+      </cl:output>
+      <cl:output std:sid="output-398a959a" id="time-field" style="text-align:center;" class="grid-title-count" datatype="number" format="s#,###">
+        <cl:apppropbind property="value" app-property="downloadTime"/>
+        <cl:formdata std:sid="f-data-801c4891" row="0" col="1"/>
+      </cl:output>
+      <cl:output std:sid="output-86d6beab" id="opt4" style="font-weight:600; text-align:right;" class="brackets" value="엑셀 다운로드 시간">
+        <cl:formdata std:sid="f-data-9b7e21ec" row="0" col="0"/>
+      </cl:output>
+      <cl:formlayout std:sid="f-layout-22f6063d" hspace="5px" vspace="5px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="120" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+        <cl:columns length="15" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+        <cl:columns length="25" unit="PIXEL" autoSizing="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-b1d9ed09" id="grp8" class="grid-title-count-wrap" visible="false">
+      <cl:flowlayoutdata std:sid="f-data-5d7aa779" width="150px" height="28px" autosize="width"/>
+      <cl:output std:sid="output-9c27760d" id="opt13" class="brackets" value="ms">
+        <cl:formdata std:sid="f-data-ac0a943f" row="0" col="2"/>
+      </cl:output>
+      <cl:output std:sid="output-c3fe6a66" id="firstLoadTime" style="text-align:center;" class="grid-title-count" value="0" datatype="number" format="s#,###">
+        <cl:formdata std:sid="f-data-846c8cb9" row="0" col="1"/>
+      </cl:output>
+      <cl:output std:sid="output-02a6dec5" id="opt14" style="font-weight:600; text-align:right;" class="brackets" value="최초 로드 시간">
+        <cl:formdata std:sid="f-data-f02587b2" row="0" col="0"/>
+      </cl:output>
+      <cl:formlayout std:sid="f-layout-3a43a13d" hspace="5px" vspace="5px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="95" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0" syncminlength="false"/>
+        <cl:columns length="15" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0" syncminlength="false"/>
+        <cl:columns length="25" unit="PIXEL" autoSizing="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-8b2f6e1c" id="grp10" class="grid-title-count-wrap" visible="false">
+      <cl:flowlayoutdata std:sid="f-data-5a8c3e12" width="111px" height="28px" autosize="width"/>
+      <cl:output std:sid="output-3e9a7d05" id="opt17" class="brackets" value="ms">
+        <cl:formdata std:sid="f-data-e07b4d96" row="0" col="2"/>
+      </cl:output>
+      <cl:output std:sid="output-b56c2f81" id="optServerTime" style="text-align:center;" class="grid-title-count" value="0" datatype="number" format="s#,###">
+        <cl:apppropbind property="value" app-property="serverTime"/>
+        <cl:formdata std:sid="f-data-2c91f5a7" row="0" col="1"/>
+      </cl:output>
+      <cl:output std:sid="output-71d4e9a3" id="opt18" style="font-weight:600; text-align:right;" class="brackets" tooltip="서버에서 요청을 받아 조회(쿼리 수행)를 마칠 때까지의 시간 (서버가 내려준 값)" value="서버 시간">
+        <cl:formdata std:sid="f-data-d3a6b084" row="0" col="0"/>
+      </cl:output>
+      <cl:formlayout std:sid="f-layout-6f1e8b52" hspace="5px" vspace="5px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="50" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+        <cl:columns length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+        <cl:columns length="25" unit="PIXEL" autoSizing="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-5c3e81a2" id="grp9" class="grid-title-count-wrap" visible="false">
+      <cl:flowlayoutdata std:sid="f-data-31b7c2e8" width="111px" height="28px" autosize="width"/>
+      <cl:output std:sid="output-6d2f90b4" id="opt15" class="brackets" value="ms">
+        <cl:formdata std:sid="f-data-9f04a6d1" row="0" col="2"/>
+      </cl:output>
+      <cl:output std:sid="output-a83c7e15" id="optNetworkTime" style="text-align:center;" class="grid-title-count" value="0" datatype="number" format="s#,###">
+        <cl:apppropbind property="value" app-property="networkTime"/>
+        <cl:formdata std:sid="f-data-c2e85b37" row="0" col="1"/>
+      </cl:output>
+      <cl:output std:sid="output-e4b1d6f9" id="opt16" style="font-weight:600; text-align:right;" class="brackets" tooltip="통신 시작부터 서버로부터 데이터 수신이 완료된 시점까지의 시간 (서버 시간이 표시되면 서버 시간을 제외한 요청/응답 전송 시간)" value="네트워크 시간">
+        <cl:formdata std:sid="f-data-74ad19e0" row="0" col="0"/>
+      </cl:output>
+      <cl:formlayout std:sid="f-layout-2d6e9c41" hspace="5px" vspace="5px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="50" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+        <cl:columns length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+        <cl:columns length="25" unit="PIXEL" autoSizing="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-1a823e55" id="grp3" class="grid-title-count-wrap">
+      <cl:flowlayoutdata std:sid="f-data-eddaa98d" width="111px" height="28px" autosize="width"/>
+      <cl:output std:sid="output-f575fad0" id="opt5" class="brackets" value="ms">
+        <cl:formdata std:sid="f-data-4df19bc1" row="0" col="2"/>
+      </cl:output>
+      <cl:output std:sid="output-cb1bf3df" id="optRanderTime" style="text-align:center;" class="grid-title-count" value="0" datatype="number" format="s#,###">
+        <cl:apppropbind property="value" app-property="randerTime"/>
+        <cl:formdata std:sid="f-data-027b6b9d" row="0" col="1"/>
+      </cl:output>
+      <cl:output std:sid="output-2be7ca92" id="opt6" style="font-weight:600; text-align:right;" class="brackets" tooltip="최초 데이터 수신 시점(0ms)부터 데이터 수신·바인딩·렌더링이 모두 끝날 때까지의 시간 (서버 쿼리 대기 시간 제외)" value="랜더링 시간">
+        <cl:formdata std:sid="f-data-12a6dccb" row="0" col="0"/>
+      </cl:output>
+      <cl:formlayout std:sid="f-layout-8e0b132f" hspace="5px" vspace="5px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="50" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+        <cl:columns length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+        <cl:columns length="25" unit="PIXEL" autoSizing="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-dfccce47" id="grp4" class="grid-title-count-wrap" visible="false">
+      <cl:flowlayoutdata std:sid="f-data-7e8daf6e" width="81px" height="28px" autosize="width"/>
+      <cl:output std:sid="output-7fba872c" id="opt8" style="font-weight:600; text-align:right;" class="brackets" tooltip="통신 시작부터 데이터 바인딩 완료까지의 시간" value="시작시각">
+        <cl:formdata std:sid="f-data-333cc6be" row="0" col="0"/>
+      </cl:output>
+      <cl:output std:sid="output-94a1cbcb" id="optStartTime" style="text-align:center;" class="grid-title-count" value="0">
+        <cl:apppropbind property="value" app-property="startRanderTime"/>
+        <cl:formdata std:sid="f-data-428c2464" row="0" col="1"/>
+      </cl:output>
+      <cl:formlayout std:sid="f-layout-9ed19884" vspace="5px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="50" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="#000000" minlength="0" syncminlength="false"/>
+        <cl:columns length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0" syncminlength="false"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-2b60aef0" id="grp7" class="grid-title-count-wrap" visible="false">
+      <cl:flowlayoutdata std:sid="f-data-1f969078" width="81px" height="28px" autosize="width"/>
+      <cl:output std:sid="output-51b35495" id="opt7" style="font-weight:600; text-align:right;" class="brackets" tooltip="통신 시작부터 데이터 바인딩 완료까지의 시간" value="종료시각">
+        <cl:formdata std:sid="f-data-56e4c9e4" row="0" col="0"/>
+      </cl:output>
+      <cl:output std:sid="output-90c2ed28" id="optEndTime" style="text-align:center;" class="grid-title-count" value="0">
+        <cl:apppropbind property="value" app-property="endRanderTime"/>
+        <cl:formdata std:sid="f-data-9c78a783" row="0" col="1"/>
+      </cl:output>
+      <cl:formlayout std:sid="f-layout-72c79278" hspace="5px" vspace="5px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="50" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="#000000" minlength="0" syncminlength="false"/>
+        <cl:columns length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0" syncminlength="false"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-f242d1a0" id="grp6" class="grid-title-count-wrap" visible="false">
+      <cl:flowlayoutdata std:sid="f-data-78ea284a" width="111px" height="28px" autosize="width"/>
+      <cl:output std:sid="output-9c5c1e66" id="opt11" class="brackets" value="ms">
+        <cl:formdata std:sid="f-data-96323902" row="0" col="2"/>
+      </cl:output>
+      <cl:output std:sid="output-80d690ba" id="optTotalTime" style="text-align:center;" class="grid-title-count" datatype="number" format="s#,###">
+        <cl:apppropbind property="value" app-property="totalRanderTime"/>
+        <cl:formdata std:sid="f-data-fbc4e92c" row="0" col="1"/>
+      </cl:output>
+      <cl:output std:sid="output-13369d98" id="opt12" style="font-weight:600; text-align:right;" class="brackets" tooltip="통신 시작부터 데이터 바인딩 완료까지의 시간" value="처리시간">
+        <cl:formdata std:sid="f-data-f0ecfaa2" row="0" col="0"/>
+      </cl:output>
+      <cl:formlayout std:sid="f-layout-b750256c" hspace="5px" vspace="5px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="50" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="#000000" minlength="0" syncminlength="false"/>
+        <cl:columns length="26" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0" syncminlength="false"/>
+        <cl:columns length="25" unit="PIXEL" autoSizing="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-bd5f2b99" id="grp5" class="grid-title-count-wrap">
+      <cl:flowlayoutdata std:sid="f-data-4d8729f1" width="100px" height="28px" autosize="width"/>
+      <cl:output std:sid="output-ce605718" id="opt9" class="brackets" value="건">
+        <cl:formdata std:sid="f-data-f390b15c" row="0" col="2"/>
+      </cl:output>
+      <cl:output std:sid="output-9cdcbe5d" id="optRowCount" style="text-align:center;" class="grid-title-count" value="0" datatype="number" format="s#,###">
+        <cl:apppropbind property="value" category="PROPERTY" app-property="rowCount"/>
+        <cl:formdata std:sid="f-data-793b1ae7" row="0" col="1"/>
+      </cl:output>
+      <cl:output std:sid="output-d56b07aa" id="opt10" style="font-weight:600.0; text-align:right;" class="brackets" value="총">
+        <cl:formdata std:sid="f-data-5273ed81" row="0" col="0"/>
+      </cl:output>
+      <cl:formlayout std:sid="f-layout-a5607e2d" hspace="5px" vspace="5px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="30" unit="PIXEL" autoSizing="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+        <cl:columns length="38" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+        <cl:columns length="30" unit="PIXEL" autoSizing="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:flowlayout std:sid="f-layout-6c108c90" hspacing="12" vspacing="4" halign="right"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

@@ -1,0 +1,381 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-b2e24a61" version="1.0.5542">
+  <head std:sid="head-ee58bef2">
+    <std:metadata>
+      <std:property key="template-file" value="templates/poc/빈페이지.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-bb62953f" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="true" customHeight="702" customWidth="800" active="true"/>
+    <screen std:sid="screen-2078f791" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-19e004b7" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="375"/>
+    <cl:model std:sid="model-3ce95ac2">
+      <cl:dataset comment="프로세스 목록" std:sid="d-set-406d885d" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-9f37779a" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-05046705" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn std:sid="d-column-7fe5300f" name="SUB_TITLE"/>
+          <cl:datacolumn std:sid="d-column-c68cb733" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn std:sid="d-column-fa740970" name="CONT" datatype="string"/>
+          <cl:datacolumn std:sid="d-column-c9d6a3d7" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-b4004ac2" name="SUB_CODE"/>
+          <cl:datacolumn std:sid="d-column-8d6dc077" name="TARGET_CTRL"/>
+          <cl:datacolumn std:sid="d-column-4e06ed8b" name="TARGET_EMB"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[상태·Push 메시지]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[처리상태와 Push 메시지를 표시하되 사용자 입력 초점을 방해하지 않아야 한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[처리상태 표시]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[사용자 조작 후 처리 중·완료·실패 상태를 확인할 수 있어야 하며, 시간이 걸리는 작업은 진행상태를 표시해야 한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[목적]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[책임자 승인 기능 검증]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[검증 요소]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[조작자에서 책임자 선택 후 책임자 승인 상신 기능]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[책임자 승인/거절 기능]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[책임자 승인 PUSH 알림 기능]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[송/수신 메시지 확인 기능]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[측정]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[책임자 선택 후 책임자 승인 상신 가능 여부 확인]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[책임자 선택, 승인 상신]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[책임자 승인 PUSH 알림 수신 여부 확인]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[책임자 승인 PUSH 알림 수신]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[책임자 승인/거절 처리 가능 여부 확인]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[승인/거절 처리]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[송/수신 메시지 확인 여부 확인]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[송/수신 메시지, 확인]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[(모든 검증요소 - 솔루션 기능) ]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[브라우저를 하나 더 오픈하여, 일반 사용자와 책임자로 로그인한 화면을 준비한다]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[일반사용자,책임자]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[(일반사용자) 기본 설정, 결재선을 선택한 후, 전송할 문서 내용을 입력한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[(일반사용자)]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[cmbDoc,ipbReceiver]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[(일반사용자) [승인 요청] 버튼을 클릭하여 일반사용자는 책임자에게 승인 요청을 전송한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[(일반사용자) ]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[btnReq]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[승인 요청]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[(책임자) 승인 요청 PUSH 알림 수신 여부를 확인한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[(책임자)]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[PUSH]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[(책임자) [책임자 승인 확인] 화면을 열고, 승인 요청 건 목록을 확인한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[(책임자)]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[책임자 승인 확인,요청]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[grpContent]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[(책임자) 목록에서 요청 건을 선택하여, 승인 요청 내용 확인 후 [승인] 또는 [반려] 처리를 수행한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[(책임자)]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[승인,반려]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[btnApr,btnRej]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[(일반사용자) 승인/반려 처리 결과에 대한 PUSH 알림 수신 여부를 확인한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[(일반사용자)]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[PUSH]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[(일반사용자) [책임자 승인 확인] 화면을 열고 승인 요청건에 대한 처리 결과를 확인한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[(일반사용자)]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[책임자 승인 확인,결과]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[grpContent]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+      <cl:dataset std:sid="d-set-e854875a" id="dsApproval" sortcondition="KEY ASC" filtercondition="">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-f9858793" name="KEY" datatype="number"/>
+          <cl:datacolumn comment="승인요청내용" std:sid="d-column-27718f3f" name="CONTENTS"/>
+          <cl:datacolumn comment="승인요청자" std:sid="d-column-261e8608" name="SENDER_NM"/>
+          <cl:datacolumn comment="상태" std:sid="d-column-b7ad5fcd" name="APPR_RESULT"/>
+          <cl:datacolumn comment="요청제목" std:sid="d-column-faf8401b" name="MSG_TITLE"/>
+          <cl:datacolumn std:sid="d-column-2c41be49" name="SENDER_ID"/>
+          <cl:datacolumn std:sid="d-column-ba322620" name="APPR_KIND"/>
+          <cl:datacolumn std:sid="d-column-1e699b12" name="ADMIN_MSG"/>
+          <cl:datacolumn std:sid="d-column-eca19586" name="TYPE"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist/>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="결재자 승인 확인"/>
+  </head>
+  <body std:sid="body-e4f66bc9" class="wrap">
+    <cl:listener std:sid="listener-8cff8b68" name="load" handler="onBodyLoad"/>
+    <cl:udc std:sid="ud-control-c03e37de" type="udc.com.udcComAppHeader">
+      <cl:formdata std:sid="f-data-e508eccd" row="0" col="0"/>
+    </cl:udc>
+    <cl:group std:sid="group-9d1df60b" id="grpData" class="conts-area">
+      <cl:formdata std:sid="f-data-416ef83e" width="100" height="43" row="1" col="0"/>
+      <cl:group std:sid="group-bb84371e" id="grpBtns">
+        <cl:formdata std:sid="f-data-20ae5422" row="0" col="0"/>
+        <cl:button std:sid="button-d0817dbc" id="btnApr" class="primary" value="승인">
+          <cl:listener std:sid="listener-a56753ac" name="click" handler="onButtonClick"/>
+          <cl:flowlayoutdata std:sid="f-data-cf78f179" width="60px" height="28px" autosize="width"/>
+        </cl:button>
+        <cl:button std:sid="button-eda9bda5" id="btnRej" class="secondary" value="반려">
+          <cl:listener std:sid="listener-209ecac7" name="click" handler="onButtonClick2"/>
+          <cl:flowlayoutdata std:sid="f-data-fa21a3a8" width="60px" height="28px" autosize="width"/>
+        </cl:button>
+        <cl:flowlayout std:sid="f-layout-563bfe77" halign="right"/>
+      </cl:group>
+      <cl:group std:sid="group-e5709413" class="conts-wrap">
+        <std:metadata>
+          <std:property key="template-uuid" value="b11f0d6f-b781-4426-b3e5-761783bd5926"/>
+          <std:property key="template-rev" value="9"/>
+        </std:metadata>
+        <cl:formdata std:sid="f-data-0ff8cfc5" row="1" col="0"/>
+        <cl:udc std:sid="ud-control-377d1d7a" type="udc.com.udcComGridTitle">
+          <cl:formdata std:sid="f-data-5f628649" row="0" col="0" rowspan="1" colspan="1"/>
+          <cl:property name="title" value="승인요청 리스트" type="string"/>
+          <cl:property name="ctrl" value="grdApproval" type="control"/>
+        </cl:udc>
+        <cl:group std:sid="group-c6162103" id="grpContent" class="division-group">
+          <cl:formdata std:sid="f-data-0d368eec" width="100" height="43" row="1" col="0" rowspan="1" colspan="1"/>
+          <cl:grid std:sid="grid-7cc7b748" id="grdApproval" fieldLabel="승인요청 목록" datasetid="dsApproval" clickmode="select">
+            <cl:listener std:sid="listener-2cd36efc" name="selection-change" handler="onGrdApprovalSelectionChange"/>
+            <cl:attribute name="transform-on-mobile" value="detailType"/>
+            <cl:formdata std:sid="f-data-0508975a" row="0" col="0" rowspan="2" colspan="1"/>
+            <cl:gridcolumn std:sid="g-column-1aa1246e" width="50px"/>
+            <cl:gridcolumn std:sid="g-column-8fab966e"/>
+            <cl:gridcolumn std:sid="g-column-cafead1b" width="120px"/>
+            <cl:gridcolumn std:sid="g-column-98a59d89" width="120px"/>
+            <cl:gridcolumn std:sid="g-column-237bd381"/>
+            <cl:gridheader std:sid="gh-band-70cbba94">
+              <cl:gridrow std:sid="g-row-97d77d8d" height="44px"/>
+              <cl:gridcell std:sid="gh-cell-a4045fed" rowindex="0" colindex="0" sortable="false" filterable="false" text="NO"/>
+              <cl:gridcell std:sid="gh-cell-17f42e76" rowindex="0" colindex="2" targetcolumnname="CONTENTS" sortable="false" filterable="false" text="승인요청제목"/>
+              <cl:gridcell std:sid="gh-cell-9d3efb6c" rowindex="0" colindex="3" targetcolumnname="SENDER_NM" sortable="false" filterable="false" text="승인요청자"/>
+              <cl:gridcell std:sid="gh-cell-9a0c46e6" rowindex="0" colindex="4" targetcolumnname="APPR_RESULT" sortable="false" filterable="false" text="상태"/>
+              <cl:gridcell std:sid="gh-cell-cd60b5a7" rowindex="0" colindex="1" text="문서 종류"/>
+            </cl:gridheader>
+            <cl:griddetail std:sid="gd-band-fe13cdb7">
+              <cl:gridrow std:sid="g-row-51e80593" height="45px"/>
+              <cl:gridcell std:sid="gd-cell-eee4fe20" rowindex="0" colindex="0" columntype="rowindex"/>
+              <cl:gridcell std:sid="gd-cell-9305a744" rowindex="0" colindex="2" columnname="MSG_TITLE">
+                <cl:output std:sid="output-ba8297a7">
+                  <cl:celldata std:sid="c-data-c61d0992"/>
+                </cl:output>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-83aad634" rowindex="0" colindex="3" columnname="SENDER_NM">
+                <cl:output std:sid="output-4e7b44db">
+                  <cl:celldata std:sid="c-data-444c36af"/>
+                </cl:output>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-f2211ef2" rowindex="0" colindex="4" columnname="APPR_RESULT">
+                <cl:output std:sid="output-df9c49af" style="font-weight:bold;" displayexp="switch(text){&#xD;&#xA;&#x9;case &quot;REQ&quot; : &quot;승인대기중&quot;&#xD;&#xA;&#x9;case &quot;APR&quot; : &quot;승인&quot;&#xD;&#xA;&#x9;case &quot;REJ&quot; : &quot;반려&quot;&#xD;&#xA;&#x9;default : &quot;&quot;&#xD;&#xA;}">
+                  <cl:expbind property="class" category="CLASS" expression="switch(APPR_RESULT){&#xD;&#xA;&#x9;case &quot;APR&quot; : &quot;text-success&quot;&#xD;&#xA;&#x9;case &quot;REJ&quot; : &quot;text-danger&quot;&#xD;&#xA;&#x9;default : &quot;text-info&quot;&#xD;&#xA;}"/>
+                  <cl:celldata std:sid="c-data-5db328ee"/>
+                </cl:output>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-a5503048" rowindex="0" colindex="1" columnname="APPR_KIND"/>
+            </cl:griddetail>
+          </cl:grid>
+          <cl:udc std:sid="ud-control-2d2bc833" id="udcEditor" type="udc.com.udcCmnHtmlEditor">
+            <cl:listener std:sid="listener-f137f4df" name="afterLoad" handler="onUdcEditorAfterLoad"/>
+            <cl:formdata std:sid="f-data-939bfe76" row="1" col="1" rowspan="1" colspan="1"/>
+            <cl:property name="hideToolbar" value="true" type="boolean"/>
+          </cl:udc>
+          <cl:group std:sid="group-b906e537" id="grp2" class="form">
+            <cl:attribute name="table-min-height" value=""/>
+            <cl:attribute name="mobile-column-count" value="1"/>
+            <cl:attribute name="tablet-column-count" value="2"/>
+            <cl:formdata std:sid="f-data-7c48598f" width="100" height="43" row="0" col="1"/>
+            <cl:output std:sid="output-030bb1ec" id="opt1" class="label" value="결재자 메시지">
+              <cl:formdata std:sid="f-data-3c414c95" row="0" col="0"/>
+            </cl:output>
+            <cl:output std:sid="output-f4693965" id="optMsg" value="">
+              <cl:formdata std:sid="f-data-203d9946" row="0" col="1"/>
+            </cl:output>
+            <cl:formlayout std:sid="f-layout-d1049485" scrollable="false" hspace="16px" vspace="17px" top-margin="8px" right-margin="8px" bottom-margin="8px" left-margin="8px" hseparatorwidth="1" hseparatortype="BY_CLASS">
+              <cl:rows length="28" unit="PIXEL"/>
+              <cl:columns length="70" unit="PIXEL" autoSizing="true" hidden="false" shadetype="BY_CLASS"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-68d93b1d" scrollable="false" hspace="16px" vspace="16px">
+            <cl:rows length="46" unit="PIXEL" autoSizing="true" hidden="true" syncminlength="false"/>
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="2" unit="FRACTION"/>
+            <cl:columns length="3" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-d476bed1" scrollable="false" hspace="0px" vspace="8px" top-margin="16px" right-margin="16px" bottom-margin="16px" left-margin="16px">
+          <cl:rows length="28" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-675d1512" scrollable="false" hspace="16px" vspace="16px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="28" unit="PIXEL"/>
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-ed926d8a" scrollable="false" hspace="0px" vspace="16px" top-margin="16px" right-margin="24px" bottom-margin="24px" left-margin="24px">
+      <cl:rows length="26" unit="PIXEL" autoSizing="true"/>
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

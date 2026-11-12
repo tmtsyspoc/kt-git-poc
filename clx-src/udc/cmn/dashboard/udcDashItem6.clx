@@ -1,0 +1,109 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-fb23f8c5" version="1.0.6087">
+  <head std:sid="head-4363066d">
+    <screen std:sid="screen-815a48a8" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-2c969c92" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-e7bcedbd" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-5a8a7740"/>
+    <cl:appspec title="Quick Link"/>
+  </head>
+  <body std:sid="body-a12c8948" style="top:0px; left:0px; width:800px; height:200px;">
+    <cl:listener std:sid="listener-494e189c" name="load" handler="onBodyLoad"/>
+    <cl:listener std:sid="listener-8138e726" name="screen-change" handler="onBodyScreenChange"/>
+    <cl:attribute name="needs-auto-width" value="true"/>
+    <cl:attribute name="mobile-index" value="7"/>
+    <cl:attribute name="tablet-index" value="7"/>
+    <cl:group std:sid="group-7b89bc9f" id="grpQuick" class="group quick-link-group" clipcontent="false">
+      <cl:attribute name="needs-auto-height" value="true"/>
+      <cl:attribute name="mobile-index" value="7"/>
+      <cl:attribute name="tablet-index" value="7"/>
+      <cl:formdata std:sid="f-data-b3c9c6d4" row="0" col="0"/>
+      <cl:group std:sid="group-50fd3969" class="slider-group" clipcontent="false">
+        <cl:attribute name="needs-auto-height" value="true"/>
+        <cl:attribute name="tablet-column-count" value="1"/>
+        <cl:attribute name="mobile-column-count" value="1"/>
+        <cl:verticaldata std:sid="v-data-025ba51f" width="735px" height="28px" autosize="height"/>
+        <cl:group std:sid="group-106d7747">
+          <cl:formdata std:sid="f-data-d3a8f405" row="0" col="0"/>
+          <cl:output std:sid="output-6fa4f983" class="tit-green" value="Quick Link">
+            <cl:verticaldata std:sid="v-data-0e77184f" width="100px" height="28px" autosize="height"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-698a3619" spacing="4"/>
+        </cl:group>
+        <cl:output std:sid="output-61329350" class="messege" value="업무에 필요한 서비스를 바로 이용해 보세요.">
+          <cl:formdata std:sid="f-data-786c8440" row="0" col="1"/>
+        </cl:output>
+        <cl:group std:sid="group-76df5786" clipcontent="false">
+          <cl:formdata std:sid="f-data-554c3c7c" row="0" col="2"/>
+          <cl:group std:sid="group-7edec708" clipcontent="false">
+            <cl:flowlayoutdata std:sid="f-data-65f702e8" width="113px" height="24px" autosize="width"/>
+            <cl:button std:sid="button-15ac2955" id="btnPrevQuick" class="btn-left" value="" icon="0">
+              <cl:listener std:sid="listener-3404f0aa" name="click" handler="onBtnPrevQuickClick"/>
+              <cl:flowlayoutdata std:sid="f-data-a549fe8a" width="24px" height="24px"/>
+            </cl:button>
+            <cl:button std:sid="button-f611d52d" id="btnQSlidePlay" class="btn-play" value="" icon="0">
+              <cl:listener std:sid="listener-6dfbae7c" name="click" handler="onBtnQSlidePlayClick"/>
+              <cl:flowlayoutdata std:sid="f-data-1ccf4e74" width="24px" height="24px" autosize="none"/>
+            </cl:button>
+            <cl:button std:sid="button-fbeaac5f" id="btnQSlideStop" class="btn-stop" visible="false" value="" icon="0">
+              <cl:listener std:sid="listener-39cefc2b" name="click" handler="onBtnQSlideStopClick"/>
+              <cl:flowlayoutdata std:sid="f-data-8602d322" width="24px" height="24px" autosize="none"/>
+            </cl:button>
+            <cl:button std:sid="button-f4a874ab" id="btnNextQuick" class="btn-right" value="" icon="0">
+              <cl:listener std:sid="listener-1e1aa43f" name="click" handler="onBtnNextQuickClick"/>
+              <cl:flowlayoutdata std:sid="f-data-82e4496d" width="24px" height="24px" autosize="none"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-7d9ac302" vspacing="0"/>
+          </cl:group>
+          <cl:button std:sid="button-8ed6bbfb" class="btn-slide-more" value="" icon="0">
+            <cl:flowlayoutdata std:sid="f-data-a007b24e" width="24px" height="24px" autosize="none"/>
+          </cl:button>
+          <cl:flowlayout std:sid="f-layout-956ef820" hspacing="16" vspacing="0" halign="right" valign="middle"/>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-c4a92813" scrollable="false" hspace="16px" vspace="4px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="28" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+          <cl:columns length="128" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          <cl:columns length="400" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          <cl:columns length="1" unit="FRACTION" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:group comment="quick-swiper-content" std:sid="group-13632bb2" id="grpQuickList" class="link-group">
+        <cl:attribute name="mobile-column-count" value="2"/>
+        <cl:attribute name="mobile-min-height" value=""/>
+        <cl:attribute name="tablet-column-count" value="2"/>
+        <cl:verticaldata std:sid="v-data-6611d8fc" width="735px" height="82px" autosize="none"/>
+        <cl:button std:sid="button-4d519c6a" class="btn-quick-link item01" value="개통오더관리">
+          <cl:flowlayoutdata std:sid="f-data-67db453d" width="115px" height="82px"/>
+        </cl:button>
+        <cl:button std:sid="button-28c5a981" class="btn-quick-link item02" value="출동일정조회">
+          <cl:flowlayoutdata std:sid="f-data-36909210" width="115px" height="82px"/>
+        </cl:button>
+        <cl:button std:sid="button-17a80db8" class="btn-quick-link item03" value="장비자재발주">
+          <cl:flowlayoutdata std:sid="f-data-33abcc62" width="115px" height="82px"/>
+        </cl:button>
+        <cl:button std:sid="button-e2de8d45" class="btn-quick-link item04" value="휴가관리">
+          <cl:flowlayoutdata std:sid="f-data-fd44bc54" width="115px" height="82px"/>
+        </cl:button>
+        <cl:button std:sid="button-15820f69" class="btn-quick-link item05" value="월별매출현황">
+          <cl:flowlayoutdata std:sid="f-data-ce9d631a" width="115px" height="82px"/>
+        </cl:button>
+        <cl:button std:sid="button-b2e487bd" class="btn-quick-link item06" value="장비재고조회">
+          <cl:flowlayoutdata std:sid="f-data-ad0c0831" width="115px" height="82px" autosize="none"/>
+        </cl:button>
+        <cl:button std:sid="button-64d5158a" class="btn-quick-link item07" value="월별매출현황">
+          <cl:flowlayoutdata std:sid="f-data-fe6ea02d" width="115px" height="82px" autosize="none"/>
+        </cl:button>
+        <cl:flowlayout std:sid="f-layout-5b2f384a" hspacing="8" vspacing="0" linewrap="false"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-4da373ce" spacing="21"/>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-0dbe7d56" scrollable="false">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

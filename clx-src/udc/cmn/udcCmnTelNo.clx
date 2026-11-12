@@ -1,0 +1,49 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-b3fc5a51" version="1.0.6087">
+  <head std:sid="head-8d4dd281">
+    <screen std:sid="screen-9f0e7e92" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-bd3f94b9" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-5ca382a0" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-66caa387"/>
+    <cl:appspec title="전화번호/휴대폰번호">
+      <cl:property name="firstNum" type="string" bindable="true" std:desc="첫 번째 값"/>
+      <cl:property name="secondNum" type="string" bindable="true" std:desc="두 번째 값"/>
+      <cl:property name="lastNum" type="string" bindable="true" std:desc="세 번째 값"/>
+      <cl:property name="firstNumList" type="string" bindable="true" std:desc="첫 번째 콤보박스에 넣을 값 (여러개일 경우 콤마(,) 로 작성합니다)"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-10f46662" style="top:0px; left:0px; width:300px; height:28px;">
+    <cl:listener std:sid="listener-d6396ec4" name="load" handler="onBodyLoad"/>
+    <cl:listener std:sid="listener-0d3900e3" name="property-change" handler="onBodyPropertyChange"/>
+    <cl:combobox std:sid="c-box-f32b8cf6" id="cmbFirst">
+      <cl:apppropbind property="value" app-property="firstNum"/>
+      <cl:formdata std:sid="f-data-8a461d1e" row="0" col="0"/>
+    </cl:combobox>
+    <cl:output std:sid="output-1a3614aa" value="-">
+      <cl:formdata std:sid="f-data-b641faa1" row="0" col="1"/>
+    </cl:output>
+    <cl:inputbox std:sid="i-box-466e9de4" id="ipbSecond" maxlength="4" inputfilter="[0-9]">
+      <cl:apppropbind property="value" app-property="secondNum"/>
+      <cl:formdata std:sid="f-data-746d1563" row="0" col="2"/>
+    </cl:inputbox>
+    <cl:output std:sid="output-9e9b4e47" value="-">
+      <cl:formdata std:sid="f-data-2812a384" row="0" col="3"/>
+    </cl:output>
+    <cl:inputbox std:sid="i-box-ea89c13f" id="ipbLast" maxlength="4" inputfilter="[0-9]">
+      <cl:apppropbind property="value" app-property="lastNum"/>
+      <cl:formdata std:sid="f-data-64cbac87" row="0" col="4"/>
+    </cl:inputbox>
+    <cl:formlayout std:sid="f-layout-663a13f4" scrollable="false" hspace="4px" vspace="4px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+      <cl:columns length="10" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      <cl:columns length="1" unit="FRACTION"/>
+      <cl:columns length="10" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

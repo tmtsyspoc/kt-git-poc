@@ -1,0 +1,37 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-5466aa66" version="1.0.6087">
+  <head std:sid="head-03971122">
+    <screen std:sid="screen-2d26bf5d" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-f15247e4" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-76158b29" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-25007dcc"/>
+    <cl:appspec title="사원번호">
+      <cl:property name="empNm" type="string" bindable="true" std:desc="사원명"/>
+      <cl:property name="empNo" type="string" bindable="true" std:desc="사원번호"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-150b1b0b" style="top:0px; left:0px; width:300px; height:30px;">
+    <cl:inputbox std:sid="i-box-34ff4dee" id="ipbEmp" placeholder="사원명">
+      <cl:apppropbind property="value" app-property="empNm"/>
+      <cl:formdata std:sid="f-data-320f9c92" row="0" col="0"/>
+    </cl:inputbox>
+    <cl:button std:sid="button-4691a42a" class="primary btn-search" value="" icon="0">
+      <cl:listener std:sid="listener-c5beb38e" name="click" handler="onButtonClick"/>
+      <cl:formdata std:sid="f-data-0fc2d64d" row="0" col="1"/>
+    </cl:button>
+    <cl:output std:sid="output-7809fbca" id="optEmpNm" class="bg-gray-soft rounded px-4" value="">
+      <cl:apppropbind property="value" app-property="empNo"/>
+      <cl:formdata std:sid="f-data-13a0167b" row="0" col="2"/>
+    </cl:output>
+    <cl:formlayout std:sid="f-layout-221d5726" scrollable="false" hspace="4px" vspace="4px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+      <cl:columns length="50" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

@@ -1,0 +1,78 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-d4d58ebb" version="1.0.6087">
+  <head std:sid="head-6bfcea0c">
+    <screen std:sid="screen-735b8536" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-9553035c" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-1b198140" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-af4fe1ad"/>
+    <cl:appspec title="사용자정보">
+      <cl:property name="name" type="string" default="김케이" bindable="true"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-7b1061f4" style="top:0px; left:0px; width:300px; height:300px;">
+    <cl:listener std:sid="listener-1a4a48da" name="property-change" handler="onBodyPropertyChange"/>
+    <cl:attribute name="needs-auto-height" value="true"/>
+    <cl:attribute name="mobile-index" value="1"/>
+    <cl:attribute name="tablet-index" value="1"/>
+    <cl:group std:sid="group-1c9d781f" id="grpUserInfoCard" class="user-card-group" clipcontent="false">
+      <cl:attribute name="needs-auto-height" value="true"/>
+      <cl:attribute name="mobile-index" value="1"/>
+      <cl:attribute name="tablet-index" value="1"/>
+      <cl:formdata std:sid="f-data-af5d8d0a" row="0" col="0"/>
+      <cl:group std:sid="group-616b345f" clipcontent="false">
+        <cl:formdata std:sid="f-data-84759510" row="0" col="0"/>
+        <cl:button std:sid="button-1f5a952c" class="btn-logout" icon="0">
+          <cl:listener std:sid="listener-7b56464e" name="click" handler="onButtonClick3"/>
+          <cl:flowlayoutdata std:sid="f-data-22c09857" width="24px" height="24px"/>
+        </cl:button>
+        <cl:button std:sid="button-20bf7362" class="btn-setting" icon="0">
+          <cl:listener std:sid="listener-44707394" name="click" handler="onButtonClick"/>
+          <cl:flowlayoutdata std:sid="f-data-2b9a8e7e" width="24px" height="24px"/>
+        </cl:button>
+        <cl:flowlayout std:sid="f-layout-193b8c3d" halign="right"/>
+      </cl:group>
+      <cl:group std:sid="group-ae309931" class="user-card">
+        <cl:formdata std:sid="f-data-befbcd6d" row="1" col="0"/>
+        <cl:group std:sid="group-ed39df57">
+          <cl:formdata std:sid="f-data-3a7318fd" row="0" col="0"/>
+          <cl:group std:sid="group-7dfc15ca">
+            <cl:verticaldata std:sid="v-data-dc3ddaef" width="400px" height="30px" autosize="height"/>
+            <cl:output std:sid="output-2d2c6b7b" id="optName" class="name" value="홍길동" displayexp="text + &quot; 님&quot;">
+              <cl:apppropbind property="value" app-property="name"/>
+              <cl:flowlayoutdata std:sid="f-data-ca299c20" width="100px" height="30px" autosize="both"/>
+            </cl:output>
+            <cl:output std:sid="output-e634b20b" class="department" value="네트워크본부">
+              <cl:flowlayoutdata std:sid="f-data-a156b873" width="140px" height="30px" autosize="both"/>
+            </cl:output>
+            <cl:flowlayout std:sid="f-layout-39f238c3" vspacing="0" valign="middle"/>
+          </cl:group>
+          <cl:output std:sid="output-4371112d" class="messege" value="오늘 해결해야 할 업무들을 확인해 보세요.">
+            <cl:verticaldata std:sid="v-data-e0eb47bc" width="309px" height="24px" autosize="height"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-7a979588" spacing="4"/>
+        </cl:group>
+        <cl:output std:sid="output-50be56e8" class="time" value="이전접속시간 : 26.05.18 17:123:54">
+          <cl:formdata std:sid="f-data-6db98be7" valign="BOTTOM" height="20" row="1" col="0"/>
+        </cl:output>
+        <cl:formlayout std:sid="f-layout-86a2477f" hspace="8px" vspace="1fr" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px" hseparatorwidth="1" hseparatortype="BY_CLASS">
+          <cl:rows length="61" unit="PIXEL" autoSizing="true" syncminlength="true"/>
+          <cl:rows length="26" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-5d62ac35" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="24" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+        <cl:rows length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-e7b528e6" scrollable="true">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

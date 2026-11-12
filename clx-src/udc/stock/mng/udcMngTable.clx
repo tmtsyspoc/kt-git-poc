@@ -1,0 +1,58 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-3152800a" version="1.0.5542">
+  <head std:sid="head-d2c070b1">
+    <std:metadata>
+      <std:property key="template-file" value="templates/일반화면/1.그리드/F_그리드_페이징.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-64decd8a" id="default" name="default" width="1024px" height="768px"/>
+    <screen std:sid="screen-e04759f3" id="tablet" name="tablet" width="500px" height="667px"/>
+    <screen std:sid="screen-fb3638f5" id="mobile" name="mobile" width="350px" height="525px"/>
+    <cl:model std:sid="model-a2918a4c"/>
+    <cl:appspec title="컨텐츠관리-테이블"/>
+  </head>
+  <body std:sid="body-9be80484" style="top:0px; left:0px; width:300px; height:300px;" class="conts-wrap">
+    <cl:listener std:sid="listener-24862969" name="init" handler="onBodyInit"/>
+    <cl:udc std:sid="ud-control-94c9edd2" id="edt1" type="udc.stock.mng.udcMngHtmlEditor">
+      <cl:formdata std:sid="f-data-ad35e635" row="2" col="0"/>
+    </cl:udc>
+    <cl:group std:sid="group-2af15f80">
+      <cl:formdata std:sid="f-data-66b5736a" row="0" col="0" rowspan="1" colspan="1"/>
+      <cl:output std:sid="output-bbd36e2f" class="cms-subtitle" value="테이블">
+        <cl:formdata std:sid="f-data-9d4ccd4b" row="0" col="0"/>
+      </cl:output>
+      <cl:button std:sid="button-e4eba305" class="btn-close" value="">
+        <cl:listener std:sid="listener-81c9e271" name="click" handler="onButtonClick"/>
+        <cl:formdata std:sid="f-data-f5aa52e7" row="0" col="1"/>
+      </cl:button>
+      <cl:formlayout std:sid="f-layout-701df5a9" scrollable="false" hspace="4px" vspace="4px">
+        <cl:rows length="32" unit="PIXEL"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="32" unit="PIXEL"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-10bd0d9b">
+      <cl:formdata std:sid="f-data-eec9593a" row="1" col="0"/>
+      <cl:output std:sid="output-7995a78f" value="테이블 타이틀">
+        <cl:formdata std:sid="f-data-54f7e0c8" row="0" col="0"/>
+      </cl:output>
+      <cl:inputbox std:sid="i-box-2c00f7ab" id="ipbTitle">
+        <cl:formdata std:sid="f-data-64e90a95" row="1" col="0"/>
+      </cl:inputbox>
+      <cl:formlayout std:sid="f-layout-dc051046" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="25" unit="PIXEL"/>
+        <cl:rows length="32" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-7be485f7" scrollable="false" hspace="8px" vspace="8px" top-margin="16px" right-margin="16px" bottom-margin="16px" left-margin="16px">
+      <cl:rows length="32" unit="PIXEL"/>
+      <cl:rows length="60" unit="PIXEL" autoSizing="true"/>
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

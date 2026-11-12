@@ -1,0 +1,222 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-9702cc60" version="1.0.4034">
+  <head std:sid="head-9e0e2459">
+    <std:metadata>
+      <std:property key="template-file" value="templates/일반/0.프레임/0-1.프레임_버티컬레이아웃.clx"/>
+    </std:metadata>
+    <script std:sid="script-27f59abd" src="react/react.development.js" type="text/javascript"/>
+    <screen std:sid="screen-0045979a" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-bc062cf2" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-392f8a4a" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-90321062">
+      <cl:dataset comment="프로세스 목록" std:sid="d-set-406d885d" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="" std:sid="d-column-9f37779a" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-365757dd" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn comment="" std:sid="d-column-7fe5300f" name="SUB_TITLE"/>
+          <cl:datacolumn comment="" std:sid="d-column-c68cb733" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-fa740970" name="CONT" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-c9d6a3d7" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-b4004ac2" name="SUB_CODE"/>
+          <cl:datacolumn comment="" std:sid="d-column-8d6dc077" name="TARGET_CTRL"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[표준 웹 기술·소스 유지보수성]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[표준 HTML/CSS/JavaScript/TypeScript 또는 공개된 XML/JSON 기반 메타데이터를 사용하고, 벤더 전용 Studio 없이 일반 IDE와 자동화 환경에서 소스와 화면 메타데이터를 이해·수정·검증·빌드할 수 있어야 한다. 비표준 포맷은 스키마와 파싱 방법을 제공해야 한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">○</cl:datavalue>
+            <cl:datavalue columnname="CONT">목적</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT">P.36</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[React, Angular, Vuejs등과 같은 주요 프레임워크와 호환되는가?]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">○</cl:datavalue>
+            <cl:datavalue columnname="CONT">검증 조건</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">eXBuilder6 화면과 React 화면을 혼합하여 사용한다.</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">○</cl:datavalue>
+            <cl:datavalue columnname="CONT">측정</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">화면에 eXBuilder6 요소와 React 요소를 함께 배치하고 혼용하여 사용한다.</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">진행</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">eXBuilder6 요소인 검색조건 영역의 조회 버튼을 클릭해 React 요소인 그리드에 데이터를 보낸다.</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">eXBuilder6</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE">React</cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL">btnSearch</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">진행</cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"/>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">eXBuilder6 요소의 검색조건 인풋박스에 값을 입력하고 필터 버튼을 눌러 React 요소인 그리드에 데이터가 필터링 되는 것을 확인한다.</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">eXBuilder6</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE">React</cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL">btnFilter</cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+      <cl:dataset std:sid="d-set-7097c4f3" id="dsData">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-b49608df" name="id"/>
+          <cl:datacolumn std:sid="d-column-ae3d24db" name="first_name"/>
+          <cl:datacolumn std:sid="d-column-785b8a1b" name="last_name"/>
+          <cl:datacolumn std:sid="d-column-76df4ee8" name="email"/>
+          <cl:datacolumn std:sid="d-column-48f80496" name="gender"/>
+          <cl:datacolumn std:sid="d-column-b2913561" name="university"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+      <cl:submission std:sid="submission-7aac6ea2" id="subRetrieve" action="app/sce/A7/data/MOCK_DATA.json">
+        <cl:responsedata dataid="dsData"/>
+      </cl:submission>
+    </cl:model>
+    <cl:appspec title="프론트엔드 프레임워크 확장"/>
+  </head>
+  <body std:sid="body-a0c207fd" class="wrap">
+    <cl:listener std:sid="listener-98b25bdd" name="load" handler="onBodyLoad2"/>
+    <cl:udc std:sid="ud-control-8c71e0ab" id="udcComAppHeader" type="udc.com.udcComAppHeader">
+      <cl:verticaldata std:sid="v-data-d23e67ba" width="1238px" height="20px" autosize="height"/>
+      <cl:property name="title" value="7.1 프론트엔드 프레임워크 확장" type="string"/>
+      <cl:property name="isExpandAllPocProcess" value="true" type="boolean"/>
+    </cl:udc>
+    <cl:group std:sid="group-be39b9f1" id="grpData" class="conts-area">
+      <cl:verticaldata std:sid="v-data-851ebd20" width="992px" height="2523px" autosize="height"/>
+      <cl:group std:sid="group-44d84386" class="conts-wrap">
+        <cl:verticaldata std:sid="v-data-dd169324" width="976px" height="620px" autosize="height"/>
+        <cl:udc std:sid="ud-control-4a970eac" id="udcpocdocviewer1" type="udc.poc.udcPocDocViewer">
+          <cl:verticaldata std:sid="v-data-835cbc8f" width="976px" height="620px" autosize="none"/>
+          <cl:property name="fileUrl" value="data/docs/A7-1.png" type="resource"/>
+        </cl:udc>
+        <cl:verticallayout std:sid="v-layout-e1183c60" spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:group std:sid="group-a47f66c3" id="grp1" class="conts-wrap">
+        <cl:verticaldata std:sid="v-data-53211d7f" width="992px" height="891px" autosize="height"/>
+        <cl:udc std:sid="ud-control-a94e34e5" id="udcComFormTitle3" type="udc.com.udcComFormTitle">
+          <cl:verticaldata std:sid="v-data-4f42d250" width="1218px" height="28px" autosize="height"/>
+          <cl:property name="title" value="eXBuilder6 영역" type="string"/>
+        </cl:udc>
+        <cl:group std:sid="group-648ab6f2" id="grpSearch" class="sch-filter-box">
+          <std:metadata>
+            <std:property key="template-uuid" value="ced8aa06-0be6-4966-954d-2fe3acc0398b"/>
+            <std:property key="template-rev" value="3"/>
+          </std:metadata>
+          <cl:attribute name="mobile-column-count" value="1"/>
+          <cl:verticaldata std:sid="v-data-5d2d1cd1" width="982px" height="54px" autosize="height"/>
+          <cl:group std:sid="group-df612196">
+            <cl:attribute name="mobile-column-count" value="1"/>
+            <cl:formdata std:sid="f-data-990543cf" width="100" height="23" row="0" col="0" rowspan="1" colspan="1"/>
+            <cl:output std:sid="output-76c41bfd" class="label" value="Filter Text">
+              <cl:formdata std:sid="f-data-bf4c02b6" row="0" col="0"/>
+            </cl:output>
+            <cl:inputbox std:sid="i-box-8bf746b0" id="ipbSearch">
+              <cl:listener std:sid="listener-ea7b0854" name="keydown" handler="onIpbSearchKeydown"/>
+              <cl:formdata std:sid="f-data-832a853b" row="0" col="1"/>
+            </cl:inputbox>
+            <cl:formlayout std:sid="f-layout-f745a671" scrollable="false" hspace="8px" vspace="8px">
+              <cl:rows length="28"/>
+              <cl:columns length="100" autoSizing="true" shadecolor="transparent" syncminlength="false"/>
+              <cl:columns length="1" unit="FRACTION" autoSizing="true" shadecolor="transparent"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:group std:sid="group-84966c3d" class="search-button-group">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-1c7496a5" row="0" col="1"/>
+            <cl:button std:sid="button-2787823e" id="btnSearch" class="primary btn-search" value="조회" icon="0">
+              <cl:listener std:sid="listener-8c4150a5" name="click" handler="onBtn1Click"/>
+              <cl:flowlayoutdata std:sid="f-data-1fb5d4ae" width="86px" height="28px" autosize="width"/>
+            </cl:button>
+            <cl:button std:sid="button-463b2a11" id="btnFilter" class="secondary" value="필터" icon="../../../theme/img/icons/ico_setting.svg">
+              <cl:listener std:sid="listener-37f7427e" name="click" handler="onBtn2Click"/>
+              <cl:flowlayoutdata std:sid="f-data-32cdc714" width="77px" height="28px" autosize="width"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-bdd676a6" scrollable="false" vspacing="0" halign="right" valign="middle" linewrap="false"/>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-6fe70bc3" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION" autoSizing="false" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+            <cl:columns length="200" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" minlength="0" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:group std:sid="group-d2f7bf5a" id="grp6">
+          <cl:verticaldata std:sid="v-data-280011f5" width="1218px" height="28px"/>
+          <cl:udc std:sid="ud-control-1958d7a5" id="udcComFormTitle4" type="udc.com.udcComFormTitle">
+            <cl:flowlayoutdata std:sid="f-data-bb65c4e5" width="120px" height="28px" autosize="width"/>
+            <cl:property name="title" value="React 영역" type="string"/>
+          </cl:udc>
+          <cl:img std:sid="image-7c1e7c72" id="img2" src="data/react_logo.png">
+            <cl:flowlayoutdata std:sid="f-data-2a9b4d25" width="25px" height="28px"/>
+          </cl:img>
+          <cl:flowlayout std:sid="f-layout-be87e38a" hspacing="4" vspacing="4"/>
+        </cl:group>
+        <cl:embeddedpage std:sid="e-page-21e6ff90" id="embpage1" src="react/index.html">
+          <cl:listener std:sid="listener-a7e59ab2" name="load" handler="onEmbpage1Load2"/>
+          <cl:verticaldata std:sid="v-data-faaf525f" width="320px" height="880px" autosize="none"/>
+        </cl:embeddedpage>
+        <cl:verticallayout std:sid="v-layout-63c3bf60" scrollable="false" spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-4167ee7a" spacing="16"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-5f3cdbe3" spacing="16" leftmargin="24" rightmargin="24" topmargin="16" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler>
+      <std:guide position="740"/>
+    </std:vruler>
+  </std:studiosetting>
+</html>

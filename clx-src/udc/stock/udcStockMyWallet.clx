@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-f83fcc51" version="1.0.5575">
+  <head std:sid="head-c30795c1">
+    <screen std:sid="screen-175c5782" id="EXB-FULL" name="EXB-FULL" width="1580px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-2818c8fc" id="EXB-DIV" name="EXB-DIV" width="1128px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-42dc4ac3" id="EXB-POP[1024]" name="EXB-POP[1024]" width="1024px" height="576px"/>
+    <screen std:sid="screen-2d0e43b8" id="EXB-POP[800]" name="EXB-POP[800]" width="800px" height="480px"/>
+    <screen std:sid="screen-5ea2e396" id="EXB-PART" name="EXB-PART" width="672px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-84c01ef8" id="EXB-POP[480]" name="EXB-POP[480]" width="480px" height="320px"/>
+    <cl:model std:sid="model-ce9575be">
+      <cl:dataset comment="체결잔고상품조회 응답" std:sid="d-set-c1dd320d" id="dsPrdtList" sortcondition="ASST_RTE asc">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="상품구분명" std:sid="d-column-0a762535" name="PRDT_SE_NM"/>
+          <cl:datacolumn comment="매입금액" std:sid="d-column-856b5eda" name="PCHS_AMT" datatype="number"/>
+          <cl:datacolumn comment="평가금액" std:sid="d-column-aef27a6e" name="EVL_AMT" datatype="number"/>
+          <cl:datacolumn comment="대출금액" std:sid="d-column-cb18b8b2" name="LOAN_AMT" datatype="number"/>
+          <cl:datacolumn comment="출금가능금액" std:sid="d-column-9ccb30a5" info="" name="DRWG_PSBL_AMT" datatype="number"/>
+          <cl:datacolumn comment="평가손익금액" std:sid="d-column-60b9b09e" name="EVL_PFLS_AMT" datatype="number"/>
+          <cl:datacolumn comment="손익율" std:sid="d-column-8b318c63" name="PFLS_RT" datatype="number"/>
+          <cl:datacolumn comment="자산비율" std:sid="d-column-9e6c412e" name="ASST_RTE" datatype="number"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+      <cl:datamap comment="체결잔고상품별조회 요청" std:sid="d-map-5355a5d1" id="dmPrdtIn">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="다음키" std:sid="d-column-705291eb" name="NEXT_KEY"/>
+          <cl:datacolumn comment="개별계좌번호" std:sid="d-column-1254c726" name="IACN" defaultvalue="50029021011"/>
+          <cl:datacolumn comment="계좌비밀번호" std:sid="d-column-57d4dbb9" name="ACNT_PWD"/>
+          <cl:datacolumn comment="조회구분코드" std:sid="d-column-e43e02f3" name="INQ_SCD" defaultvalue="1"/>
+          <cl:datacolumn comment="비밀계좌검증여부" std:sid="d-column-8166d7e0" name="SCRT_ACNT_VRFC_YN"/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+      <cl:submission comment="체결잔고상품별조회 RP6801Q1" std:sid="submission-8351c0a3" id="subPrdtList" method="get" action="app/sce/A15/data/myWallet.json" mediatype="application/x-www-form-urlencoded;simple">
+        <cl:requestdata dataid="dmPrdtIn"/>
+        <cl:responsedata dataid="dsPrdtList" alias="outRec1" isadd="true"/>
+      </cl:submission>
+    </cl:model>
+    <cl:appspec title="내 자산"/>
+  </head>
+  <body std:sid="body-dbe09a2e" style="top:0px; left:0px; width:400px; height:300px;" class="card">
+    <cl:listener std:sid="listener-81b0a466" name="load" handler="onBodyLoad"/>
+    <cl:group std:sid="group-54e5d605" id="grp2" visible="false">
+      <cl:verticaldata std:sid="v-data-793d5b50" width="276px" height="32px" autosize="height"/>
+      <cl:combobox std:sid="c-box-2e837a7a" id="cmbIACN2">
+        <cl:datamapbind property="value" datacontrolid="dmPrdtIn" columnname="IACN"/>
+        <cl:formdata std:sid="f-data-b60bd9b9" row="0" col="1"/>
+        <cl:item std:sid="t-item-d1fb9fec" label="50029021011" value="50029021011"/>
+      </cl:combobox>
+      <cl:output std:sid="output-f3c70720" id="opt1" class="font-bold" value="계좌">
+        <cl:formdata std:sid="f-data-a0b3c637" row="0" col="0"/>
+      </cl:output>
+      <cl:formlayout std:sid="f-layout-1fc08971" scrollable="false" hspace="8px" vspace="8px">
+        <cl:rows length="32" unit="PIXEL"/>
+        <cl:columns length="40" unit="PIXEL" autoSizing="true" hidden="false" syncminlength="false"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:output std:sid="output-6ff8b3f9" id="opt2" class="tit h4 text-center" value="총자산">
+      <cl:verticaldata std:sid="v-data-8ee40d69" width="276px" height="30px" autosize="height"/>
+    </cl:output>
+    <cl:output std:sid="output-5473e281" id="optTotalAsset" class="tit h3 text-center" datatype="number" format="#,##0" displayexp="text + &quot; 원&quot;">
+      <cl:verticaldata std:sid="v-data-9c874352" width="276px" height="32px" autosize="height"/>
+    </cl:output>
+    <cl:udc std:sid="ud-control-f9a5f285" id="udccmnchart1" type="udc.stock.chart.udcCmnChart">
+      <cl:verticaldata std:sid="v-data-73241dcb" width="300px" height="300px"/>
+      <cl:property name="dataSet" value="dsPrdtList" type="control"/>
+      <cl:property name="chartType" value="circle : ring" type="enumeration"/>
+      <cl:property name="categoryColNm" value="PRDT_SE_NM" type="string"/>
+      <cl:property name="valueColNms" value="EVL_AMT" type="string"/>
+    </cl:udc>
+    <cl:group std:sid="group-fd9700cb" id="grp3" class="card card-border">
+      <cl:verticaldata std:sid="v-data-212881bd" width="276px" height="280px" autosize="height"/>
+      <cl:grid std:sid="grid-5fded5bd" id="grd5" class="table-white row-bottom" datasetid="dsPrdtList">
+        <cl:verticaldata std:sid="v-data-95378b3a" width="400px" height="200px" autosize="height"/>
+        <cl:gridcolumn std:sid="g-column-9267a1e1" width="120px"/>
+        <cl:gridcolumn std:sid="g-column-d46354e9" width="120px"/>
+        <cl:griddetail std:sid="gd-band-ed33f3b0">
+          <cl:gridrow std:sid="g-row-fe473521" height="36px"/>
+          <cl:gridcell std:sid="gd-cell-cfdd8b19" rowindex="0" colindex="0" columnname="PRDT_SE_NM">
+            <cl:output std:sid="output-86144188" id="opt3" class="text-left b-xxsm" value="Output" displayexp="text + &quot; (&quot;+ASST_RTE.toFixed(2)+&quot;%)&quot;" ellipsis="true">
+              <cl:expbind property="tooltip" category="PROPERTY" expression="text"/>
+              <cl:celldata std:sid="c-data-50687357"/>
+            </cl:output>
+          </cl:gridcell>
+          <cl:gridcell std:sid="gd-cell-1d108ec4" rowindex="0" colindex="1" columnname="EVL_AMT">
+            <cl:output std:sid="output-041820dc" id="opt4" class="text-right" datatype="number" format="s#,##0">
+              <cl:celldata std:sid="c-data-8f591958"/>
+            </cl:output>
+          </cl:gridcell>
+        </cl:griddetail>
+      </cl:grid>
+      <cl:verticallayout std:sid="v-layout-ae4e4d55"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-7e49c469" spacing="8"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

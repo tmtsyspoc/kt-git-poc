@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:settings="kr.co.tomatosystem.exbuilder.model.ui.settings">
+  <settings:CannedTemplate uuid="f91b19be-4854-4d7d-b7e1-c43b9a18b816" name="[폼 영역]" preferredWidth="992" preferredHeight="181" revision="16" description="템플릿 제공">
+    <control xsi:type="cl:Group" sid="group-0f7d1067" id="grp1">
+      <metaData>
+        <properties key="template-uuid" value="f91b19be-4854-4d7d-b7e1-c43b9a18b816"/>
+        <properties key="template-rev" value="15"/>
+      </metaData>
+      <layoutData xsi:type="cl:XYLayoutData" sid="xyl-data-b7de286c" top="48px" left="20px" width="992px" height="181px" horizontalAnchor="LEFT" verticalAnchor="TOP"/>
+      <controls xsi:type="cl:UserDefinedControl" sid="ud-control-96472e13" id="udcComFormTitle1" type="udc.com.udcComFormTitle">
+        <layoutData xsi:type="cl:VerticalData" sid="v-data-db3f33af" width="1024px" height="28px" autoSize="none"/>
+      </controls>
+      <controls xsi:type="cl:Group" sid="group-b906e537" id="grp2" class="form">
+        <userAttributes key="table-min-height" value=""/>
+        <userAttributes key="mobile-column-count" value="1"/>
+        <userAttributes key="tablet-column-count" value="2"/>
+        <layoutData xsi:type="cl:VerticalData" sid="v-data-0ee41298" width="1024px" height="147px" autoSize="height"/>
+        <controls xsi:type="cl:Output" sid="output-030bb1ec" id="opt4" class="label required" value="Output">
+          <layoutData xsi:type="cl:FormData" sid="f-data-3c414c95" rowIndex="0" colIndex="0"/>
+        </controls>
+        <controls xsi:type="cl:InputBox" sid="i-box-38738478" id="ipb1">
+          <layoutData xsi:type="cl:FormData" sid="f-data-cf09007d" rowIndex="0" colIndex="1"/>
+        </controls>
+        <controls xsi:type="cl:Output" sid="output-3a64b7fc" id="opt5" class="label" value="Output">
+          <layoutData xsi:type="cl:FormData" sid="f-data-0d2ee014" rowIndex="0" colIndex="2"/>
+        </controls>
+        <controls xsi:type="cl:InputBox" sid="i-box-327a448c" id="ipb2">
+          <layoutData xsi:type="cl:FormData" sid="f-data-6e26417f" rowIndex="0" colIndex="3"/>
+        </controls>
+        <controls xsi:type="cl:Output" sid="output-fa4ac0a7" id="opt6" class="label" value="Output">
+          <layoutData xsi:type="cl:FormData" sid="f-data-f7fd362a" rowIndex="1" colIndex="0"/>
+        </controls>
+        <controls xsi:type="cl:InputBox" sid="i-box-2ac0f69f" id="ipb3">
+          <layoutData xsi:type="cl:FormData" sid="f-data-5fd78082" rowIndex="1" colIndex="1"/>
+        </controls>
+        <controls xsi:type="cl:Output" sid="output-261fd8c6" id="opt7" class="label" value="Output">
+          <layoutData xsi:type="cl:FormData" sid="f-data-c4d5f533" rowIndex="1" colIndex="2"/>
+        </controls>
+        <controls xsi:type="cl:InputBox" sid="i-box-046245b8" id="ipb4">
+          <layoutData xsi:type="cl:FormData" sid="f-data-f8a54761" rowIndex="1" colIndex="3"/>
+        </controls>
+        <controls xsi:type="cl:Output" sid="output-52554f71" id="opt8" class="label" value="Output">
+          <layoutData xsi:type="cl:FormData" sid="f-data-1bf016a4" rowIndex="2" colIndex="0"/>
+        </controls>
+        <controls xsi:type="cl:InputBox" sid="i-box-a991f5f2" id="ipb5">
+          <layoutData xsi:type="cl:FormData" sid="f-data-d9d324c8" rowIndex="2" colIndex="1"/>
+        </controls>
+        <controls xsi:type="cl:Output" sid="output-c869a7ef" id="opt9" class="label" value="Output">
+          <layoutData xsi:type="cl:FormData" sid="f-data-7173e7d7" rowIndex="2" colIndex="2"/>
+        </controls>
+        <controls xsi:type="cl:InputBox" sid="i-box-c6135b28" id="ipb6">
+          <layoutData xsi:type="cl:FormData" sid="f-data-0d2b4882" rowIndex="2" colIndex="3"/>
+        </controls>
+        <controls xsi:type="cl:Output" sid="output-3dac20ea" id="opt10" class="label" value="Output">
+          <layoutData xsi:type="cl:FormData" sid="f-data-9c8b5a63" rowIndex="3" colIndex="0"/>
+        </controls>
+        <controls xsi:type="cl:InputBox" sid="i-box-f0053eeb" id="ipb7">
+          <layoutData xsi:type="cl:FormData" sid="f-data-199cdaaa" rowIndex="3" colIndex="1"/>
+        </controls>
+        <controls xsi:type="cl:Output" sid="output-a6fb89b4" id="opt11" class="label" value="Output">
+          <layoutData xsi:type="cl:FormData" sid="f-data-0e09d714" rowIndex="3" colIndex="2"/>
+        </controls>
+        <controls xsi:type="cl:InputBox" sid="i-box-df80c967" id="ipb8">
+          <layoutData xsi:type="cl:FormData" sid="f-data-52463c57" rowIndex="3" colIndex="3"/>
+        </controls>
+        <layout xsi:type="cl:FormLayout" sid="f-layout-d1049485" scrollable="false" horizontalSpacing="17px" verticalSpacing="9px" topMargin="4px" rightMargin="8px" bottomMargin="4px" leftMargin="8px" horizontalSeparatorWidth="1" horizontalSeparatorType="BY_CLASS">
+          <rows length="28" unit="PIXEL"/>
+          <rows length="28" unit="PIXEL"/>
+          <rows length="28" unit="PIXEL"/>
+          <rows length="28" unit="PIXEL" shadeType="NONE" shadeColor="transparent"/>
+          <columns length="180" unit="PIXEL" shadeType="BY_CLASS"/>
+          <columns length="1" unit="FRACTION"/>
+          <columns length="180" unit="PIXEL" shadeType="BY_CLASS"/>
+          <columns length="1" unit="FRACTION"/>
+        </layout>
+      </controls>
+      <layout xsi:type="cl:VerticalLayout" sid="v-layout-942be11e" spacing="4"/>
+    </control>
+  </settings:CannedTemplate>
+  <settings:CannedTemplate uuid="fea40c07-d4d6-4ac4-83ee-934afa51123d" name="[탭 폴더]" preferredWidth="1024" preferredHeight="403" revision="6" description="템플릿 제공">
+    <control xsi:type="cl:TabFolder" sid="t-folder-a86a24a0" itemDraggingMode="internal">
+      <metaData>
+        <properties key="template-uuid" value="fea40c07-d4d6-4ac4-83ee-934afa51123d"/>
+        <properties key="template-rev" value="5"/>
+      </metaData>
+      <userAttributes key="transform-on-mobile" value="Y"/>
+      <layoutData xsi:type="cl:VerticalData" sid="v-data-024d604f" width="1260px" height="403px"/>
+      <tabItems sid="t-item-0a43d55c" selected="true" text="텍스트를입력하세요">
+        <metaData>
+          <properties key="is-active-item" value="true"/>
+        </metaData>
+        <content xsi:type="cl:Group" sid="group-d3dcfd5a">
+          <metaData>
+            <properties key="locked" value="true"/>
+          </metaData>
+          <userAttributes key="mobile-column-count" value="1"/>
+          <userAttributes key="tablet-column-count" value="1"/>
+          <layout xsi:type="cl:VerticalLayout" sid="v-layout-8ee97d26" scrollable="false" spacing="8"/>
+        </content>
+      </tabItems>
+      <tabItems sid="t-item-c2b09fb2" text="텍스트를입력하세요">
+        <content xsi:type="cl:Group" sid="group-2139b8c1">
+          <metaData>
+            <properties key="locked" value="true"/>
+          </metaData>
+          <layout xsi:type="cl:VerticalLayout" sid="v-layout-cca13a0c" scrollable="false" spacing="8"/>
+        </content>
+      </tabItems>
+      <tabItems sid="t-item-7b286000" text="텍스트를입력하세요">
+        <content xsi:type="cl:Group" sid="group-8af2c810">
+          <metaData>
+            <properties key="locked" value="true"/>
+          </metaData>
+          <layout xsi:type="cl:VerticalLayout" sid="v-layout-835d2ab1" scrollable="false" spacing="8"/>
+        </content>
+      </tabItems>
+    </control>
+  </settings:CannedTemplate>
+  <settings:CannedTemplate uuid="b11f0d6f-b781-4426-b3e5-761783bd5926" name="[그리드 영역]" preferredWidth="1024" preferredHeight="319" revision="9" description="템플릿 제공">
+    <control xsi:type="cl:Group" sid="group-e5709413">
+      <metaData>
+        <properties key="template-uuid" value="b11f0d6f-b781-4426-b3e5-761783bd5926"/>
+        <properties key="template-rev" value="8"/>
+      </metaData>
+      <layoutData xsi:type="cl:VerticalData" sid="v-data-5e887c24" width="1260px" height="319px"/>
+      <controls xsi:type="cl:Grid" sid="grid-7cc7b748" fieldLabel="그리드" autoFit="1, 2, 3, 4, 5, 6" clickMode="select" columnMovable="true">
+        <userAttributes key="transform-on-mobile" value="detailType"/>
+        <layoutData xsi:type="cl:FormData" sid="f-data-3e55ebfb" rowIndex="1" colIndex="0"/>
+        <gridColumns sid="g-column-ff2bc287" width="60px"/>
+        <gridColumns sid="g-column-61b0af70" width="140px"/>
+        <gridColumns sid="g-column-70e00633" width="120px"/>
+        <gridColumns sid="g-column-54da606e" width="120px"/>
+        <gridColumns sid="g-column-6c83bc79" width="120px"/>
+        <gridColumns sid="g-column-9a3c4739" width="165px"/>
+        <gridColumns sid="g-column-0cb0857a" width="140px"/>
+        <gridHeader sid="gh-band-2891c07d">
+          <gridRows sid="g-row-3d10c08d" height="37px"/>
+          <gridCells sid="gh-cell-d2904dbc" rowIndex="0" colIndex="1"/>
+          <gridCells sid="gh-cell-4aa2e210" rowIndex="0" colIndex="2"/>
+          <gridCells sid="gh-cell-9be64202" rowIndex="0" colIndex="3"/>
+          <gridCells sid="gh-cell-26adb764" rowIndex="0" colIndex="4"/>
+          <gridCells sid="gh-cell-2cbadf80" rowIndex="0" colIndex="5"/>
+          <gridCells sid="gh-cell-a3f4470b" rowIndex="0" colIndex="6"/>
+          <gridCells sid="gh-cell-8d8e61c6" rowIndex="0" colIndex="0"/>
+        </gridHeader>
+        <gridDetail sid="gd-band-f179b0fd">
+          <gridRows sid="g-row-139089ad" height="37px"/>
+          <gridCells sid="gd-cell-c1b7b3ac" rowIndex="0" colIndex="1">
+            <control xsi:type="cl:Output" sid="output-13831b36" id="opt2" style="text-align:center;">
+              <layoutData xsi:type="cl:CellData" sid="c-data-3aa95458"/>
+            </control>
+          </gridCells>
+          <gridCells sid="gd-cell-7b562ae2" rowIndex="0" colIndex="2">
+            <control xsi:type="cl:Output" sid="output-c0992d9c" id="opt3" style="text-align:center;">
+              <layoutData xsi:type="cl:CellData" sid="c-data-02f56756"/>
+            </control>
+          </gridCells>
+          <gridCells sid="gd-cell-890d255c" rowIndex="0" colIndex="3">
+            <control xsi:type="cl:Output" sid="output-67e78d45" id="opt4" style="text-align:center;">
+              <layoutData xsi:type="cl:CellData" sid="c-data-602b5378"/>
+            </control>
+          </gridCells>
+          <gridCells sid="gd-cell-4fa836f5" rowIndex="0" colIndex="4">
+            <control xsi:type="cl:Output" sid="output-7d1bc4fa" id="opt5" style="text-align:center;">
+              <layoutData xsi:type="cl:CellData" sid="c-data-efe50dda"/>
+            </control>
+          </gridCells>
+          <gridCells sid="gd-cell-7b1d138f" rowIndex="0" colIndex="5">
+            <control xsi:type="cl:Output" sid="output-f1b35c21" id="opt6" style="text-align:center;">
+              <layoutData xsi:type="cl:CellData" sid="c-data-919d8f91"/>
+            </control>
+          </gridCells>
+          <gridCells sid="gd-cell-3243e518" rowIndex="0" colIndex="6">
+            <control xsi:type="cl:Output" sid="output-774d8aea" id="opt7" style="text-align:center;">
+              <layoutData xsi:type="cl:CellData" sid="c-data-880716dd"/>
+            </control>
+          </gridCells>
+          <gridCells sid="gd-cell-4c093d93" rowIndex="0" colIndex="0">
+            <control xsi:type="cl:Output" sid="output-7541e4b9" id="opt8" style="text-align:center;">
+              <layoutData xsi:type="cl:CellData" sid="c-data-4790508c"/>
+            </control>
+          </gridCells>
+        </gridDetail>
+      </controls>
+      <controls xsi:type="cl:UserDefinedControl" sid="ud-control-cf4f3911" type="udc.com.udcComPageindexer">
+        <layoutData xsi:type="cl:FormData" sid="f-data-aa776a69" rowIndex="2" colIndex="0"/>
+      </controls>
+      <controls xsi:type="cl:UserDefinedControl" sid="ud-control-6b5015c1" type="udc.com.udcComGridTitle">
+        <layoutData xsi:type="cl:FormData" sid="f-data-fb0d2594" rowIndex="0" colIndex="0"/>
+      </controls>
+      <layout xsi:type="cl:FormLayout" sid="f-layout-d476bed1" scrollable="false" horizontalSpacing="0px" verticalSpacing="4px">
+        <rows length="28" unit="PIXEL" autoSizing="true" synchronizeMinLength="false"/>
+        <rows length="1" unit="FRACTION"/>
+        <rows length="28" unit="PIXEL" autoSizing="true"/>
+        <columns length="1" unit="FRACTION"/>
+      </layout>
+    </control>
+  </settings:CannedTemplate>
+  <settings:CannedTemplate uuid="6420bc94-32c3-4401-afb3-4b4306217e72" name="[작업 영역]" preferredWidth="1024" preferredHeight="623" revision="5" description="템플릿 제공">
+    <control xsi:type="cl:Group" sid="group-6196c5c5">
+      <metaData>
+        <properties key="template-uuid" value="6420bc94-32c3-4401-afb3-4b4306217e72"/>
+        <properties key="template-rev" value="4"/>
+      </metaData>
+      <layoutData xsi:type="cl:VerticalData" sid="v-data-9bc12ab1" width="400px" height="623px" autoSize="height"/>
+      <layout xsi:type="cl:FormLayout" sid="f-layout-6e825360" horizontalSpacing="0px" verticalSpacing="8px" topMargin="0px" rightMargin="0px" bottomMargin="0px" leftMargin="0px">
+        <rows length="210" unit="PIXEL" autoSizing="true" synchronizeMinLength="true"/>
+        <rows length="1" unit="FRACTION"/>
+        <columns length="1" unit="FRACTION"/>
+      </layout>
+    </control>
+  </settings:CannedTemplate>
+  <settings:CannedTemplate uuid="ced8aa06-0be6-4966-954d-2fe3acc0398b" name="[조회 영역]" preferredWidth="992" preferredHeight="60" revision="5">
+    <control xsi:type="cl:Group" sid="group-648ab6f2" id="grpSearch" class="sch-filter-box">
+      <metaData>
+        <properties key="template-uuid" value="ced8aa06-0be6-4966-954d-2fe3acc0398b"/>
+        <properties key="template-rev" value="4"/>
+      </metaData>
+      <userAttributes key="mobile-column-count" value="2"/>
+      <layoutData xsi:type="cl:XYLayoutData" sid="xyl-data-aca32474" top="398px" left="20px" width="992px" height="60px" horizontalAnchor="LEFT" verticalAnchor="TOP"/>
+      <controls xsi:type="cl:Button" sid="button-2787823e" id="btnSearch" class="primary" value="조회" icon="0">
+        <layoutData xsi:type="cl:FormData" sid="f-data-f833f7a5" rowIndex="0" colIndex="5"/>
+        <iconStyle class="ico-search"/>
+      </controls>
+      <controls xsi:type="cl:Output" sid="output-9db4cce1" class="label" value="label">
+        <layoutData xsi:type="cl:FormData" sid="f-data-7e88677a" rowIndex="0" colIndex="0"/>
+      </controls>
+      <layout xsi:type="cl:FormLayout" sid="f-layout-6fe70bc3" scrollable="false" horizontalSpacing="0px" verticalSpacing="8px" topMargin="0px" rightMargin="0px" bottomMargin="0px" leftMargin="0px">
+        <rows length="28" unit="PIXEL"/>
+        <columns length="160" autoSizing="true" synchronizeMinLength="false"/>
+        <columns length="1" unit="FRACTION" autoSizing="false" synchronizeMinLength="false"/>
+        <columns length="160" autoSizing="true" synchronizeMinLength="false"/>
+        <columns length="1" unit="FRACTION" autoSizing="false" synchronizeMinLength="false"/>
+        <columns length="1" unit="FRACTION" autoSizing="false" shadeType="NONE" shadeColor="transparent" synchronizeMinLength="false"/>
+        <columns length="60" unit="PIXEL" autoSizing="true" shadeType="NONE" shadeColor="transparent" minLength="0" synchronizeMinLength="false"/>
+      </layout>
+    </control>
+  </settings:CannedTemplate>
+  <settings:CannedTemplate uuid="d3a2c98f-b10c-467d-9c96-0c980e76da6e" name="[폼 영역_우측 컨트롤 배치]" preferredWidth="1024" preferredHeight="179" revision="11">
+    <control xsi:type="cl:Group" sid="group-8331296a" id="grp1">
+      <metaData>
+        <properties key="template-uuid" value="d3a2c98f-b10c-467d-9c96-0c980e76da6e"/>
+        <properties key="template-rev" value="10"/>
+      </metaData>
+      <layoutData xsi:type="cl:XYLayoutData" sid="xyl-data-8e2ba89a" top="35px" left="20px" width="1024px" height="179px" horizontalAnchor="LEFT" verticalAnchor="TOP"/>
+      <controls xsi:type="cl:Group" sid="group-fd2c177e" id="grp5">
+        <layoutData xsi:type="cl:VerticalData" sid="v-data-8094b0aa" width="1024px" height="28px" autoSize="height"/>
+        <controls xsi:type="cl:UserDefinedControl" sid="ud-control-d1fac6c8" id="udcComFormTitle1" type="udc.com.udcComFormTitle">
+          <layoutData xsi:type="cl:FormData" sid="f-data-961ed673" rowIndex="0" colIndex="0"/>
+          <properties name="title" value="" type="string"/>
+        </controls>
+        <layout xsi:type="cl:FormLayout" sid="f-layout-a7e80e13" scrollable="false" horizontalSpacing="0px" verticalSpacing="0px" topMargin="0px" rightMargin="0px" bottomMargin="0px" leftMargin="0px">
+          <rows length="28" unit="PIXEL" autoSizing="true" synchronizeMinLength="false"/>
+          <columns length="1" unit="FRACTION"/>
+          <columns length="200" unit="PIXEL" autoSizing="true" synchronizeMinLength="false"/>
+        </layout>
+      </controls>
+      <controls xsi:type="cl:Group" sid="group-f74afb12" id="grp2" class="form">
+        <userAttributes key="table-min-height" value=""/>
+        <userAttributes key="mobile-column-count" value="1"/>
+        <userAttributes key="tablet-column-count" value="2"/>
+        <layoutData xsi:type="cl:VerticalData" sid="v-data-56e8ffc3" width="1024px" height="147px" autoSize="height"/>
+        <controls xsi:type="cl:Output" sid="output-dc269fff" id="opt1" class="label required" value="Output">
+          <layoutData xsi:type="cl:FormData" sid="f-data-1690adc2" rowIndex="0" colIndex="0"/>
+        </controls>
+        <controls xsi:type="cl:InputBox" sid="i-box-baaea049" id="ipb1">
+          <layoutData xsi:type="cl:FormData" sid="f-data-873c0603" rowIndex="0" colIndex="1"/>
+        </controls>
+        <controls xsi:type="cl:Output" sid="output-d191e8f2" id="opt2" class="label" value="Output">
+          <layoutData xsi:type="cl:FormData" sid="f-data-de358bf1" rowIndex="0" colIndex="2"/>
+        </controls>
+        <controls xsi:type="cl:InputBox" sid="i-box-d5fbefcf" id="ipb2">
+          <layoutData xsi:type="cl:FormData" sid="f-data-3a56e636" rowIndex="0" colIndex="3"/>
+        </controls>
+        <controls xsi:type="cl:Output" sid="output-55c6f420" id="opt3" class="label" value="Output">
+          <layoutData xsi:type="cl:FormData" sid="f-data-bdf111ff" rowIndex="1" colIndex="0"/>
+        </controls>
+        <controls xsi:type="cl:InputBox" sid="i-box-75d3890b" id="ipb3">
+          <layoutData xsi:type="cl:FormData" sid="f-data-b85bb10f" rowIndex="1" colIndex="1"/>
+        </controls>
+        <controls xsi:type="cl:Output" sid="output-67d5f51a" id="opt4" class="label" value="Output">
+          <layoutData xsi:type="cl:FormData" sid="f-data-26e608e9" rowIndex="1" colIndex="2"/>
+        </controls>
+        <controls xsi:type="cl:InputBox" sid="i-box-9835c381" id="ipb4">
+          <layoutData xsi:type="cl:FormData" sid="f-data-96c95b90" rowIndex="1" colIndex="3"/>
+        </controls>
+        <controls xsi:type="cl:Output" sid="output-4136113d" id="opt5" class="label" value="Output">
+          <layoutData xsi:type="cl:FormData" sid="f-data-ffba9351" rowIndex="2" colIndex="0"/>
+        </controls>
+        <controls xsi:type="cl:InputBox" sid="i-box-68f2d98c" id="ipb5">
+          <layoutData xsi:type="cl:FormData" sid="f-data-b2e3849b" rowIndex="2" colIndex="1"/>
+        </controls>
+        <controls xsi:type="cl:Output" sid="output-7b08d510" id="opt6" class="label" value="Output">
+          <layoutData xsi:type="cl:FormData" sid="f-data-afb69420" rowIndex="2" colIndex="2"/>
+        </controls>
+        <controls xsi:type="cl:InputBox" sid="i-box-5cb1c60f" id="ipb6">
+          <layoutData xsi:type="cl:FormData" sid="f-data-e6f8d227" rowIndex="2" colIndex="3"/>
+        </controls>
+        <controls xsi:type="cl:Output" sid="output-2803d754" id="opt7" class="label" value="Output">
+          <layoutData xsi:type="cl:FormData" sid="f-data-90d071db" rowIndex="3" colIndex="0"/>
+        </controls>
+        <controls xsi:type="cl:InputBox" sid="i-box-214a09f7" id="ipb7">
+          <layoutData xsi:type="cl:FormData" sid="f-data-ae2909f5" rowIndex="3" colIndex="1"/>
+        </controls>
+        <controls xsi:type="cl:Output" sid="output-001faeb1" id="opt8" class="label" value="Output">
+          <layoutData xsi:type="cl:FormData" sid="f-data-32fdcfc0" rowIndex="3" colIndex="2"/>
+        </controls>
+        <controls xsi:type="cl:InputBox" sid="i-box-b8423198" id="ipb8">
+          <layoutData xsi:type="cl:FormData" sid="f-data-4bd001d4" rowIndex="3" colIndex="3"/>
+        </controls>
+        <layout xsi:type="cl:FormLayout" sid="f-layout-600f0394" scrollable="false" horizontalSpacing="17px" verticalSpacing="9px" topMargin="4px" rightMargin="8px" bottomMargin="4px" leftMargin="8px" horizontalSeparatorWidth="1" horizontalSeparatorType="BY_CLASS">
+          <rows length="28" unit="PIXEL"/>
+          <rows length="28" unit="PIXEL"/>
+          <rows length="28" unit="PIXEL"/>
+          <rows length="28" unit="PIXEL" shadeType="NONE" shadeColor="transparent"/>
+          <columns length="180" unit="PIXEL" shadeType="BY_CLASS"/>
+          <columns length="1" unit="FRACTION"/>
+          <columns length="180" unit="PIXEL" shadeType="BY_CLASS"/>
+          <columns length="1" unit="FRACTION"/>
+        </layout>
+      </controls>
+      <layout xsi:type="cl:VerticalLayout" sid="v-layout-245105b8" spacing="4"/>
+    </control>
+  </settings:CannedTemplate>
+  <settings:CannedTemplate uuid="9c4abac7-5a29-47c3-9da0-9d5976fc5e8d" name="[나이]" preferredWidth="1024" preferredHeight="28" revision="5" description="시나리오_고객기본">
+    <control xsi:type="cl:Group" sid="group-311eead5" clipContent="false">
+      <metaData>
+        <properties key="template-uuid" value="9c4abac7-5a29-47c3-9da0-9d5976fc5e8d"/>
+        <properties key="template-rev" value="3"/>
+      </metaData>
+      <layoutData xsi:type="cl:VerticalData" sid="v-data-9313fd40" width="457px" height="28px" autoSize="none"/>
+      <controls xsi:type="cl:NumberEditor" sid="n-editor-68bc119e" fieldLabel="고객연령" spinButton="false" format="s999">
+        <layoutData xsi:type="cl:FormData" sid="f-data-79c5524b" rowIndex="0" colIndex="0"/>
+      </controls>
+      <controls xsi:type="cl:Output" sid="output-2484d850" style="text-align:center;" value="세">
+        <layoutData xsi:type="cl:FormData" sid="f-data-45421304" rowIndex="0" colIndex="1"/>
+      </controls>
+      <layout xsi:type="cl:FormLayout" sid="f-layout-965233b7" scrollable="false">
+        <rows length="1" unit="FRACTION"/>
+        <columns length="1" unit="FRACTION" autoSizing="false" minLength="0" synchronizeMinLength="false"/>
+        <columns length="50" unit="PIXEL" autoSizing="true" minLength="30" synchronizeMinLength="false"/>
+      </layout>
+    </control>
+  </settings:CannedTemplate>
+  <settings:CannedTemplate uuid="fa6d726c-05f4-491f-a1ba-fc117e417e87" name="[그리드 영역_우측 컨트롤 배치]" preferredWidth="1024" preferredHeight="319" revision="5">
+    <control xsi:type="cl:Group" sid="group-4fa8d29b">
+      <metaData>
+        <properties key="template-uuid" value="fa6d726c-05f4-491f-a1ba-fc117e417e87"/>
+        <properties key="template-rev" value="4"/>
+      </metaData>
+      <layoutData xsi:type="cl:VerticalData" sid="v-data-6f5b13d5" width="1260px" height="319px"/>
+      <controls xsi:type="cl:Grid" sid="grid-414b0b78" fieldLabel="그리드" autoFit="1, 2, 3, 4, 5, 6" clickMode="select" columnMovable="true">
+        <userAttributes key="transform-on-mobile" value="detailType"/>
+        <layoutData xsi:type="cl:FormData" sid="f-data-713c3fb4" rowIndex="1" colIndex="0" rowSpan="1" colSpan="2"/>
+        <gridColumns sid="g-column-3aa94103" width="60px"/>
+        <gridColumns sid="g-column-10adbab9" width="140px"/>
+        <gridColumns sid="g-column-ba89d81f" width="120px"/>
+        <gridColumns sid="g-column-f3bbf5c2" width="120px"/>
+        <gridColumns sid="g-column-fcacb764" width="120px"/>
+        <gridColumns sid="g-column-05d22ae4" width="165px"/>
+        <gridColumns sid="g-column-c9345d64" width="140px"/>
+        <gridHeader sid="gh-band-9cb6fc78">
+          <gridRows sid="g-row-4ae2bee3" height="37px"/>
+          <gridCells sid="gh-cell-f16c363f" rowIndex="0" colIndex="1"/>
+          <gridCells sid="gh-cell-401cea44" rowIndex="0" colIndex="2"/>
+          <gridCells sid="gh-cell-04e513d0" rowIndex="0" colIndex="3"/>
+          <gridCells sid="gh-cell-a8c70edf" rowIndex="0" colIndex="4"/>
+          <gridCells sid="gh-cell-36d59aa7" rowIndex="0" colIndex="5"/>
+          <gridCells sid="gh-cell-0b28ec2e" rowIndex="0" colIndex="6"/>
+          <gridCells sid="gh-cell-a26f219e" rowIndex="0" colIndex="0"/>
+        </gridHeader>
+        <gridDetail sid="gd-band-84b35305">
+          <gridRows sid="g-row-f70a68c7" height="37px"/>
+          <gridCells sid="gd-cell-b92a1327" rowIndex="0" colIndex="1">
+            <control xsi:type="cl:Output" sid="output-39c63009" id="opt9" style="text-align:center;">
+              <layoutData xsi:type="cl:CellData" sid="c-data-609a79f5"/>
+            </control>
+          </gridCells>
+          <gridCells sid="gd-cell-6840d7ef" rowIndex="0" colIndex="2">
+            <control xsi:type="cl:Output" sid="output-4f43fb12" id="opt10" style="text-align:center;">
+              <layoutData xsi:type="cl:CellData" sid="c-data-38af9781"/>
+            </control>
+          </gridCells>
+          <gridCells sid="gd-cell-c8d7ca25" rowIndex="0" colIndex="3">
+            <control xsi:type="cl:Output" sid="output-f30a032a" id="opt11" style="text-align:center;">
+              <layoutData xsi:type="cl:CellData" sid="c-data-c02ca530"/>
+            </control>
+          </gridCells>
+          <gridCells sid="gd-cell-e79553f0" rowIndex="0" colIndex="4">
+            <control xsi:type="cl:Output" sid="output-23dfe106" id="opt12" style="text-align:center;">
+              <layoutData xsi:type="cl:CellData" sid="c-data-1318e38e"/>
+            </control>
+          </gridCells>
+          <gridCells sid="gd-cell-033c85e9" rowIndex="0" colIndex="5">
+            <control xsi:type="cl:Output" sid="output-5069f92f" id="opt13" style="text-align:center;">
+              <layoutData xsi:type="cl:CellData" sid="c-data-c1e00064"/>
+            </control>
+          </gridCells>
+          <gridCells sid="gd-cell-2dce1bd5" rowIndex="0" colIndex="6">
+            <control xsi:type="cl:Output" sid="output-0b4b2acc" id="opt14" style="text-align:center;">
+              <layoutData xsi:type="cl:CellData" sid="c-data-1b72fabb"/>
+            </control>
+          </gridCells>
+          <gridCells sid="gd-cell-cd3a4e12" rowIndex="0" colIndex="0">
+            <control xsi:type="cl:Output" sid="output-7b7c692c" id="opt18" style="text-align:center;">
+              <layoutData xsi:type="cl:CellData" sid="c-data-71a1bcd3"/>
+            </control>
+          </gridCells>
+        </gridDetail>
+      </controls>
+      <controls xsi:type="cl:UserDefinedControl" sid="ud-control-48433aa8" type="udc.com.udcComPageindexer">
+        <layoutData xsi:type="cl:FormData" sid="f-data-b71c9f1d" rowIndex="2" colIndex="0" rowSpan="1" colSpan="2"/>
+      </controls>
+      <controls xsi:type="cl:UserDefinedControl" sid="ud-control-8a93e9c5" type="udc.com.udcComGridTitle">
+        <layoutData xsi:type="cl:FormData" sid="f-data-db42cd4b" rowIndex="0" colIndex="0"/>
+      </controls>
+      <controls xsi:type="cl:Group" sid="group-fdf19e1a">
+        <layoutData xsi:type="cl:FormData" sid="f-data-295b5ece" rowIndex="0" colIndex="1"/>
+        <layout xsi:type="cl:FlowLayout" sid="f-layout-aa5ac52f" horizontalAlign="right"/>
+      </controls>
+      <layout xsi:type="cl:FormLayout" sid="f-layout-ce1ce2eb" scrollable="false" horizontalSpacing="0px" verticalSpacing="4px">
+        <rows length="28" unit="PIXEL" autoSizing="true" hidden="false" synchronizeMinLength="false"/>
+        <rows length="1" unit="FRACTION"/>
+        <rows length="28" unit="PIXEL" autoSizing="true"/>
+        <columns length="1" unit="FRACTION"/>
+        <columns length="206" unit="PIXEL" autoSizing="true" synchronizeMinLength="false"/>
+      </layout>
+    </control>
+  </settings:CannedTemplate>
+  <settings:CannedTemplate uuid="c2bc1904-fe80-4b7e-bb8d-60c97136d43b" name="[F_폼 영역]" preferredWidth="1024" preferredHeight="179">
+    <control xsi:type="cl:Group" sid="group-8331296a" id="grp1">
+      <metaData>
+        <properties key="template-uuid" value="d3a2c98f-b10c-467d-9c96-0c980e76da6e"/>
+        <properties key="template-rev" value="11"/>
+      </metaData>
+      <layoutData xsi:type="cl:XYLayoutData" sid="xyl-data-af596c87" top="36px" left="20px" width="1024px" height="179px" horizontalAnchor="LEFT" verticalAnchor="TOP"/>
+      <controls xsi:type="cl:Group" sid="group-fd2c177e" id="grp5">
+        <layoutData xsi:type="cl:FormData" sid="f-data-e7d86bba" rowIndex="0" colIndex="0"/>
+        <controls xsi:type="cl:UserDefinedControl" sid="ud-control-d1fac6c8" id="udcComFormTitle1" type="udc.com.udcComFormTitle">
+          <layoutData xsi:type="cl:FormData" sid="f-data-961ed673" rowIndex="0" colIndex="0"/>
+          <properties name="title" value="" type="string"/>
+        </controls>
+        <layout xsi:type="cl:FormLayout" sid="f-layout-a7e80e13" scrollable="false" horizontalSpacing="0px" verticalSpacing="0px" topMargin="0px" rightMargin="0px" bottomMargin="0px" leftMargin="0px">
+          <rows length="28" unit="PIXEL" autoSizing="true" synchronizeMinLength="false"/>
+          <columns length="1" unit="FRACTION"/>
+          <columns length="200" unit="PIXEL" autoSizing="true" synchronizeMinLength="false"/>
+        </layout>
+      </controls>
+      <controls xsi:type="cl:Group" sid="group-f74afb12" id="grp2" class="form">
+        <userAttributes key="table-min-height" value=""/>
+        <userAttributes key="mobile-column-count" value="1"/>
+        <userAttributes key="tablet-column-count" value="2"/>
+        <layoutData xsi:type="cl:FormData" sid="f-data-4b6f6850" rowIndex="1" colIndex="0"/>
+        <controls xsi:type="cl:Output" sid="output-dc269fff" id="opt1" class="label required" value="Output">
+          <layoutData xsi:type="cl:FormData" sid="f-data-1690adc2" rowIndex="0" colIndex="0"/>
+        </controls>
+        <controls xsi:type="cl:InputBox" sid="i-box-baaea049" id="ipb1">
+          <layoutData xsi:type="cl:FormData" sid="f-data-873c0603" rowIndex="0" colIndex="1"/>
+        </controls>
+        <controls xsi:type="cl:Output" sid="output-d191e8f2" id="opt2" class="label" value="Output">
+          <layoutData xsi:type="cl:FormData" sid="f-data-de358bf1" rowIndex="0" colIndex="2"/>
+        </controls>
+        <controls xsi:type="cl:InputBox" sid="i-box-d5fbefcf" id="ipb2">
+          <layoutData xsi:type="cl:FormData" sid="f-data-3a56e636" rowIndex="0" colIndex="3"/>
+        </controls>
+        <controls xsi:type="cl:Output" sid="output-55c6f420" id="opt3" class="label" value="Output">
+          <layoutData xsi:type="cl:FormData" sid="f-data-bdf111ff" rowIndex="1" colIndex="0"/>
+        </controls>
+        <controls xsi:type="cl:InputBox" sid="i-box-75d3890b" id="ipb3">
+          <layoutData xsi:type="cl:FormData" sid="f-data-b85bb10f" rowIndex="1" colIndex="1"/>
+        </controls>
+        <controls xsi:type="cl:Output" sid="output-67d5f51a" id="opt4" class="label" value="Output">
+          <layoutData xsi:type="cl:FormData" sid="f-data-26e608e9" rowIndex="1" colIndex="2"/>
+        </controls>
+        <controls xsi:type="cl:InputBox" sid="i-box-9835c381" id="ipb4">
+          <layoutData xsi:type="cl:FormData" sid="f-data-96c95b90" rowIndex="1" colIndex="3"/>
+        </controls>
+        <controls xsi:type="cl:Output" sid="output-4136113d" id="opt5" class="label" value="Output">
+          <layoutData xsi:type="cl:FormData" sid="f-data-ffba9351" rowIndex="2" colIndex="0"/>
+        </controls>
+        <controls xsi:type="cl:InputBox" sid="i-box-68f2d98c" id="ipb5">
+          <layoutData xsi:type="cl:FormData" sid="f-data-b2e3849b" rowIndex="2" colIndex="1"/>
+        </controls>
+        <controls xsi:type="cl:Output" sid="output-7b08d510" id="opt6" class="label" value="Output">
+          <layoutData xsi:type="cl:FormData" sid="f-data-afb69420" rowIndex="2" colIndex="2"/>
+        </controls>
+        <controls xsi:type="cl:InputBox" sid="i-box-5cb1c60f" id="ipb6">
+          <layoutData xsi:type="cl:FormData" sid="f-data-e6f8d227" rowIndex="2" colIndex="3"/>
+        </controls>
+        <controls xsi:type="cl:Output" sid="output-2803d754" id="opt7" class="label" value="Output">
+          <layoutData xsi:type="cl:FormData" sid="f-data-90d071db" rowIndex="3" colIndex="0"/>
+        </controls>
+        <controls xsi:type="cl:InputBox" sid="i-box-214a09f7" id="ipb7">
+          <layoutData xsi:type="cl:FormData" sid="f-data-ae2909f5" rowIndex="3" colIndex="1"/>
+        </controls>
+        <controls xsi:type="cl:Output" sid="output-001faeb1" id="opt8" class="label" value="Output">
+          <layoutData xsi:type="cl:FormData" sid="f-data-32fdcfc0" rowIndex="3" colIndex="2"/>
+        </controls>
+        <controls xsi:type="cl:InputBox" sid="i-box-b8423198" id="ipb8">
+          <layoutData xsi:type="cl:FormData" sid="f-data-4bd001d4" rowIndex="3" colIndex="3"/>
+        </controls>
+        <layout xsi:type="cl:FormLayout" sid="f-layout-600f0394" scrollable="false" horizontalSpacing="17px" verticalSpacing="9px" topMargin="4px" rightMargin="8px" bottomMargin="4px" leftMargin="8px" horizontalSeparatorWidth="1" horizontalSeparatorType="BY_CLASS">
+          <rows length="28" unit="PIXEL"/>
+          <rows length="28" unit="PIXEL"/>
+          <rows length="28" unit="PIXEL"/>
+          <rows length="28" unit="PIXEL" shadeType="NONE" shadeColor="transparent"/>
+          <columns length="180" unit="PIXEL" shadeType="BY_CLASS"/>
+          <columns length="1" unit="FRACTION"/>
+          <columns length="180" unit="PIXEL" shadeType="BY_CLASS"/>
+          <columns length="1" unit="FRACTION"/>
+        </layout>
+      </controls>
+      <layout xsi:type="cl:FormLayout" sid="f-layout-4457d35f" scrollable="false" horizontalSpacing="4px" verticalSpacing="4px" topMargin="0px" rightMargin="0px" bottomMargin="0px" leftMargin="0px">
+        <rows length="28" unit="PIXEL" autoSizing="true" synchronizeMinLength="false"/>
+        <rows length="1" unit="FRACTION"/>
+        <columns length="1" unit="FRACTION"/>
+      </layout>
+    </control>
+  </settings:CannedTemplate>
+</xmi:XMI>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-5432e0e1" version="1.0.0.0">
+  <head std:sid="head-b68ebcca">
+    <title>chart_Bar</title>
+    <screen std:sid="screen-f752c0d9" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-6385796f" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-cf1639d3" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-ea5c9deb"/>
+    <cl:appspec title="바 차트" dev-icon="iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAABu0lEQVR4nO2W20oCQRzGfaUIqaBeIDo8QWV1EXRpZlAg1UWZ9ADhoaKyKBOrB9BQKb1QQytX3TXMLFddjw/wb2dgRlehEA9748UH8+3Mzvxm5pvZVdRqNZBTClIoFotQrVblBcjn81CpVKi4s1PwToxhRTY3JHWdikxW0UgjCIKEjjuxgFs5hBVeV/d2BQYAsgOgAOZyOUlQ2GNzHUCjho8rK4RWV7CSlxf9DyFj0FMfPdjv/xZ0AlAVZ/22o4NX3RZW6SvdCpB+foL33W0s1mzsOoBnTEnfL8TjrQCs/ZY2CKjmOgZgjUfAHBqwCjHmbwAUwrjtRgLQHMJoI4B+79+g+aYnaftvj7sJINb7FfDN1AF+vJ7ub0Hm0QVJ6zkW/xLqP0BYq6Ges5gg43JCymHHEhKJ/gMElhao/3y4aw8A3QHthjCsXaOebQJI3Tt6H8KursAAQHaAcrkMjO0anCPDWP7FeWDETokPigARcVDiI2IIg2IIiWdMRvAvq6jnxKPonZ2iPiXeGa7xUep5hpECoO9zqVTCpyGbzWIg4tE1TTwq8zyPy+gZ+odAbYhH9ahMfGNfjR4JjfsLLm6oYdHG1xMAAAAASUVORK5CYII=">
+      <cl:property name="dataSet" type="control"/>
+      <cl:property name="title" type="string"/>
+      <cl:event name="resize" type="cpr.events.CUIEvent"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-7fb5f55f" style="top:0px; left:0px; width:300px; height:300px;" class="chart">
+    <cl:listener std:sid="listener-e7a0116a" name="init" handler="onBodyInit"/>
+    <cl:uicontrolshell std:sid="uic-shell-1fb429ef" id="shl1">
+      <cl:listener std:sid="listener-1ce26230" name="init" handler="onShl1Init"/>
+      <cl:listener std:sid="listener-97fd5aba" name="load" handler="onShl1Load"/>
+      <cl:xylayoutdata std:sid="xyl-data-a1e7cec6" top="0px" right="0px" bottom="1px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+    </cl:uicontrolshell>
+    <cl:output std:sid="output-dcc69c46" id="nodatamsg" style="text-align:center;" class="nodatamsg" value="표시할 데이터가 없습니다.">
+      <cl:xylayoutdata std:sid="xyl-data-e5d48f17" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+    </cl:output>
+    <cl:xylayout std:sid="xylayout-03ae079b" scrollable="false"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-e586e0b1" version="1.0.0.0">
+  <head std:sid="head-2581a1b9">
+    <title>chart_line</title>
+    <screen std:sid="screen-b8a5ef59" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-1c73dac1" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-d8013614" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-b16b7ac3"/>
+    <cl:appspec title="커스텀 에디터" dev-icon="iVBORw0KGgoAAAANSUhEUgAAACAAAAAZCAYAAABQDyyRAAACbUlEQVR4nO2W22oTURSG+2JChQpeCV4LPoBXrYhSRBC8kCKipR5akJYmpNomba0JqaQ2zcGMjU2MmUlrkiaT82mSOeYBfmePpDfOTHZMVQQvfgZmFnt/s9a/1t4T/X4ff1MT/zSApmlQVc14/hGArigheJTBM/ceZl+6ceORA9NPXJiZX8Ocw4fNYBx8rXn+AIqiwhdNYvbFBuacPuwyKZwUq2h1uqi1OijVW2DSWSy/C+HWwhssbu2j0mifD0C9JeDhqhcPlnfA5ksQZdk2vtrswPU+hpmnazhkc+MBkM1Jqle8YciKMlJqE8enRnliX7/9GgBJ+2OXH05/1DAZUacnjgSRyvK483zdKNfIAP5YCvdfbaMt9M7e9XQTlilr+yNexvbBkbGOqqr0ACTdxEzJk8JP34rVpmE6WghZVnB30WOYlBogzuVxb2nTsr8/pXNo6B1AC+GNJPXWDdADbHw4hHM3aglA3u+EExAl+44YKMvXcFufFZpJGUwB3mY+IlnJQrWZcC3dG68DjG3MmRd088amJiHyPGUG2ANwjeLQhYnLh7XZQMzlKXQzHB3AViaCVC1PtTDNOUBiYpMXIBZO6QD28gmECilqkw0tQS5nAGgmU9QUgKsX4GZDEBU6k9n+vd7SvNOB9M1p0++mAJK+8dJnL0pCw3bx40IF6RxvnJKWALrzE9evoexx0wMQRYppeLiwbY1JG0r6oFEsphxR2b2O+NUrUMXeaAAkC44vATA8Z7uBlRRBgMCyYC5dRCO4bxlnexrWem2jJUXFOsVWUiUJ+YV5FFdXbOOG3gfGuW4NTtGxAH63/gN8BznbvS6i8WRdAAAAAElFTkSuQmCC">
+      <cl:property name="dataSet" type="control"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-a9a7e635" style="top:0px; left:0px; width:300px; height:300px;" removeOnBuild="false">
+    <cl:uicontrolshell std:sid="uic-shell-6f65fe55" id="shl1">
+      <cl:listener std:sid="listener-9239d0ae" name="init" handler="onShl1Init"/>
+      <cl:listener std:sid="listener-e4eea1c1" name="load" handler="onShl1Load"/>
+      <cl:xylayoutdata std:sid="xyl-data-1d09ac1e" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+    </cl:uicontrolshell>
+    <cl:xylayout std:sid="xylayout-7618ab8f" scrollable="false"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

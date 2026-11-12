@@ -1,0 +1,244 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-542b00ff" version="1.0.6209">
+  <head std:sid="head-67c49394">
+    <screen std:sid="screen-a1ba92d3" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-27ca2c1b" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-0f675459" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-e35cd656">
+      <cl:dataset comment="프로세스 목록" std:sid="d-set-1107f59f" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="" std:sid="d-column-64dc5cd4" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-c9ab05af" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn comment="" std:sid="d-column-b4c79677" name="SUB_TITLE"/>
+          <cl:datacolumn comment="" std:sid="d-column-a30f13d0" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-15423c18" name="CONT" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-002601f2" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-02f4147c" name="SUB_CODE"/>
+          <cl:datacolumn comment="" std:sid="d-column-92a0540a" name="TARGET_CTRL"/>
+          <cl:datacolumn std:sid="d-column-85c4cbfa" name="TARGET_EMB"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[장시간 메모리 안정성]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[장시간 상담/운영 시 메모리 누수와 성능 저하가 없어야 한다. 장시간 업무 기준은 20개 탭으로 9시간 근무를 기준으로 한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="[OPS-06]장시간 안정성"/>
+  </head>
+  <body std:sid="body-37b764be" class="wrap">
+    <cl:udc std:sid="ud-control-5cbbee63" type="udc.com.udcComAppHeader">
+      <cl:verticaldata std:sid="v-data-61e3be9b" width="900px" height="28px"/>
+    </cl:udc>
+    <cl:group std:sid="group-f2601f8d" id="grpData" class="conts-area">
+      <cl:verticaldata std:sid="v-data-815ae316" width="976px" height="903px" autosize="none" grow="1"/>
+      <cl:tabfolder std:sid="t-folder-a86a24a0" item-dragging-mode="internal">
+        <std:metadata>
+          <std:property key="template-uuid" value="fea40c07-d4d6-4ac4-83ee-934afa51123d"/>
+          <std:property key="template-rev" value="6"/>
+        </std:metadata>
+        <cl:attribute name="transform-on-mobile" value="Y"/>
+        <cl:verticaldata std:sid="v-data-45466deb" width="1260px" height="403px"/>
+        <cl:tabitem std:sid="t-item-0a43d55c" selected="true" text="텍스트를입력하세요">
+          <std:metadata>
+            <std:property key="is-active-item" value="true"/>
+          </std:metadata>
+          <cl:group std:sid="group-d3dcfd5a">
+            <std:metadata>
+              <std:property key="locked" value="true"/>
+            </std:metadata>
+            <cl:attribute name="mobile-column-count" value="1"/>
+            <cl:attribute name="tablet-column-count" value="1"/>
+            <cl:verticallayout std:sid="v-layout-8ee97d26" scrollable="false" spacing="8"/>
+          </cl:group>
+        </cl:tabitem>
+        <cl:tabitem std:sid="t-item-c2b09fb2" text="텍스트를입력하세요">
+          <cl:group std:sid="group-2139b8c1">
+            <std:metadata>
+              <std:property key="locked" value="true"/>
+            </std:metadata>
+            <cl:verticallayout std:sid="v-layout-cca13a0c" scrollable="false" spacing="8"/>
+          </cl:group>
+        </cl:tabitem>
+        <cl:tabitem std:sid="t-item-7b286000" text="텍스트를입력하세요">
+          <cl:group std:sid="group-8af2c810">
+            <std:metadata>
+              <std:property key="locked" value="true"/>
+            </std:metadata>
+            <cl:verticallayout std:sid="v-layout-835d2ab1" scrollable="false" spacing="8"/>
+          </cl:group>
+        </cl:tabitem>
+        <cl:tabitem std:sid="t-item-316ea912" text="tab 4">
+          <cl:group std:sid="group-a34cfb97">
+            <std:metadata>
+              <std:property key="locked" value="true"/>
+            </std:metadata>
+            <cl:xylayout std:sid="xylayout-f1a37b98"/>
+          </cl:group>
+        </cl:tabitem>
+        <cl:tabitem std:sid="t-item-457c26ea" text="tab 5">
+          <cl:group std:sid="group-958dea2f">
+            <std:metadata>
+              <std:property key="locked" value="true"/>
+            </std:metadata>
+            <cl:xylayout std:sid="xylayout-16468ac5"/>
+          </cl:group>
+        </cl:tabitem>
+        <cl:tabitem std:sid="t-item-16432571" text="tab 6">
+          <cl:group std:sid="group-66b59637">
+            <std:metadata>
+              <std:property key="locked" value="true"/>
+            </std:metadata>
+            <cl:xylayout std:sid="xylayout-726da20c"/>
+          </cl:group>
+        </cl:tabitem>
+        <cl:tabitem std:sid="t-item-fde529ee" text="tab 7">
+          <cl:group std:sid="group-f9dede16">
+            <std:metadata>
+              <std:property key="locked" value="true"/>
+            </std:metadata>
+            <cl:xylayout std:sid="xylayout-a1895861"/>
+          </cl:group>
+        </cl:tabitem>
+        <cl:tabitem std:sid="t-item-214af252" text="tab 8">
+          <cl:group std:sid="group-36d81ad3">
+            <std:metadata>
+              <std:property key="locked" value="true"/>
+            </std:metadata>
+            <cl:xylayout std:sid="xylayout-797f8cb3"/>
+          </cl:group>
+        </cl:tabitem>
+        <cl:tabitem std:sid="t-item-3ce27061" text="tab 9">
+          <cl:group std:sid="group-d5b5f3d4">
+            <std:metadata>
+              <std:property key="locked" value="true"/>
+            </std:metadata>
+            <cl:xylayout std:sid="xylayout-dba4d1b2"/>
+          </cl:group>
+        </cl:tabitem>
+        <cl:tabitem std:sid="t-item-a0b51f4a" text="tab 10">
+          <cl:group std:sid="group-3a777b0f">
+            <std:metadata>
+              <std:property key="locked" value="true"/>
+            </std:metadata>
+            <cl:xylayout std:sid="xylayout-eb7cd6f4"/>
+          </cl:group>
+        </cl:tabitem>
+        <cl:tabitem std:sid="t-item-450d97dc" text="tab 11">
+          <cl:group std:sid="group-43cabbb6">
+            <std:metadata>
+              <std:property key="locked" value="true"/>
+            </std:metadata>
+            <cl:xylayout std:sid="xylayout-8abd25d6"/>
+          </cl:group>
+        </cl:tabitem>
+        <cl:tabitem std:sid="t-item-617e2645" text="tab 12">
+          <cl:group std:sid="group-e4a74384">
+            <std:metadata>
+              <std:property key="locked" value="true"/>
+            </std:metadata>
+            <cl:xylayout std:sid="xylayout-e41e7cec"/>
+          </cl:group>
+        </cl:tabitem>
+        <cl:tabitem std:sid="t-item-8cfcdcab" text="tab 13">
+          <cl:group std:sid="group-b88a0f71">
+            <std:metadata>
+              <std:property key="locked" value="true"/>
+            </std:metadata>
+            <cl:xylayout std:sid="xylayout-7c7218d8"/>
+          </cl:group>
+        </cl:tabitem>
+        <cl:tabitem std:sid="t-item-8ce14084" text="tab 14">
+          <cl:group std:sid="group-4d53e33a">
+            <std:metadata>
+              <std:property key="locked" value="true"/>
+            </std:metadata>
+            <cl:xylayout std:sid="xylayout-dd94d65d"/>
+          </cl:group>
+        </cl:tabitem>
+        <cl:tabitem std:sid="t-item-86f72855" text="tab 15">
+          <cl:group std:sid="group-57c74877">
+            <std:metadata>
+              <std:property key="locked" value="true"/>
+            </std:metadata>
+            <cl:xylayout std:sid="xylayout-cdee4d62"/>
+          </cl:group>
+        </cl:tabitem>
+        <cl:tabitem std:sid="t-item-f5fad68a" text="tab 16">
+          <cl:group std:sid="group-49acbe57">
+            <std:metadata>
+              <std:property key="locked" value="true"/>
+            </std:metadata>
+            <cl:xylayout std:sid="xylayout-b27ab52a"/>
+          </cl:group>
+        </cl:tabitem>
+        <cl:tabitem std:sid="t-item-66148ae3" text="tab 17">
+          <cl:group std:sid="group-e5b8b6be">
+            <std:metadata>
+              <std:property key="locked" value="true"/>
+            </std:metadata>
+            <cl:xylayout std:sid="xylayout-4c79b7ef"/>
+          </cl:group>
+        </cl:tabitem>
+        <cl:tabitem std:sid="t-item-4b2d1bab" text="tab 18">
+          <cl:group std:sid="group-c7d97a56">
+            <std:metadata>
+              <std:property key="locked" value="true"/>
+            </std:metadata>
+            <cl:xylayout std:sid="xylayout-3080b2e3"/>
+          </cl:group>
+        </cl:tabitem>
+        <cl:tabitem std:sid="t-item-2658d0f8" text="tab 19">
+          <cl:group std:sid="group-3cb5bc39">
+            <std:metadata>
+              <std:property key="locked" value="true"/>
+            </std:metadata>
+            <cl:xylayout std:sid="xylayout-a7a2375c"/>
+          </cl:group>
+        </cl:tabitem>
+        <cl:tabitem std:sid="t-item-81c0202e" text="tab 20">
+          <cl:group std:sid="group-659a3f6c">
+            <std:metadata>
+              <std:property key="locked" value="true"/>
+            </std:metadata>
+            <cl:xylayout std:sid="xylayout-ed7e1d09"/>
+          </cl:group>
+        </cl:tabitem>
+      </cl:tabfolder>
+      <cl:verticallayout std:sid="v-layout-5a55a17f" spacing="16" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-3398bb34" spacing="16" leftmargin="24" rightmargin="24" topmargin="16" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

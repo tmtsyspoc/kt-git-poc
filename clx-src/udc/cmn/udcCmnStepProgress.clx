@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-8f1fa572" version="1.0.4221">
+  <head std:sid="head-960ded82">
+    <screen std:sid="screen-1452fc0e" id="EXB-FULL" name="EXB-FULL" width="1580px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-09bae780" id="EXB-DIV" name="EXB-DIV" width="1128px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-be788bdc" id="EXB-PART" name="EXB-PART" width="672px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-2b4aecbe"/>
+    <cl:appspec title="업무스텝 컴포넌트">
+      <cl:property name="values" type="string" bindable="true"/>
+      <cl:property name="step" type="string" default="1" bindable="true"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-cbf8dd53" style="top:0px; left:0px; width:300px; height:32px;">
+    <cl:listener std:sid="listener-778212ed" name="before-draw" handler="onBodyBeforeDraw"/>
+    <cl:listener std:sid="listener-560ed8d1" name="property-change" handler="onBodyPropertyChange"/>
+    <cl:output std:sid="output-f2c606c0" style="font-weight:bold; font-size:16px; text-align:center;" removeOnBuild="true" value="stepProgress Component">
+      <cl:verticaldata std:sid="v-data-cc784392" width="100px" height="32px"/>
+    </cl:output>
+    <cl:group std:sid="group-abccad03" id="grpStep" class="stepBox">
+      <cl:verticaldata std:sid="v-data-7d2f3061" width="400px" height="32px" autosize="height"/>
+      <cl:flowlayout std:sid="f-layout-20af3207" hspacing="20" vspacing="0" linewrap="false"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-81d9d73b" spacing="0"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:settings="kr.co.tomatosystem.exbuilder.model.ui.settings">
+  <settings:IDPolicy type="Grid" pattern="grd"/>
+  <settings:IDPolicy type="Accordion" pattern="acd"/>
+  <settings:IDPolicy type="Button" pattern="btn"/>
+  <settings:IDPolicy type="CheckBox" pattern="cbx"/>
+  <settings:IDPolicy type="CheckBoxGroup" pattern="cbg"/>
+  <settings:IDPolicy type="ComboBox" pattern="cmb"/>
+  <settings:IDPolicy type="DataMap" pattern="dm" use="true"/>
+  <settings:IDPolicy type="DataSet" pattern="ds" use="true"/>
+  <settings:IDPolicy type="DataWindow" pattern="dw" use="true"/>
+  <settings:IDPolicy type="DataView" pattern="dv" use="true"/>
+  <settings:IDPolicy type="DateInput" pattern="dti"/>
+  <settings:IDPolicy type="EmbeddedApp" pattern="ea"/>
+  <settings:IDPolicy type="EmbeddedPage" pattern="ep"/>
+  <settings:IDPolicy type="FileUpload" pattern="fud"/>
+  <settings:IDPolicy type="FileInput" pattern="fi"/>
+  <settings:IDPolicy type="Group" pattern="grp"/>
+  <settings:IDPolicy type="HTMLObject" pattern="htm"/>
+  <settings:IDPolicy type="Image" pattern="img"/>
+  <settings:IDPolicy type="InputBox" pattern="ipb"/>
+  <settings:IDPolicy type="LinkedComboBox" pattern="lcb"/>
+  <settings:IDPolicy type="LinkedListBox" pattern="llb"/>
+  <settings:IDPolicy type="ListBox" pattern="lbx"/>
+  <settings:IDPolicy type="MaskEditor" pattern="mse"/>
+  <settings:IDPolicy type="MDIFolder" pattern="mdi"/>
+  <settings:IDPolicy type="Menu" pattern="mnu"/>
+  <settings:IDPolicy type="NavigationBar" pattern="ngb"/>
+  <settings:IDPolicy type="NumberEditor" pattern="nbe"/>
+  <settings:IDPolicy type="Output" pattern="opt"/>
+  <settings:IDPolicy type="Progress" pattern="pgr"/>
+  <settings:IDPolicy type="RadioButton" pattern="rdb"/>
+  <settings:IDPolicy type="Slider" pattern="sld"/>
+  <settings:IDPolicy type="Submission" pattern="sms" use="true"/>
+  <settings:IDPolicy type="MatrixSubmission" pattern="msm" use="true"/>
+  <settings:IDPolicy type="TabFolder" pattern="fld"/>
+  <settings:IDPolicy type="TextArea" pattern="txa"/>
+  <settings:IDPolicy type="Tree" pattern="tre"/>
+  <settings:IDPolicy type="UIControlShell" pattern="shl"/>
+  <settings:IDPolicy type="Audio" pattern="ado"/>
+  <settings:IDPolicy type="Calendar" pattern="cdr"/>
+  <settings:IDPolicy type="HTMLSnippet" pattern="snp"/>
+  <settings:IDPolicy type="Notifier" pattern="nti"/>
+  <settings:IDPolicy type="PageIndexer" pattern="pi"/>
+  <settings:IDPolicy type="SearchInput" pattern="si"/>
+  <settings:IDPolicy type="SideNavigation" pattern="sdn"/>
+  <settings:IDPolicy type="Video" pattern="vdo"/>
+  <settings:IDPolicy type="udc.com.udcComMdiDiv" pattern="udccommdidiv"/>
+  <settings:IDPolicy type="udc.com.udcComGridCudBtns" pattern="udccomgridcudbtns"/>
+  <settings:IDPolicy type="udc.com.udcComFormTitle" pattern="udccomformtitle"/>
+  <settings:IDPolicy type="udc.com.udcComSearchToggle" pattern="udccomsearchtoggle"/>
+  <settings:IDPolicy type="udc.com.udcComGridTitle" pattern="udccomgridtitle"/>
+  <settings:IDPolicy type="udc.com.udcComAppHeader" pattern="udccomappheader"/>
+  <settings:IDPolicy type="udc.poc.udcPocPivotGrid" pattern="udcpocpivotgrid" use="true"/>
+  <settings:IDPolicy type="udc.stock.mng.udcMngImage" pattern="udcmngimage" use="true"/>
+  <settings:IDPolicy type="udc.com.udcComAddr" pattern="udccomaddr" use="true"/>
+  <settings:IDPolicy type="udc.com.udcComHeaderCudBtns" pattern="udccomheadercudbtns" use="true"/>
+  <settings:IDPolicy type="udc.poc.udcPocGridTitle" pattern="udcpocgridtitle" use="true"/>
+  <settings:IDPolicy type="udc.poc.udcPocDocViewer" pattern="udcpocdocviewer" use="true"/>
+  <settings:IDPolicy type="udc.exam.chart.chart_YbarCatogry" pattern="chart_ybarcatogry" use="true"/>
+  <settings:IDPolicy type="udc.poc.udcPocWorkflowUnit" pattern="udcpocworkflowunit" use="true"/>
+  <settings:IDPolicy type="udc.poc.udcPocTableCombo" pattern="udcpoctablecombo" use="true"/>
+  <settings:IDPolicy type="udc.stock.udcStockTrade" pattern="udcstocktrade" use="true"/>
+  <settings:IDPolicy type="udc.cmn.dashboard.udcDashItem5" pattern="udcdashitem5" use="true"/>
+  <settings:IDPolicy type="udc.stock.mng.udcMngMain" pattern="udcmngmain" use="true"/>
+  <settings:IDPolicy type="udc.stock.mng.udcMngChart" pattern="udcmngchart" use="true"/>
+  <settings:IDPolicy type="udc.cmn.udcCmnEmpNo" pattern="udccmnempno" use="true"/>
+  <settings:IDPolicy type="udc.exam.chart.chart_barline" pattern="chart_barline" use="true"/>
+  <settings:IDPolicy type="udc.cmn.dashboard.udcDashItem8" pattern="udcdashitem8" use="true"/>
+  <settings:IDPolicy type="udc.com.udcComSplit" pattern="udccomsplit" use="true"/>
+  <settings:IDPolicy type="udc.stock.udcStockChart" pattern="udcstockchart" use="true"/>
+  <settings:IDPolicy type="udc.poc.udcPocGridCell" pattern="udcpocgridcell" use="true"/>
+  <settings:IDPolicy type="udc.stock.mng.udcMngTable" pattern="udcmngtable" use="true"/>
+  <settings:IDPolicy type="udc.cmn.dashboard.udcDashItem9" pattern="udcdashitem9" use="true"/>
+  <settings:IDPolicy type="udc.com.udcCmnHtmlEditor" pattern="udccmnhtmleditor" use="true"/>
+  <settings:IDPolicy type="udc.cmn.dashboard.udcDashItem4" pattern="udcdashitem4" use="true"/>
+  <settings:IDPolicy type="udc.stock.chart.udcCmnChart" pattern="udccmnchart" use="true"/>
+  <settings:IDPolicy type="udc.com.udcComStepItem" pattern="udccomstepitem" use="true"/>
+  <settings:IDPolicy type="udc.cmn.dashboard.udcDashItem7" pattern="udcdashitem7" use="true"/>
+  <settings:IDPolicy type="udc.stock.udcStockHistory" pattern="udcstockhistory" use="true"/>
+  <settings:IDPolicy type="udc.poc.udcPocGrdGrouping" pattern="udcpocgrdgrouping" use="true"/>
+  <settings:IDPolicy type="udc.com.udcComPhone" pattern="udccomphone" use="true"/>
+  <settings:IDPolicy type="udc.com.udcComBreadCrumb" pattern="udccombreadcrumb" use="true"/>
+  <settings:IDPolicy type="udc.stock.mng.udcMngSummary" pattern="udcmngsummary" use="true"/>
+  <settings:IDPolicy type="udc.cmn.dashboard.udcDashItem10" pattern="udcdashitem10" use="true"/>
+  <settings:IDPolicy type="udc.com.udcComStepProgressBox" pattern="udccomstepprogressbox" use="true"/>
+  <settings:IDPolicy type="udc.stock.chart.udcAdvancedChart" pattern="udcadvancedchart" use="true"/>
+  <settings:IDPolicy type="udc.cmn.udcCmnAddress" pattern="udccmnaddress" use="true"/>
+  <settings:IDPolicy type="udc.cmn.udcCmnCustNoSearch" pattern="udccmncustnosearch" use="true"/>
+  <settings:IDPolicy type="udc.cmn.udcCmnCustomerSearch" pattern="udccmncustomersearch" use="true"/>
+  <settings:IDPolicy type="udc.exam.udcOzReport" pattern="udcozreport" use="true"/>
+  <settings:IDPolicy type="udc.poc.udcPocTreeCombo" pattern="udcpoctreecombo" use="true"/>
+  <settings:IDPolicy type="udc.cmn.chart.cmnChart" pattern="cmnchart" use="true"/>
+  <settings:IDPolicy type="udc.poc.udcPocMinwonWorkflow" pattern="udcpocminwonworkflow" use="true"/>
+  <settings:IDPolicy type="udc.cmn.udcCmnTelNo" pattern="udccmntelno" use="true"/>
+  <settings:IDPolicy type="udc.exam.chart.chart_Pyramid" pattern="chart_pyramid" use="true"/>
+  <settings:IDPolicy type="udc.exam.chart.chart_pie" pattern="chart_pie" use="true"/>
+  <settings:IDPolicy type="udc.exam.chart.chart_CustomLine" pattern="chart_customline" use="true"/>
+  <settings:IDPolicy type="udc.stock.mng.udcMngSubtitle" pattern="udcmngsubtitle" use="true"/>
+  <settings:IDPolicy type="udc.exam.udcClipReport" pattern="udcclipreport" use="true"/>
+  <settings:IDPolicy type="udc.exam.chart.chart_line" pattern="chart_line" use="true"/>
+  <settings:IDPolicy type="udc.cmn.udcCmnSsn" pattern="udccmnssn" use="true"/>
+  <settings:IDPolicy type="udc.cmn.udcCmnEmail" pattern="udccmnemail" use="true"/>
+  <settings:IDPolicy type="udc.exam.chart.chart_Circle" pattern="chart_circle" use="true"/>
+  <settings:IDPolicy type="udc.exam.udcExamAce" pattern="udcexamace" use="true"/>
+  <settings:IDPolicy type="udc.com.udcComLoadmaskpgs" pattern="udccomloadmaskpgs" use="true"/>
+  <settings:IDPolicy type="udc.stock.udcStockMyWallet" pattern="udcstockmywallet" use="true"/>
+  <settings:IDPolicy type="udc.com.udcComPdfViewer" pattern="udccompdfviewer" use="true"/>
+  <settings:IDPolicy type="udc.exam.chart.chart_Scatter" pattern="chart_scatter" use="true"/>
+  <settings:IDPolicy type="udc.cmn.dashboard.udcDashItem1" pattern="udcdashitem1" use="true"/>
+  <settings:IDPolicy type="udc.exam.chart.chart_Bar" pattern="chart_bar" use="true"/>
+  <settings:IDPolicy type="udc.stock.udcStockInvest" pattern="udcstockinvest" use="true"/>
+  <settings:IDPolicy type="udc.stock.mng.udcMngText" pattern="udcmngtext" use="true"/>
+  <settings:IDPolicy type="udc.com.udcComLoadmask" pattern="udccomloadmask" use="true"/>
+  <settings:IDPolicy type="udc.exam.udcExamPivotGrid" pattern="udcexampivotgrid" use="true"/>
+  <settings:IDPolicy type="udc.cmn.udcCmnSellerSearch" pattern="udccmnsellersearch" use="true"/>
+  <settings:IDPolicy type="udc.cmn.dashboard.udcDashItem6" pattern="udcdashitem6" use="true"/>
+  <settings:IDPolicy type="udc.stock.udcStockMyStock" pattern="udcstockmystock" use="true"/>
+  <settings:IDPolicy type="udc.cmn.udcCmnStepProgress" pattern="udccmnstepprogress" use="true"/>
+  <settings:IDPolicy type="udc.cmn.dashboard.udcDashItem2" pattern="udcdashitem2" use="true"/>
+  <settings:IDPolicy type="udc.cmn.udcCmnFromTo" pattern="udccmnfromto" use="true"/>
+  <settings:IDPolicy type="udc.poc.udcPocGrdPrfCount" pattern="udcpocgrdprfcount" use="true"/>
+  <settings:IDPolicy type="udc.exam.chart.chart_Area" pattern="chart_area" use="true"/>
+  <settings:IDPolicy type="udc.exam.chart.chart_CustomPie" pattern="chart_custompie" use="true"/>
+  <settings:IDPolicy type="udc.stock.mng.udcMngHtmlEditor" pattern="udcmnghtmleditor" use="true"/>
+  <settings:IDPolicy type="udc.cmn.dashboard.udcDashItem3" pattern="udcdashitem3" use="true"/>
+  <settings:IDPolicy type="udc.com.udcComPageindexer" pattern="udccompageindexer" use="true"/>
+  <settings:IDPolicy type="udc.stock.udcStockDayTimePrice" pattern="udcstockdaytimeprice" use="true"/>
+  <settings:IDPolicy type="udc.poc.udcPocViewProcess" pattern="udcpocviewprocess" use="true"/>
+  <settings:IDPolicy type="udc.poc.udcPocPivotHelperH" pattern="udcpocpivothelperh" use="true"/>
+  <settings:IDPolicy type="udc.stock.mng.udcMngTitle" pattern="udcmngtitle" use="true"/>
+  <settings:IDPolicy type="udc.test.TestLogViewer" pattern="testlogviewer" use="true"/>
+  <settings:IDPolicy type="udc.stock.mng.udcMngCaution" pattern="udcmngcaution" use="true"/>
+  <settings:IDPolicy type="udc.com.udcExamFileUploadBtn" pattern="udcexamfileuploadbtn" use="true"/>
+  <settings:IDPolicy type="udc.stock.udcStockHoga" pattern="udcstockhoga" use="true"/>
+  <settings:IDPolicy type="udc.exam.chart.chart_Editor" pattern="chart_editor" use="true"/>
+  <settings:IDPolicy type="udc.poc.udcPocWorkflow" pattern="udcpocworkflow" use="true"/>
+</xmi:XMI>

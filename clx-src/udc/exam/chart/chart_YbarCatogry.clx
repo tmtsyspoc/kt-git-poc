@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-e586e0b1" version="1.0.0.0">
+  <head std:sid="head-2581a1b9">
+    <title>chart_line</title>
+    <screen std:sid="screen-0166311d" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-1a5f0a8c" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-d2dcaf6a" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-b16b7ac3"/>
+    <cl:appspec title="Y축바카테고리 차트" dev-icon="iVBORw0KGgoAAAANSUhEUgAAACAAAAAXCAYAAABqBU3hAAAEe0lEQVR4nKWW6VNaVxjG8y/1Q6dNbLqNNZ3UNNNGU5s4bR2TqDFtTUhNNDNWq0ZaRYNWjUtQcQGDuIA6UcEiKauKLCIKqJEdkRD1D3h674kYIELQfvjNOfcd5p6H513OPbW/v49kCG6sw+/zwUuxueWA1+uF079NnoOBAIJuB/x+P3zBAIkFqFgy7z2VrIBtkxE+6sUutwcrazayt7k81OpHaCeAwKYNOzs7cAV88Pi8ZJ+0gL29PWyJRXCMjRCmJqYwPDkDic4I2coqYV2nhnd+Dr4DVu0mGJw26J1WskYSL+Z/GS2KPpcI8Hg8UHz2MeTvvwfFp2dxIfUiPrxwFVmsFuR085HXK8BkXSmW/7hOMNcUgi9uB1s1nDStWhHWvFtRAnZ3d984oL18Car0Lwk53+Ug7UoeClq7cOfpGGGmtQaWhuJDRqe46FyYPBY2nyO+gLXOdljbWgkCTi9aunngTkxDOK8jTKuUcEhG4JRSaZKOQmFbwnO7gUJ/sEZydMzlcZPiDUPXCRFAF5Tix2zIM7+F/GoWGD/l41LuryhgPsI9vhDFvCE09nGhZ5cSdM3l4MhH0KkQJU2XQgyD2QSLxXKI0+l844Cm4neoH5QQHlU8xP3KWlR3cNFEFSQNVzQKQ38zjBSGgWYMq2cg1EqOhcm8HF+A6pdbUN7IJTzLz0NhxV+oGhkn9A1wYWyvwbS4B32aZ8diw/mC2E0XeqT9USlwu92HXUAj+iIVadfvkA7I7RlE62M2zNX5EA01Hqvy2+bH4d7xHxZc7AyIKkILuwGrrFqCrqEebO4g+pRaglQmgWOShyXNDGZtumisiwljgVAwOQGazG+gOp9GKMrIRmZxBW4PjqKEKkBL/V1MjLWhY34iIRLrQsLD4gqITMG/Z0/j2rmLSC96QFLA6OVjuSofI8KmhHY3qUcwY50/mQDaAVsXB/YnHQQBdejA1CzEi0uY06jgnBuH3qyBcsME5WYMBzHtixVs+F0nE0DfXGEH/qEcSPk6GzldPJRwusno1TTee2fBjVtU7zwsrgC6HQ4FfHQaZ6h7gBZwn9N1IKD4xAJCoRBcLhfpeXoNBoOJU2DjdOJJvwBDCg3GF5awNTcBp3wCWps+YQrC9scKMOn1eFhejtLSUjAYDMhksrcFkFEcngOff4KU9Cu4zGTjZr8Q6uqfscK8hU4JN+6/b9aMweSyHylAt6hDZWUlWCwWysrKjhZAO6A8l4rnKR9ARtXAma++RxazETe4T6H58zY1hArQJe3H3+rRuBjjCDAY9Khn1YHJZKKcciKuACtlvb2jnTDA5YEnlWN0QQ+NUg6XTEysVmwYX1seQTj2KuLQSAH2dTsGhwQQCATo7e2F2Wx+WwD9LRf5QZJxPgOZVfW4Rk1DTksdlmuLwFYK46bgsVaM4KvQybuAdkB3Mw+LOT8QGIV38Vs7F5XiKQj5PZQ7TPANs+AZpBSzMbyOvdz9HwLozfb2NmmRMHRhxsboG4x2KzJGT9HY39EtR8+WyJjD4Yh6pqHb8j8a6ZC9iRXw6gAAAABJRU5ErkJggg==">
+      <cl:property name="dataSet" type="control"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-a9a7e635" style="top:0px; left:0px; width:300px; height:300px;" removeOnBuild="false">
+    <cl:uicontrolshell std:sid="uic-shell-6f65fe55" id="shl1">
+      <cl:listener std:sid="listener-9239d0ae" name="init" handler="onShl1Init"/>
+      <cl:listener std:sid="listener-e4eea1c1" name="load" handler="onShl1Load"/>
+      <cl:xylayoutdata std:sid="xyl-data-1d09ac1e" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+    </cl:uicontrolshell>
+    <cl:xylayout std:sid="xylayout-7618ab8f" scrollable="false"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

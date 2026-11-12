@@ -1,0 +1,118 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-53605d07" version="1.0.6209">
+  <head std:sid="head-21bae59e">
+    <screen std:sid="screen-3f8b0502" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-6f4e8654" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-7f8759d4" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-a535a448">
+      <cl:dataset comment="프로세스 목록" std:sid="d-set-2bc7a851" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="" std:sid="d-column-c3c10903" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-86fc849e" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn comment="" std:sid="d-column-dc0c2bfa" name="SUB_TITLE"/>
+          <cl:datacolumn comment="" std:sid="d-column-c396c17e" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-8048bd8f" name="CONT" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-8f440278" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-f34fec32" name="SUB_CODE"/>
+          <cl:datacolumn comment="" std:sid="d-column-aad58c64" name="TARGET_CTRL"/>
+          <cl:datacolumn std:sid="d-column-94cd94a9" name="TARGET_EMB"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[API 장애 격리]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[Timeout, 4xx, 5xx, 부분실패가 전체 화면 장애로 확산되지 않아야 한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+      <cl:submission std:sid="submission-7a51d276" id="sms1" action="/test"/>
+    </cl:model>
+    <cl:appspec title="[OPS-01]장애격리·오류복구"/>
+  </head>
+  <body std:sid="body-a9b2a457" class="wrap">
+    <cl:listener std:sid="listener-eb0a4dcf" name="load" handler="onBodyLoad"/>
+    <cl:udc std:sid="ud-control-34e982bf" type="udc.com.udcComAppHeader">
+      <cl:verticaldata std:sid="v-data-34104c4f" width="900px" height="28px"/>
+    </cl:udc>
+    <cl:group std:sid="group-ed1b1c96" id="grpData" class="conts-area">
+      <cl:verticaldata std:sid="v-data-bb040cfd" width="976px" height="677px" autosize="none" grow="1"/>
+      <cl:group std:sid="group-d2bdad7d" id="grpGoverning" class="governing">
+        <cl:verticaldata std:sid="v-data-26ae9a87" width="1558px" height="180px" autosize="height"/>
+        <cl:output std:sid="output-8ad6c93d" id="opt2_2" class="tit" value="서브미션 단위 API 장애 격리">
+          <cl:verticaldata std:sid="v-data-24a3b0eb" width="100px" height="28px" autosize="height"/>
+        </cl:output>
+        <cl:output std:sid="output-f588f595" id="opt5" class="txt" displayexp="&quot;eXBuilder6는 서버 통신을 &quot; + sstr(&quot;서브미션 단위로 독립 처리&quot;, [&quot;fw-bold&quot;]) + &quot;하여 Timeout, 4xx, 5xx 오류나 일부 API만 실패하는 부분실패가 발생해도 그 영향을 해당 영역으로 격리합니다. 실패한 영역에는 오류 상태와 재시도를 제공하고, 정상 응답을 받은 영역과 화면의 나머지 기능은 그대로 사용할 수 있습니다.&quot;">
+          <cl:verticaldata std:sid="v-data-f2af1b87" width="1218px" height="54px" autosize="height"/>
+        </cl:output>
+        <cl:group std:sid="group-fa480841" id="grp2_2" visible="false">
+          <cl:verticaldata std:sid="v-data-9733b5a4" width="1550px" height="28px" autosize="none"/>
+          <cl:button std:sid="button-9b316673" id="btnCreateCode" value="전송">
+            <cl:listener std:sid="listener-1f709477" name="click" handler="onBtnCreateCodeClick"/>
+            <cl:formdata std:sid="f-data-79d523d2" row="0" col="0"/>
+          </cl:button>
+          <cl:formlayout std:sid="f-layout-275884fc" scrollable="false" hspace="4px" vspace="4px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="105" unit="PIXEL" autoSizing="false" syncminlength="true"/>
+            <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-cf7ba67b" scrollable="false" spacing="8"/>
+      </cl:group>
+      <cl:group std:sid="group-5391f707" id="grpForm2" class="form">
+        <cl:attribute name="mobile-fit" value=""/>
+        <cl:attribute name="mobile-column-count" value="2"/>
+        <cl:attribute name="tablet-column-count" value="4"/>
+        <cl:verticaldata std:sid="v-data-ad2a0bc1" width="1608px" height="123px" autosize="height" grow="1"/>
+        <cl:output std:sid="output-e8747c65" class="label" value="에러 로그">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:formdata std:sid="f-data-96e7402b" row="0" col="0"/>
+        </cl:output>
+        <cl:output std:sid="output-58d56073" id="opt1" value="">
+          <cl:formdata std:sid="f-data-eac8fc87" row="0" col="1" rowspan="1" colspan="3"/>
+        </cl:output>
+        <cl:formlayout std:sid="f-layout-c243744a" scrollable="false" hspace="16px" vspace="17px" top-margin="8px" right-margin="8px" bottom-margin="8px" left-margin="8px" hseparatorwidth="1" hseparatortype="BY_CLASS">
+          <cl:rows length="1" unit="FRACTION" autoSizing="false"/>
+          <cl:columns length="160" autoSizing="true" shadetype="BY_CLASS"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="160" autoSizing="true" shadetype="BY_CLASS"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:embeddedapp std:sid="e-app-612fdec1" src="K9-1-1.clx">
+        <cl:verticaldata std:sid="v-data-dce42979" width="320px" height="382px" grow="1"/>
+      </cl:embeddedapp>
+      <cl:verticallayout std:sid="v-layout-80f97fe8" spacing="16" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-f3b4bc61" spacing="16" leftmargin="24" rightmargin="24" topmargin="16" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

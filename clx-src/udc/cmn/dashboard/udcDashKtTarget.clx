@@ -1,0 +1,148 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" version="1.0.6087">
+  <head>
+    <screen id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model/>
+    <cl:appspec title="이번 달 판매 목표"/>
+  </head>
+  <body style="top:0px; left:0px; width:300px; height:420px;">
+    <cl:attribute name="mobile-index" value="3"/>
+    <cl:attribute name="tablet-index" value="3"/>
+    <cl:group class="group border kt-portlet" clipcontent="false">
+      <cl:attribute name="needs-auto-height" value="true"/>
+      <cl:formdata row="0" col="0"/>
+      <cl:output class="tit-blue" value="이번 달 판매 목표">
+        <cl:formdata row="0" col="0"/>
+      </cl:output>
+      <cl:output class="kt-base" value="11월 12일 기준">
+        <cl:formdata row="0" col="1"/>
+      </cl:output>
+      <cl:group class="leader-status-board kt-target" clipcontent="false">
+        <cl:formdata row="1" col="0" rowspan="1" colspan="2"/>
+          <cl:group class="item">
+            <cl:formdata row="0" col="0"/>
+            <cl:output class="tit" value="신규가입" ellipsis="true">
+              <cl:formdata row="0" col="0"/>
+            </cl:output>
+            <cl:output class="badge meeting" value="순항">
+              <cl:formdata row="0" col="1"/>
+            </cl:output>
+            <cl:output class="date" value="목표 150건 · 실적 102건">
+              <cl:formdata row="1" col="0"/>
+            </cl:output>
+            <cl:progress class="success" fieldLabel="신규가입 달성률" value="68" showtext="false">
+              <cl:formdata valign="CENTER" height="7" row="2" col="0" rowspan="1" colspan="2"/>
+            </cl:progress>
+            <cl:output class="num" value="68%">
+              <cl:formdata row="1" col="1"/>
+            </cl:output>
+            <cl:formlayout scrollable="false" hspace="8px" vspace="0px" top-margin="1fr" right-margin="0px" bottom-margin="1fr" left-margin="0px">
+              <cl:rows length="24" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              <cl:rows length="20" unit="PIXEL"/>
+              <cl:rows length="12" unit="PIXEL"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="64" unit="PIXEL"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:group class="item">
+            <cl:formdata row="1" col="0"/>
+            <cl:output class="tit" value="번호이동" ellipsis="true">
+              <cl:formdata row="0" col="0"/>
+            </cl:output>
+            <cl:output class="badge meeting" value="순항">
+              <cl:formdata row="0" col="1"/>
+            </cl:output>
+            <cl:output class="date" value="목표 60건 · 실적 34건">
+              <cl:formdata row="1" col="0"/>
+            </cl:output>
+            <cl:progress class="success" fieldLabel="번호이동 달성률" value="57" showtext="false">
+              <cl:formdata valign="CENTER" height="7" row="2" col="0" rowspan="1" colspan="2"/>
+            </cl:progress>
+            <cl:output class="num" value="57%">
+              <cl:formdata row="1" col="1"/>
+            </cl:output>
+            <cl:formlayout scrollable="false" hspace="8px" vspace="0px" top-margin="1fr" right-margin="0px" bottom-margin="1fr" left-margin="0px">
+              <cl:rows length="24" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              <cl:rows length="20" unit="PIXEL"/>
+              <cl:rows length="12" unit="PIXEL"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="64" unit="PIXEL"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:group class="item">
+            <cl:formdata row="2" col="0"/>
+            <cl:output class="tit" value="기기변경" ellipsis="true">
+              <cl:formdata row="0" col="0"/>
+            </cl:output>
+            <cl:output class="badge waiting" value="달성임박">
+              <cl:formdata row="0" col="1"/>
+            </cl:output>
+            <cl:output class="date" value="목표 120건 · 실적 97건">
+              <cl:formdata row="1" col="0"/>
+            </cl:output>
+            <cl:progress class="progressing" fieldLabel="기기변경 달성률" value="81" showtext="false">
+              <cl:formdata valign="CENTER" height="7" row="2" col="0" rowspan="1" colspan="2"/>
+            </cl:progress>
+            <cl:output class="num" value="81%">
+              <cl:formdata row="1" col="1"/>
+            </cl:output>
+            <cl:formlayout scrollable="false" hspace="8px" vspace="0px" top-margin="1fr" right-margin="0px" bottom-margin="1fr" left-margin="0px">
+              <cl:rows length="24" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              <cl:rows length="20" unit="PIXEL"/>
+              <cl:rows length="12" unit="PIXEL"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="64" unit="PIXEL"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:group class="item">
+            <cl:formdata row="3" col="0"/>
+            <cl:output class="tit" value="인터넷·TV 결합" ellipsis="true">
+              <cl:formdata row="0" col="0"/>
+            </cl:output>
+            <cl:output class="badge away" value="주의">
+              <cl:formdata row="0" col="1"/>
+            </cl:output>
+            <cl:output class="date" value="목표 50건 · 실적 18건">
+              <cl:formdata row="1" col="0"/>
+            </cl:output>
+            <cl:progress class="plan" fieldLabel="인터넷·TV 결합 달성률" value="36" showtext="false">
+              <cl:formdata valign="CENTER" height="7" row="2" col="0" rowspan="1" colspan="2"/>
+            </cl:progress>
+            <cl:output class="num" value="36%">
+              <cl:formdata row="1" col="1"/>
+            </cl:output>
+            <cl:formlayout scrollable="false" hspace="8px" vspace="0px" top-margin="1fr" right-margin="0px" bottom-margin="1fr" left-margin="0px">
+              <cl:rows length="24" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              <cl:rows length="20" unit="PIXEL"/>
+              <cl:rows length="12" unit="PIXEL"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="64" unit="PIXEL"/>
+            </cl:formlayout>
+          </cl:group>
+        <cl:formlayout scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="1" unit="FRACTION" minlength="64"/>
+          <cl:rows length="1" unit="FRACTION" minlength="64"/>
+          <cl:rows length="1" unit="FRACTION" minlength="64"/>
+          <cl:rows length="1" unit="FRACTION" minlength="64"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:formlayout scrollable="false" hspace="8px" vspace="12px" top-margin="16px" right-margin="16px" bottom-margin="16px" left-margin="16px">
+        <cl:rows length="28" unit="PIXEL"/>
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="90" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:formlayout scrollable="true">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

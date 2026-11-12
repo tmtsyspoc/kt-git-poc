@@ -1,0 +1,26 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-cf6a96cc" version="1.0.6035">
+  <head std:sid="head-7c6dd6f2">
+    <std:metadata>
+      <std:property key="template-file" value="templates/일반화면/0.프레임/V_프레임_임베딩.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-5ce648b4" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-48fedd95" id="tablet" name="tablet" width="1024px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-26bc929f" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-d74d7c44"/>
+    <cl:appspec title="휴대전화번호"/>
+  </head>
+  <body std:sid="body-bf4887aa" style="top:0px; left:0px; width:200px; height:28px;">
+    <cl:inputbox std:sid="i-box-9c580924">
+      <cl:formdata std:sid="f-data-955afa31" row="0" col="0"/>
+    </cl:inputbox>
+    <cl:formlayout std:sid="f-layout-44c1e664" scrollable="false" hspace="0px" vspace="0px">
+      <cl:rows length="1" unit="FRACTION" autoSizing="false"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

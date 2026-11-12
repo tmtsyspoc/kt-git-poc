@@ -1,0 +1,40 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-57d69423" version="1.0.0.0">
+  <head std:sid="head-cf069d52">
+    <title>UbiReport</title>
+    <screen std:sid="screen-e2b45777" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-829329cd" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-3d01d9fe" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-894ff50a"/>
+    <cl:appspec dev-description="평가 자료 뷰어 컴포넌트">
+      <cl:property name="fileUrl" type="resource" std:desc="[String] 파일 url "/>
+      <cl:property name="viewType" type="enumeration" default="pdf" std:desc="[Enum] 표시 타입">
+        <cl:available-value>pdf</cl:available-value>
+        <cl:available-value>image</cl:available-value>
+      </cl:property>
+      <cl:property name="viewPdfToolbar" type="boolean" default="false" std:desc="[Boolean] pdf 뷰어 툴바 표시여부"/>
+      <cl:property name="viewImageRate" type="boolean" default="true" std:desc="[Boolean] Image 뷰어 정비율 적용"/>
+      <cl:property name="isCover" type="boolean" default="false" std:desc="[Boolean] 뷰어 위에 커버 씌울여부"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-045e7ec7" style="top:0px; left:0px; width:500px; height:300px;">
+    <cl:listener std:sid="listener-7fad2091" name="load" handler="onBodyLoad"/>
+    <cl:listener std:sid="listener-f9c80700" name="property-change" handler="onBodyPropertyChange"/>
+    <cl:listener std:sid="listener-5939be06" name="before-draw" handler="onBodyBeforeDraw"/>
+    <cl:listener std:sid="listener-16896fbd" name="screen-change" handler="onBodyScreenChange"/>
+    <cl:listener std:sid="listener-f62731f9" name="measure-size" handler="onBodyMeasureSize"/>
+    <cl:embeddedpage std:sid="e-page-19cc1fca" id="empPdfViewer" frameName="empPdfViewer" scrolling="no">
+      <cl:listener std:sid="listener-ed654c0d" name="load" handler="onEmpPdfViewerLoad"/>
+      <cl:xylayoutdata std:sid="xyl-data-26a42e76" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+    </cl:embeddedpage>
+    <cl:img std:sid="image-d04c96ee" id="imgViewer" class="m-rate">
+      <cl:apppropbind property="src" category="PROPERTY" app-property="fileUrl"/>
+      <cl:xylayoutdata std:sid="xyl-data-ba545177" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+    </cl:img>
+    <cl:xylayout std:sid="xylayout-1dcc922b"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

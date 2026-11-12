@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>kt-git-poc</name>
+	<name>kt-poc</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -54,16 +54,4 @@
 	<natures>
 		<nature>kr.co.tomatosystem.cleopatra.nature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>clx-src/kt_fragment_ui</name>
-			<type>2</type>
-			<locationURI>EBFRAG_SRC_OF_kt-fragment-ui/kt_fragment_ui</locationURI>
-		</link>
-		<link>
-			<name>clx-src/udc/kt_fragment_ui</name>
-			<type>2</type>
-			<locationURI>EBFRAG_SRC_OF_kt-fragment-ui/udc/kt_fragment_ui</locationURI>
-		</link>
-	</linkedResources>
 </projectDescription>

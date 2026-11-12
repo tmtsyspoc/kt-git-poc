@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:settings="kr.co.tomatosystem.exbuilder.model.ui.settings">
+  <settings:CustomProperties type="All">
+    <controlProperties name="needs-auto-height" label="반응형/폼 레이아웃/needs-auto-height" desc="자동높이 사용 여부">
+      <predefinedValues>true</predefinedValues>
+    </controlProperties>
+    <controlProperties name="hide-on-tablet" label="반응형/공통/hide-on-tablet" desc="• 폼 레이아웃 : 태블릿 환경에서 숨겨질 자식 컨트롤.&#xA;(폼 레이아웃 자식 컨트롤의 사용자 속성에 지정)&#xA;&#xA;• 버티컬 레이아웃 : 태블릿 환경에서 버티컬 레이아웃 숨김여부">
+      <predefinedValues>true</predefinedValues>
+    </controlProperties>
+    <controlProperties name="hide-on-mobile" desc="• 폼 레이아웃 : 모바일 환경에서 숨겨질 자식 컨트롤.&#xA;(폼 레이아웃 자식 컨트롤의 사용자 속성에 지정)&#xA;&#xA;• 버티컬 레이아웃 : 모바일 환경에서 버티컬 레이아웃 숨김여부">
+      <predefinedValues>true</predefinedValues>
+    </controlProperties>
+    <controlProperties name="w-class" desc="PC 클래스명"/>
+    <controlProperties name="t-class" desc="Tablet 클래스명"/>
+    <controlProperties name="m-class" desc="Mobile 클래스명"/>
+    <controlProperties name="needs-auto-width" label="반응형/폼 레이아웃/needs-auto-width" desc="자동너비 사용 여부">
+      <predefinedValues>true</predefinedValues>
+    </controlProperties>
+    <controlProperties name="tablet-min-width" label="반응형/폼 레이아웃/tablet-min-width" desc=""/>
+    <controlProperties name="mobile-min-width" label="반응형/폼 레이아웃/mobile-min-width" desc=""/>
+  </settings:CustomProperties>
+  <settings:CustomProperties type="Accordion"/>
+  <settings:CustomProperties type="Audio"/>
+  <settings:CustomProperties type="Button"/>
+  <settings:CustomProperties type="Calendar"/>
+  <settings:CustomProperties type="CheckBox">
+    <controlProperties name="required" label="유효성 검사/required" desc="필수 값 지정 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="ignorePk" label="유효성 검사/ignorePk" desc="신규 PK 값 필수 체크 제외 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="editablePK" label="유효성 검사/editablePK" desc="PK컬럼 수정 가능 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+  </settings:CustomProperties>
+  <settings:CustomProperties type="CheckBoxGroup">
+    <controlProperties name="required" label="유효성 검사/required" desc="필수 값 지정 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="ignorePk" label="유효성 검사/ignorePk" desc="신규 PK 값 필수 체크 제외 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="editablePK" label="유효성 검사/editablePK" desc="PK컬럼 수정 가능 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+  </settings:CustomProperties>
+  <settings:CustomProperties type="ComboBox">
+    <controlProperties name="required" label="유효성 검사/required" desc="필수 값 지정 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="ignorePk" label="유효성 검사/ignorePk" desc="신규 PK 값 필수 체크 제외 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="editablePK" label="유효성 검사/editablePK" desc="PK컬럼 수정 가능 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+  </settings:CustomProperties>
+  <settings:CustomProperties type="DataColumn"/>
+  <settings:CustomProperties type="DataMap"/>
+  <settings:CustomProperties type="DataSet"/>
+  <settings:CustomProperties type="DataView"/>
+  <settings:CustomProperties type="DataWindow"/>
+  <settings:CustomProperties type="DateInput">
+    <controlProperties name="required" label="유효성 검사/required" desc="필수 값 지정 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="ignorePk" label="유효성 검사/ignorePk" desc="신규 PK 값 필수 체크 제외 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="editablePK" label="유효성 검사/editablePK" desc="PK컬럼 수정 가능 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="compare" label="유효성 검사/compare" desc="상대 값 비교&#xD;&#xA;• 그리드 일경우: columnName,비교연산자(&lt;=, &lt;, >=, >, ==, =)&#xD;&#xA;• 일반 컨트롤일 경우: 컨트롤 ID,비교연산자(&lt;=, &lt;, >=, >, ==, =)"/>
+    <controlProperties name="between" label="유효성 검사/between" desc="날짜 비교, 두 날짜 사이에 있는지 체크&#xD;&#xA;기준 날짜는 포함되지 않는다.&#xD;&#xA;• valueType: String[], ex. 20230101,20231231"/>
+  </settings:CustomProperties>
+  <settings:CustomProperties type="EmbeddedApp"/>
+  <settings:CustomProperties type="EmbeddedPage"/>
+  <settings:CustomProperties type="FileInput">
+    <controlProperties name="required" label="유효성 검사/required" desc="필수 값 지정 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+  </settings:CustomProperties>
+  <settings:CustomProperties type="FileUpload"/>
+  <settings:CustomProperties type="FlowLayout">
+    <controlProperties name="mobile-mode" label="반응형/플로우레이아웃/mobile-mode" desc="">
+      <predefinedValues>vertical</predefinedValues>
+      <predefinedValues>form</predefinedValues>
+    </controlProperties>
+    <controlProperties name="mobile-ratios" label="반응형/플로우레이아웃/mobile-ratios" desc=""/>
+    <controlProperties name="mobile-spacing" label="반응형/플로우레이아웃/mobile-spacing" desc=""/>
+    <controlProperties name="mobile-align" label="반응형/플로우레이아웃/mobile-align" desc="">
+      <predefinedValues>left</predefinedValues>
+      <predefinedValues>center</predefinedValues>
+      <predefinedValues>right</predefinedValues>
+    </controlProperties>
+    <controlProperties name="mobile-min-width" label="반응형/플로우레이아웃/mobile-min-width" desc=""/>
+    <controlProperties name="mobile-min-height" label="반응형/플로우레이아웃/mobile-min-height" desc=""/>
+    <controlProperties name="tablet-mode" label="반응형/플로우레이아웃/tablet-mode" desc="">
+      <predefinedValues>vertical</predefinedValues>
+      <predefinedValues>form</predefinedValues>
+    </controlProperties>
+    <controlProperties name="tablet-ratios" label="반응형/플로우레이아웃/tablet-ratios" desc=""/>
+    <controlProperties name="tablet-spacing" label="반응형/플로우레이아웃/tablet-spacing" desc=""/>
+    <controlProperties name="tablet-align" label="반응형/플로우레이아웃/tablet-align" desc="">
+      <predefinedValues>left</predefinedValues>
+      <predefinedValues>center</predefinedValues>
+      <predefinedValues>right</predefinedValues>
+    </controlProperties>
+    <controlProperties name="tablet-min-width" label="반응형/플로우레이아웃/tablet-min-width" desc=""/>
+    <controlProperties name="tablet-min-height" label="반응형/플로우레이아웃/tablet-min-height" desc=""/>
+  </settings:CustomProperties>
+  <settings:CustomProperties type="FormLayout">
+    <controlProperties name="tablet-horizontal-margin" label="반응형/폼레이아웃/tablet-horizontal-margin" desc=""/>
+    <controlProperties name="tablet-vertical-margin" label="반응형/폼레이아웃/tablet-vertical-margin" desc=""/>
+    <controlProperties name="tablet-h-spacing" label="반응형/폼레이아웃/tablet-h-spacing" desc=""/>
+    <controlProperties name="tablet-v-spacing" label="반응형/폼레이아웃/tablet-v-spacing" desc=""/>
+    <controlProperties name="mobile-horizontal-margin" label="반응형/폼레이아웃/mobile-horizontal-margin" desc=""/>
+    <controlProperties name="mobile-vertical-margin" label="반응형/폼레이아웃/mobile-vertical-margin" desc=""/>
+    <controlProperties name="mobile-h-spacing" label="반응형/폼레이아웃/mobile-h-spacing" desc=""/>
+    <controlProperties name="mobile-v-spacing" label="반응형/폼레이아웃/mobile-v-spacing" desc=""/>
+    <controlProperties name="mobile-index" label="반응형/폼레이아웃/mobile-index" desc=""/>
+    <controlProperties name="tablet-index" label="반응형/폼레이아웃/tablet-index" desc=""/>
+  </settings:CustomProperties>
+  <settings:CustomProperties type="Grid">
+    <controlProperties name="transform-on-mobile" label="반응형/그리드/transform-on-mobile" desc="모바일 환경에서 반응형 그리드 적용 여부">
+      <predefinedValues>accordionType</predefinedValues>
+      <predefinedValues>dialogType</predefinedValues>
+      <predefinedValues>list</predefinedValues>
+      <predefinedValues>massiveList</predefinedValues>
+    </controlProperties>
+    <controlProperties name="view-column-indicies" label="반응형/그리드/view-column-indicies" desc="반응형 그리드 적용 시, 표시할 colIndex&#xD;&#xA;• valueType: Number[], ex.1,3,4"/>
+    <controlProperties name="ignoreModify" label="유효성 검사/ignoreModify" desc="그리드 변경사항 체크를 제외 할 지 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="ignoreInit" label="그리드 초기화/ignoreInit" desc="그리드 초기화 제외 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="bindDataFormId" label="그리드 초기화/bindDataFormId" desc="선택 행 컨텍스트 바인딩으로 연결된 그룹 ID&#xD;&#xA;• valueType: String, ex. grpForm"/>
+    <controlProperties name="applyGridSortable" label="그리드 초기화/applyGridSortable" desc="헤더 컬럼 sortable 값을 사용자가 설정한 값으로 적용할지 여부&#xD;&#xA;미작성 시 sortable=true 로 설정된다">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="applyGridFilterable" label="그리드 초기화/applyGridFilterable" desc="헤더 컬럼 filterable 값을 사용자가 설정한 값으로 적용할지 여부&#xD;&#xA;미작성 시 filterable=true 로 설정된다">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="selectAfterLoad" label="그리드 초기화/selectAfterLoad" desc="데이터 셋 load 시, 그리드의 첫 번째 행 또는 마지막 작업 행을 선택 할 지 여부.&#xD;&#xA;N일 경우 행은 선택되지 않는다.">
+      <predefinedValues>N</predefinedValues>
+    </controlProperties>
+  </settings:CustomProperties>
+  <settings:CustomProperties type="Group">
+    <controlProperties name="ignoreModify" label="유효성 검사/ignoreModify" desc="선택 행 컨텍스트 바인딩으로 연결된 그룹인 경우&#xD;&#xA;그룹에 바인딩 된 데이터 셋의 변경사항 체크를 제외할지 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="ignoreInit" label="조회 영역 초기화/ignoreInit" desc="조회 영역 초기화 제외 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="tablet-column-count" label="반응형/폼 레이아웃/tablet-column-count" desc="태블릿 환경에서 폼 레이아웃의 Row에 보여줄 컬럼 수&#xD;&#xA;• valueType : Number, ex. 2"/>
+    <controlProperties name="mobile-column-count" label="반응형/폼 레이아웃/mobile-column-count" desc="모바일 환경에서 폼 레이아웃의 Row에 보여줄 컬럼 수&#xD;&#xA;• valueType : Number, ex. 2"/>
+    <controlProperties name="tablet-min-height" label="반응형/폼 레이아웃/tablet-min-height" desc="테블릿일 경우 폼 레이아웃의 최소 높이"/>
+    <controlProperties name="mobile-min-height" label="반응형/폼 레이아웃/mobile-min-height" desc="모바일일 경우 폼 레이아웃의 최소 높이"/>
+    <controlProperties name="mustValidate" label="유효성 검사/mustValidate" desc="그룹의 visible=false 로 인해 보이지 않는 자식 컨트롤에 대한 유효성 검사를 진행할지 여부 (Y로 설정 할 경우, 무조건 유효성 검사 수행)">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="tablet-fit" label="반응형/버티컬 레이아웃/tablet-fit" desc="태블릿 환경에서 반응형 버티컬 레이아웃 사용 여부">
+      <predefinedValues>true</predefinedValues>
+    </controlProperties>
+    <controlProperties name="mobile-fit" label="반응형/버티컬 레이아웃/mobile-fit" desc="모바일 환경에서 반응형 버티컬 레이아웃 사용 여부">
+      <predefinedValues>true</predefinedValues>
+    </controlProperties>
+  </settings:CustomProperties>
+  <settings:CustomProperties type="HTMLObject"/>
+  <settings:CustomProperties type="HTMLSnippet"/>
+  <settings:CustomProperties type="Image"/>
+  <settings:CustomProperties type="InputBox">
+    <controlProperties name="required" label="유효성 검사/required" desc="필수 값 지정 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="ignorePk" label="유효성 검사/ignorePk" desc="신규 PK 값 필수 체크 제외 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="editablePK" label="유효성 검사/editablePK" desc="PK컬럼 수정 가능 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="autoKeydownSearch" label="조회 영역 초기화/autoKeydownSearch" desc="Enter 키 입력 시, 조회 버튼 click 이벤트 발생&#xD;&#xA;ignoreInit=Y 인 조회 영역은 적용 불가">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="columnType" label="유효성 검사/columnType" desc="컨트롤 value 에 대한 타입 체크&#xD;&#xA;· email: 이메일&#xD;&#xA;· ssn: 주민번호&#xD;&#xA;· bizno: 사업자번호&#xD;&#xA;· phone: 핸드폰 번호&#xD;&#xA;· tel: 유선 전화번호&#xD;&#xA;· url: URL 주소&#xD;&#xA;· frno: 외국인등록번호&#xD;&#xA;· corp: 법인번호&#xD;&#xA;· credit: 카드 번호&#xD;&#xA;· zipcd: 우편번호">
+      <predefinedValues>email</predefinedValues>
+      <predefinedValues>ssn</predefinedValues>
+      <predefinedValues>bizno</predefinedValues>
+      <predefinedValues>phone</predefinedValues>
+      <predefinedValues>tel</predefinedValues>
+      <predefinedValues>url</predefinedValues>
+      <predefinedValues>frno</predefinedValues>
+      <predefinedValues>corp</predefinedValues>
+      <predefinedValues>credit</predefinedValues>
+      <predefinedValues>zipcd</predefinedValues>
+    </controlProperties>
+    <controlProperties name="mergeControlIds" label="유효성 검사/mergeControlIds" desc="컨트롤 value 에 대한 타입 체크 시, 체크 할 value가 여러 개의 컨트롤에 분리되어 있는 경우, 함께 체크할 컨트롤 ID&#xD;&#xA;※ 자기 자신은 제외하며, value 를 합칠 ID 를 순서대로 콤마(,) 연결하여 작성"/>
+    <controlProperties name="minlength" label="유효성 검사/minlength" desc="컨트롤 value의 최소 길이 체크&#xD;&#xA;• valueType: Number, ex. 10"/>
+    <controlProperties name="fixlength" label="유효성 검사/fixlength" desc="컨트롤 value 의 고정 길이 체크&#xD;&#xA;• valueType: Number, ex. 10"/>
+    <controlProperties name="maxlength" label="유효성 검사/maxlength" desc="컨트롤 value의 최대 길이 체크&#xD;&#xA;• valueType: Number, ex. 10"/>
+  </settings:CustomProperties>
+  <settings:CustomProperties type="LinkedComboBox"/>
+  <settings:CustomProperties type="LinkedListBox"/>
+  <settings:CustomProperties type="ListBox"/>
+  <settings:CustomProperties type="MaskEditor">
+    <controlProperties name="required" label="유효성 검사/required" desc="필수 값 지정 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="ignorePk" label="유효성 검사/ignorePk" desc="신규 PK 값 필수 체크 제외 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="editablePK" label="유효성 검사/editablePK" desc="PK컬럼 수정 가능 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="columnType" label="유효성 검사/columnType" desc="컨트롤 value 에 대한 타입 체크&#xD;&#xA;· email: 이메일&#xD;&#xA;· ssn: 주민번호&#xD;&#xA;· bizno: 사업자번호&#xD;&#xA;· phone: 핸드폰 번호&#xD;&#xA;· tel: 유선 전화번호&#xD;&#xA;· url: URL 주소&#xD;&#xA;· frno: 외국인등록번호&#xD;&#xA;· corp: 법인번호&#xD;&#xA;· credit: 카드 번호&#xD;&#xA;· zipcd: 우편번호">
+      <predefinedValues>email</predefinedValues>
+      <predefinedValues>ssn</predefinedValues>
+      <predefinedValues>bizno</predefinedValues>
+      <predefinedValues>phone</predefinedValues>
+      <predefinedValues>tel</predefinedValues>
+      <predefinedValues>url</predefinedValues>
+      <predefinedValues>frno</predefinedValues>
+      <predefinedValues>corp</predefinedValues>
+      <predefinedValues>credit</predefinedValues>
+      <predefinedValues>zipcd</predefinedValues>
+    </controlProperties>
+    <controlProperties name="mergeControlIds" label="유효성 검사/mergeControlIds" desc="컨트롤 value 에 대한 타입 체크 시, 체크 할 value가 여러 개의 컨트롤에 분리되어 있는 경우, 함께 체크할 컨트롤 ID&#xD;&#xA;※ 자기 자신은 제외하며, value 를 합칠 ID 를 순서대로 콤마(,) 연결하여 작성"/>
+  </settings:CustomProperties>
+  <settings:CustomProperties type="MatrixSubmission"/>
+  <settings:CustomProperties type="MDIFolder">
+    <controlProperties name="transform-on-mobile" label="반응형/탭 폴더/transform-on-mobile" desc="모바일 환경에서 반응형 탭 폴더 적용 여부">
+      <predefinedValues>true</predefinedValues>
+    </controlProperties>
+  </settings:CustomProperties>
+  <settings:CustomProperties type="Menu"/>
+  <settings:CustomProperties type="NavigationBar"/>
+  <settings:CustomProperties type="Notifier"/>
+  <settings:CustomProperties type="NumberEditor">
+    <controlProperties name="required" label="유효성 검사/required" desc="필수 값 지정 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="ignorePk" label="유효성 검사/ignorePk" desc="신규 PK 값 필수 체크 제외 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="editablePK" label="유효성 검사/editablePK" desc="PK컬럼 수정 가능 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="autoKeydownSearch" label="조회 영역 초기화/autoKeydownSearch" desc="Enter 키 입력 시, 조회 버튼 click 이벤트 발생&#xD;&#xA;ignoreInit=Y 인 조회 영역은 적용 불가">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="compare" label="유효성 검사/compare" desc="상대 값 비교&#xD;&#xA;• 그리드 일경우: columnName,비교연산자(&lt;=, &lt;, >=, >, ==, =)&#xD;&#xA;• 일반 컨트롤일 경우: 컨트롤 ID,비교연산자(&lt;=, &lt;, >=, >, ==, =)"/>
+    <controlProperties name="fixedDecimal" label="유효성 검사/fixedDecimal" desc="정수와 소수 영역의 각 최대 자리 수 체크&#xD;&#xA;• valueType: Number,Number&#xD;&#xA;ex. 3,2(정수 최대 3자리, 소수 최대 2자리 유효, 0 ~ 999.99)"/>
+    <controlProperties name="maxDecimalPointLength" label="유효성 검사/maxDecimalPointLength" desc="소수점 영역 최대 자리 수 체크&#xD;&#xA;• valueType: Number, ex.3"/>
+    <controlProperties name="minDecimalPointLength" label="유효성 검사/minDecimalPointLength" desc="소수점 영역 최소 자리 수 체크&#xD;&#xA;• valueType: Number, ex.3"/>
+    <controlProperties name="integer" label="유효성 검사/integer" desc="정수 타입에 따라 value 가 유효한 값인지 체크&#xD;&#xA;- small : short integer&#xD;&#xA;- normal : integer&#xD;&#xA;- big : long integer">
+      <predefinedValues>small</predefinedValues>
+      <predefinedValues>normal</predefinedValues>
+      <predefinedValues>big</predefinedValues>
+    </controlProperties>
+    <controlProperties name="integer-between" label="유효성 검사/integer-between" desc="value가 특정 정수 값 사이에 있는지 체크&#xD;&#xA;콤마(,) 로 연결하여 최소,최대값 을 작성하십시오.&#xD;&#xA;• valueType: Number, ex.3,5"/>
+    <controlProperties name="maxLengthDigits" label="유효성 검사/maxLengthDigits" desc="value 의 최대 길이 체크&#xD;&#xA;• valueType: Number, ex.3"/>
+    <controlProperties name="min" label="유효성 검사/min" desc="value 가 최소 값보다 작은지 체크&#xD;&#xA;• valueType: Number, ex.100"/>
+    <controlProperties name="max" label="유효성 검사/max" desc="value 가 최대 값보다 큰지 체크&#xD;&#xA;• valueType: Number, ex.100"/>
+  </settings:CustomProperties>
+  <settings:CustomProperties type="Output"/>
+  <settings:CustomProperties type="PageIndexer"/>
+  <settings:CustomProperties type="PathMatrixNode"/>
+  <settings:CustomProperties type="Progress"/>
+  <settings:CustomProperties type="RadioButton">
+    <controlProperties name="required" label="유효성 검사/required" desc="필수 값 지정 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="ignorePk" label="유효성 검사/ignorePk" desc="신규 PK 값 필수 체크 제외 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="editablePK" label="유효성 검사/editablePK" desc="PK컬럼 수정 가능 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+  </settings:CustomProperties>
+  <settings:CustomProperties type="ResponsiveXYLayout"/>
+  <settings:CustomProperties type="SearchInput">
+    <controlProperties name="required" label="유효성 검사/required" desc="필수 값 지정 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="ignorePk" label="유효성 검사/ignorePk" desc="신규 PK 값 필수 체크 제외 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="editablePK" label="유효성 검사/editablePK" desc="PK컬럼 수정 가능 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="minlength" label="유효성 검사/minlength" desc="컨트롤 value 의 최소 길이 체크&#xD;&#xA;• valueType: Number, ex. 10"/>
+    <controlProperties name="fixlength" label="유효성 검사/fixlength" desc="컨트롤 value 의 고정 길이 체크&#xD;&#xA;• valueType: Number, ex. 10"/>
+  </settings:CustomProperties>
+  <settings:CustomProperties type="SectionItem"/>
+  <settings:CustomProperties type="SideNavigation"/>
+  <settings:CustomProperties type="Slider"/>
+  <settings:CustomProperties type="Submission"/>
+  <settings:CustomProperties type="TabFolder">
+    <controlProperties name="transform-on-mobile" label="반응형/탭 폴더/transform-on-mobile" desc="모바일 환경에서 반응형 탭 폴더 적용 여부">
+      <predefinedValues>true</predefinedValues>
+    </controlProperties>
+  </settings:CustomProperties>
+  <settings:CustomProperties type="TabItem"/>
+  <settings:CustomProperties type="TextArea">
+    <controlProperties name="required" label="유효성 검사/required" desc="필수 값 지정 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="ignorePk" label="유효성 검사/ignorePk" desc="신규 PK 값 필수 체크 제외 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="editablePK" label="유효성 검사/editablePK" desc="PK컬럼 수정 가능 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="minlength" label="유효성 검사/minlength" desc="컨트롤 value 의 최소 길이 체크&#xD;&#xA;• valueType: Number, ex. 10"/>
+    <controlProperties name="fixlength" label="유효성 검사/fixlength" desc="컨트롤 value 의 고정 길이 체크&#xD;&#xA;• valueType: Number, ex. 10"/>
+    <controlProperties name="maxlength" label="유효성 검사/maxlength" desc="컨트롤 value의 최대 길이 체크&#xD;&#xA;• valueType: Number, ex. 10"/>
+  </settings:CustomProperties>
+  <settings:CustomProperties type="Tree">
+    <controlProperties name="ignoreInit" label="트리 초기화/ignoreInit" desc="트리 초기화 제외 여부">
+      <predefinedValues>Y</predefinedValues>
+    </controlProperties>
+    <controlProperties name="bindDataFormId" label="트리 초기화/bindDataFormId" desc="선택 행 컨텍스트 바인딩으로 연결된 그룹 ID&#xD;&#xA;• valueType: String, ex. grpForm"/>
+  </settings:CustomProperties>
+  <settings:CustomProperties type="TreeCell"/>
+  <settings:CustomProperties type="UIControlShell"/>
+  <settings:CustomProperties type="VerticalLayout">
+    <controlProperties name="tablet-top-margin" label="반응형/버티컬레이아웃/tablet-top-margin" desc=""/>
+    <controlProperties name="tablet-right-margin" label="반응형/버티컬레이아웃/tablet-right-margin" desc=""/>
+    <controlProperties name="tablet-bottom-margin" label="반응형/버티컬레이아웃/tablet-bottom-margin" desc=""/>
+    <controlProperties name="tablet-left-margin" label="반응형/버티컬레이아웃/tablet-left-margin" desc=""/>
+    <controlProperties name="tablet-spacing" label="반응형/버티컬레이아웃/tablet-spacing" desc=""/>
+    <controlProperties name="mobile-top-margin" label="반응형/버티컬레이아웃/mobile-top-margin" desc=""/>
+    <controlProperties name="mobile-right-margin" label="반응형/버티컬레이아웃/mobile-right-margin" desc=""/>
+    <controlProperties name="mobile-bottom-margin" label="반응형/버티컬레이아웃/mobile-bottom-margin" desc=""/>
+    <controlProperties name="mobile-left-margin" label="반응형/버티컬레이아웃/mobile-left-margin" desc=""/>
+    <controlProperties name="mobile-spacing" label="반응형/버티컬레이아웃/mobile-spacing" desc=""/>
+  </settings:CustomProperties>
+  <settings:CustomProperties type="Video"/>
+  <settings:CustomProperties type="XYLayout"/>
+</xmi:XMI>

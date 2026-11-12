@@ -1,0 +1,101 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-4f2eb13d" version="1.0.5575">
+  <head std:sid="head-18acaf5a">
+    <screen std:sid="screen-c24e6d05" id="EXB-FULL" name="EXB-FULL" width="1580px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-9ae0e83f" id="EXB-DIV" name="EXB-DIV" width="1128px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-432924c5" id="EXB-POP[1024]" name="EXB-POP[1024]" width="1024px" height="576px"/>
+    <screen std:sid="screen-85a3b9e7" id="EXB-POP[800]" name="EXB-POP[800]" width="800px" height="480px"/>
+    <screen std:sid="screen-0367bf6e" id="EXB-PART" name="EXB-PART" width="672px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-5179b9f9" id="EXB-POP[480]" name="EXB-POP[480]" width="480px" height="320px"/>
+    <cl:model std:sid="model-bacc6f48">
+      <cl:dataset comment="내 보유 종목" std:sid="d-set-e6c2a059" id="dsMyStock">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="국내해외사용구분코드" std:sid="d-column-fc51828e" info="1:국내 2:해외" name="DMS_OVRS_USE_SCD"/>
+          <cl:datacolumn comment="정렬구분코드" std:sid="d-column-71188426" name="SORT_SCD"/>
+          <cl:datacolumn comment="신용구분코드" std:sid="d-column-bc981903" name="CRDT_SCD"/>
+          <cl:datacolumn comment="상품코드" std:sid="d-column-8eec0d5d" name="PRDT_COD"/>
+          <cl:datacolumn comment="대출일자" std:sid="d-column-4e50b629" name="LOAN_DT"/>
+          <cl:datacolumn comment="단축상품코드" std:sid="d-column-2b4e77b1" name="SHTN_PRDT_COD"/>
+          <cl:datacolumn comment="신용구분코드명" std:sid="d-column-fc2d5081" name="CRDT_SCD_NM"/>
+          <cl:datacolumn comment="상품약어명" std:sid="d-column-ce6afe54" name="PRDT_ABBR_NM"/>
+          <cl:datacolumn comment="체결기준잔고수량" std:sid="d-column-c3ac0391" name="CNCS_STDR_BLN_QNT" datatype="number"/>
+          <cl:datacolumn comment="금일고객매입단가" std:sid="d-column-5ad90458" name="TDAY_CUST_PCHS_UNPR" datatype="number"/>
+          <cl:datacolumn comment="외화주문단가" std:sid="d-column-7169b741" info="" name="FRCR_ORD_UNPR" datatype="number"/>
+          <cl:datacolumn comment="원화체결기준매수금액" std:sid="d-column-75ee8f00" name="WON_CNCS_STDR_BUY_AMT" datatype="number"/>
+          <cl:datacolumn comment="외화체결기준매수금액" std:sid="d-column-e2ae972a" name="FRCR_CNCS_STDR_BUY_AMT" datatype="number"/>
+          <cl:datacolumn comment="원화평가금액" std:sid="d-column-73479c49" name="WON_EVL_AMT" datatype="number"/>
+          <cl:datacolumn comment="원화평가손익금액" std:sid="d-column-992fea6f" name="WON_EVL_PFLS_AMT" datatype="number"/>
+          <cl:datacolumn comment="외화평가금액" std:sid="d-column-f975dd28" name="FRCR_EVL_AMT" datatype="number"/>
+          <cl:datacolumn comment="외화평가손익금액2" std:sid="d-column-46dc3114" info="" name="FRCR_EVL_PFLS_AMT2" datatype="number"/>
+          <cl:datacolumn comment="손익률" std:sid="d-column-7706ba58" name="PFLS_RT" datatype="number"/>
+          <cl:datacolumn comment="주식현재가" std:sid="d-column-9df479f0" name="STK_PV" datatype="number"/>
+          <cl:datacolumn comment="해외주식현재가" std:sid="d-column-dfb71bac" name="OVRS_STK_PV"/>
+          <cl:datacolumn comment="해외거래소코드" std:sid="d-column-99683cb0" name="OVRS_EXCG_COD"/>
+          <cl:datacolumn comment="적용등급명" std:sid="d-column-e6e57d38" name="APLY_GRAD_NM"/>
+          <cl:datacolumn comment="통화코드" std:sid="d-column-8901b582" name="CRRY_COD"/>
+          <cl:datacolumn comment="기준환율" std:sid="d-column-fb7c42d9" name="STDR_EXRT"/>
+          <cl:datacolumn comment="만기일자" std:sid="d-column-a9885c62" name="EXP_DT"/>
+          <cl:datacolumn comment="매도가능수량" std:sid="d-column-177d41e5" name="SELL_PSBL_QNT" datatype="number"/>
+          <cl:datacolumn comment="현재가" std:sid="d-column-54a02d34" name="PRPR" datatype="expression" expression="DMS_OVRS_USE_SCD == &quot;1&quot; ? STK_PV : OVRS_STK_PV"/>
+          <cl:datacolumn comment="평가손익" std:sid="d-column-6cd3f5d0" name="PFLS_AMT" datatype="expression" expression="DMS_OVRS_USE_SCD == &quot;1&quot; ? WON_EVL_PFLS_AMT : FRCR_EVL_PFLS_AMT2"/>
+          <cl:datacolumn comment="평가금액" std:sid="d-column-237a9215" name="ELV_AMT" datatype="expression" expression="DMS_OVRS_USE_SCD == &quot;1&quot; ? WON_EVL_AMT : FRCR_EVL_AMT"/>
+          <cl:datacolumn comment="매입단가" std:sid="d-column-5a359c78" name="ORD_UNPR" datatype="expression" expression="DMS_OVRS_USE_SCD == &quot;1&quot; ? TDAY_CUST_PCHS_UNPR : FRCR_ORD_UNPR"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+      <cl:datamap comment="보유종목 요청" std:sid="d-map-850dd785" id="dmMyStockIn">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="다음키" std:sid="d-column-5a2bfd0f" name="NEXT_KEY" defaultvalue=""/>
+          <cl:datacolumn comment="국내해외사용구분코드" std:sid="d-column-96241c53" name="DMS_OVRS_USE_SCD" defaultvalue=""/>
+          <cl:datacolumn comment="조회구분코드" std:sid="d-column-49da6b7f" name="INQ_SCD" defaultvalue="1"/>
+          <cl:datacolumn comment="신용잔고조회구분코드" std:sid="d-column-06924069" name="CRDT_BLN_INQ_SCD"/>
+          <cl:datacolumn comment="개별계좌번호" std:sid="d-column-900e2609" name="IACN"/>
+          <cl:datacolumn comment="고객번호" std:sid="d-column-c7668cd2" name="CUNO"/>
+          <cl:datacolumn comment="수수료포함여부" std:sid="d-column-9c0c9144" name="FEE_INCL_YN"/>
+          <cl:datacolumn comment="잔고조회구분" std:sid="d-column-83abe5ac" name="BLN_INQ_SE"/>
+          <cl:datacolumn comment="주식시세구분코드" std:sid="d-column-ad0db92e" name="STK_QTTN_SCD"/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+      <cl:submission comment="보유종목 TR3300Q5" std:sid="submission-3ffcadd4" id="subMyStock" method="get" action="app/sce/A15/data/myStock.json" mediatype="application/x-www-form-urlencoded;simple">
+        <cl:requestdata dataid="dmMyStockIn"/>
+        <cl:responsedata dataid="dsMyStock" alias="outRec2" isadd="true"/>
+      </cl:submission>
+    </cl:model>
+    <cl:appspec title="보유중인 주식"/>
+  </head>
+  <body std:sid="body-a75dce65" style="top:0px; left:0px; width:400px; height:500px;" class="card">
+    <cl:listener std:sid="listener-c00a81ad" name="load" handler="onBodyLoad"/>
+    <cl:grid std:sid="grid-38ba8118" id="grd2" class="table-transparent" datasetid="dsMyStock" leftsplit="1" leftsplitwidth="102">
+      <cl:formdata std:sid="f-data-5ab777e8" row="0" col="0"/>
+      <cl:gridcolumn std:sid="g-column-55ce28e2"/>
+      <cl:gridcolumn std:sid="g-column-608c740f" width="276px"/>
+      <cl:griddetail std:sid="gd-band-7549ee48">
+        <cl:gridrow std:sid="g-row-78427b07" height="24px"/>
+        <cl:gridrow std:sid="g-row-56c9b4f5" height="24px"/>
+        <cl:gridcell std:sid="gd-cell-14f01874" rowindex="0" colindex="0" rowspan="2" colspan="1" columnname="PRDT_ABBR_NM">
+          <cl:output std:sid="output-443309c5" id="opt1" class="text-left">
+            <cl:celldata std:sid="c-data-2c5f42f2"/>
+          </cl:output>
+        </cl:gridcell>
+        <cl:gridcell std:sid="gd-cell-05ffee2c" rowindex="1" colindex="1" rowspan="1" colspan="1" columnname="PFLS_AMT">
+          <cl:output std:sid="output-5d1a6821" id="opt2" value="Output" datatype="number" format="s#,##0" displayexp="text+&quot; &quot;+CRRY_COD+&quot;(&quot;+PFLS_RT+&quot;%)&quot;">
+            <cl:expbind property="class" category="CLASS" expression="value > 0 ? &quot;vrss-up text-right&quot; : &quot;vrss-down text-right&quot;"/>
+            <cl:celldata std:sid="c-data-07908ec4"/>
+          </cl:output>
+        </cl:gridcell>
+        <cl:gridcell std:sid="gd-cell-93fff62f" rowindex="0" colindex="1" columnname="ELV_AMT">
+          <cl:output std:sid="output-8a3027ab" id="opt3" class="text-right" value="Output" datatype="number" format="s#,##0.##" displayexp="text +&quot; &quot;+CRRY_COD">
+            <cl:celldata std:sid="c-data-fa2960d6"/>
+          </cl:output>
+        </cl:gridcell>
+      </cl:griddetail>
+    </cl:grid>
+    <cl:formlayout std:sid="f-layout-7cd33b91" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

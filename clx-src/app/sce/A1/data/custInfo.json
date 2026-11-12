@@ -1,0 +1,13 @@
+{
+	"dmCustInfo": {
+		"custNo" : "1",
+		"korNm" : "홍길동",
+		"engNm" : "Hong Gil dong",
+		"jumin" : "8001011234567",
+		"job" : "value2",
+		"age" : "32",
+		"drvYn" : "Y",
+		"birth" : "19800101",
+		"nation" : "1"
+	}
+}

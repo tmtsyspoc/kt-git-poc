@@ -1,0 +1,59 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-37291bb1" version="1.0.5542">
+  <head std:sid="head-2dd18b9d">
+    <std:metadata>
+      <std:property key="template-file" value="templates/poc/시나리오.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-c9078631" id="EXB-POP[560]" name="EXB-POP[560]" width="560px" height="768px" useCustomWidth="false" useCustomHeight="true" customHeight="500" customWidth="1024" active="true"/>
+    <cl:model std:sid="model-0718391d">
+      <cl:dataset std:sid="d-set-406d885d" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-bdbd9f42" name="APP_ID"/>
+          <cl:datacolumn std:sid="d-column-9f37779a" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-05046705" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn std:sid="d-column-7fe5300f" name="SUB_TITLE"/>
+          <cl:datacolumn std:sid="d-column-e83d35c9" name="SUB_TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn std:sid="d-column-c68cb733" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn std:sid="d-column-fa740970" name="CONT" datatype="string"/>
+          <cl:datacolumn std:sid="d-column-3fb89862" name="DISPLAY_CONT"/>
+          <cl:datacolumn std:sid="d-column-c9d6a3d7" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-b4004ac2" name="SUB_CODE"/>
+          <cl:datacolumn std:sid="d-column-8d6dc077" name="TARGET_CTRL"/>
+          <cl:datacolumn std:sid="d-column-4e06ed8b" name="TARGET_EMB"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist/>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="승인/반려 확인"/>
+  </head>
+  <body std:sid="body-51c6a680" class="wrap pop" childcombinatorclass="v_base">
+    <cl:listener std:sid="listener-59f4a485" name="load" handler="onBodyLoad"/>
+    <cl:group std:sid="group-f937a139" id="grpData" class="conts-wrap">
+      <cl:verticaldata std:sid="v-data-fa8708a6" width="512px" height="72px" autosize="height"/>
+      <cl:output std:sid="output-297cc630" id="opt1" class="text-center h3" displayexp="text + &quot;하시겠습니까?&quot;">
+        <cl:verticaldata std:sid="v-data-96c4971d" width="100px" height="28px" autosize="height"/>
+      </cl:output>
+      <cl:inputbox std:sid="i-box-d4740c1b" id="ipb1" placeholder="전송 할 메시지를 입력하세요.">
+        <cl:verticaldata std:sid="v-data-f181a3c6" width="100px" height="28px"/>
+      </cl:inputbox>
+      <cl:verticallayout std:sid="v-layout-c9a2a19f" spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+    </cl:group>
+    <cl:group std:sid="group-0fccfd87" id="grpFooter" class="conts-footer">
+      <cl:verticaldata std:sid="v-data-c2c95493" width="512px" height="50px" autosize="height"/>
+      <cl:group std:sid="group-51996094" id="grp1">
+        <cl:verticaldata std:sid="v-data-8d94acf6" width="400px" height="28px" autosize="height"/>
+        <cl:button std:sid="button-6d8cbd18" id="btn1" class="primary" value="전송">
+          <cl:listener std:sid="listener-2adf6ccb" name="click" handler="onBtn1Click"/>
+          <cl:flowlayoutdata std:sid="f-data-db244282" width="70px" height="28px"/>
+        </cl:button>
+        <cl:flowlayout std:sid="f-layout-fbbb9681" halign="right"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-3d12c525" spacing="0"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-a4d33ff7" scrollable="true" spacing="16" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

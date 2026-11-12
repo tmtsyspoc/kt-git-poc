@@ -1,0 +1,91 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-7fa4f02c" version="1.0.6209">
+  <head std:sid="head-e18b9025">
+    <screen std:sid="screen-b9e134ac" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-79130dc1" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-9e80f9e4" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-1f3dacc0">
+      <cl:dataset comment="프로세스 목록" std:sid="d-set-f8073bb2" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="" std:sid="d-column-fffbcc00" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-36cf7a58" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn comment="" std:sid="d-column-b5029455" name="SUB_TITLE"/>
+          <cl:datacolumn comment="" std:sid="d-column-08b6b4cc" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-38d27454" name="CONT" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-fcceae0b" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-b159e28b" name="SUB_CODE"/>
+          <cl:datacolumn comment="" std:sid="d-column-252c0699" name="TARGET_CTRL"/>
+          <cl:datacolumn std:sid="d-column-27f9eec4" name="TARGET_EMB"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[로깅·종단 추적]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[오류, 사용자 흐름, API 호출을 Correlation ID로 종단 추적한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec dev-comment="10.11 모니터링&#x9;app/sce/A10/A10-10.clx&#xD;&#xA;16.5 모니터링&#x9;app/sce/A10/A10-10.clx&#xD;&#xA;" title="[OPS-04]로깅·종단추적"/>
+  </head>
+  <body std:sid="body-b399fd11" class="wrap">
+<cl:listener name="init" handler="onBodyInit"/>
+    <cl:udc std:sid="ud-control-a7bd67da" type="udc.com.udcComAppHeader">
+      <cl:verticaldata std:sid="v-data-883484c2" width="900px" height="28px"/>
+    </cl:udc>
+    <cl:group id="grpData" class="conts-area">
+<cl:verticaldata width="976px" height="903px" autosize="none" grow="1"/>
+      
+      <cl:group class="conts-wrap">
+        <cl:verticaldata width="976px" height="80px" autosize="height"/>
+        <cl:udc type="udc.com.udcComFormTitle">
+          <cl:verticaldata width="800px" height="28px" autosize="height"/>
+          <cl:property name="title" value="모니터링 확인" type="string"/>
+        </cl:udc>
+        <cl:output displayexp="sstr(&quot;관리자 계정&quot;, [&quot;text-danger&quot;, &quot;fw-bold&quot;])+&quot;으로 로그인 했을 경우, 화면 하단에서 각 단말별 접속현황 모니터링을 확인 할 수 있습니다.&quot;">
+          <cl:verticaldata width="1250px" height="18px" autosize="height"/>
+        </cl:output>
+        <cl:verticallayout spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:group class="conts-wrap" clipcontent="false">
+        <cl:verticaldata width="976px" height="453px" autosize="none" grow="1"/>
+        <cl:embeddedapp id="embAdmin" src="../ADMIN/A1.clx">
+          <cl:verticaldata width="976px" height="453px" syncminheight="true" autosize="none" grow="1"/>
+        </cl:embeddedapp>
+        <cl:verticallayout spacing="8"/>
+      </cl:group>
+      <cl:verticallayout spacing="16"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-d822c70f" spacing="16" leftmargin="24" rightmargin="24" topmargin="16" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

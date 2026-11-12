@@ -1,0 +1,112 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-dc7f02ac" version="1.0.6087">
+  <head std:sid="head-4575d74e">
+    <screen std:sid="screen-708d0282" id="default" name="default" width="1640px" height="984px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="1928" active="true"/>
+    <screen std:sid="screen-cf6a9d1b" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-572c05bd" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-cf407263">
+      <cl:dataset std:sid="d-set-049f83d1" id="dsChart" sortcondition="value asc">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="범위" std:sid="d-column-a10352b5" info="" name="region" datatype="string"/>
+          <cl:datacolumn comment="값" std:sid="d-column-5c95d6de" info="" name="value" datatype="number"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="region"><![CDATA[여신업무]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[3]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="region"><![CDATA[수신업무]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[5]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="region"><![CDATA[외환업무]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[2]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="region"><![CDATA[카드업무]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[4]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="region"><![CDATA[계좌업무]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[3]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="region"><![CDATA[고객정보]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[2]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="region"><![CDATA[이체승인]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[3]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="region"><![CDATA[대출실행]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[1]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="라인 차트">
+      <cl:event name="resize" type="cpr.events.CUIEvent"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-aeb74fb6" style="top:0px; left:0px; width:600px; height:600px;">
+    <cl:listener std:sid="listener-ba50a984" name="init" handler="onBodyInit"/>
+    <cl:listener std:sid="listener-45b606f5" name="screen-change" handler="onBodyScreenChange"/>
+    <cl:attribute name="mobile-index" value="3"/>
+    <cl:attribute name="tablet-index" value="3"/>
+    <cl:group std:sid="group-e3b1c8c6" class="group border">
+      <cl:attribute name="needs-auto-height" value="true"/>
+      <cl:attribute name="mobile-index" value="4"/>
+      <cl:attribute name="tablet-index" value="4"/>
+      <cl:attribute name="mobile-horizontal-margin" value=""/>
+      <cl:attribute name="mobile-vertical-margin" value=""/>
+      <cl:attribute name="tablet-vertical-margin" value=""/>
+      <cl:attribute name="tablet-horizontal-margin" value=""/>
+      <cl:formdata std:sid="f-data-cd049c36" width="388" height="25" row="0" col="0"/>
+      <cl:group std:sid="group-3b2dbcb7" clipcontent="false">
+        <cl:formdata std:sid="f-data-bcc1cebc" row="0" col="0" rowspan="1" colspan="1"/>
+        <cl:output std:sid="output-481d6cc8" class="tit-blue" value="월별 매출 추이">
+          <cl:formdata std:sid="f-data-5179ce95" row="0" col="0"/>
+        </cl:output>
+        <cl:formlayout std:sid="f-layout-99dd453c" scrollable="false" hspace="16px" vspace="16px" top-margin="16px" right-margin="16px" bottom-margin="0px" left-margin="16px">
+          <cl:rows length="1" unit="FRACTION" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="100" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" minlength="50" syncminlength="false"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:group std:sid="group-d21fda44" style="border-radius:12px;">
+        <cl:formdata std:sid="f-data-48b92e67" row="1" col="0" rowspan="1" colspan="1"/>
+        <cl:group std:sid="group-4ffff622" class="leader-status-board" clipcontent="false">
+          <cl:formdata std:sid="f-data-ee0cc682" row="0" col="0" rowspan="1" colspan="1"/>
+          <cl:uicontrolshell std:sid="uic-shell-0de66f9a" id="shl1">
+            <cl:listener std:sid="listener-d2b70fa2" name="init" handler="onUIControlShellInit"/>
+            <cl:listener std:sid="listener-5e190661" name="load" handler="onUIControlShellLoad"/>
+            <cl:formdata std:sid="f-data-6a9ed5a7" halign="FILL" valign="FILL" row="0" col="0"/>
+          </cl:uicontrolshell>
+          <cl:formlayout std:sid="f-layout-1abe24af" hspace="0px" vspace="16px">
+            <cl:rows length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent" minlength="0"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-ac3d0d37" vspace="16px">
+          <cl:rows length="1" unit="FRACTION" shadecolor="transparent" minlength="0"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-aa26d71f" vspace="16px">
+        <cl:rows length="27" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+        <cl:rows length="230" unit="FRACTION" shadetype="NONE" shadecolor="transparent" minlength="200"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-95952501" scrollable="false">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

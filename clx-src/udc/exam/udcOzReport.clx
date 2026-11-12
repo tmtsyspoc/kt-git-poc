@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-129d3451" version="1.0.5424">
+  <head std:sid="head-b0063bfb">
+    <std:metadata>
+      <std:property key="template-file" value="templates/일반화면/0.프레임/V_프레임_샘플링.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-c1fbbac4" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-994997be" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-22a7ec60" id="EXB-POP[1024]" name="EXB-POP[1024]" width="1024px" height="576px"/>
+    <screen std:sid="screen-782aff33" id="EXB-POP[800]" name="EXB-POP[800]" width="800px" height="480px"/>
+    <screen std:sid="screen-19e85b51" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-3e5f69c3" id="EXB-POP[480]" name="EXB-POP[480]" width="480px" height="320px"/>
+    <cl:model std:sid="model-9dd8ac86"/>
+    <cl:appspec>
+      <cl:property name="autoStart" type="boolean" default="true" bindable="true" std:desc="[Boolean] 화면 로드시 바로 로드할지 여부(true: load하자마자 바로 리포트 연동, false: start() API 호출 시 리포트 연동)"/>
+      <cl:property name="filePath" type="string" bindable="true" std:desc="[String] oz/ozhviewer/work 에 위치한 파일 경로"/>
+      <cl:property name="datamapProp" type="control" std:desc="[DataMap] 파라미터 전달한 데이터맵 객체"/>
+      <cl:property name="odinames" type="string" bindable="true" std:desc="[String] Query Design 세팅"/>
+      <cl:property name="params" type="string" bindable="true" std:desc="[String] odinames 에 해당하는 파라미터 값"/>
+      <cl:property name="bgimage" type="resource" bindable="true" std:desc="[Image] 보고서에 배경 이미지를 삽입하고자 하는 경우 이미지 파일 url"/>
+      <cl:property name="movepage" type="number" default="1" bindable="true" std:desc="[Number] 실행과 동시에 이동할 페이지 번호"/>
+      <cl:property name="showtree" type="boolean" default="false" bindable="true" std:desc="[Boolean] 보고서 트리의 활성화 여부"/>
+      <cl:property name="usestatusbar" type="boolean" default="true" bindable="true" std:desc="[Boolean] 상태바 표시 여부"/>
+      <cl:property name="zoom" type="number" default="100" bindable="true" std:desc="[Number] 확대/축소 비율"/>
+      <cl:property name="viewmode" type="enumeration" default="normal" bindable="true" std:desc="[Enum] 뷰어 미리보기 시 모드 설정&#xD;&#xA;- normal:기존스펙&#xD;&#xA;- fittoframe:뷰어의 화면 크기에 리포트를 맞추어 확대/축소&#xD;&#xA;- fittowidth:뷰어의 화면 너비에 리포트 너비를 맞추어 확대/축소&#xD;&#xA;- fittocontents:리포트 마진 및 뷰어의 마진을 제외하여 미리보기&#xD;&#xA;- printsize:인쇄 크기와 동일한 크기로 미리보기)">
+        <cl:available-value>normal</cl:available-value>
+        <cl:available-value>fittoframe</cl:available-value>
+        <cl:available-value>fittowidth</cl:available-value>
+        <cl:available-value>fittocontents</cl:available-value>
+        <cl:available-value>printsize</cl:available-value>
+      </cl:property>
+      <cl:property name="treeviewtitle" type="string" bindable="true" std:desc="[String] 보고서 트리의 RootTitle"/>
+      <cl:property name="treeviewsize" type="number" default="200" bindable="true" std:desc="[Number] 보고서 트리 뷰 창의 너비 설정&#xD;&#xA;(최소값:33, 최대값:10000)"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-9dc7916e" style="top:0px; left:0px; width:300px; height:300px;">
+    <cl:listener std:sid="listener-577953e3" name="load" handler="onBodyLoad"/>
+    <cl:embeddedpage std:sid="e-page-8e246c95" id="epOz" scrolling="no">
+      <cl:listener std:sid="listener-07378f11" name="load" handler="onEpOzLoad"/>
+      <cl:formdata std:sid="f-data-85158381" row="0" col="0"/>
+    </cl:embeddedpage>
+    <cl:formlayout std:sid="f-layout-7a8c7544" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

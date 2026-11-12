@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-b3b68d94" version="1.0.5739">
+  <head std:sid="head-71ea3157">
+    <std:metadata>
+      <std:property key="template-file" value="templates/팝업/2.폼/V_폼.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-4e3335b2" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-1e0cb3ce" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-1d45f3f8" id="EXB-POP[560]" name="EXB-POP[560]" width="560px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="768" customWidth="1024"/>
+    <screen std:sid="screen-47a8c0ca" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="375"/>
+    <cl:model std:sid="model-b020dfd5"/>
+    <cl:appspec title="워크플로우 유닛">
+      <cl:property name="btnText" type="string" default="워크플로우 Unit" std:desc="[String] 워크플로우에 표시할 Text"/>
+      <cl:property name="shape" type="enumeration" default="rectangle" std:desc="[ENUM] 워크플로우 형태">
+        <cl:available-value>rectangle</cl:available-value>
+        <cl:available-value>diamond</cl:available-value>
+        <cl:available-value>circle</cl:available-value>
+        <cl:available-value>hexagon</cl:available-value>
+      </cl:property>
+      <cl:property name="embId" type="string" default="embapp1" std:desc="[String] 워크플로우 실행 시 화면을 표시할 타겟 임베디드앱 ID"/>
+      <cl:property name="src" type="string" default="app/sce/A3/A3-8-1" std:desc="[String] 화면ID"/>
+      <cl:event name="btn-click" type="cpr.events.CUIEvent"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-8dadc467" style="top:0px; left:0px; width:150px; height:40px;" class="workflow-unit">
+    <cl:listener std:sid="listener-76f0c041" name="property-change" handler="onBodyPropertyChange"/>
+    <cl:listener std:sid="listener-9f90cd8d" name="load" handler="onBodyLoad"/>
+    <cl:button std:sid="button-92b5b3c3" id="btnUnit" class="shape disabled" value="워크플로우 Unit">
+      <cl:listener std:sid="listener-bf61f549" name="click" handler="onBtn1Click"/>
+      <cl:formdata std:sid="f-data-4be5bf52" row="0" col="0"/>
+    </cl:button>
+    <cl:formlayout std:sid="f-layout-f943a2f1" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

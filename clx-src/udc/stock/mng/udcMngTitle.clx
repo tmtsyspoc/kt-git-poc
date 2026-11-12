@@ -1,0 +1,51 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-4b73c7aa" version="1.0.5542">
+  <head std:sid="head-6b0486b4">
+    <std:metadata>
+      <std:property key="template-file" value="templates/일반화면/1.그리드/F_그리드_페이징.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-33e0147c" id="default" name="default" width="1024px" height="768px" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-daebf791" id="tablet" name="tablet" width="500px" height="667px"/>
+    <screen std:sid="screen-38feba7d" id="mobile" name="mobile" width="350px" height="525px"/>
+    <cl:model std:sid="model-c3cb4ca4"/>
+    <cl:appspec title="컨텐츠관리-제목">
+      <cl:event name="mng-delete" type="cpr.events.CAppEvent"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-0e0dd4ba" style="top:0px; left:0px; width:450px; height:300px;" class="conts-wrap">
+    <cl:group std:sid="group-5fe6f891">
+      <cl:verticaldata std:sid="v-data-3a3fa1aa" width="424px" height="32px"/>
+      <cl:output std:sid="output-bbd36e2f" class="cms-subtitle" value="Title">
+        <cl:formdata std:sid="f-data-a99b0375" row="0" col="0"/>
+      </cl:output>
+      <cl:button std:sid="button-9d92bef4" class="btn-close" value="">
+        <cl:listener std:sid="listener-0fcc1bdf" name="click" handler="onButtonClick"/>
+        <cl:formdata std:sid="f-data-b5c60db9" row="0" col="1" rowspan="1" colspan="1"/>
+      </cl:button>
+      <cl:formlayout std:sid="f-layout-3fdf288e" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="32" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-44b19634">
+      <cl:verticaldata std:sid="v-data-271851bf" width="424px" height="89px" autosize="height"/>
+      <cl:output std:sid="output-847072f2" value="title">
+        <cl:formdata std:sid="f-data-34675253" row="0" col="0"/>
+      </cl:output>
+      <cl:textarea std:sid="t-area-5bb416d7" id="txa1">
+        <cl:formdata std:sid="f-data-f253b6c4" row="1" col="0"/>
+      </cl:textarea>
+      <cl:formlayout std:sid="f-layout-73b2eade" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="25" unit="PIXEL"/>
+        <cl:rows length="60" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-5ed9f11e" spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

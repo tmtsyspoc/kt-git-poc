@@ -1,0 +1,191 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-77a3c82c" version="1.0.6209">
+  <head std:sid="head-dcc3870d">
+    <screen std:sid="screen-9b4868b6" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-6d72c400" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-bef9dd61" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-b4f5a737">
+      <cl:dataset comment="프로세스 목록" std:sid="d-set-0bf44910" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="" std:sid="d-column-d0a58846" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-ec49c378" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn comment="" std:sid="d-column-2ab0c7f5" name="SUB_TITLE"/>
+          <cl:datacolumn comment="" std:sid="d-column-1fc6bfdf" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-3a51230d" name="CONT" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-ee1191fa" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-16eebf44" name="SUB_CODE"/>
+          <cl:datacolumn comment="" std:sid="d-column-2fb71eb9" name="TARGET_CTRL"/>
+          <cl:datacolumn std:sid="d-column-ce6b2378" name="TARGET_EMB"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[중복 요청·재시도 통제]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[연속 클릭, 새로고침, 네트워크 재시도 시 중복 거래를 방지한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="[OPS-02]중복요청·재시도 통제"/>
+  </head>
+  <body std:sid="body-a7fb197b" class="wrap">
+    <cl:listener std:sid="listener-688c42fe" name="load" handler="onBodyLoad"/>
+    <cl:listener std:sid="listener-57410abe" name="unload" handler="onBodyUnload"/>
+    <cl:udc std:sid="ud-control-f01a5861" type="udc.com.udcComAppHeader">
+      <cl:verticaldata std:sid="v-data-271cff58" width="900px" height="28px"/>
+    </cl:udc>
+    <cl:group std:sid="group-6b05148f" id="grpData" class="conts-area">
+      <cl:verticaldata std:sid="v-data-2db1ab05" width="1592px" height="626px" autosize="none" grow="1"/>
+      <cl:group std:sid="group-d2bdad7d" id="grpGoverning" class="governing">
+        <cl:verticaldata std:sid="v-data-26ae9a87" width="1592px" height="124px" autosize="height"/>
+        <cl:output std:sid="output-8ad6c93d" id="opt2_2" class="tit" value="중복 요청 방지 및 재시도 통제">
+          <cl:verticaldata std:sid="v-data-24a3b0eb" width="100px" height="28px" autosize="height"/>
+        </cl:output>
+        <cl:output std:sid="output-f588f595" id="opt5" class="txt" displayexp="&quot;버튼 연속 클릭은 &quot; + sstr(&quot;서브미션 전송 상태 확인&quot;, [&quot;fw-bold&quot;]) + &quot;으로 제어하여 요청을 1회만 전송합니다.&quot; + &quot;\n\r&quot; + &quot;새로고침이나 네트워크 재시도로 동일한 요청이 다시 발생해도 &quot; + sstr(&quot;거래 고유키&quot;, [&quot;fw-bold&quot;]) + &quot;로 이미 처리된 거래인지 판별하여 거래가 한 번만 처리되도록 통제합니다.&quot;">
+          <cl:verticaldata std:sid="v-data-f2af1b87" width="1218px" height="54px" autosize="height"/>
+        </cl:output>
+        <cl:verticallayout std:sid="v-layout-cf7ba67b" scrollable="false" spacing="8"/>
+      </cl:group>
+      <cl:group std:sid="group-37407677" id="grpOption" class="sch-filter-box">
+        <cl:verticaldata std:sid="v-data-a4044e5f" width="1592px" height="62px" autosize="height"/>
+        <cl:output std:sid="output-dda19c9d" class="fw-bold" value="방어 설정">
+          <cl:formdata std:sid="f-data-6b4104d5" row="0" col="0"/>
+        </cl:output>
+        <cl:checkbox std:sid="c-box-bca1e424" id="chkTranKey" text="거래 고유키">
+          <cl:formdata std:sid="f-data-04424fb9" row="0" col="1"/>
+        </cl:checkbox>
+        <cl:button std:sid="button-9b316673" id="btnCreateCode" class="primary" value="개통 요청">
+          <cl:listener std:sid="listener-a684b186" name="click" handler="onBtnCreateCodeClick"/>
+          <cl:formdata std:sid="f-data-b6376ba7" row="0" col="3"/>
+        </cl:button>
+        <cl:button std:sid="button-cbe1d46f" id="btnNewTran" value="새 거래">
+          <cl:listener std:sid="listener-e53ede3c" name="click" handler="onBtnNewTranClick"/>
+          <cl:formdata std:sid="f-data-3c474c86" row="0" col="4"/>
+        </cl:button>
+        <cl:formlayout std:sid="f-layout-50091b28" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="28" unit="PIXEL" autoSizing="true"/>
+          <cl:columns length="100" unit="PIXEL"/>
+          <cl:columns length="180" unit="PIXEL"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="105"/>
+          <cl:columns length="105"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:group std:sid="group-263a4ce9" id="grpCust" class="conts-wrap">
+        <std:metadata>
+          <std:property key="template-uuid" value="0db7c191-48c9-437d-a599-6fd99230eefd"/>
+          <std:property key="template-rev" value="1"/>
+        </std:metadata>
+        <cl:verticaldata std:sid="v-data-2d65a2fc" width="1592px" height="394px" autosize="height"/>
+        <cl:group std:sid="group-304f953a" id="grpCustTit">
+          <cl:verticaldata std:sid="v-data-ca6221e3" width="1240px" height="28px" autosize="height"/>
+          <cl:udc std:sid="ud-control-1ea5da93" id="udcComFormTitle2_2" type="udc.com.udcComFormTitle">
+            <cl:formdata std:sid="f-data-7908fe2e" row="0" col="0"/>
+            <cl:property name="title" value="거래로그" type="string"/>
+          </cl:udc>
+          <cl:group std:sid="group-33511cde" id="grp7">
+            <cl:formdata std:sid="f-data-aeda4e73" row="0" col="1"/>
+            <cl:flowlayout std:sid="f-layout-97eddf35" scrollable="false" hspacing="6" vspacing="6" halign="right"/>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-c2298773" scrollable="false" hspace="8px" vspace="8px">
+            <cl:rows length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+            <cl:columns length="320" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:group std:sid="group-e36bec47" id="grpCustInfo" class="form">
+          <cl:attribute name="table-min-height" value=""/>
+          <cl:attribute name="mobile-column-count" value="1"/>
+          <cl:attribute name="tablet-column-count" value="2"/>
+          <cl:verticaldata std:sid="v-data-f50d5d24" width="1558px" height="298px" autosize="height"/>
+          <cl:output std:sid="output-7aa0a838" id="optJumin" class="label" value="클릭">
+            <cl:formdata std:sid="f-data-4dfcd57a" row="0" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-8fde3225" id="optClick" value="0">
+            <cl:formdata std:sid="f-data-e9adc824" row="0" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-d1907498" id="optJumin2" class="label" value="차단">
+            <cl:formdata std:sid="f-data-da257ed1" row="0" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-c92c7664" id="optBlock" class="text-point" value="0">
+            <cl:formdata std:sid="f-data-747b3033" row="0" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-1a8c4de0" id="optKorNm" class="label" value="전송">
+            <cl:formdata std:sid="f-data-1ad78c61" row="1" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-62413078" id="optSend" class="text-success" value="0">
+            <cl:formdata std:sid="f-data-2c288b8b" row="1" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-3305b319" id="optAge" class="label" value="처리 (개통 건수)">
+            <cl:formdata std:sid="f-data-c7e8aa4d" row="1" col="2"/>
+          </cl:output>
+          <cl:output std:sid="output-17ac6311" id="optProcess" class="text-primary" value="0">
+            <cl:formdata std:sid="f-data-7f2ce6fd" row="1" col="3"/>
+          </cl:output>
+          <cl:output std:sid="output-a0b3ab27" id="optKorNm3" class="label" value="거래 고유키">
+            <cl:formdata std:sid="f-data-fd777d23" row="2" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-55d5057e" id="optTranKey">
+            <cl:formdata std:sid="f-data-391c7fd4" row="2" col="1" rowspan="1" colspan="3"/>
+          </cl:output>
+          <cl:output std:sid="output-255cf2bb" id="optKorNm4" class="label" value="상태">
+            <cl:formdata std:sid="f-data-baf11c89" row="3" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-fb2bfb31" id="optStatus" class="fw-bold">
+            <cl:formdata std:sid="f-data-b56b7338" row="3" col="1" rowspan="1" colspan="3"/>
+          </cl:output>
+          <cl:output std:sid="output-ddcd14c2" id="optKorNm2" class="label" value="처리 로그 (최신순)">
+            <cl:formdata std:sid="f-data-ef21129e" row="4" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-813f58c6" id="optLog" value="Output">
+            <cl:formdata std:sid="f-data-dc2b958b" row="4" col="1" rowspan="1" colspan="3"/>
+          </cl:output>
+          <cl:formlayout std:sid="f-layout-ee007ac0" scrollable="false" hspace="16px" vspace="17px" top-margin="8px" right-margin="8px" bottom-margin="8px" left-margin="8px" hseparatorwidth="1" hseparatortype="BY_CLASS">
+            <cl:rows length="28" unit="PIXEL"/>
+            <cl:rows length="28" unit="PIXEL"/>
+            <cl:rows length="28" unit="PIXEL"/>
+            <cl:rows length="28" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="100" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+            <cl:columns length="180" unit="PIXEL" shadetype="BY_CLASS"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="180" unit="PIXEL" shadetype="BY_CLASS"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-b8746ada" spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-80916d4b" spacing="16" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-0ae29ebb" spacing="16" leftmargin="24" rightmargin="24" topmargin="16" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

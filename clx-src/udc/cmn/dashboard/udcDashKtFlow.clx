@@ -1,0 +1,119 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" version="1.0.6087">
+  <head>
+    <screen id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model/>
+    <cl:appspec title="개통 진행 현황"/>
+  </head>
+  <body style="top:0px; left:0px; width:640px; height:180px;">
+    <cl:attribute name="mobile-index" value="4"/>
+    <cl:attribute name="tablet-index" value="4"/>
+    <cl:group class="group border kt-portlet" clipcontent="false">
+      <cl:attribute name="needs-auto-height" value="true"/>
+      <cl:formdata row="0" col="0"/>
+      <cl:output class="tit-blue" value="개통 진행 현황">
+        <cl:formdata row="0" col="0"/>
+      </cl:output>
+      <cl:output class="kt-base" value="오늘 접수분 · 지연은 접수 후 2시간 초과">
+        <cl:formdata row="0" col="1"/>
+      </cl:output>
+      <cl:group class="kt-flow" clipcontent="false">
+        <cl:formdata row="1" col="0" rowspan="1" colspan="2"/>
+        <cl:group class="step">
+          <cl:formdata row="0" col="0"/>
+          <cl:output class="num" fieldLabel="접수" value="8">
+            <cl:formdata row="0" col="0"/>
+          </cl:output>
+          <cl:output class="lbl" value="접수">
+            <cl:formdata row="1" col="0"/>
+          </cl:output>
+          <cl:formlayout scrollable="false" hspace="0px" vspace="2px" top-margin="1fr" right-margin="0px" bottom-margin="1fr" left-margin="0px">
+            <cl:rows length="30" unit="PIXEL"/>
+            <cl:rows length="18" unit="PIXEL"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:group class="step">
+          <cl:formdata row="0" col="1"/>
+          <cl:output class="num" fieldLabel="서류심사" value="5">
+            <cl:formdata row="0" col="0"/>
+          </cl:output>
+          <cl:output class="lbl" value="서류심사">
+            <cl:formdata row="1" col="0"/>
+          </cl:output>
+          <cl:formlayout scrollable="false" hspace="0px" vspace="2px" top-margin="1fr" right-margin="0px" bottom-margin="1fr" left-margin="0px">
+            <cl:rows length="30" unit="PIXEL"/>
+            <cl:rows length="18" unit="PIXEL"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:group class="step">
+          <cl:formdata row="0" col="2"/>
+          <cl:output class="num" fieldLabel="개통처리" value="4">
+            <cl:formdata row="0" col="0"/>
+          </cl:output>
+          <cl:output class="lbl" value="개통처리">
+            <cl:formdata row="1" col="0"/>
+          </cl:output>
+          <cl:formlayout scrollable="false" hspace="0px" vspace="2px" top-margin="1fr" right-margin="0px" bottom-margin="1fr" left-margin="0px">
+            <cl:rows length="30" unit="PIXEL"/>
+            <cl:rows length="18" unit="PIXEL"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:group class="step done">
+          <cl:formdata row="0" col="3"/>
+          <cl:output class="num" fieldLabel="개통완료" value="23">
+            <cl:formdata row="0" col="0"/>
+          </cl:output>
+          <cl:output class="lbl" value="개통완료">
+            <cl:formdata row="1" col="0"/>
+          </cl:output>
+          <cl:formlayout scrollable="false" hspace="0px" vspace="2px" top-margin="1fr" right-margin="0px" bottom-margin="1fr" left-margin="0px">
+            <cl:rows length="30" unit="PIXEL"/>
+            <cl:rows length="18" unit="PIXEL"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:group class="step warn">
+          <cl:formdata row="0" col="4"/>
+          <cl:output class="num" fieldLabel="지연" value="3">
+            <cl:formdata row="0" col="0"/>
+          </cl:output>
+          <cl:output class="lbl" value="지연">
+            <cl:formdata row="1" col="0"/>
+          </cl:output>
+          <cl:formlayout scrollable="false" hspace="0px" vspace="2px" top-margin="1fr" right-margin="0px" bottom-margin="1fr" left-margin="0px">
+            <cl:rows length="30" unit="PIXEL"/>
+            <cl:rows length="18" unit="PIXEL"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:formlayout scrollable="false" hspace="20px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="1" unit="FRACTION" minlength="60"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:formlayout scrollable="false" hspace="8px" vspace="12px" top-margin="16px" right-margin="16px" bottom-margin="16px" left-margin="16px">
+        <cl:rows length="28" unit="PIXEL"/>
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="220" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:formlayout scrollable="true">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

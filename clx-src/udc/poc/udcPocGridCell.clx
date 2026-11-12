@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-af36135c" version="1.0.5346">
+  <head std:sid="head-14dd0a91">
+    <screen std:sid="screen-79ed432f" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-7e56f5c1" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-eba5a88e" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-db93f1d9"/>
+    <cl:appspec title="그리드 셀 다중 컨트롤(A38)">
+      <cl:property name="ctrlType" type="string" default="1" bindable="true" std:desc="1,2,3 => none&#xD;&#xA;4,6 => masknumber&#xD;&#xA;5 => combo">
+        <cl:available-value>none</cl:available-value>
+        <cl:available-value>masknumber</cl:available-value>
+        <cl:available-value>combo</cl:available-value>
+      </cl:property>
+      <cl:property name="cellValue" type="string" bindable="true"/>
+      <cl:property name="mask" type="string" default="s#,###" bindable="true"/>
+      <cl:property name="backgroundColor" type="string" bindable="true"/>
+      <cl:property name="cellText" type="string" bindable="true" std:desc="보여줄 displayText, 값 존재 시 cellValue 로 저장된다."/>
+      <cl:event name="amtValueChange" type="cpr.events.CValueChangeEvent" std:desc="가입담보 금액 입력시 발생한는 이벤트"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-3318ca1d" style="top:0px; left:0px; width:120px; height:31px;">
+    <cl:output std:sid="output-99fef2dc" id="opt" class="text-right font-nanum font-bold">
+      <cl:expbind property="visible" category="PROPERTY" expression="@changeControl(self)"/>
+      <cl:apppropbind property="value" category="PROPERTY" app-property="cellValue"/>
+      <cl:apppropbind property="background-color" category="STYLER" app-property="backgroundColor"/>
+      <cl:verticaldata std:sid="v-data-ff963d44" width="100%" height="100%"/>
+    </cl:output>
+    <cl:combobox std:sid="c-box-50ae3182" id="cmb1" class="text-right font-nanum font-bold">
+      <cl:expbind property="visible" category="PROPERTY" expression="@changeControl(self)"/>
+      <cl:apppropbind property="value" category="PROPERTY" app-property="cellValue"/>
+      <cl:apppropbind property="background-color" category="STYLER" app-property="backgroundColor"/>
+      <cl:verticaldata std:sid="v-data-2534d626" width="100%" height="100%"/>
+    </cl:combobox>
+    <cl:numbereditor std:sid="n-editor-b43979f1" id="nbe1" class="text-right font-nanum font-bold">
+      <cl:listener std:sid="listener-b9ba6cf7" name="value-change" handler="onNbe1ValueChange"/>
+      <cl:expbind property="visible" category="PROPERTY" expression="@changeControl(self)"/>
+      <cl:apppropbind property="value" category="PROPERTY" app-property="cellValue"/>
+      <cl:apppropbind property="format" category="PROPERTY" app-property="mask"/>
+      <cl:apppropbind property="background-color" category="STYLER" app-property="backgroundColor"/>
+      <cl:verticaldata std:sid="v-data-340ca86d" width="100%" height="100%"/>
+    </cl:numbereditor>
+    <cl:verticallayout std:sid="v-layout-38c57bf5" spacing="0"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

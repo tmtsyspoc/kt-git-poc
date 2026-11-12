@@ -1,0 +1,189 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-563d0a92" version="1.0.4034">
+  <head std:sid="head-1ccdf3b0">
+    <std:metadata>
+      <std:property key="template-file" value="templates/팝업/1.그리드/버티컬레이아웃/그리드_수정X.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-fcc3277c" id="EXB-POP[1024]" name="EXB-POP[1024]" width="1024px" height="576px" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-30178202" id="EXB-POP[800]" name="EXB-POP[800]" width="800px" height="480px" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-d6c700e4" id="EXB-POP[560]" name="EXB-POP[560]" width="560px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="768" customWidth="1024"/>
+    <screen std:sid="screen-8746554a" id="EXB-POP[480]" name="EXB-POP[480]" width="480px" height="320px" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-46b7ef7e">
+      <cl:dataset comment="프로세스 목록" std:sid="d-set-406d885d" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="" std:sid="d-column-9f37779a" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-82344c11" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn comment="" std:sid="d-column-7fe5300f" name="SUB_TITLE"/>
+          <cl:datacolumn comment="" std:sid="d-column-c68cb733" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-fa740970" name="CONT" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-c9d6a3d7" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-b4004ac2" name="SUB_CODE"/>
+          <cl:datacolumn comment="" std:sid="d-column-8d6dc077" name="TARGET_CTRL"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">지급이력정보 수정</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">1.</cl:datavalue>
+            <cl:datavalue columnname="CONT">지급이력정보를 수정한다.</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">지급이력정보 수정</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">2.</cl:datavalue>
+            <cl:datavalue columnname="CONT">수정내용을 확인한 후 입력 버튼을 클릭한다.</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">지급이력정보 수정</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">3.</cl:datavalue>
+            <cl:datavalue columnname="CONT">메인화면에서 변경된 지급이력정보를 확인한다.</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+      <cl:datamap std:sid="d-map-bba76bdf" id="DM_COUNSEL">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="고객번호" std:sid="d-column-a75ebf63" name="CUST_NO"/>
+          <cl:datacolumn comment="상담일시" std:sid="d-column-39158aa5" name="CONS_DT"/>
+          <cl:datacolumn comment="상담사" std:sid="d-column-1113643f" name="CONS_NM"/>
+          <cl:datacolumn comment="계약번호" std:sid="d-column-6560f9df" name="CON_NO"/>
+          <cl:datacolumn comment="인입전화번호" std:sid="d-column-29eda7a6" name="TEL"/>
+          <cl:datacolumn comment="상담유형" std:sid="d-column-fadaa035" name="CONS_TYPE"/>
+          <cl:datacolumn comment="상담상세내용" std:sid="d-column-8750dce5" name="CONS_DESC"/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+    </cl:model>
+    <cl:appspec title="콜센터상담이력상세"/>
+  </head>
+  <body std:sid="body-62411317" class="wrap pop" childcombinatorclass="v_base">
+    <cl:listener std:sid="listener-e653e397" name="load" handler="onBodyLoad"/>
+    <cl:udc std:sid="ud-control-8c71e0ab" id="udcComAppHeader" visible="false" type="udc.com.udcComAppHeader">
+      <cl:verticaldata std:sid="v-data-f7a86047" width="1090px" height="40px" autosize="height"/>
+      <cl:property name="title" value="상담이력정보" type="string"/>
+      <cl:property name="isViewPocProcess" value="false" type="boolean"/>
+    </cl:udc>
+    <cl:group std:sid="group-7a6573e6" id="grpData" class="conts-area">
+      <cl:verticaldata std:sid="v-data-6aba9d80" width="992px" height="422px" autosize="height"/>
+      <cl:group std:sid="group-6873da0f" class="conts-wrap">
+        <cl:verticaldata std:sid="v-data-aa653d30" width="992px" height="422px" autosize="height"/>
+        <cl:group std:sid="group-b33c3509" id="grp5" class="form">
+          <cl:attribute name="mobile-column-count" value="1"/>
+          <cl:attribute name="tablet-column-count" value="2"/>
+          <cl:verticaldata std:sid="v-data-a64e7d6e" width="976px" height="422px" autosize="height"/>
+          <cl:output std:sid="output-37256380" id="opt1" class="label required" value="상담일시">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="mobile-min-height" value="30"/>
+            <cl:formdata std:sid="f-data-fc2c4312" row="0" col="0"/>
+          </cl:output>
+          <cl:dateinput std:sid="d-input-4bbdc630" id="dti1" mask="YYYY.MM.DD HH:mm:ss" format="YYYY.MM.DD HH:mm:ss">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="mobile-min-height" value="30"/>
+            <cl:datamapbind property="value" datacontrolid="DM_COUNSEL" columnname="CONS_DT"/>
+            <cl:formdata std:sid="f-data-abcfa209" halign="LEFT" width="125" row="0" col="1"/>
+          </cl:dateinput>
+          <cl:output std:sid="output-29b00f26" id="opt3" class="label required" value="상담사">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="mobile-min-height" value="30"/>
+            <cl:formdata std:sid="f-data-d29d6036" row="1" col="0"/>
+          </cl:output>
+          <cl:inputbox std:sid="i-box-b202f370" id="ipb1">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="mobile-min-height" value="30"/>
+            <cl:datamapbind property="value" datacontrolid="DM_COUNSEL" columnname="CONS_NM"/>
+            <cl:formdata std:sid="f-data-e86a4a0e" row="1" col="1"/>
+          </cl:inputbox>
+          <cl:output std:sid="output-c45bc071" id="opt4" class="label required" value="계약번호">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="mobile-min-height" value="30"/>
+            <cl:formdata std:sid="f-data-b66c786f" row="2" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-3b31b384" id="opt2">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="mobile-min-height" value="30"/>
+            <cl:datamapbind property="value" datacontrolid="DM_COUNSEL" columnname="CON_NO"/>
+            <cl:formdata std:sid="f-data-1b3f86a0" row="2" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-28567e63" id="opt5" class="label required" value="인입전화번호">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="mobile-min-height" value="30"/>
+            <cl:formdata std:sid="f-data-68f73e20" row="3" col="0"/>
+          </cl:output>
+          <cl:inputbox std:sid="i-box-25987456" id="ipb2">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="mobile-min-height" value="30"/>
+            <cl:datamapbind property="value" datacontrolid="DM_COUNSEL" columnname="TEL"/>
+            <cl:formdata std:sid="f-data-0382c424" row="3" col="1"/>
+          </cl:inputbox>
+          <cl:output std:sid="output-834bfc83" id="opt6" class="label required" value="상담유형">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="mobile-min-height" value="30"/>
+            <cl:formdata std:sid="f-data-6b45f7c8" row="4" col="0"/>
+          </cl:output>
+          <cl:combobox std:sid="c-box-87b4bf49" id="cmb1" preventinput="true">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="mobile-min-height" value="30"/>
+            <cl:datamapbind property="value" datacontrolid="DM_COUNSEL" columnname="CONS_TYPE"/>
+            <cl:formdata std:sid="f-data-2011809f" row="4" col="1"/>
+            <cl:item std:sid="t-item-e261d27c" label="LMS문구문의" value="LMS문구문의"/>
+            <cl:item std:sid="t-item-20a9bc6d" label="결제금액문의" value="결제금액문의"/>
+            <cl:item std:sid="t-item-0c55dbe0" label="결제일문의" value="결제일문의"/>
+            <cl:item std:sid="t-item-f36f958b" label="계약문의" value="계약문의"/>
+            <cl:item std:sid="t-item-d60d3c75" label="고객정보변경" value="고객정보변경"/>
+            <cl:item std:sid="t-item-13885209" label="연락처변경" value="연락처변경"/>
+          </cl:combobox>
+          <cl:output std:sid="output-4417472d" id="opt7" class="label required" value="상담내용">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="mobile-min-height" value="30"/>
+            <cl:formdata std:sid="f-data-dd4201cb" row="5" col="0"/>
+          </cl:output>
+          <cl:textarea std:sid="t-area-6074a36f" id="txa1">
+            <cl:datamapbind property="value" datacontrolid="DM_COUNSEL" columnname="CONS_DESC"/>
+            <cl:formdata std:sid="f-data-a2fb8ded" row="5" col="1"/>
+          </cl:textarea>
+          <cl:formlayout std:sid="f-layout-6c333456" scrollable="false" hspace="16px" vspace="17px" top-margin="8px" right-margin="8px" bottom-margin="8px" left-margin="8px" hseparatorwidth="1" hseparatortype="BY_CLASS">
+            <cl:rows length="28" unit="PIXEL"/>
+            <cl:rows length="28" unit="PIXEL"/>
+            <cl:rows length="28" unit="PIXEL"/>
+            <cl:rows length="28" unit="PIXEL"/>
+            <cl:rows length="28" unit="PIXEL"/>
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="130" unit="PIXEL" autoSizing="true" shadetype="BY_CLASS" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-dc1a4a14" spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-5eeae614" spacing="16"/>
+    </cl:group>
+    <cl:group std:sid="group-79f9df6d" id="grpFooter" class="conts-footer">
+      <cl:verticaldata std:sid="v-data-4759e3bd" width="992px" height="52px" autosize="height"/>
+      <cl:group std:sid="group-f3d7a659">
+        <cl:verticaldata std:sid="v-data-fd26bbe0" width="1090px" height="28px" autosize="height"/>
+        <cl:button std:sid="button-e610e9e9" id="btn1" value="닫기">
+          <cl:listener std:sid="listener-cf366de5" name="click" handler="onButtonClick2"/>
+          <cl:flowlayoutdata std:sid="f-data-b4ec3581" width="74px" height="28px" autosize="width"/>
+        </cl:button>
+        <cl:button std:sid="button-c4f815fe" id="btn2" class="primary" value="입력">
+          <cl:listener std:sid="listener-686b8fa3" name="click" handler="onButtonClick"/>
+          <cl:flowlayoutdata std:sid="f-data-1c88303c" width="74px" height="28px" autosize="width"/>
+        </cl:button>
+        <cl:flowlayout std:sid="f-layout-1364edba" scrollable="false" hspacing="4" vspacing="4" halign="right"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-d440e9fb" spacing="0"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-3d7eb0da" spacing="12" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-8a61b2ff" version="1.0.6059">
+  <head std:sid="head-5d9f77e2">
+    <screen std:sid="screen-64a8d290" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-269ca06f" id="tablet" name="tablet" width="1024px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-39b7d7a6" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-e8ebf831"/>
+    <cl:appspec title="검색영역 토글버튼"/>
+  </head>
+  <body std:sid="body-2009525b" style="top:0px; left:0px; width:100px; height:28px;" class="search-toggle">
+    <cl:listener std:sid="listener-dd63393a" name="load" handler="onBodyLoad"/>
+    <cl:button std:sid="button-09720722" class="tertiary" value="상세검색" icon="0">
+      <cl:listener std:sid="listener-80207195" name="click" handler="onButtonClick"/>
+      <cl:verticaldata std:sid="v-data-14a356a9" width="100px" height="28px" autosize="width"/>
+      <cl:iconstyle class="ico-double-down"/>
+    </cl:button>
+    <cl:verticallayout std:sid="v-layout-f6183e94"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

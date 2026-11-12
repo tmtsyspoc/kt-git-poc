@@ -1,0 +1,28 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-2fbc8733" version="1.0.5739">
+  <head std:sid="head-3b3fc8b3">
+    <screen std:sid="screen-c0f6e747" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-7f04b8fc" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-c9f4dfb7" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-b3caf8fa"/>
+    <cl:appspec title="워크플로우 버튼 동적 생성">
+      <cl:property name="dataSet" type="control" std:desc="[Dataset] 워크플로우 데이터셋&#xD;&#xA;&#xD;&#xA;※ 필요 컬럼 정보&#xD;&#xA;- index : 프로세스 등록 순서&#xD;&#xA;- title : 프로세스명&#xD;&#xA;- src&#xA; : 연결할 화면ID&#xD;&#xA;- useYN : 프로세스 사용 여부"/>
+      <cl:property name="embId" type="string" default="embapp1" std:desc="[String] 워크플로우 실행 시 화면을 표시할 타겟 임베디드앱 ID"/>
+      <cl:event name="proccess-click" type="cpr.events.CUIEvent"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-dfa9f9c2" style="top:0px; left:0px; width:1024px; height:110px;">
+    <cl:listener std:sid="listener-fdb92b59" name="property-change" handler="onBodyPropertyChange"/>
+    <cl:output std:sid="output-e8671ae8" id="opt1" class="text-center fw-bold text-xl" removeOnBuild="true" value="워크플로우">
+      <cl:formdata std:sid="f-data-fa811f21" row="0" col="0"/>
+    </cl:output>
+    <cl:formlayout std:sid="f-layout-24b49d97" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="8px" left-margin="0px">
+      <cl:rows length="1" unit="FRACTION" autoSizing="true" hidden="false" syncminlength="false"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

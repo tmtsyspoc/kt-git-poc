@@ -1,0 +1,51 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-90a2a2e1" version="1.0.5186">
+  <head std:sid="head-7e0337a0">
+    <screen std:sid="screen-7653a0ad" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-f5d0615a" id="tablet" name="tablet" width="1024px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-9c37de50" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-11d916bb"/>
+    <cl:appspec title="폼 타이틀">
+      <cl:property name="title" type="string" default="제목없음" bindable="true" std:desc="[String] 제목 (default: 제목없음)&#xD;&#xA;&#xD;&#xA;ctrl 속성이 지정된 경우, ctrl 컨트롤의 fieldLabel 이 title 로 대체됩니다."/>
+      <cl:property name="ctrl" type="control"/>
+      <cl:property name="typeClass" type="enumeration" default="main">
+        <cl:available-value>main</cl:available-value>
+        <cl:available-value>sub</cl:available-value>
+      </cl:property>
+      <cl:property name="visibleToggleGrp" type="boolean" default="false" std:desc="[Boolean] 아래 컨트롤 토글 (default: true)"/>
+      <cl:property name="visiblePopGrp" type="boolean" default="true" std:desc="[Boolean] 아래 컨트롤 확장/축소 (default: true)"/>
+      <cl:property name="required" type="boolean" default="false" bindable="true" std:desc="[Boolean] 필수 스타일 지정 여부"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-b957a544" style="top:0px; left:0px; width:900px; height:28px;" class="title-area">
+    <cl:listener std:sid="listener-03775f93" name="load" handler="onBodyLoad"/>
+    <cl:listener std:sid="listener-41fe383c" name="property-change" handler="onBodyPropertyChange"/>
+    <cl:output std:sid="output-7a846500" id="optTitle" class="tit" value="폼 타이틀">
+      <cl:apppropbind property="value" app-property="title"/>
+      <cl:formdata std:sid="f-data-90383c3c" row="0" col="0"/>
+    </cl:output>
+    <cl:group std:sid="group-2ff2f3f7">
+      <cl:formdata std:sid="f-data-3f41fe70" row="0" col="1"/>
+      <cl:button std:sid="button-af86560b" id="btn1" class="tertiary btn-eye" tooltip="아래 컨트롤 토글" icon="0">
+        <cl:listener std:sid="listener-e09e58d5" name="click" handler="onBtn1Click"/>
+        <cl:apppropbind property="visible" category="PROPERTY" app-property="visibleToggleGrp"/>
+        <cl:flowlayoutdata std:sid="f-data-ab8a8175" width="24px" height="24px" autosize="none"/>
+      </cl:button>
+      <cl:button std:sid="button-5468e20a" id="btn2" class="tertiary btn-goto" tooltip="아래 컨트롤 확대/축소" icon="0">
+        <cl:listener std:sid="listener-e53b97a7" name="click" handler="onBtn2Click"/>
+        <cl:apppropbind property="visible" category="PROPERTY" app-property="visiblePopGrp"/>
+        <cl:flowlayoutdata std:sid="f-data-71708bc6" width="24px" height="24px" autosize="none"/>
+      </cl:button>
+      <cl:flowlayout std:sid="f-layout-eb8c9342"/>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-7215cb42" scrollable="false" hspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="260" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

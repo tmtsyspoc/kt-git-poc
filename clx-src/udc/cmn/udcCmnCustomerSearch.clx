@@ -1,0 +1,48 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-3ebb14f6" version="1.0.4221">
+  <head std:sid="head-2b8cc41c">
+    <screen std:sid="screen-2896bfee" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-c950eaa7" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-0e65a141" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="375"/>
+    <cl:model std:sid="model-f3897586"/>
+    <cl:appspec dev-comment="// 팝업 화면 존재 x" dev-description="고객검색 팝업을 호출하는 컴포넌트 입니다." title="고객검색 컴포넌트">
+      <cl:property name="CS_NAM" type="string" bindable="true" std:desc="[String] 고객명"/>
+      <cl:property name="RRN" type="number" bindable="true" std:desc="[Number] 주민등록번호"/>
+      <cl:property name="GNDR_SECD" type="string" bindable="true" std:desc="[String] 성별"/>
+      <cl:property name="PRCMPAG" type="number" bindable="true" std:desc="[Number] 나이"/>
+      <cl:property name="RGDT" type="string" bindable="true" std:desc="[String] 상령일(등록일자)"/>
+      <cl:property name="CPNM" type="string" bindable="true" std:desc="[String] 직업"/>
+      <cl:property name="DRVG_SENM" type="string" bindable="true" std:desc="[String] 운전"/>
+      <cl:event name="customer-value-change" type="cpr.events.CValueChangeEvent" std:desc="[고객검색 컴포넌트]에서 고객정보 변경 후 발생하는 이벤트"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-5cda2741" style="top:0px; left:0px; width:253px; height:28px;" class="cust-search">
+    <cl:inputbox comment="고객명" std:sid="i-box-4518e705" id="ipbCsNam" fieldLabel="고객명">
+      <cl:listener std:sid="listener-e1eea1f0" name="keyup" handler="onIpbCustomerNmKeyup"/>
+      <cl:listener std:sid="listener-cd1414c7" name="clear" handler="onIpbCustomerNmClear"/>
+      <cl:listener std:sid="listener-c3b3fc38" name="value-change" handler="onIpbCustomerNmValueChange"/>
+      <cl:apppropbind property="value" app-property="CS_NAM"/>
+      <cl:formdata std:sid="f-data-2b2ccb80" row="0" col="0"/>
+    </cl:inputbox>
+    <cl:button comment="고객검색버튼" std:sid="button-fb2f2bf9" id="btnSearch" style="padding-left:0px; padding-right:0px;" class="btn-search-secondary icon border" fieldLabel="고객검색" value="" icon="0">
+      <cl:listener std:sid="listener-de9055f7" name="click" handler="onBtnSearchClick"/>
+      <cl:formdata std:sid="f-data-377bb955" row="0" col="1"/>
+    </cl:button>
+    <cl:maskeditor comment="주민등록번호" std:sid="m-editor-44544ff9" id="mseRrn" style="font-size:13px;" class="text-center" fieldLabel="주민등록번호" enabled="false" mask="000000-0******" showclearbutton="false">
+      <cl:apppropbind property="value" app-property="RRN"/>
+      <cl:formdata std:sid="f-data-fe2df9c4" row="0" col="2"/>
+    </cl:maskeditor>
+    <cl:formlayout std:sid="f-layout-eb2817a3">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="87" unit="PIXEL"/>
+      <cl:columns length="28" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+      <cl:columns length="130" unit="PIXEL"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler>
+      <std:guide position="253"/>
+    </std:hruler>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

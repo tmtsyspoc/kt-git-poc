@@ -1,0 +1,36 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-a2b58106" version="1.0.6087">
+  <head std:sid="head-c65ec709">
+    <screen std:sid="screen-257b3f3a" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-5cd11f32" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-34eff7f8" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-229c62df"/>
+    <cl:appspec title="From-To 날짜 입력">
+      <cl:property name="fromDate" type="string" bindable="true"/>
+      <cl:property name="toDate" type="string" bindable="true"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-da7aec52" style="top:0px; left:0px; width:300px; height:30px;">
+    <cl:dateinput std:sid="d-input-4ca22ea6" id="dtiFrom">
+      <cl:apppropbind property="value" app-property="fromDate"/>
+      <cl:formdata std:sid="f-data-c1748cf3" row="0" col="0"/>
+    </cl:dateinput>
+    <cl:output std:sid="output-91bc6011" value="~">
+      <cl:formdata std:sid="f-data-497908b8" row="0" col="1"/>
+    </cl:output>
+    <cl:dateinput std:sid="d-input-607d2386" id="dtiTo">
+      <cl:apppropbind property="value" app-property="toDate"/>
+      <cl:formdata std:sid="f-data-7e2e86ce" row="0" col="2"/>
+    </cl:dateinput>
+    <cl:formlayout std:sid="f-layout-a2256d82" scrollable="false" hspace="4px" vspace="4px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+      <cl:columns length="10" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

@@ -1,0 +1,32 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-14fc1a38" version="1.0.6087">
+  <head std:sid="head-55bfb458">
+    <screen std:sid="screen-2509f359" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-2ad8c155" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-8c93fae6" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-d3e8ab83"/>
+    <cl:appspec title="시군구">
+      <cl:property name="code" type="string" std:desc="시군구 코드"/>
+      <cl:property name="sigunguNm" type="string" std:desc="시군구명"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-28f36c09" style="top:0px; left:0px; width:300px; height:28px;">
+    <cl:inputbox std:sid="i-box-30a1d85f">
+      <cl:apppropbind property="value" app-property="code"/>
+      <cl:formdata std:sid="f-data-b772e760" row="0" col="0"/>
+    </cl:inputbox>
+    <cl:inputbox std:sid="i-box-85be830c">
+      <cl:apppropbind property="value" app-property="sigunguNm"/>
+      <cl:formdata std:sid="f-data-6417935d" row="0" col="1"/>
+    </cl:inputbox>
+    <cl:formlayout std:sid="f-layout-f3856d70" scrollable="false">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="70" unit="PIXEL" autoSizing="true"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

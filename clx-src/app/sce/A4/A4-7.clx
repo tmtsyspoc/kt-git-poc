@@ -1,0 +1,1496 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-e427d551" version="1.0.3545">
+  <head std:sid="head-bc30000a">
+    <screen std:sid="screen-3749befc" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="true" useCustomHeight="true" customHeight="646" customWidth="1607" active="true"/>
+    <screen std:sid="screen-ffaab53d" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="false"/>
+    <screen std:sid="screen-0d4762ef" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-d8305ae6">
+      <cl:dataset comment="프로세스 목록" std:sid="d-set-ef6e9f6d" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="" std:sid="d-column-c812ca4f" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-3e5eca5d" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn comment="" std:sid="d-column-a9d0314b" name="SUB_TITLE"/>
+          <cl:datacolumn comment="" std:sid="d-column-68dec1a3" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-43742f6e" name="CONT" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-96c2f4ad" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-8498462a" name="SUB_CODE"/>
+          <cl:datacolumn comment="" std:sid="d-column-421ae73f" name="TARGET_CTRL"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">○</cl:datavalue>
+            <cl:datavalue columnname="CONT">목적</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL">　</cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[대용량 데이터 로딩시(48개 컬럼, 10만건) 빠른 성능 및 패킷을 절감하여 서버 부하를 줄이며 , GRID 에서 대용량 데이터를 원할히 조작 할 수 있어야 한다 .]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[48개 컬럼,10만건]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL">　</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">○</cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[화면 요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL">　</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[1. 최대 10만건에 해당하는 데이터가 그리드에 표시되어야 한다. (페이지 처리 없이)]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[10만건]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL">　</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[2. 각 명칭 및 중공종 같은 구분값으로 소계와 전체 합계가 계산되어서 표시되어야 한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[소계,합계]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[3. 엑셀파일을 통한 업로드 및 다운로드가 가능해야 한다. (10만건, 진행도 표시, 시스템 중지 없이)]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[진행도 표시]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[업로드,다운로드]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[4. 금액 및 선택값이 수정되어야 하고, 실시간으로 소계, 합계 금액에 반영되어야 한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[수정,반영]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[금액,소계,합계]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL">　</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[측정]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[검증 화면을 실행한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[처리 시간을 확인한다.]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[10만건 데이터를 조회한다.\n(적용기술 : TSV 응답처리)]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[10만건]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[nbe3,btn1]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[공통코드 적용 컬럼 ⇒ 집행비목코드, 수량통제여부, 진행대상원가여부, 비목코드, 연면적여부]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[중공종, 공종 컬럼으로 구분된 실행예산 컬럼에서 각각 소계와 합계가 표시되는 것을 확인한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[소계,합계]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[중공종,공종,실행예산]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[grdList]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[엑셀 다운로드를 진행 및 프로그레스바를 통한 진행도를 확인한다.\n(적용기술 : 웹워커)]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[다운로드]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[udcComGridTitle1]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[엑셀 업로드를 진행한다.\n(적용기술 : SAX Parser 핸들러)]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[업로드]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[fit1]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[각 단가 컬럼을 수정했을 때, 금액 및 소계, 합계 값이 실시간 반영되는지 확인한다.]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[금액,소계,합계,반영]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[fit1]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[단가]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">적용기술</cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"/>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">○</cl:datavalue>
+            <cl:datavalue columnname="CONT"> 대용량 데이터 조회</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">적용기술</cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"/>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">TSV(text/tab-separated-values) 응답 처리</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE">TSV</cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">적용기술</cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"/>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER"/>
+            <cl:datavalue columnname="CONT">JSON,XML과 같은 데이터 통신보다 용량이 작으며, 로우 단위로 Streaming형식으로 분할된 데이터를 전송하는 대용량 데이터 통신 프로토콜</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">Streaming형식,분할</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">적용기술</cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"/>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">○</cl:datavalue>
+            <cl:datavalue columnname="CONT">IMPORT</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">적용기술</cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"/>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">SAX Parser 핸들러</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE">SAX Parser 핸들러</cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">적용기술</cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"/>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER"/>
+            <cl:datavalue columnname="CONT">압축된 OOXML형식의 엑셀을 메모리에 등록 후 순차적으로 데이터를 읽고, 읽은 데이터는 버퍼에서 flush하는 방식으로 대용량 엑셀 처리에 적합</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">압축된 OOXML형식</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">적용기술</cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"/>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">○</cl:datavalue>
+            <cl:datavalue columnname="CONT">EXPORT</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">적용기술</cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"/>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">웹워커</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE">웹워커</cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">적용기술</cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"/>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER"/>
+            <cl:datavalue columnname="CONT">스크립트 연산을 웹 어플리케이션의 주 실행 스레드와 분리된 별도의 백그라운드 스레드에서 실행할 수 있는 기술</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">별도의 백그라운드 스레드에서 실행할 수 있는 기술</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">적용기술</cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"/>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER"/>
+            <cl:datavalue columnname="CONT">웹 워커를 통해 무거운 작업을 분리된 스레드에서 처리하면 주 스레드(보통 UI 스레드)가 멈추거나 느려지지 않고 동작 가능</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">적용기술</cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"/>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER"/>
+            <cl:datavalue columnname="CONT">웹워커 통해 export를 위한 전체 데이터를 가공하지 않고, 별도의 멀티 스레드로 순차적으로 스트림하게 데이트를 가공하여 엑셀을 생성함으로 메모리 오버플로우 방지 및 안정성 제공</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">멀티 스레드로 순차적으로 스트림하게 데이트를 가공</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+      <cl:dataset std:sid="d-set-b961393e" id="dsList" info="PRJCT_CD, UP_CNSTKND_CD, CNSTKND_ID, CBGT_DTLS_ID">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="현장코드" std:sid="d-column-e07bbcf6" name="PRJCT_CD" datatype="string"/>
+          <cl:datacolumn comment="중공종 코드" std:sid="d-column-06f9c837" name="UP_CNSTKND_CD" datatype="string"/>
+          <cl:datacolumn comment="중공종" std:sid="d-column-f1f87593" name="UP_CNSTKND_NM" datatype="string"/>
+          <cl:datacolumn comment="공종코드" std:sid="d-column-af59f40d" name="CNSTKND_ID" datatype="string"/>
+          <cl:datacolumn comment="공종" std:sid="d-column-a459b9f2" name="CNSTKND_NM" datatype="string"/>
+          <cl:datacolumn comment="명칭 ID" std:sid="d-column-e4458f35" name="CBGT_DTLS_ID" datatype="string"/>
+          <cl:datacolumn comment="명칭" std:sid="d-column-c5531cec" name="DTLSNM" datatype="string"/>
+          <cl:datacolumn comment="규격" std:sid="d-column-408a66f1" name="DTLS_SIZ" datatype="string"/>
+          <cl:datacolumn comment="단위" std:sid="d-column-4cd5890e" name="DTLS_UNIT_NM" datatype="string"/>
+          <cl:datacolumn comment="실행수량" std:sid="d-column-12d3b08f" name="CBGT_QTY" datatype="decimal"/>
+          <cl:datacolumn comment="실행단가" std:sid="d-column-30a36e74" name="CBGT_UNTPRC" datatype="decimal"/>
+          <cl:datacolumn comment="실행금액" std:sid="d-column-050254c6" name="CBGT_AMT" datatype="decimal"/>
+          <cl:datacolumn comment="실행재료단가" std:sid="d-column-690df73c" name="CBGT_MAT_UNTPRC" datatype="decimal"/>
+          <cl:datacolumn comment="실행재료금액" std:sid="d-column-c4114d4b" name="CBGT_MAT_AMT" datatype="decimal"/>
+          <cl:datacolumn comment="실행노무단가" std:sid="d-column-3ba867bb" name="CBGT_LAB_UNTPRC" datatype="decimal"/>
+          <cl:datacolumn comment="실행노무금액" std:sid="d-column-e6840915" name="CBGT_LAB_AMT" datatype="decimal"/>
+          <cl:datacolumn comment="실행외주재료단가" std:sid="d-column-da882a91" name="CBGT_OSORDR_MAT_UNTPRC" datatype="decimal"/>
+          <cl:datacolumn comment="실행외주재료금액" std:sid="d-column-311425f1" name="CBGT_OSORDR_MAT_AMT" datatype="decimal"/>
+          <cl:datacolumn comment="실행외주노무단가" std:sid="d-column-efcef649" name="CBGT_OSORDR_LAB_UNTPRC" datatype="decimal"/>
+          <cl:datacolumn comment="실행외주노무금액" std:sid="d-column-ef0e5250" name="CBGT_OSORDR_LAB_AMT" datatype="decimal"/>
+          <cl:datacolumn comment="실행외주경비단가" std:sid="d-column-6b784938" name="CBGT_OSORDR_EXPN_UNTPRC" datatype="decimal"/>
+          <cl:datacolumn comment="실행외주경비금액" std:sid="d-column-5e78e871" name="CBGT_OSORDR_EXPN_AMT" datatype="decimal"/>
+          <cl:datacolumn comment="실행외주단가" std:sid="d-column-fe03f9ab" name="CBGT_OSORDR_UNTPRC" datatype="decimal"/>
+          <cl:datacolumn comment="실행외주금액" std:sid="d-column-d3955c5b" name="CBGT_OSORDR_AMT" datatype="decimal"/>
+          <cl:datacolumn comment="실행경비단가" std:sid="d-column-dd791ba8" name="CBGT_EXPN_UNTPRC" datatype="decimal"/>
+          <cl:datacolumn comment="실행경비금액" std:sid="d-column-fc3df843" name="CBGT_EXPN_AMT" datatype="decimal"/>
+          <cl:datacolumn comment="집행비목코드" std:sid="d-column-57dbd2cf" name="ENFCM_EXPNDITM_CD" datatype="string"/>
+          <cl:datacolumn comment="집행불가여부" std:sid="d-column-ae102f4e" name="ENFCM_IMPSBL_YN" datatype="string"/>
+          <cl:datacolumn comment="통제여부" std:sid="d-column-15df1e19" name="CNTRL_YN" datatype="string"/>
+          <cl:datacolumn comment="자재코드" std:sid="d-column-95c014d0" name="MAT_CD" datatype="string"/>
+          <cl:datacolumn comment="선시공여부" std:sid="d-column-b7d31491" name="LN_CNST_YN" datatype="string"/>
+          <cl:datacolumn comment="WBS코드" std:sid="d-column-4018d679" name="WBS_CD" datatype="string"/>
+          <cl:datacolumn comment="표준코드" std:sid="d-column-cea6b533" name="STND_CD" datatype="string"/>
+          <cl:datacolumn comment="진행대상원가여부" std:sid="d-column-98708210" name="PRGSS_TRGT_PRMCT_YN" datatype="string"/>
+          <cl:datacolumn comment="수량통제여부" std:sid="d-column-d4912995" name="QTY_CNTRL_YN" datatype="string"/>
+          <cl:datacolumn comment="직접공사비여부" std:sid="d-column-5eb973a8" name="DIRECT_CNSTCT_YN" datatype="string"/>
+          <cl:datacolumn comment="비고" std:sid="d-column-76c47a09" name="RMK" datatype="string"/>
+          <cl:datacolumn comment="구분코드" std:sid="d-column-97329773" name="GB_CD" datatype="string"/>
+          <cl:datacolumn comment="정렬순서" std:sid="d-column-904f0356" name="SORT_SERL" datatype="string"/>
+          <cl:datacolumn comment="본실행내역ID" std:sid="d-column-20e0c2a7" name="RLACT_DTLS_ID" datatype="string"/>
+          <cl:datacolumn comment="계정코드" std:sid="d-column-5d99d145" name="ACCTCD" datatype="string"/>
+          <cl:datacolumn comment="비목코드" std:sid="d-column-06c8d905" name="EXPND_ITM_CD" datatype="string"/>
+          <cl:datacolumn comment="연면적여부" std:sid="d-column-9d11267f" name="GAREA_YN" datatype="string"/>
+          <cl:datacolumn comment="시설명" std:sid="d-column-289cd108" name="FCLTY_NM" datatype="string"/>
+          <cl:datacolumn comment="실행외주단가합계" std:sid="d-column-972f9e03" name="CBGT_OSORDR_UNTPRC_SUM" datatype="decimal"/>
+          <cl:datacolumn comment="실행외주금액합계" std:sid="d-column-10156526" name="CBGT_OSORDR_AMT_SUM" datatype="decimal"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+      <cl:dataset std:sid="d-set-655cae81" id="dsEbEnfCd">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-e4bdce2b" name="label"/>
+          <cl:datacolumn std:sid="d-column-c01e75ab" name="value"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="label"><![CDATA[외주비]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[03]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label"><![CDATA[재료비]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[01]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label"><![CDATA[경비]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[04]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label"><![CDATA[노무비]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[02]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label"><![CDATA[본사공사비]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[06]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label"><![CDATA[소송판결금]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[05]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+      <cl:dataset std:sid="d-set-1d137820" id="dsEbExpCd">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-2a254f6a" name="label"/>
+          <cl:datacolumn std:sid="d-column-096f29e0" name="value"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="label"><![CDATA[경비성항목]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[01]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label"><![CDATA[사후관리비(경비성항목)]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[04]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label"><![CDATA[사후관리비(현장관리비)]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[05]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label"><![CDATA[현장관리비]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[02]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+      <cl:dataset std:sid="d-set-6b87064d" id="dsEbPrgCd">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-07a10c60" name="label"/>
+          <cl:datacolumn std:sid="d-column-47dd7c23" name="value"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="label"><![CDATA[용지비]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[5]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label"><![CDATA[미설치설비]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[7]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label"><![CDATA[진행대상]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[1]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label"><![CDATA[하자보수비]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[2]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label"><![CDATA[대금이자]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[3]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label"><![CDATA[제외기타]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[4]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+      <cl:dataset std:sid="d-set-8446a4bb" id="dsYn">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-2e3d63d3" name="label"/>
+          <cl:datacolumn std:sid="d-column-c95d34b3" name="value"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="label"><![CDATA[Y]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[1]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[0]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+      <cl:datamap std:sid="d-map-f01e3b61" id="dmParam">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-6744f5f5" name="ROWCOUNT" defaultvalue="10000"/>
+          <cl:datacolumn std:sid="d-column-6acacbae" name="progressId"/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+      <cl:datamap std:sid="d-map-79fd4204" id="dmResCnt">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-f90eb258" name="totRowCnt"/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+      <cl:submission std:sid="submission-425cdb5f" id="subMassiveList" action="/LDQ/LdqList.do" mediatype="application/json" fallbackContentType="text/tab-separated-values">
+        <cl:listener std:sid="listener-410caf1a" name="submit-load-progress" handler="onSubMassiveListSubmitLoadProgress"/>
+        <cl:listener std:sid="listener-369aecac" name="submit-error" handler="onSubMassiveListSubmitError"/>
+        <cl:listener std:sid="listener-914a15e9" name="submit-success" handler="onSubMassiveListSubmitSuccess"/>
+        <cl:requestdata dataid="dmParam"/>
+        <cl:responsedata dataid="dsList"/>
+      </cl:submission>
+      <cl:submission std:sid="submission-2ffbe639" id="fetch_progress" action="/LDQ/progress.do">
+        <cl:listener std:sid="listener-fc3bd2f9" name="submit-done" handler="onFetch_progressSubmitDone"/>
+      </cl:submission>
+      <cl:submission std:sid="submission-6991e28d" id="subUpload" action="/LDQ/LdqImportCsv.do" mediatype="multipart/form-data" fallbackContentType="text/tab-separated-values">
+        <cl:listener std:sid="listener-16139227" name="submit-progress" handler="onSubUploadSubmitProgress"/>
+        <cl:responsedata dataid="dsList"/>
+      </cl:submission>
+      <cl:submission std:sid="submission-b5e91f52" id="fetch_progress_data_read" action="/LDQ/progressDataRead.do">
+        <cl:listener std:sid="listener-f2763193" name="submit-done" handler="onFetch_progress_data_readSubmitDone"/>
+      </cl:submission>
+      <cl:submission std:sid="submission-02e2ac95" id="subCountList" action="/LDQ/selectCount.do" mediatype="application/json" fallbackContentType="text/tab-separated-values">
+        <cl:requestdata dataid="dmParam"/>
+        <cl:responsedata dataid="dmResCnt"/>
+      </cl:submission>
+      <cl:submission std:sid="submission-9cf0ca4c" id="subTsv">
+        <cl:listener std:sid="listener-aa78b883" name="submit-load-progress" handler="onSubTsvSubmitLoadProgress"/>
+        <cl:responsedata dataid="dsList"/>
+      </cl:submission>
+    </cl:model>
+    <cl:appspec dev-comment="templates/테스트케이스/테스트케이스_조회.clx 템플릿 사용하여 작성 함." title="대용량 엑셀 그룹푸터 export"/>
+  </head>
+  <body std:sid="body-4579b91c" class="wrap">
+    <cl:listener std:sid="listener-70c2b482" name="load" handler="onBodyLoad"/>
+    <cl:udc std:sid="ud-control-d73ab6f7" id="udcComAppHeader" type="udc.com.udcComAppHeader">
+      <cl:formdata std:sid="f-data-942cdb6e" row="0" col="0"/>
+      <cl:property name="title" value="대용량데이터" type="string"/>
+      <cl:property name="isExpandAllPocProcess" value="false" type="boolean"/>
+      <cl:property name="isViewPocProcess" value="false" type="boolean"/>
+      <cl:property name="isGridInit" value="true" type="boolean"/>
+    </cl:udc>
+    <cl:group std:sid="group-47cbd26e" id="grpSearch" class="sch-filter-box">
+      <std:metadata>
+        <std:property key="template-uuid" value="404fef9b-cce1-40f2-a90d-e84adc7cdce6"/>
+        <std:property key="template-rev" value="1"/>
+      </std:metadata>
+      <cl:attribute name="mobile-column-count" value="1"/>
+      <cl:formdata std:sid="f-data-e022f60e" width="107" height="86" row="1" col="0"/>
+      <cl:group std:sid="group-92db3248" id="grp4">
+        <cl:attribute name="mobile-column-count" value="2"/>
+        <cl:attribute name="tablet-column-count" value="2"/>
+        <cl:attribute name="needs-auto-height" value="true"/>
+        <cl:formdata std:sid="f-data-c733646b" width="107" height="-11" row="0" col="0"/>
+        <cl:output std:sid="output-707e9abe" id="opt55" class="label" value="프로젝트">
+          <cl:formdata std:sid="f-data-c53ae343" row="0" col="0"/>
+        </cl:output>
+        <cl:combobox std:sid="c-box-b136a8de" id="cmb6">
+          <cl:formdata std:sid="f-data-8b99b85f" row="0" col="1"/>
+          <cl:item std:sid="t-item-19397b49" label="CTA0001" value="CTA0001"/>
+        </cl:combobox>
+        <cl:output std:sid="output-96607bd5" id="opt6" class="label" value="데이터 수 체크">
+          <cl:formdata std:sid="f-data-9b076da7" row="0" col="2"/>
+        </cl:output>
+        <cl:group std:sid="group-8c2051f5" id="grpCount">
+          <cl:listener std:sid="listener-f0a9c529" name="keydown" handler="onGrpCountKeydown"/>
+          <cl:formdata std:sid="f-data-bc4f38a9" row="0" col="3"/>
+          <cl:numbereditor std:sid="n-editor-42121725" id="nbe3">
+            <cl:datamapbind property="value" datacontrolid="dmParam" columnname="ROWCOUNT"/>
+            <cl:formdata std:sid="f-data-65c55aa0" row="0" col="0"/>
+          </cl:numbereditor>
+          <cl:combobox std:sid="c-box-aa203630" id="cmb1" value="100000">
+            <cl:formdata std:sid="f-data-f7e1faea" row="0" col="1"/>
+            <cl:item std:sid="t-item-0e1ba905" label="100,000" value="/ui/app/sce/A4/data/A4-7_100000.tsv"/>
+          </cl:combobox>
+          <cl:formlayout std:sid="f-layout-3ab98e0f" scrollable="false" hspace="4px" vspace="0px">
+            <cl:rows length="1" unit="FRACTION" autoSizing="true" shadecolor="transparent"/>
+            <cl:columns length="1" unit="FRACTION" autoSizing="true" hidden="true" minlength="0" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION" autoSizing="true" hidden="false" minlength="0" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:output std:sid="output-59595705" id="opt218" class="label" value="업로드 파일선택">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:formdata std:sid="f-data-31340ff5" row="0" col="4"/>
+        </cl:output>
+        <cl:fileinput std:sid="f-input-34352f09" id="fit1" fieldLabel="업로드 파일" acceptfile=".xlsx">
+          <cl:listener std:sid="listener-13b2bfe6" name="value-change" handler="onFit1ValueChange"/>
+          <cl:attribute name="required" value=""/>
+          <cl:expbind property="tooltip" category="PROPERTY" expression="value"/>
+          <cl:formdata std:sid="f-data-bae3400d" row="0" col="5"/>
+        </cl:fileinput>
+        <cl:group std:sid="group-7193c6b9" id="grp6">
+          <cl:formdata std:sid="f-data-e2e72a77" row="1" col="0" rowspan="1" colspan="7"/>
+          <cl:radiobutton std:sid="r-button-c2ff1b55" id="rdb2" visible="false" value="server">
+            <cl:formdata std:sid="f-data-80a0eaeb" row="0" col="0"/>
+            <cl:item std:sid="item-0ec2e12f" label="Server" value="server"/>
+            <cl:item std:sid="item-bf735eeb" label="Client" value="client"/>
+          </cl:radiobutton>
+          <cl:checkbox std:sid="c-box-772edd75" id="cbxInsert" visible="false" value="N" text="테이블 insert 여부">
+            <cl:formdata std:sid="f-data-78dd3e75" row="0" col="1"/>
+          </cl:checkbox>
+          <cl:output std:sid="output-b05649d4" id="opt2" class="label" value="응답타입">
+            <cl:formdata std:sid="f-data-05cf2d3c" row="0" col="2"/>
+          </cl:output>
+          <cl:radiobutton std:sid="r-button-dea4c10b" id="rdb1" value="text">
+            <cl:listener std:sid="listener-a1713b53" name="selection-change" handler="onRdb1SelectionChange"/>
+            <cl:formdata std:sid="f-data-5ec07769" row="0" col="3"/>
+            <cl:item std:sid="item-79074ebc" label="text" value="text"/>
+            <cl:item std:sid="item-cf21907f" label="blob" value="blob"/>
+          </cl:radiobutton>
+          <cl:output std:sid="output-72254df2" id="opt3" class="label" value="조회방식">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-c02d118f" row="0" col="4"/>
+          </cl:output>
+          <cl:radiobutton std:sid="r-button-26fa3445" id="rdbExt" value="tsv">
+            <cl:listener std:sid="listener-2c9806c3" name="selection-change" handler="onRdb3SelectionChange"/>
+            <cl:formdata std:sid="f-data-3786bee4" row="0" col="5"/>
+            <cl:item std:sid="item-3bc6df47" label="DB" value="db" tooltip=""/>
+            <cl:item std:sid="item-91d500b3" label="TSV" value="tsv"/>
+          </cl:radiobutton>
+          <cl:formlayout std:sid="f-layout-a729cb5f" scrollable="false" hspace="4px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-4d5e64e4" scrollable="false" hspace="4px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="28" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+          <cl:rows length="28" unit="PIXEL" autoSizing="true" hidden="true" shadetype="NONE" shadecolor="transparent"/>
+          <cl:columns length="80" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+          <cl:columns length="150" unit="PIXEL" autoSizing="false" minlength="0" syncminlength="false"/>
+          <cl:columns length="80" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="transparent" minlength="0" syncminlength="false"/>
+          <cl:columns length="300" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="transparent" minlength="100" syncminlength="false"/>
+          <cl:columns length="80" unit="PIXEL" autoSizing="true" hidden="false" minlength="0" syncminlength="false"/>
+          <cl:columns length="300" unit="PIXEL" autoSizing="true" hidden="false" minlength="300" syncminlength="false"/>
+          <cl:columns length="1" unit="FRACTION" autoSizing="true" hidden="true" minlength="0" syncminlength="false"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:group std:sid="group-0c991936" id="grp1">
+        <cl:formdata std:sid="f-data-3b11d31b" row="0" col="1" rowspan="1" colspan="1"/>
+        <cl:button std:sid="button-7feea050" id="btnRst" class="btn btn-reset" value="초기화" icon="0">
+          <cl:listener std:sid="listener-bc0fe8c3" name="click" handler="onBtnRstClick"/>
+          <cl:flowlayoutdata std:sid="f-data-ef4ade06" width="85px" height="28px" autosize="none"/>
+        </cl:button>
+        <cl:button std:sid="button-81423fa1" id="btn1" class="primary btn-search" value="조회" icon="0">
+          <cl:listener std:sid="listener-904c69da" name="click" handler="onBtn1Click2"/>
+          <cl:flowlayoutdata std:sid="f-data-2869b247" width="70px" height="28px" autosize="width"/>
+        </cl:button>
+        <cl:flowlayout std:sid="f-layout-6420d91e" scrollable="false" hspacing="4" halign="right"/>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-63039607" scrollable="false" hspace="8px" vspace="8px">
+        <cl:rows length="1" unit="FRACTION" autoSizing="true"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="275" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-688e291e" id="grp5">
+      <cl:formdata std:sid="f-data-acc88095" width="100" height="-31" row="2" col="0"/>
+      <cl:progress std:sid="progress-4b5f64ac" id="progressbar2" class="bg-transparent" visible="false" value="0" max="100.0">
+        <cl:verticaldata std:sid="v-data-3939dfac" width="1575px" height="10px" autosize="none"/>
+      </cl:progress>
+      <cl:progress comment="조회 시 진행상황 보여주는 프로그레스바" std:sid="progress-38e3dabb" id="progressbar" class="bg-transparent" visible="false" max="100.0">
+        <cl:expbind property="value" category="PROPERTY" expression="#dsList.getRowCount()"/>
+        <cl:verticaldata std:sid="v-data-bb13b2f1" width="1575px" height="15px" autosize="none"/>
+      </cl:progress>
+      <cl:progress std:sid="progress-f537a6ca" id="progressbarCnt" style="text-align:left;" class="bg-transparent" visible="false" max="100.0" showtext="true">
+        <cl:verticaldata std:sid="v-data-021ca660" width="948px" height="15px" autosize="none"/>
+      </cl:progress>
+      <cl:progress std:sid="progress-031f84a2" id="progressbarCntExcel" style="text-align:left;" class="bg-transparent" visible="false" max="100.0" showtext="true" displayexp="value + &quot;%&quot;">
+        <cl:attribute name="total" value="0"/>
+        <cl:attribute name="processed" value="0"/>
+        <cl:verticaldata std:sid="v-data-571ede14" width="1575px" height="15px" autosize="none"/>
+      </cl:progress>
+      <cl:verticallayout std:sid="v-layout-5d02b931"/>
+    </cl:group>
+    <cl:group std:sid="group-fbb415b4" id="grpData" class="conts-area">
+      <cl:attribute name="mobile-column-count" value=""/>
+      <cl:attribute name="tablet-column-count" value=""/>
+      <cl:formdata std:sid="f-data-cac1023a" width="100" height="-121" row="3" col="0"/>
+      <cl:group std:sid="group-d4d9c059" class="conts-wrap">
+        <cl:formdata std:sid="f-data-eec77354" row="0" col="0" rowspan="1" colspan="1"/>
+        <cl:group std:sid="group-07b2913d" id="grp2">
+          <cl:formdata std:sid="f-data-5fb08fb2" row="0" col="0" rowspan="1" colspan="1"/>
+          <cl:udc std:sid="ud-control-38a1b417" id="udcComGridTitle1" type="udc.com.udcComGridTitle">
+            <cl:listener std:sid="listener-a2a45a46" name="client-export" handler="onUdcComGridTitle1ClientExport"/>
+            <cl:listener std:sid="listener-88777b11" name="client-export-done" handler="onUdcComGridTitle1ClientExportDone"/>
+            <cl:listener std:sid="listener-cfe0c8a6" name="fetch-export" handler="onUdcComGridTitle1FetchExport"/>
+            <cl:formdata std:sid="f-data-ceb805c6" row="0" col="0"/>
+            <cl:property name="ctrl" value="grdList" type="control"/>
+            <cl:property name="applyExcelStyle" value="true" type="enumeration"/>
+            <cl:property name="filterCtxMenu" value="fetchExport,clientExport" type="string"/>
+            <cl:property name="showCtxMenu" value="true" type="boolean"/>
+            <cl:property name="exportMassiveType" value="massive" type="enumeration"/>
+            <cl:property name="progressCtrl" value="progressbarCntExcel" type="control"/>
+            <cl:property name="visibleToggleGrp" value="false" type="boolean"/>
+            <cl:property name="visiblePopGrp" value="false" type="boolean"/>
+          </cl:udc>
+          <cl:group std:sid="group-0e3bd746" id="grp3">
+            <cl:attribute name="mobile-column-count" value="1"/>
+            <cl:attribute name="tablet-column-count" value="1"/>
+            <cl:formdata std:sid="f-data-5859c302" row="0" col="2"/>
+            <cl:udc std:sid="ud-control-fec8b280" id="udcGrdPrfCnt" type="udc.poc.udcPocGrdPrfCount">
+              <cl:expbind property="rowCount" category="PROPERTY" expression="#grdList.getRowCount()"/>
+              <cl:formdata std:sid="f-data-52aad80e" row="0" col="0"/>
+              <cl:property name="downloadTimeVisible" value="false" type="boolean"/>
+              <cl:property name="uploadTimeVisible" value="false" type="boolean"/>
+              <cl:property name="rowCountVisible" value="false" type="boolean"/>
+              <cl:property name="totalTimeVisible" value="true" type="boolean"/>
+              <cl:property name="networkVisible" value="false" type="boolean"/>
+              <cl:property name="randerVisible" value="false" type="boolean"/>
+              <cl:property name="firstLoadTimeVisible" value="false" type="boolean"/>
+              <cl:property name="startTimeVisible" value="true" type="boolean"/>
+              <cl:property name="endTimeVisible" value="true" type="boolean"/>
+            </cl:udc>
+            <cl:output std:sid="output-9ea62914" id="totalCnt" value="0" datatype="number" format="s#,##0" displayexp="&quot;총 &quot; + text + &quot; 건&quot;">
+              <cl:formdata std:sid="f-data-0605cddb" row="0" col="1"/>
+            </cl:output>
+            <cl:formlayout std:sid="f-layout-5af1e7ee">
+              <cl:rows length="28" unit="PIXEL" autoSizing="false" syncminlength="false"/>
+              <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+              <cl:columns length="24" unit="PIXEL" autoSizing="true" hidden="true" shadetype="NONE" shadecolor="transparent" minlength="0" syncminlength="false"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:udc std:sid="ud-control-96b63418" id="udccomgridcudbtns1" type="udc.com.udcComGridCudBtns">
+            <cl:listener std:sid="listener-d0afac76" name="insert" handler="onUdccomgridcudbtns1Insert"/>
+            <cl:formdata std:sid="f-data-245f8446" row="0" col="3"/>
+            <cl:property name="grid" value="grdList" type="control"/>
+            <cl:property name="focusColumnName" value="UP_CNSTKND_NM" type="string"/>
+          </cl:udc>
+          <cl:formlayout std:sid="f-layout-f9bd8b6b" scrollable="false" hspace="8px" vspace="8px">
+            <cl:rows length="28" unit="PIXEL" autoSizing="true"/>
+            <cl:columns length="366" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+            <cl:columns length="687" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="300" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:group std:sid="group-5a4f7a81" id="grp8">
+          <cl:attribute name="mobile-column-count" value="2"/>
+          <cl:attribute name="tablet-column-count" value="2"/>
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:formdata std:sid="f-data-a86fbae4" width="100" height="-107" row="1" col="0"/>
+          <cl:group std:sid="group-88927993" id="grp7">
+            <cl:formdata std:sid="f-data-7d32706a" row="0" col="1" rowspan="1" colspan="1"/>
+            <cl:output std:sid="output-cb9927e1" id="opt7" class="label fw-bold" value="버전">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-d95c302e" row="0" col="0"/>
+            </cl:output>
+            <cl:radiobutton std:sid="r-button-94bb9740" id="rdb3" value="신규">
+              <cl:formdata std:sid="f-data-0f791036" row="0" col="1"/>
+              <cl:item std:sid="item-6fbbc4c4" label="신규" value="신규" tooltip="수정 후"/>
+              <cl:item std:sid="item-c73367eb" label="기존" value="기존" tooltip="수정 전"/>
+            </cl:radiobutton>
+            <cl:formlayout std:sid="f-layout-1d4c65fa" scrollable="false" hspace="8px" vspace="8px">
+              <cl:rows length="28" unit="PIXEL" autoSizing="true" shadecolor="transparent"/>
+              <cl:columns length="80" unit="PIXEL" autoSizing="true" hidden="false" shadecolor="transparent" minlength="0" syncminlength="false"/>
+              <cl:columns length="200" unit="PIXEL" autoSizing="true" hidden="false" minlength="0" syncminlength="false"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:group std:sid="group-3da5e391" id="grp9">
+            <cl:formdata std:sid="f-data-b24a7da9" row="0" col="2" rowspan="1" colspan="1"/>
+            <cl:output std:sid="output-ae4196a1" id="opt5" class="label fw-bold" value="클라이언트 Export Style">
+              <cl:formdata std:sid="f-data-960d7ec2" row="0" col="0"/>
+            </cl:output>
+            <cl:radiobutton std:sid="r-button-12a6957c" id="rdb4" value="true">
+              <cl:listener std:sid="listener-2012392c" name="selection-change" handler="onRdb4SelectionChange"/>
+              <cl:formdata std:sid="f-data-c8a6f21a" row="0" col="1"/>
+              <cl:item std:sid="item-ac5522ed" label="true" value="true" tooltip=""/>
+              <cl:item std:sid="item-9c865aa2" label="false" value="false"/>
+            </cl:radiobutton>
+            <cl:formlayout std:sid="f-layout-57ad4186" scrollable="false" hspace="8px" vspace="8px">
+              <cl:rows length="28" unit="PIXEL" autoSizing="true" shadecolor="transparent"/>
+              <cl:columns length="200" unit="PIXEL" autoSizing="true" hidden="false" minlength="0" syncminlength="false"/>
+              <cl:columns length="200" unit="PIXEL" autoSizing="true" hidden="false" minlength="0" syncminlength="false"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:group std:sid="group-b22f2a5b" id="grp10">
+            <cl:formdata std:sid="f-data-f8ff1ced" row="0" col="0" rowspan="1" colspan="1"/>
+            <cl:output std:sid="output-31982fa1" id="opt4" class="label fw-bold" value="exportStyleType">
+              <cl:formdata std:sid="f-data-bb44b2ad" row="0" col="0"/>
+            </cl:output>
+            <cl:combobox std:sid="c-box-9f0da846" id="cmb2" value="fixed">
+              <cl:expbind property="tooltip" category="PROPERTY" expression="getItemByValue(value).tooltip"/>
+              <cl:formdata std:sid="f-data-05bc927b" row="0" col="1"/>
+              <cl:item std:sid="t-item-f3e60b4a" label="fixed" value="fixed" tooltip="[서버 Export] &#xD;&#xA;엑셀 Export 시 공통에서 지정한 스타일을 적용합니다. &#xD;&#xA;(적용범위 : 헤더, 그룹푸터, 푸터)"/>
+              <cl:item std:sid="t-item-1bf3708f" label="inline" value="inline" tooltip="[서버 Export] &#xD;&#xA;엑셀 Export 시 공통에서 지정한 스타일과, 디자인편집기에서 지정한 inline 스타일이 적용됩니다.&#xD;&#xA;(적용범위 : 헤더, 그룹푸터, 푸터)"/>
+              <cl:item std:sid="t-item-ec67493b" label="none" value="none" tooltip="[서버 Export] &#xD;&#xA;엑셀 Export 시 별도 스타일이 적용되지 않습니다."/>
+            </cl:combobox>
+            <cl:formlayout std:sid="f-layout-13a43bbe" scrollable="false" hspace="8px" vspace="8px">
+              <cl:rows length="28" unit="PIXEL" autoSizing="true" shadecolor="transparent"/>
+              <cl:columns length="80" unit="PIXEL" autoSizing="true" shadecolor="transparent" syncminlength="false"/>
+              <cl:columns length="200" unit="PIXEL" autoSizing="true" minlength="0" syncminlength="false"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-5efe15fd" scrollable="false" hspace="16px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="28" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+            <cl:columns length="291" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+            <cl:columns length="240" unit="PIXEL" autoSizing="true" hidden="true" shadetype="NONE" shadecolor="transparent" minlength="0" syncminlength="false"/>
+            <cl:columns length="403" unit="PIXEL" autoSizing="true" hidden="true" minlength="0" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION" autoSizing="true" hidden="true" minlength="0" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:grid std:sid="grid-2693a0bb" id="grdList" fieldLabel="그리드 목록" datasetid="dsList" clickmode="select" selectionunit="cell" resizablecolumns="all" columnMovable="true">
+          <cl:formdata std:sid="f-data-8251f25c" row="2" col="0"/>
+          <cl:gridcolumn std:sid="g-column-0ee58bd3" width="100px"/>
+          <cl:gridcolumn std:sid="g-column-c0313319" width="50px"/>
+          <cl:gridcolumn std:sid="g-column-b48b6bd7" width="200px" visible="false"/>
+          <cl:gridcolumn std:sid="g-column-d1c65ab8" width="200px" visible="false"/>
+          <cl:gridcolumn std:sid="g-column-f201b9f1" width="200px"/>
+          <cl:gridcolumn std:sid="g-column-e8574cbd" width="200px" visible="false"/>
+          <cl:gridcolumn std:sid="g-column-33363768" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-0a953f7e" width="150px" visible="false"/>
+          <cl:gridcolumn std:sid="g-column-c38bf6ea" width="200px"/>
+          <cl:gridcolumn std:sid="g-column-5cd20941" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-475bc316"/>
+          <cl:gridcolumn std:sid="g-column-edabeed5" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-d97bf551" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-eb437072" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-e3978def" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-fad912ea" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-6674e72a" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-7dcca666" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-e6eebe8c" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-de60e14a" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-bdd31cad" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-a62e9cf4" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-e819e976" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-e3d46b73" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-4c2e4b4a" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-68bfe866" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-ab3a59c5" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-22b4e4a7" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-810ac0ed" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-2b9eab6d"/>
+          <cl:gridcolumn std:sid="g-column-f108c00a"/>
+          <cl:gridcolumn std:sid="g-column-98a4f103" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-81540783" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-1980ce55" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-97056b6e" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-167751d0"/>
+          <cl:gridcolumn std:sid="g-column-fadfbcbb"/>
+          <cl:gridcolumn std:sid="g-column-9ef3f579"/>
+          <cl:gridcolumn std:sid="g-column-2e10711b"/>
+          <cl:gridcolumn std:sid="g-column-1a8b8319"/>
+          <cl:gridcolumn std:sid="g-column-efdfa210" width="150px" visible="false"/>
+          <cl:gridcolumn std:sid="g-column-c001eaf8" width="150px" visible="false"/>
+          <cl:gridcolumn std:sid="g-column-b25265da" width="150px" visible="false"/>
+          <cl:gridcolumn std:sid="g-column-90de1e7d" visible="false"/>
+          <cl:gridcolumn std:sid="g-column-2a162907" visible="false"/>
+          <cl:gridcolumn std:sid="g-column-a2456fa8" visible="false"/>
+          <cl:gridcolumn std:sid="g-column-42c48dfc" visible="false"/>
+          <cl:gridcolumn std:sid="g-column-313c1746" visible="false"/>
+          <cl:gridheader std:sid="gh-band-1910ffb5">
+            <cl:gridrow std:sid="g-row-c7c6a74a" height="44px"/>
+            <cl:gridrow std:sid="g-row-1231a77e" height="44px"/>
+            <cl:gridrow std:sid="g-row-636523b9" height="44px"/>
+            <cl:gridrow std:sid="g-row-d0e16184" height="44px"/>
+            <cl:gridcell std:sid="gh-cell-88b593ff" rowindex="0" colindex="0" rowspan="4" sortable="false" filterable="false" text="No"/>
+            <cl:gridcell std:sid="gh-cell-2d76b267" rowindex="0" colindex="1" rowspan="4" text="F"/>
+            <cl:gridcell std:sid="gh-cell-50dae7af" rowindex="0" colindex="2" rowspan="4" targetcolumnname="PRJCT_CD" sortable="true" filterable="true" text="현장코드"/>
+            <cl:gridcell std:sid="gh-cell-58023035" rowindex="0" colindex="3" rowspan="4" targetcolumnname="UP_CNSTKND_CD" sortable="true" filterable="true" text="중공종 코드"/>
+            <cl:gridcell std:sid="gh-cell-808c54fa" rowindex="0" colindex="4" rowspan="4" targetcolumnname="UP_CNSTKND_NM" sortable="true" filterable="true" text="중공종"/>
+            <cl:gridcell std:sid="gh-cell-9d5d5b75" rowindex="0" colindex="5" rowspan="4" targetcolumnname="CNSTKND_ID" sortable="true" filterable="true" text="공종코드"/>
+            <cl:gridcell std:sid="gh-cell-11dfb464" rowindex="0" colindex="6" rowspan="4" targetcolumnname="CNSTKND_NM" sortable="true" filterable="true" text="공종"/>
+            <cl:gridcell std:sid="gh-cell-5f981928" rowindex="0" colindex="7" rowspan="4" targetcolumnname="CBGT_DTLS_ID" sortable="true" filterable="true" text="명칭 ID"/>
+            <cl:gridcell std:sid="gh-cell-f58a1c77" rowindex="0" colindex="8" rowspan="4" targetcolumnname="DTLSNM" sortable="true" filterable="true" text="명칭"/>
+            <cl:gridcell std:sid="gh-cell-43dfecf8" rowindex="0" colindex="9" rowspan="4" targetcolumnname="DTLS_SIZ" sortable="true" filterable="true" text="규격"/>
+            <cl:gridcell std:sid="gh-cell-b800f18e" rowindex="0" colindex="10" rowspan="4" targetcolumnname="DTLS_UNIT_NM" sortable="true" filterable="true" text="단위"/>
+            <cl:gridcell std:sid="gh-cell-51384adb" rowindex="0" colindex="11" colspan="17" text="실행예산"/>
+            <cl:gridcell std:sid="gh-cell-0b1310ec" rowindex="0" colindex="28" rowspan="4" targetcolumnname="CNTRL_YN" sortable="true" filterable="true" text="통제여부"/>
+            <cl:gridcell std:sid="gh-cell-2740e9fc" rowindex="0" colindex="29" rowspan="4" targetcolumnname="STND_CD" sortable="true" filterable="true" text="표준코드"/>
+            <cl:gridcell std:sid="gh-cell-b9b683b1" rowindex="0" colindex="30" rowspan="4" targetcolumnname="MAT_CD" sortable="true" filterable="true" text="자재코드"/>
+            <cl:gridcell std:sid="gh-cell-85267eb0" rowindex="0" colindex="31" rowspan="4" targetcolumnname="ENFCM_EXPNDITM_CD" sortable="true" filterable="true" text="집행비목코드"/>
+            <cl:gridcell std:sid="gh-cell-8f908d7d" rowindex="0" colindex="32" rowspan="4" targetcolumnname="QTY_CNTRL_YN" sortable="true" filterable="true" text="수량통제여부"/>
+            <cl:gridcell std:sid="gh-cell-975eb7ad" rowindex="0" colindex="33" rowspan="4" targetcolumnname="PRGSS_TRGT_PRMCT_YN" sortable="true" filterable="true" text="진행대상원가여부"/>
+            <cl:gridcell std:sid="gh-cell-e161c3b1" rowindex="0" colindex="34" rowspan="4" targetcolumnname="DIRECT_CNSTCT_YN" sortable="true" filterable="true" text="직접공사비여부"/>
+            <cl:gridcell std:sid="gh-cell-abc35af2" rowindex="0" colindex="35" rowspan="4" targetcolumnname="ACCTCD" sortable="true" filterable="true" text="계정코드"/>
+            <cl:gridcell std:sid="gh-cell-e03075b4" rowindex="0" colindex="36" rowspan="4" targetcolumnname="EXPND_ITM_CD" sortable="true" filterable="true" text="비목코드"/>
+            <cl:gridcell std:sid="gh-cell-4d4df8f7" rowindex="0" colindex="37" rowspan="4" targetcolumnname="GAREA_YN" sortable="true" filterable="true" text="연면적여부"/>
+            <cl:gridcell std:sid="gh-cell-238bdba8" rowindex="0" colindex="38" rowspan="4" targetcolumnname="FCLTY_NM" sortable="true" filterable="true" text="시설명"/>
+            <cl:gridcell std:sid="gh-cell-78f07119" rowindex="0" colindex="39" rowspan="4" targetcolumnname="RMK" sortable="true" filterable="true" text="비고"/>
+            <cl:gridcell std:sid="gh-cell-17999070" rowindex="0" colindex="40"/>
+            <cl:gridcell std:sid="gh-cell-c8cb806c" rowindex="0" colindex="41" text=""/>
+            <cl:gridcell std:sid="gh-cell-7dec9cf9" rowindex="0" colindex="42"/>
+            <cl:gridcell std:sid="gh-cell-70bf5c4d" rowindex="0" colindex="43"/>
+            <cl:gridcell std:sid="gh-cell-23961e1e" rowindex="0" colindex="44"/>
+            <cl:gridcell std:sid="gh-cell-5cc0fc6b" rowindex="0" colindex="45"/>
+            <cl:gridcell std:sid="gh-cell-67c023a5" rowindex="0" colindex="46"/>
+            <cl:gridcell std:sid="gh-cell-1615c428" rowindex="0" colindex="47"/>
+            <cl:gridcell std:sid="gh-cell-80151e27" rowindex="1" colindex="11" rowspan="3" targetcolumnname="CBGT_QTY" sortable="true" filterable="true" text="실행수량"/>
+            <cl:gridcell std:sid="gh-cell-9225c17d" rowindex="1" colindex="12" rowspan="3" targetcolumnname="CBGT_UNTPRC" sortable="true" filterable="true" text="실행단가"/>
+            <cl:gridcell std:sid="gh-cell-2d82dadd" rowindex="1" colindex="13" rowspan="3" targetcolumnname="CBGT_AMT" sortable="true" filterable="true" text="실행금액"/>
+            <cl:gridcell std:sid="gh-cell-764847c0" rowindex="1" colindex="14" colspan="8" text="외주비"/>
+            <cl:gridcell std:sid="gh-cell-f6f5f7a9" rowindex="1" colindex="22" colspan="2" text="재료비"/>
+            <cl:gridcell std:sid="gh-cell-69375702" rowindex="1" colindex="24" colspan="2" text="노무비"/>
+            <cl:gridcell std:sid="gh-cell-6390b6d7" rowindex="1" colindex="26" colspan="2" text="경비"/>
+            <cl:gridcell std:sid="gh-cell-2c4a94e4" rowindex="1" colindex="40"/>
+            <cl:gridcell std:sid="gh-cell-9b197968" rowindex="1" colindex="41" text=""/>
+            <cl:gridcell std:sid="gh-cell-129baa0c" rowindex="1" colindex="42"/>
+            <cl:gridcell std:sid="gh-cell-159db7e5" rowindex="1" colindex="43"/>
+            <cl:gridcell std:sid="gh-cell-0b332fa4" rowindex="1" colindex="44"/>
+            <cl:gridcell std:sid="gh-cell-2d6e6506" rowindex="1" colindex="45"/>
+            <cl:gridcell std:sid="gh-cell-a6b90a8a" rowindex="1" colindex="46"/>
+            <cl:gridcell std:sid="gh-cell-79cb0ac2" rowindex="1" colindex="47"/>
+            <cl:gridcell std:sid="gh-cell-feb5ae16" rowindex="2" colindex="14" colspan="2" text="합계"/>
+            <cl:gridcell std:sid="gh-cell-935ef972" rowindex="2" colindex="16" colspan="2" text="재료비"/>
+            <cl:gridcell std:sid="gh-cell-37ae56a8" rowindex="2" colindex="18" colspan="2" text="노무비"/>
+            <cl:gridcell std:sid="gh-cell-467d5a2f" rowindex="2" colindex="20" colspan="2" text="경비"/>
+            <cl:gridcell std:sid="gh-cell-b11e6c57" rowindex="2" colindex="22" rowspan="2" targetcolumnname="CBGT_MAT_UNTPRC" sortable="true" filterable="true" text="실행재료단가"/>
+            <cl:gridcell std:sid="gh-cell-1268309e" rowindex="2" colindex="23" rowspan="2" targetcolumnname="CBGT_MAT_AMT" sortable="true" filterable="true" text="실행재료금액"/>
+            <cl:gridcell std:sid="gh-cell-0c17f876" rowindex="2" colindex="24" rowspan="2" targetcolumnname="CBGT_LAB_UNTPRC" sortable="true" filterable="true" text="실행노무단가"/>
+            <cl:gridcell std:sid="gh-cell-bf4e25be" rowindex="2" colindex="25" rowspan="2" targetcolumnname="CBGT_LAB_AMT" sortable="true" filterable="true" text="실행노무금액"/>
+            <cl:gridcell std:sid="gh-cell-c586fcd0" rowindex="2" colindex="26" rowspan="2" targetcolumnname="CBGT_EXPN_UNTPRC" sortable="true" filterable="true" text="실행경비단가"/>
+            <cl:gridcell std:sid="gh-cell-abfaa474" rowindex="2" colindex="27" rowspan="2" targetcolumnname="CBGT_EXPN_AMT" sortable="true" filterable="true" text="실행경비금액"/>
+            <cl:gridcell std:sid="gh-cell-747499c7" rowindex="2" colindex="40"/>
+            <cl:gridcell std:sid="gh-cell-98bb31ec" rowindex="2" colindex="41"/>
+            <cl:gridcell std:sid="gh-cell-12aad8ba" rowindex="2" colindex="42"/>
+            <cl:gridcell std:sid="gh-cell-72504f0a" rowindex="2" colindex="43"/>
+            <cl:gridcell std:sid="gh-cell-3cc6b25b" rowindex="2" colindex="44"/>
+            <cl:gridcell std:sid="gh-cell-c0d46575" rowindex="2" colindex="45"/>
+            <cl:gridcell std:sid="gh-cell-2b3814e3" rowindex="2" colindex="46"/>
+            <cl:gridcell std:sid="gh-cell-b1e19a13" rowindex="2" colindex="47"/>
+            <cl:gridcell std:sid="gh-cell-563e5440" rowindex="3" colindex="14" text="단가"/>
+            <cl:gridcell std:sid="gh-cell-4e59a7e4" rowindex="3" colindex="15" text="금액"/>
+            <cl:gridcell std:sid="gh-cell-8bf01eb1" rowindex="3" colindex="16" targetcolumnname="CBGT_OSORDR_MAT_UNTPRC" sortable="true" filterable="true" text="실행외주재료단가"/>
+            <cl:gridcell std:sid="gh-cell-b6d77198" rowindex="3" colindex="17" targetcolumnname="CBGT_OSORDR_MAT_AMT" sortable="true" filterable="true" text="실행외주재료금액"/>
+            <cl:gridcell std:sid="gh-cell-bb88da74" rowindex="3" colindex="18" targetcolumnname="CBGT_OSORDR_LAB_UNTPRC" sortable="true" filterable="true" text="실행외주노무단가"/>
+            <cl:gridcell std:sid="gh-cell-84bf9569" rowindex="3" colindex="19" targetcolumnname="CBGT_OSORDR_LAB_AMT" sortable="true" filterable="true" text="실행외주노무금액"/>
+            <cl:gridcell std:sid="gh-cell-2aa8c567" rowindex="3" colindex="20" targetcolumnname="CBGT_OSORDR_EXPN_UNTPRC" sortable="true" filterable="true" text="실행외주경비단가"/>
+            <cl:gridcell std:sid="gh-cell-217f4de8" rowindex="3" colindex="21" targetcolumnname="CBGT_OSORDR_EXPN_AMT" sortable="true" filterable="true" text="실행외주경비금액"/>
+            <cl:gridcell std:sid="gh-cell-6c1a5dcf" rowindex="3" colindex="40" targetcolumnname="ENFCM_IMPSBL_YN" sortable="true" filterable="true" text="집행불가여부"/>
+            <cl:gridcell std:sid="gh-cell-4bab1bee" rowindex="3" colindex="41" targetcolumnname="CBGT_OSORDR_UNTPRC" sortable="true" filterable="true" text="실행외주단가"/>
+            <cl:gridcell std:sid="gh-cell-8b7e13a7" rowindex="3" colindex="42" targetcolumnname="CBGT_OSORDR_AMT" sortable="true" filterable="true" text="실행외주금액"/>
+            <cl:gridcell std:sid="gh-cell-b3a168cd" rowindex="3" colindex="43" targetcolumnname="LN_CNST_YN" sortable="true" filterable="true" text="선시공여부"/>
+            <cl:gridcell std:sid="gh-cell-719f141f" rowindex="3" colindex="44" targetcolumnname="WBS_CD" sortable="true" filterable="true" text="WBS코드"/>
+            <cl:gridcell std:sid="gh-cell-48e1556b" rowindex="3" colindex="45" targetcolumnname="GB_CD" sortable="true" filterable="true" text="구분코드"/>
+            <cl:gridcell std:sid="gh-cell-6789bd37" rowindex="3" colindex="46" targetcolumnname="SORT_SERL" sortable="true" filterable="true" text="정렬순서"/>
+            <cl:gridcell std:sid="gh-cell-41e89200" rowindex="3" colindex="47" targetcolumnname="RLACT_DTLS_ID" sortable="true" filterable="true" text="본실행내역ID"/>
+          </cl:gridheader>
+          <cl:griddetail std:sid="gd-band-6500fd94">
+            <cl:gridrow std:sid="g-row-2daa3379" height="45px"/>
+            <cl:gridcell std:sid="gd-cell-ca7d2507" rowindex="0" colindex="0" columntype="rowindex"/>
+            <cl:gridcell std:sid="gd-cell-b38e56de" rowindex="0" colindex="1">
+              <cl:output std:sid="output-a850845e" id="opt8">
+                <cl:celldata std:sid="c-data-c179d025"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-16c73f72" rowindex="0" colindex="2" columnname="PRJCT_CD"/>
+            <cl:gridcell std:sid="gd-cell-5e75715a" rowindex="0" colindex="3" columnname="UP_CNSTKND_CD"/>
+            <cl:gridcell std:sid="gd-cell-3ea4f294" rowindex="0" colindex="4" rowspan="1" colspan="1" columnname="UP_CNSTKND_NM"/>
+            <cl:gridcell std:sid="gd-cell-dc9d7807" rowindex="0" colindex="5" columnname="CNSTKND_ID"/>
+            <cl:gridcell std:sid="gd-cell-dabfd4c4" rowindex="0" colindex="6" columnname="CNSTKND_NM">
+              <cl:output std:sid="output-7207b235" id="opt9" style="color:red; text-align:left;" value="Output">
+                <cl:celldata std:sid="c-data-acf3e257"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-4be6c192" rowindex="0" colindex="7" columnname="CBGT_DTLS_ID">
+              <cl:inputbox std:sid="i-box-d0e5e7fc" id="ipb6">
+                <cl:celldata std:sid="c-data-d6cbda6d"/>
+              </cl:inputbox>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-dd2d0c37" rowindex="0" colindex="8" columnname="DTLSNM">
+              <cl:inputbox std:sid="i-box-7b2045ac" id="ipb7">
+                <cl:celldata std:sid="c-data-d1d745d2"/>
+              </cl:inputbox>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-eefb17f2" rowindex="0" colindex="9" columnname="DTLS_SIZ">
+              <cl:inputbox std:sid="i-box-79da17d5" id="ipb8">
+                <cl:celldata std:sid="c-data-9cbccd80"/>
+              </cl:inputbox>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-34837ffa" rowindex="0" colindex="10" columnname="DTLS_UNIT_NM">
+              <cl:inputbox std:sid="i-box-f4a5199f" id="ipb9">
+                <cl:celldata std:sid="c-data-6a5852c8"/>
+              </cl:inputbox>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-baeb0993" rowindex="0" colindex="11" columnname="CBGT_QTY">
+              <cl:numbereditor std:sid="n-editor-e87cd8aa" id="nbe2" format="s#,##0.99">
+                <cl:celldata std:sid="c-data-776cee67"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-e8bc71c4" rowindex="0" colindex="12" columnname="CBGT_UNTPRC">
+              <cl:numbereditor std:sid="n-editor-ee452615" id="nbe4" readonly="true" spinbutton="false" showclearbutton="false">
+                <cl:celldata std:sid="c-data-136de25a"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-55d823cf" rowindex="0" colindex="13" columnname="CBGT_AMT">
+              <cl:numbereditor std:sid="n-editor-68cebff9" id="nbe5" readonly="true" spinbutton="false" showclearbutton="false">
+                <cl:celldata std:sid="c-data-b1f4d079"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-bde2d7ca" rowindex="0" colindex="14" rowspan="1" colspan="1" columnname="CBGT_OSORDR_UNTPRC">
+              <cl:numbereditor std:sid="n-editor-cfccd79b" id="nbe6" readonly="true" showclearbutton="false">
+                <cl:celldata std:sid="c-data-259060b8"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-99998247" rowindex="0" colindex="16" columnname="CBGT_OSORDR_MAT_UNTPRC">
+              <cl:numbereditor std:sid="n-editor-0101f049" id="nbe7">
+                <cl:celldata std:sid="c-data-4072b0cc"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-7ea0875c" rowindex="0" colindex="17" columnname="CBGT_OSORDR_MAT_AMT">
+              <cl:numbereditor std:sid="n-editor-43c82530" id="nbe8" readonly="true" spinbutton="false" showclearbutton="false">
+                <cl:celldata std:sid="c-data-8ebe3433"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-2875f3c9" rowindex="0" colindex="18" columnname="CBGT_OSORDR_LAB_UNTPRC">
+              <cl:numbereditor std:sid="n-editor-52e2c967" id="nbe9">
+                <cl:celldata std:sid="c-data-51d86462"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-7cc495ba" rowindex="0" colindex="19" columnname="CBGT_OSORDR_LAB_AMT">
+              <cl:numbereditor std:sid="n-editor-65eb25db" id="nbe10" readonly="true" spinbutton="false" showclearbutton="false">
+                <cl:celldata std:sid="c-data-9835eeea"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-14253f1e" rowindex="0" colindex="20" columnname="CBGT_OSORDR_EXPN_UNTPRC">
+              <cl:numbereditor std:sid="n-editor-181b51e9" id="nbe11">
+                <cl:celldata std:sid="c-data-6804f3de"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-931ce52a" rowindex="0" colindex="21" columnname="CBGT_OSORDR_EXPN_AMT">
+              <cl:numbereditor std:sid="n-editor-ee2bb087" id="nbe12" readonly="true" spinbutton="false" showclearbutton="false">
+                <cl:celldata std:sid="c-data-a067dde6"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-71b55035" rowindex="0" colindex="22" columnname="CBGT_MAT_UNTPRC">
+              <cl:numbereditor std:sid="n-editor-2b31b780" id="nbe13">
+                <cl:celldata std:sid="c-data-c14b80bb"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-0e4fe477" rowindex="0" colindex="23" columnname="CBGT_MAT_AMT">
+              <cl:numbereditor std:sid="n-editor-626dfbfe" id="nbe14" readonly="true" spinbutton="false" showclearbutton="false">
+                <cl:celldata std:sid="c-data-f454b281"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-cc9b9327" rowindex="0" colindex="24" columnname="CBGT_LAB_UNTPRC">
+              <cl:numbereditor std:sid="n-editor-2cae17c7" id="nbe15">
+                <cl:celldata std:sid="c-data-3ec3ef86"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-0f08155d" rowindex="0" colindex="25" columnname="CBGT_LAB_AMT">
+              <cl:numbereditor std:sid="n-editor-d5844616" id="nbe16" readonly="true" spinbutton="false" showclearbutton="false">
+                <cl:celldata std:sid="c-data-089bdb68"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-c6fc55ff" rowindex="0" colindex="26" columnname="CBGT_EXPN_UNTPRC">
+              <cl:numbereditor std:sid="n-editor-0e8af58c" id="nbe17">
+                <cl:celldata std:sid="c-data-5ce7b78b"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-0cdd0a9b" rowindex="0" colindex="27" columnname="CBGT_EXPN_AMT">
+              <cl:numbereditor std:sid="n-editor-b6c11070" id="nbe18" readonly="true" spinbutton="false" showclearbutton="false">
+                <cl:celldata std:sid="c-data-974c38a6"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-78c90351" rowindex="0" colindex="28" columnname="CNTRL_YN">
+              <cl:inputbox std:sid="i-box-824b5ecf" id="ipb11">
+                <cl:celldata std:sid="c-data-eaa5f3ec"/>
+              </cl:inputbox>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-7e78c892" rowindex="0" colindex="29" columnname="STND_CD">
+              <cl:inputbox std:sid="i-box-4fe0ce50" id="ipb12">
+                <cl:celldata std:sid="c-data-ecb33a67"/>
+              </cl:inputbox>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-2d073706" rowindex="0" colindex="30" columnname="MAT_CD">
+              <cl:inputbox std:sid="i-box-59f665e3" id="ipb13">
+                <cl:celldata std:sid="c-data-6c9eb321"/>
+              </cl:inputbox>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-1a6bdbc0" rowindex="0" colindex="31" columnname="ENFCM_EXPNDITM_CD">
+              <cl:combobox std:sid="c-box-175cc283" id="cmb3">
+                <cl:celldata std:sid="c-data-c94ebc7e"/>
+                <cl:itemset datasetid="dsEbEnfCd" label="label" value="value"/>
+              </cl:combobox>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-3cfc63e3" rowindex="0" colindex="32" columnname="QTY_CNTRL_YN">
+              <cl:combobox std:sid="c-box-49113c72" id="cmb5">
+                <cl:celldata std:sid="c-data-7ea55951"/>
+                <cl:itemset datasetid="dsYn" label="label" value="value"/>
+              </cl:combobox>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-52249e7f" rowindex="0" colindex="33" columnname="PRGSS_TRGT_PRMCT_YN">
+              <cl:combobox std:sid="c-box-4580954f" id="cmb7">
+                <cl:celldata std:sid="c-data-8b6620d4"/>
+                <cl:itemset datasetid="dsYn" label="label" value="value"/>
+              </cl:combobox>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-b447cbb8" rowindex="0" colindex="34" columnname="DIRECT_CNSTCT_YN">
+              <cl:inputbox std:sid="i-box-a007895d" id="ipb14">
+                <cl:celldata std:sid="c-data-4d1d0709"/>
+              </cl:inputbox>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-77c91bc5" rowindex="0" colindex="35" columnname="ACCTCD">
+              <cl:inputbox std:sid="i-box-5ff7a9ce" id="ipb15">
+                <cl:celldata std:sid="c-data-de17d94b"/>
+              </cl:inputbox>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-26743d39" rowindex="0" colindex="36" columnname="EXPND_ITM_CD">
+              <cl:combobox std:sid="c-box-ec0f8aa9" id="cmb13">
+                <cl:celldata std:sid="c-data-6e0e2930"/>
+                <cl:itemset datasetid="dsEbExpCd" label="label" value="value"/>
+              </cl:combobox>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-eb304ee1" rowindex="0" colindex="37" columnname="GAREA_YN">
+              <cl:combobox std:sid="c-box-9ec8bf5a" id="cmb14">
+                <cl:celldata std:sid="c-data-7f45cdb2"/>
+                <cl:itemset datasetid="dsEbExpCd" label="label" value="value"/>
+              </cl:combobox>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-079f31ee" rowindex="0" colindex="38" columnname="FCLTY_NM">
+              <cl:inputbox std:sid="i-box-6d6fcafb" id="ipb16">
+                <cl:celldata std:sid="c-data-7ca0f051"/>
+              </cl:inputbox>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-ac044060" rowindex="0" colindex="39" columnname="RMK">
+              <cl:inputbox std:sid="i-box-819dc6c7" id="ipb19">
+                <cl:celldata std:sid="c-data-824864e1"/>
+              </cl:inputbox>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-a547d3c1" rowindex="0" colindex="40" columnname="ENFCM_IMPSBL_YN">
+              <cl:inputbox std:sid="i-box-3afcb64a" id="ipb20">
+                <cl:celldata std:sid="c-data-d5e23c95"/>
+              </cl:inputbox>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-92e73ea7" rowindex="0" colindex="41" columnname="CBGT_OSORDR_UNTPRC">
+              <cl:numbereditor std:sid="n-editor-5a04549d" id="nbe19">
+                <cl:celldata std:sid="c-data-655c801e"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-6f17f50a" rowindex="0" colindex="42" columnname="CBGT_OSORDR_AMT">
+              <cl:numbereditor std:sid="n-editor-f41abbd7" id="nbe20">
+                <cl:celldata std:sid="c-data-b965e0fe"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-35db3ce5" rowindex="0" colindex="43" columnname="LN_CNST_YN">
+              <cl:inputbox std:sid="i-box-aebf909c" id="ipb21">
+                <cl:celldata std:sid="c-data-9312fe4c"/>
+              </cl:inputbox>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-179e6f36" rowindex="0" colindex="44" columnname="WBS_CD">
+              <cl:inputbox std:sid="i-box-0e0efb8b" id="ipb22">
+                <cl:celldata std:sid="c-data-a5cdcbbe"/>
+              </cl:inputbox>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-4fb2cd60" rowindex="0" colindex="45" columnname="GB_CD">
+              <cl:inputbox std:sid="i-box-6fcf4024" id="ipb23">
+                <cl:celldata std:sid="c-data-d822709e"/>
+              </cl:inputbox>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-7c3e7b50" rowindex="0" colindex="46" columnname="SORT_SERL">
+              <cl:inputbox std:sid="i-box-77e54b49" id="ipb24">
+                <cl:celldata std:sid="c-data-d8aef2c9"/>
+              </cl:inputbox>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-4b924456" rowindex="0" colindex="47" columnname="RLACT_DTLS_ID">
+              <cl:inputbox std:sid="i-box-2d765c57" id="ipb27">
+                <cl:celldata std:sid="c-data-6fcf1cc0"/>
+              </cl:inputbox>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-0e44bd1b" rowindex="0" colindex="15" columnname="CBGT_OSORDR_AMT">
+              <cl:numbereditor std:sid="n-editor-0262bcd5" id="nbe40" readonly="true" showclearbutton="false">
+                <cl:celldata std:sid="c-data-b5c5aaf0"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+          </cl:griddetail>
+          <cl:gridfooter std:sid="gf-band-26f7e6e3">
+            <cl:gridrow std:sid="g-row-61ddde19" height="44px"/>
+            <cl:gridcell std:sid="gf-cell-ab8f48ae" rowindex="0" colindex="0" expr="&quot;&quot;"/>
+            <cl:gridcell std:sid="gf-cell-ec08b481" rowindex="0" colindex="1" expr="&quot;&quot;"/>
+            <cl:gridcell std:sid="gf-cell-e4f3475b" rowindex="0" colindex="2" expr="&quot;&quot;"/>
+            <cl:gridcell std:sid="gf-cell-a61f9d1f" rowindex="0" colindex="3" expr="&quot;&quot;"/>
+            <cl:gridcell std:sid="gf-cell-f389adab" rowindex="0" colindex="4" expr="&quot;&quot;"/>
+            <cl:gridcell std:sid="gf-cell-d882d932" rowindex="0" colindex="5" expr="&quot;&quot;"/>
+            <cl:gridcell std:sid="gf-cell-f6deaac1" rowindex="0" colindex="6" expr="&quot;&quot;"/>
+            <cl:gridcell std:sid="gf-cell-78696a7a" rowindex="0" colindex="7" expr="&quot;&quot;"/>
+            <cl:gridcell std:sid="gf-cell-4cb6dfca" rowindex="0" colindex="8" expr="&quot;&quot;"/>
+            <cl:gridcell std:sid="gf-cell-eae3b09b" rowindex="0" colindex="9" expr="&quot;&quot;"/>
+            <cl:gridcell std:sid="gf-cell-3c7ba53d" rowindex="0" colindex="10" expr="&quot;&quot;"/>
+            <cl:gridcell std:sid="gf-cell-efdff53f" rowindex="0" colindex="11" expr="getSum(&quot;CBGT_QTY&quot;)">
+              <cl:output std:sid="output-6433c489" id="opt10" value="Output" datatype="number" format="s#,##0.99">
+                <cl:celldata std:sid="c-data-742d45be"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-c604b170" rowindex="0" colindex="12" expr="getSum(&quot;CBGT_UNTPRC&quot;)">
+              <cl:output std:sid="output-a6b34a58" id="opt11" datatype="number" format="s#,##0">
+                <cl:celldata std:sid="c-data-130c6663"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-e92d9e37" rowindex="0" colindex="13" expr="getSum(&quot;CBGT_AMT&quot;)">
+              <cl:output std:sid="output-0d547993" id="opt12" datatype="number" format="s#,##0">
+                <cl:celldata std:sid="c-data-00bf50df"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-15b45c99" rowindex="0" colindex="14" expr="getSum(&quot;CBGT_OSORDR_UNTPRC&quot;)">
+              <cl:output std:sid="output-cead00b2" id="opt13" datatype="number" format="s#,##0">
+                <cl:celldata std:sid="c-data-a3d60ee0"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-d4c737ae" rowindex="0" colindex="15" expr="getSum(&quot;CBGT_OSORDR_AMT&quot;)">
+              <cl:output std:sid="output-db376b35" id="opt14" datatype="number" format="s#,##0">
+                <cl:celldata std:sid="c-data-9c95ae9c"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-e536b330" rowindex="0" colindex="16" expr="getSum(&quot;CBGT_OSORDR_MAT_UNTPRC&quot;)">
+              <cl:output std:sid="output-5881a836" id="opt15" datatype="number" format="s#,##0">
+                <cl:celldata std:sid="c-data-af859f4b"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-2871051c" rowindex="0" colindex="17" expr="getSum(&quot;CBGT_OSORDR_MAT_AMT&quot;)">
+              <cl:output std:sid="output-b33818e5" id="opt16" datatype="number" format="s#,##0">
+                <cl:celldata std:sid="c-data-9cb4d290"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-40ae6b82" rowindex="0" colindex="18" expr="getSum(&quot;CBGT_OSORDR_LAB_UNTPRC&quot;)">
+              <cl:output std:sid="output-3ce13944" id="opt17" datatype="number" format="s#,##0">
+                <cl:celldata std:sid="c-data-eb8c3d09"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-92fea6d1" rowindex="0" colindex="19" expr="getSum(&quot;CBGT_OSORDR_LAB_AMT&quot;)">
+              <cl:output std:sid="output-aa1288d2" id="opt18" datatype="number" format="s#,##0">
+                <cl:celldata std:sid="c-data-5a7e2383"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-0b923fb7" rowindex="0" colindex="20" expr="getSum(&quot;CBGT_OSORDR_EXPN_UNTPRC&quot;)">
+              <cl:output std:sid="output-a3d6cfa1" id="opt19" datatype="number" format="s#,##0">
+                <cl:celldata std:sid="c-data-72cc9f8e"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-59eece5e" rowindex="0" colindex="21" expr="getSum(&quot;CBGT_OSORDR_EXPN_AMT&quot;)">
+              <cl:output std:sid="output-d15ddeb9" id="opt20" datatype="number" format="s#,##0">
+                <cl:celldata std:sid="c-data-3e1d420e"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-320cfca5" rowindex="0" colindex="22" expr="getSum(&quot;CBGT_MAT_UNTPRC&quot;)">
+              <cl:output std:sid="output-de80bc5f" id="opt21" datatype="number" format="s#,##0">
+                <cl:celldata std:sid="c-data-03e97672"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-8b61769d" rowindex="0" colindex="23" expr="getSum(&quot;CBGT_MAT_AMT&quot;)">
+              <cl:output std:sid="output-4524d724" id="opt22" datatype="number" format="s#,##0">
+                <cl:celldata std:sid="c-data-8719194d"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-6fecacfe" rowindex="0" colindex="24" expr="getSum(&quot;CBGT_LAB_UNTPRC&quot;)">
+              <cl:output std:sid="output-f23b9fa2" id="opt23" datatype="number" format="s#,##0">
+                <cl:celldata std:sid="c-data-63c1e9fe"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-506b4a9c" rowindex="0" colindex="25" expr="getSum(&quot;CBGT_LAB_AMT&quot;)">
+              <cl:output std:sid="output-81d02b97" id="opt24" datatype="number" format="s#,##0">
+                <cl:celldata std:sid="c-data-3bd270d1"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-1fa3660f" rowindex="0" colindex="26" expr="getSum(&quot;CBGT_EXPN_UNTPRC&quot;)">
+              <cl:output std:sid="output-1a239327" id="opt25" datatype="number" format="s#,##0">
+                <cl:celldata std:sid="c-data-49d90a3a"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-d03d4c14" rowindex="0" colindex="27" expr="getSum(&quot;CBGT_EXPN_AMT&quot;)">
+              <cl:output std:sid="output-fa1d805e" id="opt26" datatype="number" format="s#,##0">
+                <cl:celldata std:sid="c-data-206bbe1c"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gf-cell-9c2cd189" rowindex="0" colindex="28" expr="&quot;&quot;"/>
+            <cl:gridcell std:sid="gf-cell-681be79e" rowindex="0" colindex="29" expr="&quot;&quot;"/>
+            <cl:gridcell std:sid="gf-cell-b35120a2" rowindex="0" colindex="30" expr="&quot;&quot;"/>
+            <cl:gridcell std:sid="gf-cell-171b0536" rowindex="0" colindex="31" expr="&quot;&quot;"/>
+            <cl:gridcell std:sid="gf-cell-fcf936f2" rowindex="0" colindex="32" expr="&quot;&quot;"/>
+            <cl:gridcell std:sid="gf-cell-f5b9c13f" rowindex="0" colindex="33" expr="&quot;&quot;"/>
+            <cl:gridcell std:sid="gf-cell-91517407" rowindex="0" colindex="34" expr="&quot;&quot;"/>
+            <cl:gridcell std:sid="gf-cell-7b41a632" rowindex="0" colindex="35" expr="&quot;&quot;"/>
+            <cl:gridcell std:sid="gf-cell-2018f711" rowindex="0" colindex="36" expr="&quot;&quot;"/>
+            <cl:gridcell std:sid="gf-cell-26a4f2f9" rowindex="0" colindex="37" expr="&quot;&quot;"/>
+            <cl:gridcell std:sid="gf-cell-60c96831" rowindex="0" colindex="38" expr="&quot;&quot;"/>
+            <cl:gridcell std:sid="gf-cell-65d3db7b" rowindex="0" colindex="39" expr="&quot;&quot;"/>
+            <cl:gridcell std:sid="gf-cell-95417253" rowindex="0" colindex="40" expr="&quot;&quot;"/>
+            <cl:gridcell std:sid="gf-cell-4d053cd4" rowindex="0" colindex="41" expr="&quot;&quot;"/>
+            <cl:gridcell std:sid="gf-cell-e94f5280" rowindex="0" colindex="42" expr="&quot;&quot;"/>
+            <cl:gridcell std:sid="gf-cell-663f2c27" rowindex="0" colindex="43" expr="&quot;&quot;"/>
+            <cl:gridcell std:sid="gf-cell-4c5aefdb" rowindex="0" colindex="44" expr="&quot;&quot;"/>
+            <cl:gridcell std:sid="gf-cell-677957ee" rowindex="0" colindex="45" expr="&quot;&quot;"/>
+            <cl:gridcell std:sid="gf-cell-0db54796" rowindex="0" colindex="46" expr="&quot;&quot;"/>
+            <cl:gridcell std:sid="gf-cell-98f04726" rowindex="0" colindex="47" expr="&quot;&quot;"/>
+          </cl:gridfooter>
+          <cl:gridrowgrouplist std:sid="grg-list-9b5faaa8">
+            <cl:gridrowgroup std:sid="gr-group-5c0de6d5" groupcondition="UP_CNSTKND_NM">
+              <cl:gridgroupfooter std:sid="ggf-band-2888e715">
+                <cl:gridrow std:sid="g-row-ab7eddb8" height="44px"/>
+                <cl:gridcell std:sid="ggf-cell-663c0cf7" rowindex="0" colindex="0" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-e0429719" rowindex="0" colindex="1" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-bedd9fad" rowindex="0" colindex="2" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-e198311f" rowindex="0" colindex="3" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-abecbde5" rowindex="0" colindex="8" rowspan="1" colspan="1" expr="&quot;소개(&quot; + UP_CNSTKND_NM + &quot;)&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-5a47481b" rowindex="0" colindex="9" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-fba8af55" rowindex="0" colindex="10" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-7a184796" rowindex="0" colindex="11" expr="getSum(&quot;CBGT_QTY&quot;)">
+                  <cl:output std:sid="output-a0bd6558" id="opt27" datatype="number" format="s#,##0.99">
+                    <cl:celldata std:sid="c-data-bfe44b2b"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-aca663d7" rowindex="0" colindex="12" expr="getSum(&quot;CBGT_UNTPRC&quot;)">
+                  <cl:output std:sid="output-464cfc81" id="opt28" datatype="number" format="s#,##0">
+                    <cl:celldata std:sid="c-data-5e554a20"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-e31e10d2" rowindex="0" colindex="13" expr="getSum(&quot;CBGT_AMT&quot;)">
+                  <cl:output std:sid="output-93345f92" id="opt29" datatype="number" format="s#,##0">
+                    <cl:celldata std:sid="c-data-8d5d5fe5"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-2d6d2e58" rowindex="0" colindex="14" expr="getSum(&quot;CBGT_OSORDR_UNTPRC&quot;)">
+                  <cl:output std:sid="output-1cd5d76b" id="opt30" datatype="number" format="s#,##0">
+                    <cl:celldata std:sid="c-data-b004e67b"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-d6831919" rowindex="0" colindex="15" expr="getSum(&quot;CBGT_OSORDR_AMT&quot;)">
+                  <cl:output std:sid="output-44dc0e12" id="opt31" datatype="number" format="s#,##0">
+                    <cl:celldata std:sid="c-data-0fae2ef8"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-ec4b7764" rowindex="0" colindex="16" expr="getSum(&quot;CBGT_OSORDR_MAT_UNTPRC&quot;)">
+                  <cl:output std:sid="output-456ac0bd" id="opt32" datatype="number" format="s#,##0">
+                    <cl:celldata std:sid="c-data-345ea432"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-9a936632" rowindex="0" colindex="17" expr="getSum(&quot;CBGT_OSORDR_MAT_AMT&quot;)">
+                  <cl:output std:sid="output-d6433581" id="opt33" datatype="number" format="s#,##0">
+                    <cl:celldata std:sid="c-data-5feb65eb"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-d957d99a" rowindex="0" colindex="18" expr="getSum(&quot;CBGT_OSORDR_LAB_UNTPRC&quot;)">
+                  <cl:output std:sid="output-9fb534e1" id="opt34" datatype="number" format="s#,##0">
+                    <cl:celldata std:sid="c-data-85f3e627"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-5a94b2ac" rowindex="0" colindex="19" expr="getSum(&quot;CBGT_OSORDR_LAB_AMT&quot;)">
+                  <cl:output std:sid="output-df068287" id="opt35" datatype="number" format="s#,##0">
+                    <cl:celldata std:sid="c-data-33c0376e"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-a22286d5" rowindex="0" colindex="21" expr="getSum(&quot;CBGT_OSORDR_EXPN_AMT&quot;)">
+                  <cl:output std:sid="output-1d9663ad" id="opt36" datatype="number" format="s#,##0">
+                    <cl:celldata std:sid="c-data-3c8f0e3a"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-1efb0fb6" rowindex="0" colindex="20" expr="getSum(&quot;CBGT_OSORDR_EXPN_UNTPRC&quot;)">
+                  <cl:output std:sid="output-a0a6bf78" id="opt37" datatype="number" format="s#,##0">
+                    <cl:celldata std:sid="c-data-bc7b0732"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-97fe0cda" rowindex="0" colindex="22" expr="getSum(&quot;CBGT_MAT_UNTPRC&quot;)">
+                  <cl:output std:sid="output-6fd43f20" id="opt38" datatype="number" format="s#,##0">
+                    <cl:celldata std:sid="c-data-012eb4ea"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-f45b374b" rowindex="0" colindex="23" expr="getSum(&quot;CBGT_MAT_AMT&quot;)">
+                  <cl:output std:sid="output-c852af98" id="opt39" datatype="number" format="s#,##0">
+                    <cl:celldata std:sid="c-data-a1ab0df1"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-6a0effbb" rowindex="0" colindex="24" expr="getSum(&quot;CBGT_LAB_UNTPRC&quot;)">
+                  <cl:output std:sid="output-bccdc344" id="opt40" datatype="number" format="s#,##0">
+                    <cl:celldata std:sid="c-data-1feea714"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-8c6f13de" rowindex="0" colindex="25" expr="getSum(&quot;CBGT_LAB_AMT&quot;)">
+                  <cl:output std:sid="output-4454cb34" id="opt41" datatype="number" format="s#,##0">
+                    <cl:celldata std:sid="c-data-132c7c61"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-96bb03fe" rowindex="0" colindex="26" expr="getSum(&quot;CBGT_EXPN_UNTPRC&quot;)">
+                  <cl:output std:sid="output-c75735e2" id="opt42" datatype="number" format="s#,##0">
+                    <cl:celldata std:sid="c-data-032c6098"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-dd0c99ca" rowindex="0" colindex="27" expr="getSum(&quot;CBGT_EXPN_AMT&quot;)">
+                  <cl:output std:sid="output-1e27fe00" id="opt43" datatype="number" format="s#,##0">
+                    <cl:celldata std:sid="c-data-4baa2d51"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-7b0ea2ad" rowindex="0" colindex="28" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-3944e7c4" rowindex="0" colindex="29" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-4b27c4db" rowindex="0" colindex="30" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-319fec2d" rowindex="0" colindex="31" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-234c3d7a" rowindex="0" colindex="32" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-75cb3622" rowindex="0" colindex="33" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-61a2bfd0" rowindex="0" colindex="34" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-2a0472b8" rowindex="0" colindex="35" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-68b58e51" rowindex="0" colindex="36" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-7755b9fa" rowindex="0" colindex="37" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-9be5df40" rowindex="0" colindex="38" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-80b9ea4a" rowindex="0" colindex="39" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-368a880f" rowindex="0" colindex="40" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-f544569a" rowindex="0" colindex="41" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-1d71e496" rowindex="0" colindex="42" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-b7c11964" rowindex="0" colindex="43" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-ebce17a2" rowindex="0" colindex="44" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-fc2101bc" rowindex="0" colindex="45" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-559cc464" rowindex="0" colindex="46" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-354c8504" rowindex="0" colindex="47" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-3acccccb" rowindex="0" colindex="4" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-a245b6f9" rowindex="0" colindex="5" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-09e486cc" rowindex="0" colindex="6" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-b2d3d33a" rowindex="0" colindex="7" expr="&quot;&quot;"/>
+              </cl:gridgroupfooter>
+            </cl:gridrowgroup>
+            <cl:gridrowgroup std:sid="gr-group-175ecb24" groupcondition="CNSTKND_NM">
+              <cl:gridgroupfooter std:sid="ggf-band-6029ae7b">
+                <cl:gridrow std:sid="g-row-d3e54a21" height="44px"/>
+                <cl:gridcell std:sid="ggf-cell-8c6242fb" rowindex="0" colindex="0" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-4a694764" rowindex="0" colindex="1" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-a7becaf7" rowindex="0" colindex="2" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-79da4bcd" rowindex="0" colindex="3" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-47b44d34" rowindex="0" colindex="4" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-6ea414e2" rowindex="0" colindex="5" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-ef6372d9" rowindex="0" colindex="8" rowspan="1" colspan="1" expr="&quot;소개(&quot; + CNSTKND_NM + &quot;)&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-34ac1b74" rowindex="0" colindex="9" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-8765c322" rowindex="0" colindex="10" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-b7ec0757" rowindex="0" colindex="11" expr="getSum(&quot;CBGT_QTY&quot;)">
+                  <cl:output std:sid="output-ac7c48c0" id="opt44" datatype="number" format="s#,##0.99">
+                    <cl:celldata std:sid="c-data-220c5c59"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-90b2fde0" rowindex="0" colindex="12" expr="getSum(&quot;CBGT_UNTPRC&quot;)">
+                  <cl:output std:sid="output-abb32ce7" id="opt45" datatype="number" format="s#,##0">
+                    <cl:celldata std:sid="c-data-a30c772c"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-de41b900" rowindex="0" colindex="13" expr="getSum(&quot;CBGT_AMT&quot;)">
+                  <cl:output std:sid="output-d764f341" id="opt46" datatype="number" format="s#,##0">
+                    <cl:celldata std:sid="c-data-daac2462"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-61da8375" rowindex="0" colindex="14" expr="getSum(&quot;CBGT_OSORDR_UNTPRC&quot;)">
+                  <cl:output std:sid="output-864ced15" id="opt47" datatype="number" format="s#,##0">
+                    <cl:celldata std:sid="c-data-04a943df"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-39de13c6" rowindex="0" colindex="15" expr="getSum(&quot;CBGT_OSORDR_AMT&quot;)">
+                  <cl:output std:sid="output-d91adbfe" id="opt48" datatype="number" format="s#,##0">
+                    <cl:celldata std:sid="c-data-4a3a098c"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-50149674" rowindex="0" colindex="16" expr="getSum(&quot;CBGT_OSORDR_MAT_UNTPRC&quot;)">
+                  <cl:output std:sid="output-30230308" id="opt49" datatype="number" format="s#,##0">
+                    <cl:celldata std:sid="c-data-437895aa"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-beff5709" rowindex="0" colindex="17" expr="getSum(&quot;CBGT_OSORDR_MAT_AMT&quot;)">
+                  <cl:output std:sid="output-071ed467" id="opt50" datatype="number" format="s#,##0">
+                    <cl:celldata std:sid="c-data-14ea9f13"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-59e80c8f" rowindex="0" colindex="18" expr="getSum(&quot;CBGT_OSORDR_LAB_UNTPRC&quot;)">
+                  <cl:output std:sid="output-697d7a81" id="opt51" datatype="number" format="s#,##0">
+                    <cl:celldata std:sid="c-data-dc4e1baa"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-4237a910" rowindex="0" colindex="19" expr="getSum(&quot;CBGT_OSORDR_LAB_AMT&quot;)">
+                  <cl:output std:sid="output-39365be9" id="opt52" datatype="number" format="s#,##0">
+                    <cl:celldata std:sid="c-data-8f4ac020"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-353e79c2" rowindex="0" colindex="21" expr="getSum(&quot;CBGT_OSORDR_EXPN_AMT&quot;)">
+                  <cl:output std:sid="output-0e6e95e8" id="opt53" datatype="number" format="s#,##0">
+                    <cl:celldata std:sid="c-data-e803e151"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-602db06d" rowindex="0" colindex="20" expr="getSum(&quot;CBGT_OSORDR_EXPN_UNTPRC&quot;)">
+                  <cl:output std:sid="output-ab01c426" id="opt54" datatype="number" format="s#,##0">
+                    <cl:celldata std:sid="c-data-d6f02206"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-ec073f2e" rowindex="0" colindex="22" expr="getSum(&quot;CBGT_MAT_UNTPRC&quot;)">
+                  <cl:output std:sid="output-92c953ab" id="opt56" datatype="number" format="s#,##0">
+                    <cl:celldata std:sid="c-data-5c3421cd"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-92e2dd61" rowindex="0" colindex="23" expr="getSum(&quot;CBGT_MAT_AMT&quot;)">
+                  <cl:output std:sid="output-6959926b" id="opt109" datatype="number" format="s#,##0">
+                    <cl:celldata std:sid="c-data-ca3fc782"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-70d71a02" rowindex="0" colindex="24" expr="getSum(&quot;CBGT_LAB_UNTPRC&quot;)">
+                  <cl:output std:sid="output-4a3af3b9" id="opt110" datatype="number" format="s#,##0">
+                    <cl:celldata std:sid="c-data-6563cf6a"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-9fb60ade" rowindex="0" colindex="25" expr="getSum(&quot;CBGT_LAB_AMT&quot;)">
+                  <cl:output std:sid="output-3ece3c7a" id="opt111" datatype="number" format="s#,##0">
+                    <cl:celldata std:sid="c-data-e83fb520"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-b4107a38" rowindex="0" colindex="26" expr="getSum(&quot;CBGT_EXPN_UNTPRC&quot;)">
+                  <cl:output std:sid="output-33ee2417" id="opt112" datatype="number" format="s#,##0">
+                    <cl:celldata std:sid="c-data-27f5b6a7"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-96c2a2bb" rowindex="0" colindex="27" expr="getSum(&quot;CBGT_EXPN_AMT&quot;)">
+                  <cl:output std:sid="output-00642e01" id="opt113" datatype="number" format="s#,##0">
+                    <cl:celldata std:sid="c-data-58db0552"/>
+                  </cl:output>
+                </cl:gridcell>
+                <cl:gridcell std:sid="ggf-cell-717c6a4e" rowindex="0" colindex="28" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-883403c9" rowindex="0" colindex="29" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-2cd2a7c5" rowindex="0" colindex="30" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-f363d326" rowindex="0" colindex="31" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-acb05957" rowindex="0" colindex="32" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-7efd46e5" rowindex="0" colindex="33" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-cacd484b" rowindex="0" colindex="34" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-50c27182" rowindex="0" colindex="35" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-9d057ae3" rowindex="0" colindex="36" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-a849b387" rowindex="0" colindex="37" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-af634156" rowindex="0" colindex="38" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-1b437acd" rowindex="0" colindex="39" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-f30c4da4" rowindex="0" colindex="40" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-7bea2fd0" rowindex="0" colindex="41" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-339ae216" rowindex="0" colindex="42" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-0dec054e" rowindex="0" colindex="43" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-698ebb68" rowindex="0" colindex="44" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-3a891e86" rowindex="0" colindex="45" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-adaeb6e1" rowindex="0" colindex="46" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-cfebdacd" rowindex="0" colindex="47" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-565f21f5" rowindex="0" colindex="6" expr="&quot;&quot;"/>
+                <cl:gridcell std:sid="ggf-cell-932f995c" rowindex="0" colindex="7" expr="&quot;&quot;"/>
+              </cl:gridgroupfooter>
+            </cl:gridrowgroup>
+          </cl:gridrowgrouplist>
+        </cl:grid>
+        <cl:formlayout std:sid="f-layout-a923657b" scrollable="false" hspace="0px" vspace="8px" top-margin="16px" right-margin="16px" bottom-margin="16px" left-margin="16px">
+          <cl:rows length="28" unit="PIXEL" autoSizing="true"/>
+          <cl:rows length="28" unit="PIXEL" autoSizing="true" hidden="false" shadecolor="transparent" syncminlength="false"/>
+          <cl:rows length="1" unit="FRACTION" hidden="false" shadecolor="transparent"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-c03b18cb" scrollable="false" hspace="16px" vspace="16px">
+        <cl:rows length="1" unit="FRACTION" hidden="false" shadetype="NONE" shadecolor="transparent"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-ce95d3e3" hspace="0px" vspace="16px" top-margin="16px" right-margin="24px" bottom-margin="24px" left-margin="24px">
+      <cl:rows length="26" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+      <cl:rows length="104" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+      <cl:rows length="48" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+      <cl:rows length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

@@ -1,0 +1,193 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-b2e24a61" version="1.0.5542">
+  <head std:sid="head-ee58bef2">
+    <std:metadata>
+      <std:property key="template-file" value="templates/poc/빈페이지.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-bb62953f" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-2078f791" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-19e004b7" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="375"/>
+    <cl:model std:sid="model-3ce95ac2"/>
+    <cl:appspec title="로컬파일 제어"/>
+  </head>
+  <body std:sid="body-e4f66bc9">
+    <cl:listener std:sid="listener-d31cc39e" name="init" handler="onBodyInit"/>
+    <cl:group std:sid="group-0f7d1067">
+      <std:metadata>
+        <std:property key="template-uuid" value="f91b19be-4854-4d7d-b7e1-c43b9a18b816"/>
+        <std:property key="template-rev" value="13"/>
+      </std:metadata>
+      <cl:verticaldata std:sid="v-data-d84284a5" width="1024px" height="807px" autosize="height"/>
+      <cl:udc std:sid="ud-control-96472e13" type="udc.com.udcComFormTitle">
+        <cl:verticaldata std:sid="v-data-db3f33af" width="1024px" height="26px" autosize="height"/>
+        <cl:property name="title" value="로컬파일 제어" type="string"/>
+      </cl:udc>
+      <cl:group std:sid="group-b906e537" class="form">
+        <cl:attribute name="table-min-height" value=""/>
+        <cl:attribute name="mobile-column-count" value="1"/>
+        <cl:attribute name="tablet-column-count" value="2"/>
+        <cl:verticaldata std:sid="v-data-0ee41298" width="1024px" height="681px" autosize="height"/>
+        <cl:output std:sid="output-030bb1ec" class="label" value="Read">
+          <cl:formdata std:sid="f-data-3019fbe8" row="0" col="0" rowspan="4" colspan="1"/>
+        </cl:output>
+        <cl:output std:sid="output-5c02814a" class="label" value="파일 읽기">
+          <cl:formdata std:sid="f-data-31bf0930" row="0" col="1" rowspan="2" colspan="1"/>
+        </cl:output>
+        <cl:group std:sid="group-b2911c32">
+          <cl:formdata std:sid="f-data-11a2d4a2" row="0" col="2"/>
+          <cl:button std:sid="button-dbf0ecaf" class="primary" value="파일 읽기">
+            <cl:listener std:sid="listener-118b3979" name="click" handler="onBtn2Click"/>
+            <cl:flowlayoutdata std:sid="f-data-adc56851" width="100px" height="28px" autosize="width"/>
+          </cl:button>
+          <cl:inputbox std:sid="i-box-f15de1bd" id="fileReadPath" value="C:\eb6-common\workspace\eXCFrame-v3-poc\clx-src\app\sce\A4\data\resources\data.txt">
+            <cl:flowlayoutdata std:sid="f-data-d47fe40c" width="calc(100% - 104px)" height="28px" autosize="none"/>
+          </cl:inputbox>
+          <cl:flowlayout std:sid="f-layout-d131462d" hspacing="4" linewrap="false"/>
+        </cl:group>
+        <cl:udc std:sid="ud-control-719ded27" id="udcexamace2" type="udc.exam.udcExamAce">
+          <cl:formdata std:sid="f-data-83d80734" row="1" col="2"/>
+          <cl:property name="language" value="text/x-java" type="enumeration"/>
+        </cl:udc>
+        <cl:output std:sid="output-35f862fc" class="label" value="파일 열기">
+          <cl:formdata std:sid="f-data-6912f8f0" row="2" col="1"/>
+        </cl:output>
+        <cl:group std:sid="group-889b75f1">
+          <cl:formdata std:sid="f-data-5b3b5bfb" row="2" col="2"/>
+          <cl:button std:sid="button-d8dde2b9" class="primary" value="파일 오픈">
+            <cl:listener std:sid="listener-e24192a0" name="click" handler="onBtn3Click"/>
+            <cl:flowlayoutdata std:sid="f-data-c48bf249" width="100px" height="28px" autosize="width"/>
+          </cl:button>
+          <cl:inputbox std:sid="i-box-d60b8611" id="fileOpenPath" value="C:\eb6-common\workspace\eXCFrame-v3-poc\clx-src\app\sce\A4\data\resources\data.txt">
+            <cl:flowlayoutdata std:sid="f-data-aa3a6ac0" width="calc(100% - 104px)" height="28px" autosize="none"/>
+          </cl:inputbox>
+          <cl:flowlayout std:sid="f-layout-fb76e212" hspacing="4" linewrap="false"/>
+        </cl:group>
+        <cl:output std:sid="output-04a73b3f" class="label" value="디렉토리 열기">
+          <cl:formdata std:sid="f-data-17dfce23" row="3" col="1"/>
+        </cl:output>
+        <cl:group std:sid="group-4e373e8a">
+          <cl:formdata std:sid="f-data-7508256f" row="3" col="2"/>
+          <cl:button std:sid="button-cb61dbf6" class="primary" value="디렉토리 오픈">
+            <cl:listener std:sid="listener-8e508784" name="click" handler="onBtn4Click"/>
+            <cl:flowlayoutdata std:sid="f-data-35fa17f1" width="100px" height="28px" autosize="width"/>
+          </cl:button>
+          <cl:inputbox std:sid="i-box-7ed27ed6" id="dirOpenPath" value="C:\eb6-common\workspace\eXCFrame-v3-poc\clx-src\app\sce\A4\data\resources">
+            <cl:flowlayoutdata std:sid="f-data-5ea4b884" width="calc(100% - 128px)" height="28px" autosize="none"/>
+          </cl:inputbox>
+          <cl:flowlayout std:sid="f-layout-dabcddfe" hspacing="4" linewrap="false"/>
+        </cl:group>
+        <cl:output std:sid="output-fa4ac0a7" class="label" value="Write">
+          <cl:formdata std:sid="f-data-39896764" row="4" col="0" rowspan="3" colspan="1"/>
+        </cl:output>
+        <cl:output std:sid="output-c4fd3f7c" class="label" value="파일 생성">
+          <cl:formdata std:sid="f-data-244b2748" row="4" col="1" rowspan="3" colspan="1"/>
+        </cl:output>
+        <cl:group std:sid="group-63cb0b96">
+          <cl:formdata std:sid="f-data-487905d1" row="4" col="2"/>
+          <cl:button std:sid="button-abf63aba" class="primary" value="파일 생성">
+            <cl:listener std:sid="listener-8d469dfd" name="click" handler="onBtn5Click"/>
+            <cl:flowlayoutdata std:sid="f-data-a96a49db" width="100px" height="28px" autosize="width"/>
+          </cl:button>
+          <cl:inputbox std:sid="i-box-322dab17" id="fileWritePath" value="C:\eb6-common\workspace\eXCFrame-v3-poc\clx-src\app\sce\A4\data\resources\NewFile.tsv">
+            <cl:flowlayoutdata std:sid="f-data-fa909763" width="calc(100% - 104px)" height="28px" autosize="none"/>
+          </cl:inputbox>
+          <cl:flowlayout std:sid="f-layout-db84c1c0" hspacing="4" linewrap="false"/>
+        </cl:group>
+        <cl:radiobutton std:sid="r-button-5c0afae4" id="rdb1" value="0">
+          <cl:formdata std:sid="f-data-6f375733" row="5" col="2"/>
+          <cl:item std:sid="item-bbddeee3" label="파일 생성" value="0"/>
+          <cl:item std:sid="item-9a01a0eb" label="파일 덮어쓰기" value="1"/>
+          <cl:item std:sid="item-a70db01b" label="파일 내용 추가" value="2"/>
+        </cl:radiobutton>
+        <cl:udc std:sid="ud-control-43fbf130" id="udcexamace1" type="udc.exam.udcExamAce">
+          <cl:formdata std:sid="f-data-0fd3924d" row="6" col="2"/>
+          <cl:property name="value" value="사번,이름,부서,직책,이메일,입사일,재직상태&#xD;&#xA;1,김철수,개발팀,주임,kim1@example.com,2021-01-01,재직중&#xD;&#xA;2,이영희,마케팅팀,팀장,lee2@example.com,2020-03-15,재직중&#xD;&#xA;3,박민수,영업팀,대리,park3@example.com,2019-06-22,휴직중&#xD;&#xA;4,최지우,인사팀,사원,choi4@example.com,2022-02-10,재직중&#xD;&#xA;5,정우성,재무팀,과장,jung5@example.com,2021-11-05,재직중&#xD;&#xA;6,한예슬,개발팀,대리,han6@example.com,2018-09-30,퇴직&#xD;&#xA;7,오지호,마케팅팀,인턴,oh7@example.com,2023-04-12,재직중&#xD;&#xA;8,장나라,영업팀,차장,jang8@example.com,2020-07-18,재직중&#xD;&#xA;9,윤계상,인사팀,주임,yoon9@example.com,2021-08-25,재직중&#xD;&#xA;10,문근영,재무팀,대리,moon10@example.com,2019-12-01,휴직중&#xD;&#xA;11,이준기,개발팀,책임,lee11@example.com,2017-03-11,재직중&#xD;&#xA;12,김하늘,마케팅팀,이사,kim12@example.com,2020-10-22,재직중&#xD;&#xA;13,강동원,영업팀,팀장,kang13@example.com,2021-05-19,재직중&#xD;&#xA;14,배두나,인사팀,파트장,bae14@example.com,2023-01-09,재직중&#xD;&#xA;15,유아인,재무팀,실장,yoo15@example.com,2022-08-14,재직중&#xD;&#xA;16,수지,개발팀,선임,suzy16@example.com,2021-06-03,재직중&#xD;&#xA;17,고아라,마케팅팀,기획자,go17@example.com,2020-09-27,재직중&#xD;&#xA;18,이제훈,영업팀,사원,lee18@example.com,2022-05-30,재직중&#xD;&#xA;19,김소현,인사팀,강사,kim19@example.com,2023-03-21,재직중&#xD;&#xA;20,한소희,재무팀,회계사,han20@example.com,2020-01-01,재직중" type="string"/>
+          <cl:property name="language" value="text/html" type="enumeration"/>
+          <cl:property name="readonly" value="false" type="boolean"/>
+        </cl:udc>
+        <cl:output std:sid="output-52554f71" class="label" value="Copy">
+          <cl:formdata std:sid="f-data-6a71977e" row="7" col="0" rowspan="2" colspan="1"/>
+        </cl:output>
+        <cl:output std:sid="output-4f5fa9ae" class="label" value="파일 복사">
+          <cl:formdata std:sid="f-data-96c9dbce" row="7" col="1" rowspan="2" colspan="1"/>
+        </cl:output>
+        <cl:group std:sid="group-f8216b5a">
+          <cl:formdata std:sid="f-data-554fc69f" row="7" col="2"/>
+          <cl:button std:sid="button-bd911352" class="primary" value="파일 복사">
+            <cl:listener std:sid="listener-76a10995" name="click" handler="onBtnFileCopyClick"/>
+            <cl:flowlayoutdata std:sid="f-data-437e9151" width="100px" height="28px" autosize="width"/>
+          </cl:button>
+          <cl:flowlayout std:sid="f-layout-b6fbc609" hspacing="4" linewrap="false"/>
+        </cl:group>
+        <cl:output std:sid="output-3dac20ea" class="label" value="Delete">
+          <cl:formdata std:sid="f-data-9c8b5a63" row="9" col="0"/>
+        </cl:output>
+        <cl:output std:sid="output-43b9f6fe" class="label" value="파일 삭제">
+          <cl:formdata std:sid="f-data-4cc82c71" row="9" col="1"/>
+        </cl:output>
+        <cl:group std:sid="group-aa8b33ee">
+          <cl:formdata std:sid="f-data-ff751e84" row="9" col="2"/>
+          <cl:button std:sid="button-ab208852" class="primary" value="파일 삭제">
+            <cl:listener std:sid="listener-f5608950" name="click" handler="onBtn6Click"/>
+            <cl:flowlayoutdata std:sid="f-data-dfe46a0d" width="100px" height="28px" autosize="width"/>
+          </cl:button>
+          <cl:inputbox std:sid="i-box-36dc037e" id="fileDeletePath" value="C:\eb6-common\workspace\eXCFrame-v3-poc\clx-src\app\sce\A4\data\resources\copy\CopyFile.tsv">
+            <cl:flowlayoutdata std:sid="f-data-9fd0972c" width="calc(100% - 104px)" height="28px" autosize="none"/>
+          </cl:inputbox>
+          <cl:flowlayout std:sid="f-layout-466b8bca" hspacing="4" linewrap="false"/>
+        </cl:group>
+        <cl:group std:sid="group-49d45a8c">
+          <cl:formdata std:sid="f-data-9498c5d1" width="100" height="-46" row="8" col="2" ignore-layout-spacing="true"/>
+          <cl:inputbox std:sid="i-box-112e139e" id="ipbSrcPath" value="C:\eb6-common\workspace\eXCFrame-v3-poc\clx-src\app\sce\A4\data\resources\NewFile.tsv">
+            <cl:formdata std:sid="f-data-d1976c27" row="0" col="1"/>
+          </cl:inputbox>
+          <cl:inputbox std:sid="i-box-2bcf4dea" id="ipbTargetPath" value="C:\eb6-common\workspace\eXCFrame-v3-poc\clx-src\app\sce\A4\data\resources\copy\CopyFile.tsv">
+            <cl:formdata std:sid="f-data-8d00a88c" row="1" col="1"/>
+          </cl:inputbox>
+          <cl:radiobutton std:sid="r-button-d67f56b1" id="rdbCopy" value="0">
+            <cl:formdata std:sid="f-data-773bb4d0" row="2" col="1"/>
+            <cl:item std:sid="item-724fc1a0" label="파일 복사(중복 불가)" value="0"/>
+            <cl:item std:sid="item-3017cfd0" label="파일 복사(파일 존재 시, 내용 추가)" value="1"/>
+          </cl:radiobutton>
+          <cl:output std:sid="output-7157ccb4" class="label" value="원본 파일 경로">
+            <cl:formdata std:sid="f-data-f3607b78" row="0" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-f78b2c5b" class="label" value="복사할 위치 경로">
+            <cl:formdata std:sid="f-data-503fddea" row="1" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-9c478db9" class="label" value="파일 복사 옵션">
+            <cl:formdata std:sid="f-data-0a0d281d" row="2" col="0"/>
+          </cl:output>
+          <cl:formlayout std:sid="f-layout-c196dec7" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="28" unit="PIXEL"/>
+            <cl:rows length="28" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="28" unit="PIXEL"/>
+            <cl:columns length="180" unit="PIXEL" autoSizing="true"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-d1049485" scrollable="false" hspace="16px" vspace="17px" top-margin="8px" right-margin="8px" bottom-margin="8px" left-margin="8px" hseparatorwidth="1" hseparatortype="BY_CLASS" vseparatorwidth="1" vseparatortype="BY_CLASS">
+          <cl:rows length="28" unit="PIXEL" autoSizing="true"/>
+          <cl:rows length="80" unit="PIXEL" autoSizing="false" shadetype="NONE" shadecolor="transparent" syncminlength="true"/>
+          <cl:rows length="28" unit="PIXEL" autoSizing="true"/>
+          <cl:rows length="28" unit="PIXEL" autoSizing="true"/>
+          <cl:rows length="28" unit="PIXEL" autoSizing="true"/>
+          <cl:rows length="28" unit="PIXEL" autoSizing="true"/>
+          <cl:rows length="150" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          <cl:rows length="28" unit="PIXEL" autoSizing="true"/>
+          <cl:rows length="83" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          <cl:rows length="28" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+          <cl:columns length="100" unit="PIXEL" shadetype="BY_CLASS"/>
+          <cl:columns length="180" unit="PIXEL" shadetype="BY_CLASS"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-942be11e" spacing="8"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-6c29c5cc" scrollable="true" spacing="16" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

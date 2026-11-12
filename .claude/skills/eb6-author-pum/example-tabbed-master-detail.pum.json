@@ -1,0 +1,176 @@
+{
+    "title": "[시연] 일반/세부 조회, 마스터-디테일",
+    "description": "두가지 세부 수준의 검색과, 마스터 디테일 구조화면입니다.",
+    "contents": [
+        {
+            "type": "compose",
+            "title": "검색",
+            "subject": "사원",
+            "layout": "tab",
+            "contents": [
+                {
+                    "type": "field-set",
+                    "title": "일반",
+                    "purpose": "search",
+                    "fields": [
+                        {
+                            "label": "부서",
+                            "dataType": "문자열",
+                            "required": true
+                        },
+                        {
+                            "label": "직급",
+                            "dataType": "문자열"
+                        },
+                        {
+                            "label": "성명",
+                            "dataType": "이름",
+                            "required": true
+                        },
+                        {
+                            "label": "사번",
+                            "dataType": "숫자",
+                            "required": true
+                        },
+                        {
+                            "label": "휴가 기간",
+                            "dataType": "날짜범위"
+                        }
+                    ]
+                },
+                {
+                    "type": "field-set",
+                    "title": "세부",
+                    "subject": "사원",
+                    "purpose": "search",
+                    "fields": [
+                        {
+                            "label": "부서",
+                            "dataType": "문자열"
+                        },
+                        {
+                            "label": "직급",
+                            "dataType": "문자열"
+                        },
+                        {
+                            "label": "성명",
+                            "dataType": "이름"
+                        },
+                        {
+                            "label": "사번",
+                            "dataType": "숫자"
+                        },
+                        {
+                            "label": "휴가 기간",
+                            "dataType": "날짜범위"
+                        },
+                        {
+                            "label": "휴가 사유",
+                            "dataType": "문자열"
+                        },
+                        {
+                            "label": "승인자",
+                            "dataType": "이름"
+                        }
+                    ]
+                }
+            ],
+            "actions": [
+                {
+                    "label": "재조회"
+                },
+                {
+                    "label": "조회",
+                    "kind": "primary"
+                }
+            ]
+        },
+        {
+            "type": "data-grid",
+            "title": "검색 결과",
+            "description": "편집 할 데이터를 선택할 수 있습니다.",
+            "subject": "사원",
+            "purpose": "read",
+            "fields": [
+                {
+                    "label": "부서",
+                    "dataType": "문자열",
+                    "required": true
+                },
+                {
+                    "label": "직급",
+                    "dataType": "문자열"
+                },
+                {
+                    "label": "성명",
+                    "dataType": "이름",
+                    "required": true
+                },
+                {
+                    "label": "사번",
+                    "dataType": "숫자",
+                    "required": true
+                },
+                {
+                    "label": "휴가 사유",
+                    "dataType": "문자열"
+                },
+                {
+                    "label": "연락처",
+                    "dataType": "전화번호"
+                },
+                {
+                    "label": "승인자",
+                    "dataType": "이름"
+                }
+            ],
+            "actions": [
+                {
+                    "label": "엑셀로 저장",
+                    "kind": "primary"
+                }
+            ]
+        },
+        {
+            "type": "field-set",
+            "title": "세부 사항",
+            "purpose": "read",
+            "fields": [
+                {
+                    "label": "부서",
+                    "dataType": "문자열"
+                },
+                {
+                    "label": "직급",
+                    "dataType": "문자열"
+                },
+                {
+                    "label": "성명",
+                    "dataType": "이름"
+                },
+                {
+                    "label": "사번",
+                    "dataType": "숫자"
+                },
+                {
+                    "label": "휴가 사유",
+                    "dataType": "문자열"
+                },
+                {
+                    "label": "연락처",
+                    "dataType": "전화번호"
+                },
+                {
+                    "label": "승인자",
+                    "dataType": "이름"
+                }
+            ],
+            "actions": [
+                {
+                    "label": "인쇄",
+                    "kind": "primary"
+                }
+            ]
+        }
+    ]
+}

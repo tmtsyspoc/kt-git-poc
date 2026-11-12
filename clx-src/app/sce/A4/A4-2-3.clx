@@ -1,0 +1,437 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-04739e27" version="1.0.5210">
+  <head std:sid="head-859418fd">
+    <screen std:sid="screen-540e5df6" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="true" customHeight="833" customWidth="800" active="true"/>
+    <screen std:sid="screen-18236d98" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-9404a431" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-73cbccc4">
+      <cl:dataset comment="프로세스 목록" std:sid="d-set-ef6e9f6d" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="" std:sid="d-column-c812ca4f" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-3e5eca5d" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn comment="" std:sid="d-column-a9d0314b" name="SUB_TITLE"/>
+          <cl:datacolumn comment="" std:sid="d-column-68dec1a3" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-43742f6e" name="CONT" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-96c2f4ad" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-8498462a" name="SUB_CODE"/>
+          <cl:datacolumn comment="" std:sid="d-column-421ae73f" name="TARGET_CTRL"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[대량 렌더링 성능]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[대량 목록과 복합 컴포넌트에서 멈춤·유실 없이 동작한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">○</cl:datavalue>
+            <cl:datavalue columnname="CONT">목적</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL">　</cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT">P.41</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">대용량 데이터 로딩시 빠른 성능 및 패킷을 절감하여 서버 부하를 줄이며 , GRID 에서 대용량 데이터를 원할히 조작 할 수 있어야 한다 .\n( 예 : 멀티소팅 , 열 변경 )</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL">　</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">○</cl:datavalue>
+            <cl:datavalue columnname="CONT">검증 조건</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL">　</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">20 컬럼, 30 만건의 대량 더미 데이터를 처리한다.</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE">20 컬럼, 30 만건</cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL">　</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">솔루션 회사는 더미 데이터를 로딩하는 검증화면을 구현한다.</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL">　</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">데이터 건수 및 로딩 속도를 화면에 표출한다.</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL">　</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">○</cl:datavalue>
+            <cl:datavalue columnname="CONT">측정</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL">　</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">검증 화면을 실행하여 대량 데이터를 호출한다.</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL">　</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">측정 시간을 체크한다.</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL">　</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">패킷 사이즈를 측정한다.</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL">　</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">멀티 소팅이 되는지 확인한다.</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL">　</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">진행</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">20개의 컬럼, 30 만건의 대용량 데이터를 조회한다.</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE">대용량 데이터를 조회</cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL">btn1</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">진행</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">조회 시 데이터 건수와 로딩 속도가 화면에 시각적으로 표출되는지 확인한다.(스크롤 이동)</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">로딩 속도</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE">데이터 건수,스크롤 이동</cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL">grpFrmOp</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">진행</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">스크롤 이동시 브라우저 멈춤없이 빠른 속도로 렌더링 되는지 확인한다.</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">브라우저 멈춤없이</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">진행</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">•</cl:datavalue>
+            <cl:datavalue columnname="CONT">대용량 데이터 전용 프로토콜인 TSV를 제공</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">TSV</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">진행</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">•</cl:datavalue>
+            <cl:datavalue columnname="CONT">JSON,XML과 같은 데이터 통신보다 용량이 작으며, 로우 단위로 Streaming형식으로 분할된 데이터를 전송하는 대용량 데이터 통신 프로토콜</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE">Streaming형식,분할</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">진행</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">조회가 완료 된 후 최초 로드 시간과 처리시간을 확인한다.</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">　</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE">네트워크 시간,처리시간</cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL">udcGrdPrfCnt</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">진행</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">그리드 헤더의 컬럼을 클릭하여 정렬을 확인한다. (멀티소팅)</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">멀티소팅</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE">컬럼을 클릭하여 정렬</cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL">grdList</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">진행</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">그리드 헤더의 컬럼을 드래그 &amp; 드롭하여 컬럼이동을 확인한다.</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">컬럼이동</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE">드래그,드롭</cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL">grdList</cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+      <cl:datawindow std:sid="d-set-c1780089" id="dsCovInspe">
+        <cl:listener std:sid="listener-366617bb" name="fetch" handler="ondsCovInspeFetch"/>
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="고객번호" std:sid="d-column-062997a6" info="고객번호" name="column1" datatype="number" displayonly="false"/>
+          <cl:datacolumn comment="발신전화번호" std:sid="d-column-223d4ee9" info="발신전화번호" name="column2" datatype="string" displayonly="false"/>
+          <cl:datacolumn comment="안내메시지 제목" std:sid="d-column-297f12d9" info="안내메시지 제목" name="column3" datatype="string" displayonly="false"/>
+          <cl:datacolumn comment="고객안내 메시지" std:sid="d-column-4f1ee749" info="고객안내 메시지" name="column4" datatype="string" displayonly="false"/>
+          <cl:datacolumn comment="수신인휴대폰번호" std:sid="d-column-7e3681c7" info="수신인휴대폰번호" name="column5" datatype="string" displayonly="false"/>
+          <cl:datacolumn comment="안내코드" std:sid="d-column-753e3216" info="안내코드" name="column6" datatype="string" displayonly="false"/>
+          <cl:datacolumn comment="설계사명" std:sid="d-column-4e2fc9ed" info="설계사명" name="column7" datatype="string" displayonly="false"/>
+          <cl:datacolumn comment="안내일자" std:sid="d-column-99be3539" info="안내일자" name="column8" datatype="string" displayonly="false"/>
+          <cl:datacolumn comment="안내시간" std:sid="d-column-2bbb2c8d" info="안내시간" name="column9" datatype="string" displayonly="false"/>
+          <cl:datacolumn comment="안내채널" std:sid="d-column-7f9fe63a" info="안내채널" name="column10" datatype="string" displayonly="false"/>
+          <cl:datacolumn comment="담당사원번호" std:sid="d-column-9267a8cb" info="담당사원번호" name="column11" datatype="string" displayonly="false"/>
+          <cl:datacolumn comment="담당전화번호" std:sid="d-column-5c153519" info="담당전화번호" name="column12" datatype="string" displayonly="false"/>
+          <cl:datacolumn comment="담당메시지 제목" std:sid="d-column-026a8686" info="담당메시지 제목" name="column13" datatype="string" displayonly="false"/>
+          <cl:datacolumn comment="담당자안내 메시지" std:sid="d-column-d5790a3c" info="담당자안내 메시지" name="column14" datatype="string" displayonly="false"/>
+          <cl:datacolumn comment="담당자휴대폰번호" std:sid="d-column-e84fa56b" info="담당자휴대폰번호" name="column15" datatype="string" displayonly="false"/>
+          <cl:datacolumn comment="담당코드" std:sid="d-column-2bcda053" info="담당코드" name="column16" datatype="string" displayonly="false"/>
+          <cl:datacolumn comment="담당자명" std:sid="d-column-a10cab0b" info="담당자명" name="column17" datatype="string" displayonly="false"/>
+          <cl:datacolumn comment="전달일자" std:sid="d-column-3a4e515b" info="전달일자" name="column18" datatype="string" displayonly="false"/>
+          <cl:datacolumn comment="전달시간" std:sid="d-column-2537dc01" info="전달시간" name="column19" datatype="string" displayonly="false"/>
+          <cl:datacolumn comment="전달채널" std:sid="d-column-a4dae631" info="전달채널" name="column20" datatype="string" displayonly="false"/>
+        </cl:datacolumnlist>
+      </cl:datawindow>
+      <cl:datamap std:sid="d-map-f27626de" id="dmParam">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-0b2e88f2" name="fileNm" defaultvalue="대용량데이터_30만건.xlsx"/>
+          <cl:datacolumn std:sid="d-column-cc8bb23a" name="filePath" datatype="string" defaultvalue="data/T13/"/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+      <cl:submission std:sid="submission-6991e28d" id="subList" action="/A37/uploadTxt.do" responsetype="blob" fallbackContentType="text/tab-separated-values">
+        <cl:listener std:sid="listener-e82f8967" name="submit-progress" handler="onSubUpload2SubmitProgress"/>
+        <cl:listener std:sid="listener-5cfb12f9" name="submit-load-progress" handler="onSubListSubmitLoadProgress"/>
+      </cl:submission>
+      <cl:submission std:sid="submission-2ffbe639" id="fetch_progress" action="/A37/progress.do">
+        <cl:listener std:sid="listener-bde70067" name="submit-done" handler="onFetch_progressSubmitDone"/>
+      </cl:submission>
+      <cl:submission std:sid="submission-963cea75" id="subFileTsv" action="" responsetype="blob" fallbackContentType="text/tab-separated-values">
+        <cl:listener std:sid="listener-c3f57d25" name="submit-load-progress" handler="onSubFileTsvSubmitLoadProgress"/>
+      </cl:submission>
+      <cl:submission std:sid="submission-f22de687" id="subLogDown" action="/bmt/logServer.do"/>
+    </cl:model>
+    <cl:appspec title="서버성능"/>
+  </head>
+  <body std:sid="body-76d901de" class="wrap">
+    <cl:listener std:sid="listener-35d665f2" name="load" handler="onBodyLoad2"/>
+    <cl:udc std:sid="ud-control-8c71e0ab" id="udcComAppHeader" type="udc.com.udcComAppHeader">
+      <cl:formdata std:sid="f-data-bdfc9192" row="0" col="0" rowspan="1" colspan="1"/>
+      <cl:property name="title" value="4.1 대용량 데이터 운용 성능" type="string"/>
+      <cl:property name="isExpandAllPocProcess" value="true" type="boolean"/>
+      <cl:property name="isGridInit" value="false" type="boolean"/>
+    </cl:udc>
+    <cl:group std:sid="group-648ab6f2" id="grpSearch" class="sch-filter-box">
+      <std:metadata>
+        <std:property key="template-uuid" value="ced8aa06-0be6-4966-954d-2fe3acc0398b"/>
+        <std:property key="template-rev" value="4"/>
+      </std:metadata>
+      <cl:attribute name="mobile-column-count" value="1"/>
+      <cl:formdata std:sid="f-data-a84517bd" row="1" col="0"/>
+      <cl:group std:sid="group-df612196" clipcontent="false">
+        <cl:attribute name="mobile-column-count" value="1"/>
+        <cl:formdata std:sid="f-data-990543cf" width="100" height="23" row="0" col="0" rowspan="1" colspan="1"/>
+        <cl:radiobutton std:sid="r-button-4c8a301b" id="rdbType" fieldLabel="조회방식" value="100000" fixedwidth="false" hspacing="8">
+          <cl:listener std:sid="listener-24cc25dd" name="selection-change" handler="onRdbTypeSelectionChange"/>
+          <cl:attribute name="required" value="Y"/>
+          <cl:formdata std:sid="f-data-ddced263" row="0" col="0"/>
+          <cl:item std:sid="item-b977e870" label="10만건" value="100000" tooltip=""/>
+          <cl:item std:sid="item-48069cf3" label="20만건" value="200000"/>
+          <cl:item std:sid="item-93d1488f" label="30만건" value="300000"/>
+        </cl:radiobutton>
+        <cl:output std:sid="output-59595705" id="opt1" class="label required" value="파일선택">
+          <cl:formdata std:sid="f-data-67615d6d" row="0" col="1"/>
+        </cl:output>
+        <cl:fileinput std:sid="f-input-34352f09" id="fit1" fieldLabel="업로드 파일" acceptfile=".xlsx,.txt">
+          <cl:listener std:sid="listener-6036dbdb" name="value-change" handler="onFit1ValueChange"/>
+          <cl:attribute name="required" value="Y"/>
+          <cl:formdata std:sid="f-data-b65c6082" row="0" col="2"/>
+        </cl:fileinput>
+        <cl:formlayout std:sid="f-layout-f745a671" scrollable="false" hspace="5px" vspace="0px">
+          <cl:rows length="28"/>
+          <cl:columns length="200" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+          <cl:columns length="100" autoSizing="true" hidden="true" syncminlength="false"/>
+          <cl:columns length="150" autoSizing="false" hidden="true" syncminlength="true"/>
+          <cl:columns length="1" unit="FRACTION" autoSizing="true" shadecolor="transparent"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:group std:sid="group-84966c3d" class="search-button-group">
+        <cl:attribute name="needs-auto-height" value="true"/>
+        <cl:formdata std:sid="f-data-1c7496a5" row="0" col="1"/>
+        <cl:button std:sid="button-2787823e" id="btnSearch" class="primary btn-search" value="조회" icon="0">
+          <cl:listener std:sid="listener-b5e163be" name="click" handler="onBtn1Click"/>
+          <cl:flowlayoutdata std:sid="f-data-1fb5d4ae" width="86px" height="28px" autosize="width"/>
+          <cl:iconstyle class="ico-search"/>
+        </cl:button>
+        <cl:flowlayout std:sid="f-layout-bdd676a6" scrollable="false" vspacing="0" halign="right" valign="middle" linewrap="false"/>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-6fe70bc3" scrollable="false" hspace="0px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="28" unit="PIXEL"/>
+        <cl:columns length="1" unit="FRACTION" autoSizing="false" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+        <cl:columns length="200" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" minlength="0" syncminlength="false"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-ef53921c" id="grpData" class="conts-area" clipcontent="false">
+      <cl:formdata std:sid="f-data-0217bae0" width="100" height="90" row="2" col="0"/>
+      <cl:group std:sid="group-1baf5829" class="conts-wrap">
+        <cl:formdata std:sid="f-data-9e35dd85" row="0" col="0" rowspan="1" colspan="1"/>
+        <cl:group std:sid="group-e89d3157" id="grp4">
+          <cl:formdata std:sid="f-data-4a3ad774" row="1" col="0"/>
+          <cl:udc std:sid="ud-control-f5272f95" id="udcComFormTitle1" type="udc.com.udcComFormTitle">
+            <cl:formdata std:sid="f-data-233852ce" row="0" col="0"/>
+            <cl:property name="title" value="LMS" type="string"/>
+          </cl:udc>
+          <cl:udc std:sid="ud-control-dd79cb62" id="udcPocGrdPrfCount1" type="udc.poc.udcPocGrdPrfCount">
+            <cl:formdata std:sid="f-data-da905fa9" row="0" col="1"/>
+            <cl:property name="randerVisible" value="false" type="boolean"/>
+            <cl:property name="startTimeVisible" value="true" type="boolean"/>
+            <cl:property name="endTimeVisible" value="true" type="boolean"/>
+            <cl:property name="totalTimeVisible" value="true" type="boolean"/>
+            <cl:property name="rowCountVisible" value="true" type="boolean"/>
+            <cl:property name="firstLoadTimeVisible" value="true" type="boolean"/>
+            <cl:property name="uploadTimeVisible" value="false" type="boolean"/>
+          </cl:udc>
+          <cl:formlayout std:sid="f-layout-658d516e" scrollable="false" hspace="8px" vspace="8px">
+            <cl:rows length="30" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="406" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:grid std:sid="grid-c6415dca" id="grd1" fieldLabel="LMS 목록" readonly="true" datasetid="dsCovInspe" resizablecolumns="all" columnMovable="true">
+          <cl:formdata std:sid="f-data-55905098" row="2" col="0"/>
+          <cl:gridcolumn std:sid="g-column-c02c3a8d" width="89px"/>
+          <cl:gridcolumn std:sid="g-column-b6be6474" width="110px"/>
+          <cl:gridcolumn std:sid="g-column-eb314e3d" width="180px"/>
+          <cl:gridcolumn std:sid="g-column-f784614c" width="500px"/>
+          <cl:gridcolumn std:sid="g-column-51035f77" width="130px"/>
+          <cl:gridcolumn std:sid="g-column-7bdf1b0b" width="120px"/>
+          <cl:gridcolumn std:sid="g-column-bcd0d6c6" width="120px"/>
+          <cl:gridcolumn std:sid="g-column-9bcf82e6" width="120px"/>
+          <cl:gridcolumn std:sid="g-column-04a32728" width="120px"/>
+          <cl:gridcolumn std:sid="g-column-ed680116" width="120px"/>
+          <cl:gridcolumn std:sid="g-column-a82f1f1d" width="120px"/>
+          <cl:gridcolumn std:sid="g-column-08507552" width="120px"/>
+          <cl:gridcolumn std:sid="g-column-4e1c9573" width="230px"/>
+          <cl:gridcolumn std:sid="g-column-ae2b4831" width="500px"/>
+          <cl:gridcolumn std:sid="g-column-17b86be6" width="120px"/>
+          <cl:gridcolumn std:sid="g-column-a65332cf" width="120px"/>
+          <cl:gridcolumn std:sid="g-column-5e7dc4d3" width="120px"/>
+          <cl:gridcolumn std:sid="g-column-4f7aa463" width="120px"/>
+          <cl:gridcolumn std:sid="g-column-2ec1fe83" width="120px"/>
+          <cl:gridcolumn std:sid="g-column-496059b3" width="120px"/>
+          <cl:gridheader std:sid="gh-band-303bdde5">
+            <cl:gridrow std:sid="g-row-1887e082" height="44px"/>
+            <cl:gridcell std:sid="gh-cell-f72b1ba9" rowindex="0" colindex="0" targetcolumnname="column1" sortable="true" text="고객번호"/>
+            <cl:gridcell std:sid="gh-cell-b125f16e" rowindex="0" colindex="1" targetcolumnname="column2" sortable="true" text="발신전화번호"/>
+            <cl:gridcell std:sid="gh-cell-1000921a" rowindex="0" colindex="2" targetcolumnname="column3" sortable="true" text="안내메시지 제목"/>
+            <cl:gridcell std:sid="gh-cell-180fd4d6" rowindex="0" colindex="3" targetcolumnname="column4" sortable="true" text="고객안내 메시지"/>
+            <cl:gridcell std:sid="gh-cell-17ef6730" rowindex="0" colindex="4" targetcolumnname="column5" sortable="true" text="수신인휴대폰번호"/>
+            <cl:gridcell std:sid="gh-cell-43b8fbc8" rowindex="0" colindex="5" targetcolumnname="column6" sortable="true" text="안내코드"/>
+            <cl:gridcell std:sid="gh-cell-b5c80da7" rowindex="0" colindex="6" targetcolumnname="column7" sortable="true" text="설계사명"/>
+            <cl:gridcell std:sid="gh-cell-626ba3fd" rowindex="0" colindex="7" targetcolumnname="column8" sortable="true" text="안내일자"/>
+            <cl:gridcell std:sid="gh-cell-9962a929" rowindex="0" colindex="8" targetcolumnname="column9" sortable="true" text="안내시간"/>
+            <cl:gridcell std:sid="gh-cell-5488566d" rowindex="0" colindex="9" targetcolumnname="column10" sortable="true" text="안내채널"/>
+            <cl:gridcell std:sid="gh-cell-0e9794c1" rowindex="0" colindex="10" targetcolumnname="column11" sortable="true" text="담당사원번호"/>
+            <cl:gridcell std:sid="gh-cell-097e620d" rowindex="0" colindex="11" targetcolumnname="column12" sortable="true" text="담당전화번호"/>
+            <cl:gridcell std:sid="gh-cell-46bb5035" rowindex="0" colindex="12" targetcolumnname="column13" sortable="true" text="담당메시지 제목"/>
+            <cl:gridcell std:sid="gh-cell-1addb0aa" rowindex="0" colindex="13" targetcolumnname="column14" sortable="true" text="담당자안내 메시지"/>
+            <cl:gridcell std:sid="gh-cell-96e44006" rowindex="0" colindex="14" targetcolumnname="column15" sortable="true" text="담당자휴대폰번호"/>
+            <cl:gridcell std:sid="gh-cell-3ab389ff" rowindex="0" colindex="15" targetcolumnname="column16" sortable="true" text="담당코드"/>
+            <cl:gridcell std:sid="gh-cell-01124514" rowindex="0" colindex="16" targetcolumnname="column17" sortable="true" text="담당자명"/>
+            <cl:gridcell std:sid="gh-cell-45519979" rowindex="0" colindex="17" targetcolumnname="column18" sortable="true" text="전달일자"/>
+            <cl:gridcell std:sid="gh-cell-cb448c3e" rowindex="0" colindex="18" targetcolumnname="column19" sortable="true" text="전달시간"/>
+            <cl:gridcell std:sid="gh-cell-53a4e54a" rowindex="0" colindex="19" targetcolumnname="column20" sortable="true" text="전달채널"/>
+          </cl:gridheader>
+          <cl:griddetail std:sid="gd-band-5b53e37c">
+            <cl:gridrow std:sid="g-row-1a63e9ba" height="45px"/>
+            <cl:gridcell std:sid="gd-cell-e77eb142" rowindex="0" colindex="0" columnname="column1"/>
+            <cl:gridcell std:sid="gd-cell-de44c9ce" rowindex="0" colindex="1" columnname="column2"/>
+            <cl:gridcell std:sid="gd-cell-b2072c2b" rowindex="0" colindex="2" columnname="column3"/>
+            <cl:gridcell std:sid="gd-cell-11ba0ec3" rowindex="0" colindex="3" columnname="column4"/>
+            <cl:gridcell std:sid="gd-cell-46b0f43b" rowindex="0" colindex="4" columnname="column5"/>
+            <cl:gridcell std:sid="gd-cell-9bd3d1f3" rowindex="0" colindex="5" columnname="column6"/>
+            <cl:gridcell std:sid="gd-cell-928d843f" rowindex="0" colindex="6" columnname="column7"/>
+            <cl:gridcell std:sid="gd-cell-4998f91a" rowindex="0" colindex="7" columnname="column8"/>
+            <cl:gridcell std:sid="gd-cell-09706910" rowindex="0" colindex="8" columnname="column9"/>
+            <cl:gridcell std:sid="gd-cell-d0b77312" rowindex="0" colindex="9" columnname="column10"/>
+            <cl:gridcell std:sid="gd-cell-2cce95c5" rowindex="0" colindex="10" columnname="column11"/>
+            <cl:gridcell std:sid="gd-cell-b948b380" rowindex="0" colindex="11" columnname="column12"/>
+            <cl:gridcell std:sid="gd-cell-b38dd719" rowindex="0" colindex="12" columnname="column13"/>
+            <cl:gridcell std:sid="gd-cell-44b91613" rowindex="0" colindex="13" columnname="column14"/>
+            <cl:gridcell std:sid="gd-cell-0d69258f" rowindex="0" colindex="14" columnname="column15"/>
+            <cl:gridcell std:sid="gd-cell-4f6be632" rowindex="0" colindex="15" columnname="column16"/>
+            <cl:gridcell std:sid="gd-cell-b1f7b518" rowindex="0" colindex="16" columnname="column17"/>
+            <cl:gridcell std:sid="gd-cell-298b9656" rowindex="0" colindex="17" columnname="column18"/>
+            <cl:gridcell std:sid="gd-cell-e6baf249" rowindex="0" colindex="18" columnname="column19"/>
+            <cl:gridcell std:sid="gd-cell-9b35ca6a" rowindex="0" colindex="19" columnname="column20"/>
+          </cl:griddetail>
+        </cl:grid>
+        <cl:progress std:sid="progress-68fef491" id="pgr1" class="bg-transparent" max="1000.0">
+          <cl:formdata std:sid="f-data-fd5201c8" row="0" col="0"/>
+        </cl:progress>
+        <cl:formlayout std:sid="f-layout-a0f65eb2" scrollable="false" hspace="0px" vspace="8px" top-margin="16px" right-margin="16px" bottom-margin="16px" left-margin="16px">
+          <cl:rows length="10" unit="PIXEL"/>
+          <cl:rows length="28" unit="PIXEL"/>
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-72668ddb" scrollable="false" hspace="16px" vspace="16px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-657b9be7" scrollable="false" hspace="0px" vspace="16px" top-margin="16px" right-margin="24px" bottom-margin="24px" left-margin="24px">
+      <cl:rows length="40" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+      <cl:rows length="60" unit="PIXEL" autoSizing="true"/>
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

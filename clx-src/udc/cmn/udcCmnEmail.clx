@@ -1,0 +1,52 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-943f270a" version="1.0.6087">
+  <head std:sid="head-fbf86d57">
+    <screen std:sid="screen-87952232" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-6114ce82" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-ab749698" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-cebfa7a3"/>
+    <cl:appspec title="이메일">
+      <cl:property name="id" type="string" bindable="true"/>
+      <cl:property name="domain" type="string" bindable="true"/>
+      <cl:property name="visibleDomainSelecter" type="enumeration" default="combo" bindable="true" std:desc="도메인 선택 콤보박스 보임 여부">
+        <cl:available-value>input</cl:available-value>
+        <cl:available-value>combo</cl:available-value>
+        <cl:available-value>both</cl:available-value>
+      </cl:property>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-b04209c3" style="top:0px; left:0px; width:300px; height:28px;">
+    <cl:listener std:sid="listener-148ff32b" name="property-change" handler="onBodyPropertyChange"/>
+    <cl:listener std:sid="listener-c4a1f6c7" name="load" handler="onBodyLoad"/>
+    <cl:inputbox std:sid="i-box-7d9d5ed2" id="ipbId">
+      <cl:apppropbind property="value" app-property="id"/>
+      <cl:formdata std:sid="f-data-6fee15da" row="0" col="0"/>
+    </cl:inputbox>
+    <cl:output std:sid="output-bcdd7f56" value="@">
+      <cl:formdata std:sid="f-data-a63dc1b8" row="0" col="1"/>
+    </cl:output>
+    <cl:inputbox std:sid="i-box-19d5d221" id="ipbDomain">
+      <cl:apppropbind property="value" app-property="domain"/>
+      <cl:formdata std:sid="f-data-90d86007" row="0" col="2"/>
+    </cl:inputbox>
+    <cl:combobox std:sid="c-box-67e3f71e" id="cmbDomain">
+      <cl:listener std:sid="listener-6d561466" name="selection-change" handler="onComboBoxSelectionChange"/>
+      <cl:formdata std:sid="f-data-f4898562" row="0" col="3"/>
+      <cl:item std:sid="t-item-dab9db8c" label="직접입력" value="value1"/>
+      <cl:item std:sid="t-item-ced152ca" label="naver.com" value="naver.com"/>
+      <cl:item std:sid="t-item-42a270a2" label="hanmail.net" value="hanmail.net"/>
+      <cl:item std:sid="t-item-43db7ab2" label="gmail.com" value="gmail.com"/>
+    </cl:combobox>
+    <cl:formlayout std:sid="f-layout-acd2762c" scrollable="false" hspace="4px" vspace="4px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+      <cl:columns length="20" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      <cl:columns length="2" unit="FRACTION" hidden="true"/>
+      <cl:columns length="2" unit="FRACTION" hidden="false" shadetype="NONE" shadecolor="transparent"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

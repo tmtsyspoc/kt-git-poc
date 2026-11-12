@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-9d09c335" version="1.0.5575">
+  <head std:sid="head-c6c6032c">
+    <screen std:sid="screen-e8bd9d07" id="EXB-FULL" name="EXB-FULL" width="1580px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-0450ba2f" id="EXB-DIV" name="EXB-DIV" width="1128px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-9c59e65a" id="EXB-POP[1024]" name="EXB-POP[1024]" width="1024px" height="576px"/>
+    <screen std:sid="screen-ce9ef72e" id="EXB-POP[800]" name="EXB-POP[800]" width="800px" height="480px"/>
+    <screen std:sid="screen-438abf80" id="EXB-PART" name="EXB-PART" width="672px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-37c05d2d" id="EXB-POP[480]" name="EXB-POP[480]" width="480px" height="320px"/>
+    <cl:model std:sid="model-9c0e1e24">
+      <cl:dataset comment="투자자 조회 응답" std:sid="d-set-fcd129aa" id="dsInvestOut">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-15fe8dc8" name="DATE"/>
+          <cl:datacolumn std:sid="d-column-39a85e99" name="PRPR" datatype="number" displayonly="false"/>
+          <cl:datacolumn std:sid="d-column-8d76b103" name="PRSN_NTBY_RLIM" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-a7c4708f" name="ORGN_NTBY_RLIM" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-00e56707" name="FRGN_NTBY_RLIM" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-b8b62607" name="FUND_NTBY_RLIM" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-1eb4356d" name="IVTR_NTBY_RLIM2" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-3ad25f75" name="INSU_NTBY_RLIM2" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-9917e8d8" name="BANK_NTBY_RLIM2" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-1157df3d" name="SCRT_NTBY_RLIM2" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-a44d2652" name="ETC_CORP_NTBY_RLIM2" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-a949ffbb" name="PE_FUND_NTBY_RLIM2" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-15ba0641" name="MRBN_NTBY_RLIM2" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-4ead8e99" name="FRGN_REG_NTBY_RLIM" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-5abff284" name="FRGN_NTBY_RLIM2" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-235c4a0c" name="PRSN_SELN_VOL" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-6fd8fdad" name="PRSN_SHNU_VOL" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-55d363a9" name="FRGN_SELN_VOL" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-e6c4df77" name="FRGN_SHNU_VOL" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-860fc5f5" name="ORGN_SELN_VOL" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-62f542ef" name="ORGN_SHNU_VOL" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-3c89f4dd" name="FUND_SELN_VOL" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-82832ce0" name="FUND_SHNU_VOL" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-6c160eb7" name="INSU_SELN_VOL" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-b8b28586" name="INSU_SHNU_VOL" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-677a027d" name="BANK_SELN_VOL" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-12824e99" name="BANK_SHNU_VOL" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-e8b4515e" name="IVTR_SELN_VOL" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-518b5722" name="IVTR_SHNU_VOL" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-9ffcf4dc" name="MRBN_SELN_VOL" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-fd5a60c7" name="MRBN_SHNU_VOL" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-2f6d1811" name="ETC_SELN_VOL" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-5e3a3666" name="ETC_SHNU_VOL" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-ca3289ce" name="SCRT_SELN_VOL" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-abb53a3e" name="SCRT_SHNU_VOL" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-b72af6ac" name="ETC_CORP_SELN_VOL" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-206201f0" name="ETC_CORP_SHNU_VOL" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-c3bf6556" name="PE_FUND_SELN_VOL" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-1363c123" name="PE_FUND_SHNU_VOL" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-db90ec8b" name="PGRT_SELN_VOL" datatype="number"/>
+          <cl:datacolumn std:sid="d-column-d91c1795" name="PGRT_SHNU_VOL" datatype="number"/>
+          <cl:datacolumn comment="외국인 순매수" std:sid="d-column-711779a4" name="FRGN_NTBY_QTY2" datatype="number"/>
+          <cl:datacolumn comment="개인 순매수" std:sid="d-column-a66165d2" name="PRSN_NTBY_QTY" datatype="expression" expression="PRSN_SHNU_VOL - PRSN_SELN_VOL"/>
+          <cl:datacolumn comment="외국인 순매수(계산됨)" std:sid="d-column-59b2a3f0" info="" name="FRGN_NTBY_QTY" datatype="expression" expression="FRGN_SHNU_VOL - FRGN_SELN_VOL"/>
+          <cl:datacolumn comment="기관계 순매수" std:sid="d-column-c40e8fa8" name="ORGN_NTBY_QTY" datatype="expression" expression="ORGN_SHNU_VOL - ORGN_SELN_VOL"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+      <cl:datamap comment="호가조회 요청" std:sid="d-map-c811055d" id="dmHogaIn">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-3466b5b6" name="market" datatype="string" defaultvalue="J"/>
+          <cl:datacolumn std:sid="d-column-1f975aed" name="jongcode" datatype="string" defaultvalue="005930"/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+      <cl:submission comment="투자자조회 GID2205" std:sid="submission-0e03eb81" id="subInvest" method="get" action="app/sce/A15/data/invest.json" mediatype="application/x-www-form-urlencoded;simple">
+        <cl:requestdata dataid="dmHogaIn"/>
+        <cl:responsedata dataid="dsInvestOut" alias="outBlock1"/>
+      </cl:submission>
+    </cl:model>
+    <cl:appspec title="투자자 현황"/>
+  </head>
+  <body std:sid="body-848a6554" style="top:0px; left:0px; width:600px; height:500px;" class="card">
+    <cl:listener std:sid="listener-38ebe442" name="load" handler="onBodyLoad"/>
+    <cl:output std:sid="output-1f1f4501" id="opt5" value="개인">
+      <cl:formdata std:sid="f-data-0adf8892" row="0" col="0"/>
+    </cl:output>
+    <cl:output std:sid="output-6c97bb63" id="opt8" datatype="number" format="s#,##0" displayexp="abs(Number(value)) > 99999 ? Number(value)>0 ? &quot;+&quot;+floor(Number(value)/10000)+&quot;만&quot; : floor(Number(value)/10000)+&quot;만&quot; : text">
+      <cl:expbind property="class" category="CLASS" expression="PRSN_NTBY_QTY > 0 ? &quot;text-wts-red&quot; : &quot;text-wts-blue&quot;"/>
+      <cl:relativebind property="value" columnname="PRSN_NTBY_QTY"/>
+      <cl:selectioncontext selectionProvider="grdInvest"/>
+      <cl:formdata std:sid="f-data-d35bf5b8" row="0" col="1"/>
+    </cl:output>
+    <cl:slider std:sid="slider-a5d665b8" id="sldPrsn" readonly="true" value="50,50" range="true">
+      <cl:expbind property="class" category="CLASS" expression="PRSN_NTBY_QTY > 0 ? &quot;slide-invest up&quot; : &quot;slide-invest&quot;"/>
+      <cl:selectioncontext selectionProvider="grdInvest"/>
+      <cl:formdata std:sid="f-data-1de95471" row="0" col="2"/>
+    </cl:slider>
+    <cl:output std:sid="output-06cfd8db" id="opt6" value="외국인">
+      <cl:formdata std:sid="f-data-930078d6" row="1" col="0"/>
+    </cl:output>
+    <cl:output std:sid="output-de559aaf" id="opt9" datatype="number" format="s#,##0" displayexp="abs(Number(value)) > 99999 ? Number(value)>0 ? &quot;+&quot;+floor(Number(value)/10000)+&quot;만&quot; : floor(Number(value)/10000)+&quot;만&quot; : text">
+      <cl:expbind property="class" category="CLASS" expression="FRGN_NTBY_QTY > 0 ? &quot;text-wts-red&quot; : &quot;text-wts-blue&quot;"/>
+      <cl:relativebind property="value" columnname="FRGN_NTBY_QTY"/>
+      <cl:selectioncontext selectionProvider="grdInvest"/>
+      <cl:formdata std:sid="f-data-a6212406" row="1" col="1"/>
+    </cl:output>
+    <cl:slider std:sid="slider-2c2a8016" id="sldFrgn" readonly="true" value="50,50" range="true">
+      <cl:expbind property="class" category="CLASS" expression="FRGN_NTBY_QTY > 0 ? &quot;slide-invest up&quot; : &quot;slide-invest&quot;"/>
+      <cl:selectioncontext selectionProvider="grdInvest"/>
+      <cl:formdata std:sid="f-data-855571ff" row="1" col="2"/>
+    </cl:slider>
+    <cl:output std:sid="output-33a771bb" id="opt7" value="기관">
+      <cl:formdata std:sid="f-data-ffda2abf" row="2" col="0"/>
+    </cl:output>
+    <cl:output std:sid="output-bc36e123" id="opt10" datatype="number" format="s#,##0" displayexp="abs(Number(value)) > 99999 ? Number(value)>0 ? &quot;+&quot;+floor(Number(value)/10000)+&quot;만&quot; : floor(Number(value)/10000)+&quot;만&quot; : text">
+      <cl:expbind property="class" category="CLASS" expression="ORGN_NTBY_QTY > 0 ? &quot;text-wts-red&quot; : &quot;text-wts-blue&quot;"/>
+      <cl:relativebind property="value" columnname="ORGN_NTBY_QTY"/>
+      <cl:selectioncontext selectionProvider="grdInvest"/>
+      <cl:formdata std:sid="f-data-e3772ce8" row="2" col="1"/>
+    </cl:output>
+    <cl:slider std:sid="slider-d48e73f4" id="sldOrgn" readonly="true" value="50,50" range="true">
+      <cl:expbind property="class" category="CLASS" expression="ORGN_NTBY_QTY > 0 ? &quot;slide-invest up&quot; : &quot;slide-invest&quot;"/>
+      <cl:selectioncontext selectionProvider="grdInvest"/>
+      <cl:formdata std:sid="f-data-21afc2b0" row="2" col="2"/>
+    </cl:slider>
+    <cl:grid std:sid="grid-fbc8c4ff" id="grdInvest" class="table-transparent" datasetid="dsInvestOut">
+      <cl:listener std:sid="listener-67fd4e68" name="selection-change" handler="onGrdInvestSelectionChange"/>
+      <cl:formdata std:sid="f-data-c5d90c8e" row="3" col="0" rowspan="1" colspan="3"/>
+      <cl:gridcolumn std:sid="g-column-a0b0f34c" width="80px"/>
+      <cl:gridcolumn std:sid="g-column-f1ee394d" width="80px"/>
+      <cl:gridcolumn std:sid="g-column-87076ba8" width="80px"/>
+      <cl:gridcolumn std:sid="g-column-7653bcc3" width="80px"/>
+      <cl:gridheader std:sid="gh-band-d8e4c1a6">
+        <cl:gridrow std:sid="g-row-c7792fc4" height="44px"/>
+        <cl:gridcell std:sid="gh-cell-b0e4d9da" rowindex="0" colindex="0" targetcolumnname="DATE" sortable="false" filterable="false" text="일자"/>
+        <cl:gridcell std:sid="gh-cell-ad566f12" rowindex="0" colindex="1" targetcolumnname="PRSN_NTBY_QTY" sortable="false" filterable="false" text="개인"/>
+        <cl:gridcell std:sid="gh-cell-95ee4b4c" rowindex="0" colindex="2" targetcolumnname="FRGN_NTBY_QTY" sortable="false" filterable="false" text="외국인"/>
+        <cl:gridcell std:sid="gh-cell-5f1f1525" rowindex="0" colindex="3" targetcolumnname="ORGN_NTBY_QTY" sortable="false" filterable="false" text="기관"/>
+      </cl:gridheader>
+      <cl:griddetail std:sid="gd-band-76c523fe">
+        <cl:gridrow std:sid="g-row-30f2830f" height="32px"/>
+        <cl:gridcell std:sid="gd-cell-00bb9cbb" rowindex="0" colindex="0" columnname="DATE">
+          <cl:output std:sid="output-c909fb3a" id="opt1" class="text-left" datatype="date" format="YY.MM.DD">
+            <cl:celldata std:sid="c-data-08b6c176"/>
+          </cl:output>
+        </cl:gridcell>
+        <cl:gridcell std:sid="gd-cell-ef6bf314" rowindex="0" colindex="1" class="text-right" columnname="PRSN_NTBY_QTY">
+          <cl:output std:sid="output-a6562f98" id="opt2" datatype="number" format="s#,###">
+            <cl:expbind property="class" category="CLASS" expression="Number(value) > 0 ? &quot;text-wts-red&quot; : &quot;text-wts-blue&quot;"/>
+            <cl:celldata std:sid="c-data-d06a3e71"/>
+          </cl:output>
+        </cl:gridcell>
+        <cl:gridcell std:sid="gd-cell-be5f6bcb" rowindex="0" colindex="2" class="text-right" columnname="FRGN_NTBY_QTY">
+          <cl:output std:sid="output-1853426e" id="opt3" datatype="number" format="s#,###">
+            <cl:expbind property="class" category="CLASS" expression="Number(value) > 0 ? &quot;text-wts-red&quot; : &quot;text-wts-blue&quot;"/>
+            <cl:celldata std:sid="c-data-20a02b50"/>
+          </cl:output>
+        </cl:gridcell>
+        <cl:gridcell std:sid="gd-cell-d7f027d9" rowindex="0" colindex="3" class="text-right" columnname="ORGN_NTBY_QTY">
+          <cl:output std:sid="output-b639873c" id="opt4" datatype="number" format="s#,###">
+            <cl:expbind property="class" category="CLASS" expression="Number(value) > 0 ? &quot;text-wts-red&quot; : &quot;text-wts-blue&quot;"/>
+            <cl:celldata std:sid="c-data-d35fb63a"/>
+          </cl:output>
+        </cl:gridcell>
+      </cl:griddetail>
+    </cl:grid>
+    <cl:formlayout std:sid="f-layout-86e0ad83" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="25"/>
+      <cl:rows length="25"/>
+      <cl:rows length="25"/>
+      <cl:rows length="5" unit="FRACTION"/>
+      <cl:columns length="60" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      <cl:columns length="40" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

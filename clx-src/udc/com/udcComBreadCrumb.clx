@@ -1,0 +1,32 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-8c62afc6" version="1.0.6059">
+  <head std:sid="head-d1a2c9e1">
+    <std:metadata>
+      <std:property key="template-file" value="templates/일반화면/1.그리드/F_그리드_페이징.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-8cb71a44" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-fcc9e17f" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-4aedfa06" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-590141b1"/>
+    <cl:appspec/>
+  </head>
+  <body std:sid="body-10c3b98c" style="top:0px; left:0px; width:500px; height:28px;" class="bread-crumb">
+    <cl:listener std:sid="listener-2edf3c15" name="load" handler="onBodyLoad"/>
+    <cl:img std:sid="image-7da3b07e" src="../../theme/img/pages/udc/ic_home.svg">
+      <cl:formdata std:sid="f-data-0164d0da" valign="CENTER" height="20" row="0" col="0"/>
+    </cl:img>
+    <cl:group std:sid="group-0e8aed9c" id="grpBc" class="page">
+      <cl:formdata std:sid="f-data-8fd7f1ac" row="0" col="1"/>
+      <cl:flowlayout std:sid="f-layout-c64617e3" hspacing="16"/>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-3a0735b0" scrollable="false" hspace="12px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="28" unit="PIXEL"/>
+      <cl:columns length="20" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

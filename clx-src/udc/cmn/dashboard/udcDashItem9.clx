@@ -1,0 +1,79 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-af23d42c" version="1.0.6087">
+  <head std:sid="head-17c53829">
+    <screen std:sid="screen-a3099cc0" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-762f4b7c" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-8b14dbc2" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-f7c4b745"/>
+    <cl:appspec title="통합로그인"/>
+  </head>
+  <body std:sid="body-56c0652c" style="top:0px; left:0px; width:300px; height:300px;">
+    <cl:attribute name="mobile-index" value="2"/>
+    <cl:attribute name="tablet-index" value="2"/>
+    <cl:group std:sid="group-bf628b06" class="group total-login-group" clipcontent="false">
+      <cl:attribute name="needs-auto-height" value="true"/>
+      <cl:attribute name="mobile-index" value="2"/>
+      <cl:attribute name="tablet-index" value="2"/>
+      <cl:formdata std:sid="f-data-fac02608" row="0" col="0"/>
+      <cl:group std:sid="group-3b6065a6">
+        <cl:verticaldata std:sid="v-data-f4a34384" width="400px" height="87px" autosize="height"/>
+        <cl:output std:sid="output-2ce51937" class="tit-green" value="통합로그인">
+          <cl:verticaldata std:sid="v-data-8b633baf" width="166px" height="28px" autosize="height"/>
+        </cl:output>
+        <cl:output std:sid="output-4ab8b9b9" class="messege" value="로그인 없이 바로 시작하는 업무 지원 서비스">
+          <cl:verticaldata std:sid="v-data-43426deb" width="135px" height="54px" autosize="height"/>
+        </cl:output>
+        <cl:verticallayout std:sid="v-layout-9b36b99f" spacing="4"/>
+      </cl:group>
+      <cl:group std:sid="group-33c79868" clipcontent="false">
+        <cl:verticaldata std:sid="v-data-7196c7f7" width="400px" height="40px"/>
+        <cl:combobox std:sid="c-box-006d255c" id="cmb1" value="value1">
+          <cl:formdata std:sid="f-data-43e3b483" row="0" col="0"/>
+          <cl:item std:sid="t-item-53e54352" label="나의 통합로그인" value="value1"/>
+        </cl:combobox>
+        <cl:button std:sid="button-f2c7f2d3" class="btn-move" value="이동">
+          <cl:formdata std:sid="f-data-bdd3a3ca" row="0" col="1"/>
+        </cl:button>
+        <cl:formlayout std:sid="f-layout-70675364" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="57" unit="PIXEL"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:group std:sid="group-0ddcbea0" clipcontent="false">
+        <cl:verticaldata std:sid="v-data-179ecb85" width="400px" height="158px" autosize="height"/>
+        <cl:button std:sid="button-198244e7" class="btn-hashtag" value="#그룹웨어">
+          <cl:flowlayoutdata std:sid="f-data-81a233dc" width="100px" height="32px" autosize="width"/>
+        </cl:button>
+        <cl:button std:sid="button-ac834dd2" class="btn-hashtag" value="#ERP">
+          <cl:flowlayoutdata std:sid="f-data-0a7a6070" width="100px" height="32px" autosize="width"/>
+        </cl:button>
+        <cl:button std:sid="button-b9c596f3" class="btn-hashtag" value="#네트워크관제">
+          <cl:flowlayoutdata std:sid="f-data-1a63dccc" width="100px" height="32px" autosize="width"/>
+        </cl:button>
+        <cl:button std:sid="button-ed3a60ef" class="btn-hashtag" value="#CRM">
+          <cl:flowlayoutdata std:sid="f-data-90823776" width="100px" height="32px" autosize="width"/>
+        </cl:button>
+        <cl:button std:sid="button-965cc8d8" class="btn-hashtag" value="#파트너포털">
+          <cl:flowlayoutdata std:sid="f-data-31efc48f" width="100px" height="32px" autosize="width"/>
+        </cl:button>
+        <cl:button std:sid="button-91ce6a09" class="btn-hashtag" value="#전자결재">
+          <cl:flowlayoutdata std:sid="f-data-68c0d77a" width="100px" height="32px" autosize="width"/>
+        </cl:button>
+        <cl:button std:sid="button-e1b169ee" class="btn-hashtag-more" value="" icon="0">
+          <cl:flowlayoutdata std:sid="f-data-6ced8bba" width="32px" height="32px" autosize="none"/>
+        </cl:button>
+        <cl:flowlayout std:sid="f-layout-73b71f15" vspacing="10"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-26f41c9a" spacing="16"/>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-4096a352" scrollable="true">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

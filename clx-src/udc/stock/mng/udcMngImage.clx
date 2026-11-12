@@ -1,0 +1,52 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-7efe9342" version="1.0.5542">
+  <head std:sid="head-291d8f0f">
+    <screen std:sid="screen-4f0d9e3e" id="default" name="default" width="1024px" height="768px"/>
+    <screen std:sid="screen-ef58dda2" id="tablet" name="tablet" width="500px" height="667px"/>
+    <screen std:sid="screen-8e905727" id="mobile" name="mobile" width="350px" height="525px"/>
+    <cl:model std:sid="model-7355400e"/>
+    <cl:appspec title="컨텐츠관리-이미지"/>
+  </head>
+  <body std:sid="body-fdc83647" style="top:0px; left:0px; width:300px; height:300px;" class="conts-wrap">
+    <cl:group std:sid="group-44b19634">
+      <cl:formdata std:sid="f-data-8a4091ec" row="1" col="0"/>
+      <cl:img std:sid="image-3e7fd035" id="img1" class="cursor-pointer">
+        <cl:listener std:sid="listener-cad97073" name="click" handler="onImageClick"/>
+        <cl:formdata std:sid="f-data-c43ceccf" row="1" col="0"/>
+      </cl:img>
+      <cl:fileinput std:sid="f-input-c2f4d4d6" id="fi1">
+        <cl:listener std:sid="listener-17d79677" name="value-change" handler="onFi1ValueChange"/>
+        <cl:formdata std:sid="f-data-652209cf" row="0" col="0"/>
+      </cl:fileinput>
+      <cl:formlayout std:sid="f-layout-73b2eade" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="25" unit="PIXEL" hidden="true"/>
+        <cl:rows length="1" unit="FRACTION" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-474f48d4">
+      <cl:formdata std:sid="f-data-3f70874b" row="0" col="0" rowspan="1" colspan="1"/>
+      <cl:output std:sid="output-bbd36e2f" class="cms-subtitle" value="이미지">
+        <cl:formdata std:sid="f-data-cd420095" row="0" col="0"/>
+      </cl:output>
+      <cl:button std:sid="button-4bbd9157" class="btn-close" value="">
+        <cl:listener std:sid="listener-acf96a4e" name="click" handler="onButtonClick"/>
+        <cl:formdata std:sid="f-data-98fea466" row="0" col="1"/>
+      </cl:button>
+      <cl:formlayout std:sid="f-layout-213c85d2" scrollable="false" hspace="8px" vspace="8px">
+        <cl:rows length="32" unit="PIXEL"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="32" unit="PIXEL"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-94b0ed4e" scrollable="false" hspace="8px" vspace="8px" top-margin="16px" right-margin="16px" bottom-margin="16px" left-margin="16px">
+      <cl:rows length="32" unit="PIXEL"/>
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

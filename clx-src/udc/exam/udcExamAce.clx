@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-47035cff" version="1.0.0.0">
+  <head std:sid="head-9a872970">
+    <title>udcExamAce</title>
+    <screen std:sid="screen-2e78f09f" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-f117617b" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-31584d2a" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-e00eda09"/>
+    <cl:appspec>
+      <cl:property name="value" type="string" bindable="true" std:desc="소스 값"/>
+      <cl:property name="language" type="enumeration" default="javascript" std:desc="표시 언어 설정">
+        <cl:available-value>javascript</cl:available-value>
+        <cl:available-value>text/css</cl:available-value>
+        <cl:available-value>text/x-less</cl:available-value>
+        <cl:available-value>application/xml</cl:available-value>
+        <cl:available-value>text/html</cl:available-value>
+        <cl:available-value>text/x-java</cl:available-value>
+      </cl:property>
+      <cl:event name="afterLoad" type="cpr.events.CAppEvent"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-3daa66c1" style="top:0px; left:0px; width:300px; height:300px; text-align:left;" class="ace-editor">
+    <cl:listener std:sid="listener-dfeb7d5b" name="load" handler="onBodyLoad"/>
+    <cl:listener std:sid="listener-083a5ab0" name="property-change" handler="onBodyPropertyChange"/>
+    <cl:listener std:sid="listener-0ba1407a" name="init" handler="onBodyInit"/>
+    <cl:group std:sid="group-a9c497f1" id="grp1" class="ace-editor-buttons">
+      <cl:formdata std:sid="f-data-5cd25087" row="0" col="0"/>
+      <cl:checkbox std:sid="c-box-660e94e9" id="cbxFldEdt" class="folding-editor" tooltip="소스 접기/펼치기" value="" text="">
+        <cl:listener std:sid="listener-688b25ae" name="value-change" handler="onCbxFldEdtValueChange"/>
+        <cl:flowlayoutdata std:sid="f-data-9ea14fc8" width="25px" height="25px" autosize="none"/>
+      </cl:checkbox>
+      <cl:button std:sid="button-a50c1457" id="btnCopy" class="secondary" value="복사">
+        <cl:listener std:sid="listener-e94c1135" name="click" handler="onBtnCpClick"/>
+        <cl:flowlayoutdata std:sid="f-data-79544562" width="48px" height="25px" autosize="width"/>
+      </cl:button>
+      <cl:flowlayout std:sid="f-layout-6f19f9c5" scrollable="false" hspacing="10" vspacing="10" halign="right" valign="middle" linewrap="false" leftmargin="0" rightmargin="3" topmargin="3" bottommargin="0"/>
+    </cl:group>
+    <cl:uicontrolshell std:sid="uic-shell-51dfc700" id="shlCdMr">
+      <cl:listener std:sid="listener-6d59df1d" name="init" handler="onShlCdMrInit"/>
+      <cl:listener std:sid="listener-97a2eaa7" name="load" handler="onShlCdMrLoad"/>
+      <cl:formdata std:sid="f-data-8f23373f" row="1" col="0"/>
+    </cl:uicontrolshell>
+    <cl:formlayout std:sid="f-layout-2996db65" scrollable="true" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="28" unit="PIXEL" autoSizing="false" hidden="true" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

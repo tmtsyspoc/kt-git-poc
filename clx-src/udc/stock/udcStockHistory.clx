@@ -1,0 +1,233 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-18c4511d" version="1.0.5575">
+  <head std:sid="head-b9b54734">
+    <screen std:sid="screen-e3f679b8" id="EXB-FULL" name="EXB-FULL" width="1580px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-ca01f14c" id="EXB-DIV" name="EXB-DIV" width="1128px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-bda128c0" id="EXB-POP[1024]" name="EXB-POP[1024]" width="1024px" height="576px"/>
+    <screen std:sid="screen-895c0584" id="EXB-POP[800]" name="EXB-POP[800]" width="800px" height="480px"/>
+    <screen std:sid="screen-51a38f37" id="EXB-PART" name="EXB-PART" width="672px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-8ba96782" id="EXB-POP[480]" name="EXB-POP[480]" width="480px" height="320px"/>
+    <cl:model std:sid="model-f3383817">
+      <cl:dataset comment="거래현황 응답" std:sid="d-set-0bfc8bd7" id="dsAcntList">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="거래일자" std:sid="d-column-f492c0a4" name="TR_DT"/>
+          <cl:datacolumn comment="거래일련번호" std:sid="d-column-6a036316" name="TR_SN"/>
+          <cl:datacolumn comment="원거래일련번호" std:sid="d-column-8d01689e" name="ORGN_TR_SN"/>
+          <cl:datacolumn comment="취소여부" std:sid="d-column-90a26713" name="CNCL_YN"/>
+          <cl:datacolumn comment="상품계약번호" std:sid="d-column-c350f8e8" name="PRDT_CTRT_NO"/>
+          <cl:datacolumn comment="계좌거래코드" std:sid="d-column-1c61c8be" name="ACNT_TR_COD"/>
+          <cl:datacolumn comment="적요코드" std:sid="d-column-e2e83c90" name="SYNS_COD"/>
+          <cl:datacolumn comment="적요명" std:sid="d-column-b96331b4" name="SYNS_NM"/>
+          <cl:datacolumn comment="계좌거래유형구분코드" std:sid="d-column-453f79e6" name="ACNT_TR_TP_SCD"/>
+          <cl:datacolumn comment="계좌거래유형명" std:sid="d-column-a7c50971" name="ACNT_TR_TP_NM"/>
+          <cl:datacolumn comment="조회적요명" std:sid="d-column-e3588b23" name="INQ_SYNS_NM"/>
+          <cl:datacolumn comment="유가증권구분코드" std:sid="d-column-65f9c1b3" name="SCTS_SCD"/>
+          <cl:datacolumn comment="상품코드" std:sid="d-column-e973a6a9" name="PRDT_COD"/>
+          <cl:datacolumn comment="상품명" std:sid="d-column-6c5e29a2" name="PRDT_NM"/>
+          <cl:datacolumn comment="계좌거래수량" std:sid="d-column-5ee3d3b4" name="ACNT_TR_QNT" datatype="number"/>
+          <cl:datacolumn comment="거래단가" std:sid="d-column-dccce673" name="TR_UNPR" datatype="number"/>
+          <cl:datacolumn comment="거래금액16" std:sid="d-column-0cfdd6b1" name="TR_AMT_16" datatype="number"/>
+          <cl:datacolumn comment="거래수수료3" std:sid="d-column-be5d819f" name="TR_FEE_3" datatype="number"/>
+          <cl:datacolumn comment="과세금액19" std:sid="d-column-60ee789e" name="TXTN_AMT_19" datatype="number"/>
+          <cl:datacolumn comment="이자금액" std:sid="d-column-a3bb4fee" name="INT_AMT" datatype="number"/>
+          <cl:datacolumn comment="미수변제금액16" std:sid="d-column-b7637f17" name="RCVB_PYBK_AMT_16" datatype="number"/>
+          <cl:datacolumn comment="미수연체이자금액2" std:sid="d-column-0c1c99df" name="RCVB_OVDU_INT_AMT_2" datatype="number"/>
+          <cl:datacolumn comment="미수발생금액2" std:sid="d-column-00e60702" name="RCOC_AMT_2" datatype="number"/>
+          <cl:datacolumn comment="정산금액" std:sid="d-column-79623531" name="EXCAL_AMT2" datatype="number"/>
+          <cl:datacolumn comment="이후예수금" std:sid="d-column-423049f4" name="AF_DACA" datatype="number"/>
+          <cl:datacolumn comment="이후잔고수량" std:sid="d-column-da18f89e" name="AF_BLN_QNT" datatype="number"/>
+          <cl:datacolumn comment="신탁계약여부" std:sid="d-column-dd2db6c9" name="TRS_CTRT_YN"/>
+          <cl:datacolumn comment="실제거래일시" std:sid="d-column-a2836e0a" name="REAL_TR_DTM"/>
+          <cl:datacolumn comment="신용거래구분코드" std:sid="d-column-d276c003" name="CTRD_SCD"/>
+          <cl:datacolumn comment="신용거래구분코드명" std:sid="d-column-b255b4ab" name="CTRD_SCD_NM"/>
+          <cl:datacolumn comment="선물옵션대용여부" std:sid="d-column-e50466ea" name="FTOP_SBST_YN"/>
+          <cl:datacolumn comment="통화코드" std:sid="d-column-0846f3fe" name="CRRY_COD"/>
+          <cl:datacolumn comment="이후외화잔고금액" std:sid="d-column-8d7f6885" name="AF_FRCR_BLN_AMT" datatype="number"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+      <cl:datamap comment="거래현황 전체조회 요청" std:sid="d-map-111799e8" id="dmAcntIn">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="다음키" std:sid="d-column-1f5efe80" name="NEXT_KEY" defaultvalue=""/>
+          <cl:datacolumn comment="개별계좌번호" std:sid="d-column-4976113e" name="IACN" defaultvalue=""/>
+          <cl:datacolumn comment="계좌비밀번호" std:sid="d-column-5eba7c81" name="ACNT_PWD" defaultvalue=""/>
+          <cl:datacolumn comment="조회시작일자" std:sid="d-column-9be59fd4" name="INQ_STRT_DT" defaultvalue="20250401"/>
+          <cl:datacolumn comment="조회종료일자" std:sid="d-column-ee5b4df5" name="INQ_END_DT" datatype="string" defaultvalue="20250416"/>
+          <cl:datacolumn comment="유가증권구분코드" std:sid="d-column-d7cf8097" name="SCTS_SCD" defaultvalue="1"/>
+          <cl:datacolumn comment="상품코드" std:sid="d-column-ec5adfcf" name="PRDT_COD" defaultvalue=""/>
+          <cl:datacolumn comment="상품계약번호" std:sid="d-column-a8e47e37" name="PRDT_CTRT_NO"/>
+          <cl:datacolumn comment="계좌거래유형구분코드" std:sid="d-column-e4a44752" name="ACNT_TR_TP_SCD"/>
+          <cl:datacolumn comment="자동투자조회제외여부" std:sid="d-column-33469a97" name="ATMC_INV_INQ_XCLS_YN" defaultvalue="N"/>
+          <cl:datacolumn comment="정렬순서코드" std:sid="d-column-5bca8395" name="SORT_SQN_COD"/>
+          <cl:datacolumn comment="페이지조회여부" std:sid="d-column-5630de6f" name="PGE_INQ_YN"/>
+          <cl:datacolumn comment="페이지번호" std:sid="d-column-96dc1911" name="PGE_NO"/>
+          <cl:datacolumn comment="조회건수" std:sid="d-column-4c9f3b0e" name="INQ_CNT"/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+      <cl:submission comment="거래현황 전체조회 RP1039Q0" std:sid="submission-07c2e180" id="subAcntList" method="get" action="app/sce/A15/data/tradeHistory.json" mediatype="application/x-www-form-urlencoded;simple">
+        <cl:requestdata dataid="dmAcntIn"/>
+        <cl:responsedata dataid="dsAcntList" alias="outRec2" isadd="true"/>
+      </cl:submission>
+    </cl:model>
+    <cl:appspec title="거래내역"/>
+  </head>
+  <body std:sid="body-6a088e51" style="top:0px; left:0px; width:500px; height:500px;" class="card">
+    <cl:group std:sid="group-d849fc68" id="grp2">
+      <cl:formdata std:sid="f-data-488f9335" row="0" col="0"/>
+      <cl:combobox std:sid="c-box-e6384ae4" id="cmb1" value="0">
+        <cl:listener std:sid="listener-53199a2d" name="item-click" handler="onCmb1ItemClick"/>
+        <cl:flowlayoutdata std:sid="f-data-49fde652" width="100px" height="32px"/>
+        <cl:item std:sid="t-item-3f91f3cf" label="오늘" value="0"/>
+        <cl:item std:sid="t-item-51fa8130" label="일주일" value="7"/>
+        <cl:item std:sid="t-item-69571fca" label="1개월" value="30"/>
+        <cl:item std:sid="t-item-65f6acf8" label="직접입력" value="direct"/>
+      </cl:combobox>
+      <cl:group std:sid="group-90a9b4a7" id="grpDtiFromTo" visible="false">
+        <std:metadata>
+          <std:property key="template-uuid" value="c5e7819c-2f94-4cb8-9eaf-ddf86515304f"/>
+          <std:property key="template-rev" value="1"/>
+        </std:metadata>
+        <cl:flowlayoutdata std:sid="f-data-b3f924c3" width="274px" height="32px"/>
+        <cl:dateinput std:sid="d-input-fad913ed" id="dtiFrom">
+          <cl:datamapbind property="value" datacontrolid="dmAcntIn" columnname="INQ_STRT_DT"/>
+          <cl:formdata std:sid="f-data-9bdf97c6" row="0" col="0"/>
+        </cl:dateinput>
+        <cl:output std:sid="output-148dfafa" id="opt1" value="~">
+          <cl:formdata std:sid="f-data-f0d12ce9" row="0" col="1"/>
+        </cl:output>
+        <cl:dateinput std:sid="d-input-47143852" id="dtiTo">
+          <cl:datamapbind property="value" datacontrolid="dmAcntIn" columnname="INQ_END_DT"/>
+          <cl:formdata std:sid="f-data-6d16e62f" row="0" col="2"/>
+        </cl:dateinput>
+        <cl:button std:sid="button-662fff2f" id="btn1" class="btn-search" icon="0">
+          <cl:listener std:sid="listener-1f8f768a" name="click" handler="onBtn1Click"/>
+          <cl:formdata std:sid="f-data-88b3f6cd" row="0" col="3"/>
+        </cl:button>
+        <cl:formlayout std:sid="f-layout-add32e03" scrollable="false" hspace="4px" vspace="4px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="110" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+          <cl:columns length="10" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          <cl:columns length="110" unit="PIXEL"/>
+          <cl:columns length="32" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:flowlayout std:sid="f-layout-bd9ba0fc"/>
+    </cl:group>
+    <cl:grid std:sid="grid-0ad4a3c0" id="grd6" class="table-transparent" datasetid="dsAcntList" nodatamessage="거래내역이 없습니다.">
+      <cl:formdata std:sid="f-data-25ce7e09" row="1" col="0"/>
+      <cl:gridcolumn std:sid="g-column-cab4472b"/>
+      <cl:gridcolumn std:sid="g-column-d49ee1d3"/>
+      <cl:gridcolumn std:sid="g-column-f28bbbbb"/>
+      <cl:gridcolumn std:sid="g-column-cb64485f"/>
+      <cl:gridcolumn std:sid="g-column-5364207c"/>
+      <cl:gridcolumn std:sid="g-column-94d216cc"/>
+      <cl:gridcolumn std:sid="g-column-4e617c83"/>
+      <cl:gridcolumn std:sid="g-column-c5de5479"/>
+      <cl:gridcolumn std:sid="g-column-6803f289"/>
+      <cl:gridcolumn std:sid="g-column-49157601"/>
+      <cl:gridcolumn std:sid="g-column-8584e4ff"/>
+      <cl:gridcolumn std:sid="g-column-314a8e9e"/>
+      <cl:gridcolumn std:sid="g-column-2c6fa59d"/>
+      <cl:gridcolumn std:sid="g-column-891566a4"/>
+      <cl:gridcolumn std:sid="g-column-be78c03a"/>
+      <cl:gridcolumn std:sid="g-column-2c96ace9"/>
+      <cl:gridcolumn std:sid="g-column-72747734"/>
+      <cl:gridcolumn std:sid="g-column-b0ea2216"/>
+      <cl:gridcolumn std:sid="g-column-5b6797b8"/>
+      <cl:gridcolumn std:sid="g-column-10978829"/>
+      <cl:gridcolumn std:sid="g-column-0b35769d"/>
+      <cl:gridcolumn std:sid="g-column-f00c1dbd"/>
+      <cl:gridcolumn std:sid="g-column-56b93ab9"/>
+      <cl:gridcolumn std:sid="g-column-ddeacbd1"/>
+      <cl:gridcolumn std:sid="g-column-2148a7da"/>
+      <cl:gridcolumn std:sid="g-column-b744be1b"/>
+      <cl:gridcolumn std:sid="g-column-c1e2f5be"/>
+      <cl:gridcolumn std:sid="g-column-f32f3133"/>
+      <cl:gridcolumn std:sid="g-column-ffc8f0ca"/>
+      <cl:gridcolumn std:sid="g-column-6b8ea71c"/>
+      <cl:gridcolumn std:sid="g-column-5c853e4c"/>
+      <cl:gridcolumn std:sid="g-column-5da8b9ed"/>
+      <cl:gridcolumn std:sid="g-column-6fb73489"/>
+      <cl:gridheader std:sid="gh-band-5f3a3dae">
+        <cl:gridrow std:sid="g-row-41d1d6ef" height="32px"/>
+        <cl:gridcell std:sid="gh-cell-1dc99da3" rowindex="0" colindex="0" targetcolumnname="TR_DT" sortable="false" filterable="false" text="거래일자"/>
+        <cl:gridcell std:sid="gh-cell-25c74117" rowindex="0" colindex="1" targetcolumnname="TR_SN" sortable="false" filterable="false" text="거래일련번호"/>
+        <cl:gridcell std:sid="gh-cell-fae02e97" rowindex="0" colindex="2" targetcolumnname="ORGN_TR_SN" sortable="false" filterable="false" text="원거래일련번호"/>
+        <cl:gridcell std:sid="gh-cell-6061af81" rowindex="0" colindex="3" targetcolumnname="CNCL_YN" sortable="false" filterable="false" text="취소여부"/>
+        <cl:gridcell std:sid="gh-cell-0b6fdeee" rowindex="0" colindex="4" targetcolumnname="PRDT_CTRT_NO" sortable="false" filterable="false" text="상품계약번호"/>
+        <cl:gridcell std:sid="gh-cell-2d5b7337" rowindex="0" colindex="5" targetcolumnname="ACNT_TR_COD" sortable="false" filterable="false" text="계좌거래코드"/>
+        <cl:gridcell std:sid="gh-cell-2df50e82" rowindex="0" colindex="6" targetcolumnname="SYNS_COD" sortable="false" filterable="false" text="적요코드"/>
+        <cl:gridcell std:sid="gh-cell-f55205ac" rowindex="0" colindex="7" targetcolumnname="SYNS_NM" sortable="false" filterable="false" text="적요명"/>
+        <cl:gridcell std:sid="gh-cell-de32bb93" rowindex="0" colindex="8" targetcolumnname="ACNT_TR_TP_SCD" sortable="false" filterable="false" text="계좌거래유형구분코드"/>
+        <cl:gridcell std:sid="gh-cell-8c3c3499" rowindex="0" colindex="9" targetcolumnname="ACNT_TR_TP_NM" sortable="false" filterable="false" text="계좌거래유형명"/>
+        <cl:gridcell std:sid="gh-cell-806e675a" rowindex="0" colindex="10" targetcolumnname="INQ_SYNS_NM" sortable="false" filterable="false" text="조회적요명"/>
+        <cl:gridcell std:sid="gh-cell-7af489ac" rowindex="0" colindex="11" targetcolumnname="SCTS_SCD" sortable="false" filterable="false" text="유가증권구분코드"/>
+        <cl:gridcell std:sid="gh-cell-ec1a6bf7" rowindex="0" colindex="12" targetcolumnname="PRDT_COD" sortable="false" filterable="false" text="상품코드"/>
+        <cl:gridcell std:sid="gh-cell-a3c6b83a" rowindex="0" colindex="13" targetcolumnname="PRDT_NM" sortable="false" filterable="false" text="상품명"/>
+        <cl:gridcell std:sid="gh-cell-d51ac6da" rowindex="0" colindex="14" targetcolumnname="ACNT_TR_QNT" sortable="false" filterable="false" text="계좌거래수량"/>
+        <cl:gridcell std:sid="gh-cell-4dd68b59" rowindex="0" colindex="15" targetcolumnname="TR_UNPR" sortable="false" filterable="false" text="거래단가"/>
+        <cl:gridcell std:sid="gh-cell-d7cfe5d2" rowindex="0" colindex="16" targetcolumnname="TR_AMT_16" sortable="false" filterable="false" text="거래금액16"/>
+        <cl:gridcell std:sid="gh-cell-da20990b" rowindex="0" colindex="17" targetcolumnname="TR_FEE_3" sortable="false" filterable="false" text="거래수수료3"/>
+        <cl:gridcell std:sid="gh-cell-4c53a264" rowindex="0" colindex="18" targetcolumnname="TXTN_AMT_19" sortable="false" filterable="false" text="과세금액19"/>
+        <cl:gridcell std:sid="gh-cell-e49f7364" rowindex="0" colindex="19" targetcolumnname="INT_AMT" sortable="false" filterable="false" text="이자금액"/>
+        <cl:gridcell std:sid="gh-cell-fdf99623" rowindex="0" colindex="20" targetcolumnname="RCVB_PYBK_AMT_16" sortable="false" filterable="false" text="미수변제금액16"/>
+        <cl:gridcell std:sid="gh-cell-7eb43ed0" rowindex="0" colindex="21" targetcolumnname="RCVB_OVDU_INT_AMT_2" sortable="false" filterable="false" text="미수연체이자금액2"/>
+        <cl:gridcell std:sid="gh-cell-09c92412" rowindex="0" colindex="22" targetcolumnname="RCOC_AMT_2" sortable="false" filterable="false" text="미수발생금액2"/>
+        <cl:gridcell std:sid="gh-cell-88870ce0" rowindex="0" colindex="23" targetcolumnname="EXCAL_AMT2" sortable="false" filterable="false" text="정산금액"/>
+        <cl:gridcell std:sid="gh-cell-83554663" rowindex="0" colindex="24" targetcolumnname="AF_DACA" sortable="false" filterable="false" text="이후예수금"/>
+        <cl:gridcell std:sid="gh-cell-73142d4b" rowindex="0" colindex="25" targetcolumnname="AF_BLN_QNT" sortable="false" filterable="false" text="이후잔고수량"/>
+        <cl:gridcell std:sid="gh-cell-8395350a" rowindex="0" colindex="26" targetcolumnname="TRS_CTRT_YN" sortable="false" filterable="false" text="신탁계약여부"/>
+        <cl:gridcell std:sid="gh-cell-79286304" rowindex="0" colindex="27" targetcolumnname="REAL_TR_DTM" sortable="false" filterable="false" text="실제거래일시"/>
+        <cl:gridcell std:sid="gh-cell-716ea0fd" rowindex="0" colindex="28" targetcolumnname="CTRD_SCD" sortable="false" filterable="false" text="신용거래구분코드"/>
+        <cl:gridcell std:sid="gh-cell-12a1a199" rowindex="0" colindex="29" targetcolumnname="CTRD_SCD_NM" sortable="false" filterable="false" text="신용거래구분코드명"/>
+        <cl:gridcell std:sid="gh-cell-a5c45916" rowindex="0" colindex="30" targetcolumnname="FTOP_SBST_YN" sortable="false" filterable="false" text="선물옵션대용여부"/>
+        <cl:gridcell std:sid="gh-cell-c77e372f" rowindex="0" colindex="31" targetcolumnname="CRRY_COD" sortable="false" filterable="false" text="통화코드"/>
+        <cl:gridcell std:sid="gh-cell-09d508fc" rowindex="0" colindex="32" targetcolumnname="AF_FRCR_BLN_AMT" sortable="false" filterable="false" text="이후외화잔고금액"/>
+      </cl:gridheader>
+      <cl:griddetail std:sid="gd-band-f23521db">
+        <cl:gridrow std:sid="g-row-81582f74" height="32px"/>
+        <cl:gridcell std:sid="gd-cell-b522532b" rowindex="0" colindex="0" columnname="TR_DT"/>
+        <cl:gridcell std:sid="gd-cell-06aab906" rowindex="0" colindex="1" columnname="TR_SN"/>
+        <cl:gridcell std:sid="gd-cell-13cde317" rowindex="0" colindex="2" columnname="ORGN_TR_SN"/>
+        <cl:gridcell std:sid="gd-cell-89b0ace9" rowindex="0" colindex="3" columnname="CNCL_YN"/>
+        <cl:gridcell std:sid="gd-cell-46b93bb5" rowindex="0" colindex="4" columnname="PRDT_CTRT_NO"/>
+        <cl:gridcell std:sid="gd-cell-be925d88" rowindex="0" colindex="5" columnname="ACNT_TR_COD"/>
+        <cl:gridcell std:sid="gd-cell-eb372961" rowindex="0" colindex="6" columnname="SYNS_COD"/>
+        <cl:gridcell std:sid="gd-cell-fc86631c" rowindex="0" colindex="7" columnname="SYNS_NM"/>
+        <cl:gridcell std:sid="gd-cell-ff08073d" rowindex="0" colindex="8" columnname="ACNT_TR_TP_SCD"/>
+        <cl:gridcell std:sid="gd-cell-609f9e32" rowindex="0" colindex="9" columnname="ACNT_TR_TP_NM"/>
+        <cl:gridcell std:sid="gd-cell-4de10635" rowindex="0" colindex="10" columnname="INQ_SYNS_NM"/>
+        <cl:gridcell std:sid="gd-cell-f8716920" rowindex="0" colindex="11" columnname="SCTS_SCD"/>
+        <cl:gridcell std:sid="gd-cell-6bca5ce9" rowindex="0" colindex="12" columnname="PRDT_COD"/>
+        <cl:gridcell std:sid="gd-cell-be424aa5" rowindex="0" colindex="13" columnname="PRDT_NM"/>
+        <cl:gridcell std:sid="gd-cell-041c1927" rowindex="0" colindex="14" columnname="ACNT_TR_QNT"/>
+        <cl:gridcell std:sid="gd-cell-d19db952" rowindex="0" colindex="15" columnname="TR_UNPR"/>
+        <cl:gridcell std:sid="gd-cell-9a3adfdf" rowindex="0" colindex="16" columnname="TR_AMT_16"/>
+        <cl:gridcell std:sid="gd-cell-546b1e6b" rowindex="0" colindex="17" columnname="TR_FEE_3"/>
+        <cl:gridcell std:sid="gd-cell-f2be36bd" rowindex="0" colindex="18" columnname="TXTN_AMT_19"/>
+        <cl:gridcell std:sid="gd-cell-4d071864" rowindex="0" colindex="19" columnname="INT_AMT"/>
+        <cl:gridcell std:sid="gd-cell-7fa08ac3" rowindex="0" colindex="20" columnname="RCVB_PYBK_AMT_16"/>
+        <cl:gridcell std:sid="gd-cell-a5a45027" rowindex="0" colindex="21" columnname="RCVB_OVDU_INT_AMT_2"/>
+        <cl:gridcell std:sid="gd-cell-a430199b" rowindex="0" colindex="22" columnname="RCOC_AMT_2"/>
+        <cl:gridcell std:sid="gd-cell-cda3d9ba" rowindex="0" colindex="23" columnname="EXCAL_AMT2"/>
+        <cl:gridcell std:sid="gd-cell-7657bf7e" rowindex="0" colindex="24" columnname="AF_DACA"/>
+        <cl:gridcell std:sid="gd-cell-1bc7600d" rowindex="0" colindex="25" columnname="AF_BLN_QNT"/>
+        <cl:gridcell std:sid="gd-cell-a54281e1" rowindex="0" colindex="26" columnname="TRS_CTRT_YN"/>
+        <cl:gridcell std:sid="gd-cell-fd8714f4" rowindex="0" colindex="27" columnname="REAL_TR_DTM"/>
+        <cl:gridcell std:sid="gd-cell-b9f60f41" rowindex="0" colindex="28" columnname="CTRD_SCD"/>
+        <cl:gridcell std:sid="gd-cell-e49cd993" rowindex="0" colindex="29" columnname="CTRD_SCD_NM"/>
+        <cl:gridcell std:sid="gd-cell-a72b66d0" rowindex="0" colindex="30" columnname="FTOP_SBST_YN"/>
+        <cl:gridcell std:sid="gd-cell-bc7820cb" rowindex="0" colindex="31" columnname="CRRY_COD"/>
+        <cl:gridcell std:sid="gd-cell-2993fec9" rowindex="0" colindex="32" columnname="AF_FRCR_BLN_AMT"/>
+      </cl:griddetail>
+    </cl:grid>
+    <cl:formlayout std:sid="f-layout-dc2197b9" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="32" unit="PIXEL"/>
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

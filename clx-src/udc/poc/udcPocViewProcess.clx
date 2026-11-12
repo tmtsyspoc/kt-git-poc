@@ -1,0 +1,95 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-dd48e88c" version="1.0.4271">
+  <head std:sid="head-6f39cd59">
+    <screen std:sid="screen-e46da8f4" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-f1c339c4" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-b4745411" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-4fed40e4">
+      <cl:dataset std:sid="d-set-406d885d" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-bdbd9f42" name="APP_ID"/>
+          <cl:datacolumn std:sid="d-column-9f37779a" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-05046705" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn std:sid="d-column-7fe5300f" name="SUB_TITLE"/>
+          <cl:datacolumn std:sid="d-column-e83d35c9" name="SUB_TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn std:sid="d-column-c68cb733" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn std:sid="d-column-fa740970" name="CONT" datatype="string"/>
+          <cl:datacolumn std:sid="d-column-3fb89862" name="DISPLAY_CONT"/>
+          <cl:datacolumn std:sid="d-column-c9d6a3d7" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-b4004ac2" name="SUB_CODE"/>
+          <cl:datacolumn std:sid="d-column-8d6dc077" name="TARGET_CTRL"/>
+          <cl:datacolumn std:sid="d-column-4e06ed8b" name="TARGET_EMB"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist/>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="평가 프로세스 컴포넌트">
+      <cl:property name="title" type="string" default="평가 시나리오" std:desc="[String] 프로세스 타이틀"/>
+      <cl:property name="dataSet" type="control" default="dsProcess" bindable="true" std:desc="[Control] 프로세스 데이터 셋"/>
+      <cl:property name="exandAll" type="boolean" default="false" std:desc="[Boolean] 프로세스 목록 전체 확장여부"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-fc6fcbb7" style="top:0px; left:0px; width:300px; height:500px;" class="scenario-panel">
+    <cl:listener std:sid="listener-08464f84" name="load" handler="onBodyLoad"/>
+    <cl:group std:sid="group-a1e806f2" id="grpCover" class="flt-right-process">
+      <cl:verticaldata std:sid="v-data-d82f43f1" width="298px" height="498px" autosize="height"/>
+      <cl:group std:sid="group-27a67c7f" id="grpTitle" class="panel-header">
+        <cl:verticaldata std:sid="v-data-60985f01" width="298px" height="48px"/>
+        <cl:output std:sid="output-40cd7fce" id="optProcessTitle" class="title" value="평가 시나리오">
+          <cl:formdata std:sid="f-data-cdd09958" row="0" col="0"/>
+        </cl:output>
+        <cl:button std:sid="button-5e3ca2a4" id="btnClose" class="icon" icon="0">
+          <cl:listener std:sid="listener-55a68ff2" name="click" handler="onBtnCloseClick"/>
+          <cl:formdata std:sid="f-data-09695ca9" valign="CENTER" height="28" row="0" col="1"/>
+          <cl:iconstyle class="icon ico-x"/>
+        </cl:button>
+        <cl:formlayout std:sid="f-layout-61fbaad8" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="28" unit="PIXEL"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:grid std:sid="grid-7c4210b1" id="_grdProcess" datasetid="dsProcess" autofit="1" autorowheight="all" resizablecolumns="1" collapsible="false">
+        <cl:listener std:sid="listener-e57e2496" name="rowgroup-click" handler="onGrdProcessRowgroupClick"/>
+        <cl:listener std:sid="listener-85fde245" name="selection-change" handler="onGrdProcessSelectionChange"/>
+        <cl:listener std:sid="listener-821853a7" name="cell-click" handler="on_grdProcessCellClick"/>
+        <cl:verticaldata std:sid="v-data-b389b5e4" width="298px" height="453px" autosize="height"/>
+        <cl:gridcolumn std:sid="g-column-a35c01f8" width="30px" visible="true"/>
+        <cl:gridcolumn std:sid="g-column-595ceedb" width="200px" syncruntimewidth="false"/>
+        <cl:gridcolumn std:sid="g-column-1e8b71ec" width="100px" visible="false"/>
+        <cl:griddetail std:sid="gd-band-b8d92b4b">
+          <cl:gridrow std:sid="g-row-50f0ac96" height="24px"/>
+          <cl:gridcell std:sid="gd-cell-e3e48d01" rowindex="0" colindex="1" rowspan="1" colspan="2" columnname="CONT">
+            <cl:output std:sid="output-7de4c7ab" id="optCont">
+              <cl:expbind property="displayExp" category="PROPERTY" expression="DISPLAY_CONT"/>
+              <cl:celldata std:sid="c-data-9143089b"/>
+            </cl:output>
+          </cl:gridcell>
+          <cl:gridcell std:sid="gd-cell-061a7c5a" rowindex="0" colindex="0" class="symbol" columnname="DELIMITER"/>
+        </cl:griddetail>
+        <cl:gridrowgrouplist std:sid="grg-list-85813c48">
+          <cl:gridrowgroup std:sid="gr-group-84c57c97" groupcondition="TITLE">
+            <cl:gridgroupheader std:sid="ggh-band-69168510">
+              <cl:gridrow std:sid="g-row-f0bcb658" height="40px"/>
+              <cl:gridcell std:sid="ggh-cell-86043ea7" rowindex="0" colindex="0" rowspan="1" colspan="2" class="title" expr="TITLE"/>
+              <cl:gridcell std:sid="ggh-cell-abccde72" rowindex="0" colindex="2" expr="TITLE_RIGHT_TEXT"/>
+            </cl:gridgroupheader>
+          </cl:gridrowgroup>
+          <cl:gridrowgroup std:sid="gr-group-b0395e9f" groupcondition="SUB_TITLE">
+            <cl:gridgroupheader std:sid="ggh-band-2b2507cb" visibleexpr="SUB_TITLE != null &amp;&amp; SUB_TITLE != ''">
+              <cl:gridrow std:sid="g-row-9f2484d0" height="28px"/>
+              <cl:gridcell std:sid="ggh-cell-72d51856" rowindex="0" colindex="0" rowspan="1" colspan="2" class="sub-title" expr="SUB_TITLE"/>
+              <cl:gridcell std:sid="ggh-cell-324a5e5c" rowindex="0" colindex="2" expr="SUB_TITLE_RIGHT_TEXT == &quot;&quot; ? &quot;&quot; : SUB_TITLE_RIGHT_TEXT"/>
+            </cl:gridgroupheader>
+          </cl:gridrowgroup>
+        </cl:gridrowgrouplist>
+      </cl:grid>
+      <cl:verticallayout std:sid="v-layout-2d96b343" spacing="0"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-b76a96f6" spacing="0" leftmargin="8" rightmargin="8" topmargin="0" bottommargin="0"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

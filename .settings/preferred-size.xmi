@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:settings="kr.co.tomatosystem.exbuilder.model.ui.settings">
+  <settings:PreferredSize typeName="Accordion" preferredWidth="200" preferredHeight="300"/>
+  <settings:PreferredSize typeName="Audio" preferredWidth="100" preferredHeight="28"/>
+  <settings:PreferredSize typeName="Button" preferredWidth="100" preferredHeight="28"/>
+  <settings:PreferredSize typeName="Calendar" preferredWidth="240" preferredHeight="270"/>
+  <settings:PreferredSize typeName="CheckBox" preferredWidth="100" preferredHeight="28"/>
+  <settings:PreferredSize typeName="CheckBoxGroup" preferredWidth="200" preferredHeight="28"/>
+  <settings:PreferredSize typeName="ComboBox" preferredWidth="100" preferredHeight="28"/>
+  <settings:PreferredSize typeName="DateInput" preferredWidth="100" preferredHeight="28"/>
+  <settings:PreferredSize typeName="EmbeddedApp" preferredWidth="320" preferredHeight="240"/>
+  <settings:PreferredSize typeName="EmbeddedPage" preferredWidth="320" preferredHeight="240"/>
+  <settings:PreferredSize typeName="FileInput" preferredWidth="100" preferredHeight="28"/>
+  <settings:PreferredSize typeName="FileUpload" preferredWidth="350" preferredHeight="100"/>
+  <settings:PreferredSize typeName="Grid" preferredWidth="400" preferredHeight="200"/>
+  <settings:PreferredSize typeName="Group" preferredWidth="400" preferredHeight="200"/>
+  <settings:PreferredSize typeName="HTMLObject" preferredWidth="128" preferredHeight="128"/>
+  <settings:PreferredSize typeName="HTMLSnippet" preferredWidth="100" preferredHeight="28"/>
+  <settings:PreferredSize typeName="Image" preferredWidth="90" preferredHeight="120"/>
+  <settings:PreferredSize typeName="InputBox" preferredWidth="100" preferredHeight="28"/>
+  <settings:PreferredSize typeName="LinkedComboBox" preferredWidth="300" preferredHeight="28"/>
+  <settings:PreferredSize typeName="LinkedListBox" preferredWidth="300" preferredHeight="150"/>
+  <settings:PreferredSize typeName="ListBox" preferredWidth="100" preferredHeight="150"/>
+  <settings:PreferredSize typeName="MaskEditor" preferredWidth="100" preferredHeight="28"/>
+  <settings:PreferredSize typeName="MDIFolder" preferredWidth="320" preferredHeight="240"/>
+  <settings:PreferredSize typeName="Menu" preferredWidth="120" preferredHeight="150"/>
+  <settings:PreferredSize typeName="NavigationBar" preferredWidth="300" preferredHeight="40"/>
+  <settings:PreferredSize typeName="Notifier" preferredWidth="100" preferredHeight="28"/>
+  <settings:PreferredSize typeName="NumberEditor" preferredWidth="100" preferredHeight="28"/>
+  <settings:PreferredSize typeName="Output" preferredWidth="100" preferredHeight="28"/>
+  <settings:PreferredSize typeName="PageIndexer" preferredWidth="200" preferredHeight="28"/>
+  <settings:PreferredSize typeName="Progress" preferredWidth="100" preferredHeight="28"/>
+  <settings:PreferredSize typeName="RadioButton" preferredWidth="200" preferredHeight="28"/>
+  <settings:PreferredSize typeName="SearchInput" preferredWidth="100" preferredHeight="28"/>
+  <settings:PreferredSize typeName="SideNavigation" preferredWidth="200" preferredHeight="150"/>
+  <settings:PreferredSize typeName="Slider" preferredWidth="100" preferredHeight="28"/>
+  <settings:PreferredSize typeName="TabFolder" preferredWidth="320" preferredHeight="240"/>
+  <settings:PreferredSize typeName="TextArea" preferredWidth="100" preferredHeight="100"/>
+  <settings:PreferredSize typeName="Tree" preferredWidth="200" preferredHeight="150"/>
+  <settings:PreferredSize typeName="UIControlShell" preferredWidth="100" preferredHeight="200"/>
+  <settings:PreferredSize typeName="Video" preferredWidth="400" preferredHeight="100"/>
+  <settings:PreferredSize typeName="GridCell" preferredWidth="100" preferredHeight="45"/>
+  <settings:PreferredSize typeName="GridHeaderCell" preferredWidth="100" preferredHeight="44"/>
+  <settings:PreferredSize typeName="GridFooterCell" preferredWidth="100" preferredHeight="44"/>
+  <settings:PreferredSize typeName="FormDivision" preferredWidth="100" preferredHeight="28"/>
+</xmi:XMI>

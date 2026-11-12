@@ -1,0 +1,134 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-4804cf3c" version="1.0.5186">
+  <head std:sid="head-163d7b52">
+    <screen std:sid="screen-5de47786" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-44730e31" id="tablet" name="tablet" width="1024px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-d28b80b1" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-50c1fade"/>
+    <cl:appspec title="그리드 타이틀">
+      <cl:property name="ctrl" type="control" bindable="false" std:desc="[Grid] 대상 그리드 객체"/>
+      <cl:property name="title" type="string" default="No Title" bindable="true" std:desc="[String] 제목 (default: No Title)&#xD;&#xA;&#xD;&#xA;ctrl 속성이 지정된 경우, ctrl 컨트롤의 fieldLabel 이 title 로 대체됩니다."/>
+      <cl:property name="showTitle" type="boolean" default="true" bindable="false" std:desc="[Boolean] 타이틀 표시여부"/>
+      <cl:property name="rowCount" type="string" default="0" bindable="true" std:desc="[Number] 그리드 건수 (default: 0)&#xD;&#xA;&#xD;&#xA;ctrl 속성에 그리드 컨트롤이 설정되어 있는 경우, 그리드의 건수로 대체됩니다."/>
+      <cl:property name="showExportExcel" type="boolean" default="true" bindable="false" std:desc="[Boolean] 엑셀 파일 Export 버튼 보이기 여부 (default: true)"/>
+      <cl:property name="exportExcelTitle" type="string" bindable="true" std:desc="[String] 엑셀 Export 시, 엑셀 파일명 (default: title 속성값)"/>
+      <cl:property name="showOption" type="boolean" default="true" std:desc="[Boolean] 그리드 설정 버튼 표시여부"/>
+      <cl:property name="exportHiddenColumns" type="boolean" default="false" bindable="true" std:desc="[Boolean] 엑셀 Export 시, 숨긴 컬럼도 포함시킬지 여부 (default: false) &#xD;&#xA;true 로 지정하면, 숨긴 컬럼도 엑셀 Export에 포함됩니다."/>
+      <cl:property name="exportExcludePart" type="string" bindable="true" std:desc="[String] 엑셀 Export 시, 숨긴 컬럼 외 추가적으로 제외할 컬럼 (ex. COL1, COL2)"/>
+      <cl:property name="exportType" type="enumeration" default="server" std:desc="[Enumeration] 엑셀 다운로드 방식 (default: server)&#xD;&#xA;">
+        <cl:available-value>client</cl:available-value>
+        <cl:available-value>server</cl:available-value>
+        <cl:available-value>clientPdf</cl:available-value>
+        <cl:available-value>serverPdf</cl:available-value>
+      </cl:property>
+      <cl:property name="exportApplyFormat" type="boolean" default="true" bindable="true" std:desc="[Boolean] 엑셀 Export 시, 포맷 적용시킬지 여부 (default: true)"/>
+      <cl:property name="exportApplySuppress" type="boolean" default="true" bindable="true" std:desc="[Boolean] 엑셀 Export 시, suppress, mergedToIndexExpr에 의한 셀 병합을 반영할지 여부(default: true)"/>
+      <cl:property name="exportshowRowIndex" type="boolean" default="false" bindable="true" std:desc="[Boolean] 엑셀 Export 시, rowindex 특수컬럼을 포함시킬지 여부 (default: false)"/>
+      <cl:property name="exportApplyClassStyle" type="boolean" default="false" bindable="true" std:desc="[Boolean] 엑셀 Export 시, 클래스 스타일 적용 여부 (default: false)"/>
+      <cl:property name="exportUseFormat" type="boolean" default="true" bindable="true" std:desc="[Boolean] 엑셀 Export 시, 엑셀의 format 기능을 적용할지 여부 (default: true)"/>
+      <cl:property name="showInfoText" type="boolean" default="false" bindable="true" std:desc="[Boolean] 엑셀 Export 시, 첫번째 셀에 정보성 텍스트를 추가할지 여부"/>
+      <cl:property name="infoText" type="string" bindable="true" std:desc="[String] 엑셀 Export 시, 첫번째 셀에 추가할 정보성 텍스트 (showInfoText=true 일 때 적용가능)"/>
+      <cl:property name="showSetting" type="boolean" default="true" bindable="true" std:desc="[Boolean] 그리드 설정 정보 메뉴 제공여부"/>
+      <cl:property name="showExportPdf" type="boolean" default="false" bindable="true" std:desc="[Boolean] PDF 파일 Export 버튼 보이기 여부"/>
+      <cl:property name="exportMassiveType" type="enumeration" default="standard" std:desc="[Enurmeration] 엑셀 Export 시, 다운로드 대용량 호출 방식 (default: standard) - exportType이 server인 경우에만 사용가능합니다. 그리드의 행이 20만행이 넘어가면 대용량 방식으로 설정됩니다">
+        <cl:available-value>standard</cl:available-value>
+        <cl:available-value>massive</cl:available-value>
+      </cl:property>
+      <cl:property name="typeClass" type="enumeration" default="main">
+        <cl:available-value>main</cl:available-value>
+        <cl:available-value>sub</cl:available-value>
+      </cl:property>
+      <cl:property name="applyExcelStyle" type="enumeration" default="false" std:desc="[Boolean] clientExport 시 디자인 요소 반영 여부 &#xD;&#xA;(default: false)">
+        <cl:available-value>true</cl:available-value>
+        <cl:available-value>false</cl:available-value>
+      </cl:property>
+      <cl:property name="progressCtrl" type="control" std:desc="[control] 프로그레스바"/>
+      <cl:property name="filterCtxMenu" type="string" default="fetchExport, clientExport, serverExport, CSVExport" std:desc="엑셀 다운로드 컨텍스트 메뉴 필터 설정&#xD;&#xA;사용하고자 하는 메뉴를 콤마(,) 로 연결하여 작성합니다.&#xD;&#xA;&#xD;&#xA;• fetchExport : 서버 Export (관련 이벤트 : fetch-export)&#xD;&#xA;• clientExport : 클라이언트 Export (관련 이벤트 : client-export)&#xD;&#xA;• serverExport : 조회 결과 기준 Export (관련 이벤트 : server-export)&#xD;&#xA;• CSVExport : CSV Export (관련 이벤트 : csv-export)"/>
+      <cl:property name="showCtxMenu" type="boolean" default="false" bindable="true" std:desc="[Boolean] filterCtxMenu 앱속성 사용시 true 지정 (default: false)"/>
+      <cl:property name="showPivot" type="boolean" default="true" bindable="false" std:desc="[Boolean] 피벗 버튼 보이기 여부 (default: true)&#xD;&#xA;&#xD;&#xA;클릭 시 ctrl 그리드에 매핑된 데이터로 피벗 팝업(app/com/comPGridPivot)을 엽니다."/>
+      <cl:property name="useGridCtxMenu" type="boolean" default="true" std:desc="[Boolean] ctrl 그리드 우클릭 메뉴 사용 여부 (default: true)&#xD;&#xA;&#xD;&#xA;그리드 우클릭 시 메뉴 11개(필터·필터 해제·전체 필터 해제·세로/가로 틀고정(해제)·블록 선택(해제)·찾기·정렬 일괄취소)를 띄웁니다. false 로 지정하면 띄우지 않습니다."/>
+      <cl:property name="visibleToggleGrp" type="boolean" default="false" std:desc="[Boolean] 아래 컨트롤 토글 (default: true)"/>
+      <cl:property name="visiblePopGrp" type="boolean" default="false" std:desc="[Boolean] 아래 컨트롤 확장/축소 (default: true)"/>
+      <cl:property name="useBulkExcel" type="boolean" default="false" bindable="false" std:desc="[Boolean] 대량엑셀다운 방식 사용 여부 (default: false)&#xD;&#xA;&#xD;&#xA;true 이고 exportType=server 이면 엑셀다운로드 버튼 클릭 시 대량엑셀다운(S)·대량엑셀다운(C) 메뉴를 띄웁니다. false 이면 기존 서버 방식(exportMassiveType, showCtxMenu)으로 다운로드합니다."/>
+      <cl:event name="server-export" type="cpr.events.CAppEvent" std:desc="서버에서 엑셀을 export하는 경우"/>
+      <cl:event name="csv-export" type="cpr.events.CAppEvent" std:desc="서버에서 CSV를 export하는 경우"/>
+      <cl:event name="fetch-export" type="cpr.events.CAppEvent" std:desc="그리드 일정 데이터를 export하는 경우"/>
+      <cl:event name="client-export" type="cpr.events.CAppEvent" std:desc="클라이언트에서 엑셀을 export하는 경우"/>
+      <cl:event name="client-export-done" type="cpr.events.CAppEvent" std:desc="클라이언트에서 엑셀을 export 종료 후"/>
+      <cl:event name="bulk-export-start" type="cpr.events.CAppEvent" std:desc="대량엑셀다운 시작 시 (e.userData.type : server | client)"/>
+      <cl:event name="bulk-export-end" type="cpr.events.CAppEvent" std:desc="대량엑셀다운 완료 시 (e.userData.type : server | client)"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-ab359a05" style="top:0px; left:0px; width:900px; height:28px;" class="title-area">
+    <cl:listener std:sid="listener-5277be16" name="load" handler="onBodyLoad"/>
+    <cl:listener std:sid="listener-6811bb21" name="property-change" handler="onBodyPropertyChange"/>
+    <cl:listener std:sid="listener-46dad3fe" name="screen-change" handler="onBodyScreenChange2"/>
+    <cl:attribute name="mobile-column-count" value=""/>
+    <cl:group std:sid="group-b5d6f59f">
+      <cl:formdata std:sid="f-data-cbe9603d" row="0" col="0"/>
+      <cl:output std:sid="output-7a846500" id="optTitle" class="tit" value="그리드 타이틀">
+        <cl:apppropbind property="value" app-property="title"/>
+        <cl:flowlayoutdata std:sid="f-data-5835f3ce" width="176px" height="100%" autosize="width"/>
+      </cl:output>
+      <cl:output std:sid="output-9645dacc" id="optRowCount" class="table-row-count" datatype="number" format="s#,##0" displayexp="&quot;총 &quot; + sstr(text, &quot;key&quot;) + &quot; 건&quot;">
+        <cl:apppropbind property="value" category="PROPERTY" app-property="rowCount"/>
+        <cl:flowlayoutdata std:sid="f-data-e7b0e918" width="63px" height="28px" autosize="both"/>
+      </cl:output>
+      <cl:flowlayout std:sid="f-layout-5ed247a3" hspacing="8" valign="middle"/>
+    </cl:group>
+    <cl:group std:sid="group-d7c87448">
+      <cl:formdata std:sid="f-data-644ff709" valign="CENTER" height="24" row="0" col="1"/>
+      <cl:button std:sid="button-a7838dc8" id="btnTools" class="tertiary btn-setting" fieldLabel="그리드 설정" tooltip="그리드 설정" icon="0">
+        <cl:listener std:sid="listener-4be7d7c6" name="click" handler="onBtnToolsClick"/>
+        <cl:flowlayoutdata std:sid="f-data-70a64448" width="24px" height="100%" autosize="none"/>
+      </cl:button>
+      <cl:button std:sid="button-2288c8ca" id="btnExcelExport" class="tertiary btn-excel" fieldLabel="엑셀다운로드" tooltip="엑셀다운로드" icon="0">
+        <cl:listener std:sid="listener-091c33bb" name="click" handler="onBtnExcelExportClick"/>
+        <cl:apppropbind property="visible" category="PROPERTY" app-property="showExportExcel"/>
+        <cl:flowlayoutdata std:sid="f-data-42906441" width="24px" height="100%" autosize="none"/>
+      </cl:button>
+      <cl:button std:sid="button-0705b61d" id="btnPdfExport" class="tertiary btn-pdf" tooltip="PDF 내려받기" value="" icon="0">
+        <cl:listener std:sid="listener-d4910327" name="click" handler="onBtnPdfExportClick"/>
+        <cl:apppropbind property="visible" category="PROPERTY" app-property="showExportPdf"/>
+        <cl:flowlayoutdata std:sid="f-data-499c074c" width="24px" height="24px" autosize="none"/>
+      </cl:button>
+      <cl:button std:sid="button-6b1f2a90" id="btnPivot" class="tertiary btn-pivot" fieldLabel="피벗" tooltip="피벗" value="" icon="0">
+        <cl:listener std:sid="listener-6b1f2a91" name="click" handler="onBtnPivotClick"/>
+        <cl:apppropbind property="visible" category="PROPERTY" app-property="showPivot"/>
+        <cl:flowlayoutdata std:sid="f-data-6b1f2a92" width="24px" height="24px" autosize="none"/>
+      </cl:button>
+      <cl:group std:sid="group-bf548188" id="grpSearch" visible="false">
+        <cl:flowlayoutdata std:sid="f-data-8893bb68" width="213px" height="24px" autosize="width"/>
+        <cl:searchinput std:sid="s-input-b32f94a8" id="searchInput">
+          <cl:listener std:sid="listener-b4b11f47" name="search" handler="onSearchInputSearch"/>
+          <cl:flowlayoutdata std:sid="f-data-acab04a1" width="150px" height="24px"/>
+        </cl:searchinput>
+        <cl:button std:sid="button-9d820a48" value="닫기">
+          <cl:listener std:sid="listener-48886b2c" name="click" handler="onButtonClick"/>
+          <cl:flowlayoutdata std:sid="f-data-f4c90054" width="53px" height="24px" autosize="width"/>
+        </cl:button>
+        <cl:flowlayout std:sid="f-layout-840ed73d" scrollable="false" valign="middle" linewrap="false"/>
+      </cl:group>
+      <cl:button std:sid="button-af86560b" id="btn1" class="tertiary btn-eye" tooltip="아래 컨트롤 토글" icon="0">
+        <cl:listener std:sid="listener-037e0bf9" name="click" handler="onBtn1Click"/>
+        <cl:apppropbind property="visible" category="PROPERTY" app-property="visibleToggleGrp"/>
+        <cl:flowlayoutdata std:sid="f-data-ab8a8175" width="24px" height="24px" autosize="none"/>
+      </cl:button>
+      <cl:button std:sid="button-5468e20a" id="btn2" class="tertiary btn-goto" tooltip="아래 컨트롤 확대/축소" icon="0">
+        <cl:listener std:sid="listener-5e0c0eff" name="click" handler="onBtn2Click"/>
+        <cl:apppropbind property="visible" category="PROPERTY" app-property="visiblePopGrp"/>
+        <cl:flowlayoutdata std:sid="f-data-71708bc6" width="24px" height="24px" autosize="none"/>
+      </cl:button>
+      <cl:flowlayout std:sid="f-layout-c0de2cea" valign="middle"/>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-975f7c47" scrollable="false" hspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="253" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

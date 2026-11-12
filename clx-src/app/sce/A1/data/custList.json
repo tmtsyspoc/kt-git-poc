@@ -1,0 +1,166 @@
+{
+	"DS_CUST": [{
+			"custNo": "1",
+			"korNm": "홍길동",
+			"engNm": "Hong Gil Dong",
+			"jumin": "8001011234567",
+			"job": "value2",
+			"age": "32",
+			"drvYn": "Y",
+			"birth": "19800101",
+			"nation": "1"
+		},
+		{
+			"custNo": "2",
+			"korNm": "토마토",
+			"engNm": "Tomato",
+			"jumin": "7001011234567",
+			"job": "value1",
+			"age": "42",
+			"drvYn": "N",
+			"birth": "19700228",
+			"nation": "1"
+		},
+		{
+			"custNo": "3",
+			"korNm": "김철수",
+			"engNm": "Kim Chul Soo",
+			"jumin": "8503151234567",
+			"job": "value3",
+			"age": "39",
+			"drvYn": "Y",
+			"birth": "19850315",
+			"nation": "1"
+		},
+		{
+			"custNo": "4",
+			"korNm": "이영희",
+			"engNm": "Lee Young Hee",
+			"jumin": "9007212234567",
+			"job": "value1",
+			"age": "34",
+			"drvYn": "N",
+			"birth": "19900721",
+			"nation": "1"
+		},
+		{
+			"custNo": "5",
+			"korNm": "박민수",
+			"engNm": "Park Min Soo",
+			"jumin": "7809101234567",
+			"job": "value2",
+			"age": "46",
+			"drvYn": "Y",
+			"birth": "19780910",
+			"nation": "1"
+		},
+		{
+			"custNo": "6",
+			"korNm": "최수진",
+			"engNm": "Choi Soo Jin",
+			"jumin": "9505022234567",
+			"job": "value4",
+			"age": "29",
+			"drvYn": "Y",
+			"birth": "19950502",
+			"nation": "1"
+		},
+		{
+			"custNo": "7",
+			"korNm": "정현우",
+			"engNm": "Jung Hyun Woo",
+			"jumin": "8801121234567",
+			"job": "value3",
+			"age": "36",
+			"drvYn": "N",
+			"birth": "19880112",
+			"nation": "1"
+		},
+		{
+			"custNo": "8",
+			"korNm": "강지은",
+			"engNm": "Kang Ji Eun",
+			"jumin": "9208302234567",
+			"job": "value2",
+			"age": "32",
+			"drvYn": "Y",
+			"birth": "19920830",
+			"nation": "1"
+		},
+		{
+			"custNo": "9",
+			"korNm": "윤성호",
+			"engNm": "Yoon Sung Ho",
+			"jumin": "7604181234567",
+			"job": "value1",
+			"age": "48",
+			"drvYn": "Y",
+			"birth": "19760418",
+			"nation": "1"
+		},
+		{
+			"custNo": "10",
+			"korNm": "한지민",
+			"engNm": "Han Ji Min",
+			"jumin": "9906252234567",
+			"job": "value4",
+			"age": "25",
+			"drvYn": "N",
+			"birth": "19990625",
+			"nation": "1"
+		}
+	],
+	"dsList": [{
+			"customerId": "CUST-001",
+			"name": "홍길동",
+			"company": "대한종합건설",
+			"department": "영업팀",
+			"position": "과장",
+			"email": "hong.gildong@daehancon.co.kr",
+			"phone": "010-1234-5678",
+			"project": "서울 역삼동 오피스텔 신축공사",
+			"projectStatus": "진행중",
+			"contractAmount": 18500000000,
+			"lastContactDate": "2025-06-12"
+		},
+		{
+			"customerId": "CUST-002",
+			"name": "김수진",
+			"company": "삼일건설",
+			"department": "설계팀",
+			"position": "대리",
+			"email": "kim.sujin@samillcon.co.kr",
+			"phone": "010-2222-3333",
+			"project": "인천 송도 공동주택 개발",
+			"projectStatus": "입찰준비",
+			"contractAmount": 0,
+			"lastContactDate": "2025-07-03"
+		},
+		{
+			"customerId": "CUST-003",
+			"name": "이철호",
+			"company": "백두건설",
+			"department": "현장관리팀",
+			"position": "부장",
+			"email": "lee.chulho@baekducon.co.kr",
+			"phone": "010-9876-5432",
+			"project": "부산 해운대 호텔 리모델링",
+			"projectStatus": "완료",
+			"contractAmount": 9200000000,
+			"lastContactDate": "2025-05-22"
+		},
+		{
+			"customerId": "CUST-004",
+			"name": "박지현",
+			"company": "동양종합건설",
+			"department": "안전관리팀",
+			"position": "사원",
+			"email": "park.jihyun@dongyangcon.co.kr",
+			"phone": "010-5555-6666",
+			"project": "세종 신도시 상가 신축공사",
+			"projectStatus": "중단",
+			"contractAmount": 0,
+			"lastContactDate": "2025-04-19"
+		}
+	]
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-26918ee3" version="1.0.0.0">
+  <head std:sid="head-af6f8c7f">
+    <title>udcPocGrdGrouping</title>
+    <screen std:sid="screen-38a4425f" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-2cda4187" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-02100615" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-7bb2e3e6"/>
+    <cl:appspec title="그리드 그룹행 컴포넌트">
+      <cl:property name="grid" type="control"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-70ebe607" style="top:0px; left:0px; width:800px; height:28px;">
+    <cl:listener std:sid="listener-883ce94b" name="load" handler="onBodyLoad"/>
+    <cl:group std:sid="group-7dbb44b0" id="grp" class="cl-flow-grouping border border-solid border-base">
+      <cl:xylayoutdata std:sid="xyl-data-690211fe" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+      <cl:flowlayout std:sid="f-layout-980db1f0" hspacing="4" leftmargin="4" rightmargin="4" topmargin="4" bottommargin="4"/>
+    </cl:group>
+    <cl:xylayout std:sid="xylayout-d5c05ee6"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-889d5596" version="1.0.0.0">
+  <head std:sid="head-464d3caa">
+    <title>pageindexpolicy</title>
+    <screen std:sid="screen-a77bd488" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-ba6e9ecd" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-172f154f" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-c289c007"/>
+    <cl:appspec title="페이지 인덱서">
+      <cl:property name="ctrl" type="control" std:desc="[Control] 그리드 컨트롤 객체"/>
+      <cl:property name="pageInfo" type="control" std:desc="[Control] 페이지 정보 데이터 맵"/>
+      <cl:property name="exportTitle" type="string" bindable="true" std:desc="[String] 출력 엑셀파일명(디폴트는 그리드 명칭임)"/>
+      <cl:property name="showExportExcel" type="boolean" default="true" bindable="true" std:desc="[Boolean] 엑셀 파일 Export 버튼을 보여줄지 여부"/>
+      <cl:event name="pagechange" type="cpr.events.CSelectionEvent"/>
+      <cl:event name="before-pagechange" type="cpr.events.CSelectionEvent"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-ab560aa1" style="top:0px; left:0px; width:1000px; height:28px;" class="table-utils">
+    <cl:listener std:sid="listener-497d5d94" name="load" handler="onBodyLoad"/>
+    <cl:listener std:sid="listener-287c526d" name="screen-change" handler="onBodyScreenChange"/>
+    <cl:group std:sid="group-edd1a07c" id="grpPaging">
+      <cl:xylayoutdata std:sid="xyl-data-2bfa9eba" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+      <cl:group std:sid="group-e0ab3cfa" id="grpTotal">
+        <cl:formdata std:sid="f-data-e9e47bf6" width="109" height="25" row="0" col="0"/>
+        <cl:output std:sid="output-7b028046" style="text-align:right;" value="Total">
+          <cl:formdata std:sid="f-data-87bf25b2" row="0" col="0"/>
+        </cl:output>
+        <cl:output std:sid="output-b07c2c3e" id="optTot" style="font-weight:bold; text-align:center;" datatype="number" format="999,999,999">
+          <cl:formdata std:sid="f-data-23d7e742" valign="FILL" row="0" col="1"/>
+        </cl:output>
+        <cl:output std:sid="output-e3eadef6" style="text-align:center;" value="/">
+          <cl:formdata std:sid="f-data-7b4b7a9c" row="0" col="2"/>
+        </cl:output>
+        <cl:output std:sid="output-ca4eef72" id="optRecordCountPerPage" style="font-weight:bold; text-align:center;" value="" datatype="number" format="999,999,999">
+          <cl:formdata std:sid="f-data-cbbef186" valign="FILL" row="0" col="3"/>
+        </cl:output>
+        <cl:combobox std:sid="c-box-c1d8fcf0" id="ipbRecordCountPerPage" value="10" preventinput="true">
+          <cl:listener std:sid="listener-04dcdab5" name="selection-change" handler="onIpbRecordCountPerPageSelectionChange"/>
+          <cl:formdata std:sid="f-data-270a8520" valign="CENTER" height="28" row="0" col="4"/>
+          <cl:item std:sid="t-item-f73e3c09" label="10건" value="10"/>
+          <cl:item std:sid="t-item-c70fbe83" label="500건" value="500"/>
+          <cl:item std:sid="t-item-9ba27adb" label="1,000건" value="1000"/>
+          <cl:item std:sid="t-item-8feb41c1" label="5,000건" value="5000"/>
+        </cl:combobox>
+        <cl:formlayout std:sid="f-layout-15b6aed2" scrollable="false" hspace="4px" vspace="0px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="30" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+          <cl:columns length="43" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="#000000" minlength="0" syncminlength="false"/>
+          <cl:columns length="5" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+          <cl:columns length="43" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="#000000" minlength="0" syncminlength="false"/>
+          <cl:columns length="100" unit="PIXEL" autoSizing="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:pageindexer std:sid="p-indexer-31b86270" id="pageIndex" totalrowcount="1" viewpagecount="5" pageindexwidth="1fr">
+        <cl:listener std:sid="listener-c33e4804" name="selection-change" handler="onPageIndexSelectionChange"/>
+        <cl:listener std:sid="listener-39639243" name="before-selection-change" handler="onPageIndexBeforeSelectionChange"/>
+        <cl:formdata std:sid="f-data-ad6fe11d" row="0" col="1"/>
+      </cl:pageindexer>
+      <cl:group std:sid="group-61ed5e15" id="grpPageCnt">
+        <cl:formdata std:sid="f-data-f2b595bd" row="0" col="2"/>
+        <cl:inputbox std:sid="i-box-82bc275e" id="ipbCurrentIdx" style="text-align:center;" tooltip="이동 할 페이지" showclearbutton="false" inputfilter="^[0-9]*$">
+          <cl:listener std:sid="listener-a743f2ae" name="value-change" handler="onIpbCurrentIdxValueChange"/>
+          <cl:formdata std:sid="f-data-ba78dfc1" valign="CENTER" height="28" row="0" col="0"/>
+        </cl:inputbox>
+        <cl:output std:sid="output-4deeb531" style="text-align:center;" value="/">
+          <cl:formdata std:sid="f-data-adc96ade" row="0" col="1"/>
+        </cl:output>
+        <cl:output std:sid="output-e359caec" id="optPageCnt" value="0" datatype="number" format="999,999,999">
+          <cl:formdata std:sid="f-data-57ce15e8" row="0" col="2"/>
+        </cl:output>
+        <cl:output std:sid="output-33d4427e" style="text-align:left;" value="Page">
+          <cl:formdata std:sid="f-data-710ee76d" row="0" col="3"/>
+        </cl:output>
+        <cl:formlayout std:sid="f-layout-79449e63" scrollable="false" hspace="4px" vspace="0px" left-margin="1fr">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="60" unit="PIXEL" autoSizing="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+          <cl:columns length="5" unit="PIXEL" autoSizing="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+          <cl:columns length="10" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="#000000" minlength="0" syncminlength="false"/>
+          <cl:columns length="36" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="#000000" minlength="0" syncminlength="false"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-ffe2063f" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="10px" bottom-margin="0px" left-margin="10px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="237" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="160" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:xylayout std:sid="xylayout-617b9262" scrollable="false"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

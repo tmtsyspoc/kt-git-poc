@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-57d69423" version="1.0.0.0">
+  <head std:sid="head-cf069d52">
+    <title>UbiReport</title>
+    <screen std:sid="screen-181c5d6f" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-e9e421dc" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-39d1441f" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-894ff50a"/>
+    <cl:appspec dev-description="pdf 뷰어 컴포넌트">
+      <cl:property name="pageNo" type="string" std:desc="[String] 페이지 번호"/>
+      <cl:property name="fileUrl" type="string" std:desc="[String] pdf 파일의 url "/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-045e7ec7" style="top:0px; left:0px; width:500px; height:300px;" class="viewer-overlay">
+    <cl:listener std:sid="listener-17f18766" name="click" handler="onBodyClick"/>
+    <cl:listener std:sid="listener-7fad2091" name="load" handler="onBodyLoad"/>
+    <cl:listener std:sid="listener-e42dd95e" name="keydown" handler="onBodyKeydown"/>
+    <cl:embeddedpage std:sid="e-page-19cc1fca" id="empPdfViewer">
+      <cl:xylayoutdata std:sid="xyl-data-26a42e76" top="50px" right="150px" bottom="70px" left="150px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+    </cl:embeddedpage>
+    <cl:group std:sid="group-3ca80260" id="toolbar" class="grp-toolbar" visible="false">
+      <cl:xylayoutdata std:sid="xyl-data-ac3d62af" bottom="30px" width="80px" height="30px" horizontalAnchor="CENTER" verticalAnchor="BOTTOM"/>
+      <cl:button std:sid="button-c1625d20" id="btnClose" class="btn-i-only tertiary ico-minus" icon="0">
+        <cl:listener std:sid="listener-1e1213d3" name="click" handler="onBtn1Click"/>
+        <cl:formdata std:sid="f-data-d6a4bc2b" row="0" col="0"/>
+      </cl:button>
+      <cl:formlayout std:sid="f-layout-7ca75d10" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:output std:sid="output-19c97845" id="cover" style="background-color:#ffffff; font-weight:bold; font-size:18px; text-align:center;" removeOnBuild="true" value="PDF Viewer Component">
+      <cl:xylayoutdata std:sid="xyl-data-7e2b08c2" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+    </cl:output>
+    <cl:xylayout std:sid="xylayout-1dcc922b"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

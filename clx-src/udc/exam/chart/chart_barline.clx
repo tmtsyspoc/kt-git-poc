@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-e586e0b1" version="1.0.0.0">
+  <head std:sid="head-2581a1b9">
+    <title>chart_line</title>
+    <screen std:sid="screen-964719cb" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-095a8869" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-94638b1d" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-b16b7ac3"/>
+    <cl:appspec title="바라인믹스 차트" dev-icon="iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAC20lEQVR4nL1Wa28SQRTt77Qam2qVQqMljSKpYv1gFAVsjZUaE5qqiU0/NJFHja/Yqm1qhQQjm6aIhNfyXnYXfsBx7sJSQJbnxg+T3Z27M3PuPefeuRO1Wg2DjkoqBSGXgyAIKBZL+JNIKu+VSgVytao8lXdZ7rkP2SVJUp4T6mQ+n++7sBw9QTGZRKFQAJ/NIXLMvotFlEoliGxtuVxWbKIoau5RZUCTbI94PI50Ol0HQItoEID/NVSgzQhQKIeho9sQJRlFRoEgSn3/Vc/TDYAk1w9XtML4LfTZT1cAslxlB1ba5ggM8T0QAOIjx9Q9Kp95Jr6uPJcFzTXZbFY/DXR634yCxryuFAiMby4aw2EorHxfWLCdipJSUyMldQNA3r/f3YfT7UH2yx4m524MFJ02AFRMRtVAnvH87vM3PFxZQ3DqLANgabOrGdG5js4bWwOk8lwmgx3vDhwrzxCaOvdPBNSM6KyyulBAGyf9PryYMfQEUKdC0B8A8ZsO+AcCQGIlOnTVAPGfUiJwWVMDWnVhbA2Q96SBQSOgnMHuCLovxqaAcjtzdASRVbNhACjRbqTlyADExqXDLdngXLyDT09WhwJA4OniagNAjcQgGiAOyQN655ZuwTprht/h6qqBEvtX7Xq66oc1QGTvGwHimTymNJJacpkiYDWaEXA+6hqB+dt2RGNxbT30o4BShrwlsVG/V2b2WDyBSjKBD3v7PQH8dq/CZF7EybAA1Kais6sphEIIXLkK673l5iG9AITnZmE0XUNwcxMf1zfw9XuwNwDigmcdb4bjEP7FIc5y+/W2DzGfFxuP3fA992B7ehqWuy4cnp/EGdN1hG03YTHM480DB9YvXoLd9bRp+2EywGBcwO59O5ZnjHCveRB59RJb3rdIHxzgZ+QYPJ897YrlhiqpSaCipBYmEifP88ozw2q+2vWSgFrn1H9oDdmpS1bnUsyxVhvtTTa1ff8Lfl/vuKT6tkQAAAAASUVORK5CYII=">
+      <cl:property name="dataSet" type="control"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-a9a7e635" style="top:0px; left:0px; width:300px; height:300px;" removeOnBuild="false">
+    <cl:uicontrolshell std:sid="uic-shell-6f65fe55" id="shl1">
+      <cl:listener std:sid="listener-9239d0ae" name="init" handler="onShl1Init"/>
+      <cl:listener std:sid="listener-e4eea1c1" name="load" handler="onShl1Load"/>
+      <cl:xylayoutdata std:sid="xyl-data-1d09ac1e" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+    </cl:uicontrolshell>
+    <cl:xylayout std:sid="xylayout-7618ab8f" scrollable="false"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

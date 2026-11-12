@@ -1,0 +1,168 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-f7f90466" version="1.0.6209">
+  <head std:sid="head-c2e044ec">
+    <screen std:sid="screen-3c26f3e5" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-4922270f" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-52d6156b" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-1300b925">
+      <cl:dataset comment="진행 프로세스" std:sid="d-set-d77f4e70" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-f8f2fb42" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-320425d6" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn std:sid="d-column-926e204b" name="SUB_TITLE"/>
+          <cl:datacolumn std:sid="d-column-822fd369" name="SUB_TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn std:sid="d-column-ddf2aca3" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn std:sid="d-column-a9ab6d70" name="CONT" datatype="string"/>
+          <cl:datacolumn std:sid="d-column-aff846c8" name="DISPLAY_CONT"/>
+          <cl:datacolumn std:sid="d-column-5aced3a6" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-47df60ca" name="SUB_CODE"/>
+          <cl:datacolumn std:sid="d-column-9d72841a" name="TARGET_CTRL"/>
+          <cl:datacolumn std:sid="d-column-6b4b121c" name="TARGET_EMB"/>
+          <cl:datacolumn std:sid="d-column-f46cbbfb" name="APP_ID"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[캐시·버전 정합성]]></cl:datavalue>
+            <cl:datavalue columnname="DISPLAY_CONT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="APP_ID"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[정적 리소스와 API 버전 혼합 및 오래된 캐시 장애를 통제한다.]]></cl:datavalue>
+            <cl:datavalue columnname="DISPLAY_CONT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="APP_ID"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[목적]]></cl:datavalue>
+            <cl:datavalue columnname="DISPLAY_CONT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="APP_ID"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[1. 배포한 화면 파일만 실시간으로 다운로드 할 수 있는 기능 제공]]></cl:datavalue>
+            <cl:datavalue columnname="DISPLAY_CONT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="APP_ID"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[확인]]></cl:datavalue>
+            <cl:datavalue columnname="DISPLAY_CONT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="APP_ID"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[cache 적용여부에 따라 배포한 파일만 실시간 다운로드 할 수 있는지 확인한다.]]></cl:datavalue>
+            <cl:datavalue columnname="DISPLAY_CONT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="APP_ID"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[화면 새로고침을 했을 때 개발자도구의 네트워크 탭에서 새롭게 리소스를 로드하는지 확인한다.]]></cl:datavalue>
+            <cl:datavalue columnname="DISPLAY_CONT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[새로고침,네트워크]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[btn1]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="APP_ID"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="[OPS-03]캐시·버전 정합성"/>
+  </head>
+  <body std:sid="body-bc555694" class="wrap">
+    <cl:udc std:sid="ud-control-6bba131b" type="udc.com.udcComAppHeader">
+      <cl:verticaldata std:sid="v-data-feed0661" width="900px" height="28px"/>
+    </cl:udc>
+    <cl:group std:sid="group-000280d9" id="grpData" class="conts-area">
+      <cl:verticaldata std:sid="v-data-30fcea68" width="976px" height="903px" autosize="none" grow="1"/>
+      <cl:group std:sid="group-8331296a" id="grp1">
+        <std:metadata>
+          <std:property key="template-uuid" value="d3a2c98f-b10c-467d-9c96-0c980e76da6e"/>
+          <std:property key="template-rev" value="10"/>
+        </std:metadata>
+        <cl:verticaldata std:sid="v-data-b575b4f2" width="992px" height="179px" autosize="height"/>
+        <cl:group std:sid="group-fd2c177e" id="grp5">
+          <cl:verticaldata std:sid="v-data-8094b0aa" width="100%" height="28px" autosize="height"/>
+          <cl:udc std:sid="ud-control-d1fac6c8" id="udcComFormTitle1" type="udc.com.udcComFormTitle">
+            <cl:formdata std:sid="f-data-c115955d" row="0" col="0"/>
+            <cl:property name="title" value="캐시 설정" type="string"/>
+          </cl:udc>
+          <cl:formlayout std:sid="f-layout-a7e80e13" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="28" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+            <cl:columns length="200" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:output std:sid="output-aeba685a" id="opt1" value="다음 이벤트 실행을 통해 배포함 화면 파일만 실시간으로 다운로드 할 수 있도록 캐시를 설정합니다.">
+          <cl:verticaldata std:sid="v-data-41d0d4c7" width="100%" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:button std:sid="button-b6663d84" id="btn1" value="cache 미적용">
+          <cl:listener std:sid="listener-23ef66cf" name="click" handler="onBtn1Click"/>
+          <cl:verticaldata std:sid="v-data-90f41c34" width="150px" height="28px" autosize="width"/>
+        </cl:button>
+        <cl:verticallayout std:sid="v-layout-245105b8" distribution="leading" spacing="4"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-397ce815" spacing="16" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-960e50f1" spacing="16" leftmargin="24" rightmargin="24" topmargin="16" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

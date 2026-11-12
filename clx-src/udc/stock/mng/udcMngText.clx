@@ -1,0 +1,64 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-4b73c7aa" version="1.0.5542">
+  <head std:sid="head-6b0486b4">
+    <std:metadata>
+      <std:property key="template-file" value="templates/일반화면/1.그리드/F_그리드_페이징.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-33e0147c" id="default" name="default" width="1024px" height="768px" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-daebf791" id="tablet" name="tablet" width="500px" height="667px"/>
+    <screen std:sid="screen-38feba7d" id="mobile" name="mobile" width="350px" height="525px"/>
+    <cl:model std:sid="model-c3cb4ca4"/>
+    <cl:appspec title="컨텐츠관리-본문">
+      <cl:event name="mng-delete" type="cpr.events.CAppEvent"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-0e0dd4ba" style="top:0px; left:0px; width:450px; height:300px;" class="conts-wrap">
+    <cl:group std:sid="group-44b19634">
+      <cl:formdata std:sid="f-data-983824b7" row="1" col="0"/>
+      <cl:udc std:sid="ud-control-77a87144" id="edt1" type="udc.stock.mng.udcMngHtmlEditor">
+        <cl:formdata std:sid="f-data-4ff6abf3" row="1" col="0" rowspan="1" colspan="1"/>
+        <cl:property name="hideToolbar" value="true" type="boolean"/>
+      </cl:udc>
+      <cl:group std:sid="group-06d27251">
+        <cl:formdata std:sid="f-data-21c78e37" row="0" col="0" rowspan="1" colspan="1"/>
+        <cl:output std:sid="output-847072f2" value="Text">
+          <cl:formdata std:sid="f-data-34675253" row="0" col="0"/>
+        </cl:output>
+        <cl:formlayout std:sid="f-layout-0e88e661" scrollable="false" hspace="4px" vspace="4px">
+          <cl:rows length="25" unit="PIXEL"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-73b2eade" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="25" unit="PIXEL"/>
+        <cl:rows length="1" unit="FRACTION" autoSizing="true" shadetype="NONE" shadecolor="transparent" minlength="0"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-7d7da007">
+      <cl:formdata std:sid="f-data-f16bd9a5" row="0" col="0" rowspan="1" colspan="1"/>
+      <cl:output std:sid="output-bbd36e2f" class="cms-subtitle" value="본문">
+        <cl:formdata std:sid="f-data-813e248d" row="0" col="0"/>
+      </cl:output>
+      <cl:button std:sid="button-70ceee8f" class="btn-close" value="">
+        <cl:listener std:sid="listener-153d68d1" name="click" handler="onButtonClick2"/>
+        <cl:formdata std:sid="f-data-14b69341" row="0" col="1"/>
+      </cl:button>
+      <cl:formlayout std:sid="f-layout-446dd4e3" scrollable="false" hspace="8px" vspace="8px">
+        <cl:rows length="32" unit="PIXEL"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="32" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-32a03ac5" scrollable="false" hspace="0px" vspace="8px" top-margin="16px" right-margin="16px" bottom-margin="16px" left-margin="16px">
+      <cl:rows length="32" unit="PIXEL"/>
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

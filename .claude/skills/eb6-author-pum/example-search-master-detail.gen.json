@@ -1,0 +1,20 @@
+{
+    "version": "1.0.0",
+    "clx": {
+        "termSources": [
+            {
+                "type": "manual",
+                "data": {
+                    "부서": "DEPT_NM",
+                    "이름": "EMP_NM",
+                    "나이": "AGE",
+                    "입사일": "JOIN_YMD",
+                    "주민등록번호": "RRN",
+                    "거주지": "ADDR",
+                    "전화": "TEL_NO",
+                    "메모": "MEMO"
+                }
+            }
+        ]
+    }
+}

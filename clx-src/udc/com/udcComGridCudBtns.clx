@@ -1,0 +1,70 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-e94b94f4" version="1.0.5186">
+  <head std:sid="head-f8e0940e">
+    <screen std:sid="screen-ba80db57" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-2b867b20" id="tablet" name="tablet" width="1024px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-0d752a49" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-6c2ac1ce"/>
+    <cl:appspec dev-description="신규/삭제/취소/저장 액션을 위한 공통버튼">
+      <cl:property name="grid" type="control" std:desc="[Grid] 대상 그리드 객체"/>
+      <cl:property name="focusColumnName" type="string" std:desc="[String] 행추가 후, 최초 포커스(focus) 할 컬럼명&#xD;&#xA;ex. CD_NM"/>
+      <cl:property name="ignoreDefaultNewAction" type="boolean" default="false" std:desc="[Boolean] 디폴트 행추가 액션을 무시할지 여부 (default: false)&#xD;&#xA;&#xD;&#xA;true 일 경우, 행추가 기능이 동작하지 않고 insert 이벤트만 발생합니다."/>
+      <cl:property name="ignoreDefaultDeleteAction" type="boolean" default="false" std:desc="[Boolean] 디폴트 행삭제 액션을 무시할지 여부 (default: false)&#xD;&#xA;&#xD;&#xA;true 일 경우, 행삭제 기능이 동작하지 않고 delete 이벤트만 발생합니다."/>
+      <cl:property name="ignoreDefaultRestoreAction" type="boolean" default="false" std:desc="[Boolean] 디폴트 행취소 액션을 무시할지 여부 (default: false)&#xD;&#xA;&#xD;&#xA;true 일 경우, 행취소 기능이 동작하지 않고 restore 이벤트만 발생합니다."/>
+      <cl:property name="buttonNewLabel" type="string" default="행추가" bindable="true" std:desc="[String] 행추가 버튼 text (default: 행추가)"/>
+      <cl:property name="buttonDelLabel" type="string" default="행삭제" bindable="true" std:desc="[String] 행삭제 버튼 text (default: 행삭제)"/>
+      <cl:property name="buttonSaveLabel" type="string" default="저장" bindable="true" std:desc="[String] 저장 버튼 text (default: 저장)"/>
+      <cl:property name="buttonRestoreLable" type="string" default="행취소" bindable="true" std:desc="[String] 취소 버튼 text (default: 행취소)"/>
+      <cl:property name="visibleNewButton" type="boolean" default="true" bindable="true" std:desc="[Boolean] 행추가 버튼 보이기 여부 (default: true)"/>
+      <cl:property name="visibleDeleteButton" type="boolean" default="true" bindable="true" std:desc="[Boolean] 행삭제 버튼 보이기 여부 (default: true)"/>
+      <cl:property name="visibleRestoreButton" type="boolean" default="true" bindable="true" std:desc="[Boolean] 행취소 버튼 보이기 여부 (default: true)"/>
+      <cl:property name="visibleSaveButton" type="boolean" default="true" bindable="true" std:desc="[Boolean] 저장 버튼 보이기 여부 (default: true)"/>
+      <cl:event name="insert" type="cpr.events.CUIEvent" std:desc="신규 클릭 이벤트"/>
+      <cl:event name="delete" type="cpr.events.CUIEvent" std:desc="삭제 클릭 이벤트"/>
+      <cl:event name="restore" type="cpr.events.CUIEvent" std:desc="취소 클릭 이벤트"/>
+      <cl:event name="save" type="cpr.events.CUIEvent" std:desc="저장 클릭 이벤트"/>
+      <cl:event name="beforeInsert" type="cpr.events.CUIEvent" std:desc="신규버튼 클릭전 호출 이벤트(신규 행 추가전에 체크할 비지니스 로직이 있는 경우 사용)"/>
+      <cl:event name="beforeDelete" type="cpr.events.CUIEvent" std:desc="삭제버튼 클릭전 호출 이벤트(행 삭제전에 체크할 비지니스 로직이 있는 경우 사용)"/>
+      <cl:event name="beforeRestore" type="cpr.events.CUIEvent" std:desc="취소버튼 클릭전 호출 이벤트(행 취소전에 체크할 비지니스 로직이 있는 경우 사용)"/>
+      <cl:event name="commonEvent" type="cpr.events.CUIEvent" std:desc="신규, 삭제, 취소 클릭 공통 이벤트(e.userData의 status로 확인 가능)"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-df10819b" style="top:0px; left:0px; width:345px; height:28px;">
+    <cl:listener std:sid="listener-417b7d93" name="property-change" handler="onBodyPropertyChange"/>
+    <cl:button std:sid="button-9d6ff854" id="btnNew" class="tertiary btn-add" icon="0">
+      <cl:listener std:sid="listener-05769aef" name="click" handler="onBtnNewClick"/>
+      <cl:apppropbind property="visible" category="PROPERTY" app-property="visibleNewButton"/>
+      <cl:apppropbind property="value" category="PROPERTY" app-property="buttonNewLabel"/>
+      <cl:formdata std:sid="f-data-b5e10ddb" row="0" col="0"/>
+    </cl:button>
+    <cl:button std:sid="button-5a91756d" id="btnRestore" class="tertiary btn-edit" icon="0">
+      <cl:listener std:sid="listener-393285bd" name="click" handler="onBtnRestoreClick"/>
+      <cl:apppropbind property="visible" category="PROPERTY" app-property="visibleRestoreButton"/>
+      <cl:apppropbind property="value" category="PROPERTY" app-property="buttonRestoreLable"/>
+      <cl:formdata std:sid="f-data-f5475260" row="0" col="1"/>
+    </cl:button>
+    <cl:button std:sid="button-281dd9da" id="btnDelete" class="tertiary btn-remove" icon="0">
+      <cl:listener std:sid="listener-c43ba3ca" name="click" handler="onBtnDeleteClick"/>
+      <cl:apppropbind property="value" category="PROPERTY" app-property="buttonDelLabel"/>
+      <cl:apppropbind property="visible" category="PROPERTY" app-property="visibleDeleteButton"/>
+      <cl:formdata std:sid="f-data-ea0549b9" row="0" col="2"/>
+    </cl:button>
+    <cl:button std:sid="button-7f318a32" id="btnSave" class="primary btn-save" icon="0">
+      <cl:listener std:sid="listener-ebb02e63" name="click" handler="onBtnSaveClick"/>
+      <cl:apppropbind property="visible" category="PROPERTY" app-property="visibleSaveButton"/>
+      <cl:apppropbind property="value" category="PROPERTY" app-property="buttonSaveLabel"/>
+      <cl:formdata std:sid="f-data-1c1f4b1c" row="0" col="3"/>
+    </cl:button>
+    <cl:formlayout std:sid="f-layout-2ca12650" scrollable="false" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="28" unit="PIXEL"/>
+      <cl:columns length="86" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+      <cl:columns length="88" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      <cl:columns length="86" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      <cl:columns length="74" unit="PIXEL" autoSizing="true" hidden="false" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

@@ -1,0 +1,47 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-e5316a37" version="1.0.0.0">
+  <head std:sid="head-4c48eb70">
+    <title>udcComLoadmask</title>
+    <screen std:sid="screen-2b4d0599" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-966ad2f4" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-77fbc87f" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-5f96580f"/>
+    <cl:appspec title="로드 마스크">
+      <cl:event name="cancel" type="cpr.events.CUIEvent"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-0c2cd7a6" style="top:0px; left:0px; width:500px; height:400px;" class="loader-overlay">
+    <cl:group std:sid="group-62b73b26" class="loader-box" clipcontent="false">
+      <cl:xylayoutdata std:sid="xyl-data-47b98b33" width="300px" height="200px" horizontalAnchor="CENTER" verticalAnchor="CENTER"/>
+      <cl:group std:sid="group-fd37c540">
+        <cl:verticaldata std:sid="v-data-2d3be692" width="120px" height="120px"/>
+        <cl:img std:sid="image-8a8a55bb" src="../../theme/img/pages/udc/loader.gif">
+          <std:metadata>
+            <std:property key="locked" value="true"/>
+          </std:metadata>
+          <cl:xylayoutdata std:sid="xyl-data-00cb6221" width="300px" height="300px" horizontalAnchor="CENTER" verticalAnchor="CENTER"/>
+        </cl:img>
+        <cl:xylayout std:sid="xylayout-611f8af3" scrollable="false"/>
+      </cl:group>
+      <cl:group std:sid="group-b6485b58" class="in">
+        <cl:verticaldata std:sid="v-data-d3a342bc" width="100%" height="79px" autosize="height"/>
+        <cl:output std:sid="output-31f8617e" id="optTxt" class="txt" value="잠시만 기다려주세요!">
+          <cl:verticaldata std:sid="v-data-0f9ea448" width="100%" height="100%"/>
+        </cl:output>
+        <cl:output std:sid="output-6e4d9bec" id="optRowCount" class="table-row-count text-center" visible="false" value="0" datatype="number" format="s#,##0" displayexp="sstr(&quot;건수 &quot;, &quot;key&quot;) + sstr(text + &quot;건&quot;, &quot;value&quot;)">
+          <cl:verticaldata std:sid="v-data-5346ef4e" width="360px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:progress std:sid="progress-38e3dabb" id="progressbar" visible="false" value="0" max="100.0">
+          <cl:verticaldata std:sid="v-data-7c1f55ac" width="360px" height="10px"/>
+        </cl:progress>
+        <cl:verticallayout std:sid="v-layout-2b72a81b" scrollable="false" spacing="4"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-47946b27" scrollable="false" distribution="center" spacing="0"/>
+    </cl:group>
+    <cl:xylayout std:sid="xylayout-212b6774"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

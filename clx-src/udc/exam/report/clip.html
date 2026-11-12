@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Clip Report</title>
+		<link rel="stylesheet" type="text/css" href="/clip/css/clipreport5.css">
+		<link rel="stylesheet" type="text/css" href="/clip/css/UserConfig5.css">
+		<link rel="stylesheet" type="text/css" href="/clip/css/font.css">
+		
+		<script type='text/javascript' src='/clip/js/jquery-1.11.1.js'></script>
+		<script type='text/javascript' src='/clip/js/clipreport5.js'></script>
+		<script type='text/javascript' src='/clip/js/UserConfig5.js'></script>
+		
+		<script type='text/javascript' src='/clip/js/oof/OOFDocument.js'></script>
+		<script type='text/javascript'>
+			var _ownerApp; // udcEmpClipReport AppInstance
+			
+			function startReport (filePath) {
+				if(filePath == "" || filePath == null) {
+					console.log("can't find filePath!!");
+					return false;
+				}
+				
+				var reportEle = document.getElementById("clipreport");
+				
+				var oof = new OOFDocument();
+				oof.addFile("crf.root", ("%root%/crf/" + filePath));
+				
+				// 매개변수 세팅
+				var vcDataMap = _ownerApp.getAppProperty("datamapProp");
+				if(vcDataMap) {
+					vcDataMap.getColumnNames().forEach(function(args){
+						var paramValue = vcDataMap.getValue(args);
+						if(paramValue) {
+							oof.addField(args, paramValue);
+						}
+					});
+				}
+	
+				// 클립레포트 세팅
+				var clip = createOOFReport("/clip/report_server.jsp", oof.toString(), reportEle);
+				
+				/* 레포트 옵션 설정 */
+				if(_ownerApp && _ownerApp.hasAppMethod("setClipOption")) {
+					_ownerApp.callAppMethod("setClipOption", clip);
+				}
+				 
+				// 레포트 실행
+				clip.view();
+			}
+		</script>
+	</head>
+	<body>
+		<div id='clipreport' style='height: 100%;' />
+	</body>
+</html>

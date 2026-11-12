@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-2fbc8733" version="1.0.5739">
+  <head std:sid="head-3b3fc8b3">
+    <screen std:sid="screen-b33bc468" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-3796691c" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-4b646373" id="EXB-POP[560]" name="EXB-POP[560]" width="560px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="768" customWidth="1024"/>
+    <screen std:sid="screen-d7e342fd" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="375"/>
+    <cl:model std:sid="model-b3caf8fa"/>
+    <cl:appspec title="워크플로우 버튼 동적 생성">
+      <cl:property name="dataSet" type="control" std:desc="[Dataset] 워크플로우 데이터셋&#xD;&#xA;&#xD;&#xA;※ 필요 컬럼 정보&#xD;&#xA;- index : 프로세스 등록 순서&#xD;&#xA;- title : 프로세스명&#xD;&#xA;- src&#xA; : 연결할 화면ID&#xD;&#xA;- useYN : 프로세스 사용 여부"/>
+      <cl:property name="embId" type="string" default="embapp1" std:desc="[String] 워크플로우 실행 시 화면을 표시할 타겟 임베디드앱 ID"/>
+      <cl:event name="proccess-click" type="cpr.events.CUIEvent"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-dfa9f9c2" style="top:0px; left:0px; width:1024px; height:32px;" class="workflow">
+    <cl:listener std:sid="listener-fdb92b59" name="property-change" handler="onBodyPropertyChange"/>
+    <cl:output std:sid="output-e8671ae8" id="opt1" class="text-center fw-bold text-xl" removeOnBuild="true" value="워크플로우">
+      <cl:formdata std:sid="f-data-fa811f21" row="0" col="0"/>
+    </cl:output>
+    <cl:formlayout std:sid="f-layout-24b49d97" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="32" unit="PIXEL" autoSizing="true"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

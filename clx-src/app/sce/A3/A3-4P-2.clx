@@ -1,0 +1,102 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-93862321" version="1.0.5424">
+  <head std:sid="head-e18bb6dc">
+    <screen std:sid="screen-c31b0373" id="EXB-POP[1024]" name="EXB-POP[1024]" width="1024px" height="576px" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-695413ab" id="EXB-POP[800]" name="EXB-POP[800]" width="800px" height="480px" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-3e452a74" id="EXB-POP[480]" name="EXB-POP[480]" width="480px" height="320px" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-ea893a28">
+      <cl:dataset std:sid="d-set-e0fd7f73" id="dsUsers">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-aafa965d" name="userId"/>
+          <cl:datacolumn std:sid="d-column-6cb140bc" name="userNm"/>
+          <cl:datacolumn std:sid="d-column-ca5dc57e" name="userType"/>
+          <cl:datacolumn std:sid="d-column-2a37b559" name="userId_key"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="userId"><![CDATA[admin]]></cl:datavalue>
+            <cl:datavalue columnname="userNm"><![CDATA[박주완]]></cl:datavalue>
+            <cl:datavalue columnname="userType"><![CDATA[admin]]></cl:datavalue>
+            <cl:datavalue columnname="userId_key"><![CDATA[1]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="userId"><![CDATA[admin]]></cl:datavalue>
+            <cl:datavalue columnname="userNm"><![CDATA[김현수]]></cl:datavalue>
+            <cl:datavalue columnname="userType"><![CDATA[admin]]></cl:datavalue>
+            <cl:datavalue columnname="userId_key"><![CDATA[2]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="userId"><![CDATA[admin]]></cl:datavalue>
+            <cl:datavalue columnname="userNm"><![CDATA[이대호]]></cl:datavalue>
+            <cl:datavalue columnname="userType"><![CDATA[admin]]></cl:datavalue>
+            <cl:datavalue columnname="userId_key"><![CDATA[3]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="userId"><![CDATA[admin]]></cl:datavalue>
+            <cl:datavalue columnname="userNm"><![CDATA[이용택]]></cl:datavalue>
+            <cl:datavalue columnname="userType"><![CDATA[admin]]></cl:datavalue>
+            <cl:datavalue columnname="userId_key"><![CDATA[4]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="userId"><![CDATA[admin]]></cl:datavalue>
+            <cl:datavalue columnname="userNm"><![CDATA[정하늘]]></cl:datavalue>
+            <cl:datavalue columnname="userType"><![CDATA[admin]]></cl:datavalue>
+            <cl:datavalue columnname="userId_key"><![CDATA[5]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="결재자 선택 팝업"/>
+  </head>
+  <body std:sid="body-d7f9b575" class="wrap pop" childcombinatorclass="f_base">
+    <cl:listener std:sid="listener-126ece9a" name="init" handler="onBodyInit"/>
+    <cl:listener std:sid="listener-6454afb5" name="load" handler="onBodyLoad"/>
+    <cl:group std:sid="group-a47f66c3" id="grpData" class="conts-area">
+      <cl:formdata std:sid="f-data-8c8dd0d1" row="0" col="0"/>
+      <cl:group std:sid="group-46a81659" class="conts-wrap">
+        <cl:formdata std:sid="f-data-5c38b489" row="0" col="0" rowspan="1" colspan="1"/>
+        <cl:tree std:sid="tree-216ebd54" id="tre_lsit" filterexp="userType != &quot;user&quot;" autoOpen="-1">
+          <cl:listener std:sid="listener-e8de5f9e" name="item-dblclick" handler="onTre_lsitItemDblclick"/>
+          <cl:formdata std:sid="f-data-1765c3d8" row="0" col="0"/>
+          <cl:treeitemset datasetid="dsUsers" label="userNm" value="userId_key"/>
+        </cl:tree>
+        <cl:formlayout std:sid="f-layout-a73888f4" scrollable="false" hspace="0px" vspace="8px" top-margin="16px" right-margin="16px" bottom-margin="16px" left-margin="16px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-1b1a3c26" scrollable="false" hspace="16px" vspace="16px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-3b0ee81c" id="grpFooter" class="conts-footer">
+      <cl:formdata std:sid="f-data-ad89a52c" row="1" col="0" rowspan="1" colspan="1"/>
+      <cl:group std:sid="group-f3d7a659">
+        <cl:formdata std:sid="f-data-af0cc2b7" row="0" col="0"/>
+        <cl:button std:sid="button-e610e9e9" value="닫기">
+          <cl:listener std:sid="listener-d31278c5" name="click" handler="onButtonClick"/>
+          <cl:flowlayoutdata std:sid="f-data-b4ec3581" width="74px" height="28px" autosize="width"/>
+        </cl:button>
+        <cl:button std:sid="button-c4f815fe" id="btnSelect" class="primary" value="선택">
+          <cl:listener std:sid="listener-9aa624a9" name="click" handler="onButtonClick2"/>
+          <cl:flowlayoutdata std:sid="f-data-1c88303c" width="74px" height="28px" autosize="width"/>
+        </cl:button>
+        <cl:flowlayout std:sid="f-layout-1364edba" scrollable="false" hspacing="4" vspacing="4" halign="right"/>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-1b09ae3a" scrollable="false" hspace="0px" vspace="0px">
+        <cl:rows length="1" unit="FRACTION" autoSizing="true"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-a71f4840" scrollable="false" hspace="0px" vspace="16px" top-margin="24px" right-margin="24px" bottom-margin="24px" left-margin="24px">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:rows length="50" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

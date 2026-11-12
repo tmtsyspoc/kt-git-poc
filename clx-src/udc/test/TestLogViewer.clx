@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-d3301fe9" version="1.0.0.0">
+  <head std:sid="head-0f256d21">
+    <title>TestLogViewer</title>
+    <screen std:sid="screen-39ef8a46" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-132ef9d2" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-65ecbb4b" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-352f846c">
+      <cl:dataset std:sid="d-set-3296d5e5" id="ds1">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="테스트 명" std:sid="d-column-e3d9c2de" name="title"/>
+          <cl:datacolumn comment="성공 여부" std:sid="d-column-38d5002f" name="success" datatype="string"/>
+          <cl:datacolumn comment="기대 값" std:sid="d-column-55567873" name="expected"/>
+          <cl:datacolumn comment="실제 값" std:sid="d-column-111dfce4" name="actual"/>
+          <cl:datacolumn comment="비고" std:sid="d-column-788d57dc" name="note"/>
+          <cl:datacolumn std:sid="d-column-2a4b7f75" name="code"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="테스트 로그 뷰어"/>
+  </head>
+  <body std:sid="body-3dbabdf5" style="top:0px; left:0px; width:1250px; height:600px;" class="cl-overlay">
+    <cl:listener std:sid="listener-cbc39ce0" name="init" handler="onBodyInit"/>
+    <cl:group std:sid="group-f6fc2ed2" id="grp1" class="test-log-root">
+      <cl:xylayoutdata std:sid="xyl-data-805ad577" width="1200px" height="588px" horizontalAnchor="CENTER" verticalAnchor="CENTER"/>
+      <cl:output std:sid="output-2e73cc21" id="opt1" class="title" value="테스트 로그 뷰어">
+        <cl:formdata std:sid="f-data-1ad161d4" row="0" col="0" rowspan="1" colspan="1"/>
+      </cl:output>
+      <cl:grid std:sid="grid-ea9b3e4d" id="grd1" class="test-log" readonly="true" tabindex="-1" datasetid="ds1" autorowheight="all" resizablecolumns="all">
+        <cl:formdata std:sid="f-data-6676c373" row="1" col="0"/>
+        <cl:rowstyle>
+          <cl:expbind property="background-color" category="STYLER" expression="success == &quot;false&quot; ? &quot;#fff5f5&quot; : &quot;&quot; "/>
+        </cl:rowstyle>
+        <cl:gridcolumn std:sid="g-column-026a4373" width="199px"/>
+        <cl:gridcolumn std:sid="g-column-72bcbfb7"/>
+        <cl:gridcolumn std:sid="g-column-c657c4ab"/>
+        <cl:gridheader std:sid="gh-band-43c7766c">
+          <cl:gridrow std:sid="g-row-8b503ed2" height="36px"/>
+          <cl:gridcell std:sid="gh-cell-fcad98b9" rowindex="0" colindex="1" rowspan="1" colspan="1" targetcolumnname="expected" sortable="false" filterable="false" text="기대 값"/>
+          <cl:gridcell std:sid="gh-cell-4e430ded" rowindex="0" colindex="0" text="제목"/>
+          <cl:gridcell std:sid="gh-cell-1e17bce7" rowindex="0" colindex="2" text="실제 값"/>
+        </cl:gridheader>
+        <cl:griddetail std:sid="gd-band-e3ee4c29">
+          <cl:gridrow std:sid="g-row-6540736f" height="36px"/>
+          <cl:gridcell std:sid="gd-cell-470e364e" rowindex="0" colindex="0" rowspan="1" colspan="1" class="test-title-cell" columnname="title">
+            <cl:output std:sid="output-d36f0047" id="opt2" style="font-weight:bold;" value="Output">
+              <cl:expbind property="class" category="CLASS" expression="switch (success) {&#xA;&#x9;case &quot;true&quot; : &quot;success&quot;&#xA;&#x9;case &quot;false&quot; : &quot;fail&quot;&#xA;&#x9;default: &quot;&quot;&#xA;}"/>
+              <cl:celldata std:sid="c-data-d875d7fc"/>
+            </cl:output>
+          </cl:gridcell>
+          <cl:gridcell std:sid="gd-cell-c51f1e34" rowindex="0" colindex="1" rowspan="1" colspan="1" columnname="expected">
+            <cl:output std:sid="output-4fe47280" id="opt3">
+              <cl:celldata std:sid="c-data-381ab810"/>
+            </cl:output>
+          </cl:gridcell>
+          <cl:gridcell std:sid="gd-cell-6398e26c" rowindex="0" colindex="2" columnname="actual">
+            <cl:output std:sid="output-d96d86bc" id="opt4">
+              <cl:celldata std:sid="c-data-a7a7f9ea"/>
+            </cl:output>
+          </cl:gridcell>
+        </cl:griddetail>
+        <cl:gridfooter std:sid="gf-band-f2600555">
+          <cl:gridrow std:sid="g-row-7f22d44f" height="36px"/>
+          <cl:gridcell std:sid="gf-cell-434acf3b" rowindex="0" colindex="0" rowspan="1" colspan="3" expr="&quot;성공: &quot;&#xA;+ getConditionalRowCount(&quot;success == 'true'&quot;)&#xA;+ &quot; / &quot;&#xA;+ &quot;실패: &quot;&#xA;+ getConditionalRowCount(&quot;success == 'false'&quot;)"/>
+        </cl:gridfooter>
+      </cl:grid>
+      <cl:group std:sid="group-7adc8137" id="grp2">
+        <cl:formdata std:sid="f-data-9b5086fb" row="2" col="0" rowspan="1" colspan="2"/>
+        <cl:button std:sid="button-290d969b" id="btn1" value="닫기">
+          <cl:listener std:sid="listener-0c102dd5" name="click" handler="onBtn1Click"/>
+          <cl:flowlayoutdata std:sid="f-data-6c3b461f" width="70px" height="30px"/>
+        </cl:button>
+        <cl:flowlayout std:sid="f-layout-a8d56502" scrollable="false" halign="right"/>
+      </cl:group>
+      <cl:group std:sid="group-7fa8a1a9" id="grp3" class="form-box">
+        <std:metadata>
+          <std:property key="template-uuid" value="4773e6bb-e377-4d0f-a2b8-c7e060936076"/>
+          <std:property key="template-rev" value="1"/>
+        </std:metadata>
+        <cl:attribute name="table-min-height" value=""/>
+        <cl:attribute name="mobile-column-count" value="1"/>
+        <cl:attribute name="tablet-column-count" value="2"/>
+        <cl:selectioncontext selectionProvider="grd1"/>
+        <cl:formdata std:sid="f-data-1c1076d5" row="1" col="1"/>
+        <cl:output std:sid="output-56e860ca" id="opt5" class="label" value="제목">
+          <cl:formdata std:sid="f-data-d83bd6d6" row="0" col="0"/>
+        </cl:output>
+        <cl:output std:sid="output-f5704a94" id="opt7" class="label" value="비고">
+          <cl:formdata std:sid="f-data-6a97bcbe" row="1" col="0"/>
+        </cl:output>
+        <cl:output std:sid="output-f04fed6f" id="opt10" class="label" value="테스트 코드">
+          <cl:formdata std:sid="f-data-f5512087" row="2" col="0"/>
+        </cl:output>
+        <cl:inputbox std:sid="i-box-b8c2b0fa" id="ipb1" style="background-color:#ffffff;" readonly="true">
+          <cl:relativebind property="value" columnname="title"/>
+          <cl:formdata std:sid="f-data-9d4d11e3" row="0" col="1"/>
+        </cl:inputbox>
+        <cl:inputbox std:sid="i-box-14cd98d4" id="ipb2" style="background-color:#ffffff;" readonly="true">
+          <cl:relativebind property="value" columnname="note"/>
+          <cl:formdata std:sid="f-data-ed3a22b5" row="1" col="1"/>
+        </cl:inputbox>
+        <cl:textarea std:sid="t-area-72e56ef3" id="txa1" style="background-color:#ffffff;" readonly="true">
+          <cl:relativebind property="value" columnname="code"/>
+          <cl:formdata std:sid="f-data-0982eefc" row="2" col="1"/>
+        </cl:textarea>
+        <cl:formlayout std:sid="f-layout-4dbe8f03" scrollable="false" hspace="12px" vspace="12px" top-margin="6px" right-margin="6px" bottom-margin="6px" left-margin="6px" hseparatorwidth="1" hseparatortype="BY_CLASS">
+          <cl:rows length="30" unit="PIXEL"/>
+          <cl:rows length="30" unit="PIXEL"/>
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="120" unit="PIXEL" shadetype="BY_CLASS"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:button std:sid="button-6754a76c" id="btnClose" style="border-right-style:none; border-left-style:none; border-bottom-style:none; border-top-style:none;" class="tertiary ico-close btn-i-only" value="" icon="../../theme/images/controls/button/ic_btn.png">
+        <cl:listener std:sid="listener-a392570a" name="click" handler="onBtn1Click"/>
+        <cl:formdata std:sid="f-data-4ae5bdb0" halign="RIGHT" width="28" row="0" col="1"/>
+      </cl:button>
+      <cl:formlayout std:sid="f-layout-dc69e033" scrollable="false" hspace="10px" vspace="10px" top-margin="15px" right-margin="15px" bottom-margin="15px" left-margin="15px">
+        <cl:rows length="28" unit="PIXEL"/>
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:rows length="30" unit="PIXEL"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="480" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:xylayout std:sid="xylayout-e02b46f7"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

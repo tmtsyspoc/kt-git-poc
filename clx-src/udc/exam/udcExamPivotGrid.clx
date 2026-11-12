@@ -1,0 +1,255 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-1f092504" version="1.0.4218">
+  <head std:sid="head-c09a2b16">
+    <screen std:sid="screen-05e3c8b8" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-c11d7d96" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-d15119bc" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-0e9b2dd4">
+      <cl:dataset std:sid="d-set-0d2f88f5" id="ds"/>
+      <cl:dataset std:sid="d-set-74163e4d" id="dsVFld">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-26a6b351" name="label"/>
+          <cl:datacolumn std:sid="d-column-3fe2b367" name="value"/>
+          <cl:datacolumn std:sid="d-column-88caeffd" name="parent"/>
+          <cl:datacolumn std:sid="d-column-b708203a" name="icon"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="label">합계</cl:datavalue>
+            <cl:datavalue columnname="value">sum</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">평균</cl:datavalue>
+            <cl:datavalue columnname="value">avg</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">개수</cl:datavalue>
+            <cl:datavalue columnname="value">count</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">최솟값</cl:datavalue>
+            <cl:datavalue columnname="value">min</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">최댓값</cl:datavalue>
+            <cl:datavalue columnname="value">max</cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+      <cl:dataset std:sid="d-set-456598c1" id="dsCRFld">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-b2124ca7" name="label"/>
+          <cl:datacolumn std:sid="d-column-6fb8a60a" name="value"/>
+          <cl:datacolumn std:sid="d-column-fa1b6fec" name="parent"/>
+          <cl:datacolumn std:sid="d-column-71e051d5" name="icon"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="label">오름차순</cl:datavalue>
+            <cl:datavalue columnname="value">asc</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">내림자순</cl:datavalue>
+            <cl:datavalue columnname="value">desc</cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="피벗 그리드">
+      <cl:property name="dataset" type="control" std:desc="피벗 타겟 데이터 셋"/>
+      <cl:property name="pivotHelperMaxHeight" type="number" default="260" std:desc="피벗 도우미의 최대 사이즈"/>
+      <cl:property name="suppressedCellType" type="enumeration" default="split" std:desc="병합 스타일(splie,merged)">
+        <cl:available-value>split</cl:available-value>
+        <cl:available-value>merged</cl:available-value>
+      </cl:property>
+      <cl:property name="rows" type="string" std:desc="행 필드 ex) &quot;row1&quot;,&quot;row2&quot;.."/>
+      <cl:property name="columns" type="string" std:desc="컬럼 필드 ex) &quot;col1&quot;,&quot;col2&quot;.."/>
+      <cl:property name="values" type="string" std:desc="값 필드 ex) &quot;val1&quot;,&quot;val2&quot;"/>
+      <cl:property name="isfooter" type="boolean" default="false" std:desc="푸터합계 여부"/>
+      <cl:property name="isSubTotal" type="boolean" default="false" std:desc="소계 여부"/>
+      <cl:property name="cbxAtRn" type="boolean" default="true" std:desc="자동실행 여부"/>
+      <cl:property name="pivotHelperVisible" type="boolean" default="true" std:desc="피벗도우미 visible 여부"/>
+      <cl:event name="execute" type="cpr.events.CMouseEvent" std:desc="피벗을 실행했을 때 발생하는 이벤트"/>
+      <cl:event name="toggle" type="cpr.events.CMouseEvent" std:desc="피벗도우미에서 토글시 발생하는 이벤트"/>
+      <cl:event name="reset" type="cpr.events.CMouseEvent" std:desc="피벗을 초기화했을 때 발생하는 이벤트"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-771ee57b" style="top:0px; left:0px; width:600px; height:600px;">
+    <cl:listener std:sid="listener-12bf8e11" name="load" handler="onBodyLoad"/>
+    <cl:listener std:sid="listener-0e5c4ccd" name="property-change" handler="onBodyPropertyChange"/>
+    <cl:group std:sid="group-9ff0c1f6" id="grpPivotHelper" class="pivot-panel">
+      <cl:formdata std:sid="f-data-ff397283" row="0" col="0"/>
+      <cl:group std:sid="group-32569be3" id="grpHlpHd" class="pivot-helper-header">
+        <cl:formdata std:sid="f-data-a17751c5" row="0" col="0"/>
+        <cl:button std:sid="button-14ebfdb7" id="btnTggl" style="padding-left:0px;" class="btn-toggle expand" tooltip="도우미 접기/펼치기" value="">
+          <cl:listener std:sid="listener-cc40622b" name="click" handler="onBtnTgglClick"/>
+          <cl:formdata std:sid="f-data-33616b58" row="0" col="0"/>
+        </cl:button>
+        <cl:group std:sid="group-74cdd61b">
+          <cl:formdata std:sid="f-data-d3a0121d" row="0" col="1"/>
+          <cl:checkbox std:sid="c-box-a7c66380" id="cbxSubTre" class="sum" value="" text="소계">
+            <cl:listener std:sid="listener-522c0db5" name="value-change" handler="onCheckBoxValueChange"/>
+            <cl:flowlayoutdata std:sid="f-data-6c789fea" width="80px" height="28px" autosize="width"/>
+          </cl:checkbox>
+          <cl:checkbox std:sid="c-box-2b2e0cfc" id="chkSum" class="sum" value="true" falsevalue="false" text="푸터합계">
+            <cl:listener std:sid="listener-2fcb82b4" name="value-change" handler="onChkSumValueChange"/>
+            <cl:flowlayoutdata std:sid="f-data-f22ad02d" width="80px" height="28px" autosize="width"/>
+          </cl:checkbox>
+          <cl:checkbox std:sid="c-box-0966bb06" id="cbxAtRn" class="auto-update" tooltip="자동 실행" value="true" falsevalue="false" text="">
+            <cl:listener std:sid="listener-1ed562fd" name="value-change" handler="onCbxAtRnValueChange"/>
+            <cl:flowlayoutdata std:sid="f-data-b0d6e979" width="20px" height="20px"/>
+          </cl:checkbox>
+          <cl:button std:sid="button-9a5ac0ae" id="btnRst" class="btn-reset" tooltip="초기화" value="">
+            <cl:listener std:sid="listener-cff972e9" name="click" handler="onBtnRstClick"/>
+            <cl:flowlayoutdata std:sid="f-data-89cca280" width="20px" height="20px"/>
+          </cl:button>
+          <cl:button std:sid="button-d76e4635" id="btnRn" class="btn-run" tooltip="실행" value="">
+            <cl:listener std:sid="listener-7be0a3da" name="click" handler="onBtnRnClick"/>
+            <cl:flowlayoutdata std:sid="f-data-5cc4c7ca" width="20px" height="20px"/>
+          </cl:button>
+          <cl:flowlayout std:sid="f-layout-cd1f85b5" scrollable="false" vspacing="0" halign="right" valign="middle" linewrap="false"/>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-67fde3cf" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="28" unit="PIXEL"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:group std:sid="group-04364c77" id="grpHlpBd" class="pivot-helper-body">
+        <cl:formdata std:sid="f-data-7a77831b" row="1" col="0"/>
+        <cl:output std:sid="output-da4d679d" id="lblAll" class="label" value="전체">
+          <cl:formdata std:sid="f-data-ee823a91" row="0" col="0"/>
+        </cl:output>
+        <cl:group std:sid="group-254a15e0" id="grpAllCn" class="field-content" fieldLabel="전체">
+          <cl:attribute name="pivot-field-type" value="all"/>
+          <cl:formdata std:sid="f-data-c635d88a" row="1" col="0"/>
+          <cl:button std:sid="button-8f853d1b" id="btn5" class="field" removeOnBuild="true" value="필드 이름">
+            <cl:verticaldata std:sid="v-data-6a937f06" width="100px" height="28px"/>
+          </cl:button>
+          <cl:verticallayout std:sid="v-layout-3c7bd438" scrollable="true" spacing="3" leftmargin="5" rightmargin="5" topmargin="5" bottommargin="5"/>
+        </cl:group>
+        <cl:output std:sid="output-2633509b" id="lblClmn" class="label" value="열">
+          <cl:formdata std:sid="f-data-a87b269e" row="0" col="1"/>
+        </cl:output>
+        <cl:group std:sid="group-79bbc207" id="grpClmnCn" class="field-content">
+          <cl:attribute name="pivot-field-type" value="column"/>
+          <cl:formdata std:sid="f-data-afd9eb20" row="1" col="1"/>
+          <cl:button std:sid="button-b239be8d" id="btn1" class="field column asc" removeOnBuild="true" value="필드 이름">
+            <cl:verticaldata std:sid="v-data-701723c4" width="100px" height="28px"/>
+          </cl:button>
+          <cl:button std:sid="button-688fd4bb" id="btn2" class="field column desc" removeOnBuild="true" value="필드 이름">
+            <cl:verticaldata std:sid="v-data-bb3484bb" width="100px" height="28px"/>
+          </cl:button>
+          <cl:verticallayout std:sid="v-layout-470f0eaf" scrollable="true" spacing="3" leftmargin="5" rightmargin="5" topmargin="5" bottommargin="5"/>
+        </cl:group>
+        <cl:output std:sid="output-686fb6d4" id="lblRw" class="label" value="행">
+          <cl:formdata std:sid="f-data-a5465323" row="0" col="2"/>
+        </cl:output>
+        <cl:group std:sid="group-912a5e02" id="grpRwCn" class="field-content">
+          <cl:attribute name="pivot-field-type" value="row"/>
+          <cl:formdata std:sid="f-data-86b93f48" row="1" col="2"/>
+          <cl:button std:sid="button-0aa75e82" id="btn3" class="field row asc" removeOnBuild="true" value="필드 이름">
+            <cl:verticaldata std:sid="v-data-a223ed1b" width="100px" height="28px"/>
+          </cl:button>
+          <cl:button std:sid="button-28f77f01" id="btn4" class="field row desc" removeOnBuild="true" value="필드 이름">
+            <cl:verticaldata std:sid="v-data-67b3026e" width="100px" height="28px"/>
+          </cl:button>
+          <cl:verticallayout std:sid="v-layout-0c44b1fd" scrollable="true" spacing="3" leftmargin="5" rightmargin="5" topmargin="5" bottommargin="5"/>
+        </cl:group>
+        <cl:output std:sid="output-44a027ed" id="lblVal" class="label" value="값">
+          <cl:formdata std:sid="f-data-44838570" row="0" col="3"/>
+        </cl:output>
+        <cl:group std:sid="group-44e6e734" id="grpValCn" class="field-content">
+          <cl:attribute name="pivot-field-type" value="value"/>
+          <cl:formdata std:sid="f-data-b871a245" row="1" col="3"/>
+          <cl:button std:sid="button-4a0c1cfb" id="btn6" class="field value sum" removeOnBuild="true" value="필드 이름">
+            <cl:verticaldata std:sid="v-data-4e201155" width="100px" height="28px"/>
+          </cl:button>
+          <cl:button std:sid="button-4f929322" id="btn7" class="field value avg" removeOnBuild="true" value="필드 이름">
+            <cl:verticaldata std:sid="v-data-718251fc" width="100px" height="28px"/>
+          </cl:button>
+          <cl:button std:sid="button-619ab355" id="btn8" class="field value count" removeOnBuild="true" value="필드 이름">
+            <cl:verticaldata std:sid="v-data-b5351d8e" width="100px" height="28px"/>
+          </cl:button>
+          <cl:button std:sid="button-27d9d171" id="btn9" class="field value min" removeOnBuild="true" value="필드 이름">
+            <cl:verticaldata std:sid="v-data-0c18edcd" width="100px" height="28px"/>
+          </cl:button>
+          <cl:button std:sid="button-31e03674" id="btn10" class="field value max" removeOnBuild="true" value="필드 이름">
+            <cl:verticaldata std:sid="v-data-0d165cf6" width="100px" height="28px"/>
+          </cl:button>
+          <cl:verticallayout std:sid="v-layout-515a7a3f" scrollable="true" spacing="3" leftmargin="5" rightmargin="5" topmargin="5" bottommargin="5"/>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-c288a119" scrollable="false" hspace="0px" vspace="0px" hseparatorwidth="0" vseparatorwidth="1" vseparatortype="BY_CLASS">
+          <cl:rows length="28" unit="PIXEL" autoSizing="false" shadetype="BY_CLASS" minlength="0"/>
+          <cl:rows length="1" unit="FRACTION" autoSizing="false" hidden="false" shadetype="NONE" shadecolor="#000000" minlength="0"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-af4cb8c9" hspace="0px" vspace="0px" hseparatorwidth="0">
+        <cl:rows length="30" unit="PIXEL" autoSizing="false" shadetype="NONE" shadecolor="#000000" minlength="0" syncminlength="true"/>
+        <cl:rows length="1" unit="FRACTION" shadecolor="transparent"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-76a74dae" id="grpPivotCont">
+      <cl:formdata std:sid="f-data-9619d4d4" row="1" col="0" rowspan="1" colspan="1"/>
+      <cl:group std:sid="group-8ea220cd">
+        <cl:formdata std:sid="f-data-3ada652c" row="0" col="0" rowspan="1" colspan="1"/>
+        <cl:udc std:sid="ud-control-2beea140" id="udcComGridTitle" type="udc.com.udcComGridTitle">
+          <cl:formdata std:sid="f-data-7583cc31" row="0" col="0"/>
+          <cl:property name="ctrl" value="grdPivot" type="control"/>
+          <cl:property name="showPivot" value="false" type="boolean"/>
+          <cl:property name="useGridCtxMenu" value="false" type="boolean"/>
+          <cl:property name="showSetting" value="false" type="boolean"/>
+          <cl:property name="showOption" value="false" type="boolean"/>
+          <cl:property name="exportType" value="client" type="enumeration"/>
+        </cl:udc>
+        <cl:grid std:sid="grid-08bbde20" id="grdPivot" class="pivot" fieldLabel="데이터 목록" readonly="true" datasetid="ds">
+          <cl:formdata std:sid="f-data-18067c8d" row="1" col="0"/>
+          <cl:gridcolumn std:sid="g-column-6d9eacd1" width="120px"/>
+          <cl:gridcolumn std:sid="g-column-448a989e" width="120px"/>
+          <cl:gridcolumn std:sid="g-column-18da2bfd" width="120px"/>
+          <cl:gridcolumn std:sid="g-column-a5c4e0be" width="120px"/>
+          <cl:gridcolumn std:sid="g-column-acd70841" width="120px"/>
+          <cl:gridheader std:sid="gh-band-0b0a3918">
+            <cl:gridrow std:sid="g-row-82277cfc" height="37px"/>
+            <cl:gridcell std:sid="gh-cell-2dcb5928" rowindex="0" colindex="0"/>
+            <cl:gridcell std:sid="gh-cell-38f84233" rowindex="0" colindex="1"/>
+            <cl:gridcell std:sid="gh-cell-73393ddf" rowindex="0" colindex="2"/>
+            <cl:gridcell std:sid="gh-cell-82d9279a" rowindex="0" colindex="3"/>
+            <cl:gridcell std:sid="gh-cell-24e99294" rowindex="0" colindex="4"/>
+          </cl:gridheader>
+          <cl:griddetail std:sid="gd-band-671f25d3">
+            <cl:gridrow std:sid="g-row-b47ad90d" height="37px"/>
+            <cl:gridcell std:sid="gd-cell-c3b5aa16" rowindex="0" colindex="0"/>
+            <cl:gridcell std:sid="gd-cell-02f5936c" rowindex="0" colindex="1"/>
+            <cl:gridcell std:sid="gd-cell-1fb76de0" rowindex="0" colindex="2"/>
+            <cl:gridcell std:sid="gd-cell-352556c7" rowindex="0" colindex="3"/>
+            <cl:gridcell std:sid="gd-cell-37379b64" rowindex="0" colindex="4"/>
+          </cl:griddetail>
+        </cl:grid>
+        <cl:formlayout std:sid="f-layout-c7cb9fb1" scrollable="true" hspace="0px" vspace="8px">
+          <cl:rows length="20" unit="PIXEL" autoSizing="true" minlength="0" syncminlength="false"/>
+          <cl:rows length="1" unit="FRACTION" minlength="0"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-cc848664" scrollable="true" hspace="5px" vspace="5px">
+        <cl:rows length="1" unit="FRACTION" minlength="0"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-bcc79d6b" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="260" unit="PIXEL" autoSizing="false" shadetype="NONE" shadecolor="transparent" minlength="0" syncminlength="true"/>
+      <cl:rows length="1" unit="FRACTION" hidden="true"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

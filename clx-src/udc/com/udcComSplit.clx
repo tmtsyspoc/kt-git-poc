@@ -1,0 +1,40 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-9e6db604" version="1.0.0.0">
+  <head std:sid="head-a7ff3037">
+    <title>udc_split</title>
+    <screen std:sid="screen-7e611044" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-bd938a66" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-76b758c9" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-1813f585"/>
+    <cl:appspec dev-description="스플릿 컴포넌트">
+      <cl:property name="topGroup" type="control" bindable="true" std:desc="상단/좌측 그룹 ID"/>
+      <cl:property name="bottomGroup" type="control" bindable="true" std:desc="하단/우측 그룹 ID"/>
+      <cl:property name="direction" type="enumeration" default="vertical" std:desc="Split 방향">
+        <cl:available-value>vertical</cl:available-value>
+        <cl:available-value>horizontal</cl:available-value>
+      </cl:property>
+      <cl:event name="clickCallFunc" type="cpr.events.CUIEvent" std:desc="버튼 클릭 콜백 이벤트"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-59d760c3" style="top:0px; left:0px; width:800px; height:18px;" clipcontent="false">
+    <cl:listener std:sid="listener-4b5614fb" name="init" handler="onBodyInit"/>
+    <cl:listener std:sid="listener-7ae5e239" name="load" handler="onBodyLoad"/>
+    <cl:listener std:sid="listener-6a8db8df" name="screen-change" handler="onBodyScreenChange"/>
+    <cl:button std:sid="button-9de06fc1" id="btn" class="icon" value="" icon="0">
+      <cl:listener std:sid="listener-24560733" name="click" handler="onBtnClick"/>
+      <cl:xylayoutdata std:sid="xyl-data-124f5363" top="-4px" bottom="-16px" width="50px" horizontalAnchor="CENTER" verticalAnchor="BOTH"/>
+      <cl:iconstyle class="bg-white icon ico-angles"/>
+    </cl:button>
+    <cl:output std:sid="output-fd886aa2" id="optDiv" style="border-top-width:1px; border-top-color:#a5a5a5; border-top-style:solid;">
+      <cl:xylayoutdata std:sid="xyl-data-05aef550" right="0px" bottom="-8px" left="0px" height="1px" horizontalAnchor="BOTH" verticalAnchor="BOTTOM"/>
+    </cl:output>
+    <cl:xylayout std:sid="xylayout-10e518cf" scrollable="false"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler>
+      <std:guide position="327"/>
+      <std:guide position="111"/>
+    </std:vruler>
+  </std:studiosetting>
+</html>

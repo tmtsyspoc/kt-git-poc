@@ -1,0 +1,79 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-d3e3a357" version="1.0.6209">
+  <head std:sid="head-2a9cdf3e">
+    <screen std:sid="screen-21568796" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-e166fa2b" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-63dbe4b2" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-468de81d">
+      <cl:dataset comment="프로세스 목록" std:sid="d-set-e4693f9a" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="" std:sid="d-column-ed53fb1f" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-0cf59529" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn comment="" std:sid="d-column-d4517290" name="SUB_TITLE"/>
+          <cl:datacolumn comment="" std:sid="d-column-0b5d2935" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-2746e31c" name="CONT" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-d6091fdc" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-d1ae6183" name="SUB_CODE"/>
+          <cl:datacolumn comment="" std:sid="d-column-22014a94" name="TARGET_CTRL"/>
+          <cl:datacolumn std:sid="d-column-44178b83" name="TARGET_EMB"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[망분리·폐쇄망 동작]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[외부망 없이 설치, 인증, 빌드, 실행, 진단, 패치가 가능해야 한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="[ARC-06]망분리·오프라인 운영"/>
+  </head>
+  <body std:sid="body-7ca0dd43" class="wrap">
+    <cl:udc std:sid="ud-control-8d38de73" type="udc.com.udcComAppHeader">
+      <cl:verticaldata std:sid="v-data-0f0d1454" width="900px" height="28px"/>
+    </cl:udc>
+    <cl:group std:sid="group-52c47348" id="grpData" class="conts-area">
+      <cl:verticaldata std:sid="v-data-27fa8a44" width="976px" height="903px" autosize="none" grow="1"/>
+      <cl:group std:sid="group-f171a8f4" class="conts-wrap">
+        <cl:verticaldata std:sid="v-data-baea35d5" width="1592px" height="670px" autosize="height"/>
+        <cl:udc std:sid="ud-control-2f063746" id="udcPocDocViewer1" type="udc.poc.udcPocDocViewer">
+          <cl:verticaldata std:sid="v-data-662a8c65" width="500px" height="620px" autosize="height"/>
+          <cl:property name="fileUrl" value="data/docs/K6-2.png" type="resource"/>
+        </cl:udc>
+        <cl:verticallayout std:sid="v-layout-52a7714c" spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-90846310" spacing="16" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-d6af1dcd" spacing="16" leftmargin="24" rightmargin="24" topmargin="16" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

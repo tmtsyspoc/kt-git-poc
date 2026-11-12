@@ -1,0 +1,120 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-122bb62a" version="1.0.5542">
+  <head std:sid="head-07388f7a">
+    <std:metadata>
+      <std:property key="template-file" value="templates/일반화면/2.폼/F_폼(좌)+폼.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-1c31aa66" id="default" name="default" width="1024px" height="768px" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-022ddc8b" id="tablet" name="tablet" width="500px" height="667px"/>
+    <screen std:sid="screen-5bb68bba" id="mobile" name="mobile" width="350px" height="525px" active="false"/>
+    <cl:model std:sid="model-ff272400">
+      <cl:dataset std:sid="d-set-46b4ade3" id="dsSubValue">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-66362751" name="value"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="value"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="컨텐츠관리-Summary">
+      <cl:event name="mng-close" type="cpr.events.CAppEvent"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-a9e8b16e" style="top:0px; left:0px; width:450px; height:340px;" class="conts-wrap">
+    <cl:group std:sid="group-89cf033a">
+      <cl:verticaldata std:sid="v-data-144a8c71" width="424px" height="32px"/>
+      <cl:output std:sid="output-bbd36e2f" id="optTitle" class="cms-subtitle" value="Summary">
+        <cl:formdata std:sid="f-data-da39b622" row="0" col="0"/>
+      </cl:output>
+      <cl:button std:sid="button-3ef63fdc" class="btn-close">
+        <cl:listener std:sid="listener-8dbbe80d" name="click" handler="onButtonClick4"/>
+        <cl:formdata std:sid="f-data-759e5ec1" row="0" col="1"/>
+      </cl:button>
+      <cl:formlayout std:sid="f-layout-18744977" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+        <cl:columns length="32" unit="PIXEL"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-44b19634">
+      <cl:verticaldata std:sid="v-data-271851bf" width="400px" height="65px" autosize="height"/>
+      <cl:output std:sid="output-847072f2" value="Cautioin_title">
+        <cl:formdata std:sid="f-data-34675253" row="0" col="0"/>
+      </cl:output>
+      <cl:inputbox std:sid="i-box-72ff8f22" id="ipb1">
+        <cl:formdata std:sid="f-data-e49c5071" row="1" col="0"/>
+      </cl:inputbox>
+      <cl:formlayout std:sid="f-layout-73b2eade" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="25" unit="PIXEL"/>
+        <cl:rows length="32" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-b2e74708" removeOnBuild="true">
+      <cl:datarowcontext datacontrolid="dsSubValue"/>
+      <cl:verticaldata std:sid="v-data-33ef1dbc" width="276px" height="65px" autosize="height"/>
+      <cl:output std:sid="output-4c8b71fc" value="Detail" displayexp="text +&quot; &quot; + userAttr(&quot;detailIndex&quot;)">
+        <cl:formdata std:sid="f-data-dc1c4954" row="0" col="0"/>
+      </cl:output>
+      <cl:inputbox std:sid="i-box-b7985305">
+        <cl:relativebind property="value" columnname="value"/>
+        <cl:formdata std:sid="f-data-b8cad731" row="1" col="0" rowspan="1" colspan="2"/>
+      </cl:inputbox>
+      <cl:button std:sid="button-f757855a" class="btn-close" value="">
+        <cl:listener std:sid="listener-3300a60c" name="click" handler="onButtonClick2"/>
+        <cl:formdata std:sid="f-data-b8baa2ec" row="0" col="1"/>
+      </cl:button>
+      <cl:formlayout std:sid="f-layout-b2fe7fb7" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="25" unit="PIXEL"/>
+        <cl:rows length="32" unit="PIXEL"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="32" unit="PIXEL"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:grid std:sid="grid-b106ce1d" id="grd1" class="table-white" datasetid="dsSubValue" autofit="0" clickmode="edit">
+      <cl:verticaldata std:sid="v-data-8a60e0d2" width="400px" height="200px" autosize="height"/>
+      <cl:gridcolumn std:sid="g-column-3db7c647"/>
+      <cl:gridcolumn std:sid="g-column-484ccd06" width="32px"/>
+      <cl:griddetail std:sid="gd-band-815a8fb4">
+        <cl:gridrow std:sid="g-row-7749144f" height="29px"/>
+        <cl:gridrow std:sid="g-row-686dfd8d" height="72px"/>
+        <cl:gridcell std:sid="gd-cell-cbb6319c" rowindex="0" colindex="0">
+          <cl:output std:sid="output-9cb05327" class="text-left" displayexp="&quot;Detail &quot;+(rowIndex+1)">
+            <cl:celldata std:sid="c-data-9fe2d33d" valign="BOTTOM"/>
+          </cl:output>
+        </cl:gridcell>
+        <cl:gridcell std:sid="gd-cell-72e17db6" rowindex="0" colindex="1">
+          <cl:button std:sid="button-387e90dc" class="btn-close-small">
+            <cl:listener std:sid="listener-dbab14fa" name="click" handler="onButtonClick3"/>
+            <cl:celldata std:sid="c-data-9d8852a2" valign="BOTTOM"/>
+          </cl:button>
+        </cl:gridcell>
+        <cl:gridcell std:sid="gd-cell-7528bf68" rowindex="1" colindex="0" rowspan="1" colspan="2" columnname="value">
+          <cl:textarea std:sid="t-area-d2b847eb" id="txa1">
+            <cl:celldata std:sid="c-data-ddc1af01" topSpacing="8.0" bottomSpacing="8.0" leftSpacing="8.0" rightSpacing="8.0"/>
+          </cl:textarea>
+        </cl:gridcell>
+      </cl:griddetail>
+    </cl:grid>
+    <cl:group std:sid="group-36f51c7f">
+      <cl:verticaldata std:sid="v-data-245334db" width="400px" height="32px"/>
+      <cl:button std:sid="button-3030083f" value="+ Detail 추가">
+        <cl:listener std:sid="listener-5a08b31d" name="click" handler="onButtonClick"/>
+        <cl:formdata std:sid="f-data-55841530" row="0" col="0"/>
+      </cl:button>
+      <cl:formlayout std:sid="f-layout-7755e536" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="200" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-ca6c826b" spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

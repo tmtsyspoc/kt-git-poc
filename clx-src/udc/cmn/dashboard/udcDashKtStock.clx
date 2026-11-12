@@ -1,0 +1,139 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" version="1.0.6087">
+  <head>
+    <screen id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model/>
+    <cl:appspec title="단말 재고 현황"/>
+  </head>
+  <body style="top:0px; left:0px; width:300px; height:320px;">
+    <cl:attribute name="mobile-index" value="5"/>
+    <cl:attribute name="tablet-index" value="5"/>
+    <cl:group class="group border kt-portlet" clipcontent="false">
+      <cl:attribute name="needs-auto-height" value="true"/>
+      <cl:formdata row="0" col="0"/>
+      <cl:output class="tit-blue" value="단말 재고 현황">
+        <cl:formdata row="0" col="0"/>
+      </cl:output>
+      <cl:output class="kt-base warn" value="부족 2종">
+        <cl:formdata row="0" col="1"/>
+      </cl:output>
+      <cl:group class="kt-stock" clipcontent="false">
+        <cl:formdata row="1" col="0" rowspan="1" colspan="2"/>
+        <cl:group class="row">
+          <cl:formdata row="0" col="0"/>
+          <cl:output class="nm" value="iPhone 17 Pro 256GB" ellipsis="true">
+            <cl:formdata row="0" col="0"/>
+          </cl:output>
+          <cl:progress fieldLabel="iPhone 17 Pro 256GB 재고" value="70" showtext="false">
+            <cl:formdata valign="CENTER" height="7" row="0" col="1"/>
+          </cl:progress>
+          <cl:output class="qty" value="14대">
+            <cl:formdata row="0" col="2"/>
+          </cl:output>
+          <cl:formlayout scrollable="false" hspace="10px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="56" unit="PIXEL"/>
+            <cl:columns length="36" unit="PIXEL"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:group class="row">
+          <cl:formdata row="1" col="0"/>
+          <cl:output class="nm" value="Galaxy S26 256GB" ellipsis="true">
+            <cl:formdata row="0" col="0"/>
+          </cl:output>
+          <cl:progress fieldLabel="Galaxy S26 256GB 재고" value="90" showtext="false">
+            <cl:formdata valign="CENTER" height="7" row="0" col="1"/>
+          </cl:progress>
+          <cl:output class="qty" value="18대">
+            <cl:formdata row="0" col="2"/>
+          </cl:output>
+          <cl:formlayout scrollable="false" hspace="10px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="56" unit="PIXEL"/>
+            <cl:columns length="36" unit="PIXEL"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:group class="row">
+          <cl:formdata row="2" col="0"/>
+          <cl:output class="nm" value="Galaxy Z Flip8" ellipsis="true">
+            <cl:formdata row="0" col="0"/>
+          </cl:output>
+          <cl:progress fieldLabel="Galaxy Z Flip8 재고" value="30" showtext="false">
+            <cl:formdata valign="CENTER" height="7" row="0" col="1"/>
+          </cl:progress>
+          <cl:output class="qty" value="6대">
+            <cl:formdata row="0" col="2"/>
+          </cl:output>
+          <cl:formlayout scrollable="false" hspace="10px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="56" unit="PIXEL"/>
+            <cl:columns length="36" unit="PIXEL"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:group class="row low">
+          <cl:formdata row="3" col="0"/>
+          <cl:output class="nm" value="iPhone 17 128GB" ellipsis="true">
+            <cl:formdata row="0" col="0"/>
+          </cl:output>
+          <cl:progress fieldLabel="iPhone 17 128GB 재고" value="10" showtext="false">
+            <cl:formdata valign="CENTER" height="7" row="0" col="1"/>
+          </cl:progress>
+          <cl:output class="qty" value="2대">
+            <cl:formdata row="0" col="2"/>
+          </cl:output>
+          <cl:formlayout scrollable="false" hspace="10px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="56" unit="PIXEL"/>
+            <cl:columns length="36" unit="PIXEL"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:group class="row low">
+          <cl:formdata row="4" col="0"/>
+          <cl:output class="nm" value="Galaxy A57" ellipsis="true">
+            <cl:formdata row="0" col="0"/>
+          </cl:output>
+          <cl:progress fieldLabel="Galaxy A57 재고" value="5" showtext="false">
+            <cl:formdata valign="CENTER" height="7" row="0" col="1"/>
+          </cl:progress>
+          <cl:output class="qty" value="1대">
+            <cl:formdata row="0" col="2"/>
+          </cl:output>
+          <cl:formlayout scrollable="false" hspace="10px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="56" unit="PIXEL"/>
+            <cl:columns length="36" unit="PIXEL"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:formlayout scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="1" unit="FRACTION" minlength="28"/>
+          <cl:rows length="1" unit="FRACTION" minlength="28"/>
+          <cl:rows length="1" unit="FRACTION" minlength="28"/>
+          <cl:rows length="1" unit="FRACTION" minlength="28"/>
+          <cl:rows length="1" unit="FRACTION" minlength="28"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:formlayout scrollable="false" hspace="8px" vspace="12px" top-margin="16px" right-margin="16px" bottom-margin="16px" left-margin="16px">
+        <cl:rows length="28" unit="PIXEL"/>
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="60" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:formlayout scrollable="true">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

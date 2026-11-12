@@ -1,0 +1,79 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-9272ea93" version="1.0.6209">
+  <head std:sid="head-78cc1fe9">
+    <screen std:sid="screen-aa54b01f" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-f59a7142" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-6fbc3389" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-5878272b">
+      <cl:dataset comment="프로세스 목록" std:sid="d-set-e2f3e865" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="" std:sid="d-column-bbed970d" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-a33ce7fa" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn comment="" std:sid="d-column-943ac7c4" name="SUB_TITLE"/>
+          <cl:datacolumn comment="" std:sid="d-column-f2d9d6e1" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-9358527b" name="CONT" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-7efe6390" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-b07543df" name="SUB_CODE"/>
+          <cl:datacolumn comment="" std:sid="d-column-cee21a0e" name="TARGET_CTRL"/>
+          <cl:datacolumn std:sid="d-column-37408e47" name="TARGET_EMB"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[폐쇄망 빌드]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[동일한 소스, 빌드 설정, 런타임·빌드도구 버전, 의존성 버전을 고정하는 잠금파일(package-lock.json, yarn.lock, pnpm-lock.yaml 등) 및 KT 승인 내부 저장소의 패키지를 사용하여 외부 인터넷 다운로드 없이 반복적으로 빌드를 수행할 수 있어야 한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="[DEV-10]폐쇄망 빌드·재현성"/>
+  </head>
+  <body std:sid="body-63b860e7" class="wrap">
+    <cl:udc std:sid="ud-control-55eb12ac" type="udc.com.udcComAppHeader">
+      <cl:verticaldata std:sid="v-data-cc131656" width="900px" height="28px"/>
+    </cl:udc>
+    <cl:group std:sid="group-fa1ab951" id="grpData" class="conts-area">
+      <cl:verticaldata std:sid="v-data-ab71da58" width="976px" height="903px" autosize="none" grow="1"/>
+      <cl:group std:sid="group-f171a8f4" class="conts-wrap">
+        <cl:verticaldata std:sid="v-data-baea35d5" width="1592px" height="670px" autosize="height"/>
+        <cl:udc std:sid="ud-control-2f063746" id="udcPocDocViewer1" type="udc.poc.udcPocDocViewer">
+          <cl:verticaldata std:sid="v-data-662a8c65" width="500px" height="620px" autosize="height"/>
+          <cl:property name="fileUrl" value="data/docs/K6-1.png" type="resource"/>
+        </cl:udc>
+        <cl:verticallayout std:sid="v-layout-52a7714c" spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-48a636ca" spacing="16" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-6b7d6e16" spacing="16" leftmargin="24" rightmargin="24" topmargin="16" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

@@ -1,0 +1,112 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" version="1.0.6087">
+  <head>
+    <screen id="default" name="default" width="1640px" height="984px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="1928" active="true"/>
+    <screen id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model>
+      <cl:dataset id="dsChart" sortcondition="value asc">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="범위" info="" name="region" datatype="string"/>
+          <cl:datacolumn comment="값" info="" name="value" datatype="number"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="region"><![CDATA[여신업무]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[3]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="region"><![CDATA[수신업무]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[5]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="region"><![CDATA[외환업무]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[2]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="region"><![CDATA[카드업무]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[4]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="region"><![CDATA[계좌업무]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[3]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="region"><![CDATA[고객정보]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[2]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="region"><![CDATA[이체승인]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[3]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="region"><![CDATA[대출실행]]></cl:datavalue>
+            <cl:datavalue columnname="value"><![CDATA[1]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="라인 차트">
+      <cl:event name="resize" type="cpr.events.CUIEvent"/>
+    </cl:appspec>
+  </head>
+  <body style="top:0px; left:0px; width:600px; height:600px;">
+    <cl:listener name="init" handler="onBodyInit"/>
+    <cl:listener name="screen-change" handler="onBodyScreenChange"/>
+    <cl:attribute name="mobile-index" value="3"/>
+    <cl:attribute name="tablet-index" value="3"/>
+    <cl:group class="group border">
+      <cl:attribute name="needs-auto-height" value="true"/>
+      <cl:attribute name="mobile-index" value="4"/>
+      <cl:attribute name="tablet-index" value="4"/>
+      <cl:attribute name="mobile-horizontal-margin" value=""/>
+      <cl:attribute name="mobile-vertical-margin" value=""/>
+      <cl:attribute name="tablet-vertical-margin" value=""/>
+      <cl:attribute name="tablet-horizontal-margin" value=""/>
+      <cl:formdata width="388" height="25" row="0" col="0"/>
+      <cl:group clipcontent="false">
+        <cl:formdata row="0" col="0" rowspan="1" colspan="1"/>
+        <cl:output class="tit-blue" value="월별 매출 추이">
+          <cl:formdata row="0" col="0"/>
+        </cl:output>
+        <cl:formlayout scrollable="false" hspace="16px" vspace="16px" top-margin="16px" right-margin="16px" bottom-margin="0px" left-margin="16px">
+          <cl:rows length="1" unit="FRACTION" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="100" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" minlength="50" syncminlength="false"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:group style="border-radius:12px;">
+        <cl:formdata row="1" col="0" rowspan="1" colspan="1"/>
+        <cl:group class="leader-status-board" clipcontent="false">
+          <cl:formdata row="0" col="0" rowspan="1" colspan="1"/>
+          <cl:uicontrolshell id="shl1">
+            <cl:listener name="init" handler="onUIControlShellInit"/>
+            <cl:listener name="load" handler="onUIControlShellLoad"/>
+            <cl:formdata halign="FILL" valign="FILL" row="0" col="0"/>
+          </cl:uicontrolshell>
+          <cl:formlayout hspace="0px" vspace="16px">
+            <cl:rows length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent" minlength="0"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:formlayout vspace="16px">
+          <cl:rows length="1" unit="FRACTION" shadecolor="transparent" minlength="0"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:formlayout vspace="16px">
+        <cl:rows length="27" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+        <cl:rows length="230" unit="FRACTION" shadetype="NONE" shadecolor="transparent" minlength="200"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:formlayout scrollable="false">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

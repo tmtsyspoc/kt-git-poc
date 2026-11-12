@@ -1,0 +1,163 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-563d0a92" version="1.0.4034">
+  <head std:sid="head-1ccdf3b0">
+    <std:metadata>
+      <std:property key="template-file" value="templates/팝업/1.그리드/버티컬레이아웃/그리드_수정X.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-89613211" id="EXB-POP[1024]" name="EXB-POP[1024]" width="1024px" height="576px" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-d59b22ec" id="EXB-POP[800]" name="EXB-POP[800]" width="800px" height="480px" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-0bd75723" id="EXB-POP[480]" name="EXB-POP[480]" width="480px" height="320px" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-46b7ef7e">
+      <cl:dataset comment="프로세스 목록" std:sid="d-set-406d885d" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="" std:sid="d-column-9f37779a" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-ffe31de0" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn comment="" std:sid="d-column-7fe5300f" name="SUB_TITLE"/>
+          <cl:datacolumn comment="" std:sid="d-column-c68cb733" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-fa740970" name="CONT" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-c9d6a3d7" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-b4004ac2" name="SUB_CODE"/>
+          <cl:datacolumn comment="" std:sid="d-column-8d6dc077" name="TARGET_CTRL"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">지급이력정보 수정</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">1.</cl:datavalue>
+            <cl:datavalue columnname="CONT">지급이력정보를 수정한다.</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">지급이력정보 수정</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">2.</cl:datavalue>
+            <cl:datavalue columnname="CONT">수정내용을 확인한 후 입력 버튼을 클릭한다.</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">지급이력정보 수정</cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">3.</cl:datavalue>
+            <cl:datavalue columnname="CONT">메인화면에서 변경된 지급이력정보를 확인한다.</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"/>
+            <cl:datavalue columnname="SUB_CODE"/>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+      <cl:datamap comment="검색 파라미터" std:sid="d-map-be72d0d0" id="DM_PAY">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="고객번호" std:sid="d-column-baec51b4" name="CUST_NO"/>
+          <cl:datacolumn comment="지급일자" std:sid="d-column-788ed536" name="PAY_DATE"/>
+          <cl:datacolumn comment="지급방법" std:sid="d-column-1cfa4a4c" name="PAY_WAY"/>
+          <cl:datacolumn comment="수령인" std:sid="d-column-3fb1faed" name="REC_NM"/>
+          <cl:datacolumn comment="금액" std:sid="d-column-23c1c143" name="AMOUNT"/>
+          <cl:datacolumn comment="지급사유" std:sid="d-column-c29746fd" name="PAY_RSN"/>
+          <cl:datacolumn comment="계약번호" std:sid="d-column-9e55a786" name="CON_NO"/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+    </cl:model>
+    <cl:appspec title="지급이력상세"/>
+  </head>
+  <body std:sid="body-62411317" childcombinatorclass="v_base">
+    <cl:listener std:sid="listener-e653e397" name="load" handler="onBodyLoad"/>
+    <cl:udc std:sid="ud-control-8c71e0ab" id="udcComAppHeader" visible="false" type="udc.com.udcComAppHeader">
+      <cl:verticaldata std:sid="v-data-345cc100" width="1090px" height="40px" autosize="height"/>
+      <cl:property name="title" value="지급이력정보" type="string"/>
+      <cl:property name="isViewPocProcess" value="false" type="boolean"/>
+    </cl:udc>
+    <cl:group std:sid="group-64465ce6" id="grpData" class="conts-area">
+      <cl:verticaldata std:sid="v-data-c01ed8be" width="992px" height="273px" autosize="height"/>
+      <cl:group std:sid="group-0c5e6dc9" class="conts-wrap">
+        <cl:formdata std:sid="f-data-c8a75489" row="0" col="0" rowspan="1" colspan="1"/>
+        <cl:group std:sid="group-b33c3509" id="grp5" class="form">
+          <cl:attribute name="mobile-column-count" value="1"/>
+          <cl:attribute name="tablet-column-count" value="2"/>
+          <cl:verticaldata std:sid="v-data-e03ba021" width="958px" height="271px"/>
+          <cl:output std:sid="output-37256380" id="opt1" class="label required" value="계약번호">
+            <cl:formdata std:sid="f-data-fc2c4312" row="0" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-9f035994" id="opt2">
+            <cl:datamapbind property="value" datacontrolid="DM_PAY" columnname="CON_NO"/>
+            <cl:formdata std:sid="f-data-9e119750" row="0" col="1"/>
+          </cl:output>
+          <cl:output std:sid="output-29b00f26" id="opt3" class="label required" value="지급사유">
+            <cl:formdata std:sid="f-data-d29d6036" row="1" col="0"/>
+          </cl:output>
+          <cl:inputbox std:sid="i-box-fae2ab9a" id="ipb1">
+            <cl:datamapbind property="value" datacontrolid="DM_PAY" columnname="PAY_RSN"/>
+            <cl:formdata std:sid="f-data-c5c719ef" row="1" col="1"/>
+          </cl:inputbox>
+          <cl:output std:sid="output-c45bc071" id="opt4" class="label required" value="지급방법">
+            <cl:formdata std:sid="f-data-b66c786f" row="2" col="0"/>
+          </cl:output>
+          <cl:inputbox std:sid="i-box-5bfa53b5" id="ipb2">
+            <cl:datamapbind property="value" datacontrolid="DM_PAY" columnname="PAY_WAY"/>
+            <cl:formdata std:sid="f-data-3dea33b5" row="2" col="1"/>
+          </cl:inputbox>
+          <cl:output std:sid="output-28567e63" id="opt5" class="label required" value="지급일자">
+            <cl:formdata std:sid="f-data-68f73e20" row="3" col="0"/>
+          </cl:output>
+          <cl:dateinput std:sid="d-input-66d04fb8" id="dti1">
+            <cl:datamapbind property="value" datacontrolid="DM_PAY" columnname="PAY_DATE"/>
+            <cl:formdata std:sid="f-data-6cee3b06" halign="LEFT" width="125" row="3" col="1"/>
+          </cl:dateinput>
+          <cl:output std:sid="output-834bfc83" id="opt6" class="label required" value="수령인">
+            <cl:formdata std:sid="f-data-6b45f7c8" row="4" col="0"/>
+          </cl:output>
+          <cl:inputbox std:sid="i-box-a470aada" id="ipb3">
+            <cl:datamapbind property="value" datacontrolid="DM_PAY" columnname="REC_NM"/>
+            <cl:formdata std:sid="f-data-963e6cc5" row="4" col="1"/>
+          </cl:inputbox>
+          <cl:output std:sid="output-4417472d" id="opt7" class="label required" value="금액">
+            <cl:formdata std:sid="f-data-dd4201cb" row="5" col="0"/>
+          </cl:output>
+          <cl:numbereditor std:sid="n-editor-68bc119e" id="nbe1" fieldLabel="고객연령" spinbutton="false">
+            <cl:datamapbind property="value" datacontrolid="DM_PAY" columnname="AMOUNT"/>
+            <cl:formdata std:sid="f-data-4f38dda1" row="5" col="1"/>
+          </cl:numbereditor>
+          <cl:formlayout std:sid="f-layout-6c333456" scrollable="false" hspace="16px" vspace="17px" top-margin="8px" right-margin="8px" bottom-margin="8px" left-margin="8px" hseparatorwidth="1" hseparatortype="BY_CLASS">
+            <cl:rows length="28" unit="PIXEL" autoSizing="true"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true"/>
+            <cl:rows length="28" unit="PIXEL" autoSizing="true"/>
+            <cl:columns length="118" unit="PIXEL" autoSizing="true" shadetype="BY_CLASS" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-2ef37486" spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-3ddfdbe1" scrollable="false" hspace="16px" vspace="16px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="271" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="true"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-62cd19cb" id="grpFooter" class="conts-footer">
+      <cl:verticaldata std:sid="v-data-1773583f" width="992px" height="52px" autosize="height"/>
+      <cl:group std:sid="group-f3d7a659">
+        <cl:verticaldata std:sid="v-data-d687d2fa" width="1090px" height="28px" autosize="height"/>
+        <cl:button std:sid="button-e610e9e9" id="btn1" value="닫기">
+          <cl:listener std:sid="listener-cf366de5" name="click" handler="onButtonClick2"/>
+          <cl:flowlayoutdata std:sid="f-data-b4ec3581" width="74px" height="28px" autosize="width"/>
+        </cl:button>
+        <cl:button std:sid="button-c4f815fe" id="btn2" class="primary" value="입력">
+          <cl:listener std:sid="listener-686b8fa3" name="click" handler="onButtonClick"/>
+          <cl:flowlayoutdata std:sid="f-data-1c88303c" width="74px" height="28px" autosize="width"/>
+        </cl:button>
+        <cl:flowlayout std:sid="f-layout-1364edba" scrollable="false" hspacing="4" halign="right"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-ac69fd7a" spacing="12"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-57f04e11" spacing="12" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

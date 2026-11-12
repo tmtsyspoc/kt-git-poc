@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-90d79df2" version="1.0.5575">
+  <head std:sid="head-ec92d7a3">
+    <screen std:sid="screen-005e594d" id="EXB-FULL" name="EXB-FULL" width="1580px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-7b76cb52" id="EXB-DIV" name="EXB-DIV" width="1128px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-2f9addf1" id="EXB-POP[1024]" name="EXB-POP[1024]" width="1024px" height="576px"/>
+    <screen std:sid="screen-c4f90423" id="EXB-POP[800]" name="EXB-POP[800]" width="800px" height="480px"/>
+    <screen std:sid="screen-6cc3f780" id="EXB-PART" name="EXB-PART" width="672px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-42045ddd" id="EXB-POP[480]" name="EXB-POP[480]" width="480px" height="320px"/>
+    <cl:model std:sid="model-e58dc237">
+      <cl:dataset comment="실시간 체결 정보" std:sid="d-set-1db7eef3" id="dsChegyol">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="종목코드" std:sid="d-column-f8b4c4ed" name="SHRN_ISCD"/>
+          <cl:datacolumn comment="체결시간" std:sid="d-column-fc664654" name="STCK_CNTG_HOUR" datatype="string"/>
+          <cl:datacolumn comment="시간구분코드" std:sid="d-column-4bfb754e" name="HOUR_CLS_CODE"/>
+          <cl:datacolumn comment="예상지수구분코드" std:sid="d-column-7ee6e61a" name="ANTC_NMIX_CLS_CODE"/>
+          <cl:datacolumn comment="현재가" std:sid="d-column-0b1ae037" name="STCK_PRPR" datatype="number"/>
+          <cl:datacolumn comment="전일대비부호" std:sid="d-column-84cce4a7" name="PRDY_VRSS_SIGN" datatype="string"/>
+          <cl:datacolumn comment="전일대비" std:sid="d-column-2d66adb0" name="PRDY_VRSS" datatype="number"/>
+          <cl:datacolumn comment="등락률" std:sid="d-column-dd877d70" name="PRDY_CTRT" datatype="number"/>
+          <cl:datacolumn comment="시가" std:sid="d-column-5adfc339" name="STCK_OPRC" datatype="number"/>
+          <cl:datacolumn comment="고가" std:sid="d-column-ce035c5e" name="STCK_HGPR" datatype="number"/>
+          <cl:datacolumn comment="저가" std:sid="d-column-bad7a72d" name="STCK_LWPR" datatype="number"/>
+          <cl:datacolumn comment="기준가" std:sid="d-column-8da9b8ae" name="STCK_SDPR" datatype="number"/>
+          <cl:datacolumn comment="상한가" std:sid="d-column-cab490d5" name="STCK_MXPR"/>
+          <cl:datacolumn comment="하한가" std:sid="d-column-7fe432c0" name="STCK_LLAM"/>
+          <cl:datacolumn comment="체결구분코드" std:sid="d-column-d0167c3a" name="CNTG_CLS_CODE"/>
+          <cl:datacolumn comment="체결거래량" std:sid="d-column-2ec80f56" name="CTNG_VOL" datatype="number"/>
+          <cl:datacolumn comment="누적거래량" std:sid="d-column-e665856f" name="ACML_VOL" datatype="number"/>
+          <cl:datacolumn comment="누적거래대금" std:sid="d-column-d2285f64" name="ACML_TR_PBMN"/>
+          <cl:datacolumn comment="매도호가" std:sid="d-column-e4e3fc52" name="ASKP1"/>
+          <cl:datacolumn comment="매수호가" std:sid="d-column-872b1145" name="PIDP1"/>
+          <cl:datacolumn comment="매도호가잔량" std:sid="d-column-3a4c465a" name="ASKP_RSQN1"/>
+          <cl:datacolumn comment="매수호가잔량" std:sid="d-column-68c1ad87" name="BIDP_RSQN1"/>
+          <cl:datacolumn comment="총매도호가잔량" std:sid="d-column-fbf7febc" name="TOTAL_ASKP_RSQN"/>
+          <cl:datacolumn comment="총매수호가잔량" std:sid="d-column-32a2db4f" name="TOTAL_BIDP_RSQN"/>
+          <cl:datacolumn comment="거래정지 여부" std:sid="d-column-127dc30f" name="TRHT_YN"/>
+          <cl:datacolumn comment="관리종목 여부" std:sid="d-column-e204c4f5" name="MANG_ISSU_YN"/>
+          <cl:datacolumn comment="우선주 구분 코드" std:sid="d-column-48748b38" name="PRST_CLS_CODE"/>
+          <cl:datacolumn comment="투자주의 여부" std:sid="d-column-a61ddfa3" name="WARN_YN"/>
+          <cl:datacolumn comment="신장운영구분코드" std:sid="d-column-c6ecebc6" name="NEW_MKOP_CLS_CODE"/>
+          <cl:datacolumn comment="직전체결구분코드" std:sid="d-column-b3af17ae" name="RGBF_CNTG_CLS_CODE"/>
+          <cl:datacolumn comment="체결강도" std:sid="d-column-7a40d75d" name="RGTV"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+      <cl:dataset comment="일별조회 응답" std:sid="d-set-eba354e8" id="dsDayStockOut">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="일자" std:sid="d-column-ca31e61e" name="out_val4_25"/>
+          <cl:datacolumn comment="현재가(종가)" std:sid="d-column-04b7ce7b" name="out_val4_29" datatype="number"/>
+          <cl:datacolumn comment="전일대비" std:sid="d-column-33e3ca27" name="out_val4_32" datatype="number"/>
+          <cl:datacolumn comment="등락률" std:sid="d-column-171d89b1" name="out_val4_33" datatype="number"/>
+          <cl:datacolumn comment="거래량" std:sid="d-column-82e36bc2" name="out_val4_34" datatype="number"/>
+          <cl:datacolumn comment="종목코드" std:sid="d-column-5b92b738" name="out_val4_40"/>
+          <cl:datacolumn comment="대비부호" std:sid="d-column-34e41717" name="out_val4_30"/>
+          <cl:datacolumn comment="시가" std:sid="d-column-bf56d2bf" name="out_val4_26" datatype="number"/>
+          <cl:datacolumn comment="고가" std:sid="d-column-6572894f" name="out_val4_27" datatype="number"/>
+          <cl:datacolumn comment="저가" std:sid="d-column-f3b69bc6" name="out_val4_28" datatype="number"/>
+          <cl:datacolumn comment="외인매매" std:sid="d-column-a9b65df0" name="out_val4_39"/>
+          <cl:datacolumn comment="거래대금" std:sid="d-column-eab94438" name="out_val4_41" datatype="number"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+      <cl:datamap comment="일별조회 요청" std:sid="d-map-b19c7bf6" id="dmDayStockIn">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-79c0a4fd" name="jongcode"/>
+          <cl:datacolumn std:sid="d-column-6ab1b078" name="market" defaultvalue="J"/>
+          <cl:datacolumn std:sid="d-column-2f088105" name="hasToday" defaultvalue="Y"/>
+          <cl:datacolumn std:sid="d-column-7321223e" name="fromDate" defaultvalue=""/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+      <cl:submission comment="일별조회 GID1008_T1" std:sid="submission-0de637de" id="subDayStock" method="get" action="app/sce/A15/data/dayList.json" mediatype="application/x-www-form-urlencoded;simple">
+        <cl:requestdata dataid="dmDayStockIn"/>
+        <cl:responsedata dataid="dsDayStockOut" alias="outBlock2"/>
+      </cl:submission>
+    </cl:model>
+    <cl:appspec title="일별/실시간 시세"/>
+  </head>
+  <body std:sid="body-a7141423" style="top:0px; left:0px; width:500px; height:700px;" class="card">
+    <cl:listener std:sid="listener-8026c735" name="load" handler="onBodyLoad"/>
+    <cl:tabfolder std:sid="t-folder-727566fd" id="tab1" class="tab-toggles" item-sizing="fill">
+      <cl:formdata std:sid="f-data-a39e3d9e" row="0" col="0"/>
+      <cl:tabitem std:sid="t-item-8cd37667" text="실시간">
+        <std:metadata>
+          <std:property key="is-active-item" value="true"/>
+        </std:metadata>
+        <cl:group std:sid="group-54b46e44" id="grp2">
+          <std:metadata>
+            <std:property key="locked" value="true"/>
+          </std:metadata>
+          <cl:grid std:sid="grid-894b4526" id="grd1" class="table-transparent" datasetid="dsChegyol">
+            <cl:formdata std:sid="f-data-5536e93b" row="0" col="0"/>
+            <cl:gridcolumn std:sid="g-column-896f4ad7" width="75px"/>
+            <cl:gridcolumn std:sid="g-column-8aff1e3a" width="75px"/>
+            <cl:gridcolumn std:sid="g-column-16b4a20c" width="75px"/>
+            <cl:gridcolumn std:sid="g-column-aff6ee43" width="75px"/>
+            <cl:gridcolumn std:sid="g-column-e5986bb0" width="75px"/>
+            <cl:gridheader std:sid="gh-band-ffe3bfde">
+              <cl:gridrow std:sid="g-row-08b5f034" height="44px"/>
+              <cl:gridcell std:sid="gh-cell-ca3b93a7" rowindex="0" colindex="0" class="text-left" targetcolumnname="STCK_PRPR" text="체결가"/>
+              <cl:gridcell std:sid="gh-cell-975191dc" rowindex="0" colindex="1" targetcolumnname="CTNG_VOL" text="체결량(주)"/>
+              <cl:gridcell std:sid="gh-cell-2cf22cfc" rowindex="0" colindex="2" text="등락률"/>
+              <cl:gridcell std:sid="gh-cell-9298e8bd" rowindex="0" colindex="3" text="거래량(주)"/>
+              <cl:gridcell std:sid="gh-cell-72914e13" rowindex="0" colindex="4" targetcolumnname="STCK_CNTG_HOUR" text="시간"/>
+            </cl:gridheader>
+            <cl:griddetail std:sid="gd-band-21b25f49">
+              <cl:gridrow std:sid="g-row-a4be2ab0" height="32px"/>
+              <cl:gridcell std:sid="gd-cell-39cdb760" rowindex="0" colindex="0" class="text-left" columnname="STCK_PRPR">
+                <cl:output std:sid="output-6d78600f" id="opt1" datatype="number" format="#,##0" displayexp="text+&quot;원&quot;">
+                  <cl:celldata std:sid="c-data-95e4d970"/>
+                </cl:output>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-940c8ce1" rowindex="0" colindex="1" columnname="CTNG_VOL">
+                <cl:output std:sid="output-1b99984a" id="opt2" datatype="number">
+                  <cl:expbind property="class" category="CLASS" expression="CNTG_CLS_CODE == &quot;2&quot; ? &quot;text-wts-red&quot; : &quot;text-wts-blue&quot;"/>
+                  <cl:celldata std:sid="c-data-2b8c0d8c"/>
+                </cl:output>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-f489733f" rowindex="0" colindex="2" columnname="PRDY_CTRT">
+                <cl:output std:sid="output-1536ef34" id="opt3" datatype="number" displayexp="text + &quot;%&quot;">
+                  <cl:expbind property="class" category="CLASS" expression="PRDY_VRSS > 0 ? &quot;text-wts-red&quot; : PRDY_VRSS &lt; 0 ? &quot;text-wts-blue&quot; : &quot;&quot;"/>
+                  <cl:celldata std:sid="c-data-d27886ea"/>
+                </cl:output>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-1d045971" rowindex="0" colindex="3" columnname="ACML_VOL">
+                <cl:output std:sid="output-0e5ab418" id="opt4" datatype="number" format="#,##0">
+                  <cl:celldata std:sid="c-data-29451685"/>
+                </cl:output>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-ebf002c2" rowindex="0" colindex="4" columnname="STCK_CNTG_HOUR">
+                <cl:output std:sid="output-5fbb8bb9" id="opt5">
+                  <cl:celldata std:sid="c-data-75f6c038"/>
+                </cl:output>
+              </cl:gridcell>
+            </cl:griddetail>
+          </cl:grid>
+          <cl:formlayout std:sid="f-layout-8b09a860" scrollable="false" hspace="10px" vspace="10px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+      </cl:tabitem>
+      <cl:tabitem std:sid="t-item-9186a85f" selected="true" text="일별">
+        <cl:group std:sid="group-9e13a587" id="grp3" class="card">
+          <std:metadata>
+            <std:property key="locked" value="true"/>
+          </std:metadata>
+          <cl:grid std:sid="grid-72618721" id="grd3" class="table-transparent" datasetid="dsDayStockOut">
+            <cl:formdata std:sid="f-data-e06e99e9" row="0" col="0"/>
+            <cl:gridcolumn std:sid="g-column-dcddb5e4"/>
+            <cl:gridcolumn std:sid="g-column-fc7e4e5e"/>
+            <cl:gridcolumn std:sid="g-column-3d0ebd4b"/>
+            <cl:gridcolumn std:sid="g-column-27082105"/>
+            <cl:gridcolumn std:sid="g-column-6926c6b9" width="179px"/>
+            <cl:gridcolumn std:sid="g-column-178a3d89"/>
+            <cl:gridcolumn std:sid="g-column-6d22d06f"/>
+            <cl:gridcolumn std:sid="g-column-2eb527ad"/>
+            <cl:gridheader std:sid="gh-band-66092117">
+              <cl:gridrow std:sid="g-row-e53dd9de" height="44px"/>
+              <cl:gridcell std:sid="gh-cell-6dcc1cad" rowindex="0" colindex="0" targetcolumnname="out_val4_25" sortable="false" filterable="false" text="일자"/>
+              <cl:gridcell std:sid="gh-cell-80fa1b16" rowindex="0" colindex="1" targetcolumnname="out_val4_29" sortable="false" filterable="false" text="종가"/>
+              <cl:gridcell std:sid="gh-cell-7d338411" rowindex="0" colindex="2" targetcolumnname="out_val4_33" sortable="false" filterable="false" text="등락률"/>
+              <cl:gridcell std:sid="gh-cell-fae29d51" rowindex="0" colindex="3" targetcolumnname="out_val4_34" sortable="false" filterable="false" text="거래량"/>
+              <cl:gridcell std:sid="gh-cell-d40649ce" rowindex="0" colindex="4" targetcolumnname="out_val4_41" sortable="false" filterable="false" text="거래대금"/>
+              <cl:gridcell std:sid="gh-cell-3afc663d" rowindex="0" colindex="5" targetcolumnname="out_val4_26" sortable="false" filterable="false" text="시가"/>
+              <cl:gridcell std:sid="gh-cell-67f09dcf" rowindex="0" colindex="6" targetcolumnname="out_val4_27" sortable="false" filterable="false" text="고가"/>
+              <cl:gridcell std:sid="gh-cell-ebe251af" rowindex="0" colindex="7" targetcolumnname="out_val4_28" sortable="false" filterable="false" text="저가"/>
+            </cl:gridheader>
+            <cl:griddetail std:sid="gd-band-8efc6321">
+              <cl:gridrow std:sid="g-row-5327ee74" height="32px"/>
+              <cl:gridcell std:sid="gd-cell-9b2950ed" rowindex="0" colindex="0" columnname="out_val4_25">
+                <cl:output std:sid="output-1f45c29c" id="opt6">
+                  <cl:celldata std:sid="c-data-a1e98d36"/>
+                </cl:output>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-b4fc3ca9" rowindex="0" colindex="1" columnname="out_val4_29">
+                <cl:output std:sid="output-a39d468d" id="opt7" class="text-right" datatype="number" format="s#,##0" displayexp="text + &quot;원&quot;">
+                  <cl:celldata std:sid="c-data-7146f2da"/>
+                </cl:output>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-5008c280" rowindex="0" colindex="2" columnname="out_val4_33">
+                <cl:output std:sid="output-603f67f9" id="opt8" style="text-align:right;" datatype="number" format="s#,##0.00" displayexp="text + &quot;%&quot;">
+                  <cl:expbind property="class" category="CLASS" expression="value > 0 ? &quot;text-wts-red&quot; : value &lt; 0 ? &quot;text-wts-blue&quot; : &quot;&quot;"/>
+                  <cl:celldata std:sid="c-data-a516510d"/>
+                </cl:output>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-a8c01e64" rowindex="0" colindex="3" columnname="out_val4_34">
+                <cl:output std:sid="output-a28a1dcf" id="opt9" class="text-right" datatype="number" format="s#,##0">
+                  <cl:celldata std:sid="c-data-311cc3a3"/>
+                </cl:output>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-39bf3dd6" rowindex="0" colindex="4" columnname="out_val4_41">
+                <cl:output std:sid="output-1763be69" id="opt10" class="text-right" datatype="number" format="s#,##0">
+                  <cl:celldata std:sid="c-data-d531f7ba"/>
+                </cl:output>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-79d63336" rowindex="0" colindex="5" columnname="out_val4_26">
+                <cl:output std:sid="output-63735295" id="opt11" class="text-right" datatype="number" format="s#,##0" displayexp="text+&quot;원&quot;">
+                  <cl:celldata std:sid="c-data-b6798655"/>
+                </cl:output>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-d07151b0" rowindex="0" colindex="6" columnname="out_val4_27">
+                <cl:output std:sid="output-4205487a" id="opt12" class="text-right" datatype="number" format="s#,##0" displayexp="text+&quot;원&quot;">
+                  <cl:celldata std:sid="c-data-450f4745"/>
+                </cl:output>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-8a7af9fa" rowindex="0" colindex="7" columnname="out_val4_28">
+                <cl:output std:sid="output-ad417383" id="opt13" class="text-right" datatype="number" format="s#,##0" displayexp="text+&quot;원&quot;">
+                  <cl:celldata std:sid="c-data-69ee53fe"/>
+                </cl:output>
+              </cl:gridcell>
+            </cl:griddetail>
+          </cl:grid>
+          <cl:formlayout std:sid="f-layout-78a5af39" scrollable="false" hspace="10px" vspace="10px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+      </cl:tabitem>
+    </cl:tabfolder>
+    <cl:formlayout std:sid="f-layout-dfa6f5c2" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

@@ -1,0 +1,109 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-3a16c587" version="1.0.5448">
+  <head std:sid="head-39abab76">
+    <screen std:sid="screen-013f326b" id="EXB-POP[1024]" name="EXB-POP[1024]" width="1024px" height="576px" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-a8f0cd7a" id="EXB-POP[800]" name="EXB-POP[800]" width="800px" height="480px" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-c93208ce" id="EXB-POP[480]" name="EXB-POP[480]" width="480px" height="320px" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-c1096422">
+      <cl:dataset comment="팝업 initValue" std:sid="d-set-f031d113" id="dsList">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-7e7a14b6" name="KEY"/>
+          <cl:datacolumn comment="일반객체(String타입)" std:sid="d-column-152b51a8" name="STR_VAL"/>
+          <cl:datacolumn comment="일반객체(Number타입)" std:sid="d-column-e83f10df" name="NUM_VAL" datatype="number"/>
+          <cl:datacolumn comment="일반객체(Date타입)" std:sid="d-column-f5034398" name="DT_VAL"/>
+          <cl:datacolumn comment="Array객체" std:sid="d-column-4958bb99" name="OBJ_VAL"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist/>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="팝업 기능 확인"/>
+  </head>
+  <body std:sid="body-5c51ff9e" class="wrap pop" childcombinatorclass="v_base">
+    <cl:listener std:sid="listener-90ac8657" name="init" handler="onBodyInit"/>
+    <cl:listener std:sid="listener-ac48c8bd" name="load" handler="onBodyLoad"/>
+    <cl:listener std:sid="listener-89ca96a3" name="before-unload" handler="onBodyBeforeUnload"/>
+    <cl:group std:sid="group-d78c5f7f" id="grpData" class="conts-area">
+      <cl:verticaldata std:sid="v-data-ab1497a7" width="992px" height="486px" autosize="height"/>
+      <cl:group std:sid="group-612a5a3f" class="conts-wrap">
+        <cl:verticaldata std:sid="v-data-1b2c2615" width="992px" height="461px" autosize="height"/>
+        <cl:udc std:sid="ud-control-1e0e92f6" id="udcComFormTitle1" type="udc.com.udcComFormTitle">
+          <cl:verticaldata std:sid="v-data-b5958cce" width="1070px" height="23px" autosize="height"/>
+          <cl:property name="title" value="전달받은 값 확인" type="string"/>
+        </cl:udc>
+        <cl:grid std:sid="grid-92f037dd" id="grd1" datasetid="dsList" autofit="2, 3, 4, 5" autorowheight="all">
+          <cl:verticaldata std:sid="v-data-9b2b0874" width="1250px" height="434px" autosize="none"/>
+          <cl:gridcolumn std:sid="g-column-f8366681" width="50px"/>
+          <cl:gridcolumn std:sid="g-column-ac314d81" width="100px"/>
+          <cl:gridcolumn std:sid="g-column-0dcfe217" width="120px"/>
+          <cl:gridcolumn std:sid="g-column-95b91bd6" width="100px"/>
+          <cl:gridcolumn std:sid="g-column-a0972741" width="120px"/>
+          <cl:gridcolumn std:sid="g-column-6f271109" width="120px"/>
+          <cl:gridheader std:sid="gh-band-1a354993">
+            <cl:gridrow std:sid="g-row-ca775a2d" height="44px"/>
+            <cl:gridrow std:sid="g-row-d71eb182" height="44px"/>
+            <cl:gridcell std:sid="gh-cell-a0b12ebd" rowindex="0" colindex="0" rowspan="2" colspan="1" sortable="false" filterable="false" text="NO"/>
+            <cl:gridcell std:sid="gh-cell-70b3be83" rowindex="0" colindex="1" rowspan="2" colspan="1" targetcolumnname="KEY" sortable="false" filterable="false" text="KEY"/>
+            <cl:gridcell std:sid="gh-cell-ebc5b819" rowindex="1" colindex="2" targetcolumnname="STR_VAL" sortable="false" filterable="false" text="String타입"/>
+            <cl:gridcell std:sid="gh-cell-7ae0fe96" rowindex="1" colindex="3" targetcolumnname="NUM_VAL" sortable="false" filterable="false" text="Number타입"/>
+            <cl:gridcell std:sid="gh-cell-4f43fd81" rowindex="1" colindex="4" targetcolumnname="DT_VAL" sortable="false" filterable="false" text="Date타입"/>
+            <cl:gridcell std:sid="gh-cell-8610c532" rowindex="0" colindex="5" rowspan="2" colspan="1" targetcolumnname="OBJ_VAL" sortable="false" filterable="false" text="Array객체"/>
+            <cl:gridcell std:sid="gh-cell-c1d4e62c" rowindex="0" colindex="2" rowspan="1" colspan="3" text="일반객체"/>
+          </cl:gridheader>
+          <cl:griddetail std:sid="gd-band-43f5f606">
+            <cl:gridrow std:sid="g-row-56c4cf6c" height="45px"/>
+            <cl:gridcell std:sid="gd-cell-6e58d24c" rowindex="0" colindex="0" columntype="rowindex"/>
+            <cl:gridcell std:sid="gd-cell-00cb01f8" rowindex="0" colindex="1" columnname="KEY"/>
+            <cl:gridcell std:sid="gd-cell-519fa595" rowindex="0" colindex="2" columnname="STR_VAL">
+              <cl:inputbox std:sid="i-box-e16714c7" id="ipb3">
+                <cl:celldata std:sid="c-data-10873b13"/>
+              </cl:inputbox>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-a45115be" rowindex="0" colindex="3" columnname="NUM_VAL">
+              <cl:numbereditor std:sid="n-editor-909a52fb" id="nbe2">
+                <cl:celldata std:sid="c-data-831a6d33"/>
+              </cl:numbereditor>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-dba077b9" rowindex="0" colindex="4" columnname="DT_VAL">
+              <cl:dateinput std:sid="d-input-ececda16" id="dti1">
+                <cl:celldata std:sid="c-data-36955b69"/>
+              </cl:dateinput>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-0ec34d4f" rowindex="0" colindex="5" columnname="OBJ_VAL">
+              <cl:combobox std:sid="c-box-deac4186" id="cmb3" multiple="true">
+                <cl:celldata std:sid="c-data-9afe389b"/>
+                <cl:item std:sid="t-item-fd6dfc15" label="DATA1" value="value1"/>
+                <cl:item std:sid="t-item-7c9e46c2" label="DATA2" value="value2"/>
+                <cl:item std:sid="t-item-d0c2dd0e" label="DATA3" value="value3"/>
+                <cl:item std:sid="t-item-baa9d12e" label="DATA4" value="value4"/>
+                <cl:item std:sid="t-item-fbc75723" label="DATA5" value="value5"/>
+              </cl:combobox>
+            </cl:gridcell>
+          </cl:griddetail>
+        </cl:grid>
+        <cl:verticallayout std:sid="v-layout-a02ce7e6" spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-16491be4" spacing="16"/>
+    </cl:group>
+    <cl:group std:sid="group-1a942052" id="grpFooter" class="conts-footer">
+      <cl:verticaldata std:sid="v-data-65522034" width="992px" height="40px" autosize="height"/>
+      <cl:group std:sid="group-f3d7a659">
+        <cl:verticaldata std:sid="v-data-030e24a9" width="1070px" height="28px" autosize="height"/>
+        <cl:button std:sid="button-e610e9e9" id="btn1" value="닫기">
+          <cl:listener std:sid="listener-e75ac0d8" name="click" handler="onBtn1Click"/>
+          <cl:flowlayoutdata std:sid="f-data-b4ec3581" width="74px" height="28px" autosize="width"/>
+        </cl:button>
+        <cl:button std:sid="button-c4f815fe" id="btn2" class="primary" value="전달">
+          <cl:listener std:sid="listener-f2f77033" name="click" handler="onBtn2Click"/>
+          <cl:flowlayoutdata std:sid="f-data-1c88303c" width="74px" height="28px" autosize="width"/>
+        </cl:button>
+        <cl:flowlayout std:sid="f-layout-1364edba" scrollable="false" hspacing="4" vspacing="4" halign="right"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-27b41c1f" spacing="0"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-d4b57a8e" spacing="12" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

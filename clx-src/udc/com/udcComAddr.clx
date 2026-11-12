@@ -1,0 +1,63 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-55d470c8" version="1.0.6035">
+  <head std:sid="head-e4cec05b">
+    <std:metadata>
+      <std:property key="template-file" value="templates/일반화면/0.프레임/V_프레임_임베딩.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-9703b7fa" id="default" name="default" width="1640px" height="984px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="1724" active="true"/>
+    <screen std:sid="screen-34c4ed6b" id="tablet" name="tablet" width="1024px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-260e4bc3" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-be7970eb"/>
+    <cl:appspec title="주소검색"/>
+  </head>
+  <body std:sid="body-86ad8a52" style="top:0px; left:0px; width:900px; height:28px;" class="address">
+    <cl:listener std:sid="listener-5a71e08a" name="screen-change" handler="onBodyScreenChange"/>
+    <cl:attribute name="mobile-column-count" value="1"/>
+    <cl:attribute name="tablet-column-count" value="1"/>
+    <cl:group std:sid="group-166525a9">
+      <cl:attribute name="mobile-column-count" value="1"/>
+      <cl:formdata std:sid="f-data-b85a02d3" width="184" height="25" row="0" col="0" rowspan="1" colspan="1"/>
+      <cl:group std:sid="group-a1a2ef89" id="grpPost">
+        <cl:formdata std:sid="f-data-63c34301" row="0" col="0" rowspan="1" colspan="1"/>
+        <cl:inputbox std:sid="i-box-6450a805" placeholder="우편번호">
+          <cl:attribute name="mobile-min-height" value="28"/>
+          <cl:formdata std:sid="f-data-20830e16" row="0" col="0"/>
+        </cl:inputbox>
+        <cl:button std:sid="button-d2d42532" class="btn-i-only btn-search" icon="0">
+          <cl:attribute name="mobile-min-height" value="28"/>
+          <cl:attribute name="needs-auto-width" value="true"/>
+          <cl:formdata std:sid="f-data-4d8eca57" halign="FILL" valign="FILL" width="24" height="24" row="0" col="1"/>
+        </cl:button>
+        <cl:formlayout std:sid="f-layout-e66a2a46" scrollable="false">
+          <cl:rows length="1" unit="FRACTION" autoSizing="true"/>
+          <cl:columns length="80" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+          <cl:columns length="24" unit="PIXEL" autoSizing="false" shadetype="NONE" shadecolor="transparent" syncminlength="true"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:inputbox std:sid="i-box-489303da" enabled="false" placeholder="도로명주소">
+        <cl:attribute name="mobile-min-height" value="28"/>
+        <cl:attribute name="needs-auto-width" value="true"/>
+        <cl:formdata std:sid="f-data-bb5bdea0" row="0" col="1"/>
+      </cl:inputbox>
+      <cl:formlayout std:sid="f-layout-6990f23b" scrollable="false">
+        <cl:rows length="1" unit="FRACTION" autoSizing="true"/>
+        <cl:columns length="128" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+        <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:inputbox std:sid="i-box-2bc50ea7" enabled="false" placeholder="상세주소">
+      <cl:attribute name="mobile-min-height" value="28"/>
+      <cl:attribute name="needs-auto-height" value="true"/>
+      <cl:formdata std:sid="f-data-350b943d" row="0" col="1"/>
+    </cl:inputbox>
+    <cl:formlayout std:sid="f-layout-c2aeefe1" scrollable="false" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="1" unit="FRACTION" autoSizing="true"/>
+      <cl:columns length="1" unit="FRACTION" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

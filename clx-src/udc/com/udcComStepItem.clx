@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-3fbb5a1c" version="1.0.3167">
+  <head std:sid="head-3d68d5e3">
+    <screen std:sid="screen-ef9092e0" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-f9469aa7" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-fa853dd1" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-498fccea"/>
+    <cl:appspec title="스텝영역">
+      <cl:property name="className" type="string"/>
+      <cl:property name="classNode" type="string"/>
+      <cl:property name="value" type="string"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-5fe39889" style="top:0px; left:0px; width:150px; height:100px;" class="stepBody">
+    <cl:listener std:sid="listener-9f6d5cf5" name="load" handler="onBodyLoad"/>
+    <cl:listener std:sid="listener-6f91a475" name="property-change" handler="onBodyPropertyChange"/>
+    <cl:group std:sid="group-33674fc5" id="grp01" class="outputBack">
+      <cl:xylayoutdata std:sid="xyl-data-a0e2c7ef" top="0px" width="40px" height="40px" horizontalAnchor="CENTER" verticalAnchor="TOP"/>
+      <cl:output std:sid="output-cf593e0b">
+        <cl:xylayoutdata std:sid="xyl-data-958ee4eb" width="30px" height="30px" horizontalAnchor="CENTER" verticalAnchor="CENTER"/>
+      </cl:output>
+      <cl:xylayout std:sid="xylayout-0463ea0c"/>
+    </cl:group>
+    <cl:output std:sid="output-9eb97899" class="text-center" value="Output">
+      <cl:apppropbind property="value" app-property="value"/>
+      <cl:xylayoutdata std:sid="xyl-data-3dbf9c6c" top="55px" right="0px" left="0px" height="25px" horizontalAnchor="BOTH" verticalAnchor="TOP"/>
+    </cl:output>
+    <cl:xylayout std:sid="xylayout-918de886"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

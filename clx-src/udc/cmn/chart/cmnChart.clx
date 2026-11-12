@@ -1,0 +1,73 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-5432e0e1" version="1.0.0.0">
+  <head std:sid="head-b68ebcca">
+    <title>cmnChart</title>
+    <screen std:sid="screen-54b0a4f1" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-5e426aad" id="EXB-DIV" name="EXB-DIV" width="600px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-9c984b0f" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-ea5c9deb"/>
+    <cl:appspec dev-description="차트 컴포넌트" dev-icon="iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAABu0lEQVR4nO2W20oCQRzGfaUIqaBeIDo8QWV1EXRpZlAg1UWZ9ADhoaKyKBOrB9BQKb1QQytX3TXMLFddjw/wb2dgRlehEA9748UH8+3Mzvxm5pvZVdRqNZBTClIoFotQrVblBcjn81CpVKi4s1PwToxhRTY3JHWdikxW0UgjCIKEjjuxgFs5hBVeV/d2BQYAsgOgAOZyOUlQ2GNzHUCjho8rK4RWV7CSlxf9DyFj0FMfPdjv/xZ0AlAVZ/22o4NX3RZW6SvdCpB+foL33W0s1mzsOoBnTEnfL8TjrQCs/ZY2CKjmOgZgjUfAHBqwCjHmbwAUwrjtRgLQHMJoI4B+79+g+aYnaftvj7sJINb7FfDN1AF+vJ7ub0Hm0QVJ6zkW/xLqP0BYq6Ges5gg43JCymHHEhKJ/gMElhao/3y4aw8A3QHthjCsXaOebQJI3Tt6H8KursAAQHaAcrkMjO0anCPDWP7FeWDETokPigARcVDiI2IIg2IIiWdMRvAvq6jnxKPonZ2iPiXeGa7xUep5hpECoO9zqVTCpyGbzWIg4tE1TTwq8zyPy+gZ+odAbYhH9ahMfGNfjR4JjfsLLm6oYdHG1xMAAAAASUVORK5CYII=">
+      <cl:property name="dataSet" type="control" std:desc="[Control] 데이터 셋"/>
+      <cl:property name="chartType" type="enumeration" default="bar : vertical" std:desc="[Enum] 차트 유형">
+        <cl:available-value>bar : vertical</cl:available-value>
+        <cl:available-value>bar : horizontal</cl:available-value>
+        <cl:available-value>circle : ring</cl:available-value>
+        <cl:available-value>circle : pie</cl:available-value>
+        <cl:available-value>cicle : harf</cl:available-value>
+        <cl:available-value>line : fold</cl:available-value>
+        <cl:available-value>line : round</cl:available-value>
+        <cl:available-value>area : fold</cl:available-value>
+        <cl:available-value>area : round</cl:available-value>
+        <cl:available-value>radar : default</cl:available-value>
+        <cl:available-value>radar : detail</cl:available-value>
+      </cl:property>
+      <cl:property name="categoryColNm" type="string" default="REGION" std:desc="[String] 카테고리 컬럼명"/>
+      <cl:property name="valueColNms" type="string" default="SALE_CNT,JEONSE_CNT" std:desc="[String] Value 컬럼명[구분자 ,](Value의 label은 데이터 셋의 info 값으로 적용됩니다)"/>
+      <cl:property name="title" type="string" std:desc="[string] 차트 타이틀"/>
+      <cl:property name="titlePosition" type="enumeration" default="top-left" std:desc="[Enum] 차트 타이틀 배치 위치">
+        <cl:available-value>top-center</cl:available-value>
+        <cl:available-value>top-left</cl:available-value>
+        <cl:available-value>top-right</cl:available-value>
+        <cl:available-value>bottom-center</cl:available-value>
+        <cl:available-value>bottom-left</cl:available-value>
+        <cl:available-value>bottom-right</cl:available-value>
+      </cl:property>
+      <cl:property name="legendPosition" type="enumeration" default="bottom" bindable="false" std:desc="[Enum] 카테고리 명각 배치 위치(불필요시 none 선택, default : top)">
+        <cl:available-value>top</cl:available-value>
+        <cl:available-value>bottom</cl:available-value>
+        <cl:available-value>none</cl:available-value>
+      </cl:property>
+      <cl:property name="useExportColInfo" type="boolean" default="true" std:desc="[Boolean] 엑셀출력시 컬럼명을 info로 사용할지 여부"/>
+      <cl:property name="useChartColor" type="boolean" default="false" std:desc="[Boolean] 차트 색상 변경 여부"/>
+      <cl:property name="useDragValueChange" type="boolean" default="false" std:desc="[Boolean] 드래그 포인트 사용여부"/>
+      <cl:property name="viewSumText" type="boolean" default="false" std:desc="[Boolean] 합계 표시 여부">
+        <cl:available-value>none</cl:available-value>
+        <cl:available-value>vertical</cl:available-value>
+        <cl:available-value>horizontal</cl:available-value>
+      </cl:property>
+      <cl:event name="resize" type="cpr.events.CUIEvent"/>
+      <cl:event name="update" type="cpr.events.CUIEvent"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-7fb5f55f" style="top:0px; left:0px; width:300px; height:300px;" class="card">
+    <cl:listener std:sid="listener-341e8565" name="contextmenu" handler="onBodyContextmenu"/>
+    <cl:listener std:sid="listener-c7b5cb66" name="property-change" handler="onBodyPropertyChange"/>
+    <cl:listener std:sid="listener-492c2770" name="load" handler="onBodyLoad"/>
+    <cl:uicontrolshell std:sid="uic-shell-1fb429ef" id="shlChart">
+      <cl:listener std:sid="listener-1ce26230" name="init" handler="onShl1Init"/>
+      <cl:listener std:sid="listener-97fd5aba" name="load" handler="onShl1Load"/>
+      <cl:xylayoutdata std:sid="xyl-data-dde2c2f9" top="10px" right="10px" bottom="10px" left="10px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+    </cl:uicontrolshell>
+    <cl:output std:sid="output-dcc69c46" id="nodatamsg" style="text-align:center;" class="nodatamsg" value="표시할 데이터가 없습니다.">
+      <cl:xylayoutdata std:sid="xyl-data-5dac23a6" top="30px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+    </cl:output>
+    <cl:output std:sid="output-19c97845" id="cover" style="background-color:#ffffff; font-weight:bold; font-size:18px; text-align:center;" removeOnBuild="true" value="Chart Component">
+      <cl:xylayoutdata std:sid="xyl-data-91f9cfd0" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+    </cl:output>
+    <cl:xylayout std:sid="xylayout-03ae079b" scrollable="false"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>
