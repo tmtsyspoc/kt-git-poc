@@ -1,0 +1,1386 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-bbe169e7" version="1.0.6209">
+  <head std:sid="head-500538a4">
+    <screen std:sid="screen-50bd3a7c" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-03e32485" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-cb64af8a" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-eddf9207">
+      <cl:dataset comment="프로세스 목록" std:sid="d-set-e6936cd8" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="" std:sid="d-column-a48d97bd" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-65ea428e" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn comment="" std:sid="d-column-978d849d" name="SUB_TITLE"/>
+          <cl:datacolumn comment="" std:sid="d-column-b60550c5" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-6c6aaca3" name="CONT" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-230dcc72" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-a1ee790d" name="SUB_CODE"/>
+          <cl:datacolumn comment="" std:sid="d-column-1e44b86b" name="TARGET_CTRL"/>
+          <cl:datacolumn std:sid="d-column-29e58aad" name="TARGET_EMB"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[기존 API·전문 명세 준수]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[솔루션은 KT가 제공한 기존 API·전문 명세의 Endpoint, Method, Header, 요청·응답 Payload, 필드명, 데이터 형식, 오류코드와 호출순서를 변경 없이 사용해야 한다. 솔루션 내부의 Dataset, DataCollection 또는 데이터 바인딩 방식과 관계없이 솔루션 적용을 위해 기존 백엔드 API·전문, 업무소스 또는 인터페이스 구조를 변경하거나 공급사 전용 중계 API로 대체해서는 안 된다. 향후 TO-BE API·전문 명세가 확정된 경우에는 해당 표준과 명세를 준수해야 한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    <cl:dataset id="ds1">
+        <cl:datacolumnlist>
+          <cl:datacolumn name="column1"/>
+          <cl:datacolumn name="column2"/>
+          <cl:datacolumn name="column3"/>
+          <cl:datacolumn name="column4"/>
+          <cl:datacolumn name="column5"/>
+          <cl:datacolumn name="column6"/>
+          <cl:datacolumn name="column7"/>
+          <cl:datacolumn name="column8"/>
+          <cl:datacolumn name="column9"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="column1">column11</cl:datavalue>
+            <cl:datavalue columnname="column2">column21</cl:datavalue>
+            <cl:datavalue columnname="column3">column31</cl:datavalue>
+            <cl:datavalue columnname="column4">column41</cl:datavalue>
+            <cl:datavalue columnname="column5">column51</cl:datavalue>
+            <cl:datavalue columnname="column6">column61</cl:datavalue>
+            <cl:datavalue columnname="column7">column71</cl:datavalue>
+            <cl:datavalue columnname="column8">column81</cl:datavalue>
+            <cl:datavalue columnname="column9">column91</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1">column12</cl:datavalue>
+            <cl:datavalue columnname="column2">column22</cl:datavalue>
+            <cl:datavalue columnname="column3">column32</cl:datavalue>
+            <cl:datavalue columnname="column4">column42</cl:datavalue>
+            <cl:datavalue columnname="column5">column52</cl:datavalue>
+            <cl:datavalue columnname="column6">column62</cl:datavalue>
+            <cl:datavalue columnname="column7">column72</cl:datavalue>
+            <cl:datavalue columnname="column8">column82</cl:datavalue>
+            <cl:datavalue columnname="column9">column92</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1">column13</cl:datavalue>
+            <cl:datavalue columnname="column2">column23</cl:datavalue>
+            <cl:datavalue columnname="column3">column33</cl:datavalue>
+            <cl:datavalue columnname="column4">column43</cl:datavalue>
+            <cl:datavalue columnname="column5">column53</cl:datavalue>
+            <cl:datavalue columnname="column6">column63</cl:datavalue>
+            <cl:datavalue columnname="column7">column73</cl:datavalue>
+            <cl:datavalue columnname="column8">column83</cl:datavalue>
+            <cl:datavalue columnname="column9">column93</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1">column14</cl:datavalue>
+            <cl:datavalue columnname="column2">column24</cl:datavalue>
+            <cl:datavalue columnname="column3">column34</cl:datavalue>
+            <cl:datavalue columnname="column4">column44</cl:datavalue>
+            <cl:datavalue columnname="column5">column54</cl:datavalue>
+            <cl:datavalue columnname="column6">column64</cl:datavalue>
+            <cl:datavalue columnname="column7">column74</cl:datavalue>
+            <cl:datavalue columnname="column8">column84</cl:datavalue>
+            <cl:datavalue columnname="column9">column94</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1">column15</cl:datavalue>
+            <cl:datavalue columnname="column2">column25</cl:datavalue>
+            <cl:datavalue columnname="column3">column35</cl:datavalue>
+            <cl:datavalue columnname="column4">column45</cl:datavalue>
+            <cl:datavalue columnname="column5">column55</cl:datavalue>
+            <cl:datavalue columnname="column6">column65</cl:datavalue>
+            <cl:datavalue columnname="column7">column75</cl:datavalue>
+            <cl:datavalue columnname="column8">column85</cl:datavalue>
+            <cl:datavalue columnname="column9">column95</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1">column16</cl:datavalue>
+            <cl:datavalue columnname="column2">column26</cl:datavalue>
+            <cl:datavalue columnname="column3">column36</cl:datavalue>
+            <cl:datavalue columnname="column4">column46</cl:datavalue>
+            <cl:datavalue columnname="column5">column56</cl:datavalue>
+            <cl:datavalue columnname="column6">column66</cl:datavalue>
+            <cl:datavalue columnname="column7">column76</cl:datavalue>
+            <cl:datavalue columnname="column8">column86</cl:datavalue>
+            <cl:datavalue columnname="column9">column96</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1">column17</cl:datavalue>
+            <cl:datavalue columnname="column2">column27</cl:datavalue>
+            <cl:datavalue columnname="column3">column37</cl:datavalue>
+            <cl:datavalue columnname="column4">column47</cl:datavalue>
+            <cl:datavalue columnname="column5">column57</cl:datavalue>
+            <cl:datavalue columnname="column6">column67</cl:datavalue>
+            <cl:datavalue columnname="column7">column77</cl:datavalue>
+            <cl:datavalue columnname="column8">column87</cl:datavalue>
+            <cl:datavalue columnname="column9">column97</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1">column18</cl:datavalue>
+            <cl:datavalue columnname="column2">column28</cl:datavalue>
+            <cl:datavalue columnname="column3">column38</cl:datavalue>
+            <cl:datavalue columnname="column4">column48</cl:datavalue>
+            <cl:datavalue columnname="column5">column58</cl:datavalue>
+            <cl:datavalue columnname="column6">column68</cl:datavalue>
+            <cl:datavalue columnname="column7">column78</cl:datavalue>
+            <cl:datavalue columnname="column8">column88</cl:datavalue>
+            <cl:datavalue columnname="column9">column98</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1">column19</cl:datavalue>
+            <cl:datavalue columnname="column2">column29</cl:datavalue>
+            <cl:datavalue columnname="column3">column39</cl:datavalue>
+            <cl:datavalue columnname="column4">column49</cl:datavalue>
+            <cl:datavalue columnname="column5">column59</cl:datavalue>
+            <cl:datavalue columnname="column6">column69</cl:datavalue>
+            <cl:datavalue columnname="column7">column79</cl:datavalue>
+            <cl:datavalue columnname="column8">column89</cl:datavalue>
+            <cl:datavalue columnname="column9">column99</cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+<cl:dataset id="dsPrsnNmDtoList">
+        <cl:datacolumnlist>
+          <cl:datacolumn name="custSuid" datatype="string"/>
+          <cl:datacolumn name="prsnNmSqno" datatype="string"/>
+          <cl:datacolumn name="histSqno" datatype="string"/>
+          <cl:datacolumn name="rgsrEmnb" datatype="string"/>
+          <cl:datacolumn name="rgstDttm" datatype="string"/>
+          <cl:datacolumn name="rgstPrgmId" datatype="string"/>
+          <cl:datacolumn name="lastChnrEmnb" datatype="string"/>
+          <cl:datacolumn name="lastChngDttm" datatype="string"/>
+          <cl:datacolumn name="lastChngPrgmId" datatype="string"/>
+          <cl:datacolumn name="dltnYn" datatype="string"/>
+          <cl:datacolumn name="rgstTrscId" datatype="string"/>
+          <cl:datacolumn name="lastTrscId" datatype="string"/>
+          <cl:datacolumn name="starDttm" datatype="string"/>
+          <cl:datacolumn name="endDttm" datatype="string"/>
+          <cl:datacolumn name="custNmUseTypeCode" datatype="string"/>
+          <cl:datacolumn name="odn1PrsnNm" datatype="string"/>
+          <cl:datacolumn name="odn2PrsnNm" datatype="string"/>
+          <cl:datacolumn name="odn3PrsnNm" datatype="string"/>
+          <cl:datacolumn name="prsnNmIstc" datatype="string"/>
+          <cl:datacolumn name="custInfoInptPathCode" datatype="string"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+<cl:dataset id="dsCustIdnrDtoList">
+        <cl:datacolumnlist>
+          <cl:datacolumn name="inidSuid" datatype="string"/>
+          <cl:datacolumn name="histSqno" datatype="string"/>
+          <cl:datacolumn name="rgsrEmnb" datatype="string"/>
+          <cl:datacolumn name="rgstDttm" datatype="string"/>
+          <cl:datacolumn name="rgstPrgmId" datatype="string"/>
+          <cl:datacolumn name="lastChnrEmnb" datatype="string"/>
+          <cl:datacolumn name="lastChngDttm" datatype="string"/>
+          <cl:datacolumn name="lastChngPrgmId" datatype="string"/>
+          <cl:datacolumn name="dltnYn" datatype="string"/>
+          <cl:datacolumn name="rgstTrscId" datatype="string"/>
+          <cl:datacolumn name="lastTrscId" datatype="string"/>
+          <cl:datacolumn name="starDttm" datatype="string"/>
+          <cl:datacolumn name="endDttm" datatype="string"/>
+          <cl:datacolumn name="custSuid" datatype="string"/>
+          <cl:datacolumn name="idnrSttsCode" datatype="string"/>
+          <cl:datacolumn name="idnrDvsnCode" datatype="string"/>
+          <cl:datacolumn name="inidVal" datatype="string"/>
+          <cl:datacolumn name="idnrExpyDate" datatype="string"/>
+          <cl:datacolumn name="frnrRgstNoCretDvsnCode" datatype="string"/>
+          <cl:datacolumn name="inidIstc" datatype="string"/>
+          <cl:datacolumn name="custInfoInptPathCode" datatype="string"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+<cl:dataset id="dsPnpDtoList">
+        <cl:datacolumnlist>
+          <cl:datacolumn name="pnpSuid" datatype="string"/>
+          <cl:datacolumn name="rgsrEmnb" datatype="string"/>
+          <cl:datacolumn name="rgstDttm" datatype="string"/>
+          <cl:datacolumn name="rgstPrgmId" datatype="string"/>
+          <cl:datacolumn name="lastChnrEmnb" datatype="string"/>
+          <cl:datacolumn name="lastChngDttm" datatype="string"/>
+          <cl:datacolumn name="lastChngPrgmId" datatype="string"/>
+          <cl:datacolumn name="dltnYn" datatype="string"/>
+          <cl:datacolumn name="rgstTrscId" datatype="string"/>
+          <cl:datacolumn name="lastTrscId" datatype="string"/>
+          <cl:datacolumn name="valdStarDttm" datatype="string"/>
+          <cl:datacolumn name="valdEndDttm" datatype="string"/>
+          <cl:datacolumn name="rfrnEnttNm" datatype="string"/>
+          <cl:datacolumn name="rfrnIntcSuid" datatype="string"/>
+          <cl:datacolumn name="pnpRgstResnCode" datatype="string"/>
+          <cl:datacolumn name="pnpTypeCode" datatype="string"/>
+          <cl:datacolumn name="pnpBhvrTypeCode" datatype="string"/>
+          <cl:datacolumn name="custInfoInptPathCode" datatype="string"/>
+          <cl:datacolumn name="pnpRmrkCntn" datatype="string"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+<cl:dataset id="dsCustPrtrMatrDtoList">
+        <cl:datacolumnlist>
+          <cl:datacolumn name="custPrtrMatrSuid" datatype="string"/>
+          <cl:datacolumn name="rgsrEmnb" datatype="string"/>
+          <cl:datacolumn name="rgstDttm" datatype="string"/>
+          <cl:datacolumn name="rgstPrgmId" datatype="string"/>
+          <cl:datacolumn name="lastChnrEmnb" datatype="string"/>
+          <cl:datacolumn name="lastChngDttm" datatype="string"/>
+          <cl:datacolumn name="lastChngPrgmId" datatype="string"/>
+          <cl:datacolumn name="dltnYn" datatype="string"/>
+          <cl:datacolumn name="rgstTrscId" datatype="string"/>
+          <cl:datacolumn name="lastTrscId" datatype="string"/>
+          <cl:datacolumn name="valdStarDttm" datatype="string"/>
+          <cl:datacolumn name="valdEndDttm" datatype="string"/>
+          <cl:datacolumn name="rfrnEnttNm" datatype="string"/>
+          <cl:datacolumn name="rfrnIntcSuid" datatype="string"/>
+          <cl:datacolumn name="custPrtrMatrDvsnCode" datatype="string"/>
+          <cl:datacolumn name="custPrtrMatrCntn" datatype="string"/>
+          <cl:datacolumn name="custInfoInptPathCode" datatype="string"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+<cl:dataset id="dsElctLoctDto">
+        <cl:datacolumnlist>
+          <cl:datacolumn name="elctLoctSuid" datatype="string"/>
+          <cl:datacolumn name="rgsrEmnb" datatype="string"/>
+          <cl:datacolumn name="rgstDttm" datatype="string"/>
+          <cl:datacolumn name="rgstPrgmId" datatype="string"/>
+          <cl:datacolumn name="lastChnrEmnb" datatype="string"/>
+          <cl:datacolumn name="lastChngDttm" datatype="string"/>
+          <cl:datacolumn name="lastChngPrgmId" datatype="string"/>
+          <cl:datacolumn name="dltnYn" datatype="string"/>
+          <cl:datacolumn name="rgstTrscId" datatype="string"/>
+          <cl:datacolumn name="lastTrscId" datatype="string"/>
+          <cl:datacolumn name="starDttm" datatype="string"/>
+          <cl:datacolumn name="endDttm" datatype="string"/>
+          <cl:datacolumn name="elctLoctDvsnCode" datatype="string"/>
+          <cl:datacolumn name="elctLoctVal" datatype="string"/>
+          <cl:datacolumn name="mailDmanCode" datatype="string"/>
+          <cl:datacolumn name="elctLoctRmrkCntn" datatype="string"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+<cl:dataset id="dsSnsDto">
+        <cl:datacolumnlist>
+          <cl:datacolumn name="snsSuid" datatype="string"/>
+          <cl:datacolumn name="rgsrEmnb" datatype="string"/>
+          <cl:datacolumn name="rgstDttm" datatype="string"/>
+          <cl:datacolumn name="rgstPrgmId" datatype="string"/>
+          <cl:datacolumn name="lastChnrEmnb" datatype="string"/>
+          <cl:datacolumn name="lastChngDttm" datatype="string"/>
+          <cl:datacolumn name="lastChngPrgmId" datatype="string"/>
+          <cl:datacolumn name="dltnYn" datatype="string"/>
+          <cl:datacolumn name="rgstTrscId" datatype="string"/>
+          <cl:datacolumn name="lastTrscId" datatype="string"/>
+          <cl:datacolumn name="starDttm" datatype="string"/>
+          <cl:datacolumn name="endDttm" datatype="string"/>
+          <cl:datacolumn name="snsVal" datatype="string"/>
+          <cl:datacolumn name="snsRmrkCntn" datatype="string"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+<cl:dataset id="dsStlmMeanRltsDtoList">
+        <cl:datacolumnlist>
+          <cl:datacolumn name="stlmMeanRltsSuid" datatype="string"/>
+          <cl:datacolumn name="rgsrEmnb" datatype="string"/>
+          <cl:datacolumn name="rgstDttm" datatype="string"/>
+          <cl:datacolumn name="rgstPrgmId" datatype="string"/>
+          <cl:datacolumn name="lastChnrEmnb" datatype="string"/>
+          <cl:datacolumn name="lastChngDttm" datatype="string"/>
+          <cl:datacolumn name="lastChngPrgmId" datatype="string"/>
+          <cl:datacolumn name="dltnYn" datatype="string"/>
+          <cl:datacolumn name="rgstTrscId" datatype="string"/>
+          <cl:datacolumn name="lastTrscId" datatype="string"/>
+          <cl:datacolumn name="starDttm" datatype="string"/>
+          <cl:datacolumn name="endDttm" datatype="string"/>
+          <cl:datacolumn name="custSuid" datatype="string"/>
+          <cl:datacolumn name="stlmMeanSuid" datatype="string"/>
+          <cl:datacolumn name="stlmMeanRltsTypeCode" datatype="string"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+<cl:datamap id="dm1">
+        <cl:datacolumnlist>
+          <cl:datacolumn name="key1" defaultvalue="value1"/>
+          <cl:datacolumn name="column2"/>
+          <cl:datacolumn name="column3"/>
+          <cl:datacolumn name="column4"/>
+          <cl:datacolumn name="column5"/>
+          <cl:datacolumn name="column6"/>
+          <cl:datacolumn name="column7"/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+<cl:datamap id="dmPartyDto">
+        <cl:datacolumnlist>
+          <cl:datacolumn name="custSuid" datatype="string"/>
+          <cl:datacolumn name="histSqno" datatype="string"/>
+          <cl:datacolumn name="rgsrEmnb" datatype="string"/>
+          <cl:datacolumn name="rgstDttm" datatype="string"/>
+          <cl:datacolumn name="rgstPrgmId" datatype="string"/>
+          <cl:datacolumn name="lastChnrEmnb" datatype="string"/>
+          <cl:datacolumn name="lastChngDttm" datatype="string"/>
+          <cl:datacolumn name="lastChngPrgmId" datatype="string"/>
+          <cl:datacolumn name="dltnYn" datatype="string"/>
+          <cl:datacolumn name="rgstTrscId" datatype="string"/>
+          <cl:datacolumn name="lastTrscId" datatype="string"/>
+          <cl:datacolumn name="starDttm" datatype="string"/>
+          <cl:datacolumn name="endDttm" datatype="string"/>
+          <cl:datacolumn name="custClsfCode" datatype="string"/>
+          <cl:datacolumn name="custDvsnCode" datatype="string"/>
+          <cl:datacolumn name="custNm" datatype="string"/>
+          <cl:datacolumn name="intgCustSttsCode" datatype="string"/>
+          <cl:datacolumn name="custRgstDttm" datatype="string"/>
+          <cl:datacolumn name="custInfoInptPathCode" datatype="string"/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+<cl:datamap id="dmPartyExtdDto">
+        <cl:datacolumnlist>
+          <cl:datacolumn name="custSuid" datatype="string"/>
+          <cl:datacolumn name="histSqno" datatype="string"/>
+          <cl:datacolumn name="rgsrEmnb" datatype="string"/>
+          <cl:datacolumn name="rgstDttm" datatype="string"/>
+          <cl:datacolumn name="rgstPrgmId" datatype="string"/>
+          <cl:datacolumn name="lastChnrEmnb" datatype="string"/>
+          <cl:datacolumn name="lastChngDttm" datatype="string"/>
+          <cl:datacolumn name="lastChngPrgmId" datatype="string"/>
+          <cl:datacolumn name="dltnYn" datatype="string"/>
+          <cl:datacolumn name="rgstTrscId" datatype="string"/>
+          <cl:datacolumn name="lastTrscId" datatype="string"/>
+          <cl:datacolumn name="starDttm" datatype="string"/>
+          <cl:datacolumn name="endDttm" datatype="string"/>
+          <cl:datacolumn name="custTypeCode" datatype="string"/>
+          <cl:datacolumn name="idnrChekSttsCode" datatype="string"/>
+          <cl:datacolumn name="custExtdRmrkCntn" datatype="string"/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+<cl:datamap id="dmPrsnExtdDto">
+        <cl:datacolumnlist>
+          <cl:datacolumn name="custSuid" datatype="string"/>
+          <cl:datacolumn name="histSqno" datatype="string"/>
+          <cl:datacolumn name="rgsrEmnb" datatype="string"/>
+          <cl:datacolumn name="rgstDttm" datatype="string"/>
+          <cl:datacolumn name="rgstPrgmId" datatype="string"/>
+          <cl:datacolumn name="lastChnrEmnb" datatype="string"/>
+          <cl:datacolumn name="lastChngDttm" datatype="string"/>
+          <cl:datacolumn name="lastChngPrgmId" datatype="string"/>
+          <cl:datacolumn name="dltnYn" datatype="string"/>
+          <cl:datacolumn name="rgstTrscId" datatype="string"/>
+          <cl:datacolumn name="lastTrscId" datatype="string"/>
+          <cl:datacolumn name="starDttm" datatype="string"/>
+          <cl:datacolumn name="endDttm" datatype="string"/>
+          <cl:datacolumn name="vhclOwnYn" datatype="string"/>
+          <cl:datacolumn name="drvnTypeCode" datatype="string"/>
+          <cl:datacolumn name="ocknCode" datatype="string"/>
+          <cl:datacolumn name="riskGradCode" datatype="string"/>
+          <cl:datacolumn name="injrOcknCode" datatype="string"/>
+          <cl:datacolumn name="injrRiskGradCode" datatype="string"/>
+          <cl:datacolumn name="dethYn" datatype="string"/>
+          <cl:datacolumn name="dethInfoRgstOrgnDvsnCode" datatype="string"/>
+          <cl:datacolumn name="hshrYn" datatype="string"/>
+          <cl:datacolumn name="rlnmCnfmYn" datatype="string"/>
+          <cl:datacolumn name="rlnmCnfmCode" datatype="string"/>
+          <cl:datacolumn name="hpCtfnYn" datatype="string"/>
+          <cl:datacolumn name="hpCtfnDate" datatype="string"/>
+          <cl:datacolumn name="bltpCode" datatype="string"/>
+          <cl:datacolumn name="rlgnCode" datatype="string"/>
+          <cl:datacolumn name="hobyCode" datatype="string"/>
+          <cl:datacolumn name="schlNm" datatype="string"/>
+          <cl:datacolumn name="spusExne" datatype="string"/>
+          <cl:datacolumn name="ercnDate" datatype="string"/>
+          <cl:datacolumn name="visaExpyDate" datatype="string"/>
+          <cl:datacolumn name="rsdcFormCode" datatype="string"/>
+          <cl:datacolumn name="hsngKindCode" datatype="string"/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+<cl:submission id="submission" action="" mediatype="application/json">
+        <cl:requestdata dataid="ds1"/>
+        <cl:requestdata dataid="dm1"/>
+        <cl:responsedata dataid="ds1"/>
+        <cl:responsedata dataid="dm1"/>
+      </cl:submission>
+<cl:matrix-submission comment="comment" id="matrix-submission" async="true" withCredentials="false" method="post" action="">
+        <cl:attribute name="hello" value="world"/>
+        <cl:attribute name="itfNm" value="개인고객조회"/>
+        <cl:attribute name="itfId" value="ICMPRSNCUSTMGMTPSI002R"/>
+        <cl:matrix>
+          <cl:request type="object">
+            <cl:data key="header">
+              <cl:complex type="object"/>
+            </cl:data>
+            <cl:data key="payload">
+              <cl:complex type="object">
+                <cl:data key="PARTY_DTO">
+                  <cl:complex dataControl="dmPartyDto" type="object">
+                    <cl:attribute name="kornm" value="파티DTO"/>
+                    <cl:attribute name="level" value="0"/>
+                    <cl:data key="END_DTTM">
+                      <cl:pathref columnType="string" columnName="endDttm">
+                        <cl:attribute name="kornm" value="종료일시"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="CUST_CLSF_CODE">
+                      <cl:pathref columnType="string" columnName="custClsfCode">
+                        <cl:attribute name="kornm" value="고객분류코드"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="CUST_DVSN_CODE">
+                      <cl:pathref columnType="string" columnName="custDvsnCode">
+                        <cl:attribute name="kornm" value="고객구분코드"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="CUST_NM">
+                      <cl:pathref columnType="string" columnName="custNm">
+                        <cl:attribute name="kornm" value="고객명"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="INTG_CUST_STTS_CODE">
+                      <cl:pathref columnType="string" columnName="intgCustSttsCode">
+                        <cl:attribute name="kornm" value="통합고객상태코드"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="CUST_RGST_DTTM">
+                      <cl:pathref columnType="string" columnName="custRgstDttm">
+                        <cl:attribute name="kornm" value="고객등록일시"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="CUST_INFO_INPT_PATH_CODE">
+                      <cl:pathref columnType="string" columnName="custInfoInptPathCode">
+                        <cl:attribute name="kornm" value="고객정보입력경로코드"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="CUST_IDNR_DTO_LIST">
+                      <cl:complex dataControl="dsCustIdnrDtoList" payload="all" type="array">
+                        <cl:attribute name="kornm" value="고객식별자DTO"/>
+                        <cl:data key="INID_SUID">
+                          <cl:pathref columnType="string" columnName="inidSuid">
+                            <cl:attribute name="kornm" value="통합식별자SUID"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="HIST_SQNO">
+                          <cl:pathref columnType="string" columnName="histSqno">
+                            <cl:attribute name="kornm" value="이력일련번호"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="RGSR_EMNB">
+                          <cl:pathref columnType="string" columnName="rgsrEmnb">
+                            <cl:attribute name="kornm" value="등록자사원번호"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="RGST_DTTM">
+                          <cl:pathref columnType="string" columnName="rgstDttm">
+                            <cl:attribute name="kornm" value="등록일시"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="RGST_PRGM_ID">
+                          <cl:pathref columnType="string" columnName="rgstPrgmId">
+                            <cl:attribute name="kornm" value="등록프로그램ID"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="LAST_CHNR_EMNB">
+                          <cl:pathref columnType="string" columnName="lastChnrEmnb">
+                            <cl:attribute name="kornm" value="최종변경자사원번호"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="LAST_CHNG_DTTM">
+                          <cl:pathref columnType="string" columnName="lastChngDttm">
+                            <cl:attribute name="kornm" value="최종변경일시"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="LAST_CHNG_PRGM_ID">
+                          <cl:pathref columnType="string" columnName="lastChngPrgmId">
+                            <cl:attribute name="kornm" value="최종변경프로그램ID"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="DLTN_YN">
+                          <cl:pathref columnType="string" columnName="dltnYn">
+                            <cl:attribute name="kornm" value="삭제여부"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="FRNR_RGST_NO_CRET_DVSN_CODE">
+                          <cl:pathref columnType="string" columnName="frnrRgstNoCretDvsnCode">
+                            <cl:attribute name="kornm" value="외국인등록번호생성구분코드"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="INID_ISTC">
+                          <cl:pathref columnType="string" columnName="inidIstc">
+                            <cl:attribute name="kornm" value="통합식별자설명"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="CUST_INFO_INPT_PATH_CODE">
+                          <cl:pathref columnType="string" columnName="custInfoInptPathCode">
+                            <cl:attribute name="kornm" value="고객정보입력경로코드"/>
+                          </cl:pathref>
+                        </cl:data>
+                      </cl:complex>
+                    </cl:data>
+                    <cl:data key="PNP_DTO_LIST">
+                      <cl:complex dataControl="dsPnpDtoList" payload="all" type="array">
+                        <cl:attribute name="kornm" value="PNP_DTO"/>
+                        <cl:data key="PNP_SUID">
+                          <cl:pathref columnType="string" columnName="pnpSuid">
+                            <cl:attribute name="kornm" value="PNP_SUID"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="RGSR_EMNB">
+                          <cl:pathref columnType="string" columnName="rgsrEmnb">
+                            <cl:attribute name="kornm" value="등록자사원번호"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="RGST_DTTM">
+                          <cl:pathref columnType="string" columnName="rgstDttm">
+                            <cl:attribute name="kornm" value="등록일시"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="RGST_PRGM_ID">
+                          <cl:pathref columnType="string" columnName="rgstPrgmId">
+                            <cl:attribute name="kornm" value="등록프로그램ID"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="LAST_CHNR_EMNB">
+                          <cl:pathref columnType="string" columnName="lastChnrEmnb">
+                            <cl:attribute name="kornm" value="최종변경자사원번호"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="LAST_CHNG_DTTM">
+                          <cl:pathref columnType="string" columnName="lastChngDttm">
+                            <cl:attribute name="kornm" value="최종변경일시"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="LAST_CHNG_PRGM_ID">
+                          <cl:pathref columnType="string" columnName="lastChngPrgmId">
+                            <cl:attribute name="kornm" value="최종변경프로그램ID"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="CUST_INFO_INPT_PATH_CODE">
+                          <cl:pathref columnType="string" columnName="custInfoInptPathCode">
+                            <cl:attribute name="kornm" value="고객정보입력경로코드"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="PNP_RMRK_CNTN">
+                          <cl:pathref columnType="string" columnName="pnpRmrkCntn">
+                            <cl:attribute name="kornm" value="PNP비고내용"/>
+                          </cl:pathref>
+                        </cl:data>
+                      </cl:complex>
+                    </cl:data>
+                    <cl:data key="CUST_PRTR_MATR_DTO_LIST">
+                      <cl:complex dataControl="dsCustPrtrMatrDtoList" payload="all" type="array">
+                        <cl:attribute name="kornm" value="고객특이사항DTO"/>
+                        <cl:data key="CUST_PRTR_MATR_SUID">
+                          <cl:pathref columnType="string" columnName="custPrtrMatrSuid">
+                            <cl:attribute name="kornm" value="고객특이사항SUID"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="RGSR_EMNB">
+                          <cl:pathref columnType="string" columnName="rgsrEmnb">
+                            <cl:attribute name="kornm" value="등록자사원번호"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="RGST_DTTM">
+                          <cl:pathref columnType="string" columnName="rgstDttm">
+                            <cl:attribute name="kornm" value="등록일시"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="RGST_PRGM_ID">
+                          <cl:pathref columnType="string" columnName="rgstPrgmId">
+                            <cl:attribute name="kornm" value="등록프로그램ID"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="LAST_CHNR_EMNB">
+                          <cl:pathref columnType="string" columnName="lastChnrEmnb">
+                            <cl:attribute name="kornm" value="최종변경자사원번호"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="LAST_CHNG_DTTM">
+                          <cl:pathref columnType="string" columnName="lastChngDttm">
+                            <cl:attribute name="kornm" value="최종변경일시"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="LAST_CHNG_PRGM_ID">
+                          <cl:pathref columnType="string" columnName="lastChngPrgmId">
+                            <cl:attribute name="kornm" value="최종변경프로그램ID"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="DLTN_YN">
+                          <cl:pathref columnType="string" columnName="dltnYn">
+                            <cl:attribute name="kornm" value="삭제여부"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="RGST_TRSC_ID">
+                          <cl:pathref columnType="string" columnName="rgstTrscId">
+                            <cl:attribute name="kornm" value="등록트랜잭션ID"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="CUST_PRTR_MATR_CNTN">
+                          <cl:pathref columnType="string" columnName="custPrtrMatrCntn">
+                            <cl:attribute name="kornm" value="고객특이사항내용"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="CUST_INFO_INPT_PATH_CODE">
+                          <cl:pathref columnType="string" columnName="custInfoInptPathCode">
+                            <cl:attribute name="kornm" value="고객정보입력경로코드"/>
+                          </cl:pathref>
+                        </cl:data>
+                      </cl:complex>
+                    </cl:data>
+                  </cl:complex>
+                </cl:data>
+                <cl:data key="PRSN_EXTD_DTO">
+                  <cl:complex dataControl="dmPrsnExtdDto" type="object">
+                    <cl:attribute name="kornm" value="개인확장DTO"/>
+                    <cl:attribute name="level" value="0"/>
+                    <cl:data key="CUST_SUID">
+                      <cl:pathref columnType="string" columnName="custSuid">
+                        <cl:attribute name="kornm" value="고객SUID"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="HIST_SQNO">
+                      <cl:pathref columnType="string" columnName="histSqno">
+                        <cl:attribute name="kornm" value="이력일련번호"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="RGSR_EMNB">
+                      <cl:pathref columnType="string" columnName="rgsrEmnb">
+                        <cl:attribute name="kornm" value="등록자사원번호"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="RGST_DTTM">
+                      <cl:pathref columnType="string" columnName="rgstDttm">
+                        <cl:attribute name="kornm" value="등록일시"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="HP_CTFN_DATE">
+                      <cl:pathref columnType="string" columnName="hpCtfnDate">
+                        <cl:attribute name="kornm" value="휴대폰인증일자"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="BLTP_CODE">
+                      <cl:pathref columnType="string" columnName="bltpCode">
+                        <cl:attribute name="kornm" value="혈액형코드"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="RLGN_CODE">
+                      <cl:pathref columnType="string" columnName="rlgnCode">
+                        <cl:attribute name="kornm" value="종교코드"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="HOBY_CODE">
+                      <cl:pathref columnType="string" columnName="hobyCode">
+                        <cl:attribute name="kornm" value="취미코드"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="SCHL_NM">
+                      <cl:pathref columnType="string" columnName="schlNm">
+                        <cl:attribute name="kornm" value="학교명"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="SPUS_EXNE">
+                      <cl:pathref columnType="string" columnName="spusExne">
+                        <cl:attribute name="kornm" value="배우자유무"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="ERCN_DATE">
+                      <cl:pathref columnType="string" columnName="ercnDate">
+                        <cl:attribute name="kornm" value="입국일자"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="VISA_EXPY_DATE">
+                      <cl:pathref columnType="string" columnName="visaExpyDate">
+                        <cl:attribute name="kornm" value="비자만료일자"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="RSDC_FORM_CODE">
+                      <cl:pathref columnType="string" columnName="rsdcFormCode">
+                        <cl:attribute name="kornm" value="주거형태코드"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="HSNG_KIND_CODE">
+                      <cl:pathref columnType="string" columnName="hsngKindCode">
+                        <cl:attribute name="kornm" value="주택종류코드"/>
+                      </cl:pathref>
+                    </cl:data>
+                  </cl:complex>
+                </cl:data>
+              </cl:complex>
+            </cl:data>
+          </cl:request>
+          <cl:response type="object">
+            <cl:data key="header">
+              <cl:complex type="object"/>
+            </cl:data>
+            <cl:data key="payload">
+              <cl:complex type="object">
+                <cl:data key="PARTY_DTO">
+                  <cl:complex dataControl="dmPartyDto" type="object">
+                    <cl:attribute name="kornm" value="파티DTO"/>
+                    <cl:attribute name="level" value="0"/>
+                    <cl:data key="END_DTTM">
+                      <cl:pathref columnType="string" columnName="endDttm">
+                        <cl:attribute name="kornm" value="종료일시"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="CUST_CLSF_CODE">
+                      <cl:pathref columnType="string" columnName="custClsfCode">
+                        <cl:attribute name="kornm" value="고객분류코드"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="CUST_DVSN_CODE">
+                      <cl:pathref columnType="string" columnName="custDvsnCode">
+                        <cl:attribute name="kornm" value="고객구분코드"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="CUST_NM">
+                      <cl:pathref columnType="string" columnName="custNm">
+                        <cl:attribute name="kornm" value="고객명"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="INTG_CUST_STTS_CODE">
+                      <cl:pathref columnType="string" columnName="intgCustSttsCode">
+                        <cl:attribute name="kornm" value="통합고객상태코드"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="CUST_RGST_DTTM">
+                      <cl:pathref columnType="string" columnName="custRgstDttm">
+                        <cl:attribute name="kornm" value="고객등록일시"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="CUST_INFO_INPT_PATH_CODE">
+                      <cl:pathref columnType="string" columnName="custInfoInptPathCode">
+                        <cl:attribute name="kornm" value="고객정보입력경로코드"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="CUST_IDNR_DTO_LIST">
+                      <cl:complex dataControl="dsCustIdnrDtoList" payload="all" type="array">
+                        <cl:attribute name="kornm" value="고객식별자DTO"/>
+                        <cl:data key="DLTN_YN">
+                          <cl:pathref columnType="string" columnName="dltnYn">
+                            <cl:attribute name="kornm" value="삭제여부"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="RGST_TRSC_ID">
+                          <cl:pathref columnType="string" columnName="rgstTrscId">
+                            <cl:attribute name="kornm" value="등록트랜잭션ID"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="LAST_TRSC_ID">
+                          <cl:pathref columnType="string" columnName="lastTrscId">
+                            <cl:attribute name="kornm" value="최종트랜잭션ID"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="STAR_DTTM">
+                          <cl:pathref columnType="string" columnName="starDttm">
+                            <cl:attribute name="kornm" value="시작일시"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="END_DTTM">
+                          <cl:pathref columnType="string" columnName="endDttm">
+                            <cl:attribute name="kornm" value="종료일시"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="CUST_SUID">
+                          <cl:pathref columnType="string" columnName="custSuid">
+                            <cl:attribute name="kornm" value="고객SUID"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="IDNR_STTS_CODE">
+                          <cl:pathref columnType="string" columnName="idnrSttsCode">
+                            <cl:attribute name="kornm" value="식별자상태코드"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="IDNR_DVSN_CODE">
+                          <cl:pathref columnType="string" columnName="idnrDvsnCode">
+                            <cl:attribute name="kornm" value="식별자구분코드"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="INID_VAL">
+                          <cl:pathref columnType="string" columnName="inidVal">
+                            <cl:attribute name="kornm" value="통합식별자값"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="IDNR_EXPY_DATE">
+                          <cl:pathref columnType="string" columnName="idnrExpyDate">
+                            <cl:attribute name="kornm" value="식별자만료일자"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="FRNR_RGST_NO_CRET_DVSN_CODE">
+                          <cl:pathref columnType="string" columnName="frnrRgstNoCretDvsnCode">
+                            <cl:attribute name="kornm" value="외국인등록번호생성구분코드"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="INID_ISTC">
+                          <cl:pathref columnType="string" columnName="inidIstc">
+                            <cl:attribute name="kornm" value="통합식별자설명"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="CUST_INFO_INPT_PATH_CODE">
+                          <cl:pathref columnType="string" columnName="custInfoInptPathCode">
+                            <cl:attribute name="kornm" value="고객정보입력경로코드"/>
+                          </cl:pathref>
+                        </cl:data>
+                      </cl:complex>
+                    </cl:data>
+                    <cl:data key="PNP_DTO_LIST">
+                      <cl:complex dataControl="dsPnpDtoList" payload="all" type="array">
+                        <cl:attribute name="kornm" value="PNP_DTO"/>
+                        <cl:data key="PNP_SUID">
+                          <cl:pathref columnType="string" columnName="pnpSuid">
+                            <cl:attribute name="kornm" value="PNP_SUID"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="RGSR_EMNB">
+                          <cl:pathref columnType="string" columnName="rgsrEmnb">
+                            <cl:attribute name="kornm" value="등록자사원번호"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="RGST_DTTM">
+                          <cl:pathref columnType="string" columnName="rgstDttm">
+                            <cl:attribute name="kornm" value="등록일시"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="RGST_PRGM_ID">
+                          <cl:pathref columnType="string" columnName="rgstPrgmId">
+                            <cl:attribute name="kornm" value="등록프로그램ID"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="LAST_CHNR_EMNB">
+                          <cl:pathref columnType="string" columnName="lastChnrEmnb">
+                            <cl:attribute name="kornm" value="최종변경자사원번호"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="LAST_CHNG_DTTM">
+                          <cl:pathref columnType="string" columnName="lastChngDttm">
+                            <cl:attribute name="kornm" value="최종변경일시"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="LAST_CHNG_PRGM_ID">
+                          <cl:pathref columnType="string" columnName="lastChngPrgmId">
+                            <cl:attribute name="kornm" value="최종변경프로그램ID"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="DLTN_YN">
+                          <cl:pathref columnType="string" columnName="dltnYn">
+                            <cl:attribute name="kornm" value="삭제여부"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="RGST_TRSC_ID">
+                          <cl:pathref columnType="string" columnName="rgstTrscId">
+                            <cl:attribute name="kornm" value="등록트랜잭션ID"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="LAST_TRSC_ID">
+                          <cl:pathref columnType="string" columnName="lastTrscId">
+                            <cl:attribute name="kornm" value="최종트랜잭션ID"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="VALD_STAR_DTTM">
+                          <cl:pathref columnType="string" columnName="valdStarDttm">
+                            <cl:attribute name="kornm" value="유효시작일시"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="VALD_END_DTTM">
+                          <cl:pathref columnType="string" columnName="valdEndDttm">
+                            <cl:attribute name="kornm" value="유효종료일시"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="RFRN_ENTT_NM">
+                          <cl:pathref columnType="string" columnName="rfrnEnttNm">
+                            <cl:attribute name="kornm" value="참조엔터티명"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="RFRN_INTC_SUID">
+                          <cl:pathref columnType="string" columnName="rfrnIntcSuid">
+                            <cl:attribute name="kornm" value="참조인스턴스SUID"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="PNP_RGST_RESN_CODE">
+                          <cl:pathref columnType="string" columnName="pnpRgstResnCode">
+                            <cl:attribute name="kornm" value="PNP등록사유코드"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="PNP_TYPE_CODE">
+                          <cl:pathref columnType="string" columnName="pnpTypeCode">
+                            <cl:attribute name="kornm" value="PNP유형코드"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="PNP_BHVR_TYPE_CODE">
+                          <cl:pathref columnType="string" columnName="pnpBhvrTypeCode">
+                            <cl:attribute name="kornm" value="PNP행동유형코드"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="CUST_INFO_INPT_PATH_CODE">
+                          <cl:pathref columnType="string" columnName="custInfoInptPathCode">
+                            <cl:attribute name="kornm" value="고객정보입력경로코드"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="PNP_RMRK_CNTN">
+                          <cl:pathref columnType="string" columnName="pnpRmrkCntn">
+                            <cl:attribute name="kornm" value="PNP비고내용"/>
+                          </cl:pathref>
+                        </cl:data>
+                      </cl:complex>
+                    </cl:data>
+                    <cl:data key="CUST_PRTR_MATR_DTO_LIST">
+                      <cl:complex dataControl="dsCustPrtrMatrDtoList" payload="all" type="array">
+                        <cl:attribute name="kornm" value="고객특이사항DTO"/>
+                        <cl:data key="CUST_PRTR_MATR_SUID">
+                          <cl:pathref columnType="string" columnName="custPrtrMatrSuid">
+                            <cl:attribute name="kornm" value="고객특이사항SUID"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="RGSR_EMNB">
+                          <cl:pathref columnType="string" columnName="rgsrEmnb">
+                            <cl:attribute name="kornm" value="등록자사원번호"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="RGST_DTTM">
+                          <cl:pathref columnType="string" columnName="rgstDttm">
+                            <cl:attribute name="kornm" value="등록일시"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="RGST_PRGM_ID">
+                          <cl:pathref columnType="string" columnName="rgstPrgmId">
+                            <cl:attribute name="kornm" value="등록프로그램ID"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="LAST_CHNR_EMNB">
+                          <cl:pathref columnType="string" columnName="lastChnrEmnb">
+                            <cl:attribute name="kornm" value="최종변경자사원번호"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="LAST_CHNG_DTTM">
+                          <cl:pathref columnType="string" columnName="lastChngDttm">
+                            <cl:attribute name="kornm" value="최종변경일시"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="LAST_CHNG_PRGM_ID">
+                          <cl:pathref columnType="string" columnName="lastChngPrgmId">
+                            <cl:attribute name="kornm" value="최종변경프로그램ID"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="DLTN_YN">
+                          <cl:pathref columnType="string" columnName="dltnYn">
+                            <cl:attribute name="kornm" value="삭제여부"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="RGST_TRSC_ID">
+                          <cl:pathref columnType="string" columnName="rgstTrscId">
+                            <cl:attribute name="kornm" value="등록트랜잭션ID"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="LAST_TRSC_ID">
+                          <cl:pathref columnType="string" columnName="lastTrscId">
+                            <cl:attribute name="kornm" value="최종트랜잭션ID"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="VALD_STAR_DTTM">
+                          <cl:pathref columnType="string" columnName="valdStarDttm">
+                            <cl:attribute name="kornm" value="유효시작일시"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="VALD_END_DTTM">
+                          <cl:pathref columnType="string" columnName="valdEndDttm">
+                            <cl:attribute name="kornm" value="유효종료일시"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="RFRN_ENTT_NM">
+                          <cl:pathref columnType="string" columnName="rfrnEnttNm">
+                            <cl:attribute name="kornm" value="참조엔터티명"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="RFRN_INTC_SUID">
+                          <cl:pathref columnType="string" columnName="rfrnIntcSuid">
+                            <cl:attribute name="kornm" value="참조인스턴스SUID"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="CUST_PRTR_MATR_DVSN_CODE">
+                          <cl:pathref columnType="string" columnName="custPrtrMatrDvsnCode">
+                            <cl:attribute name="kornm" value="고객특이사항구분코드"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="CUST_PRTR_MATR_CNTN">
+                          <cl:pathref columnType="string" columnName="custPrtrMatrCntn">
+                            <cl:attribute name="kornm" value="고객특이사항내용"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="CUST_INFO_INPT_PATH_CODE">
+                          <cl:pathref columnType="string" columnName="custInfoInptPathCode">
+                            <cl:attribute name="kornm" value="고객정보입력경로코드"/>
+                          </cl:pathref>
+                        </cl:data>
+                      </cl:complex>
+                    </cl:data>
+                    <cl:data key="PARTY_EXTD_DTO">
+                      <cl:complex dataControl="dmPartyExtdDto" type="object">
+                        <cl:attribute name="kornm" value="파티확장DTO"/>
+                        <cl:data key="CUST_SUID">
+                          <cl:pathref columnType="string" columnName="custSuid">
+                            <cl:attribute name="kornm" value="고객SUID"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="HIST_SQNO">
+                          <cl:pathref columnType="string" columnName="histSqno">
+                            <cl:attribute name="kornm" value="이력일련번호"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="RGSR_EMNB">
+                          <cl:pathref columnType="string" columnName="rgsrEmnb">
+                            <cl:attribute name="kornm" value="등록자사원번호"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="RGST_DTTM">
+                          <cl:pathref columnType="string" columnName="rgstDttm">
+                            <cl:attribute name="kornm" value="등록일시"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="RGST_PRGM_ID">
+                          <cl:pathref columnType="string" columnName="rgstPrgmId">
+                            <cl:attribute name="kornm" value="등록프로그램ID"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="LAST_CHNR_EMNB">
+                          <cl:pathref columnType="string" columnName="lastChnrEmnb">
+                            <cl:attribute name="kornm" value="최종변경자사원번호"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="LAST_CHNG_DTTM">
+                          <cl:pathref columnType="string" columnName="lastChngDttm">
+                            <cl:attribute name="kornm" value="최종변경일시"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="LAST_CHNG_PRGM_ID">
+                          <cl:pathref columnType="string" columnName="lastChngPrgmId">
+                            <cl:attribute name="kornm" value="최종변경프로그램ID"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="DLTN_YN">
+                          <cl:pathref columnType="string" columnName="dltnYn">
+                            <cl:attribute name="kornm" value="삭제여부"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="RGST_TRSC_ID">
+                          <cl:pathref columnType="string" columnName="rgstTrscId">
+                            <cl:attribute name="kornm" value="등록트랜잭션ID"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="LAST_TRSC_ID">
+                          <cl:pathref columnType="string" columnName="lastTrscId">
+                            <cl:attribute name="kornm" value="최종트랜잭션ID"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="STAR_DTTM">
+                          <cl:pathref columnType="string" columnName="starDttm">
+                            <cl:attribute name="kornm" value="시작일시"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="END_DTTM">
+                          <cl:pathref columnType="string" columnName="endDttm">
+                            <cl:attribute name="kornm" value="종료일시"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="CUST_TYPE_CODE">
+                          <cl:pathref columnType="string" columnName="custTypeCode">
+                            <cl:attribute name="kornm" value="고객유형코드"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="IDNR_CHEK_STTS_CODE">
+                          <cl:pathref columnType="string" columnName="idnrChekSttsCode">
+                            <cl:attribute name="kornm" value="식별자체크상태코드"/>
+                          </cl:pathref>
+                        </cl:data>
+                        <cl:data key="CUST_EXTD_RMRK_CNTN">
+                          <cl:pathref columnType="string" columnName="custExtdRmrkCntn">
+                            <cl:attribute name="kornm" value="고객확장비고내용"/>
+                          </cl:pathref>
+                        </cl:data>
+                      </cl:complex>
+                    </cl:data>
+                  </cl:complex>
+                </cl:data>
+                <cl:data key="PRSN_EXTD_DTO">
+                  <cl:complex dataControl="dmPrsnExtdDto" type="object">
+                    <cl:attribute name="kornm" value="개인확장DTO"/>
+                    <cl:attribute name="level" value="0"/>
+                    <cl:data key="CUST_SUID">
+                      <cl:pathref columnType="string" columnName="custSuid">
+                        <cl:attribute name="kornm" value="고객SUID"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="HIST_SQNO">
+                      <cl:pathref columnType="string" columnName="histSqno">
+                        <cl:attribute name="kornm" value="이력일련번호"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="RGSR_EMNB">
+                      <cl:pathref columnType="string" columnName="rgsrEmnb">
+                        <cl:attribute name="kornm" value="등록자사원번호"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="RGST_DTTM">
+                      <cl:pathref columnType="string" columnName="rgstDttm">
+                        <cl:attribute name="kornm" value="등록일시"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="RGST_PRGM_ID">
+                      <cl:pathref columnType="string" columnName="rgstPrgmId">
+                        <cl:attribute name="kornm" value="등록프로그램ID"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="LAST_CHNR_EMNB">
+                      <cl:pathref columnType="string" columnName="lastChnrEmnb">
+                        <cl:attribute name="kornm" value="최종변경자사원번호"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="LAST_CHNG_DTTM">
+                      <cl:pathref columnType="string" columnName="lastChngDttm">
+                        <cl:attribute name="kornm" value="최종변경일시"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="LAST_CHNG_PRGM_ID">
+                      <cl:pathref columnType="string" columnName="lastChngPrgmId">
+                        <cl:attribute name="kornm" value="최종변경프로그램ID"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="DLTN_YN">
+                      <cl:pathref columnType="string" columnName="dltnYn">
+                        <cl:attribute name="kornm" value="삭제여부"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="RGST_TRSC_ID">
+                      <cl:pathref columnType="string" columnName="rgstTrscId">
+                        <cl:attribute name="kornm" value="등록트랜잭션ID"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="LAST_TRSC_ID">
+                      <cl:pathref columnType="string" columnName="lastTrscId">
+                        <cl:attribute name="kornm" value="최종트랜잭션ID"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="STAR_DTTM">
+                      <cl:pathref columnType="string" columnName="starDttm">
+                        <cl:attribute name="kornm" value="시작일시"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="END_DTTM">
+                      <cl:pathref columnType="string" columnName="endDttm">
+                        <cl:attribute name="kornm" value="종료일시"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="VHCL_OWN_YN">
+                      <cl:pathref columnType="string" columnName="vhclOwnYn">
+                        <cl:attribute name="kornm" value="차량소유여부"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="DRVN_TYPE_CODE">
+                      <cl:pathref columnType="string" columnName="drvnTypeCode">
+                        <cl:attribute name="kornm" value="운전유형코드"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="OCKN_CODE">
+                      <cl:pathref columnType="string" columnName="ocknCode">
+                        <cl:attribute name="kornm" value="직종코드"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="RISK_GRAD_CODE">
+                      <cl:pathref columnType="string" columnName="riskGradCode">
+                        <cl:attribute name="kornm" value="위험등급코드"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="INJR_OCKN_CODE">
+                      <cl:pathref columnType="string" columnName="injrOcknCode">
+                        <cl:attribute name="kornm" value="상해직종코드"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="INJR_RISK_GRAD_CODE">
+                      <cl:pathref columnType="string" columnName="injrRiskGradCode">
+                        <cl:attribute name="kornm" value="상해위험등급코드"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="DETH_YN">
+                      <cl:pathref columnType="string" columnName="dethYn">
+                        <cl:attribute name="kornm" value="사망여부"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="DETH_INFO_RGST_ORGN_DVSN_CODE">
+                      <cl:pathref columnType="string" columnName="dethInfoRgstOrgnDvsnCode">
+                        <cl:attribute name="kornm" value="사망정보등록기관구분코드"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="HSHR_YN">
+                      <cl:pathref columnType="string" columnName="hshrYn">
+                        <cl:attribute name="kornm" value="세대주여부"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="RLNM_CNFM_YN">
+                      <cl:pathref columnType="string" columnName="rlnmCnfmYn">
+                        <cl:attribute name="kornm" value="실명확인여부"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="RLNM_CNFM_CODE">
+                      <cl:pathref columnType="string" columnName="rlnmCnfmCode">
+                        <cl:attribute name="kornm" value="실명확인코드"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="HP_CTFN_YN">
+                      <cl:pathref columnType="string" columnName="hpCtfnYn">
+                        <cl:attribute name="kornm" value="휴대폰인증여부"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="HP_CTFN_DATE">
+                      <cl:pathref columnType="string" columnName="hpCtfnDate">
+                        <cl:attribute name="kornm" value="휴대폰인증일자"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="BLTP_CODE">
+                      <cl:pathref columnType="string" columnName="bltpCode">
+                        <cl:attribute name="kornm" value="혈액형코드"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="RLGN_CODE">
+                      <cl:pathref columnType="string" columnName="rlgnCode">
+                        <cl:attribute name="kornm" value="종교코드"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="HOBY_CODE">
+                      <cl:pathref columnType="string" columnName="hobyCode">
+                        <cl:attribute name="kornm" value="취미코드"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="SCHL_NM">
+                      <cl:pathref columnType="string" columnName="schlNm">
+                        <cl:attribute name="kornm" value="학교명"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="SPUS_EXNE">
+                      <cl:pathref columnType="string" columnName="spusExne">
+                        <cl:attribute name="kornm" value="배우자유무"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="ERCN_DATE">
+                      <cl:pathref columnType="string" columnName="ercnDate">
+                        <cl:attribute name="kornm" value="입국일자"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="VISA_EXPY_DATE">
+                      <cl:pathref columnType="string" columnName="visaExpyDate">
+                        <cl:attribute name="kornm" value="비자만료일자"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="RSDC_FORM_CODE">
+                      <cl:pathref columnType="string" columnName="rsdcFormCode">
+                        <cl:attribute name="kornm" value="주거형태코드"/>
+                      </cl:pathref>
+                    </cl:data>
+                    <cl:data key="HSNG_KIND_CODE">
+                      <cl:pathref columnType="string" columnName="hsngKindCode">
+                        <cl:attribute name="kornm" value="주택종류코드"/>
+                      </cl:pathref>
+                    </cl:data>
+                  </cl:complex>
+                </cl:data>
+              </cl:complex>
+            </cl:data>
+          </cl:response>
+        </cl:matrix>
+      </cl:matrix-submission>
+<cl:submission comment="서브미션" id="sub" method="post" action="">
+        <cl:attribute name="hello" value="world"/>
+      </cl:submission>
+<cl:matrix-submission comment="매트릭스 서브미션" id="msub" async="true" withCredentials="false" method="post" action="">
+        <cl:attribute name="hello" value="world"/>
+        <cl:attribute name="itfNm" value="개인고객조회"/>
+        <cl:attribute name="itfId" value="ICMPRSNCUSTMGMTPSI002R"/>
+        <cl:matrix>
+          <cl:request type="object"/>
+          <cl:response type="object"/>
+        </cl:matrix>
+      </cl:matrix-submission>
+</cl:model>
+    <cl:appspec dev-comment="2.4 통신전문구성 및 통신&#x9;app/sce/A2/A2-4.clx&#xD;&#xA;7.3 API 및 데이터 바인딩&#x9;app/sce/A7/A7-3.clx&#xD;&#xA;16.2 전문 통신&#x9;app/sce/A7/A7-3.clx&#xD;&#xA;" title="[ARC-01]기존 API·전문 연계"/>
+  </head>
+  <body std:sid="body-7440eca0" class="wrap">
+    <cl:udc std:sid="ud-control-3005dc69" type="udc.com.udcComAppHeader">
+      <cl:verticaldata std:sid="v-data-aaf863cf" width="900px" height="28px"/>
+    </cl:udc>
+    <cl:group std:sid="group-ce6b4a69" id="grpData" class="conts-area">
+<cl:verticaldata std:sid="v-data-75a6afd2" width="976px" height="903px" autosize="none" grow="1"/>
+<cl:tabfolder id="tabMain" class="conts-area" headerarrowposition="both">
+<cl:verticaldata width="100px" height="100%" autosize="none" grow="1"/>
+<cl:tabitem selected="true" text="통신전문구성 및 통신">
+<std:metadata><std:property key="is-active-item" value="true"/></std:metadata>
+<cl:group id="grpTab1" class="conts-area">
+      
+      <cl:group class="conts-wrap">
+        <cl:formdata row="0" col="0" rowspan="1" colspan="1"/>
+        <cl:udc id="udcpocdocviewer1" type="udc.poc.udcPocDocViewer">
+          <cl:formdata row="0" col="0"/>
+          <cl:property name="fileUrl" value="../A2/data/docs/A2-4.png" type="resource"/>
+        </cl:udc>
+        <cl:formlayout hspace="0px" vspace="8px" top-margin="16px" right-margin="16px" bottom-margin="16px" left-margin="16px">
+          <cl:rows length="1" unit="FRACTION" autoSizing="true" shadecolor="transparent"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:formlayout hspace="16px" vspace="16px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+</cl:tabitem>
+<cl:tabitem text="API 및 데이터 바인딩">
+<cl:group id="grpTab2" class="conts-area">
+      
+      <cl:group id="grp2" class="governing">
+        <cl:formdata width="100" height="55" row="0" col="0"/>
+        <cl:udc id="udcComFormTitle2" type="udc.com.udcComFormTitle">
+          <cl:verticaldata width="800px" height="28px" autosize="height"/>
+          <cl:property name="title" value="서비스 API 통합 기능 제공(전문플러그인)" type="string"/>
+        </cl:udc>
+        <cl:output id="opt2" displayexp="&quot;eXBuilder6는 REST API와 같이 체계화된 &quot; + sstr(&quot;서비스 API 명세&quot;, [&quot;fw-bold&quot;]) + &quot;를 연동하여&quot; + &quot;정의된 API 명세에 따라 &quot; + sstr(&quot;서브미션(통신 프로토콜)&quot;, [&quot;fw-bold&quot;]) + &quot;을 자동 구성합니다.&quot;&#xD;&#xA;+ &quot;\n\r&quot; + &quot;자동구성된 서브미션과 더불어 연결된 &quot; + sstr(&quot;데이터 객체&quot;, [&quot;fw-bold&quot;]) + &quot; 또한 자동생성 및 바인딩하여 제공합니다.&quot;">
+          <cl:verticaldata width="1218px" height="48px" autosize="height"/>
+        </cl:output>
+        <cl:verticallayout scrollable="false" spacing="8"/>
+      </cl:group>
+      <cl:group class="conts-wrap">
+        <cl:formdata row="1" col="0" rowspan="1" colspan="1"/>
+        <cl:udc id="udcPocDocViewer1" type="udc.poc.udcPocDocViewer">
+          <cl:formdata row="0" col="0"/>
+          <cl:property name="fileUrl" value="../A7/data/docs/A7-3.png" type="resource"/>
+        </cl:udc>
+        <cl:formlayout scrollable="false" hspace="8px" vspace="8px" top-margin="16px" right-margin="16px" bottom-margin="16px" left-margin="16px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:formlayout scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="125" unit="PIXEL" autoSizing="true" hidden="true" syncminlength="false"/>
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+</cl:tabitem>
+</cl:tabfolder>
+<cl:verticallayout spacing="16" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+</cl:group>
+    <cl:verticallayout std:sid="v-layout-6cece276" spacing="16" leftmargin="24" rightmargin="24" topmargin="16" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

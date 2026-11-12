@@ -1,0 +1,212 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-6be32f38" version="1.0.6209">
+  <head std:sid="head-986c1f58">
+    <screen std:sid="screen-ad3ff76b" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-0cefcf4b" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-ac02cd17" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-7d9065d6">
+      <cl:dataset comment="프로세스 목록" std:sid="d-set-406d885d" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-9f37779a" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-05046705" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn std:sid="d-column-7fe5300f" name="SUB_TITLE"/>
+          <cl:datacolumn std:sid="d-column-c68cb733" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn std:sid="d-column-fa740970" name="CONT" datatype="string"/>
+          <cl:datacolumn std:sid="d-column-c9d6a3d7" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-b4004ac2" name="SUB_CODE"/>
+          <cl:datacolumn std:sid="d-column-8d6dc077" name="TARGET_CTRL"/>
+          <cl:datacolumn std:sid="d-column-4e06ed8b" name="TARGET_EMB"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[모듈화·독립 실행]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[업무/공통 모듈이 독립적으로 빌드, 배포되어야하고 장애를 격리할 수 있어야 한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="DELIMITER">○</cl:datavalue>
+            <cl:datavalue columnname="CONT">목적</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[각 단말 별 접속 현황 확인 및 원격 LOG 파일 수집]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[검증 요소]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[다수 단말의 접속 현황 확인 및 모니터링 관리 기능 검증]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[특정 단말의 원격 LOG 파일 수집 및 모니터링 검증]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="DELIMITER">○</cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[측정]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[시나리오]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[다수 단말의 접속 현황이 관리자 화면에서 정상적으로 표시되는지 확인]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[다수 단말의 접속 현황,관리자 화면]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">시나리오</cl:datavalue>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[특정 단말의 원격 LOG 파일이 정상적으로 수집되고, 수집된 로그가 관리자 화면에서 확인 가능한지 확인]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[특정 단말의 원격 LOG 파일이 정상적으로 수집]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[수집된 로그가 관리자 화면에서 확인 가능]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[(모든 검증요소 - 솔루션 기능) ]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[[접속 현황] 강제로그아웃을 시킬 사용자를 체크한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[[접속 현황]]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[강제로그아웃]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[grd1]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB"><![CDATA[embAdmin]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[[단말 로그] 일반 사용자는 1-2. 화면디자인 편집기 화면에서 다양한 이벤트를 수행한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[[단말 로그]]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[1-2. 화면디자인 편집기 화면]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB"><![CDATA[embAdmin]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[[단말 로그] 관리자는 LOG를 수집할 사용자의 로그수집 컬럼의 체크박스를 체크한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[[단말 로그]]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[로그수집]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[grd1]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB"><![CDATA[embAdmin]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[[단말 로그] 로그수집 버튼을 클릭한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[[단말 로그]]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[btn1]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB"><![CDATA[embAdmin]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[[단말 로그] 사용자/화면별로 검색하여 LOG를 확인한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[[단말 로그]]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[ipb2,ipb3]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB"><![CDATA[embAdmin]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE">진행</cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"/>
+            <cl:datavalue columnname="SUB_TITLE"/>
+            <cl:datavalue columnname="DELIMITER">-</cl:datavalue>
+            <cl:datavalue columnname="CONT">eXBuilder6는 브라우저에서 발생하는 모든 이벤트를 추적/제어할 수 있는 글로벌 이벤트 핸들러를 제공하며 이를 통해 사용자 단말에서 발생한 이벤트 로그를 수집하고 중앙에서 통제할 수 있습니다.</cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE">글로벌 이벤트 핸들러를 제공</cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE">단말에서 발생한 이벤트 로그를 수집하고 중앙에서 통제</cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"/>
+            <cl:datavalue columnname="TARGET_EMB"/>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="[ARC-02]모듈화·장애격리"/>
+  </head>
+  <body std:sid="body-a2341d17" class="wrap">
+    <cl:listener std:sid="listener-99bb75ca" name="init" handler="onBodyInit"/>
+    <cl:udc std:sid="ud-control-f7123ece" type="udc.com.udcComAppHeader">
+      <cl:verticaldata std:sid="v-data-d9939ec1" width="900px" height="28px"/>
+    </cl:udc>
+    <cl:group std:sid="group-22f9865e" id="grpData" class="conts-area">
+      <cl:verticaldata std:sid="v-data-d4ac8f6c" width="1592px" height="1271px" autosize="height"/>
+      <cl:group std:sid="group-f171a8f4" class="conts-wrap">
+        <cl:verticaldata std:sid="v-data-baea35d5" width="1592px" height="670px" autosize="height"/>
+        <cl:udc std:sid="ud-control-2f063746" id="udcPocDocViewer1" type="udc.poc.udcPocDocViewer">
+          <cl:verticaldata std:sid="v-data-662a8c65" width="500px" height="620px" autosize="height"/>
+          <cl:property name="fileUrl" value="data/docs/K8-1.png" type="resource"/>
+        </cl:udc>
+        <cl:verticallayout std:sid="v-layout-52a7714c" spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:group std:sid="group-626ebeac" class="conts-wrap" clipcontent="false">
+        <cl:verticaldata std:sid="v-data-eaa411f9" width="1592px" height="585px" autosize="height" grow="1"/>
+        <cl:group std:sid="group-d2bdad7d" id="grpGoverning" class="governing">
+          <cl:verticaldata std:sid="v-data-26ae9a87" width="1592px" height="124px" autosize="height"/>
+          <cl:output std:sid="output-8ad6c93d" id="opt2_2" class="tit" value="모니터링 확인">
+            <cl:verticaldata std:sid="v-data-24a3b0eb" width="100px" height="28px" autosize="height"/>
+          </cl:output>
+          <cl:output std:sid="output-f588f595" id="opt5" class="txt" displayexp="sstr(&quot;관리자 계정&quot;, [&quot;text-danger&quot;, &quot;fw-bold&quot;])+&quot;으로 로그인 했을 경우, 화면 하단에서 각 단말별 접속현황 모니터링을 확인 할 수 있습니다.&quot;">
+            <cl:verticaldata std:sid="v-data-f2af1b87" width="1218px" height="54px" autosize="height"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-cf7ba67b" scrollable="false" spacing="8"/>
+        </cl:group>
+        <cl:embeddedapp std:sid="e-app-c726d333" id="embAdmin" src="../ADMIN/A1.clx">
+          <cl:verticaldata std:sid="v-data-2ff48ea4" width="976px" height="453px" syncminheight="true" autosize="none" grow="1"/>
+        </cl:embeddedapp>
+        <cl:verticallayout std:sid="v-layout-60f6f39f" spacing="8" leftmargin="16" rightmargin="16" topmargin="16" bottommargin="16"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-17a424d5" spacing="16"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-cf4ab913" spacing="16" leftmargin="24" rightmargin="24" topmargin="16" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

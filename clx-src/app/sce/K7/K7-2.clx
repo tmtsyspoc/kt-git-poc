@@ -1,0 +1,187 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-c24d2de7" version="1.0.6209">
+  <head std:sid="head-ac76f12a">
+    <screen std:sid="screen-04c96253" id="default" name="default" width="1640px" height="984px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-31c21e92" id="tablet" name="tablet" width="1280px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-4a1b4e98" id="mobile" name="mobile" width="0px" height="767px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-f9d469c4">
+      <cl:dataset comment="프로세스 목록" std:sid="d-set-0b6eab32" id="dsProcess">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="" std:sid="d-column-1b6e6c2a" name="TITLE"/>
+          <cl:datacolumn std:sid="d-column-1e536002" name="TITLE_RIGHT_TEXT"/>
+          <cl:datacolumn comment="" std:sid="d-column-12253fac" name="SUB_TITLE"/>
+          <cl:datacolumn comment="" std:sid="d-column-44f8cd30" name="DELIMITER" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-1d8751e4" name="CONT" datatype="string"/>
+          <cl:datacolumn comment="" std:sid="d-column-dc5d80f6" name="KEY_CODE"/>
+          <cl:datacolumn std:sid="d-column-d5137090" name="SUB_CODE"/>
+          <cl:datacolumn comment="" std:sid="d-column-2e0ed7d2" name="TARGET_CTRL"/>
+          <cl:datacolumn std:sid="d-column-bbdb205c" name="TARGET_EMB"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[○]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[인증·권한·세션 연계]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[요구사항]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[KT 표준 SSO, 화면·기능 권한, 세션 만료·로그아웃 정책과 연계되어야 한다.]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="TITLE"><![CDATA[진행]]></cl:datavalue>
+            <cl:datavalue columnname="TITLE_RIGHT_TEXT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_TITLE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="DELIMITER"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="CONT"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="KEY_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="SUB_CODE"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_CTRL"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="TARGET_EMB"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    <cl:dataset comment="메뉴" id="dsAllMenu" filtercondition="REFLECT_YN != &quot;N&quot; &amp;&amp; UP_MENU_ID != &quot;&quot; &amp;&amp; UP_MENU_ID != &quot;LEVEL00-00&quot;" staterestore="true">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="메뉴명" name="MENU_NM"/>
+          <cl:datacolumn comment="메뉴 아이디" name="MENU_ID"/>
+          <cl:datacolumn name="UP_MENU_ID"/>
+          <cl:datacolumn name="TOP_MENU_ID"/>
+          <cl:datacolumn comment="대상 페이지" name="CALL_PAGE"/>
+          <cl:datacolumn name="PGM_ID"/>
+          <cl:datacolumn name="ICON"/>
+          <cl:datacolumn name="MENU_KEY"/>
+          <cl:datacolumn name="MOBILE_YN"/>
+          <cl:datacolumn name="DESC"/>
+          <cl:datacolumn name="CLASS"/>
+          <cl:datacolumn name="MENU_DESC" datatype="expression" expression="&quot;[&quot; + MENU_NM + &quot;] &quot; + DESC&#xD;&#xA;"/>
+          <cl:datacolumn name="MENU_LOWERCASE" datatype="expression" expression="doLowerCase(MENU_NM)"/>
+          <cl:datacolumn name="DESC_LOWERCASE" datatype="expression" expression="doLowerCase(DESC)"/>
+          <cl:datacolumn name="MENU_LVL" datatype="number"/>
+          <cl:datacolumn name="MENU_FAV"/>
+          <cl:datacolumn name="TAG"/>
+          <cl:datacolumn name="TAG_LOWERCASE" datatype="expression" expression="doLowerCase(TAG)"/>
+          <cl:datacolumn name="REFLECT_YN"/>
+          <cl:datacolumn comment="일반사용자 메뉴 접근여부" name="USR_ACCESS_YN"/>
+          <cl:datacolumn comment="일반사용자 트랜잭션 허용여부" name="USR_TRANS_YN"/>
+          <cl:datacolumn name="SORT_COL" datatype="number"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist/>
+      </cl:dataset>
+</cl:model>
+    <cl:appspec dev-comment="4.3 화면 접근 통제 기능&#x9;app/sce/A4/A4-3.clx&#xD;&#xA;16.6 화면 접근 통제&#x9;app/sce/A4/A4-3.clx&#xD;&#xA;16.1 책임자 승인&#x9;&#xD;&#xA;" title="[SEC-01]인증·권한·세션"/>
+  </head>
+  <body std:sid="body-b196b6ea" class="wrap">
+<cl:listener name="init" handler="onBodyInit"/>
+    <cl:udc std:sid="ud-control-2d20fc7a" type="udc.com.udcComAppHeader">
+      <cl:verticaldata std:sid="v-data-4d3bb396" width="900px" height="28px"/>
+    </cl:udc>
+    <cl:group id="grpGoverning" class="governing">
+      <cl:verticaldata width="100px" height="125px" autosize="height"/>
+      <cl:output id="opt4" class="tit" value="화면 접근 통제">
+        <cl:verticaldata width="100px" height="28px" autosize="height"/>
+      </cl:output>
+      <cl:output id="opt5" class="txt" displayexp="&quot;eXBuilder6 웹 어플리케이션은 웹소켓 서버 구현과 브라우저의 웹소켓 클라이언트를 통해, &quot; + sstr(&quot;실시간 화면 접근 통제 기능&quot;,[&quot;fw-bold&quot;]) + &quot;을 지원합니다.&quot;">
+        <cl:verticaldata width="1218px" height="58px" autosize="height"/>
+      </cl:output>
+      <cl:verticallayout scrollable="false" spacing="8"/>
+    </cl:group>
+<cl:group id="grpSearch" class="sch-filter-box">
+      <std:metadata>
+        <std:property key="template-uuid" value="ced8aa06-0be6-4966-954d-2fe3acc0398b"/>
+        <std:property key="template-rev" value="4"/>
+      </std:metadata>
+      <cl:attribute name="mobile-column-count" value="2"/>
+      <cl:verticaldata width="976px" height="58px" autosize="height"/>
+      <cl:group class="search-button-group">
+        <cl:formdata row="0" col="1"/>
+        <cl:button id="btnSave" class="primary ico-check" value="저장" icon="0">
+          <cl:listener name="click" handler="onBtn1Click"/>
+          <cl:flowlayoutdata width="86px" height="28px" autosize="width"/>
+        </cl:button>
+        <cl:flowlayout scrollable="false" vspacing="0" halign="right" valign="middle" linewrap="false"/>
+      </cl:group>
+      <cl:formlayout scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION" autoSizing="false" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+        <cl:columns length="200" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" minlength="0" syncminlength="false"/>
+      </cl:formlayout>
+    </cl:group>
+<cl:group id="grpData" class="conts-area">
+      <cl:attribute name="mobile-column-count" value="1"/>
+      <cl:attribute name="tablet-column-count" value="1"/>
+      <cl:verticaldata width="976px" height="903px" autosize="none" grow="1"/>
+      <cl:group class="conts-wrap">
+        <cl:formdata row="0" col="0" rowspan="1" colspan="1"/>
+        <cl:udc id="udcComGridTitle1" type="udc.com.udcComGridTitle">
+          <cl:formdata row="0" col="0"/>
+          <cl:property name="title" value="메뉴 목록" type="string"/>
+          <cl:property name="ctrl" value="grd1" type="control"/>
+        </cl:udc>
+        <cl:grid id="grd1" fieldLabel="LMS 목록" datasetid="dsAllMenu" collapsible="true">
+          <cl:formdata row="1" col="0"/>
+          <cl:gridcolumn width="250px"/>
+          <cl:gridcolumn width="120px"/>
+          <cl:gridcolumn width="120px"/>
+          <cl:gridcolumn width="120px"/>
+          <cl:gridcolumn width="120px"/>
+          <cl:gridheader>
+            <cl:gridrow height="44px"/>
+            <cl:gridcell rowindex="0" colindex="0" targetcolumnname="MENU_NM" sortable="false" filterable="false" text="메뉴명"/>
+            <cl:gridcell rowindex="0" colindex="1" targetcolumnname="MENU_ID" sortable="false" filterable="false" text="메뉴 아이디"/>
+            <cl:gridcell rowindex="0" colindex="2" targetcolumnname="CALL_PAGE" sortable="false" filterable="false" text="대상 페이지"/>
+            <cl:gridcell rowindex="0" colindex="3" targetcolumnname="USR_ACCESS_YN" sortable="false" filterable="false" text="일반사용자 메뉴 접근여부"/>
+            <cl:gridcell rowindex="0" colindex="4" targetcolumnname="USR_TRANS_YN" sortable="false" filterable="false" text="일반사용자 트랜잭션 허용여부"/>
+          </cl:gridheader>
+          <cl:griddetail>
+            <cl:gridrow height="45px"/>
+            <cl:gridcell rowindex="0" colindex="0" columnname="MENU_NM">
+              <cl:treecell readonly="true" showlines="true" showrootlines="false">
+                <cl:relativebind property="level" category="PROPERTY" columnname="MENU_LVL"/>
+                <cl:celldata/>
+              </cl:treecell>
+            </cl:gridcell>
+            <cl:gridcell rowindex="0" colindex="1" columnname="MENU_ID"/>
+            <cl:gridcell rowindex="0" colindex="2" columnname="CALL_PAGE"/>
+            <cl:gridcell rowindex="0" colindex="3" columnname="USR_ACCESS_YN">
+              <cl:checkbox id="cbx1" truevalue="Y" falsevalue="N">
+                <cl:expbind property="visible" category="PROPERTY" expression="CALL_PAGE != &quot;&quot;"/>
+                <cl:celldata/>
+              </cl:checkbox>
+            </cl:gridcell>
+            <cl:gridcell rowindex="0" colindex="4" columnname="USR_TRANS_YN">
+              <cl:checkbox id="cbx2" truevalue="Y" falsevalue="N">
+                <cl:expbind property="visible" category="PROPERTY" expression="CALL_PAGE != &quot;&quot;"/>
+                <cl:celldata/>
+              </cl:checkbox>
+            </cl:gridcell>
+          </cl:griddetail>
+        </cl:grid>
+        <cl:formlayout scrollable="false" hspace="0px" vspace="8px" top-margin="16px" right-margin="16px" bottom-margin="16px" left-margin="16px">
+          <cl:rows length="28" unit="PIXEL" autoSizing="true"/>
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:formlayout scrollable="false" hspace="16px" vspace="16px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-00384b92" spacing="16" leftmargin="24" rightmargin="24" topmargin="16" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>
