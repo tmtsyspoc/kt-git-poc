@@ -1,0 +1,2 @@
+# 훅 스크립트는 core.autocrlf=true 환경에서도 LF 유지 (CRLF면 sh 실행 실패)
+.githooks/* text eol=lf

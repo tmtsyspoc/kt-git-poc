@@ -1,0 +1,64 @@
+#!/bin/sh
+# pre-commit: 스테이징된 eXBuilder6 화면 파일만 검사 (Git Bash/sh 호환)
+#  - .clx : XML 문법 검사 + 충돌 마커
+#  - .js  : "화면 JS"(같은 이름의 .clx 가 있는 .js)만 문법 검사 + 충돌 마커
+#           thirdparty, 라이브러리, 워커 등 화면과 무관한 .js 는 검사하지 않음
+# 긴급 우회: git commit --no-verify
+
+errors=0
+tmp=$(mktemp -d) || exit 1
+trap 'rm -rf "$tmp"' EXIT
+
+# 한글 경로가 "\354\235..." 처럼 인용되지 않도록 quotepath=false
+GIT="git -c core.quotepath=false"
+
+staged=$($GIT diff --cached --name-only --diff-filter=ACM -- '*.clx' '*.js')
+[ -z "$staged" ] && exit 0
+
+has_node=0
+command -v node >/dev/null 2>&1 && has_node=1
+
+echo "[pre-commit] 검사 시작..."
+
+# ---- 1) 충돌 마커 + 화면 JS 문법 ----
+echo "$staged" | while IFS= read -r f; do
+  case "$f" in
+    *.js)
+      # 화면 JS 판별: 같은 이름의 .clx 가 인덱스에 있어야 함
+      git cat-file -e ":${f%.js}.clx" 2>/dev/null || continue
+      ;;
+  esac
+
+  if git grep -I --cached -qE '^(<{7}|>{7})( |$)' -- "$f" 2>/dev/null; then
+    echo "  [충돌 마커] $f"
+    echo x >> "$tmp/err"
+  fi
+
+  case "$f" in
+    *.js)
+      [ "$has_node" -eq 1 ] || continue
+      git show ":$f" > "$tmp/check.js"
+      if ! out=$(node --check "$tmp/check.js" 2>&1); then
+        echo "  [JS 문법 오류] $f"
+        echo "$out" | sed -n '1,5p' | sed 's/^/      /'
+        echo x >> "$tmp/err"
+      fi
+      ;;
+  esac
+done
+
+# ---- 2) .clx XML 문법 ----
+if [ "$has_node" -eq 1 ]; then
+  hook_dir=$(dirname "$0")
+  $GIT diff --cached --name-only --diff-filter=ACM -z -- '*.clx' \
+    | node "$hook_dir/check-xml.js" || echo x >> "$tmp/err"
+fi
+
+if [ -s "$tmp/err" ]; then
+  echo "[pre-commit] 실패: 위 항목을 수정한 뒤 다시 커밋하세요. (우회: git commit --no-verify)"
+  exit 1
+fi
+
+[ "$has_node" -eq 0 ] && echo "[pre-commit] node 미설치: 문법 검사는 건너뜀 (충돌 마커만 검사)"
+echo "[pre-commit] 통과"
+exit 0
