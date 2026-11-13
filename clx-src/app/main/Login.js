@@ -201,7 +201,7 @@ function onButtonClick(e){
 	}
 	
 	if(window.eb6Preview) {
-		cpr.core.App.load("app/main/Main", function(loadedApp) {
+		cpr.core.App.load("app/main/MainKt", function(loadedApp) {
 			app.getRootAppInstance().dispose();
 			loadedApp.createNewInstance().run();
 			cpr.core.Platform.INSTANCE.setDocumentTitle(loadedApp.title);
